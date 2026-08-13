@@ -1,0 +1,18 @@
+---
+import Base from "../layouts/Base.astro";
+import SectionScaffold from "../components/SectionScaffold.astro";
+const sources = [
+  { name: "Wayne Local — District News", href: "https://www.wayne-local.com/district-news", what: "board meetings, closings, staffing, operations" },
+  { name: "Waynesville Spartans Athletics", href: "https://www.waynesvillesports.com/", what: "team schedules, results, athletic news" },
+  { name: "MaxPreps — Waynesville", href: "https://www.maxpreps.com/oh/waynesville/waynesville-spartans/", what: "structured scores & schedules, all sports" },
+  { name: "Mary L. Cook Public Library", href: "https://www.mlcook.lib.oh.us/", what: "kids & teen programs, community events" },
+];
+---
+<Base title="Schools · Waynesville Daily Brief" showInfoBar={false}>
+  <SectionScaffold
+    title="Schools"
+    kicker="Lead Section"
+    intro="Wayne Local news, Spartans sports, closings, and library programs — the beat this community cares about most."
+    sources={sources}
+  />
+</Base>

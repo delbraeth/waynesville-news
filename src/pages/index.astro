@@ -1,0 +1,63 @@
+---
+import Base from "../layouts/Base.astro";
+import FeaturedBrief from "../components/FeaturedBrief.astro";
+import HeadlineList from "../components/HeadlineList.astro";
+import SectionBlock from "../components/SectionBlock.astro";
+import EventsThisWeek from "../components/EventsThisWeek.astro";
+import BriefCard from "../components/BriefCard.astro";
+import headlines from "../data/headlines.json";
+import { getCollection } from "astro:content";
+
+const briefs = (await getCollection("briefs")).sort(
+  (a, b) => b.data.date.getTime() - a.data.date.getTime()
+);
+const latest = briefs[0];
+
+const dateFmt = new Intl.DateTimeFormat("en-US", {
+  weekday: "long", month: "long", day: "numeric", year: "numeric",
+});
+const shortFmt = new Intl.DateTimeFormat("en-US", { month: "long", day: "numeric" });
+
+const dateLine = dateFmt.format(latest.data.date);
+---
+<Base dateLine={dateLine}>
+  <section class="section">
+    <div class="reading">
+      <FeaturedBrief
+        title={latest.data.title}
+        dek={latest.data.dek}
+        dateLabel={shortFmt.format(latest.data.date)}
+        href={`/briefs/${latest.id}/`}
+      />
+    </div>
+  </section>
+
+  <div class="container">
+    <section class="section">
+      <p class="kicker">This morning in Waynesville</p>
+      <HeadlineList items={headlines.thisMorning} numbered={true} />
+    </section>
+
+    <EventsThisWeek />
+
+    <section class="section">
+      <p class="kicker">Latest across Warren County</p>
+      <div class="grid2">
+        <SectionBlock title="Schools & Students" items={headlines.schools} moreHref="/schools/" moreLabel="All schools" />
+        <SectionBlock title="Around the County" items={headlines.aroundCounty} moreHref="/briefs/" moreLabel="More" />
+      </div>
+    </section>
+
+    <section class="section">
+      <p class="kicker">Recent briefs</p>
+      {briefs.map((b) => (
+        <BriefCard
+          dateLabel={dateFmt.format(b.data.date)}
+          title={b.data.title}
+          dek={b.data.dek}
+          href={`/briefs/${b.id}/`}
+        />
+      ))}
+    </section>
+  </div>
+</Base>

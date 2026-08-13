@@ -1,0 +1,56 @@
+---
+import Base from "../layouts/Base.astro";
+import eventsData from "../data/events.json";
+
+const startOfToday = new Date();
+startOfToday.setHours(0, 0, 0, 0);
+
+const upcoming = eventsData.items
+  .filter((e) => !e.evergreen && e.dateISO)
+  .map((e) => ({ ...e, _d: new Date(e.dateISO as string) }))
+  .filter((e) => e._d >= startOfToday)
+  .sort((a, b) => a._d.getTime() - b._d.getTime());
+
+const evergreen = eventsData.items.filter((e) => e.evergreen);
+---
+<Base title="Events & Things to Do · Waynesville Daily Brief" showInfoBar={false}>
+  <div class="reading">
+    <p class="kicker">The Wedge · Events Engine</p>
+    <h1>Events &amp; Things to Do</h1>
+    <p class="dek">
+      Everything happening in and around Waynesville — the coverage a template calendar can’t match.
+    </p>
+    <div class="callout">
+      Venues and sources here are real. Some dates are illustrative for this demo (marked “confirm”);
+      the production pipeline pulls exact dates from each source.
+    </div>
+
+    <h3>Upcoming</h3>
+    <ul class="events">
+      {upcoming.map((e) => (
+        <li>
+          <div class="date">{e.dateLabel}</div>
+          <div>
+            <a class="ev-title" href={e.source} target="_blank" rel="noopener">{e.title}</a>
+            <span class="ev-cat">{e.category}</span>
+            <div class="ev-meta">{e.venue}{e.note ? ` · ${e.note}` : ""}</div>
+          </div>
+        </li>
+      ))}
+    </ul>
+
+    <h3>Always on</h3>
+    <ul class="events">
+      {evergreen.map((e) => (
+        <li>
+          <div class="date">{e.dateLabel}</div>
+          <div>
+            <a class="ev-title" href={e.source} target="_blank" rel="noopener">{e.title}</a>
+            <span class="ev-cat">{e.category}</span>
+            <div class="ev-meta">{e.venue}{e.note ? ` · ${e.note}` : ""}</div>
+          </div>
+        </li>
+      ))}
+    </ul>
+  </div>
+</Base>

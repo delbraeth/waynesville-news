@@ -1,0 +1,17 @@
+---
+import Base from "../layouts/Base.astro";
+import SectionScaffold from "../components/SectionScaffold.astro";
+const sources = [
+  { name: "Warren County Auditor — Property Transfers", href: "https://auditor.warrencountyohio.gov/RealEstate/TransfersAndConveyance/Index", what: "property sales & conveyances" },
+  { name: "Waynesville Area Chamber of Commerce", href: "https://www.waynesvilleohio.com/", what: "new businesses, member news" },
+  { name: "Waynesville Merchants Association", href: "https://waynesvilleshops.com/", what: "downtown shops, the antiques district" },
+];
+---
+<Base title="Around Town · Waynesville Daily Brief" showInfoBar={false}>
+  <SectionScaffold
+    title="Around Town"
+    kicker="Section"
+    intro="New businesses, the antiques district, property notes, and the small stuff that tells you how the town is doing."
+    sources={sources}
+  />
+</Base>

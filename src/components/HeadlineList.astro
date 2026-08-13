@@ -1,0 +1,17 @@
+---
+interface Item { title: string; meta?: string; href?: string; }
+interface Props { items: Item[]; numbered?: boolean; }
+const { items, numbered = false } = Astro.props;
+---
+<ol class:list={["headlines", { numbered }]}>
+  {items.map((it) => (
+    <li>
+      <span>
+        {it.href
+          ? <a class="h-title" href={it.href}>{it.title}</a>
+          : <span class="h-title">{it.title}</span>}
+        {it.meta && <span class="h-meta">{it.meta}</span>}
+      </span>
+    </li>
+  ))}
+</ol>

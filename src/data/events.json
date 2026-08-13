@@ -1,0 +1,79 @@
+{
+  "_note": "Real venues and sources. Some dates are illustrative for this demo (marked 'confirm') — the production pipeline pulls exact dates from each source.",
+  "items": [
+    {
+      "title": "Fox Hollow Rodeo — Bull Riding",
+      "dateISO": "2026-08-15T19:30:00-04:00",
+      "dateLabel": "Sat, Aug 15 · 7:30 PM",
+      "venue": "Fox Hollow Rodeo, Waynesville",
+      "category": "Rodeo",
+      "source": "https://foxhollowrodeo.com/",
+      "note": "Saturday nights through the season"
+    },
+    {
+      "title": "Wayne Local Board of Education — Regular Meeting",
+      "dateISO": "2026-08-17T18:30:00-04:00",
+      "dateLabel": "Mon, Aug 17 · 6:30 PM (confirm)",
+      "venue": "Wayne Local Schools",
+      "category": "Schools",
+      "source": "https://www.wayne-local.com/district-news",
+      "note": "Date/time illustrative — confirm on district site"
+    },
+    {
+      "title": "Warren County Commissioners — Weekly Session",
+      "dateISO": "2026-08-18T09:00:00-04:00",
+      "dateLabel": "Tue, Aug 18 · 9:00 AM",
+      "venue": "406 Justice Dr, Lebanon",
+      "category": "Government",
+      "source": "https://commissioners.warrencountyohio.gov/News/AgendaMinutes/Index",
+      "note": "Commissioners meet most Tuesdays"
+    },
+    {
+      "title": "Ohio Renaissance Festival — Opening Weekend",
+      "dateISO": "2026-08-29T10:00:00-04:00",
+      "dateLabel": "Opens Sat, Aug 29 · weekends into late Oct (confirm)",
+      "venue": "Harveysburg (near Waynesville)",
+      "category": "Festival",
+      "source": "https://renfestival.com/",
+      "note": "Season dates illustrative — confirm at source"
+    },
+    {
+      "title": "Waynesville Air Show & Fly-In",
+      "dateISO": "2026-09-05T09:00:00-04:00",
+      "dateLabel": "Labor Day weekend · Sep 5–7 (confirm)",
+      "venue": "Red Stewart Airfield, Waynesville",
+      "category": "Airshow",
+      "source": "https://www.stewartsaircraft.net/airshow-and-sponsors.html",
+      "note": "Held Labor Day weekend — confirm exact dates at source"
+    },
+    {
+      "title": "Ohio Sauerkraut Festival",
+      "dateISO": "2026-10-10T09:00:00-04:00",
+      "dateLabel": "Oct 10–11 (confirm)",
+      "venue": "Downtown Waynesville",
+      "category": "Festival",
+      "source": "https://sauerkrautfestival.waynesvilleohio.com/home/",
+      "note": "Second full weekend of October, ~400k attendees"
+    },
+    {
+      "title": "Little Miami Scenic Trail",
+      "dateISO": null,
+      "dateLabel": "Year-round",
+      "venue": "Corwin / Waynesville trailhead",
+      "category": "Outdoors",
+      "source": "https://ohiodnr.gov/go-and-do/plan-a-visit/find-a-property/little-miami-state-park",
+      "evergreen": true,
+      "note": "~78-mi paved rail-trail — biking, hiking, running"
+    },
+    {
+      "title": "Kings Island",
+      "dateISO": null,
+      "dateLabel": "Open daily this summer",
+      "venue": "Mason (Warren County)",
+      "category": "Attraction",
+      "source": "https://www.sixflags.com/kingsisland/events",
+      "evergreen": true,
+      "note": "Amusement park; seasonal festivals & concerts"
+    }
+  ]
+}

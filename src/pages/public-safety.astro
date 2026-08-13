@@ -1,0 +1,16 @@
+---
+import Base from "../layouts/Base.astro";
+import SectionScaffold from "../components/SectionScaffold.astro";
+const sources = [
+  { name: "Warren County Sheriff", href: "https://sheriff.warrencountyohio.gov/", what: "media releases, alerts" },
+  { name: "Warren County Prosecutor — Press", href: "https://prosecutor.warrencountyohio.gov/Public/Press/Index", what: "charges, case outcomes" },
+];
+---
+<Base title="Public Safety · Waynesville Daily Brief" showInfoBar={false}>
+  <SectionScaffold
+    title="Public Safety"
+    kicker="Section · Handle With Care"
+    intro="Road reports, weather alerts, and sheriff/prosecutor news — held to a strict standard: presumption of innocence, no naming un-convicted arrestees, human review before anything publishes."
+    sources={sources}
+  />
+</Base>

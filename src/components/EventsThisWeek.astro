@@ -1,0 +1,40 @@
+---
+import eventsData from "../data/events.json";
+
+interface Props { limit?: number; heading?: boolean; }
+const { limit = 6, heading = true } = Astro.props;
+
+const startOfToday = new Date();
+startOfToday.setHours(0, 0, 0, 0);
+
+const upcoming = eventsData.items
+  .filter((e) => !e.evergreen && e.dateISO)
+  .map((e) => ({ ...e, _d: new Date(e.dateISO as string) }))
+  .filter((e) => e._d >= startOfToday)
+  .sort((a, b) => a._d.getTime() - b._d.getTime())
+  .slice(0, limit);
+---
+<section class="section">
+  {heading && (
+    <>
+      <p class="kicker">The Wedge · Events Engine</p>
+      <h2>This Week Around Waynesville</h2>
+      <p class="muted small">
+        The stuff a template calendar misses — the rodeo, the airshow, the festivals, the trail.
+      </p>
+    </>
+  )}
+  <ul class="events">
+    {upcoming.map((e) => (
+      <li>
+        <div class="date">{e.dateLabel}</div>
+        <div>
+          <a class="ev-title" href={e.source} target="_blank" rel="noopener">{e.title}</a>
+          <span class="ev-cat">{e.category}</span>
+          <div class="ev-meta">{e.venue}{e.note ? ` · ${e.note}` : ""}</div>
+        </div>
+      </li>
+    ))}
+  </ul>
+  {heading && <p><a class="more" href="/events/">Full events calendar →</a></p>}
+</section>

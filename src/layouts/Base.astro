@@ -1,0 +1,45 @@
+---
+import "../styles/global.css";
+import DemoBanner from "../components/DemoBanner.astro";
+import Masthead from "../components/Masthead.astro";
+import InfoBar from "../components/InfoBar.astro";
+import SiteFooter from "../components/SiteFooter.astro";
+
+interface Props {
+  title?: string;
+  description?: string;
+  dateLine?: string;
+  showInfoBar?: boolean;
+}
+const {
+  title = "Waynesville Daily Brief",
+  description = "Hyperlocal daily news for Waynesville, OH, Corwin & Warren County — schools, government, and the events that make this place worth living in.",
+  dateLine,
+  showInfoBar = true,
+} = Astro.props;
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="color-scheme" content="light" />
+  </head>
+  <body>
+    <DemoBanner />
+    <Masthead dateLine={dateLine} />
+    {showInfoBar && <InfoBar />}
+    <main>
+      <slot />
+    </main>
+    <SiteFooter />
+  </body>
+</html>

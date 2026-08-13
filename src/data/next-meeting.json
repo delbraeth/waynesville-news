@@ -1,0 +1,8 @@
+{
+  "_note": "SAMPLE seed value. The production pipeline computes the next public meeting from county/village calendars.",
+  "body": "Warren County Commissioners",
+  "when": "2026-08-18T09:00:00-04:00",
+  "whenLabel": "Tue, Aug 18 · 9:00 AM",
+  "location": "406 Justice Dr, Lebanon",
+  "source": "https://commissioners.warrencountyohio.gov/News/AgendaMinutes/Index"
+}

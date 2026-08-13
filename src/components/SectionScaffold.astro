@@ -1,0 +1,25 @@
+---
+interface Src { name: string; href: string; what: string; }
+interface Props { title: string; kicker: string; intro: string; sources?: Src[]; }
+const { title, kicker, intro, sources = [] } = Astro.props;
+---
+<div class="reading">
+  <p class="kicker">{kicker}</p>
+  <h1>{title}</h1>
+  <p class="dek">{intro}</p>
+  <div class="callout">
+    <strong>Demo section.</strong> Real coverage appears here once daily publishing begins.
+    Below is what will feed this beat.
+  </div>
+  {sources.length > 0 && (
+    <>
+      <h3>Sources feeding this section</h3>
+      <ul>
+        {sources.map((s) => (
+          <li><a href={s.href} target="_blank" rel="noopener">{s.name}</a> — {s.what}</li>
+        ))}
+      </ul>
+    </>
+  )}
+  <p class="small"><a href="/">← Home</a></p>
+</div>

@@ -1,0 +1,273 @@
+/* ============================================================
+   Waynesville Daily Brief — global styles
+   Clean, text-forward newspaper aesthetic.
+   ============================================================ */
+
+:root {
+  /* palette */
+  --paper: #fbf9f5;
+  --paper-2: #f4f0e8;
+  --ink: #1a1712;
+  --ink-soft: #4a433a;
+  --muted: #776d60;
+  --rule: #e5ddce; /* hairline */
+  --accent: #9e2b25;      /* barn red — nods to the antiques/rural identity */
+  --accent-deep: #7c201b;
+  --link: #1c4f74;        /* readable slate-blue */
+  --link-hover: #123f60;
+  --chip: #efe9dd;
+
+  /* type */
+  --font-serif: "Newsreader", Georgia, "Times New Roman", serif;
+  --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+  /* layout */
+  --measure: 44rem;   /* reading column */
+  --wide: 54rem;      /* homepage sections */
+  --space: 1.5rem;
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ---------- typography ---------- */
+h1, h2, h3, h4 {
+  font-family: var(--font-serif);
+  color: var(--ink);
+  line-height: 1.15;
+  font-weight: 600;
+  margin: 0 0 0.4em;
+}
+h1 { font-size: 2rem; letter-spacing: -0.01em; }
+h2 { font-size: 1.5rem; }
+h3 { font-size: 1.2rem; }
+p { margin: 0 0 1rem; }
+
+a { color: var(--link); text-decoration: none; }
+a:hover { color: var(--link-hover); text-decoration: underline; }
+
+.kicker {
+  font-family: var(--font-sans);
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin: 0 0 0.5rem;
+}
+
+.dek { color: var(--ink-soft); font-family: var(--font-serif); font-size: 1.15rem; }
+.muted { color: var(--muted); }
+.small { font-size: 0.85rem; }
+
+/* ---------- layout ---------- */
+.container { max-width: var(--wide); margin: 0 auto; padding: 0 1.25rem; }
+.reading { max-width: var(--measure); margin: 0 auto; padding: 0 1.25rem; }
+main { display: block; padding: 1.5rem 0 3rem; }
+.section { padding: 1.75rem 0; border-top: 1px solid var(--rule); }
+.section:first-child { border-top: 0; }
+
+/* ---------- demo banner ---------- */
+.demo-banner {
+  background: #2a2723;
+  color: #f6efe0;
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  text-align: center;
+  padding: 0.4rem 1rem;
+  letter-spacing: 0.02em;
+}
+.demo-banner strong { color: #f4c948; letter-spacing: 0.08em; }
+.demo-banner a { color: #f6efe0; text-decoration: underline; }
+
+/* ---------- masthead ---------- */
+.masthead { text-align: center; padding: 1.6rem 1.25rem 0.8rem; }
+.masthead .wordmark {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  font-size: clamp(2rem, 6vw, 3.1rem);
+  letter-spacing: -0.015em;
+  line-height: 1.02;
+  margin: 0;
+  color: var(--ink);
+}
+.masthead .wordmark a { color: inherit; text-decoration: none; }
+.masthead .tagline {
+  font-family: var(--font-serif);
+  font-style: italic;
+  color: var(--ink-soft);
+  margin: 0.5rem 0 0;
+  font-size: 1.02rem;
+}
+.masthead .dateline {
+  font-family: var(--font-sans);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.68rem;
+  color: var(--muted);
+  margin: 0.7rem 0 0;
+}
+
+/* nav */
+.mainnav {
+  border-top: 3px double var(--ink);
+  border-bottom: 1px solid var(--ink);
+  margin-top: 0.9rem;
+}
+.mainnav ul {
+  list-style: none; margin: 0 auto; padding: 0.55rem 0;
+  display: flex; flex-wrap: wrap; justify-content: center; gap: 0.25rem 1.4rem;
+  max-width: var(--wide);
+}
+.mainnav a {
+  font-family: var(--font-sans);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 0.76rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+.mainnav a:hover { color: var(--accent); text-decoration: none; }
+
+/* ---------- info bar (weather + next meeting) ---------- */
+.infobar {
+  background: var(--paper-2);
+  border-bottom: 1px solid var(--rule);
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+}
+.infobar .inner {
+  max-width: var(--wide); margin: 0 auto; padding: 0.6rem 1.25rem;
+  display: flex; flex-wrap: wrap; gap: 0.4rem 1.6rem; align-items: baseline;
+}
+.infobar .label {
+  text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.66rem;
+  font-weight: 700; color: var(--accent); margin-right: 0.4rem;
+}
+.infobar .item { color: var(--ink-soft); }
+.infobar .item strong { color: var(--ink); }
+.infobar .spacer { flex: 1 1 auto; }
+
+/* ---------- featured brief ---------- */
+.featured { text-align: center; padding: 0.5rem 0 0.25rem; }
+.featured h2 { font-size: clamp(1.6rem, 4.5vw, 2.3rem); margin-bottom: 0.3rem; }
+.featured .dek { font-size: 1.2rem; }
+.btn {
+  display: inline-block; margin-top: 0.9rem;
+  font-family: var(--font-sans); font-weight: 600; font-size: 0.82rem;
+  text-transform: uppercase; letter-spacing: 0.06em;
+  color: #fff; background: var(--accent);
+  padding: 0.6rem 1.1rem; border-radius: 2px;
+}
+.btn:hover { background: var(--accent-deep); color: #fff; text-decoration: none; }
+
+/* ---------- headline lists ---------- */
+.headlines { list-style: none; margin: 0; padding: 0; counter-reset: h; }
+.headlines li {
+  padding: 0.7rem 0; border-bottom: 1px solid var(--rule);
+  display: flex; gap: 0.8rem; align-items: baseline;
+}
+.headlines li:last-child { border-bottom: 0; }
+.headlines.numbered li::before {
+  counter-increment: h; content: counter(h);
+  font-family: var(--font-serif); font-size: 1.1rem; font-weight: 600;
+  color: var(--accent); min-width: 1.1rem; text-align: right;
+}
+.headlines .h-title { font-family: var(--font-serif); font-size: 1.12rem; color: var(--ink); }
+.headlines a.h-title:hover { color: var(--accent); text-decoration: none; }
+.headlines .h-meta { display: block; font-size: 0.78rem; color: var(--muted); margin-top: 0.15rem; }
+
+.tag {
+  display: inline-block; font-family: var(--font-sans); font-size: 0.62rem;
+  font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em;
+  background: var(--chip); color: var(--ink-soft);
+  padding: 0.1rem 0.45rem; border-radius: 2px; margin-right: 0.4rem;
+  vertical-align: 0.08em;
+}
+.tag.demo { background: #f6e6b8; color: #6b551a; }
+
+/* ---------- section grid (latest across) ---------- */
+.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem 2.4rem; }
+.block h3 { border-bottom: 2px solid var(--ink); padding-bottom: 0.3rem; margin-bottom: 0.4rem; }
+.block .more { font-size: 0.76rem; font-family: var(--font-sans); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; }
+
+/* ---------- events engine ---------- */
+.events { list-style: none; margin: 0; padding: 0; }
+.events li {
+  display: grid; grid-template-columns: 5.4rem 1fr; gap: 1rem;
+  padding: 0.8rem 0; border-bottom: 1px solid var(--rule);
+}
+.events li:last-child { border-bottom: 0; }
+.events .date {
+  font-family: var(--font-sans); font-size: 0.74rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.03em; color: var(--accent);
+  line-height: 1.3;
+}
+.events .ev-title { font-family: var(--font-serif); font-size: 1.12rem; color: var(--ink); }
+.events .ev-meta { font-size: 0.8rem; color: var(--muted); margin-top: 0.15rem; }
+.events .ev-cat {
+  font-family: var(--font-sans); font-size: 0.62rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.06em; color: var(--ink-soft); background: var(--chip);
+  padding: 0.08rem 0.4rem; border-radius: 2px; margin-left: 0.4rem; vertical-align: 0.1em;
+}
+
+/* ---------- brief cards / archive ---------- */
+.briefcard { padding: 0.9rem 0; border-bottom: 1px solid var(--rule); }
+.briefcard .date { font-family: var(--font-sans); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); }
+.briefcard h3 { margin: 0.15rem 0 0.2rem; }
+.briefcard h3 a { color: var(--ink); }
+.briefcard h3 a:hover { color: var(--accent); text-decoration: none; }
+
+/* ---------- prose (brief body) ---------- */
+.prose { font-size: 1.12rem; }
+.prose h2 { margin-top: 2rem; border-bottom: 1px solid var(--rule); padding-bottom: 0.3rem; }
+.prose h3 { margin-top: 1.5rem; }
+.prose ol, .prose ul { padding-left: 1.3rem; }
+.prose li { margin-bottom: 0.5rem; }
+.prose hr { border: 0; border-top: 1px solid var(--rule); margin: 2rem 0; }
+
+/* ---------- callout ---------- */
+.callout {
+  background: var(--paper-2); border-left: 3px solid var(--accent);
+  padding: 0.9rem 1.1rem; margin: 1.2rem 0; font-size: 0.95rem; color: var(--ink-soft);
+}
+.callout strong { color: var(--ink); }
+
+/* ---------- footer ---------- */
+.site-footer {
+  border-top: 3px double var(--ink); margin-top: 2rem;
+  background: var(--paper-2); font-family: var(--font-sans); font-size: 0.85rem;
+}
+.site-footer .inner { max-width: var(--wide); margin: 0 auto; padding: 2rem 1.25rem; }
+.site-footer .cols { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 1.5rem; }
+.site-footer h4 { font-family: var(--font-sans); text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.72rem; color: var(--accent); margin: 0 0 0.6rem; }
+.site-footer ul { list-style: none; margin: 0; padding: 0; }
+.site-footer li { margin-bottom: 0.35rem; }
+.site-footer a { color: var(--ink-soft); }
+.site-footer .brand { font-family: var(--font-serif); font-size: 1.3rem; color: var(--ink); }
+.site-footer .fine { color: var(--muted); font-size: 0.78rem; margin-top: 1.5rem; border-top: 1px solid var(--rule); padding-top: 1rem; }
+.signup input {
+  font: inherit; padding: 0.45rem 0.6rem; border: 1px solid var(--rule); border-radius: 2px;
+  width: 100%; max-width: 15rem; background: #fff; margin-bottom: 0.4rem;
+}
+.signup .btn { padding: 0.5rem 0.9rem; margin-top: 0; }
+
+/* ---------- responsive ---------- */
+@media (max-width: 640px) {
+  .grid2 { grid-template-columns: 1fr; }
+  .site-footer .cols { grid-template-columns: 1fr; }
+  .events li { grid-template-columns: 4.6rem 1fr; }
+  h1 { font-size: 1.7rem; }
+}

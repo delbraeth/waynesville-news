@@ -1,0 +1,17 @@
+---
+import Base from "../layouts/Base.astro";
+import SectionScaffold from "../components/SectionScaffold.astro";
+const sources = [
+  { name: "Village of Waynesville — Meetings", href: "https://www.villageofwaynesville.org/meetings/", what: "council agendas & minutes" },
+  { name: "Village of Waynesville — News", href: "https://www.villageofwaynesville.org/news/", what: "village announcements" },
+  { name: "Warren County Commissioners", href: "https://commissioners.warrencountyohio.gov/News/AgendaMinutes/Index", what: "agendas, minutes, resolutions" },
+];
+---
+<Base title="Local Government · Waynesville Daily Brief" showInfoBar={false}>
+  <SectionScaffold
+    title="Local Government"
+    kicker="Section"
+    intro="Village council and county commission, summarized in plain English and linked to the agenda or minutes."
+    sources={sources}
+  />
+</Base>

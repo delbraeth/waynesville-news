@@ -1,0 +1,16 @@
+{
+  "name": "waynesville-news",
+  "type": "module",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Waynesville Daily Brief — hyperlocal news for Waynesville, OH & Warren County (waynesville.news)",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "astro": "^5.0.0"
+  }
+}

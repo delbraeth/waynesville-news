@@ -1,0 +1,24 @@
+---
+interface Props { dateLine?: string; }
+const { dateLine = "Wednesday, August 12, 2026" } = Astro.props;
+
+const nav = [
+  { label: "Daily Briefs", href: "/briefs/" },
+  { label: "Schools", href: "/schools/" },
+  { label: "Events", href: "/events/" },
+  { label: "Government", href: "/government/" },
+  { label: "Around Town", href: "/around-town/" },
+  { label: "Public Safety", href: "/public-safety/" },
+  { label: "About", href: "/about/" },
+];
+---
+<header class="masthead">
+  <p class="wordmark"><a href="/">Waynesville Daily Brief</a></p>
+  <p class="tagline">The Waynesville &amp; Warren County news you’d otherwise miss.</p>
+  <p class="dateline">{dateLine} &nbsp;·&nbsp; waynesville.news</p>
+</header>
+<nav class="mainnav" aria-label="Sections">
+  <ul>
+    {nav.map((n) => <li><a href={n.href}>{n.label}</a></li>)}
+  </ul>
+</nav>

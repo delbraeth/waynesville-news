@@ -1,0 +1,10 @@
+---
+interface Props { title: string; dek?: string; dateLabel: string; href: string; }
+const { title, dek, dateLabel, href } = Astro.props;
+---
+<div class="featured">
+  <p class="kicker">Today’s Brief · {dateLabel}</p>
+  <h2>{title}</h2>
+  {dek && <p class="dek">{dek}</p>}
+  <a class="btn" href={href}>Read today’s brief →</a>
+</div>

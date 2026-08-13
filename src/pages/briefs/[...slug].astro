@@ -1,0 +1,36 @@
+---
+import Base from "../../layouts/Base.astro";
+import { getCollection, render } from "astro:content";
+
+export async function getStaticPaths() {
+  const briefs = await getCollection("briefs");
+  return briefs.map((entry) => ({ params: { slug: entry.id }, props: { entry } }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+
+const dateFmt = new Intl.DateTimeFormat("en-US", {
+  weekday: "long", month: "long", day: "numeric", year: "numeric",
+});
+---
+<Base
+  title={`${entry.data.title} · Waynesville Daily Brief`}
+  dateLine={dateFmt.format(entry.data.date)}
+  showInfoBar={false}
+>
+  <div class="reading">
+    <p class="kicker">Daily Brief · {dateFmt.format(entry.data.date)}</p>
+    <h1>{entry.data.title}</h1>
+    {entry.data.dek && <p class="dek">{entry.data.dek}</p>}
+    {entry.data.demo && (
+      <div class="callout">
+        <strong>Sample edition.</strong> Layout only — no real names, quotes, or claims are invented.
+      </div>
+    )}
+    <div class="prose">
+      <Content />
+    </div>
+    <p class="small"><a href="/briefs/">← All briefs</a></p>
+  </div>
+</Base>

@@ -1,0 +1,18 @@
+---
+import weather from "../data/weather.json";
+import meeting from "../data/next-meeting.json";
+---
+<div class="infobar">
+  <div class="inner">
+    <span class="item">
+      <span class="label">Weather</span>
+      <strong>{weather.tempF}°</strong> {weather.condition} · H {weather.highF}° / L {weather.lowF}°
+    </span>
+    <span class="item">
+      <span class="label">Next Meeting</span>
+      <strong>{meeting.body}</strong> · {meeting.whenLabel}
+    </span>
+    <span class="spacer"></span>
+    <span class="item"><a href="/events/">This week’s events →</a></span>
+  </div>
+</div>

@@ -1,0 +1,20 @@
+{
+  "_note": "DEMO placeholder headlines — topic slots, not real reporting. No names, quotes, or specific claims are invented. Real briefs replace these.",
+  "thisMorning": [
+    { "title": "Wayne Local’s first week back: key dates, bus routes, and where to check delays", "meta": "Schools" },
+    { "title": "Everything happening in Waynesville this weekend — from the rodeo to the trail", "meta": "Events" },
+    { "title": "What’s on the Warren County Commissioners’ Tuesday agenda", "meta": "Government" },
+    { "title": "Antiques-district roundup: new shops and weekend hours", "meta": "Around Town" },
+    { "title": "Friday-night lights: a look ahead at the Spartans’ season", "meta": "Schools · Sports" }
+  ],
+  "schools": [
+    { "title": "Wayne Local Board of Education: what to watch this month", "meta": "Sample slot" },
+    { "title": "Spartans fall sports schedules, in one place", "meta": "Sample slot" },
+    { "title": "Mary L. Cook Library: this week’s kids & teen programs", "meta": "Sample slot" }
+  ],
+  "aroundCounty": [
+    { "title": "Village council agenda, in plain English", "meta": "Sample slot" },
+    { "title": "New in the antiques district", "meta": "Sample slot" },
+    { "title": "This week’s sheriff & road report", "meta": "Sample slot" }
+  ]
+}

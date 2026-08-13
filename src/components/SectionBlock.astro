@@ -1,0 +1,11 @@
+---
+import HeadlineList from "./HeadlineList.astro";
+interface Item { title: string; meta?: string; href?: string; }
+interface Props { title: string; items: Item[]; moreHref?: string; moreLabel?: string; }
+const { title, items, moreHref, moreLabel = "More" } = Astro.props;
+---
+<div class="block">
+  <h3>{title}</h3>
+  <HeadlineList items={items} />
+  {moreHref && <p><a class="more" href={moreHref}>{moreLabel} →</a></p>}
+</div>

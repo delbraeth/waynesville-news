@@ -1,0 +1,9 @@
+---
+interface Props { dateLabel: string; title: string; dek?: string; href: string; }
+const { dateLabel, title, dek, href } = Astro.props;
+---
+<article class="briefcard">
+  <p class="date">{dateLabel}</p>
+  <h3><a href={href}>{title}</a></h3>
+  {dek && <p class="muted">{dek}</p>}
+</article>
