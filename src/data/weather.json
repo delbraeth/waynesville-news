@@ -1,9 +1,9 @@
 {
-  "_note": "SAMPLE seed value. The production pipeline refreshes this each morning from the NWS API (api.weather.gov, Wilmington/ILN office) for Waynesville, OH.",
+  "_note": "Auto-refreshed from the NWS API (api.weather.gov, ILN/Wilmington office).",
   "location": "Waynesville, OH",
-  "tempF": 82,
-  "condition": "Partly sunny",
-  "highF": 84,
-  "lowF": 63,
-  "updated": "2026-08-12T07:00:00-04:00"
+  "tempF": 69,
+  "condition": "Slight Chance Showers And Thunderstorms then Showers And Thunderstorms",
+  "highF": 85,
+  "lowF": 69,
+  "updated": "2026-08-13T23:48:24.848Z"
 }
