@@ -1,0 +1,32 @@
+name: Refresh weather
+
+# Refreshes src/data/weather.json from the NWS API each morning and commits it,
+# which triggers a Cloudflare redeploy. Also runnable on demand.
+on:
+  schedule:
+    - cron: "20 10 * * *" # ~6:20 AM Eastern daily
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - run: npm run refresh:weather
+      - name: Commit if changed
+        run: |
+          if [[ -n "$(git status --porcelain src/data/weather.json)" ]]; then
+            git config user.name "waynesville-news-bot"
+            git config user.email "actions@users.noreply.github.com"
+            git add src/data/weather.json
+            git commit -m "chore: refresh weather"
+            git push
+          else
+            echo "No weather change."
+          fi

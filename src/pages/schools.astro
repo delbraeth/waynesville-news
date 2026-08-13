@@ -2,7 +2,8 @@
 import Base from "../layouts/Base.astro";
 import SectionScaffold from "../components/SectionScaffold.astro";
 const sources = [
-  { name: "Wayne Local — District News", href: "https://www.wayne-local.com/district-news", what: "board meetings, closings, staffing, operations" },
+  { name: "Wayne Local Board of Education (BoardDocs)", href: "https://go.boarddocs.com/oh/waylo/Board.nsf/Public", what: "official board agendas, minutes & meeting records" },
+  { name: "Wayne Local — District News", href: "https://www.wayne-local.com/district-news", what: "closings, staffing, operations, announcements" },
   { name: "Waynesville Spartans Athletics", href: "https://www.waynesvillesports.com/", what: "team schedules, results, athletic news" },
   { name: "MaxPreps — Waynesville", href: "https://www.maxpreps.com/oh/waynesville/waynesville-spartans/", what: "structured scores & schedules, all sports" },
   { name: "Mary L. Cook Public Library", href: "https://www.mlcook.lib.oh.us/", what: "kids & teen programs, community events" },
@@ -12,7 +13,7 @@ const sources = [
   <SectionScaffold
     title="Schools"
     kicker="Lead Section"
-    intro="Wayne Local news, Spartans sports, closings, and library programs — the beat this community cares about most."
+    intro="Wayne Local board decisions, Spartans sports, closings, and library programs — the beat this community cares about most."
     sources={sources}
   />
 </Base>

@@ -1,6 +1,8 @@
 ---
 import weather from "../data/weather.json";
-import meeting from "../data/next-meeting.json";
+import { nextCommissionersMeeting } from "../lib/nextMeeting.js";
+
+const meeting = nextCommissionersMeeting();
 ---
 <div class="infobar">
   <div class="inner">
