@@ -9,7 +9,8 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "refresh:weather": "node scripts/fetch-weather.mjs"
+    "refresh:weather": "node scripts/fetch-weather.mjs",
+    "draft": "node scripts/draft-brief.mjs"
   },
   "dependencies": {
     "astro": "^5.0.0",
