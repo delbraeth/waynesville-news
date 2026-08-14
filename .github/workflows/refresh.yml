@@ -19,7 +19,7 @@ jobs:
       - uses: actions/checkout@v5
       - uses: actions/setup-node@v5
         with:
-          node-version: "22"
+          node-version: "24"
       - name: Refresh weather (NWS)
         run: npm run refresh:weather || echo "weather refresh failed — kept previous"
       - name: Pull candidate headlines
