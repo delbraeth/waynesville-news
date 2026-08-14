@@ -1,23 +1,23 @@
 {
-  "_note": "Real venues and sources. Some dates are illustrative for this demo (marked 'confirm') — the production pipeline pulls exact dates from each source.",
+  "_note": "Real venues and sources, verified against each listed source on 2026-08-14. Recurring items (rodeo, commissioners) show the next occurrence.",
   "items": [
     {
+      "title": "WLS Back-to-School Bash",
+      "dateISO": "2026-08-16T15:00:00-04:00",
+      "dateLabel": "Sun, Aug 16 · 3:00–5:00 PM",
+      "venue": "Bicentennial Park, Waynesville",
+      "category": "Schools",
+      "source": "https://www.wayne-local.com/district-news/entry/back-to-school-bash-sunday-august-16/",
+      "note": "Wayne Local Schools kicks off the 2026-27 school year; all families invited"
+    },
+    {
       "title": "Fox Hollow Rodeo — Bull Riding",
-      "dateISO": "2026-08-15T19:30:00-04:00",
-      "dateLabel": "Sat, Aug 15 · 7:30 PM",
+      "dateISO": "2026-08-15T18:00:00-04:00",
+      "dateLabel": "Every Saturday · office opens 5 PM, show 6 PM",
       "venue": "Fox Hollow Rodeo, Waynesville",
       "category": "Rodeo",
       "source": "https://foxhollowrodeo.com/",
-      "note": "Saturday nights through the season"
-    },
-    {
-      "title": "Wayne Local Board of Education — Regular Meeting",
-      "dateISO": "2026-08-17T18:30:00-04:00",
-      "dateLabel": "Mon, Aug 17 · 6:30 PM (confirm)",
-      "venue": "Wayne Local Schools",
-      "category": "Schools",
-      "source": "https://www.wayne-local.com/district-news",
-      "note": "Date/time illustrative — confirm on district site"
+      "note": "Bull riding, barrel racing, mutton bustin' — year-round, rain or shine"
     },
     {
       "title": "Warren County Commissioners — Weekly Session",
@@ -29,31 +29,49 @@
       "note": "Commissioners meet most Tuesdays"
     },
     {
-      "title": "Ohio Renaissance Festival — Opening Weekend",
-      "dateISO": "2026-08-29T10:00:00-04:00",
-      "dateLabel": "Opens Sat, Aug 29 · weekends into late Oct (confirm)",
-      "venue": "Harveysburg (near Waynesville)",
-      "category": "Festival",
-      "source": "https://renfestival.com/",
-      "note": "Season dates illustrative — confirm at source"
+      "title": "Business to Business Networking Mixer",
+      "dateISO": "2026-08-26T17:00:00-04:00",
+      "dateLabel": "Wed, Aug 26 · 5:00 PM",
+      "venue": "Stonehouse Tavern, Waynesville",
+      "category": "Chamber",
+      "source": "https://www.waynesvilleohio.com/events",
+      "note": "Waynesville Area Chamber of Commerce networking mixer"
     },
     {
-      "title": "Waynesville Air Show & Fly-In",
-      "dateISO": "2026-09-05T09:00:00-04:00",
-      "dateLabel": "Labor Day weekend · Sep 5–7 (confirm)",
-      "venue": "Red Stewart Airfield, Waynesville",
-      "category": "Airshow",
-      "source": "https://www.stewartsaircraft.net/airshow-and-sponsors.html",
-      "note": "Held Labor Day weekend — confirm exact dates at source"
+      "title": "Full Moon Hike at Hisey Park",
+      "dateISO": "2026-08-27T20:30:00-04:00",
+      "dateLabel": "Thu, Aug 27 · 8:30–9:30 PM",
+      "venue": "Hisey Park, Waynesville",
+      "category": "Outdoors",
+      "source": "https://www.warrencountyparks.com/events/",
+      "note": "Warren County Park District easy-terrain night hike, ages 4+; registration ends 24 hrs prior"
+    },
+    {
+      "title": "Ohio Renaissance Festival — Homecoming Weekend (Opening)",
+      "dateISO": "2026-09-05T10:30:00-04:00",
+      "dateLabel": "Opens Sat, Sep 5 · Homecoming Weekend Sep 5–7 · weekends & Labor Day through Nov 1",
+      "venue": "Renaissance Park, Harveysburg",
+      "category": "Festival",
+      "source": "https://renfestival.com/",
+      "note": "10:30 AM – 7:00 PM; season runs weekends through Nov 1, 2026"
+    },
+    {
+      "title": "Toddler Trek: Butterflies and Moths at Hisey Park",
+      "dateISO": "2026-09-02T10:30:00-04:00",
+      "dateLabel": "Wed, Sep 2 · 10:30–11:30 AM",
+      "venue": "Hisey Park, Waynesville",
+      "category": "Outdoors",
+      "source": "https://www.warrencountyparks.com/events/",
+      "note": "Warren County Park District program for ages 2-6 and a grown-up"
     },
     {
       "title": "Ohio Sauerkraut Festival",
       "dateISO": "2026-10-10T09:00:00-04:00",
-      "dateLabel": "Oct 10–11",
+      "dateLabel": "Oct 10–11 · Sat 9 AM–8 PM, Sun 9 AM–6 PM",
       "venue": "Downtown Waynesville",
       "category": "Festival",
       "source": "https://sauerkrautfestival.waynesvilleohio.com/home/",
-      "note": "Second full weekend of October, ~400k attendees"
+      "note": "56th annual; setup begins Oct 9"
     },
     {
       "title": "Little Miami Scenic Trail",
