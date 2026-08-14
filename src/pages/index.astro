@@ -6,11 +6,9 @@ import SectionBlock from "../components/SectionBlock.astro";
 import EventsThisWeek from "../components/EventsThisWeek.astro";
 import BriefCard from "../components/BriefCard.astro";
 import headlines from "../data/headlines.json";
-import { getCollection } from "astro:content";
+import { getPublicBriefs } from "../lib/briefs.js";
 
-const briefs = (await getCollection("briefs"))
-  .filter((b) => b.data.published)
-  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+const { briefs, isDemoMode } = await getPublicBriefs();
 const latest = briefs[0];
 
 const dateFmt = new Intl.DateTimeFormat("en-US", {
@@ -42,20 +40,24 @@ const dateLine = latest ? dateFmt.format(latest.data.date) : undefined;
   )}
 
   <div class="container">
-    <section class="section">
-      <p class="kicker">This morning in Waynesville</p>
-      <HeadlineList items={headlines.thisMorning} numbered={true} />
-    </section>
+    {isDemoMode && (
+      <section class="section">
+        <p class="kicker">This morning in Waynesville</p>
+        <HeadlineList items={headlines.thisMorning} numbered={true} />
+      </section>
+    )}
 
     <EventsThisWeek />
 
-    <section class="section">
-      <p class="kicker">Latest across Warren County</p>
-      <div class="grid2">
-        <SectionBlock title="Schools & Students" items={headlines.schools} moreHref="/schools/" moreLabel="All schools" />
-        <SectionBlock title="Around the County" items={headlines.aroundCounty} moreHref="/briefs/" moreLabel="More" />
-      </div>
-    </section>
+    {isDemoMode && (
+      <section class="section">
+        <p class="kicker">Latest across Warren County</p>
+        <div class="grid2">
+          <SectionBlock title="Schools & Students" items={headlines.schools} moreHref="/schools/" moreLabel="All schools" />
+          <SectionBlock title="Around the County" items={headlines.aroundCounty} moreHref="/briefs/" moreLabel="More" />
+        </div>
+      </section>
+    )}
 
     {briefs.length > 0 && (
       <section class="section">

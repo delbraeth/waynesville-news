@@ -4,6 +4,9 @@ import DemoBanner from "../components/DemoBanner.astro";
 import Masthead from "../components/Masthead.astro";
 import InfoBar from "../components/InfoBar.astro";
 import SiteFooter from "../components/SiteFooter.astro";
+import { getPublicBriefs } from "../lib/briefs.js";
+
+const { isDemoMode } = await getPublicBriefs();
 
 interface Props {
   title?: string;
@@ -54,7 +57,7 @@ const ogImage = new URL("/og.png", Astro.site);
     <meta name="color-scheme" content="light" />
   </head>
   <body>
-    <DemoBanner />
+    {isDemoMode && <DemoBanner />}
     <Masthead dateLine={dateLine} />
     {showInfoBar && <InfoBar />}
     <main>
