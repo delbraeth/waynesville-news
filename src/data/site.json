@@ -1,0 +1,6 @@
+{
+  "newsletter": {
+    "provider": "buttondown",
+    "username": "REPLACE_ME"
+  }
+}

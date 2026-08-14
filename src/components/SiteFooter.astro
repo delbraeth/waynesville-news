@@ -1,5 +1,10 @@
 ---
+import { getPublicBriefs } from "../lib/briefs.js";
+import site from "../data/site.json";
 const year = 2026;
+const { isDemoMode } = await getPublicBriefs();
+const nl = site.newsletter;
+const nlReady = nl && nl.username && nl.username !== "REPLACE_ME";
 ---
 <footer class="site-footer">
   <div class="inner">
@@ -26,16 +31,34 @@ const year = 2026;
       </div>
       <div>
         <h4>The Brief, by email</h4>
-        <p class="small muted">Coming soon — a free weekday email. (Phase 2.)</p>
-        <form class="signup" onsubmit="return false;" aria-label="Email signup (coming soon)">
-          <input type="email" placeholder="you@example.com" disabled />
-          <button class="btn" type="submit" disabled>Notify me</button>
-        </form>
+        {nlReady ? (
+          <>
+            <p class="small muted">Free — a note in your inbox when a new brief goes up.</p>
+            <form
+              class="signup"
+              action={`https://buttondown.com/api/emails/embed-subscribe/${nl.username}`}
+              method="post"
+              target="popupwindow"
+              onsubmit={`window.open('https://buttondown.com/${nl.username}','popupwindow')`}
+            >
+              <input type="email" name="email" placeholder="you@example.com" required />
+              <button class="btn" type="submit">Subscribe</button>
+            </form>
+          </>
+        ) : (
+          <>
+            <p class="small muted">Coming soon — a free email edition.</p>
+            <form class="signup" onsubmit="return false;" aria-label="Email signup (coming soon)">
+              <input type="email" placeholder="you@example.com" disabled />
+              <button class="btn" type="submit" disabled>Notify me</button>
+            </form>
+          </>
+        )}
         <p class="small"><a href="/about/">About &amp; contact</a> · editor@waynesville.news</p>
       </div>
     </div>
     <p class="fine">
-      © {year} Waynesville Daily Brief · waynesville.news · Built as a demo — not yet publishing real news.
+      © {year} Waynesville Daily Brief · waynesville.news{isDemoMode ? " · Built as a demo — not yet publishing real news." : ""}
     </p>
   </div>
 </footer>
