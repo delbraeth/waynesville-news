@@ -1,7 +1,9 @@
-name: Refresh weather
+name: Refresh (weather + weekday draft)
 
-# Refreshes src/data/weather.json from the NWS API each morning and commits it,
-# which triggers a Cloudflare redeploy. Also runnable on demand.
+# Every morning: refresh weather from the NWS API and pull candidate headlines.
+# On weekdays it also generates a fresh draft brief into drafts/. Everything that
+# changes is committed (which redeploys the site for the weather update). The
+# editor pulls, fills the draft's TODOs, and publishes.
 on:
   schedule:
     - cron: "20 10 * * *" # ~6:20 AM Eastern daily
@@ -18,15 +20,26 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: "20"
-      - run: npm run refresh:weather
+      - name: Refresh weather (NWS)
+        run: npm run refresh:weather || echo "weather refresh failed — kept previous"
+      - name: Pull candidate headlines
+        run: npm run refresh:headlines || echo "headlines refresh skipped/failed"
+      - name: Generate weekday draft
+        run: |
+          dow=$(date -u +%u)   # 1=Mon .. 7=Sun (UTC morning == ET morning)
+          if [ "$dow" -ge 1 ] && [ "$dow" -le 5 ]; then
+            npm run draft
+          else
+            echo "Weekend — no draft generated."
+          fi
       - name: Commit if changed
         run: |
-          if [[ -n "$(git status --porcelain src/data/weather.json)" ]]; then
+          if [[ -n "$(git status --porcelain)" ]]; then
             git config user.name "waynesville-news-bot"
             git config user.email "actions@users.noreply.github.com"
-            git add src/data/weather.json
-            git commit -m "chore: refresh weather"
+            git add -A
+            git commit -m "chore: daily refresh (weather + draft)"
             git push
           else
-            echo "No weather change."
+            echo "Nothing to commit."
           fi

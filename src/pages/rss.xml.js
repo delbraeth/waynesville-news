@@ -2,9 +2,9 @@ import rss from '@astrojs/rss';
 import { getCollection } from 'astro:content';
 
 export async function GET(context) {
-  const briefs = (await getCollection('briefs')).sort(
-    (a, b) => b.data.date.getTime() - a.data.date.getTime()
-  );
+  const briefs = (await getCollection('briefs'))
+    .filter((b) => b.data.published)
+    .sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
   return rss({
     title: 'Waynesville Daily Brief',
     description: "The Waynesville & Warren County news you'd otherwise miss.",

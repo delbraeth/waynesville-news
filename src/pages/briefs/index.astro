@@ -3,9 +3,9 @@ import Base from "../../layouts/Base.astro";
 import BriefCard from "../../components/BriefCard.astro";
 import { getCollection } from "astro:content";
 
-const briefs = (await getCollection("briefs")).sort(
-  (a, b) => b.data.date.getTime() - a.data.date.getTime()
-);
+const briefs = (await getCollection("briefs"))
+  .filter((b) => b.data.published)
+  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
 const dateFmt = new Intl.DateTimeFormat("en-US", {
   weekday: "long", month: "long", day: "numeric", year: "numeric",
 });

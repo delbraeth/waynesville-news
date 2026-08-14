@@ -1,11 +1,12 @@
-// Assemble a review-ready DRAFT brief from deterministic data.
+// Assemble an UNPUBLISHED draft brief straight into the content collection.
 //
-// The editor runs `npm run draft`, which auto-fills the factual scaffolding
-// (weather, this-week's events, the next government meeting) and leaves clearly
-// marked TODOs for the reported items — each with the source links to check.
-// The editor writes/verifies those items, then publishes by moving the file
-// into src/content/briefs/ and pushing. Nothing here invents news.
-import { writeFile, mkdir, readFile } from "node:fs/promises";
+// Writes src/content/briefs/<date>.md with `published: false` (hidden from the
+// site). It auto-fills the factual scaffolding — weather, this-week's events,
+// the next government meeting, candidate headlines — and leaves TODO slots for
+// the reported items, each with source links. To publish, the editor fills it
+// in and flips `published: true` (easiest on github.com — no terminal).
+// Nothing here invents news.
+import { writeFile, readFile } from "node:fs/promises";
 import { nextCommissionersMeeting } from "../src/lib/nextMeeting.js";
 
 const root = new URL("..", import.meta.url);
@@ -14,6 +15,8 @@ const readJSON = async (p) => JSON.parse(await readFile(new URL(p, root), "utf8"
 const events = await readJSON("src/data/events.json");
 let weather = null;
 try { weather = await readJSON("src/data/weather.json"); } catch { /* optional */ }
+let suggested = [];
+try { suggested = (await readJSON("src/data/suggested-headlines.json")).items ?? []; } catch { /* optional */ }
 
 const now = new Date();
 const iso = now.toISOString().slice(0, 10);
@@ -57,24 +60,33 @@ const SOURCES = {
   ],
 };
 
-const list = (section) => (SOURCES[section] || []).map((s) => `  - ${s}`).join("\n");
+const listSrc = (section) => (SOURCES[section] || []).map((s) => `  - ${s}`).join("\n");
 const eventsBlock = soon.length
   ? soon.map((e) => `- **${e.dateLabel}** — ${e.title} (${e.venue})${e.source ? ` — [details](${e.source})` : ""}`).join("\n")
   : "- (no dated events in the window — see the full calendar)";
+
+const candidateBlock = suggested.length
+  ? suggested.map((h) => `  - [${h.title}](${h.link})${h.source ? ` — ${h.source}` : ""}`).join("\n")
+  : listSrc("Headlines");
 
 const draft = `---
 title: "TODO — headline for ${longDate}"
 date: ${iso}
 dek: "TODO — one-line summary of today's brief."
 demo: false
+published: false
 ---
 
 <!--
-  DRAFT — not published (this folder is outside src/content/briefs/).
-  Auto-filled: weather = ${weather ? `${weather.tempF}° ${weather.condition}` : "n/a"}, the events list, and the next meeting.
-  Your job: fill each TODO with a real, sourced item using the links under each section.
-  QA before publishing: names/dates verified, links resolve, no unverified crime claims.
-  Publish: move this file into src/content/briefs/ and push (see drafts/README.md).
+  UNPUBLISHED (published: false = hidden from the site). This is your draft.
+  Auto-filled: weather = ${weather ? `${weather.tempF}° ${weather.condition}` : "n/a"}, the events list,
+  the next meeting, and candidate headlines below.
+  TO PUBLISH (easiest on github.com — no terminal):
+    1) fill each TODO with a real, sourced item using the links,
+    2) set the title and dek,
+    3) delete this comment,
+    4) change published: false  ->  published: true, and commit.
+  QA: names/dates verified, links resolve, no unverified crime claims.
 -->
 
 ## This morning in Waynesville
@@ -85,20 +97,20 @@ demo: false
 
 ## Schools
 TODO — Wayne Local board, Spartans, closings, library programs. Check:
-${list("Schools")}
+${listSrc("Schools")}
 
 ## Local government
 Next up: **${meeting.body}**, ${meeting.whenLabel} — [agenda](${meeting.source}).
 TODO — village council & county items, each linked to the agenda/minutes. Check:
-${list("Local Government")}
+${listSrc("Local Government")}
 
 ## Around town
 TODO — new businesses, the antiques district, notable property transfers. Check:
-${list("Around Town")}
+${listSrc("Around Town")}
 
 ## Public safety
 TODO — road/weather alerts, sheriff/prosecutor news (handle with care). Check:
-${list("Public Safety")}
+${listSrc("Public Safety")}
 
 ## This week's events
 ${eventsBlock}
@@ -106,10 +118,9 @@ ${eventsBlock}
 See the [full events calendar](/events/).
 
 ---
-*Candidate headlines to scan (pick, summarize briefly, link out — never republish):*
-${list("Headlines")}
+*Candidate headlines to scan (pick, summarize briefly, link the ORIGINAL source — never republish):*
+${candidateBlock}
 `;
 
-await mkdir(new URL("drafts/", root), { recursive: true });
-await writeFile(new URL(`drafts/${iso}.md`, root), draft);
-console.log(`Draft written: drafts/${iso}.md  (${soon.length} events, next meeting ${meeting.whenLabel})`);
+await writeFile(new URL(`src/content/briefs/${iso}.md`, root), draft);
+console.log(`Unpublished brief written: src/content/briefs/${iso}.md  (${soon.length} events, next meeting ${meeting.whenLabel})`);

@@ -8,29 +8,38 @@ import BriefCard from "../components/BriefCard.astro";
 import headlines from "../data/headlines.json";
 import { getCollection } from "astro:content";
 
-const briefs = (await getCollection("briefs")).sort(
-  (a, b) => b.data.date.getTime() - a.data.date.getTime()
-);
+const briefs = (await getCollection("briefs"))
+  .filter((b) => b.data.published)
+  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
 const latest = briefs[0];
 
 const dateFmt = new Intl.DateTimeFormat("en-US", {
   weekday: "long", month: "long", day: "numeric", year: "numeric",
 });
 const shortFmt = new Intl.DateTimeFormat("en-US", { month: "long", day: "numeric" });
-
-const dateLine = dateFmt.format(latest.data.date);
+const dateLine = latest ? dateFmt.format(latest.data.date) : undefined;
 ---
 <Base dateLine={dateLine}>
-  <section class="section">
-    <div class="reading">
-      <FeaturedBrief
-        title={latest.data.title}
-        dek={latest.data.dek}
-        dateLabel={shortFmt.format(latest.data.date)}
-        href={`/briefs/${latest.id}/`}
-      />
-    </div>
-  </section>
+  {latest ? (
+    <section class="section">
+      <div class="reading">
+        <FeaturedBrief
+          title={latest.data.title}
+          dek={latest.data.dek}
+          dateLabel={shortFmt.format(latest.data.date)}
+          href={`/briefs/${latest.id}/`}
+        />
+      </div>
+    </section>
+  ) : (
+    <section class="section">
+      <div class="reading" style="text-align:center">
+        <p class="kicker">First edition coming soon</p>
+        <h2>We’re almost live.</h2>
+        <p class="dek">The first Waynesville Daily Brief is being written. Meanwhile, here’s what’s happening this week.</p>
+      </div>
+    </section>
+  )}
 
   <div class="container">
     <section class="section">
@@ -48,16 +57,18 @@ const dateLine = dateFmt.format(latest.data.date);
       </div>
     </section>
 
-    <section class="section">
-      <p class="kicker">Recent briefs</p>
-      {briefs.map((b) => (
-        <BriefCard
-          dateLabel={dateFmt.format(b.data.date)}
-          title={b.data.title}
-          dek={b.data.dek}
-          href={`/briefs/${b.id}/`}
-        />
-      ))}
-    </section>
+    {briefs.length > 0 && (
+      <section class="section">
+        <p class="kicker">Recent briefs</p>
+        {briefs.map((b) => (
+          <BriefCard
+            dateLabel={dateFmt.format(b.data.date)}
+            title={b.data.title}
+            dek={b.data.dek}
+            href={`/briefs/${b.id}/`}
+          />
+        ))}
+      </section>
+    )}
   </div>
 </Base>

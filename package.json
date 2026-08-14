@@ -10,6 +10,7 @@
     "preview": "astro preview",
     "astro": "astro",
     "refresh:weather": "node scripts/fetch-weather.mjs",
+    "refresh:headlines": "node scripts/fetch-headlines.mjs",
     "draft": "node scripts/draft-brief.mjs"
   },
   "dependencies": {
