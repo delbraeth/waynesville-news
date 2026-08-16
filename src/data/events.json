@@ -1,28 +1,28 @@
 {
-  "_note": "Real venues and sources, verified against each listed source on 2026-08-14. Recurring items (rodeo, commissioners) show the next occurrence.",
+  "_note": "Real venues and sources, verified against each listed source on 2026-08-16. Recurring items (rodeo, commissioners) show the next occurrence.",
   "items": [
     {
-      "title": "Fox Hollow Rodeo \u2014 Bull Riding",
-      "dateISO": "2026-08-15T18:00:00-04:00",
-      "dateLabel": "Every Saturday \u00b7 office opens 5 PM, show 6 PM",
+      "title": "Fox Hollow Rodeo — Bull Riding",
+      "dateISO": "2026-08-22T18:00:00-04:00",
+      "dateLabel": "Every Saturday · office opens 5 PM, show 6 PM",
       "venue": "Fox Hollow Rodeo, Waynesville",
       "category": "Rodeo",
       "source": "https://foxhollowrodeo.com/",
-      "note": "Bull riding, barrel racing, mutton bustin' \u2014 year-round, rain or shine"
+      "note": "Bull riding, barrel racing, mutton bustin' — year-round, rain or shine"
     },
     {
       "title": "WLS Back-to-School Bash",
       "dateISO": "2026-08-16T15:00:00-04:00",
-      "dateLabel": "Sun, Aug 16 \u00b7 3:00\u20135:00 PM",
+      "dateLabel": "Sun, Aug 16 · 3:00–5:00 PM",
       "venue": "Bicentennial Park, Waynesville",
       "category": "Schools",
       "source": "https://www.wayne-local.com/district-news/entry/back-to-school-bash-sunday-august-16/",
       "note": "Wayne Local Schools kicks off the 2026-27 school year; all families invited"
     },
     {
-      "title": "Warren County Commissioners \u2014 Weekly Session",
+      "title": "Warren County Commissioners — Weekly Session",
       "dateISO": "2026-08-18T09:00:00-04:00",
-      "dateLabel": "Tue, Aug 18 \u00b7 9:00 AM",
+      "dateLabel": "Tue, Aug 18 · 9:00 AM",
       "venue": "406 Justice Dr, Lebanon",
       "category": "Government",
       "source": "https://commissioners.warrencountyohio.gov/News/AgendaMinutes/Index",
@@ -31,7 +31,7 @@
     {
       "title": "Toddler Trek: Hiding In My Shell",
       "dateISO": "2026-08-19T10:30:00-04:00",
-      "dateLabel": "Wed, Aug 19 \u00b7 10:30\u201311:30 AM",
+      "dateLabel": "Wed, Aug 19 · 10:30–11:30 AM",
       "venue": "Gulley Park, Clarksville",
       "category": "Outdoors",
       "source": "https://www.warrencountyparks.com/events/",
@@ -40,7 +40,7 @@
     {
       "title": "Bat-tastic Evening",
       "dateISO": "2026-08-22T19:00:00-04:00",
-      "dateLabel": "Sat, Aug 22 \u00b7 7:00\u201310:00 PM",
+      "dateLabel": "Sat, Aug 22 · 7:00–10:00 PM",
       "venue": "Armco Park - Jones Pavilion, Lebanon",
       "category": "Outdoors",
       "source": "https://www.warrencountyparks.com/events/",
@@ -49,7 +49,7 @@
     {
       "title": "Business to Business Networking Mixer",
       "dateISO": "2026-08-26T17:00:00-04:00",
-      "dateLabel": "Wed, Aug 26 \u00b7 5:00 PM",
+      "dateLabel": "Wed, Aug 26 · 5:00 PM",
       "venue": "Stonehouse Tavern, Waynesville",
       "category": "Chamber",
       "source": "https://www.waynesvilleohio.com/events",
@@ -58,7 +58,7 @@
     {
       "title": "Full Moon Hike at Hisey Park",
       "dateISO": "2026-08-27T20:30:00-04:00",
-      "dateLabel": "Thu, Aug 27 \u00b7 8:30\u20139:30 PM",
+      "dateLabel": "Thu, Aug 27 · 8:30–9:30 PM",
       "venue": "Hisey Park, Waynesville",
       "category": "Outdoors",
       "source": "https://www.warrencountyparks.com/events/",
@@ -67,7 +67,7 @@
     {
       "title": "Family Nature Walk at Pine Hill Lakes Park",
       "dateISO": "2026-08-28T18:30:00-04:00",
-      "dateLabel": "Fri, Aug 28 \u00b7 6:30\u20138:00 PM",
+      "dateLabel": "Fri, Aug 28 · 6:30–8:00 PM",
       "venue": "Pine Hill Lakes Park, Mason",
       "category": "Outdoors",
       "source": "https://www.warrencountyparks.com/events/",
@@ -76,25 +76,25 @@
     {
       "title": "Toddler Trek: Butterflies and Moths at Hisey Park",
       "dateISO": "2026-09-02T10:30:00-04:00",
-      "dateLabel": "Wed, Sep 2 \u00b7 10:30\u201311:30 AM",
+      "dateLabel": "Wed, Sep 2 · 10:30–11:30 AM",
       "venue": "Hisey Park, Waynesville",
       "category": "Outdoors",
       "source": "https://www.warrencountyparks.com/events/",
       "note": "Warren County Park District program for ages 2-6 and a grown-up"
     },
     {
-      "title": "Ohio Renaissance Festival \u2014 Homecoming Weekend (Opening)",
+      "title": "Ohio Renaissance Festival — Homecoming Weekend (Opening)",
       "dateISO": "2026-09-05T10:30:00-04:00",
-      "dateLabel": "Opens Sat, Sep 5 \u00b7 Homecoming Weekend Sep 5\u20137 \u00b7 weekends & Labor Day through Nov 1",
+      "dateLabel": "Opens Sat, Sep 5 · Homecoming Weekend Sep 5–7 · weekends & Labor Day through Nov 1",
       "venue": "Renaissance Park, Harveysburg",
       "category": "Festival",
       "source": "https://renfestival.com/",
-      "note": "10:30 AM \u2013 7:00 PM; season runs weekends through Nov 1, 2026"
+      "note": "10:30 AM – 7:00 PM; season runs weekends through Nov 1, 2026"
     },
     {
       "title": "Business to Business Networking Mixer",
       "dateISO": "2026-09-23T12:00:00-04:00",
-      "dateLabel": "Wed, Sep 23 \u00b7 12:00 PM",
+      "dateLabel": "Wed, Sep 23 · 12:00 PM",
       "venue": "Bentino's, Waynesville",
       "category": "Chamber",
       "source": "https://www.waynesvilleohio.com/events",
@@ -103,7 +103,7 @@
     {
       "title": "Ohio Sauerkraut Festival",
       "dateISO": "2026-10-10T09:00:00-04:00",
-      "dateLabel": "Oct 10\u201311 \u00b7 Sat 9 AM\u20138 PM, Sun 9 AM\u20136 PM",
+      "dateLabel": "Oct 10–11 · Sat 9 AM–8 PM, Sun 9 AM–6 PM",
       "venue": "Downtown Waynesville",
       "category": "Festival",
       "source": "https://sauerkrautfestival.waynesvilleohio.com/home/",
@@ -117,7 +117,7 @@
       "category": "Outdoors",
       "source": "https://ohiodnr.gov/go-and-do/plan-a-visit/find-a-property/little-miami-state-park",
       "evergreen": true,
-      "note": "~78-mi paved rail-trail \u2014 biking, hiking, running"
+      "note": "~78-mi paved rail-trail — biking, hiking, running"
     },
     {
       "title": "Kings Island",
