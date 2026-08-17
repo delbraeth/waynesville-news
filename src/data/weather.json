@@ -1,9 +1,9 @@
 {
   "_note": "Auto-refreshed from the NWS API (api.weather.gov, ILN/Wilmington office).",
   "location": "Waynesville, OH",
-  "tempF": 87,
-  "condition": "Slight Chance Showers And Thunderstorms then Showers And Thunderstorms Likely",
-  "highF": 87,
-  "lowF": 71,
-  "updated": "2026-08-16T10:52:28.313Z"
+  "tempF": 82,
+  "condition": "Chance Showers And Thunderstorms",
+  "highF": 82,
+  "lowF": 63,
+  "updated": "2026-08-17T10:49:11.074Z"
 }
