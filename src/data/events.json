@@ -1,5 +1,5 @@
 {
-  "_note": "Real venues and sources, verified against each listed source on 2026-08-16. Recurring items (rodeo, commissioners) show the next occurrence.",
+  "_note": "Real venues and sources, verified against each listed source on 2026-08-17. Recurring items (rodeo, commissioners) show the next occurrence.",
   "items": [
     {
       "title": "Fox Hollow Rodeo — Bull Riding",
@@ -9,15 +9,6 @@
       "category": "Rodeo",
       "source": "https://foxhollowrodeo.com/",
       "note": "Bull riding, barrel racing, mutton bustin' — year-round, rain or shine"
-    },
-    {
-      "title": "WLS Back-to-School Bash",
-      "dateISO": "2026-08-16T15:00:00-04:00",
-      "dateLabel": "Sun, Aug 16 · 3:00–5:00 PM",
-      "venue": "Bicentennial Park, Waynesville",
-      "category": "Schools",
-      "source": "https://www.wayne-local.com/district-news/entry/back-to-school-bash-sunday-august-16/",
-      "note": "Wayne Local Schools kicks off the 2026-27 school year; all families invited"
     },
     {
       "title": "Warren County Commissioners — Weekly Session",
