@@ -81,7 +81,7 @@ const candidateBlock = suggested.length
   ? suggested.map((h) => {
       const quote = h.excerpt || h.title;
       const url = h.sourceUrl || h.link;
-      return `  > "${quote}"${h.source ? ` — ${h.source}` : ""}, [full story](${url})`;
+      return `- "${quote}"${h.source ? ` — ${h.source}` : ""}, [full story](${url})`;
     }).join("\n")
   : listSrc("Headlines");
 
@@ -133,8 +133,7 @@ ${eventsBlock}
 
 See the [full events calendar](/events/).
 
----
-*LOCAL HEADLINES*
+## Local headlines
 ${candidateBlock}
 `;
 
