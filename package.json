@@ -14,8 +14,9 @@
     "draft": "node scripts/draft-brief.mjs"
   },
   "dependencies": {
-    "astro": "^5.0.0",
     "@astrojs/rss": "^4.0.11",
-    "@astrojs/sitemap": "^3.2.1"
+    "@astrojs/sitemap": "^3.2.1",
+    "astro": "^5.0.0",
+    "puppeteer-core": "^25.8.0"
   }
 }

@@ -66,7 +66,11 @@ const eventsBlock = soon.length
   : "- (no dated events in the window — see the full calendar)";
 
 const candidateBlock = suggested.length
-  ? suggested.map((h) => `  > "${h.title}"${h.source ? ` — ${h.source}` : ""}, [full story](${h.link})`).join("\n")
+  ? suggested.map((h) => {
+      const quote = h.excerpt || h.title;
+      const url = h.sourceUrl || h.link;
+      return `  > "${quote}"${h.source ? ` — ${h.source}` : ""}, [full story](${url})`;
+    }).join("\n")
   : listSrc("Headlines");
 
 const draft = `---
