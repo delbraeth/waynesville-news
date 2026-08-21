@@ -79,7 +79,7 @@ const SOURCES = {
     "Chamber — https://www.waynesvilleohio.com/ · Merchants — https://waynesvilleshops.com/",
   ],
   "Public Safety": [
-    "Sheriff — https://sheriff.warrencountyohio.gov/",
+    "Sheriff — https://sheriff.warrencountyohio.gov/  (⚠ presumption of innocence; do NOT name un-convicted arrestees)",
     "Prosecutor press — https://prosecutor.warrencountyohio.gov/Public/Press/Index",
   ],
   Headlines: [
@@ -111,12 +111,12 @@ const fmtGameDate = (iso) =>
 
 const sportsResultsBlock = sports.results.length
   ? sports.results.map((g) =>
-      `- **${g.sport} (${g.level})** — Waynesville ${g.wayneScore}, ${g.opponent} ${g.opponentScore} — [box score](${g.link})`
+      `- **${g.sport} (${g.level})** — Waynesville ${g.wayneScore}, ${g.opponent} ${g.opponentScore}${g.isHome === true ? " (Home)" : g.isHome === false ? " (Away)" : ""} — [box score](${g.link})`
     ).join("\n")
   : null;
 const sportsUpcomingBlock = sports.upcoming.length
   ? sports.upcoming.map((g) =>
-      `- **${g.sport} (${g.level})** — vs ${g.opponent}, ${fmtGameDate(g.dateISO)} — [details](${g.link})`
+      `- **${g.sport} (${g.level})** — ${g.isHome === false ? "@" : "vs"} ${g.opponent}, ${fmtGameDate(g.dateISO)} — [details](${g.link})`
     ).join("\n")
   : null;
 const sportsBlock = (sportsResultsBlock || sportsUpcomingBlock)

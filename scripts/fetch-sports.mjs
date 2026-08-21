@@ -4,16 +4,40 @@
 // each with hasResult (completed vs. upcoming), timestamp, sport, level, and
 // both teams' scores. Window: past 7 days (results) through next 7 days
 // (upcoming). Nothing invented — scores and matchups reproduced verbatim.
+//
+// Home/away: the roster page's team ordering is NOT a reliable signal (verified
+// against real games — order doesn't consistently mean home-first or away-first).
+// Each individual game page carries a proper schema.org SportsEvent block with
+// homeTeam/awayTeam names, so that's fetched per-game instead. Best-effort: if a
+// given game's page can't be read, isHome is just left out for that one item
+// rather than failing the whole run or guessing.
 import { writeFile } from "node:fs/promises";
 
 const SCHOOL_URL = "https://www.maxpreps.com/oh/waynesville/waynesville-spartans/";
 const WAYNESVILLE_SCHOOL_ID = "fad9ec30-4dd7-4a9f-b914-05e1a14ec1ea";
 const LOOKBACK_DAYS = 7;
 const LOOKAHEAD_DAYS = 7;
+const GAME_PAGE_DELAY_MS = 400; // be polite — this adds one fetch per game
+const UA = "Mozilla/5.0 (WaynesvilleDailyBrief/1.0; waynesville.news)";
 const OUT = new URL("../src/data/sports.json", import.meta.url);
 
 const write = (data, note) =>
   writeFile(OUT, JSON.stringify({ _note: note, updated: new Date().toISOString(), ...data }, null, 2) + "\n");
+
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+
+async function fetchIsHome(gameUrl) {
+  try {
+    const res = await fetch(gameUrl, { headers: { "User-Agent": UA } });
+    if (!res.ok) return null;
+    const html = await res.text();
+    const home = /"homeTeam":\{"@type":"SportsTeam","name":"([^"]+)"/.exec(html)?.[1];
+    if (!home) return null;
+    return home.includes("Waynesville");
+  } catch {
+    return null; // unknown — draft falls back to plain "vs" for this one game
+  }
+}
 
 async function main() {
   const res = await fetch(SCHOOL_URL, { headers: { "User-Agent": "Mozilla/5.0 (WaynesvilleDailyBrief/1.0; waynesville.news)" } });
@@ -34,9 +58,12 @@ async function main() {
     .filter((c) => c._d >= from && c._d <= to)
     .sort((a, b) => a._d - b._d);
 
-  const shape = (c) => {
+  let fetchCount = 0;
+  const shape = async (c) => {
     const us = c.teams.find((t) => t.teamId === WAYNESVILLE_SCHOOL_ID) ?? c.teams[0];
     const them = c.teams.find((t) => t.teamId !== WAYNESVILLE_SCHOOL_ID) ?? c.teams[1];
+    if (fetchCount++ > 0) await sleep(GAME_PAGE_DELAY_MS);
+    const isHome = c.canonicalUrl ? await fetchIsHome(c.canonicalUrl) : null;
     return {
       dateISO: c.timestamp,
       sport: c.sport,
@@ -45,12 +72,19 @@ async function main() {
       wayneScore: us?.score ?? null,
       opponentScore: them?.score ?? null,
       result: us?.result ?? null, // "W" / "L" / null
+      isHome, // true / false / null (unknown)
       link: c.canonicalUrl,
     };
   };
 
-  const results = inWindow.filter((c) => c.hasResult && c._d < now).map(shape);
-  const upcoming = inWindow.filter((c) => !c.hasResult || c._d >= now).map(shape);
+  const shapeAll = async (list) => {
+    const out = [];
+    for (const c of list) out.push(await shape(c));
+    return out;
+  };
+
+  const results = await shapeAll(inWindow.filter((c) => c.hasResult && c._d < now));
+  const upcoming = await shapeAll(inWindow.filter((c) => !c.hasResult || c._d >= now));
 
   await write(
     { results, upcoming },
