@@ -33,7 +33,10 @@ const evergreen = eventsData.items.filter((e) => e.evergreen);
           <div>
             <a class="ev-title" href={e.source} target="_blank" rel="noopener">{e.title}</a>
             <span class="ev-cat">{e.category}</span>
-            <div class="ev-meta">{e.venue}{e.note ? ` · ${e.note}` : ""}</div>
+            <div class="ev-meta">
+              {e.venue}{e.note ? ` · ${e.note}` : ""}
+              {e.registrationUrl && <> · <a href={e.registrationUrl} target="_blank" rel="noopener">Register</a></>}
+            </div>
           </div>
         </li>
       ))}

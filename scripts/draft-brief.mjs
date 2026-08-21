@@ -91,7 +91,7 @@ const SOURCES = {
 
 const listSrc = (section) => (SOURCES[section] || []).map((s) => `  - ${s}`).join("\n");
 const eventsBlock = soon.length
-  ? soon.map((e) => `- **${e.dateLabel}** — ${e.title} (${e.venue})${e.source ? ` — [details](${e.source})` : ""}`).join("\n")
+  ? soon.map((e) => `- **${e.dateLabel}** — ${e.title} (${e.venue})${e.source ? ` — [details](${e.source})` : ""}${e.registrationUrl ? ` — [register](${e.registrationUrl})` : ""}`).join("\n")
   : "- (no dated events in the window — see the full calendar)";
 
 const safetyBlock = prosecutorItems.length
