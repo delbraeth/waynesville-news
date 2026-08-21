@@ -5,5 +5,25 @@
   "condition": "Sunny",
   "highF": 82,
   "lowF": 63,
-  "updated": "2026-08-21T16:57:41.109Z"
+  "outlook": [
+    {
+      "dayLabel": "Saturday",
+      "highF": 81,
+      "lowF": 59,
+      "condition": "Mostly Sunny then Chance Showers And Thunderstorms"
+    },
+    {
+      "dayLabel": "Sunday",
+      "highF": 77,
+      "lowF": 55,
+      "condition": "Sunny"
+    },
+    {
+      "dayLabel": "Monday",
+      "highF": 77,
+      "lowF": 57,
+      "condition": "Mostly Sunny"
+    }
+  ],
+  "updated": "2026-08-21T17:56:55.509Z"
 }

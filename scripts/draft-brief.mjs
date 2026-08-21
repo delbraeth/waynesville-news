@@ -144,6 +144,18 @@ const villageMinutesBlock = villageMinutes?.meetingDateLabel
     ].join("\n")
   : null;
 
+const weatherBlock = weather
+  ? [
+      `**Today:** ${weather.tempF}°F, ${weather.condition} (high ${weather.highF}° / low ${weather.lowF}°)`,
+      weather.outlook?.length
+        ? `\n**Outlook:**\n${weather.outlook.map((d) =>
+            `- **${d.dayLabel}** — high ${d.highF}°${d.lowF !== null ? ` / low ${d.lowF}°` : ""}, ${d.condition}`
+          ).join("\n")}`
+        : "",
+      `\nSource: [National Weather Service](https://forecast.weather.gov/MapClick.php?lat=39.5287&lon=-84.0891)`,
+    ].join("\n")
+  : null;
+
 const candidateBlock = suggested.length
   ? suggested.map((h) => {
       const quote = h.excerpt || h.title;
@@ -171,6 +183,9 @@ published: false
     4) change published: false  ->  published: true, and commit.
   QA: names/dates verified, links resolve, no unverified crime claims.
 -->
+
+## Weather
+${weatherBlock ?? "TODO — weather unavailable this morning; check https://forecast.weather.gov/MapClick.php?lat=39.5287&lon=-84.0891"}
 
 ## This morning in Waynesville
 

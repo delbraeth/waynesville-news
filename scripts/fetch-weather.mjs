@@ -27,6 +27,23 @@ async function main() {
   const day = periods.find((p) => p.isDaytime) ?? now;
   const night = periods.find((p) => !p.isDaytime) ?? now;
 
+  // Multi-day outlook: pair each upcoming daytime period with its following
+  // overnight period for a High/Low/condition row. Skips the current day
+  // (already covered by tempF/highF/lowF above) and caps at 3 days out —
+  // this runs ~6:20 AM ET, so periods[0] is reliably "Today".
+  const outlook = [];
+  for (let i = 2; i < periods.length && outlook.length < 3; i += 2) {
+    const d = periods[i];
+    const n = periods[i + 1];
+    if (!d?.isDaytime) continue;
+    outlook.push({
+      dayLabel: d.name.replace(/ Night$/, ""),
+      highF: d.temperature,
+      lowF: n && !n.isDaytime ? n.temperature : null,
+      condition: d.shortForecast,
+    });
+  }
+
   const data = {
     _note: "Auto-refreshed from the NWS API (api.weather.gov, ILN/Wilmington office).",
     location: "Waynesville, OH",
@@ -34,6 +51,7 @@ async function main() {
     condition: now.shortForecast,
     highF: day.temperature,
     lowF: night.temperature,
+    outlook,
     updated: new Date().toISOString(),
   };
 
