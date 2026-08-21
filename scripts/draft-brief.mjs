@@ -74,7 +74,6 @@ const SOURCES = {
     "Wayne Township (covers Waynesville & Corwin) — https://www.waynetownship.us/minutes-agendas/agendas-2026/",
   ],
   "Around Town": [
-    "Auditor property transfers — https://auditor.warrencountyohio.gov/RealEstate/TransfersAndConveyance/Index",
     "Chamber — https://www.waynesvilleohio.com/ · Merchants — https://waynesvilleshops.com/",
   ],
   "Public Safety": [
@@ -179,7 +178,7 @@ TODO — village council & county items, each linked to the agenda/minutes. Chec
 ${listSrc("Local Government")}
 
 ## Around town
-TODO — new businesses, the antiques district, notable property transfers. Check:
+TODO — new businesses, the antiques district. Check:
 ${listSrc("Around Town")}
 ${shopsBlock ? `\n**Merchant Association events** (waynesvilleshops.com)\n${shopsBlock}\n` : ""}
 
