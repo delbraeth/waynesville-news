@@ -36,6 +36,8 @@ jobs:
         run: npm run refresh:headlines || echo "headlines refresh skipped/failed"
       - name: Pull Prosecutor press releases
         run: npm run refresh:safety || echo "prosecutor press refresh skipped/failed"
+      - name: Pull obituaries
+        run: npm run refresh:obituaries || echo "obituaries refresh skipped/failed"
       - name: Generate weekday draft
         run: |
           dow=$(date -u +%u)   # 1=Mon .. 7=Sun (UTC morning == ET morning)

@@ -12,6 +12,7 @@
     "refresh:weather": "node scripts/fetch-weather.mjs",
     "refresh:headlines": "node scripts/fetch-headlines.mjs",
     "refresh:safety": "node scripts/fetch-prosecutor-press.mjs",
+    "refresh:obituaries": "node scripts/fetch-obituaries.mjs",
     "draft": "node scripts/draft-brief.mjs"
   },
   "dependencies": {

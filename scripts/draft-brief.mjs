@@ -33,6 +33,8 @@ let suggested = [];
 try { suggested = (await readJSON("src/data/suggested-headlines.json")).items ?? []; } catch { /* optional */ }
 let prosecutorItems = [];
 try { prosecutorItems = (await readJSON("src/data/prosecutor-press.json")).items ?? []; } catch { /* optional */ }
+let obituaries = [];
+try { obituaries = (await readJSON("src/data/obituaries.json")).items ?? []; } catch { /* optional */ }
 
 const longDate = now.toLocaleDateString("en-US", {
   weekday: "long", month: "long", day: "numeric", year: "numeric", timeZone: "UTC",
@@ -84,6 +86,10 @@ const safetyBlock = prosecutorItems.length
     prosecutorItems.map((p) => `- **${p.dateLabel}** — ${p.title} ([release](${p.link}))`).join("\n") +
     `\n\nCheck:`
   : "TODO — road/weather alerts, sheriff/prosecutor news (handle with care). Check:";
+
+const obituariesBlock = obituaries.length
+  ? obituaries.map((o) => `- **${o.name}** — ${o.dateRange} ([tribute](${o.link}))`).join("\n")
+  : null;
 
 const candidateBlock = suggested.length
   ? suggested.map((h) => {
@@ -140,7 +146,7 @@ ${listSrc("Public Safety")}
 ${eventsBlock}
 
 See the [full events calendar](/events/).
-
+${obituariesBlock ? `\n## Obituaries\n${obituariesBlock}\n` : ""}
 ## Local headlines
 ${candidateBlock}
 `;
