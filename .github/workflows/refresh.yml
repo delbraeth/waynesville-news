@@ -26,6 +26,8 @@ jobs:
         with:
           chrome-version: stable
         continue-on-error: true
+      - name: Install dependencies
+        run: npm ci
       - name: Refresh weather (NWS)
         run: npm run refresh:weather || echo "weather refresh failed — kept previous"
       - name: Pull candidate headlines
