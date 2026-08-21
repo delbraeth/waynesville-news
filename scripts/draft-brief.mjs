@@ -42,6 +42,8 @@ let libraryEvents = [];
 try { libraryEvents = (await readJSON("src/data/library-events.json")).items ?? []; } catch { /* optional */ }
 let townshipAgendas = [];
 try { townshipAgendas = (await readJSON("src/data/township-agendas.json")).items ?? []; } catch { /* optional */ }
+let shopsEvents = [];
+try { shopsEvents = (await readJSON("src/data/shops-events.json")).items ?? []; } catch { /* optional */ }
 
 const longDate = now.toLocaleDateString("en-US", {
   weekday: "long", month: "long", day: "numeric", year: "numeric", timeZone: "UTC",
@@ -127,6 +129,10 @@ const libraryBlock = libraryEvents.length
   ? libraryEvents.map((e) => `- **${e.dateLabel}** — [${e.title}](${e.link})`).join("\n")
   : null;
 
+const shopsBlock = shopsEvents.length
+  ? shopsEvents.map((e) => `- **${e.dateLabel}** — [${e.title}](${e.link})`).join("\n")
+  : null;
+
 const candidateBlock = suggested.length
   ? suggested.map((h) => {
       const quote = h.excerpt || h.title;
@@ -175,6 +181,7 @@ ${listSrc("Local Government")}
 ## Around town
 TODO — new businesses, the antiques district, notable property transfers. Check:
 ${listSrc("Around Town")}
+${shopsBlock ? `\n**Merchant Association events** (waynesvilleshops.com)\n${shopsBlock}\n` : ""}
 
 ## Public safety
 ${safetyBlock}

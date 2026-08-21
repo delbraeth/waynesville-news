@@ -1,0 +1,36 @@
+{
+  "_note": "Waynesville Merchant Association (waynesvilleshops.com) — upcoming events with their own detail page and a structured Start/End time; times reproduced verbatim.",
+  "updated": "2026-08-21T17:32:04.546Z",
+  "items": [
+    {
+      "title": "Street Faire September 12th",
+      "dateISO": "2026-09-12T10:00:00.000Z",
+      "dateLabel": "Sat, Sep 12 · 10:00 AM–4:00 PM",
+      "link": "https://waynesvilleshops.com/event/waynesville-street-faire-4/"
+    },
+    {
+      "title": "Waynesville Sauerkraut Festival",
+      "dateISO": "2026-10-10T11:00:00.000Z",
+      "dateLabel": "Sat, Oct 10 · 11:00 AM–5:00 PM",
+      "link": "https://waynesvilleshops.com/event/waynesville-sauerkraut-festival/"
+    },
+    {
+      "title": "Trick or Treat",
+      "dateISO": "2026-10-25T13:00:00.000Z",
+      "dateLabel": "Sun, Oct 25 · 1:00 PM–4:00 PM",
+      "link": "https://waynesvilleshops.com/event/waynesville-trick-or-treat-in-historic-downtown/"
+    },
+    {
+      "title": "Hearthwarming Holidays",
+      "dateISO": "2026-11-06T11:00:00.000Z",
+      "dateLabel": "Fri, Nov 6 · 11:00 AM–5:00 PM",
+      "link": "https://waynesvilleshops.com/event/hearthwarming-holidays-in-waynesville-ohio/"
+    },
+    {
+      "title": "Waynesville Street Faire The Christmas Market",
+      "dateISO": "2026-12-06T10:00:00.000Z",
+      "dateLabel": "Sun, Dec 6 · 10:00 AM–4:00 PM",
+      "link": "https://waynesvilleshops.com/event/waynesville-street-faire-the-christmas-market/"
+    }
+  ]
+}
