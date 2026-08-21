@@ -37,6 +37,8 @@ let obituaries = [];
 try { obituaries = (await readJSON("src/data/obituaries.json")).items ?? []; } catch { /* optional */ }
 let sports = { results: [], upcoming: [] };
 try { sports = await readJSON("src/data/sports.json"); } catch { /* optional */ }
+let libraryEvents = [];
+try { libraryEvents = (await readJSON("src/data/library-events.json")).items ?? []; } catch { /* optional */ }
 
 const longDate = now.toLocaleDateString("en-US", {
   weekday: "long", month: "long", day: "numeric", year: "numeric", timeZone: "UTC",
@@ -115,6 +117,10 @@ const sportsBlock = (sportsResultsBlock || sportsUpcomingBlock)
     ].filter(Boolean).join("\n\n")
   : null;
 
+const libraryBlock = libraryEvents.length
+  ? libraryEvents.map((e) => `- **${e.dateLabel}** — [${e.title}](${e.link})`).join("\n")
+  : null;
+
 const candidateBlock = suggested.length
   ? suggested.map((h) => {
       const quote = h.excerpt || h.title;
@@ -152,6 +158,7 @@ published: false
 ## Schools
 TODO — Wayne Local board, Spartans, closings, library programs. Check:
 ${listSrc("Schools")}
+${libraryBlock ? `\n**Library programs** (Mary L. Cook Public Library)\n${libraryBlock}\n` : ""}
 ${sportsBlock ? `\n## This week in sports\n${sportsBlock}\n` : ""}
 ## Local government
 Next up: **${meeting.body}**, ${meeting.whenLabel} — [agenda](${meeting.source}).

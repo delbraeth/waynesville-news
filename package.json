@@ -14,6 +14,7 @@
     "refresh:safety": "node scripts/fetch-prosecutor-press.mjs",
     "refresh:obituaries": "node scripts/fetch-obituaries.mjs",
     "refresh:sports": "node scripts/fetch-sports.mjs",
+    "refresh:library": "node scripts/fetch-library-events.mjs",
     "draft": "node scripts/draft-brief.mjs"
   },
   "dependencies": {
