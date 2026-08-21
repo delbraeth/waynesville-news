@@ -15,6 +15,7 @@
     "refresh:obituaries": "node scripts/fetch-obituaries.mjs",
     "refresh:sports": "node scripts/fetch-sports.mjs",
     "refresh:library": "node scripts/fetch-library-events.mjs",
+    "refresh:township": "node scripts/fetch-township-agendas.mjs",
     "draft": "node scripts/draft-brief.mjs"
   },
   "dependencies": {

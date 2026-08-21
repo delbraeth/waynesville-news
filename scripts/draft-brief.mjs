@@ -9,6 +9,7 @@
 import { writeFile, readFile } from "node:fs/promises";
 import { existsSync } from "node:fs";
 import { nextCommissionersMeeting } from "../src/lib/nextMeeting.js";
+import { nextTownshipMeeting } from "../src/lib/nextTownshipMeeting.js";
 
 const root = new URL("..", import.meta.url);
 const readJSON = async (p) => JSON.parse(await readFile(new URL(p, root), "utf8"));
@@ -39,6 +40,8 @@ let sports = { results: [], upcoming: [] };
 try { sports = await readJSON("src/data/sports.json"); } catch { /* optional */ }
 let libraryEvents = [];
 try { libraryEvents = (await readJSON("src/data/library-events.json")).items ?? []; } catch { /* optional */ }
+let townshipAgendas = [];
+try { townshipAgendas = (await readJSON("src/data/township-agendas.json")).items ?? []; } catch { /* optional */ }
 
 const longDate = now.toLocaleDateString("en-US", {
   weekday: "long", month: "long", day: "numeric", year: "numeric", timeZone: "UTC",
@@ -53,6 +56,8 @@ const soon = events.items
   .slice(0, 6);
 
 const meeting = nextCommissionersMeeting(now);
+const townshipMeeting = nextTownshipMeeting(now);
+const latestAgenda = townshipAgendas[0];
 
 const SOURCES = {
   Schools: [
@@ -64,6 +69,7 @@ const SOURCES = {
   "Local Government": [
     "Commissioners agendas/minutes — https://commissioners.warrencountyohio.gov/News/AgendaMinutes/Index",
     "Village of Waynesville — https://www.villageofwaynesville.org/news/ and /meetings/",
+    "Wayne Township (covers Waynesville & Corwin) — https://www.waynetownship.us/minutes-agendas/agendas-2026/",
   ],
   "Around Town": [
     "Auditor property transfers — https://auditor.warrencountyohio.gov/RealEstate/TransfersAndConveyance/Index",
@@ -162,6 +168,7 @@ ${libraryBlock ? `\n**Library programs** (Mary L. Cook Public Library)\n${librar
 ${sportsBlock ? `\n## This week in sports\n${sportsBlock}\n` : ""}
 ## Local government
 Next up: **${meeting.body}**, ${meeting.whenLabel} — [agenda](${meeting.source}).
+Also next up: **${townshipMeeting.body}**, ${townshipMeeting.whenLabel}, ${townshipMeeting.location}${latestAgenda ? ` — [latest posted agenda: ${latestAgenda.title}, ${latestAgenda.dateLabel}](${latestAgenda.link})` : ` — [agendas](${townshipMeeting.source})`}.
 TODO — village council & county items, each linked to the agenda/minutes. Check:
 ${listSrc("Local Government")}
 
