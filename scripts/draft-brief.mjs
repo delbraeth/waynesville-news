@@ -31,6 +31,8 @@ let weather = null;
 try { weather = await readJSON("src/data/weather.json"); } catch { /* optional */ }
 let suggested = [];
 try { suggested = (await readJSON("src/data/suggested-headlines.json")).items ?? []; } catch { /* optional */ }
+let prosecutorItems = [];
+try { prosecutorItems = (await readJSON("src/data/prosecutor-press.json")).items ?? []; } catch { /* optional */ }
 
 const longDate = now.toLocaleDateString("en-US", {
   weekday: "long", month: "long", day: "numeric", year: "numeric", timeZone: "UTC",
@@ -76,6 +78,12 @@ const listSrc = (section) => (SOURCES[section] || []).map((s) => `  - ${s}`).joi
 const eventsBlock = soon.length
   ? soon.map((e) => `- **${e.dateLabel}** — ${e.title} (${e.venue})${e.source ? ` — [details](${e.source})` : ""}`).join("\n")
   : "- (no dated events in the window — see the full calendar)";
+
+const safetyBlock = prosecutorItems.length
+  ? `From the Warren County Prosecutor's Office, released in the past week:\n` +
+    prosecutorItems.map((p) => `- **${p.dateLabel}** — ${p.title} ([release](${p.link}))`).join("\n") +
+    `\n\nCheck:`
+  : "TODO — road/weather alerts, sheriff/prosecutor news (handle with care). Check:";
 
 const candidateBlock = suggested.length
   ? suggested.map((h) => {
@@ -125,7 +133,7 @@ TODO — new businesses, the antiques district, notable property transfers. Chec
 ${listSrc("Around Town")}
 
 ## Public safety
-TODO — road/weather alerts, sheriff/prosecutor news (handle with care). Check:
+${safetyBlock}
 ${listSrc("Public Safety")}
 
 ## This week's events
