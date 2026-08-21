@@ -1,7 +1,7 @@
 // Pull candidate local headlines from Google News RSS (a stable feed that
-// aggregates Dayton Daily News, WCPO, Warren County Post, etc.). These are
-// SUGGESTIONS for the editor to read, summarize briefly, and link to the
-// original source — never republish. Runs in CI/production, not the sandbox.
+// aggregates Dayton Daily News, WCPO, Warren County Post, etc.). Published
+// verbatim as a quoted headline with source attribution and a link to the
+// full story — never reproduce article body text. Runs in CI/production, not the sandbox.
 import { writeFile } from "node:fs/promises";
 
 const QUERY = '("Waynesville" OR "Warren County") Ohio';
@@ -35,7 +35,7 @@ async function main() {
     return { title, link: pick("link"), source, date: pick("pubDate") };
   }).filter((i) => i.title && i.link);
 
-  await write(items, "Candidate local headlines (Google News RSS). Read the source, summarize briefly, link the original — never republish.");
+  await write(items, "Candidate local headlines (Google News RSS). Published as a quoted headline + source + link; never reproduce article body text.");
   console.log(`suggested-headlines.json: ${items.length} items`);
 }
 

@@ -17,7 +17,7 @@ A hidden draft is created automatically every weekday morning at
 Live in about a minute.
 
 ## Rules that keep us trustworthy
-- Every claim sourced and linked. Summarize briefly; link the **original** source; never republish.
+- Every claim sourced and linked. Summarize briefly in your own words; original-source headlines may be quoted verbatim with attribution. Never reproduce article body text.
 - Verify names, dates, and that links resolve.
 - Public safety: presumption of innocence — do not name un-convicted arrestees.
 
