@@ -118,7 +118,7 @@ ${eventsBlock}
 See the [full events calendar](/events/).
 
 ---
-*Candidate headlines to scan (pick, summarize briefly, link the ORIGINAL source — never republish):*
+*LOCAL HEADLINES*
 ${candidateBlock}
 `;
 
