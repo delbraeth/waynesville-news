@@ -15,6 +15,10 @@ import { existsSync } from "node:fs";
 const QUERY = '("Waynesville" OR "Warren County") Ohio';
 const FEED = `https://news.google.com/rss/search?q=${encodeURIComponent(QUERY)}&hl=en-US&gl=US&ceid=US:en`;
 const LIMIT = 8;
+const LOOKBACK_DAYS = 7; // Google News ranks by relevance, not recency — a
+// query can surface months-old articles (an obituary notice, a stale event
+// writeup) mixed in with today's news. Filter to the same window used
+// elsewhere in this pipeline before capping to LIMIT.
 const OUT = new URL("../src/data/suggested-headlines.json", import.meta.url);
 const UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36";
 const PER_PAGE_TIMEOUT_MS = 12_000;
@@ -112,7 +116,8 @@ async function main() {
   if (!res.ok) throw new Error(`HTTP ${res.status}`);
   const xml = await res.text();
 
-  let items = [...xml.matchAll(/<item>(.*?)<\/item>/gs)].slice(0, LIMIT).map((m) => {
+  const cutoff = Date.now() - LOOKBACK_DAYS * 24 * 60 * 60 * 1000;
+  let items = [...xml.matchAll(/<item>(.*?)<\/item>/gs)].map((m) => {
     const block = m[1];
     const pick = (tag) => {
       const r = new RegExp(`<${tag}[^>]*>(.*?)</${tag}>`, "s").exec(block);
@@ -122,7 +127,13 @@ async function main() {
     const source = pick("source");
     if (source && title.endsWith(` - ${source}`)) title = title.slice(0, -(` - ${source}`).length);
     return { title, link: pick("link"), source, date: pick("pubDate") };
-  }).filter((i) => i.title && i.link);
+  })
+    .filter((i) => i.title && i.link)
+    .filter((i) => {
+      const t = Date.parse(i.date);
+      return !isNaN(t) && t >= cutoff; // drop undated or stale-dated items rather than risk showing them
+    })
+    .slice(0, LIMIT);
 
   items = await enrichWithExcerpts(items);
 
