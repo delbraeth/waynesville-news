@@ -17,11 +17,15 @@
     "refresh:library": "node scripts/fetch-library-events.mjs",
     "refresh:township": "node scripts/fetch-township-agendas.mjs",
     "refresh:shops": "node scripts/fetch-shops-events.mjs",
+    "refresh:village-minutes": "node scripts/fetch-village-minutes.mjs",
     "draft": "node scripts/draft-brief.mjs"
   },
   "dependencies": {
     "astro": "^5.0.0",
     "@astrojs/rss": "^4.0.11",
-    "@astrojs/sitemap": "^3.2.1"
+    "@astrojs/sitemap": "^3.2.1",
+    "puppeteer-core": "^25.8.0",
+    "pdf-parse": "^2.4.5",
+    "tesseract.js": "^6.0.0"
   }
 }

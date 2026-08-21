@@ -17,3 +17,6 @@ node_modules/
 # logs
 npm-debug.log*
 yarn-error.log*
+
+# tesseract.js OCR language data (downloaded at runtime, not source)
+*.traineddata

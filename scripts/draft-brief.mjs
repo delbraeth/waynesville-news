@@ -44,6 +44,8 @@ let townshipAgendas = [];
 try { townshipAgendas = (await readJSON("src/data/township-agendas.json")).items ?? []; } catch { /* optional */ }
 let shopsEvents = [];
 try { shopsEvents = (await readJSON("src/data/shops-events.json")).items ?? []; } catch { /* optional */ }
+let villageMinutes = null;
+try { villageMinutes = (await readJSON("src/data/village-minutes.json")).item ?? null; } catch { /* optional */ }
 
 const longDate = now.toLocaleDateString("en-US", {
   weekday: "long", month: "long", day: "numeric", year: "numeric", timeZone: "UTC",
@@ -132,6 +134,16 @@ const shopsBlock = shopsEvents.length
   ? shopsEvents.map((e) => `- **${e.dateLabel}** — [${e.title}](${e.link})`).join("\n")
   : null;
 
+const villageMinutesBlock = villageMinutes?.meetingDateLabel
+  ? [
+      `**Village Council** — minutes of the ${villageMinutes.meetingDateLabel} meeting (posted as part of the ${villageMinutes.agendaDateLabel} agenda packet)` +
+      `${villageMinutes.calledToOrder ? `, called to order ${villageMinutes.calledToOrder}` : ""}` +
+      `${villageMinutes.adjourned ? `, adjourned ${villageMinutes.adjourned}` : ""}` + ":",
+      ...villageMinutes.votes.map((v) => `- ${v.context} *(Motion: ${v.motion}, Second: ${v.second}, Roll Call: ${v.rollCall})*`),
+      `[full agenda/minutes packet](${encodeURI(villageMinutes.link)})`,
+    ].join("\n")
+  : null;
+
 const candidateBlock = suggested.length
   ? suggested.map((h) => {
       const quote = h.excerpt || h.title;
@@ -176,6 +188,7 @@ Next up: **${meeting.body}**, ${meeting.whenLabel} — [agenda](${meeting.source
 Also next up: **${townshipMeeting.body}**, ${townshipMeeting.whenLabel}, ${townshipMeeting.location}${latestAgenda ? ` — [latest posted agenda: ${latestAgenda.title}, ${latestAgenda.dateLabel}](${latestAgenda.link})` : ` — [agendas](${townshipMeeting.source})`}.
 TODO — village council & county items, each linked to the agenda/minutes. Check:
 ${listSrc("Local Government")}
+${villageMinutesBlock ? `\n${villageMinutesBlock}\n` : ""}
 
 ## Around town
 TODO — new businesses, the antiques district. Check:

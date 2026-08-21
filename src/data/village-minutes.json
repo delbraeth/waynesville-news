@@ -1,0 +1,27 @@
+{
+  "_note": "Village of Waynesville Council — draft minutes of the meeting prior to the most recently posted agenda, OCR'd from that agenda packet's own embedded scan (the site's dedicated Minutes postings run months behind, but each agenda includes the previous meeting's minutes for approval). OCR output may contain occasional character errors; each vote's context text is extracted verbatim, not generated or paraphrased. Links to the full agenda PDF.",
+  "updated": "2026-08-21T17:43:59.129Z",
+  "item": {
+    "agendaDateLabel": "August 17, 2026",
+    "meetingDateLabel": "August 3, 2026",
+    "calledToOrder": "7:00 p.m.",
+    "adjourned": "8:10 p.m.",
+    "link": "https://www.villageofwaynesville.org/media/site/meetings/Council Agenda 08.17.2026.pdf",
+    "votes": [
+      {
+        "context": "all the projects underway in the Village are moving along. He also said that the new stoplight should be installed and the Fourth Street project completed by the end of August. Disposition of Previous Minutes Mrs. Miller made a motion to approve the minutes for the Council meeting on July 20, 2026 as written, and Mr. Lauffer seconded the motion.",
+        "motion": "Miller",
+        "second": "Lauffer",
+        "rollCall": "6 yeas"
+      },
+      {
+        "context": ": Second Reading of Ordinances and Resolutions Ordinance No. 2026-032 Authorizing the Village Manager to Enter into a Memorandum of Agreement for Deposit of Public Funds and Establishing People’s Bank as a Depository for Active and Interim/Inactive Funds ’ Mrs. Miller motioned to adopt Ordinance 2026-032, and Mr. Lauffer seconded the motion.",
+        "motion": "Miller",
+        "second": "Lauffer",
+        "rollCall": "6 yeas"
+      }
+    ],
+    "voteCountTotal": 2,
+    "pagesScanned": 5
+  }
+}

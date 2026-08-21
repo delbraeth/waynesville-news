@@ -46,6 +46,8 @@ jobs:
         run: npm run refresh:township || echo "township agendas refresh skipped/failed"
       - name: Pull Merchant Association events
         run: npm run refresh:shops || echo "shops events refresh skipped/failed"
+      - name: Pull Village Council minutes (OCR)
+        run: npm run refresh:village-minutes || echo "village minutes refresh skipped/failed"
       - name: Generate weekday draft
         run: |
           dow=$(date -u +%u)   # 1=Mon .. 7=Sun (UTC morning == ET morning)
