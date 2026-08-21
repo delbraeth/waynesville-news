@@ -20,9 +20,17 @@ jobs:
       - uses: actions/setup-node@v5
         with:
           node-version: "24"
+      - name: Set up Chrome (for headline excerpts)
+        id: setup-chrome
+        uses: browser-actions/setup-chrome@v1
+        with:
+          chrome-version: stable
+        continue-on-error: true
       - name: Refresh weather (NWS)
         run: npm run refresh:weather || echo "weather refresh failed — kept previous"
       - name: Pull candidate headlines
+        env:
+          CHROME_PATH: ${{ steps.setup-chrome.outputs.chrome-path }}
         run: npm run refresh:headlines || echo "headlines refresh skipped/failed"
       - name: Generate weekday draft
         run: |
