@@ -1,16 +1,5 @@
 {
-  "_note": "Obituaries from Stubbs-Conner Funeral Home (Waynesville), past 7 days by date of death. Names and dates reproduced verbatim; link goes to the full tribute page.",
-  "updated": "2026-08-21T16:34:50.493Z",
-  "items": [
-    {
-      "name": "Marjorie Carrier",
-      "dateRange": "Oct. 14, 1938 - Aug. 18, 2026",
-      "link": "https://www.stubbsconner.com/obituaries/marjorie-carrier"
-    },
-    {
-      "name": "Roy L. Turton",
-      "dateRange": "Feb. 05, 1935 - Aug. 15, 2026",
-      "link": "https://www.stubbsconner.com/obituaries/roy-turton"
-    }
-  ]
+  "_note": "obituaries fetch failed; empty list.",
+  "updated": "2026-08-21T16:57:42.736Z",
+  "items": []
 }
