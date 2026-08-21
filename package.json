@@ -13,6 +13,7 @@
     "refresh:headlines": "node scripts/fetch-headlines.mjs",
     "refresh:safety": "node scripts/fetch-prosecutor-press.mjs",
     "refresh:obituaries": "node scripts/fetch-obituaries.mjs",
+    "refresh:sports": "node scripts/fetch-sports.mjs",
     "draft": "node scripts/draft-brief.mjs"
   },
   "dependencies": {

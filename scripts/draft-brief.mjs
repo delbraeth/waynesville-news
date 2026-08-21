@@ -35,6 +35,8 @@ let prosecutorItems = [];
 try { prosecutorItems = (await readJSON("src/data/prosecutor-press.json")).items ?? []; } catch { /* optional */ }
 let obituaries = [];
 try { obituaries = (await readJSON("src/data/obituaries.json")).items ?? []; } catch { /* optional */ }
+let sports = { results: [], upcoming: [] };
+try { sports = await readJSON("src/data/sports.json"); } catch { /* optional */ }
 
 const longDate = now.toLocaleDateString("en-US", {
   weekday: "long", month: "long", day: "numeric", year: "numeric", timeZone: "UTC",
@@ -91,6 +93,28 @@ const obituariesBlock = obituaries.length
   ? obituaries.map((o) => `- **${o.name}** — ${o.dateRange} ([tribute](${o.link}))`).join("\n")
   : null;
 
+const fmtGameDate = (iso) =>
+  new Date(iso).toLocaleString("en-US", {
+    weekday: "short", month: "short", day: "numeric", hour: "numeric", minute: "2-digit", timeZone: "America/New_York",
+  }).replace(",", " ·");
+
+const sportsResultsBlock = sports.results.length
+  ? sports.results.map((g) =>
+      `- **${g.sport} (${g.level})** — Waynesville ${g.wayneScore}, ${g.opponent} ${g.opponentScore} — [box score](${g.link})`
+    ).join("\n")
+  : null;
+const sportsUpcomingBlock = sports.upcoming.length
+  ? sports.upcoming.map((g) =>
+      `- **${g.sport} (${g.level})** — vs ${g.opponent}, ${fmtGameDate(g.dateISO)} — [details](${g.link})`
+    ).join("\n")
+  : null;
+const sportsBlock = (sportsResultsBlock || sportsUpcomingBlock)
+  ? [
+      sportsResultsBlock ? `**Results**\n${sportsResultsBlock}` : null,
+      sportsUpcomingBlock ? `**Upcoming**\n${sportsUpcomingBlock}` : null,
+    ].filter(Boolean).join("\n\n")
+  : null;
+
 const candidateBlock = suggested.length
   ? suggested.map((h) => {
       const quote = h.excerpt || h.title;
@@ -128,7 +152,7 @@ published: false
 ## Schools
 TODO — Wayne Local board, Spartans, closings, library programs. Check:
 ${listSrc("Schools")}
-
+${sportsBlock ? `\n## This week in sports\n${sportsBlock}\n` : ""}
 ## Local government
 Next up: **${meeting.body}**, ${meeting.whenLabel} — [agenda](${meeting.source}).
 TODO — village council & county items, each linked to the agenda/minutes. Check:
