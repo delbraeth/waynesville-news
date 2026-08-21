@@ -7,10 +7,24 @@
 // in and flips `published: true` (easiest on github.com — no terminal).
 // Nothing here invents news.
 import { writeFile, readFile } from "node:fs/promises";
+import { existsSync } from "node:fs";
 import { nextCommissionersMeeting } from "../src/lib/nextMeeting.js";
 
 const root = new URL("..", import.meta.url);
 const readJSON = async (p) => JSON.parse(await readFile(new URL(p, root), "utf8"));
+
+const now = new Date();
+const iso = now.toISOString().slice(0, 10);
+
+// Never clobber a brief that already exists for today — draft or already
+// published. If the daily workflow runs more than once in a day (retry,
+// manual re-run, race with a same-day publish), this must be a no-op, not a
+// silent overwrite of real content with a blank TODO scaffold.
+const targetPath = new URL(`src/content/briefs/${iso}.md`, root);
+if (existsSync(targetPath)) {
+  console.log(`src/content/briefs/${iso}.md already exists — not overwriting. Skipping draft generation.`);
+  process.exit(0);
+}
 
 const events = await readJSON("src/data/events.json");
 let weather = null;
@@ -18,8 +32,6 @@ try { weather = await readJSON("src/data/weather.json"); } catch { /* optional *
 let suggested = [];
 try { suggested = (await readJSON("src/data/suggested-headlines.json")).items ?? []; } catch { /* optional */ }
 
-const now = new Date();
-const iso = now.toISOString().slice(0, 10);
 const longDate = now.toLocaleDateString("en-US", {
   weekday: "long", month: "long", day: "numeric", year: "numeric", timeZone: "UTC",
 });
@@ -126,5 +138,5 @@ See the [full events calendar](/events/).
 ${candidateBlock}
 `;
 
-await writeFile(new URL(`src/content/briefs/${iso}.md`, root), draft);
+await writeFile(targetPath, draft);
 console.log(`Unpublished brief written: src/content/briefs/${iso}.md  (${soon.length} events, next meeting ${meeting.whenLabel})`);
