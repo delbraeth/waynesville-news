@@ -19,6 +19,7 @@
 // invented — scores and matchups reproduced verbatim from MaxPreps' own
 // markup, each linking to their game page.
 import { writeFile } from "node:fs/promises";
+import { existsSync } from "node:fs";
 
 const UA = "Mozilla/5.0 (WaynesvilleDailyBrief/1.0; waynesville.news)";
 const OUT = new URL("../src/data/sports.json", import.meta.url);
@@ -72,7 +73,8 @@ function parseSchedule(html, sport, level) {
     if (!dateMatch) continue;
     const [, mo, day, year] = dateMatch;
     const opponentMatch = NAME_RE.exec(row);
-    const opponent = opponentMatch ? opponentMatch[1] : "TBA";
+    // strip angle brackets — opponent names go into auto-published Markdown
+    const opponent = opponentMatch ? opponentMatch[1].replace(/[<>]/g, "") : "TBA";
     const isHome = vsAt === "vs";
     const dateISO = toISO(year, mo, day, time);
 
@@ -145,6 +147,10 @@ async function main() {
 
 main().catch(async (e) => {
   console.error("sports refresh failed:", e.message);
-  await write({ results: [], upcoming: [] }, "sports fetch failed; empty (draft falls back to no sports section).");
+  if (existsSync(OUT)) {
+    console.error("keeping previously fetched data (source may be temporarily down)");
+  } else {
+    await write({ results: [], upcoming: [] }, "sports fetch failed; empty (draft falls back to no sports section).");
+  }
   process.exit(0); // don't fail the workflow
 });

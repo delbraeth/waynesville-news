@@ -6,6 +6,7 @@
 // No agenda text is scraped, only title/date/link — each item links
 // straight to the township's own PDF.
 import { writeFile } from "node:fs/promises";
+import { existsSync } from "node:fs";
 
 const AGENDAS_URL = "https://www.waynetownship.us/minutes-agendas/agendas-2026/";
 const CAP = 3;
@@ -42,7 +43,7 @@ async function main() {
     const date = parseDateFromFilename(filename);
     if (!date) continue;
     items.push({
-      title: title.trim(),
+      title: title.replace(/[<>]/g, "").trim(), // goes into auto-published Markdown
       dateISO: date.toISOString(),
       dateLabel: date.toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric", timeZone: "UTC" }),
       link,
@@ -59,6 +60,10 @@ async function main() {
 
 main().catch(async (e) => {
   console.error("township agendas refresh failed:", e.message);
-  await write({ items: [] }, "township agendas fetch failed; empty (draft falls back to the general schedule).");
+  if (existsSync(OUT)) {
+    console.error("keeping previously fetched data (source may be temporarily down)");
+  } else {
+    await write({ items: [] }, "township agendas fetch failed; empty (draft falls back to the general schedule).");
+  }
   process.exit(0); // don't fail the workflow
 });

@@ -1,12 +1,12 @@
 name: Refresh (weather + weekday draft)
 
 # Every morning: refresh weather from the NWS API and pull candidate headlines.
-# On weekdays it also generates a fresh draft brief into drafts/. Everything that
-# changes is committed (which redeploys the site for the weather update). The
-# editor pulls, fills the draft's TODOs, and publishes.
+# On weekdays it also generates a fresh draft brief into src/content/briefs/
+# (published: false). Everything that changes is committed (which redeploys the
+# site for the weather update).
 on:
   schedule:
-    - cron: "20 10 * * *" # ~6:20 AM Eastern daily
+    - cron: "20 10 * * *" # 6:20 AM EDT / 5:20 AM EST (cron is UTC year-round)
   workflow_dispatch: {}
 
 permissions:
@@ -64,12 +64,17 @@ jobs:
             git add -A
             git commit -m "chore: daily refresh (weather + draft)"
             # Rebase onto whatever landed on main since checkout (e.g. a same-day
-            # publish) before pushing, and retry once — avoids losing this commit
-            # to a race instead of just failing the job.
+            # publish) before pushing, and retry — avoids losing this commit to a
+            # race. If a rebase conflicts, abort it so the next attempt starts
+            # clean. If every attempt fails, FAIL the job loudly instead of
+            # showing green while the day's refresh silently never landed.
+            ok=0
             for attempt in 1 2 3; do
-              git pull --rebase origin main && git push && break
+              if git pull --rebase origin main && git push; then ok=1; break; fi
+              git rebase --abort 2>/dev/null || true
               echo "push attempt $attempt failed, retrying..." && sleep 5
             done
+            if [ "$ok" != "1" ]; then echo "All push attempts failed"; exit 1; fi
           else
             echo "Nothing to commit."
           fi

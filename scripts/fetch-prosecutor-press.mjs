@@ -8,15 +8,19 @@
 // paraphrased, summarized, or invented. Each item links straight to the
 // prosecutor's own PDF release for verification.
 import { writeFile } from "node:fs/promises";
+import { existsSync } from "node:fs";
 
 const INDEX_URL = "https://prosecutor.warrencountyohio.gov/Public/Press/Index";
 const BASE = "https://prosecutor.warrencountyohio.gov";
 const LOOKBACK_DAYS = 7;
 const OUT = new URL("../src/data/prosecutor-press.json", import.meta.url);
 
+// Decode entities, then strip literal angle brackets — these titles are
+// interpolated into auto-published Markdown where raw HTML would render.
 const decode = (s) =>
   s.replace(/&amp;/g, "&").replace(/&lt;/g, "<").replace(/&gt;/g, ">")
     .replace(/&quot;/g, '"').replace(/&#0?39;/g, "'").replace(/&apos;/g, "'")
+    .replace(/[<>]/g, "")
     .trim();
 
 const write = (items, note) =>
@@ -58,6 +62,10 @@ async function main() {
 
 main().catch(async (e) => {
   console.error("prosecutor press refresh failed:", e.message);
-  await write([], "prosecutor press fetch failed; empty list (draft falls back to the check-links line).");
+  if (existsSync(OUT)) {
+    console.error("keeping previously fetched data (source may be temporarily down)");
+  } else {
+    await write([], "prosecutor press fetch failed; empty list (draft falls back to the check-links line).");
+  }
   process.exit(0); // don't fail the workflow
 });

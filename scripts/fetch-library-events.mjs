@@ -6,6 +6,7 @@
 // invented — titles, times, and links reproduced verbatim, each linking to
 // the library's own event page.
 import { writeFile } from "node:fs/promises";
+import { existsSync } from "node:fs";
 
 const LIBRARY_URL = "https://www.mlcook.lib.oh.us/";
 const CAP = 8;
@@ -14,8 +15,10 @@ const OUT = new URL("../src/data/library-events.json", import.meta.url);
 const write = (data, note) =>
   writeFile(OUT, JSON.stringify({ _note: note, updated: new Date().toISOString(), ...data }, null, 2) + "\n");
 
+// Decode entities, then strip literal angle brackets — titles are
+// interpolated into auto-published Markdown where raw HTML would render.
 const decodeEntities = (s) =>
-  s.replace(/&#039;/g, "'").replace(/&amp;/g, "&").replace(/&quot;/g, '"').replace(/&lt;/g, "<").replace(/&gt;/g, ">").trim();
+  s.replace(/&#039;/g, "'").replace(/&amp;/g, "&").replace(/&quot;/g, '"').replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/[<>]/g, "").trim();
 
 // The site's datetime attributes carry a "Z" (UTC) suffix, but the digits are
 // actually already Eastern wall-clock time (confirmed: the page's own human-
@@ -56,6 +59,10 @@ async function main() {
 
 main().catch(async (e) => {
   console.error("library events refresh failed:", e.message);
-  await write({ items: [] }, "library events fetch failed; empty (draft omits the library programs line).");
+  if (existsSync(OUT)) {
+    console.error("keeping previously fetched data (source may be temporarily down)");
+  } else {
+    await write({ items: [] }, "library events fetch failed; empty (draft omits the library programs line).");
+  }
   process.exit(0); // don't fail the workflow
 });

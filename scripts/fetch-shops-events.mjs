@@ -7,6 +7,7 @@
 // verbatim; nothing invented. Respects the site's robots.txt Crawl-Delay
 // of 20s between requests.
 import { writeFile } from "node:fs/promises";
+import { existsSync } from "node:fs";
 
 const HOME_URL = "https://waynesvilleshops.com/";
 const CAP = 6;
@@ -61,15 +62,17 @@ async function main() {
 
   const items = [];
   const budgetStart = Date.now();
-  for (const link of links.slice(0, CAP)) {
+  const capped = links.slice(0, CAP);
+  for (const [idx, link] of capped.entries()) {
     if (Date.now() - budgetStart > TOTAL_BUDGET_MS) break;
+    const isLast = idx === capped.length - 1;
     let detailHtml;
     try {
       const r = await fetch(link, { headers: UA });
-      if (!r.ok) { await sleep(CRAWL_DELAY_MS); continue; }
+      if (!r.ok) { if (!isLast) await sleep(CRAWL_DELAY_MS); continue; }
       detailHtml = await r.text();
     } catch {
-      await sleep(CRAWL_DELAY_MS);
+      if (!isLast) await sleep(CRAWL_DELAY_MS);
       continue;
     }
 
@@ -85,14 +88,14 @@ async function main() {
         ? `${fmtTime(start)}–${fmtTime(end)}`
         : fmtTime(start);
       items.push({
-        title: titleM[1].trim(),
+        title: titleM[1].replace(/[<>]/g, "").trim(), // goes into auto-published Markdown
         dateISO: start.toISOString(),
         dateLabel: `${fmtDate(start)} · ${timeRange}`,
         link,
       });
     }
 
-    await sleep(CRAWL_DELAY_MS);
+    if (!isLast) await sleep(CRAWL_DELAY_MS); // no need to be polite after the final request
   }
 
   const now = new Date();
@@ -109,6 +112,10 @@ async function main() {
 
 main().catch(async (e) => {
   console.error("shops events refresh failed:", e.message);
-  await write({ items: [] }, "shops events fetch failed; empty (draft omits the shops events line).");
+  if (existsSync(OUT)) {
+    console.error("keeping previously fetched data (source may be temporarily down)");
+  } else {
+    await write({ items: [] }, "shops events fetch failed; empty (draft omits the shops events line).");
+  }
   process.exit(0); // don't fail the workflow
 });

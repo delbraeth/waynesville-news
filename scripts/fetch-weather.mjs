@@ -27,22 +27,23 @@ async function main() {
   const day = periods.find((p) => p.isDaytime) ?? now;
   const night = periods.find((p) => !p.isDaytime) ?? now;
 
-  // Multi-day outlook: pair each upcoming daytime period with its following
-  // overnight period for a High/Low/condition row. Skips the current day
-  // (already covered by tempF/highF/lowF above) and caps at 3 days out —
-  // this runs ~6:20 AM ET, so periods[0] is reliably "Today".
-  const outlook = [];
-  for (let i = 2; i < periods.length && outlook.length < 3; i += 2) {
-    const d = periods[i];
+  // Multi-day outlook: pair each daytime period with the period that
+  // immediately follows it (its overnight) — index-parity-free, so this
+  // works whether the run happens in the morning (periods[0] = "Today")
+  // or the evening (periods[0] = "Tonight"). Skips the first day (already
+  // covered by tempF/highF/lowF above) and caps at 3 days out.
+  const dayPairs = [];
+  for (let i = 0; i < periods.length; i++) {
+    if (!periods[i].isDaytime) continue;
     const n = periods[i + 1];
-    if (!d?.isDaytime) continue;
-    outlook.push({
-      dayLabel: d.name.replace(/ Night$/, ""),
-      highF: d.temperature,
-      lowF: n && !n.isDaytime ? n.temperature : null,
-      condition: d.shortForecast,
-    });
+    dayPairs.push({ d: periods[i], n: n && !n.isDaytime ? n : null });
   }
+  const outlook = dayPairs.slice(1, 4).map(({ d, n }) => ({
+    dayLabel: d.name.replace(/ Night$/, ""),
+    highF: d.temperature,
+    lowF: n ? n.temperature : null,
+    condition: d.shortForecast,
+  }));
 
   const data = {
     _note: "Auto-refreshed from the NWS API (api.weather.gov, ILN/Wilmington office).",

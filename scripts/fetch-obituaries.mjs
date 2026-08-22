@@ -4,6 +4,7 @@
 // Names, dates, and the short opening line are reproduced verbatim from the
 // listing; each links straight to the full tribute page. Nothing invented.
 import { writeFile } from "node:fs/promises";
+import { existsSync } from "node:fs";
 
 const INDEX_URL = "https://www.stubbsconner.com/obituaries/";
 const BASE = "https://www.stubbsconner.com";
@@ -38,7 +39,8 @@ async function main() {
       const diedStr = dateRange.split(" - ").pop().replace(/\./g, "");
       const died = new Date(diedStr);
       if (isNaN(died)) return null;
-      return { name: name.trim(), dateRange, died, link: new URL(href, BASE).toString() };
+      // strip angle brackets — these go into auto-published Markdown
+      return { name: name.replace(/[<>]/g, "").trim(), dateRange: dateRange.replace(/[<>]/g, ""), died, link: new URL(href, BASE).toString() };
     })
     .filter(Boolean)
     .filter((i) => i.died >= cutoff)
@@ -51,6 +53,10 @@ async function main() {
 
 main().catch(async (e) => {
   console.error("obituaries refresh failed:", e.message);
-  await write([], "obituaries fetch failed; empty list.");
+  if (existsSync(OUT)) {
+    console.error("keeping previously fetched data (source may be temporarily down)");
+  } else {
+    await write([], "obituaries fetch failed; empty list.");
+  }
   process.exit(0); // don't fail the workflow
 });

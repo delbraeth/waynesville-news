@@ -4,13 +4,13 @@
   "tempF": 81,
   "condition": "Chance Showers And Thunderstorms",
   "highF": 81,
-  "lowF": 58,
+  "lowF": 59,
   "outlook": [
     {
       "dayLabel": "Sunday",
       "highF": 77,
       "lowF": 55,
-      "condition": "Mostly Sunny then Slight Chance Showers And Thunderstorms"
+      "condition": "Sunny"
     },
     {
       "dayLabel": "Monday",
@@ -25,5 +25,5 @@
       "condition": "Sunny"
     }
   ],
-  "updated": "2026-08-22T16:18:45.746Z"
+  "updated": "2026-08-22T17:56:43.399Z"
 }

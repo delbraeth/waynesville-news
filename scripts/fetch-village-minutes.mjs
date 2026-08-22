@@ -12,6 +12,7 @@
 // is disclosed in the written note. Links to the full agenda PDF for
 // anything not captured here.
 import { writeFile } from "node:fs/promises";
+import { existsSync } from "node:fs";
 import { PDFParse } from "pdf-parse";
 import { createWorker } from "tesseract.js";
 
@@ -26,7 +27,8 @@ const write = (data, note) =>
   writeFile(OUT, JSON.stringify({ _note: note, updated: new Date().toISOString(), ...data }, null, 2) + "\n");
 
 function cleanContext(raw, isFromStart) {
-  let context = raw.replace(/\s*\n\s*/g, " ").replace(/--\s*\d+ of \d+\s*--/g, "").trim();
+  // strip angle brackets too — OCR text goes into auto-published Markdown
+  let context = raw.replace(/\s*\n\s*/g, " ").replace(/--\s*\d+ of \d+\s*--/g, "").replace(/[<>]/g, "").trim();
   if (!isFromStart) {
     const firstSpace = context.indexOf(" ");
     if (firstSpace > 0 && firstSpace < 40) context = context.slice(firstSpace + 1);
@@ -132,6 +134,10 @@ async function main() {
 
 main().catch(async (e) => {
   console.error("village minutes refresh failed:", e.message);
-  await write({ item: null }, "village minutes fetch failed; empty (draft omits the minutes summary).");
+  if (existsSync(OUT)) {
+    console.error("keeping previously fetched data (source may be temporarily down)");
+  } else {
+    await write({ item: null }, "village minutes fetch failed; empty (draft omits the minutes summary).");
+  }
   process.exit(0); // don't fail the workflow
 });

@@ -15,7 +15,13 @@ const root = new URL("..", import.meta.url);
 const readJSON = async (p) => JSON.parse(await readFile(new URL(p, root), "utf8"));
 
 const now = new Date();
-const iso = now.toISOString().slice(0, 10);
+// Today's date in EASTERN time, not UTC — toISOString() would roll to
+// tomorrow's date for any run after 8 PM ET, misdating the brief and then
+// blocking the next morning's run via the exists-check below.
+// (en-CA formats as YYYY-MM-DD.)
+const iso = new Intl.DateTimeFormat("en-CA", {
+  timeZone: "America/New_York", year: "numeric", month: "2-digit", day: "2-digit",
+}).format(now);
 
 // Never clobber a brief that already exists for today — draft or already
 // published. If the daily workflow runs more than once in a day (retry,
@@ -48,7 +54,7 @@ let villageMinutes = null;
 try { villageMinutes = (await readJSON("src/data/village-minutes.json")).item ?? null; } catch { /* optional */ }
 
 const longDate = now.toLocaleDateString("en-US", {
-  weekday: "long", month: "long", day: "numeric", year: "numeric", timeZone: "UTC",
+  weekday: "long", month: "long", day: "numeric", year: "numeric", timeZone: "America/New_York",
 });
 const todayStart = new Date(iso);
 
@@ -116,7 +122,7 @@ const fmtGameDate = (iso) =>
 
 const sportsResultsBlock = sports.results.length
   ? sports.results.map((g) =>
-      `- **${g.sport} (${g.level})** — Waynesville ${g.wayneScore}, ${g.opponent} ${g.opponentScore}${g.isHome === true ? " (Home)" : g.isHome === false ? " (Away)" : ""} — [box score](${g.link})`
+      `- **${g.sport} (${g.level})** — Waynesville ${g.wayneScore}, ${g.opponent} ${g.opponentScore}${g.sport === "Volleyball" ? " (sets)" : ""}${g.isHome === true ? " (Home)" : g.isHome === false ? " (Away)" : ""} — [box score](${g.link})`
     ).join("\n")
   : null;
 const sportsUpcomingBlock = sports.upcoming.length

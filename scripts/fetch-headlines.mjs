@@ -24,10 +24,15 @@ const UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
 const PER_PAGE_TIMEOUT_MS = 12_000;
 const TOTAL_BROWSER_BUDGET_MS = 90_000;
 
+// Decode entities, then strip literal angle brackets. These strings are
+// interpolated into brief Markdown, and Astro renders raw HTML inside
+// Markdown — with auto-publish and no human review, a hostile headline
+// containing markup would otherwise ship straight to the live site.
 const decode = (s) =>
   s.replace(/<!\[CDATA\[(.*?)\]\]>/gs, "$1")
     .replace(/&amp;/g, "&").replace(/&lt;/g, "<").replace(/&gt;/g, ">")
     .replace(/&quot;/g, '"').replace(/&#0?39;/g, "'").replace(/&apos;/g, "'")
+    .replace(/[<>]/g, "")
     .trim();
 
 const write = (items, note) =>
@@ -89,10 +94,10 @@ async function enrichWithExcerpts(items) {
         await page.setUserAgent(UA);
         await page.goto(item.link, { waitUntil: "networkidle2", timeout: PER_PAGE_TIMEOUT_MS });
         const resolvedUrl = page.url();
-        const excerpt = await page.evaluate(() => {
+        const excerpt = (await page.evaluate(() => {
           const m = document.querySelector('meta[property="og:description"]') || document.querySelector('meta[name="description"]');
           return m ? m.content.trim() : "";
-        });
+        })).replace(/[<>]/g, ""); // goes into published Markdown — never allow markup through
         await page.close();
 
         const redirected = resolvedUrl && !resolvedUrl.startsWith("https://news.google.com/");
@@ -143,6 +148,10 @@ async function main() {
 
 main().catch(async (e) => {
   console.error("headlines refresh failed:", e.message);
-  await write([], "headlines fetch failed; empty list (draft falls back to source pages).");
+  if (existsSync(OUT)) {
+    console.error("keeping previously fetched data (source may be temporarily down)");
+  } else {
+    await write([], "headlines fetch failed; empty list (draft falls back to source pages).");
+  }
   process.exit(0); // don't fail the workflow — the draft still works
 });
