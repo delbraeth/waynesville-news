@@ -1,13 +1,7 @@
 {
   "_note": "Candidate local headlines (Google News RSS). Published as a quoted headline (or, when available, a short publisher-written excerpt) + source + link; never reproduce article body text.",
-  "updated": "2026-08-21T17:48:59.593Z",
+  "updated": "2026-08-22T10:42:56.366Z",
   "items": [
-    {
-      "title": "Illegal immigrant sentenced for sexually assaulting Tri-State girl for years",
-      "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQc3lpVDI1cGdSVFFMZVlYYXhMN2hnWWRnRDk0QThvZ0xtVjRqMHRSSWFEYlJJZkN1NWUwX1ZaSjJrcEhISXpUdkczemZ6bTJlaHR4RE9OZlZZYkdtUlRqVFhxUVF1YndLWmZyTnFYLUw1WUtCXzZ5d255bUt4TGZiSnNRRDl1QVRPbVFMaVhaR1R0NVZUbFFPYkJyOVQ2QXNRcEYxbEcyOWUtMG8?oc=5",
-      "source": "WKRC",
-      "date": "Thu, 20 Aug 2026 23:21:45 GMT"
-    },
     {
       "title": "Man convicted of multiple charges involving sexual child abuse in Warren County",
       "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPRm41WEpqamNVdkRNNzBnQmoydGdyV2VPSC1aUGN1akMxRWtyZE90YlRCQ1piMVNUUzJFMjJ5b2k4U01YMWlCclA0MF9FY3BiYjdBWG4tcTZHZG0zOXpPRl9udDF0WVJjYW9ZcnVyLXFrMzk2ejNyUzFCYnd3XzFYQ3UwWnJscG8ydXZWTmJUNmNfOEs0QTBUT1RIc1dnMTNNRG8wZ29tekZ6Qnhadk1ETVk0ajUwQQ?oc=5",
@@ -21,22 +15,24 @@
       "date": "Wed, 19 Aug 2026 02:20:52 GMT"
     },
     {
+      "title": "Illegal immigrant sentenced for sexually assaulting Tri-State girl for years",
+      "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQc3lpVDI1cGdSVFFMZVlYYXhMN2hnWWRnRDk0QThvZ0xtVjRqMHRSSWFEYlJJZkN1NWUwX1ZaSjJrcEhISXpUdkczemZ6bTJlaHR4RE9OZlZZYkdtUlRqVFhxUVF1YndLWmZyTnFYLUw1WUtCXzZ5d255bUt4TGZiSnNRRDl1QVRPbVFMaVhaR1R0NVZUbFFPYkJyOVQ2QXNRcEYxbEcyOWUtMG8?oc=5",
+      "source": "WKRC",
+      "date": "Thu, 20 Aug 2026 23:21:45 GMT"
+    },
+    {
       "title": "Warren County man accused of shooting mother, 2 dogs inside home in Mason",
       "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPWENrR3NqbF9GMzZmMUFHREZaM3R5RnFCUC1SNEl0dk94VUtjWFAwOGVTTHVPWVg3cFFOQmRSV3R1SFZFcThSU01CNWFxRUdTX05hZWtEdEQwSi01cWdEN01IZkFNV19TX2V3SzB0ZFBYbEV6dDA1ZFNKY2ZSYmdBWmJUMk1NcG5zMnNiSjlJYmNHSWk1Q3Nz?oc=5",
       "source": "WLWT",
-      "date": "Tue, 18 Aug 2026 20:37:00 GMT"
+      "date": "Tue, 18 Aug 2026 20:37:00 GMT",
+      "sourceUrl": "https://www.wlwt.com/article/mason-police-windward-drive-shooting-man-charged-court/73460415",
+      "excerpt": "A Mason man is accused of injuring his mother and killing her two dogs during a shooting inside a home on Monday night."
     },
     {
       "title": "Robert J. Krebs Jr.",
       "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNYVBhLUZ4OUxEa2JlcHFMMmV1aFBnRUloekMzYllOSFFCSmRQNVdDNzM4UHRGejVja3FQVkhsYzhWRzc0bzQ2NGYweHA3SW9XWERNS0hwcVI3b1RoNlpieEZHSF9TU1FHT212WFZuR2RIemJOVTdXQlBmV2JHT21NbS1kV04?oc=5",
       "source": "Legacy obituary",
       "date": "Tue, 18 Aug 2026 07:00:00 GMT"
-    },
-    {
-      "title": "Waynesville, OH Air Quality & Pollen",
-      "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9SR2lCNHNZZElVVERkQ2pSTkNTdzhJYzVqc0lNSWh2cGVodFlBZ3FBcGdwbnpwOGQ0MzhucXhYN04xUlA4Qzh3VGRUZnNoUFZzMFdtLURqUlVzc0s1b3N1VlNxSlpyQlQ3elllZkh1dw?oc=5",
-      "source": "Weather Underground",
-      "date": "Sat, 15 Aug 2026 13:03:31 GMT"
     },
     {
       "title": "Overnight flooding in Waynesville sends rafts and kayaks loose",
@@ -49,6 +45,14 @@
       "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPcEtSNnRsTVJ3cHRlelNKR3hTMmtkcGF4cHk1ajNLeXl1aWI3QTVQcjVnUXJ3UXdZa2tIV0RRbmxoVmhuWkR3OGRzVmN6RlN2QXFIbkVzYUpaWDY1bGYzeDhGUkptNzExVVJ3U0k0V2d1alZhWFZxaTk2MlJpWjRnSkw4S1haM05WMkR5UkZUZw?oc=5",
       "source": "Warren County Post",
       "date": "Sun, 16 Aug 2026 01:50:07 GMT"
+    },
+    {
+      "title": "Waynesville, OH Air Quality & Pollen",
+      "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9SR2lCNHNZZElVVERkQ2pSTkNTdzhJYzVqc0lNSWh2cGVodFlBZ3FBcGdwbnpwOGQ0MzhucXhYN04xUlA4Qzh3VGRUZnNoUFZzMFdtLURqUlVzc0s1b3N1VlNxSlpyQlQ3elllZkh1dw?oc=5",
+      "source": "Weather Underground",
+      "date": "Sat, 15 Aug 2026 13:03:31 GMT",
+      "sourceUrl": "https://www.wunderground.com/health/us/oh/stewart/45068?tab=uv",
+      "excerpt": "Pollen and Air Quality forecast for Waynesville, OH with air quality index, pollutants, pollen count and pollution map from Weather Underground."
     }
   ]
 }

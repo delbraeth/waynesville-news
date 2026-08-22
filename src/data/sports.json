@@ -1,19 +1,8 @@
 {
   "_note": "Waynesville Spartans schedule + results (MaxPreps), past 7 days / next 7 days. Scores and matchups reproduced verbatim from MaxPreps' own data; each links to their game page.",
-  "updated": "2026-08-21T20:19:19.733Z",
+  "updated": "2026-08-22T10:43:07.588Z",
   "results": [],
   "upcoming": [
-    {
-      "dateISO": "2026-08-21T19:00:00",
-      "sport": "Football",
-      "level": "Varsity",
-      "opponent": "Clinton-Massie",
-      "wayneScore": 0,
-      "opponentScore": 0,
-      "result": null,
-      "isHome": true,
-      "link": "https://www.maxpreps.com/oh/football/game/clinton-massie-clarksville-vs-waynesville/8-21-2026/?c=2a5ca130-f5e8-4206-a160-d391cb9ef200"
-    },
     {
       "dateISO": "2026-08-22T10:00:00",
       "sport": "Volleyball",
@@ -121,7 +110,7 @@
       "wayneScore": 0,
       "opponentScore": 0,
       "result": null,
-      "isHome": true,
+      "isHome": false,
       "link": "https://www.maxpreps.com/oh/volleyball/match/eaton-vs-waynesville/jv/8-27-2026/?c=0905d637-4172-4a26-a273-1138a1c2066a"
     },
     {
@@ -134,6 +123,17 @@
       "result": null,
       "isHome": false,
       "link": "https://www.maxpreps.com/oh/soccer/match/madison-middletown-vs-waynesville/8-27-2026/?c=5d1cc4ad-7aab-42e0-aa33-493c8755a092"
+    },
+    {
+      "dateISO": "2026-08-27T18:00:00",
+      "sport": "Soccer",
+      "level": "Varsity",
+      "opponent": "Madison",
+      "wayneScore": 0,
+      "opponentScore": 0,
+      "result": null,
+      "isHome": true,
+      "link": "https://www.maxpreps.com/oh/soccer/girls/match/madison-middletown-vs-waynesville/8-27-2026/?c=0b7e5245-3d24-4441-bfdc-e2e7a89f362a"
     }
   ]
 }
