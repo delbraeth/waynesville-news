@@ -26,14 +26,19 @@ const LOOKBACK_DAYS = 7;
 const LOOKAHEAD_DAYS = 7;
 
 // Fall sports tracked for the brief. Add/remove sport-season entries here as
-// the school year moves through winter/spring sports.
+// the school year moves through winter/spring sports. Note soccer fields
+// BOTH a boys team (/soccer/) and a girls team (/soccer/girls/) — an
+// earlier version tracked only the girls pages and silently missed every
+// boys soccer game, so keep both, clearly labeled.
 const SCHEDULE_PAGES = [
   { sport: "Football", level: "Varsity", url: "https://www.maxpreps.com/oh/waynesville/waynesville-spartans/football/schedule/" },
   { sport: "Football", level: "JV", url: "https://www.maxpreps.com/oh/waynesville/waynesville-spartans/football/jv/schedule/" },
   { sport: "Volleyball", level: "Varsity", url: "https://www.maxpreps.com/oh/waynesville/waynesville-spartans/volleyball/schedule/" },
   { sport: "Volleyball", level: "JV", url: "https://www.maxpreps.com/oh/waynesville/waynesville-spartans/volleyball/jv/schedule/" },
-  { sport: "Soccer", level: "Varsity", url: "https://www.maxpreps.com/oh/waynesville/waynesville-spartans/soccer/girls/schedule/" },
-  { sport: "Soccer", level: "JV", url: "https://www.maxpreps.com/oh/waynesville/waynesville-spartans/soccer/girls/jv/schedule/" },
+  { sport: "Boys Soccer", level: "Varsity", url: "https://www.maxpreps.com/oh/waynesville/waynesville-spartans/soccer/schedule/" },
+  { sport: "Boys Soccer", level: "JV", url: "https://www.maxpreps.com/oh/waynesville/waynesville-spartans/soccer/jv/schedule/" },
+  { sport: "Girls Soccer", level: "Varsity", url: "https://www.maxpreps.com/oh/waynesville/waynesville-spartans/soccer/girls/schedule/" },
+  { sport: "Girls Soccer", level: "JV", url: "https://www.maxpreps.com/oh/waynesville/waynesville-spartans/soccer/girls/jv/schedule/" },
 ];
 
 const ROW_RE = /<tr[^>]*>([\s\S]*?)<\/tr>/g;
@@ -114,9 +119,12 @@ async function main() {
     }
   }
 
+  // dateISO strings are naive ET wall-clock (no offset). Parse them as UTC
+  // ("+Z") so windowing behaves identically on UTC CI runners and local
+  // Eastern machines — the 7-day window has hours of margin either way.
   const inWindow = (list) =>
     list
-      .map((g) => ({ ...g, _d: new Date(g.dateISO) }))
+      .map((g) => ({ ...g, _d: new Date(g.dateISO + "Z") }))
       .filter((g) => g._d >= from && g._d <= to)
       .sort((a, b) => a._d - b._d)
       .map(({ _d, ...g }) => g);

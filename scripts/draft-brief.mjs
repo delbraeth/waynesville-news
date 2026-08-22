@@ -104,9 +104,14 @@ const obituariesBlock = obituaries.length
   ? obituaries.map((o) => `- **${o.name}** — ${o.dateRange} ([tribute](${o.link}))`).join("\n")
   : null;
 
+// sports.json dateISO values are naive ET wall-clock strings (no offset),
+// scraped from MaxPreps' Eastern-time schedule pages. Parse as UTC and
+// format as UTC so the printed time matches the source digits on ANY
+// machine — the previous America/New_York conversion silently shifted
+// every game time by 4-5 hours when run on a UTC machine (GitHub Actions).
 const fmtGameDate = (iso) =>
-  new Date(iso).toLocaleString("en-US", {
-    weekday: "short", month: "short", day: "numeric", hour: "numeric", minute: "2-digit", timeZone: "America/New_York",
+  new Date(iso + "Z").toLocaleString("en-US", {
+    weekday: "short", month: "short", day: "numeric", hour: "numeric", minute: "2-digit", timeZone: "UTC",
   }).replace(",", " ·");
 
 const sportsResultsBlock = sports.results.length
