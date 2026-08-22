@@ -79,7 +79,7 @@ const SOURCES = {
     "Chamber — https://www.waynesvilleohio.com/ · Merchants — https://waynesvilleshops.com/",
   ],
   "Public Safety": [
-    "Sheriff — https://sheriff.warrencountyohio.gov/  (⚠ presumption of innocence; do NOT name un-convicted arrestees)",
+    "Sheriff — https://sheriff.warrencountyohio.gov/",
     "Prosecutor press — https://prosecutor.warrencountyohio.gov/Public/Press/Index",
   ],
   Headlines: [
