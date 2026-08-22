@@ -1,7 +1,19 @@
 {
   "_note": "Waynesville Spartans schedule + results (MaxPreps), past 7 days / next 7 days. Scores and matchups reproduced verbatim from MaxPreps' own data; each links to their game page.",
-  "updated": "2026-08-22T10:43:07.588Z",
-  "results": [],
+  "updated": "2026-08-22T17:05:40.212Z",
+  "results": [
+    {
+      "dateISO": "2026-08-22T11:00:00",
+      "sport": "Volleyball",
+      "level": "Varsity",
+      "opponent": "Edgewood",
+      "wayneScore": 1,
+      "opponentScore": 0,
+      "result": "W",
+      "isHome": true,
+      "link": "https://www.maxpreps.com/oh/volleyball/match/edgewood-trenton-vs-waynesville/8-22-2026/?c=5c4b4415-3231-447e-a27c-33a4295550ff"
+    }
+  ],
   "upcoming": [
     {
       "dateISO": "2026-08-22T10:00:00",
@@ -24,17 +36,6 @@
       "result": null,
       "isHome": false,
       "link": "https://www.maxpreps.com/oh/football/game/clinton-massie-clarksville-vs-waynesville/jv/8-22-2026/?c=d7e998fd-0b82-449e-9c9a-cc8745184951"
-    },
-    {
-      "dateISO": "2026-08-22T11:00:00",
-      "sport": "Volleyball",
-      "level": "Varsity",
-      "opponent": "Edgewood",
-      "wayneScore": 0,
-      "opponentScore": 0,
-      "result": null,
-      "isHome": true,
-      "link": "https://www.maxpreps.com/oh/volleyball/match/edgewood-trenton-vs-waynesville/8-22-2026/?c=5c4b4415-3231-447e-a27c-33a4295550ff"
     },
     {
       "dateISO": "2026-08-24T17:00:00",
