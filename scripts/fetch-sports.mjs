@@ -37,7 +37,7 @@ const SCHEDULE_PAGES = [
 ];
 
 const ROW_RE = /<tr[^>]*>([\s\S]*?)<\/tr>/g;
-const DATE_CELL_RE = /aria-label="(\d{1,2}\/\d{1,2}) (\d{1,2}:\d{2}(?:am|pm)) (vs|@) [^"]+"[^>]*href="([^"]+)"/;
+const DATE_CELL_RE = /aria-label="(\d{1,2}\/\d{1,2}) (\d{1,2}:\d{2}(?:am|pm)) (vs|at) [^"]+"[^>]*href="([^"]+)"/;
 const RESULT_RE = /<span class="result (W|L|T)">\w<\/span>\s*<span class="score">(\d+)-(\d+)<\/span>/;
 const HREF_DATE_RE = /\/(\d{1,2})-(\d{1,2})-(\d{4})\//;
 const NAME_RE = /<span class="name">([^<]+)<\/span>/;
@@ -73,8 +73,15 @@ function parseSchedule(html, sport, level) {
 
     const rm = RESULT_RE.exec(row);
     if (rm) {
+      // MaxPreps lists the WINNER's score first in this span, not the home
+      // team's or "our" score first -- confirmed against a real loss (Girls
+      // Varsity Soccer @ Summit Country Day, 8/18: page shows "L 7-0", and
+      // the actual box score is Waynesville 0, Summit Country Day 7). So for
+      // a loss the two numbers must be swapped; for a win they're already
+      // in the right order; a tie is symmetric either way.
       const [, result, a, b] = rm;
-      results.push({ dateISO, sport, level, opponent, wayneScore: Number(a), opponentScore: Number(b), result, isHome, link });
+      const [wayneScore, opponentScore] = result === "L" ? [Number(b), Number(a)] : [Number(a), Number(b)];
+      results.push({ dateISO, sport, level, opponent, wayneScore, opponentScore, result, isHome, link });
     } else {
       upcoming.push({ dateISO, sport, level, opponent, wayneScore: null, opponentScore: null, result: null, isHome, link });
     }
