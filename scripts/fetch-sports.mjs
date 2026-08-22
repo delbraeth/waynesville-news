@@ -1,96 +1,131 @@
-// Pull Waynesville Spartans schedule + results from MaxPreps. The school's
-// page embeds a Next.js __NEXT_DATA__ JSON blob with structured contest data
-// (no scraping of rendered HTML, no browser needed) — pageProps.contestResults,
-// each with hasResult (completed vs. upcoming), timestamp, sport, level, and
-// both teams' scores. Window: past 7 days (results) through next 7 days
-// (upcoming). Nothing invented — scores and matchups reproduced verbatim.
+// Pull Waynesville Spartans schedule + results from MaxPreps.
 //
-// Home/away: the roster page's team ordering is NOT a reliable signal (verified
-// against real games — order doesn't consistently mean home-first or away-first).
-// Each individual game page carries a proper schema.org SportsEvent block with
-// homeTeam/awayTeam names, so that's fetched per-game instead. Best-effort: if a
-// given game's page can't be read, isHome is just left out for that one item
-// rather than failing the whole run or guessing.
+// Scrapes each sport's own schedule page directly (varsity + JV), rather than
+// the school's general hub page. The hub page exposes a __NEXT_DATA__ blob
+// with a `contestResults` array that looks authoritative but has been
+// observed to silently drop entire contests with no error — varsity
+// football's 8/21 game vs Clinton-Massie (a 20-17 win) never appeared there,
+// and only surfaced after a reader noticed the score was missing from the
+// published brief. Per-sport schedule pages don't have that gap.
+//
+// Each schedule page's HTML table has a stable, semantic structure (plain
+// `class="result W"` / `class="score"` spans — not the hashed
+// styled-components classes used elsewhere on the page), so it's scraped
+// directly rather than via a secondary JSON blob. Home/away comes straight
+// from the row's "vs" (home) / "@" (away) marker, so there's no need for the
+// old per-game follow-up fetch to determine it.
+//
+// Window: past 7 days (results) through next 7 days (upcoming). Nothing
+// invented — scores and matchups reproduced verbatim from MaxPreps' own
+// markup, each linking to their game page.
 import { writeFile } from "node:fs/promises";
 
-const SCHOOL_URL = "https://www.maxpreps.com/oh/waynesville/waynesville-spartans/";
-const WAYNESVILLE_SCHOOL_ID = "fad9ec30-4dd7-4a9f-b914-05e1a14ec1ea";
-const LOOKBACK_DAYS = 7;
-const LOOKAHEAD_DAYS = 7;
-const GAME_PAGE_DELAY_MS = 400; // be polite — this adds one fetch per game
 const UA = "Mozilla/5.0 (WaynesvilleDailyBrief/1.0; waynesville.news)";
 const OUT = new URL("../src/data/sports.json", import.meta.url);
+const LOOKBACK_DAYS = 7;
+const LOOKAHEAD_DAYS = 7;
+
+// Fall sports tracked for the brief. Add/remove sport-season entries here as
+// the school year moves through winter/spring sports.
+const SCHEDULE_PAGES = [
+  { sport: "Football", level: "Varsity", url: "https://www.maxpreps.com/oh/waynesville/waynesville-spartans/football/schedule/" },
+  { sport: "Football", level: "JV", url: "https://www.maxpreps.com/oh/waynesville/waynesville-spartans/football/jv/schedule/" },
+  { sport: "Volleyball", level: "Varsity", url: "https://www.maxpreps.com/oh/waynesville/waynesville-spartans/volleyball/schedule/" },
+  { sport: "Volleyball", level: "JV", url: "https://www.maxpreps.com/oh/waynesville/waynesville-spartans/volleyball/jv/schedule/" },
+  { sport: "Soccer", level: "Varsity", url: "https://www.maxpreps.com/oh/waynesville/waynesville-spartans/soccer/girls/schedule/" },
+  { sport: "Soccer", level: "JV", url: "https://www.maxpreps.com/oh/waynesville/waynesville-spartans/soccer/girls/jv/schedule/" },
+];
+
+const ROW_RE = /<tr[^>]*>([\s\S]*?)<\/tr>/g;
+const DATE_CELL_RE = /aria-label="(\d{1,2}\/\d{1,2}) (\d{1,2}:\d{2}(?:am|pm)) (vs|@) [^"]+"[^>]*href="([^"]+)"/;
+const RESULT_RE = /<span class="result (W|L|T)">\w<\/span>\s*<span class="score">(\d+)-(\d+)<\/span>/;
+const HREF_DATE_RE = /\/(\d{1,2})-(\d{1,2})-(\d{4})\//;
+const NAME_RE = /<span class="name">([^<]+)<\/span>/;
+
+function toISO(year, month, day, time12) {
+  const tm = /(\d{1,2}):(\d{2})(am|pm)/.exec(time12);
+  let hour = Number(tm[1]) % 12;
+  if (tm[3] === "pm") hour += 12;
+  const mm = String(month).padStart(2, "0");
+  const dd = String(day).padStart(2, "0");
+  const hh = String(hour).padStart(2, "0");
+  return `${year}-${mm}-${dd}T${hh}:${tm[2]}:00`;
+}
+
+function parseSchedule(html, sport, level) {
+  const results = [];
+  const upcoming = [];
+  let m;
+  ROW_RE.lastIndex = 0;
+  while ((m = ROW_RE.exec(html))) {
+    const row = m[1];
+    const dm = DATE_CELL_RE.exec(row);
+    if (!dm) continue; // header row or non-game row
+    const [, , time, vsAt, href] = dm;
+    const link = href.startsWith("http") ? href : `https://www.maxpreps.com${href}`;
+    const dateMatch = HREF_DATE_RE.exec(href);
+    if (!dateMatch) continue;
+    const [, mo, day, year] = dateMatch;
+    const opponentMatch = NAME_RE.exec(row);
+    const opponent = opponentMatch ? opponentMatch[1] : "TBA";
+    const isHome = vsAt === "vs";
+    const dateISO = toISO(year, mo, day, time);
+
+    const rm = RESULT_RE.exec(row);
+    if (rm) {
+      const [, result, a, b] = rm;
+      results.push({ dateISO, sport, level, opponent, wayneScore: Number(a), opponentScore: Number(b), result, isHome, link });
+    } else {
+      upcoming.push({ dateISO, sport, level, opponent, wayneScore: null, opponentScore: null, result: null, isHome, link });
+    }
+  }
+  return { results, upcoming };
+}
 
 const write = (data, note) =>
   writeFile(OUT, JSON.stringify({ _note: note, updated: new Date().toISOString(), ...data }, null, 2) + "\n");
 
-const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
-
-async function fetchIsHome(gameUrl) {
-  try {
-    const res = await fetch(gameUrl, { headers: { "User-Agent": UA } });
-    if (!res.ok) return null;
-    const html = await res.text();
-    const home = /"homeTeam":\{"@type":"SportsTeam","name":"([^"]+)"/.exec(html)?.[1];
-    if (!home) return null;
-    return home.includes("Waynesville");
-  } catch {
-    return null; // unknown — draft falls back to plain "vs" for this one game
-  }
-}
-
 async function main() {
-  const res = await fetch(SCHOOL_URL, { headers: { "User-Agent": "Mozilla/5.0 (WaynesvilleDailyBrief/1.0; waynesville.news)" } });
-  if (!res.ok) throw new Error(`HTTP ${res.status}`);
-  const html = await res.text();
-
-  const m = /<script id="__NEXT_DATA__"[^>]*>(.*?)<\/script>/s.exec(html);
-  if (!m) throw new Error("__NEXT_DATA__ not found on page");
-  const data = JSON.parse(m[1]);
-  const contests = data?.props?.pageProps?.contestResults ?? [];
-
   const now = new Date();
   const from = new Date(now); from.setDate(from.getDate() - LOOKBACK_DAYS);
   const to = new Date(now); to.setDate(to.getDate() + LOOKAHEAD_DAYS);
 
-  const inWindow = contests
-    .map((c) => ({ ...c, _d: new Date(c.timestamp) }))
-    .filter((c) => c._d >= from && c._d <= to)
-    .sort((a, b) => a._d - b._d);
+  let allResults = [];
+  let allUpcoming = [];
+  const failures = [];
 
-  let fetchCount = 0;
-  const shape = async (c) => {
-    const us = c.teams.find((t) => t.teamId === WAYNESVILLE_SCHOOL_ID) ?? c.teams[0];
-    const them = c.teams.find((t) => t.teamId !== WAYNESVILLE_SCHOOL_ID) ?? c.teams[1];
-    if (fetchCount++ > 0) await sleep(GAME_PAGE_DELAY_MS);
-    const isHome = c.canonicalUrl ? await fetchIsHome(c.canonicalUrl) : null;
-    return {
-      dateISO: c.timestamp,
-      sport: c.sport,
-      level: c.teamLevel,
-      opponent: them?.schoolName ?? "TBA",
-      wayneScore: us?.score ?? null,
-      opponentScore: them?.score ?? null,
-      result: us?.result ?? null, // "W" / "L" / null
-      isHome, // true / false / null (unknown)
-      link: c.canonicalUrl,
-    };
-  };
+  for (const { sport, level, url } of SCHEDULE_PAGES) {
+    try {
+      const res = await fetch(url, { headers: { "User-Agent": UA } });
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const html = await res.text();
+      const { results, upcoming } = parseSchedule(html, sport, level);
+      allResults.push(...results);
+      allUpcoming.push(...upcoming);
+    } catch (e) {
+      failures.push(`${sport} (${level}): ${e.message}`);
+    }
+  }
 
-  const shapeAll = async (list) => {
-    const out = [];
-    for (const c of list) out.push(await shape(c));
-    return out;
-  };
+  const inWindow = (list) =>
+    list
+      .map((g) => ({ ...g, _d: new Date(g.dateISO) }))
+      .filter((g) => g._d >= from && g._d <= to)
+      .sort((a, b) => a._d - b._d)
+      .map(({ _d, ...g }) => g);
 
-  const results = await shapeAll(inWindow.filter((c) => c.hasResult && c._d < now));
-  const upcoming = await shapeAll(inWindow.filter((c) => !c.hasResult || c._d >= now));
+  const results = inWindow(allResults);
+  const upcoming = inWindow(allUpcoming);
 
-  await write(
-    { results, upcoming },
-    `Waynesville Spartans schedule + results (MaxPreps), past ${LOOKBACK_DAYS} days / next ${LOOKAHEAD_DAYS} days. Scores and matchups reproduced verbatim from MaxPreps' own data; each links to their game page.`
-  );
-  console.log(`sports.json: ${results.length} result(s), ${upcoming.length} upcoming`);
+  const note =
+    `Waynesville Spartans schedule + results (MaxPreps), past ${LOOKBACK_DAYS} days / next ${LOOKAHEAD_DAYS} days. ` +
+    `Scraped directly from each sport's own schedule page (football, volleyball, soccer -- varsity + JV), not the ` +
+    `school hub page, which has been observed to silently omit some contests. Scores and matchups reproduced ` +
+    `verbatim from MaxPreps' own markup; each links to their game page.` +
+    (failures.length ? ` Fetch failures this run (skipped, not treated as fatal): ${failures.join("; ")}.` : "");
+
+  await write({ results, upcoming }, note);
+  console.log(`sports.json: ${results.length} result(s), ${upcoming.length} upcoming${failures.length ? `, ${failures.length} page fetch failure(s)` : ""}`);
 }
 
 main().catch(async (e) => {
