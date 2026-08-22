@@ -1,7 +1,18 @@
 {
-  "_note": "Waynesville Spartans schedule + results (MaxPreps), past 7 days / next 7 days. Scores and matchups reproduced verbatim from MaxPreps' own data; each links to their game page.",
+  "_note": "Waynesville Spartans schedule + results (MaxPreps), past 7 days / next 7 days. Scores and matchups reproduced verbatim from MaxPreps' own data; each links to their game page. Varsity football (not on the general school hub page's contest feed) added manually from the team's dedicated schedule page after a reader flagged the missing score.",
   "updated": "2026-08-22T17:05:40.212Z",
   "results": [
+    {
+      "dateISO": "2026-08-21T19:00:00",
+      "sport": "Football",
+      "level": "Varsity",
+      "opponent": "Clinton-Massie",
+      "wayneScore": 20,
+      "opponentScore": 17,
+      "result": "W",
+      "isHome": true,
+      "link": "https://www.maxpreps.com/oh/football/game/clinton-massie-clarksville-vs-waynesville/8-21-2026/?c=2a5ca130-f5e8-4206-a160-d391cb9ef200"
+    },
     {
       "dateISO": "2026-08-22T11:00:00",
       "sport": "Volleyball",
