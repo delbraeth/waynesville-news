@@ -157,6 +157,15 @@
       "note": "56th annual; setup begins Oct 9"
     },
     {
+      "title": "Village Trick or Treat",
+      "dateISO": "2026-10-31T18:00:00-04:00",
+      "dateLabel": "Sat, Oct 31 · 6:00–8:00 PM",
+      "venue": "Village of Waynesville (residential streets)",
+      "category": "Family",
+      "source": "https://www.villageofwaynesville.org/events/event/trick-or-treat/2026-10-31/",
+      "note": "Official village-wide trick-or-treat hours, per the Village's events calendar. Separate from the downtown shops' Trick or Treat stroll on Sun, Oct 25."
+    },
+    {
       "title": "Little Miami Scenic Trail",
       "dateISO": null,
       "dateLabel": "Year-round",
