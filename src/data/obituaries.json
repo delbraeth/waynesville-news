@@ -1,5 +1,11 @@
 {
-  "_note": "obituaries fetch failed; empty list.",
-  "updated": "2026-08-22T10:42:57.251Z",
-  "items": []
+  "_note": "Obituaries from Stubbs-Conner Funeral Home (Waynesville), past 7 days by date of death. Names and dates reproduced verbatim; link goes to the full tribute page.",
+  "updated": "2026-08-23T10:51:15.136Z",
+  "items": [
+    {
+      "name": "Marjorie Carrier",
+      "dateRange": "Oct. 14, 1938 - Aug. 18, 2026",
+      "link": "https://www.stubbsconner.com/obituaries/marjorie-carrier"
+    }
+  ]
 }

@@ -1,6 +1,6 @@
 {
   "_note": "Mary L. Cook Public Library — upcoming programs from the library's own homepage event feed. Canceled events excluded.",
-  "updated": "2026-08-22T17:56:42.369Z",
+  "updated": "2026-08-23T10:51:16.545Z",
   "items": [
     {
       "title": "The Loop Group (Fiber Crafts Club)",
@@ -19,6 +19,18 @@
       "dateISO": "2026-09-03T15:00:00Z",
       "dateLabel": "Thu · Sep 3, 3:00 PM",
       "link": "https://marylcook-main-oh.whofi.com/calendar/event/325888/"
+    },
+    {
+      "title": "Living Zen: Why Happiness Depends on Letting Go",
+      "dateISO": "2026-09-05T10:00:00Z",
+      "dateLabel": "Sat · Sep 5, 10:00 AM",
+      "link": "https://marylcook-main-oh.whofi.com/calendar/event/306452/"
+    },
+    {
+      "title": "Paint Party at the Library",
+      "dateISO": "2026-09-05T10:30:00Z",
+      "dateLabel": "Sat · Sep 5, 10:30 AM",
+      "link": "https://marylcook-main-oh.whofi.com/calendar/event/341452/"
     }
   ]
 }

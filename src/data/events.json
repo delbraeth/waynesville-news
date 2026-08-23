@@ -1,24 +1,14 @@
 {
-  "_note": "Real venues and sources, verified against each listed source on 2026-08-21. Recurring items (rodeo, commissioners) show the next occurrence.",
+  "_note": "Real venues and sources, verified against each listed source on 2026-08-23. Recurring items (rodeo, commissioners) show the next occurrence.",
   "items": [
     {
       "title": "Fox Hollow Rodeo — Bull Riding",
-      "dateISO": "2026-08-22T18:00:00-04:00",
+      "dateISO": "2026-08-29T18:00:00-04:00",
       "dateLabel": "Every Saturday · office opens 5 PM, show 6 PM",
       "venue": "Fox Hollow Rodeo, Waynesville",
       "category": "Rodeo",
       "source": "https://foxhollowrodeo.com/",
       "note": "Bull riding, barrel racing, mutton bustin' — year-round, rain or shine"
-    },
-    {
-      "title": "Bat-tastic Evening",
-      "dateISO": "2026-08-22T19:00:00-04:00",
-      "dateLabel": "Sat, Aug 22 · 7:00–10:00 PM",
-      "venue": "Armco Park - Jones Pavilion, Lebanon",
-      "category": "Outdoors",
-      "source": "https://www.warrencountyparks.com/events/",
-      "note": "Meet live bats and hike to search for bats, with Warren County Soil & Water, Cincinnati Museum Center, and South Dayton Wildlife Rehab; registration ends 24 hrs prior",
-      "registrationUrl": "https://lp.constantcontactpages.com/ev/reg/x59xbt7"
     },
     {
       "title": "Warren County Commissioners — Weekly Session",
@@ -103,6 +93,15 @@
       "note": "Free astronomy presentation and stargazing, open to the public, no registration required; check WCAS site/Facebook for weather cancellations"
     },
     {
+      "title": "Waynesville Fall Fest — Opening Day",
+      "dateISO": "2026-09-19T11:00:00-04:00",
+      "dateLabel": "Opens Sat, Sep 19 · Sat/Sun through Nov 1 (Sat 11–6, Sun 12–6)",
+      "venue": "7392 E State Route 73, Waynesville",
+      "category": "Festival",
+      "source": "https://waynesvillefallfest.com/",
+      "note": "Corn maze, mini golf, petting farm, and other fall activities; $16 adult / $14 ages 10 & under daily admission. Not affiliated with Hisey Fall Fest."
+    },
+    {
       "title": "Business to Business Networking Mixer",
       "dateISO": "2026-09-23T12:00:00-04:00",
       "dateLabel": "Wed, Sep 23 · 12:00 PM",
@@ -130,15 +129,6 @@
       "note": "Easy-terrain night hike under the full moon, ages 4+; registration ends 24 hrs prior"
     },
     {
-      "title": "Waynesville Fall Fest — Opening Day",
-      "dateISO": "2026-09-19T11:00:00-04:00",
-      "dateLabel": "Opens Sat, Sep 19 · Sat/Sun through Nov 1 (Sat 11–6, Sun 12–6)",
-      "venue": "7392 E State Route 73, Waynesville",
-      "category": "Festival",
-      "source": "https://waynesvillefallfest.com/",
-      "note": "Corn maze, mini golf, petting farm, and other fall activities; $16 adult / $14 ages 10 & under daily admission. Not affiliated with Hisey Fall Fest."
-    },
-    {
       "title": "Hisey Fall Fest",
       "dateISO": "2026-10-03T11:00:00-04:00",
       "dateLabel": "Sat, Oct 3 · 11 AM–4 PM",
@@ -146,6 +136,15 @@
       "category": "Outdoors",
       "source": "https://www.warrencountyparks.com/events/",
       "note": "Established annual event (21st year in 2026), hosted by Warren County Park District & Friends of Warren County Park District; free admission and activities include free pumpkins while supplies last, pumpkin decorating, hayrides, live reptiles, native taxidermy, 4-H archery, 4-H petting zoo, and historic farmhouse tours; no registration required"
+    },
+    {
+      "title": "Night Sky Tour with Warren County Astronomical Society",
+      "dateISO": "2026-10-03T18:30:00-04:00",
+      "dateLabel": "Sat, Oct 3 · 6:30–10:30 PM",
+      "venue": "Hisey Park (Fred Bay Observatory), Waynesville",
+      "category": "Outdoors",
+      "source": "https://www.warrencountyparks.com/events/",
+      "note": "Second WCAS night sky tour date this fall; free astronomy presentation and stargazing, open to the public, no registration required; check WCAS site/Facebook for weather cancellations"
     },
     {
       "title": "Ohio Sauerkraut Festival",
