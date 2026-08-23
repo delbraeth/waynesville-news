@@ -138,6 +138,15 @@ async function main() {
       const t = Date.parse(i.date);
       return !isNaN(t) && t >= cutoff; // drop undated or stale-dated items rather than risk showing them
     })
+    .filter((i) => {
+      // Funeral-home obituary pages get re-crawled by Google long after the
+      // person's actual obituary year, which gives old content a fresh-looking
+      // pubDate above and lets it slip past the cutoff filter. The title states
+      // the true year(s) as "Obituary (YYYY)" or "Obituary (YYYY - YYYY)" — drop
+      // the item if that (most recent) year isn't the current year.
+      const m = /Obituary\s*\((?:\d{4}\s*-\s*)?(\d{4})\)/.exec(i.title);
+      return !m || Number(m[1]) === new Date().getFullYear();
+    })
     .slice(0, LIMIT);
 
   items = await enrichWithExcerpts(items);
