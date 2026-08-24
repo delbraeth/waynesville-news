@@ -1,13 +1,7 @@
 {
   "_note": "Candidate local headlines (Google News RSS). Published as a quoted headline (or, when available, a short publisher-written excerpt) + source + link; never reproduce article body text.",
-  "updated": "2026-08-23T18:21:42.331Z",
+  "updated": "2026-08-24T10:56:17.713Z",
   "items": [
-    {
-      "title": "Robert Krebs Obituary (1947 - 2026) - Waynesville, OH - Dayton Daily News",
-      "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPT3pBbl9Rc2hQbE4ycGRqTnAwMkRYR1pPZURhVFo5VVYtUDdDSmk5YVJwd2JlcWQxeVFiQUszR1JUMFptZC04V2s4bnpPdGNLc0xlb0FCa084X2RnQXR3OE93cWloMEU2SUEybC1wX0pSTXAwNF81d1FVdGNncUxldTJNMDBWOXEyS0E?oc=5",
-      "source": "Legacy obituary",
-      "date": "Sun, 23 Aug 2026 07:36:41 GMT"
-    },
     {
       "title": "Man convicted of multiple charges involving sexual child abuse in Warren County",
       "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPRm41WEpqamNVdkRNNzBnQmoydGdyV2VPSC1aUGN1akMxRWtyZE90YlRCQ1piMVNUUzJFMjJ5b2k4U01YMWlCclA0MF9FY3BiYjdBWG4tcTZHZG0zOXpPRl9udDF0WVJjYW9ZcnVyLXFrMzk2ejNyUzFCYnd3XzFYQ3UwWnJscG8ydXZWTmJUNmNfOEs0QTBUT1RIc1dnMTNNRG8wZ29tekZ6Qnhadk1ETVk0ajUwQQ?oc=5",
@@ -21,16 +15,22 @@
       "date": "Wed, 19 Aug 2026 02:20:52 GMT"
     },
     {
-      "title": "Warren County man accused of shooting mother, 2 dogs inside home in Mason",
-      "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPWENrR3NqbF9GMzZmMUFHREZaM3R5RnFCUC1SNEl0dk94VUtjWFAwOGVTTHVPWVg3cFFOQmRSV3R1SFZFcThSU01CNWFxRUdTX05hZWtEdEQwSi01cWdEN01IZkFNV19TX2V3SzB0ZFBYbEV6dDA1ZFNKY2ZSYmdBWmJUMk1NcG5zMnNiSjlJYmNHSWk1Q3Nz?oc=5",
-      "source": "WLWT",
-      "date": "Tue, 18 Aug 2026 20:37:00 GMT"
+      "title": "Robert Krebs Obituary (1947 - 2026) - Waynesville, OH - Dayton Daily News",
+      "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPT3pBbl9Rc2hQbE4ycGRqTnAwMkRYR1pPZURhVFo5VVYtUDdDSmk5YVJwd2JlcWQxeVFiQUszR1JUMFptZC04V2s4bnpPdGNLc0xlb0FCa084X2RnQXR3OE93cWloMEU2SUEybC1wX0pSTXAwNF81d1FVdGNncUxldTJNMDBWOXEyS0E?oc=5",
+      "source": "Legacy obituary",
+      "date": "Sun, 23 Aug 2026 07:36:41 GMT"
     },
     {
       "title": "Illegal immigrant sentenced for sexually assaulting Tri-State girl for years",
       "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOZl9La0FhU2djVG1md2NGcWtvb1ZDNVp5a0owRDlBRzFUX19yb0ZpdklKVV9wU0R6bmJjWHNCQ01BRzR4UjJnd0Y1d0ZRbVNteFViQ1duUjFnUFpicG0tMExRRXlEZ1hpRlZINUNyZzBOLVlhdHJCWmptbHVpLWZXWjNELTFCNkNKd1RtSGdWcWV6TzE5ZE5CZmdxWFFJZ3gzbTB5LUxkZW1WQmdoYkdIU2hB?oc=5",
       "source": "WKEF",
       "date": "Fri, 21 Aug 2026 00:05:55 GMT"
+    },
+    {
+      "title": "Warren County man accused of shooting mother, 2 dogs inside home in Mason",
+      "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPWENrR3NqbF9GMzZmMUFHREZaM3R5RnFCUC1SNEl0dk94VUtjWFAwOGVTTHVPWVg3cFFOQmRSV3R1SFZFcThSU01CNWFxRUdTX05hZWtEdEQwSi01cWdEN01IZkFNV19TX2V3SzB0ZFBYbEV6dDA1ZFNKY2ZSYmdBWmJUMk1NcG5zMnNiSjlJYmNHSWk1Q3Nz?oc=5",
+      "source": "WLWT",
+      "date": "Tue, 18 Aug 2026 20:37:00 GMT"
     },
     {
       "title": "Overnight flooding in Waynesville sends rafts and kayaks loose",
@@ -42,7 +42,9 @@
       "title": "Roy L. Turton Obituary (2026) - Waynesville, OH - Stubbs-Conner Funeral Home & Cremation Services",
       "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1wUFFZb1FmZ1RTc1BIeFBGQjNjOWhHQUZ2RWxxNmpKeFo0VU51OEZ5VDQzTnotTzV4c0h5ZERndU1kNWQwakhmOEJJZGhOSV84RHlxRndKc24tZkFGc1F1bTZfRFlpMVhGTlIyYVp1eFFIbkRLNXBnekNHT0xZZw?oc=5",
       "source": "Legacy obituary",
-      "date": "Tue, 18 Aug 2026 05:35:56 GMT"
+      "date": "Tue, 18 Aug 2026 05:35:56 GMT",
+      "sourceUrl": "https://www.legacy.com/us/obituaries/name/roy-turton-obituary?id=62204316",
+      "excerpt": "View Roy L. Turton's obituary, send flowers and sign the guestbook."
     }
   ]
 }

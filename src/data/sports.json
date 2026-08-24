@@ -1,6 +1,6 @@
 {
   "_note": "Waynesville Spartans schedule + results (MaxPreps), past 7 days / next 7 days. Scraped directly from each sport's own schedule page (football, volleyball, soccer -- varsity + JV), not the school hub page, which has been observed to silently omit some contests. Scores and matchups reproduced verbatim from MaxPreps' own markup; each links to their game page.",
-  "updated": "2026-08-23T10:51:16.188Z",
+  "updated": "2026-08-24T10:56:21.165Z",
   "results": [
     {
       "dateISO": "2026-08-18T17:30:00",
@@ -69,6 +69,17 @@
       "link": "https://www.maxpreps.com/oh/football/game/clinton-massie-clarksville-vs-waynesville/8-21-2026/?c=2a5ca130-f5e8-4206-a160-d391cb9ef200"
     },
     {
+      "dateISO": "2026-08-22T10:00:00",
+      "sport": "Football",
+      "level": "JV",
+      "opponent": "Clinton-Massie",
+      "wayneScore": 20,
+      "opponentScore": 21,
+      "result": "L",
+      "isHome": false,
+      "link": "https://www.maxpreps.com/oh/football/game/clinton-massie-clarksville-vs-waynesville/jv/8-22-2026/?c=d7e998fd-0b82-449e-9c9a-cc8745184951"
+    },
+    {
       "dateISO": "2026-08-22T11:00:00",
       "sport": "Volleyball",
       "level": "Varsity",
@@ -91,17 +102,6 @@
       "result": null,
       "isHome": false,
       "link": "https://www.maxpreps.com/oh/soccer/girls/match/summit-country-day-cincinnati-vs-waynesville/jv/8-18-2026/?c=472186ce-51d0-45d9-b0eb-5cf75f210570"
-    },
-    {
-      "dateISO": "2026-08-22T10:00:00",
-      "sport": "Football",
-      "level": "JV",
-      "opponent": "Clinton-Massie",
-      "wayneScore": null,
-      "opponentScore": null,
-      "result": null,
-      "isHome": false,
-      "link": "https://www.maxpreps.com/oh/football/game/clinton-massie-clarksville-vs-waynesville/jv/8-22-2026/?c=d7e998fd-0b82-449e-9c9a-cc8745184951"
     },
     {
       "dateISO": "2026-08-22T10:00:00",
