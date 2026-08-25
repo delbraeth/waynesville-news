@@ -1,19 +1,10 @@
 {
-  "_note": "Real venues and sources, verified against each listed source on 2026-08-23. Recurring items (rodeo, commissioners) show the next occurrence.",
+  "_note": "Real venues and sources, verified against each listed source on 2026-08-25. Recurring items (rodeo, commissioners) show the next occurrence.",
   "items": [
     {
-      "title": "Fox Hollow Rodeo — Bull Riding",
-      "dateISO": "2026-08-29T18:00:00-04:00",
-      "dateLabel": "Every Saturday · office opens 5 PM, show 6 PM",
-      "venue": "Fox Hollow Rodeo, Waynesville",
-      "category": "Rodeo",
-      "source": "https://foxhollowrodeo.com/",
-      "note": "Bull riding, barrel racing, mutton bustin' — year-round, rain or shine"
-    },
-    {
-      "title": "Warren County Commissioners — Weekly Session",
+      "title": "Warren County Commissioners \u2014 Weekly Session",
       "dateISO": "2026-08-25T09:00:00-04:00",
-      "dateLabel": "Tue, Aug 25 · 9:00 AM",
+      "dateLabel": "Tue, Aug 25 \u00b7 9:00 AM",
       "venue": "406 Justice Dr, Lebanon",
       "category": "Government",
       "source": "https://commissioners.warrencountyohio.gov/News/AgendaMinutes/Index",
@@ -22,7 +13,7 @@
     {
       "title": "Business to Business Networking Mixer",
       "dateISO": "2026-08-26T17:00:00-04:00",
-      "dateLabel": "Wed, Aug 26 · 5:00 PM",
+      "dateLabel": "Wed, Aug 26 \u00b7 5:00 PM",
       "venue": "Stonehouse Tavern, Waynesville",
       "category": "Chamber",
       "source": "https://www.waynesvilleohio.com/events",
@@ -31,7 +22,7 @@
     {
       "title": "Full Moon Hike at Hisey Park",
       "dateISO": "2026-08-27T20:30:00-04:00",
-      "dateLabel": "Thu, Aug 27 · 8:30–9:30 PM",
+      "dateLabel": "Thu, Aug 27 \u00b7 8:30\u20139:30 PM",
       "venue": "Hisey Park, Waynesville",
       "category": "Outdoors",
       "source": "https://www.warrencountyparks.com/events/",
@@ -41,16 +32,25 @@
     {
       "title": "Family Nature Walk at Pine Hill Lakes Park",
       "dateISO": "2026-08-28T18:30:00-04:00",
-      "dateLabel": "Fri, Aug 28 · 6:30–8:00 PM",
+      "dateLabel": "Fri, Aug 28 \u00b7 6:30\u20138:00 PM",
       "venue": "Pine Hill Lakes Park, Mason",
       "category": "Outdoors",
       "source": "https://www.warrencountyparks.com/events/",
       "note": "Free enrichment walk with Mason Community Center; registration via Mason CC (513-229-8555)"
     },
     {
+      "title": "Fox Hollow Rodeo \u2014 Bull Riding",
+      "dateISO": "2026-08-29T18:00:00-04:00",
+      "dateLabel": "Every Saturday \u00b7 office opens 5 PM, show 6 PM",
+      "venue": "Fox Hollow Rodeo, Waynesville",
+      "category": "Rodeo",
+      "source": "https://foxhollowrodeo.com/",
+      "note": "Bull riding, barrel racing, mutton bustin' \u2014 year-round, rain or shine"
+    },
+    {
       "title": "Toddler Trek: Butterflies and Moths at Hisey Park",
       "dateISO": "2026-09-02T10:30:00-04:00",
-      "dateLabel": "Wed, Sep 2 · 10:30–11:30 AM",
+      "dateLabel": "Wed, Sep 2 \u00b7 10:30\u201311:30 AM",
       "venue": "Hisey Park, Waynesville",
       "category": "Outdoors",
       "source": "https://www.warrencountyparks.com/events/",
@@ -59,25 +59,25 @@
     {
       "title": "Summer Tree Identification at Gulley Park",
       "dateISO": "2026-09-05T10:00:00-04:00",
-      "dateLabel": "Sat, Sep 5 · 10:00–11:30 AM",
+      "dateLabel": "Sat, Sep 5 \u00b7 10:00\u201311:30 AM",
       "venue": "Gulley Park, Clarksville",
       "category": "Outdoors",
       "source": "https://www.warrencountyparks.com/events/",
       "note": "Warren County Park District hike with Ohio Certified Volunteer Naturalist Kathie Bowers; registration required, ends 7 PM the day before"
     },
     {
-      "title": "Ohio Renaissance Festival — Homecoming Weekend (Opening)",
+      "title": "Ohio Renaissance Festival \u2014 Homecoming Weekend (Opening)",
       "dateISO": "2026-09-05T10:30:00-04:00",
-      "dateLabel": "Opens Sat, Sep 5 · Homecoming Weekend Sep 5–7 · weekends & Labor Day through Nov 1",
+      "dateLabel": "Opens Sat, Sep 5 \u00b7 Homecoming Weekend Sep 5\u20137 \u00b7 weekends & Labor Day through Nov 1",
       "venue": "Renaissance Park, Waynesville",
       "category": "Festival",
       "source": "https://renfestival.com/",
-      "note": "10:30 AM – 7:00 PM; season runs weekends through Nov 1, 2026"
+      "note": "10:30 AM \u2013 7:00 PM; season runs weekends through Nov 1, 2026"
     },
     {
       "title": "Waynesville Airshow & Fly-in",
       "dateISO": "2026-09-05T17:00:00-04:00",
-      "dateLabel": "Sat, Sep 5 · 5:00 PM airshow (fly-in all weekend; Sun EAA Ch. 284 pancake breakfast 7–11 AM)",
+      "dateLabel": "Sat, Sep 5 \u00b7 5:00 PM airshow (fly-in all weekend; Sun EAA Ch. 284 pancake breakfast 7\u201311 AM)",
       "venue": "Red Stewart Airfield (40I), 4925 N State Route 42, Waynesville",
       "category": "Festival",
       "source": "https://www.daytonlocal.com/events/waynesville-labor-day-weekend-airshow/",
@@ -86,16 +86,25 @@
     {
       "title": "Night Sky Tour with Warren County Astronomical Society",
       "dateISO": "2026-09-12T19:00:00-04:00",
-      "dateLabel": "Sat, Sep 12 · 7:00–11:00 PM",
+      "dateLabel": "Sat, Sep 12 \u00b7 7:00\u201311:00 PM",
       "venue": "Hisey Park (Fred Bay Observatory), Waynesville",
       "category": "Outdoors",
       "source": "https://www.warrencountyparks.com/events/",
       "note": "Free astronomy presentation and stargazing, open to the public, no registration required; check WCAS site/Facebook for weather cancellations"
     },
     {
-      "title": "Waynesville Fall Fest — Opening Day",
+      "title": "Clean Sweep of the Great Miami River",
+      "dateISO": "2026-09-19T09:00:00-04:00",
+      "dateLabel": "Sat, Sep 19 \u00b7 9:00 AM\u201312:00 PM",
+      "venue": "Carmody Park, 7499 Martz Paulin Rd, Franklin",
+      "category": "Outdoors",
+      "source": "https://www.warrencountyparks.com/events/",
+      "note": "Annual volunteer river cleanup on the Great Miami River; free t-shirts for those who pre-register by Sep 1; Scout badges available"
+    },
+    {
+      "title": "Waynesville Fall Fest \u2014 Opening Day",
       "dateISO": "2026-09-19T11:00:00-04:00",
-      "dateLabel": "Opens Sat, Sep 19 · Sat/Sun through Nov 1 (Sat 11–6, Sun 12–6)",
+      "dateLabel": "Opens Sat, Sep 19 \u00b7 Sat/Sun through Nov 1 (Sat 11\u20136, Sun 12\u20136)",
       "venue": "7392 E State Route 73, Waynesville",
       "category": "Festival",
       "source": "https://waynesvillefallfest.com/",
@@ -104,7 +113,7 @@
     {
       "title": "Business to Business Networking Mixer",
       "dateISO": "2026-09-23T12:00:00-04:00",
-      "dateLabel": "Wed, Sep 23 · 12:00 PM",
+      "dateLabel": "Wed, Sep 23 \u00b7 12:00 PM",
       "venue": "Bentino's, Waynesville",
       "category": "Chamber",
       "source": "https://www.waynesvilleohio.com/events",
@@ -113,7 +122,7 @@
     {
       "title": "Monarch Preschool Story Time",
       "dateISO": "2026-09-24T10:30:00-04:00",
-      "dateLabel": "Thu, Sep 24 · 10:30–11:30 AM",
+      "dateLabel": "Thu, Sep 24 \u00b7 10:30\u201311:30 AM",
       "venue": "Mary L. Cook Library, Waynesville",
       "category": "Family",
       "source": "https://www.warrencountyparks.com/events/",
@@ -122,7 +131,7 @@
     {
       "title": "Full Moon Hike at Gulley Park",
       "dateISO": "2026-09-27T21:00:00-04:00",
-      "dateLabel": "Sun, Sep 27 · 9:00–10:00 PM",
+      "dateLabel": "Sun, Sep 27 \u00b7 9:00\u201310:00 PM",
       "venue": "Gulley Park, Clarksville",
       "category": "Outdoors",
       "source": "https://www.warrencountyparks.com/events/",
@@ -131,7 +140,7 @@
     {
       "title": "Hisey Fall Fest",
       "dateISO": "2026-10-03T11:00:00-04:00",
-      "dateLabel": "Sat, Oct 3 · 11 AM–4 PM",
+      "dateLabel": "Sat, Oct 3 \u00b7 11 AM\u20134 PM",
       "venue": "Hisey Park, 5443 Middletown Rd, Waynesville",
       "category": "Outdoors",
       "source": "https://www.warrencountyparks.com/events/",
@@ -140,7 +149,7 @@
     {
       "title": "Night Sky Tour with Warren County Astronomical Society",
       "dateISO": "2026-10-03T18:30:00-04:00",
-      "dateLabel": "Sat, Oct 3 · 6:30–10:30 PM",
+      "dateLabel": "Sat, Oct 3 \u00b7 6:30\u201310:30 PM",
       "venue": "Hisey Park (Fred Bay Observatory), Waynesville",
       "category": "Outdoors",
       "source": "https://www.warrencountyparks.com/events/",
@@ -149,7 +158,7 @@
     {
       "title": "Ohio Sauerkraut Festival",
       "dateISO": "2026-10-10T09:00:00-04:00",
-      "dateLabel": "Oct 10–11 · Sat 9 AM–8 PM, Sun 9 AM–6 PM",
+      "dateLabel": "Oct 10\u201311 \u00b7 Sat 9 AM\u20138 PM, Sun 9 AM\u20136 PM",
       "venue": "Downtown Waynesville",
       "category": "Festival",
       "source": "https://sauerkrautfestival.waynesvilleohio.com/home/",
@@ -158,7 +167,7 @@
     {
       "title": "Village Trick or Treat",
       "dateISO": "2026-10-31T18:00:00-04:00",
-      "dateLabel": "Sat, Oct 31 · 6:00–8:00 PM",
+      "dateLabel": "Sat, Oct 31 \u00b7 6:00\u20138:00 PM",
       "venue": "Village of Waynesville (residential streets)",
       "category": "Family",
       "source": "https://www.villageofwaynesville.org/events/event/trick-or-treat/2026-10-31/",
@@ -172,7 +181,7 @@
       "category": "Outdoors",
       "source": "https://ohiodnr.gov/go-and-do/plan-a-visit/find-a-property/little-miami-state-park",
       "evergreen": true,
-      "note": "~78-mi paved rail-trail — biking, hiking, running"
+      "note": "~78-mi paved rail-trail \u2014 biking, hiking, running"
     },
     {
       "title": "Kings Island",
