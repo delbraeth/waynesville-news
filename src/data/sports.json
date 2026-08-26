@@ -1,40 +1,7 @@
 {
   "_note": "Waynesville Spartans schedule + results (MaxPreps), past 7 days / next 7 days. Scraped directly from each sport's own schedule page (football, volleyball, soccer -- varsity + JV), not the school hub page, which has been observed to silently omit some contests. Scores and matchups reproduced verbatim from MaxPreps' own markup; each links to their game page.",
-  "updated": "2026-08-24T10:56:21.165Z",
+  "updated": "2026-08-26T10:50:22.568Z",
   "results": [
-    {
-      "dateISO": "2026-08-18T17:30:00",
-      "sport": "Boys Soccer",
-      "level": "JV",
-      "opponent": "Beavercreek",
-      "wayneScore": 0,
-      "opponentScore": 6,
-      "result": "L",
-      "isHome": false,
-      "link": "https://www.maxpreps.com/oh/soccer/match/beavercreek-vs-waynesville/jv/8-18-2026/?c=875ca518-52fe-4da2-99bf-b6c7f64116e4"
-    },
-    {
-      "dateISO": "2026-08-18T19:15:00",
-      "sport": "Boys Soccer",
-      "level": "Varsity",
-      "opponent": "Beavercreek",
-      "wayneScore": 1,
-      "opponentScore": 7,
-      "result": "L",
-      "isHome": false,
-      "link": "https://www.maxpreps.com/oh/soccer/match/beavercreek-vs-waynesville/8-18-2026/?c=45a6bd37-e297-40b0-8d65-2afaece1338a"
-    },
-    {
-      "dateISO": "2026-08-18T19:15:00",
-      "sport": "Girls Soccer",
-      "level": "Varsity",
-      "opponent": "Summit Country Day",
-      "wayneScore": 0,
-      "opponentScore": 7,
-      "result": "L",
-      "isHome": false,
-      "link": "https://www.maxpreps.com/oh/soccer/girls/match/summit-country-day-cincinnati-vs-waynesville/8-18-2026/?c=2c65a4e7-4ff0-46ae-b300-43035dd1a6e4"
-    },
     {
       "dateISO": "2026-08-20T17:30:00",
       "sport": "Boys Soccer",
@@ -89,20 +56,42 @@
       "result": "W",
       "isHome": true,
       "link": "https://www.maxpreps.com/oh/volleyball/match/edgewood-trenton-vs-waynesville/8-22-2026/?c=5c4b4415-3231-447e-a27c-33a4295550ff"
+    },
+    {
+      "dateISO": "2026-08-24T19:00:00",
+      "sport": "Girls Soccer",
+      "level": "Varsity",
+      "opponent": "CHCA",
+      "wayneScore": 1,
+      "opponentScore": 5,
+      "result": "L",
+      "isHome": false,
+      "link": "https://www.maxpreps.com/oh/soccer/girls/match/cincinnati-hills-christian-academy-vs-waynesville/8-24-2026/?c=ff7cbd6e-5f43-4c7a-9b13-4bc7e2a0ba9a"
+    },
+    {
+      "dateISO": "2026-08-25T17:30:00",
+      "sport": "Boys Soccer",
+      "level": "JV",
+      "opponent": "Monroe",
+      "wayneScore": 1,
+      "opponentScore": 3,
+      "result": "L",
+      "isHome": true,
+      "link": "https://www.maxpreps.com/oh/soccer/match/monroe-vs-waynesville/jv/8-25-2026/?c=3294d3df-6285-409c-b8b5-0c87c35651e4"
+    },
+    {
+      "dateISO": "2026-08-25T19:15:00",
+      "sport": "Boys Soccer",
+      "level": "Varsity",
+      "opponent": "Monroe",
+      "wayneScore": 1,
+      "opponentScore": 3,
+      "result": "L",
+      "isHome": true,
+      "link": "https://www.maxpreps.com/oh/soccer/match/monroe-vs-waynesville/8-25-2026/?c=b0969909-a3fd-4d85-a359-c1b999314a01"
     }
   ],
   "upcoming": [
-    {
-      "dateISO": "2026-08-18T17:30:00",
-      "sport": "Girls Soccer",
-      "level": "JV",
-      "opponent": "Summit Country Day",
-      "wayneScore": null,
-      "opponentScore": null,
-      "result": null,
-      "isHome": false,
-      "link": "https://www.maxpreps.com/oh/soccer/girls/match/summit-country-day-cincinnati-vs-waynesville/jv/8-18-2026/?c=472186ce-51d0-45d9-b0eb-5cf75f210570"
-    },
     {
       "dateISO": "2026-08-22T10:00:00",
       "sport": "Volleyball",
@@ -111,7 +100,7 @@
       "wayneScore": null,
       "opponentScore": null,
       "result": null,
-      "isHome": false,
+      "isHome": true,
       "link": "https://www.maxpreps.com/oh/volleyball/match/edgewood-trenton-vs-waynesville/jv/8-22-2026/?c=36984b97-98a6-424e-b01f-d1196931b275"
     },
     {
@@ -126,17 +115,6 @@
       "link": "https://www.maxpreps.com/oh/soccer/girls/match/cincinnati-hills-christian-academy-vs-waynesville/jv/8-24-2026/?c=7b2108de-d9ee-45cb-ab5a-85d8556ddc48"
     },
     {
-      "dateISO": "2026-08-24T19:00:00",
-      "sport": "Girls Soccer",
-      "level": "Varsity",
-      "opponent": "CHCA",
-      "wayneScore": null,
-      "opponentScore": null,
-      "result": null,
-      "isHome": false,
-      "link": "https://www.maxpreps.com/oh/soccer/girls/match/cincinnati-hills-christian-academy-vs-waynesville/8-24-2026/?c=ff7cbd6e-5f43-4c7a-9b13-4bc7e2a0ba9a"
-    },
-    {
       "dateISO": "2026-08-25T17:30:00",
       "sport": "Volleyball",
       "level": "JV",
@@ -148,17 +126,6 @@
       "link": "https://www.maxpreps.com/oh/volleyball/match/brookville-vs-waynesville/jv/8-25-2026/?c=b8f70cb5-f379-4b20-94bd-a8f1a2a6c4c5"
     },
     {
-      "dateISO": "2026-08-25T17:30:00",
-      "sport": "Boys Soccer",
-      "level": "JV",
-      "opponent": "Monroe",
-      "wayneScore": null,
-      "opponentScore": null,
-      "result": null,
-      "isHome": true,
-      "link": "https://www.maxpreps.com/oh/soccer/match/monroe-vs-waynesville/jv/8-25-2026/?c=3294d3df-6285-409c-b8b5-0c87c35651e4"
-    },
-    {
       "dateISO": "2026-08-25T18:30:00",
       "sport": "Volleyball",
       "level": "Varsity",
@@ -168,17 +135,6 @@
       "result": null,
       "isHome": false,
       "link": "https://www.maxpreps.com/oh/volleyball/match/brookville-vs-waynesville/8-25-2026/?c=936c7bd3-aac9-4e0b-b4e1-6a08589eb567"
-    },
-    {
-      "dateISO": "2026-08-25T19:15:00",
-      "sport": "Boys Soccer",
-      "level": "Varsity",
-      "opponent": "Monroe",
-      "wayneScore": null,
-      "opponentScore": null,
-      "result": null,
-      "isHome": true,
-      "link": "https://www.maxpreps.com/oh/soccer/match/monroe-vs-waynesville/8-25-2026/?c=b0969909-a3fd-4d85-a359-c1b999314a01"
     },
     {
       "dateISO": "2026-08-27T17:30:00",
@@ -245,6 +201,105 @@
       "result": null,
       "isHome": true,
       "link": "https://www.maxpreps.com/oh/football/game/greeneview-jamestown-vs-waynesville/jv/8-29-2026/?c=8399d46d-a9ab-4b83-a286-4d2d3592a5f3"
+    },
+    {
+      "dateISO": "2026-08-31T17:00:00",
+      "sport": "Volleyball",
+      "level": "JV",
+      "opponent": "Wilmington",
+      "wayneScore": null,
+      "opponentScore": null,
+      "result": null,
+      "isHome": false,
+      "link": "https://www.maxpreps.com/oh/volleyball/match/waynesville-vs-wilmington/jv/8-31-2026/?c=46b835ad-bee1-4182-ad35-e1c1d31c4e02"
+    },
+    {
+      "dateISO": "2026-08-31T17:30:00",
+      "sport": "Boys Soccer",
+      "level": "JV",
+      "opponent": "Bellbrook",
+      "wayneScore": null,
+      "opponentScore": null,
+      "result": null,
+      "isHome": false,
+      "link": "https://www.maxpreps.com/oh/soccer/match/bellbrook-vs-waynesville/jv/8-31-2026/?c=1ca12c89-7685-415e-9b35-5a9724595d9a"
+    },
+    {
+      "dateISO": "2026-08-31T17:30:00",
+      "sport": "Girls Soccer",
+      "level": "JV",
+      "opponent": "Northmont",
+      "wayneScore": null,
+      "opponentScore": null,
+      "result": null,
+      "isHome": true,
+      "link": "https://www.maxpreps.com/oh/soccer/girls/match/northmont-clayton-vs-waynesville/jv/8-31-2026/?c=35eb957d-fe07-44e1-9fdb-857ae27a35eb"
+    },
+    {
+      "dateISO": "2026-08-31T18:00:00",
+      "sport": "Volleyball",
+      "level": "Varsity",
+      "opponent": "Wilmington",
+      "wayneScore": null,
+      "opponentScore": null,
+      "result": null,
+      "isHome": false,
+      "link": "https://www.maxpreps.com/oh/volleyball/match/waynesville-vs-wilmington/8-31-2026/?c=b68e3ab2-8644-4f5f-a220-9d036fc3e881"
+    },
+    {
+      "dateISO": "2026-08-31T19:15:00",
+      "sport": "Boys Soccer",
+      "level": "Varsity",
+      "opponent": "Bellbrook",
+      "wayneScore": null,
+      "opponentScore": null,
+      "result": null,
+      "isHome": false,
+      "link": "https://www.maxpreps.com/oh/soccer/match/bellbrook-vs-waynesville/8-31-2026/?c=7dcd222e-9cec-46e5-991b-8e4d7cf29341"
+    },
+    {
+      "dateISO": "2026-08-31T19:15:00",
+      "sport": "Girls Soccer",
+      "level": "Varsity",
+      "opponent": "Northmont",
+      "wayneScore": null,
+      "opponentScore": null,
+      "result": null,
+      "isHome": true,
+      "link": "https://www.maxpreps.com/oh/soccer/girls/match/northmont-clayton-vs-waynesville/8-31-2026/?c=160af04e-8d64-4465-b3eb-2b6200e1f888"
+    },
+    {
+      "dateISO": "2026-09-01T17:30:00",
+      "sport": "Volleyball",
+      "level": "JV",
+      "opponent": "Oakwood*",
+      "wayneScore": null,
+      "opponentScore": null,
+      "result": null,
+      "isHome": false,
+      "link": "https://www.maxpreps.com/oh/volleyball/match/oakwood-dayton-vs-waynesville/jv/9-1-2026/?c=918bed37-cc80-465e-bb7f-fc266b653bab"
+    },
+    {
+      "dateISO": "2026-09-01T17:30:00",
+      "sport": "Volleyball",
+      "level": "JV",
+      "opponent": "Valley View*",
+      "wayneScore": null,
+      "opponentScore": null,
+      "result": null,
+      "isHome": false,
+      "link": "https://www.maxpreps.com/oh/volleyball/match/valley-view-germantown-vs-waynesville/jv/9-1-2026/?c=f270f43a-65f0-406a-ba41-db432402afb2"
+    },
+    {
+      "dateISO": "2026-09-01T19:00:00",
+      "sport": "Volleyball",
+      "level": "Varsity",
+      "opponent": "Oakwood*",
+      "wayneScore": null,
+      "opponentScore": null,
+      "result": null,
+      "isHome": false,
+      "link": "https://www.maxpreps.com/oh/volleyball/match/oakwood-dayton-vs-waynesville/9-1-2026/?c=77953fba-65b7-4245-8da9-235610d09b8c"
     }
   ]
 }

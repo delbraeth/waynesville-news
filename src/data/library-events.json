@@ -1,13 +1,7 @@
 {
   "_note": "Mary L. Cook Public Library — upcoming programs from the library's own homepage event feed. Canceled events excluded.",
-  "updated": "2026-08-24T10:56:21.772Z",
+  "updated": "2026-08-26T10:50:23.092Z",
   "items": [
-    {
-      "title": "The Loop Group (Fiber Crafts Club)",
-      "dateISO": "2026-08-25T17:30:00Z",
-      "dateLabel": "Tue · Aug 25, 5:30 PM",
-      "link": "https://marylcook-main-oh.whofi.com/calendar/event/306476/"
-    },
     {
       "title": "Teen Tuesday (6th-12th Grade)",
       "dateISO": "2026-09-01T15:00:00Z",
@@ -31,6 +25,12 @@
       "dateISO": "2026-09-05T10:30:00Z",
       "dateLabel": "Sat · Sep 5, 10:30 AM",
       "link": "https://marylcook-main-oh.whofi.com/calendar/event/341452/"
+    },
+    {
+      "title": "Toddler Time",
+      "dateISO": "2026-09-08T10:30:00Z",
+      "dateLabel": "Tue · Sep 8, 10:30 AM",
+      "link": "https://marylcook-main-oh.whofi.com/calendar/event/325778/"
     }
   ]
 }
