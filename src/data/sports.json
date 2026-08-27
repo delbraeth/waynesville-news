@@ -1,29 +1,7 @@
 {
   "_note": "Waynesville Spartans schedule + results (MaxPreps), past 7 days / next 7 days. Scraped directly from each sport's own schedule page (football, volleyball, soccer -- varsity + JV), not the school hub page, which has been observed to silently omit some contests. Scores and matchups reproduced verbatim from MaxPreps' own markup; each links to their game page.",
-  "updated": "2026-08-26T10:50:22.568Z",
+  "updated": "2026-08-27T20:33:45.333Z",
   "results": [
-    {
-      "dateISO": "2026-08-20T17:30:00",
-      "sport": "Boys Soccer",
-      "level": "JV",
-      "opponent": "Wilmington",
-      "wayneScore": 3,
-      "opponentScore": 0,
-      "result": "W",
-      "isHome": true,
-      "link": "https://www.maxpreps.com/oh/soccer/match/waynesville-vs-wilmington/jv/8-20-2026/?c=a5099163-0e3b-47b0-9408-0ecb58340eb4"
-    },
-    {
-      "dateISO": "2026-08-20T19:15:00",
-      "sport": "Boys Soccer",
-      "level": "Varsity",
-      "opponent": "Wilmington",
-      "wayneScore": 4,
-      "opponentScore": 0,
-      "result": "W",
-      "isHome": true,
-      "link": "https://www.maxpreps.com/oh/soccer/match/waynesville-vs-wilmington/8-20-2026/?c=a55fc6e0-8eea-4212-a9a6-f9735d695f9a"
-    },
     {
       "dateISO": "2026-08-21T19:00:00",
       "sport": "Football",
@@ -80,6 +58,17 @@
       "link": "https://www.maxpreps.com/oh/soccer/match/monroe-vs-waynesville/jv/8-25-2026/?c=3294d3df-6285-409c-b8b5-0c87c35651e4"
     },
     {
+      "dateISO": "2026-08-25T18:30:00",
+      "sport": "Volleyball",
+      "level": "Varsity",
+      "opponent": "Brookville*",
+      "wayneScore": 0,
+      "opponentScore": 3,
+      "result": "L",
+      "isHome": false,
+      "link": "https://www.maxpreps.com/oh/volleyball/match/brookville-vs-waynesville/8-25-2026/?c=936c7bd3-aac9-4e0b-b4e1-6a08589eb567"
+    },
+    {
       "dateISO": "2026-08-25T19:15:00",
       "sport": "Boys Soccer",
       "level": "Varsity",
@@ -124,17 +113,6 @@
       "result": null,
       "isHome": false,
       "link": "https://www.maxpreps.com/oh/volleyball/match/brookville-vs-waynesville/jv/8-25-2026/?c=b8f70cb5-f379-4b20-94bd-a8f1a2a6c4c5"
-    },
-    {
-      "dateISO": "2026-08-25T18:30:00",
-      "sport": "Volleyball",
-      "level": "Varsity",
-      "opponent": "Brookville*",
-      "wayneScore": null,
-      "opponentScore": null,
-      "result": null,
-      "isHome": false,
-      "link": "https://www.maxpreps.com/oh/volleyball/match/brookville-vs-waynesville/8-25-2026/?c=936c7bd3-aac9-4e0b-b4e1-6a08589eb567"
     },
     {
       "dateISO": "2026-08-27T17:30:00",
@@ -300,6 +278,50 @@
       "result": null,
       "isHome": false,
       "link": "https://www.maxpreps.com/oh/volleyball/match/oakwood-dayton-vs-waynesville/9-1-2026/?c=77953fba-65b7-4245-8da9-235610d09b8c"
+    },
+    {
+      "dateISO": "2026-09-03T17:30:00",
+      "sport": "Volleyball",
+      "level": "JV",
+      "opponent": "Dayton Christian*",
+      "wayneScore": null,
+      "opponentScore": null,
+      "result": null,
+      "isHome": true,
+      "link": "https://www.maxpreps.com/oh/volleyball/match/dayton-christian-miamisburg-vs-waynesville/jv/9-3-2026/?c=659794fd-bda5-4919-bf86-422db9225439"
+    },
+    {
+      "dateISO": "2026-09-03T17:30:00",
+      "sport": "Boys Soccer",
+      "level": "JV",
+      "opponent": "Miamisburg",
+      "wayneScore": null,
+      "opponentScore": null,
+      "result": null,
+      "isHome": true,
+      "link": "https://www.maxpreps.com/oh/soccer/match/miamisburg-vs-waynesville/jv/9-3-2026/?c=4219e7fa-d773-4610-a2c8-18715f5dec41"
+    },
+    {
+      "dateISO": "2026-09-03T18:30:00",
+      "sport": "Volleyball",
+      "level": "Varsity",
+      "opponent": "Dayton Christian*",
+      "wayneScore": null,
+      "opponentScore": null,
+      "result": null,
+      "isHome": true,
+      "link": "https://www.maxpreps.com/oh/volleyball/match/dayton-christian-miamisburg-vs-waynesville/9-3-2026/?c=cf93142f-0427-4adf-a572-893957c05448"
+    },
+    {
+      "dateISO": "2026-09-03T19:15:00",
+      "sport": "Boys Soccer",
+      "level": "Varsity",
+      "opponent": "Miamisburg",
+      "wayneScore": null,
+      "opponentScore": null,
+      "result": null,
+      "isHome": true,
+      "link": "https://www.maxpreps.com/oh/soccer/match/miamisburg-vs-waynesville/9-3-2026/?c=ac8e19c8-a2dd-497a-b699-cdf265abd60f"
     }
   ]
 }
