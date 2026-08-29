@@ -1,12 +1,14 @@
 {
   "_note": "Candidate local headlines (Google News RSS). Published as a quoted headline (or, when available, a short publisher-written excerpt) + source + link; never reproduce article body text.",
-  "updated": "2026-08-29T10:50:34.606Z",
+  "updated": "2026-08-29T15:06:37.675Z",
   "items": [
     {
       "title": "Warren County GOP Plans ‘Red Wave Rally’ Featuring Spencer Pratt, Statewide Candidates",
       "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQYzA5ZjRUd29NOW01LTlmeW9ieUQ0aG11Q2RaNW10MmFBVlJ4Vkd3YjNOeFM5SlByWk5XdDJleDVIWlpNaUpxcjI4eVctMUQ3NVMzYVI5SkF2eENObGNVdXRMeTJfUWYtTmpHQk5NNnhsQ3UwLTdPT2tNczlTdE1zeVEtT3Z6OGhqOGFldTRzRFJ5OEZyQmU5S1lNSFZSNlc5WkNMbzNmcVg1NVZSZFQ1WVNxTXNnUGV4LVRFNFBYc0o?oc=5",
       "source": "Warren County Post",
-      "date": "Sat, 29 Aug 2026 03:13:05 GMT"
+      "date": "Sat, 29 Aug 2026 03:13:05 GMT",
+      "sourceUrl": "https://warrencountypost.com/g/lebanon-oh/n/385991/warren-county-gop-plans-red-wave-rally-featuring-spencer-pratt-statewide",
+      "excerpt": "Described as potentially one of the largest Republican gatherings in the state during an election year."
     },
     {
       "title": "Both sides rest in trial for Warren County woman accused of sex crimes against 5-year-old",
@@ -39,16 +41,20 @@
       "date": "Fri, 28 Aug 2026 05:42:22 GMT"
     },
     {
-      "title": "Warren County woman accused of sex crimes wants child to testify in court",
-      "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPMWRtb2tjX3o0V0VxNGx4elljUFVOTFQ0a0ltbmMtbXVIUjc3ajUwX2RIWUpsV2RKWkxlYXAwWDk5MUhVcUw4TUUyXzVnNnFNa1lTNXFfbi03ZUdIdmtULU9PMkQ2bG5WYlluQXN3cml1MDZ1Y2QxdVYtMU5WZllsd0pVZi0zSDBZTWh5N3pCN2pHWEE?oc=5",
+      "title": "Judge weighs graphic texts, lack of photo evidence in child sex-abuse trial",
+      "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQT21vSkoycHdiZmtBYXdDTjlOUWJuQjgwVGlPbjhISGJXUFdzNXVLakQ0WVJxMTd3R3QtdnRtRTl5b0FRaFNUV2ppRURKc3pCcFNMSTRRdS1GUlhZUHdPN1JJU0IwS0JNaUNhOTc5UUZydVlOSmR2VHMwNTZMRVljOUlNcG5LZw?oc=5",
       "source": "WLWT",
-      "date": "Mon, 24 Aug 2026 14:47:00 GMT"
+      "date": "Thu, 27 Aug 2026 22:05:00 GMT",
+      "sourceUrl": "https://www.wlwt.com/article/warren-county-erica-grove-sex-abuse-trial/73547011",
+      "excerpt": "A Warren County judge is deliberating the case against Erica Grove, who faces allegations of sexual abuse involving a 5-year-old girl and graphic text messages."
     },
     {
       "title": "September 1 Marks Beginning of Ohio’s Fall Hunting Seasons",
       "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQNkNmSUVqWkpJN1REZWhSYXpYcFlRd2VybDlaZUwwT202LXl2ZG94eFcxSm1VUnRhOEV6akQybDhDUmdjTUhUd3NpSnROeUpFSC1mWjQ4dHM3c3hydVdTUjMybGx2QXMyMW5IbGIwX0hpbXkyVTd6V1Q0LUdBbUQ1cDQycTBfckhKYS1CM2M1ZTBST1MzRjM5VEpGU3hBZE9od1Q4cklRMEw?oc=5",
       "source": "Warren County Post",
-      "date": "Thu, 27 Aug 2026 01:28:46 GMT"
+      "date": "Thu, 27 Aug 2026 01:28:46 GMT",
+      "sourceUrl": "https://warrencountypost.com/g/lebanon-oh/n/385836/september-1-marks-beginning-ohios-fall-hunting-seasons",
+      "excerpt": "Hunting seasons for squirrel, dove, Canada goose, and teal open in early September,"
     }
   ]
 }
