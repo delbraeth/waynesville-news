@@ -1,18 +1,7 @@
 {
   "_note": "Waynesville Spartans schedule + results (MaxPreps), past 7 days / next 7 days. Scraped directly from each sport's own schedule page (football, volleyball, soccer -- varsity + JV), not the school hub page, which has been observed to silently omit some contests. Scores and matchups reproduced verbatim from MaxPreps' own markup; each links to their game page.",
-  "updated": "2026-08-28T21:12:38.384Z",
+  "updated": "2026-08-29T10:51:07.708Z",
   "results": [
-    {
-      "dateISO": "2026-08-22T10:00:00",
-      "sport": "Football",
-      "level": "JV",
-      "opponent": "Clinton-Massie",
-      "wayneScore": 20,
-      "opponentScore": 21,
-      "result": "L",
-      "isHome": false,
-      "link": "https://www.maxpreps.com/oh/football/game/clinton-massie-clarksville-vs-waynesville/jv/8-22-2026/?c=d7e998fd-0b82-449e-9c9a-cc8745184951"
-    },
     {
       "dateISO": "2026-08-22T11:00:00",
       "sport": "Volleyball",
@@ -100,20 +89,20 @@
       "result": "L",
       "isHome": true,
       "link": "https://www.maxpreps.com/oh/volleyball/match/eaton-vs-waynesville/8-27-2026/?c=77a84a50-856a-45dc-825d-690383c962fd"
+    },
+    {
+      "dateISO": "2026-08-28T19:00:00",
+      "sport": "Football",
+      "level": "Varsity",
+      "opponent": "Greeneview",
+      "wayneScore": 28,
+      "opponentScore": 14,
+      "result": "W",
+      "isHome": false,
+      "link": "https://www.maxpreps.com/oh/football/game/greeneview-jamestown-vs-waynesville/8-28-2026/?c=60c46039-f795-4c2b-a754-3ad6f0246788"
     }
   ],
   "upcoming": [
-    {
-      "dateISO": "2026-08-22T10:00:00",
-      "sport": "Volleyball",
-      "level": "JV",
-      "opponent": "Edgewood",
-      "wayneScore": null,
-      "opponentScore": null,
-      "result": null,
-      "isHome": true,
-      "link": "https://www.maxpreps.com/oh/volleyball/match/edgewood-trenton-vs-waynesville/jv/8-22-2026/?c=36984b97-98a6-424e-b01f-d1196931b275"
-    },
     {
       "dateISO": "2026-08-24T17:00:00",
       "sport": "Girls Soccer",
@@ -146,17 +135,6 @@
       "result": null,
       "isHome": true,
       "link": "https://www.maxpreps.com/oh/volleyball/match/eaton-vs-waynesville/jv/8-27-2026/?c=0905d637-4172-4a26-a273-1138a1c2066a"
-    },
-    {
-      "dateISO": "2026-08-28T19:00:00",
-      "sport": "Football",
-      "level": "Varsity",
-      "opponent": "Greeneview",
-      "wayneScore": null,
-      "opponentScore": null,
-      "result": null,
-      "isHome": false,
-      "link": "https://www.maxpreps.com/oh/football/game/greeneview-jamestown-vs-waynesville/8-28-2026/?c=60c46039-f795-4c2b-a754-3ad6f0246788"
     },
     {
       "dateISO": "2026-08-29T10:00:00",
@@ -322,6 +300,17 @@
       "result": null,
       "isHome": true,
       "link": "https://www.maxpreps.com/oh/football/game/hillsboro-vs-waynesville/9-4-2026/?c=a9ca0722-0301-4a84-b02f-80ae779d8c19"
+    },
+    {
+      "dateISO": "2026-09-05T10:00:00",
+      "sport": "Football",
+      "level": "JV",
+      "opponent": "Hillsboro",
+      "wayneScore": null,
+      "opponentScore": null,
+      "result": null,
+      "isHome": false,
+      "link": "https://www.maxpreps.com/oh/football/game/hillsboro-vs-waynesville/jv/9-5-2026/?c=1275c9ec-9bbf-4ec7-911b-f1249bf67100"
     }
   ]
 }
