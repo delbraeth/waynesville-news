@@ -1,6 +1,6 @@
 {
   "_note": "Mary L. Cook Public Library — upcoming programs from the library's own homepage event feed. Canceled events excluded.",
-  "updated": "2026-08-29T15:06:42.408Z",
+  "updated": "2026-08-30T14:54:00.561Z",
   "items": [
     {
       "title": "Teen Tuesday (6th-12th Grade)",
@@ -31,6 +31,12 @@
       "dateISO": "2026-09-08T10:30:00Z",
       "dateLabel": "Tue · Sep 8, 10:30 AM",
       "link": "https://marylcook-main-oh.whofi.com/calendar/event/325778/"
+    },
+    {
+      "title": "Teen Tuesday (6th-12th Grade)",
+      "dateISO": "2026-09-08T15:00:00Z",
+      "dateLabel": "Tue · Sep 8, 3:00 PM",
+      "link": "https://marylcook-main-oh.whofi.com/calendar/event/325884/"
     }
   ]
 }

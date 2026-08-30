@@ -1,12 +1,14 @@
 {
   "_note": "Candidate local headlines (Google News RSS). Published as a quoted headline (or, when available, a short publisher-written excerpt) + source + link; never reproduce article body text.",
-  "updated": "2026-08-30T10:50:45.323Z",
+  "updated": "2026-08-30T14:53:55.688Z",
   "items": [
     {
       "title": "America's Best Renaissance Festival Returns September 5 — With Some New Looks",
       "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOUHRFTkpqcVpqekZjcWxmcDB2MnhfZ3hiaUVHQXk1dHZUV2cxdkNJVmh1TnJHVWRKUUVpMzllcHEzcmNDQ3BxeVRlSGQyQ2luU2djX3Q2QnRMWnZrdWVvZTcxc2RvUkhvN1B1bHRkdTdkNmRhQUNwVVhDT0JuVW0xUEpSTzduakhlVFB2TTBILWJwVEwyQUhBaVVjdkxhZmF1Wlp2ZC1CRnNPbm92QVJBTlV3V1c5dHEzQW9qa3B6UHlIQQ?oc=5",
       "source": "Warren County Post",
-      "date": "Sat, 29 Aug 2026 23:29:10 GMT"
+      "date": "Sat, 29 Aug 2026 23:29:10 GMT",
+      "sourceUrl": "https://warrencountypost.com/g/waynesville-oh/n/386052/americas-best-renaissance-festival-returns-september-5-some-new-looks",
+      "excerpt": "USA Today readers ranked the Ohio Renaissance Festival #1 in the nation for 2026"
     },
     {
       "title": "One-vehicle crash kills passenger in Warren County, driver flees scene",
@@ -18,13 +20,23 @@
       "title": "OSHP: Woman killed in rollover crash in Warren County; driver being sought after fleeing the scene",
       "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOM3ZYU1B5SDdRZUV4dlF3V2lMLUU2OVk4YlZLYUVra1htRXlBTjhYUUN5ZGVpOVZtSG9EWHF3b1FSZ2Zqdkk5SXlXT2c1UW90eFdjX1kzRXh4OURBMEVSNEdqOHhOaWJaNkNQUnl5S2ZpZFBabjA1eER3VVlPcTJaelBMVmFQeGJybnNkcnBEZVpaT3FJOVlnaDZqRFNVOGIxbnZLQ1FENXE?oc=5",
       "source": "WLWT",
-      "date": "Sat, 29 Aug 2026 23:46:00 GMT"
+      "date": "Sat, 29 Aug 2026 23:46:00 GMT",
+      "sourceUrl": "https://www.wlwt.com/article/woman-killed-in-rollover-crash-in-warren-county-driver-being-sought/73559766",
+      "excerpt": "Police are investigating a fatal crash that happened overnight in Warren County."
     },
     {
       "title": "State patrol: Driver fled scene of fatal Warren County crash after passenger was ejected",
       "link": "https://news.google.com/rss/articles/CBMiggJBVV95cUxQZWRNa0N2dmRjbDRpR2t2MFh2ZFFUN1NhdzRoUk56VENXaWl6Q1ZYTDdEdW1XWkJZSW5yLUdhUXN3YmR6cHhmTC03RzNCM0x3eV9XQUJpeHd4OGVxUEUwVkVod1RHNVYxZDJwQmtYRktlRDZkRjVPcE9hUUtLMGpOai1qajFNZ2I2blFhNk5sX1B0YlY1UXdTYWcwYjZrNEJCaVBaSmFCU1BVMHdwUW11aWhHelhyTEYxSzJrLWZGSFVmVGRONGlCZkhvMGRFMEg1WjFEQXNrWXJXWlJ5TkJyZGxQdkpadi1ZLWNoMHJYX0VzVzY3bnZ5WDJSX3RKWFoxQ3c?oc=5",
       "source": "Journal-News.com",
       "date": "Sat, 29 Aug 2026 12:47:57 GMT"
+    },
+    {
+      "title": "Driver flees scene after passenger dies in Warren County crash, troopers say",
+      "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPYkdTaTNhbGx2LTNreVJmN1FJUFpSS0lZZzZpeUNLcjdZWU1zMWV3NmhrdFlNcEZONjlKUU9kT0FSLUJ4NVFxOXl5SnpiLTBfSTkyY2t3d0JmV1hwN3o1RHJGQWVDRHFVLUhIV0xGZlEyLWdockJUT2JvU0UyTGNhY1M0MW9vdkNuODNYVHNWWEt0cjhyRkdRcnFnZEVnaENDaWpINDZibUhNUQ?oc=5",
+      "source": "FOX19 | Cincinnati",
+      "date": "Sat, 29 Aug 2026 14:51:00 GMT",
+      "sourceUrl": "https://www.fox19.com/2026/08/29/driver-flees-scene-after-passenger-dies-warren-county-crash-troopers-say/",
+      "excerpt": "The 32-year-old was pronounced dead at the scene, troopers said."
     },
     {
       "title": "'We're a close-knit neighborhood': 2 injured in Warren County shooting",
@@ -43,12 +55,6 @@
       "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQYzA5ZjRUd29NOW01LTlmeW9ieUQ0aG11Q2RaNW10MmFBVlJ4Vkd3YjNOeFM5SlByWk5XdDJleDVIWlpNaUpxcjI4eVctMUQ3NVMzYVI5SkF2eENObGNVdXRMeTJfUWYtTmpHQk5NNnhsQ3UwLTdPT2tNczlTdE1zeVEtT3Z6OGhqOGFldTRzRFJ5OEZyQmU5S1lNSFZSNlc5WkNMbzNmcVg1NVZSZFQ1WVNxTXNnUGV4LVRFNFBYc0o?oc=5",
       "source": "Warren County Post",
       "date": "Sat, 29 Aug 2026 03:13:05 GMT"
-    },
-    {
-      "title": "September 1 Marks Beginning of Ohio’s Fall Hunting Seasons",
-      "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQNkNmSUVqWkpJN1REZWhSYXpYcFlRd2VybDlaZUwwT202LXl2ZG94eFcxSm1VUnRhOEV6akQybDhDUmdjTUhUd3NpSnROeUpFSC1mWjQ4dHM3c3hydVdTUjMybGx2QXMyMW5IbGIwX0hpbXkyVTd6V1Q0LUdBbUQ1cDQycTBfckhKYS1CM2M1ZTBST1MzRjM5VEpGU3hBZE9od1Q4cklRMEw?oc=5",
-      "source": "Warren County Post",
-      "date": "Thu, 27 Aug 2026 01:28:46 GMT"
     }
   ]
 }
