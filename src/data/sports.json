@@ -1,6 +1,6 @@
 {
   "_note": "Waynesville Spartans schedule + results (MaxPreps), past 7 days / next 7 days. Scraped directly from each sport's own schedule page (football, volleyball, soccer -- varsity + JV), not the school hub page, which has been observed to silently omit some contests. Scores and matchups reproduced verbatim from MaxPreps' own markup; each links to their game page.",
-  "updated": "2026-08-31T10:51:17.565Z",
+  "updated": "2026-08-31T17:39:16.254Z",
   "results": [
     {
       "dateISO": "2026-08-24T19:00:00",
@@ -92,17 +92,6 @@
     }
   ],
   "upcoming": [
-    {
-      "dateISO": "2026-08-24T17:00:00",
-      "sport": "Girls Soccer",
-      "level": "JV",
-      "opponent": "CHCA",
-      "wayneScore": null,
-      "opponentScore": null,
-      "result": null,
-      "isHome": false,
-      "link": "https://www.maxpreps.com/oh/soccer/girls/match/cincinnati-hills-christian-academy-vs-waynesville/jv/8-24-2026/?c=7b2108de-d9ee-45cb-ab5a-85d8556ddc48"
-    },
     {
       "dateISO": "2026-08-25T17:30:00",
       "sport": "Volleyball",

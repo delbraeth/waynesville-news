@@ -1,24 +1,20 @@
 {
   "_note": "Candidate local headlines (Google News RSS). Published as a quoted headline (or, when available, a short publisher-written excerpt) + source + link; never reproduce article body text.",
-  "updated": "2026-08-31T10:51:12.703Z",
+  "updated": "2026-08-31T17:39:12.330Z",
   "items": [
+    {
+      "title": "Kendrick E. \"Ken\" Kenny Obituary (2026) - Waynesville, OH - Stubbs-Conner Funeral Home & Cremation Services",
+      "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNOFBydzl4R0twbXRNSFFtSWF3b0xPRDNKa2VhWXJ5bGgxeWU0Snptb245NURyMksxT0ZRM1h0cjV0UVJxbnNrRm5uaXdVTUJLSjY3ckJJenNndUtjZW5YSDBkMElSeno3NUVEdnd1aFY1UE8xUEZpSkluYTRiSmNzMHVETQ?oc=5",
+      "source": "Legacy obituary",
+      "date": "Mon, 31 Aug 2026 12:14:23 GMT",
+      "sourceUrl": "https://www.legacy.com/us/obituaries/name/kendrick-kenny-obituary?id=62308350",
+      "excerpt": "View Kendrick E. \"Ken\" Kenny's obituary, send flowers and sign the guestbook."
+    },
     {
       "title": "America's Best Renaissance Festival Returns September 5 — With Some New Looks",
       "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOUHRFTkpqcVpqekZjcWxmcDB2MnhfZ3hiaUVHQXk1dHZUV2cxdkNJVmh1TnJHVWRKUUVpMzllcHEzcmNDQ3BxeVRlSGQyQ2luU2djX3Q2QnRMWnZrdWVvZTcxc2RvUkhvN1B1bHRkdTdkNmRhQUNwVVhDT0JuVW0xUEpSTzduakhlVFB2TTBILWJwVEwyQUhBaVVjdkxhZmF1Wlp2ZC1CRnNPbm92QVJBTlV3V1c5dHEzQW9qa3B6UHlIQQ?oc=5",
       "source": "Warren County Post",
       "date": "Sat, 29 Aug 2026 23:29:10 GMT"
-    },
-    {
-      "title": "David Noel Liffick Obituary (2026) - Waynesville, OH - Stubbs-Conner Funeral Home & Cremation Services",
-      "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPNTRwSzlWVUxjeGU1LUhfcy1hUnJ2WTRMZVJZYWpaLUdNZUlOMlBLZ0NZZkJmSlZyNnd1NjE3RXRyX0M5WWhrUjZVZW9DQzdoSjAtLUV6aERWRXRYLVZUZW9aNDJWRmJyTHVuWGl0WUY4UXVUWWxKeHB2MXhHcVRMd0Rn?oc=5",
-      "source": "Legacy obituary",
-      "date": "Sun, 30 Aug 2026 18:36:46 GMT"
-    },
-    {
-      "title": "OSHP: Woman killed in rollover crash in Warren County; driver being sought after fleeing the scene",
-      "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOM3ZYU1B5SDdRZUV4dlF3V2lMLUU2OVk4YlZLYUVra1htRXlBTjhYUUN5ZGVpOVZtSG9EWHF3b1FSZ2Zqdkk5SXlXT2c1UW90eFdjX1kzRXh4OURBMEVSNEdqOHhOaWJaNkNQUnl5S2ZpZFBabjA1eER3VVlPcTJaelBMVmFQeGJybnNkcnBEZVpaT3FJOVlnaDZqRFNVOGIxbnZLQ1FENXE?oc=5",
-      "source": "WLWT",
-      "date": "Sat, 29 Aug 2026 23:46:00 GMT"
     },
     {
       "title": "State patrol: Driver fled scene of fatal Warren County crash after passenger was ejected",
@@ -30,13 +26,15 @@
       "title": "Driver flees scene after passenger dies in Warren County crash, troopers say",
       "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPYkdTaTNhbGx2LTNreVJmN1FJUFpSS0lZZzZpeUNLcjdZWU1zMWV3NmhrdFlNcEZONjlKUU9kT0FSLUJ4NVFxOXl5SnpiLTBfSTkyY2t3d0JmV1hwN3o1RHJGQWVDRHFVLUhIV0xGZlEyLWdockJUT2JvU0UyTGNhY1M0MW9vdkNuODNYVHNWWEt0cjhyRkdRcnFnZEVnaENDaWpINDZibUhNUQ?oc=5",
       "source": "FOX19 | Cincinnati",
-      "date": "Sat, 29 Aug 2026 14:51:00 GMT"
+      "date": "Sat, 29 Aug 2026 14:51:00 GMT",
+      "sourceUrl": "https://www.fox19.com/2026/08/29/driver-flees-scene-after-passenger-dies-warren-county-crash-troopers-say/",
+      "excerpt": "The 32-year-old was pronounced dead at the scene, troopers said."
     },
     {
       "title": "One woman killed in Warren County crash",
       "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOUEdIeWcwaTJVN0M5VW1oV2Vqa1dtN0NEd0oyX3ZydlRKVmRUaE5IVk91NjlQOWxLRDFqZ2ZUcG5NVTF6SXBfLVFsQUNtMF9iTXk5bnZmNWpPbUgxcklNaTdsMFhrUFc3NGJlNU1wdV9mUUVYTkJDUW1Pb3JabTI4Zmd3?oc=5",
       "source": "WCPO 9 News",
-      "date": "Sat, 29 Aug 2026 13:43:30 GMT"
+      "date": "Sat, 29 Aug 2026 13:47:22 GMT"
     },
     {
       "title": "Warren County GOP Plans ‘Red Wave Rally’ Featuring Spencer Pratt, Statewide Candidates",
@@ -45,10 +43,20 @@
       "date": "Sat, 29 Aug 2026 03:13:05 GMT"
     },
     {
-      "title": "Marjorie Pierce Obituary (2026) - Wilmington, OH - Greene County Dailies",
-      "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOTWNoOXpKODJUZG16eHRaZkhRWVQtT1VxeDlfQllPLW1Xa2pDOVVPYWZyUmtkZ1VNeWRTYk9nYVlhMzlRVmZ6NVFsS214MUlnRkJnS0htekczY094bnRKMmRZS2lJVHdpSFBjdmFmbTU1ZzlzZjBvbHUtU0M4U0J2RXRyUFV6STdHcHBtc2Nra09JdXNBc1FkX3F3?oc=5",
+      "title": "David Noel Liffick Obituary (2026) - Waynesville, OH - Stubbs-Conner Funeral Home & Cremation Services",
+      "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPNTRwSzlWVUxjeGU1LUhfcy1hUnJ2WTRMZVJZYWpaLUdNZUlOMlBLZ0NZZkJmSlZyNnd1NjE3RXRyX0M5WWhrUjZVZW9DQzdoSjAtLUV6aERWRXRYLVZUZW9aNDJWRmJyTHVuWGl0WUY4UXVUWWxKeHB2MXhHcVRMd0Rn?oc=5",
       "source": "Legacy obituary",
-      "date": "Fri, 28 Aug 2026 00:20:06 GMT"
+      "date": "Sun, 30 Aug 2026 18:36:46 GMT",
+      "sourceUrl": "https://www.legacy.com/us/obituaries/name/david-liffick-obituary?id=62306495",
+      "excerpt": "View David Noel Liffick's obituary, send flowers and sign the guestbook."
+    },
+    {
+      "title": "September 1 Marks Beginning of Ohio’s Fall Hunting Seasons",
+      "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQNkNmSUVqWkpJN1REZWhSYXpYcFlRd2VybDlaZUwwT202LXl2ZG94eFcxSm1VUnRhOEV6akQybDhDUmdjTUhUd3NpSnROeUpFSC1mWjQ4dHM3c3hydVdTUjMybGx2QXMyMW5IbGIwX0hpbXkyVTd6V1Q0LUdBbUQ1cDQycTBfckhKYS1CM2M1ZTBST1MzRjM5VEpGU3hBZE9od1Q4cklRMEw?oc=5",
+      "source": "Warren County Post",
+      "date": "Thu, 27 Aug 2026 01:28:46 GMT",
+      "sourceUrl": "https://warrencountypost.com/g/lebanon-oh/n/385836/september-1-marks-beginning-ohios-fall-hunting-seasons",
+      "excerpt": "Hunting seasons for squirrel, dove, Canada goose, and teal open in early September,"
     }
   ]
 }
