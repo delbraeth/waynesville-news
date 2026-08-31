@@ -4,26 +4,26 @@
   "tempF": 91,
   "condition": "Mostly Sunny",
   "highF": 91,
-  "lowF": 70,
+  "lowF": 72,
   "outlook": [
     {
-      "dayLabel": "Monday",
+      "dayLabel": "Tuesday",
       "highF": 93,
       "lowF": 73,
-      "condition": "Mostly Sunny"
+      "condition": "Sunny"
     },
     {
-      "dayLabel": "Tuesday",
+      "dayLabel": "Wednesday",
       "highF": 95,
       "lowF": 75,
       "condition": "Sunny"
     },
     {
-      "dayLabel": "Wednesday",
-      "highF": 97,
-      "lowF": 75,
+      "dayLabel": "Thursday",
+      "highF": 96,
+      "lowF": 71,
       "condition": "Sunny"
     }
   ],
-  "updated": "2026-08-30T14:53:03.361Z"
+  "updated": "2026-08-31T10:51:11.935Z"
 }
