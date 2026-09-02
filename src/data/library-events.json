@@ -1,13 +1,7 @@
 {
   "_note": "Mary L. Cook Public Library — upcoming programs from the library's own homepage event feed. Canceled events excluded.",
-  "updated": "2026-09-01T14:57:05.795Z",
+  "updated": "2026-09-02T14:32:49.152Z",
   "items": [
-    {
-      "title": "Teen Tuesday (6th-12th Grade)",
-      "dateISO": "2026-09-01T15:00:00Z",
-      "dateLabel": "Tue · Sep 1, 3:00 PM",
-      "link": "https://marylcook-main-oh.whofi.com/calendar/event/325883/"
-    },
     {
       "title": "Teen Anime & Manga Club (6th-12th grade)",
       "dateISO": "2026-09-03T15:00:00Z",
@@ -37,6 +31,12 @@
       "dateISO": "2026-09-08T15:00:00Z",
       "dateLabel": "Tue · Sep 8, 3:00 PM",
       "link": "https://marylcook-main-oh.whofi.com/calendar/event/325884/"
+    },
+    {
+      "title": "Chapters Book Club",
+      "dateISO": "2026-09-08T16:00:00Z",
+      "dateLabel": "Tue · Sep 8, 4:00 PM",
+      "link": "https://marylcook-main-oh.whofi.com/calendar/event/325792/"
     }
   ]
 }
