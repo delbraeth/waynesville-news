@@ -1,6 +1,6 @@
 {
   "_note": "Waynesville Spartans schedule + results (MaxPreps), past 7 days / next 7 days. Scraped directly from each sport's own schedule page (football, volleyball, soccer -- varsity + JV), not the school hub page, which has been observed to silently omit some contests. Scores and matchups reproduced verbatim from MaxPreps' own markup; each links to their game page.",
-  "updated": "2026-09-04T10:57:03.996Z",
+  "updated": "2026-09-04T14:24:24.622Z",
   "results": [
     {
       "dateISO": "2026-08-28T19:00:00",
@@ -89,6 +89,17 @@
       "result": "L",
       "isHome": true,
       "link": "https://www.maxpreps.com/oh/volleyball/match/dayton-christian-miamisburg-vs-waynesville/9-3-2026/?c=cf93142f-0427-4adf-a572-893957c05448"
+    },
+    {
+      "dateISO": "2026-09-03T19:30:00",
+      "sport": "Boys Soccer",
+      "level": "Varsity",
+      "opponent": "Miamisburg",
+      "wayneScore": 3,
+      "opponentScore": 3,
+      "result": "T",
+      "isHome": true,
+      "link": "https://www.maxpreps.com/oh/soccer/match/miamisburg-vs-waynesville/9-3-2026/?c=ac8e19c8-a2dd-497a-b699-cdf265abd60f"
     }
   ],
   "upcoming": [
@@ -146,17 +157,6 @@
       "result": null,
       "isHome": true,
       "link": "https://www.maxpreps.com/oh/volleyball/match/dayton-christian-miamisburg-vs-waynesville/jv/9-3-2026/?c=659794fd-bda5-4919-bf86-422db9225439"
-    },
-    {
-      "dateISO": "2026-09-03T19:30:00",
-      "sport": "Boys Soccer",
-      "level": "Varsity",
-      "opponent": "Miamisburg",
-      "wayneScore": null,
-      "opponentScore": null,
-      "result": null,
-      "isHome": true,
-      "link": "https://www.maxpreps.com/oh/soccer/match/miamisburg-vs-waynesville/9-3-2026/?c=ac8e19c8-a2dd-497a-b699-cdf265abd60f"
     },
     {
       "dateISO": "2026-09-04T20:00:00",

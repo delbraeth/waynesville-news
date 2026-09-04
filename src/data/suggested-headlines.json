@@ -1,29 +1,35 @@
 {
   "_note": "Candidate local headlines (Google News RSS). Published as a quoted headline (or, when available, a short publisher-written excerpt) + source + link; never reproduce article body text.",
-  "updated": "2026-09-04T10:56:59.459Z",
+  "updated": "2026-09-04T14:24:18.801Z",
   "items": [
+    {
+      "title": "Ohio Renaissance Festival returns to Waynesville this weekend",
+      "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPTUdWM0J4XzZXNnItZXY5MllIekI5RFhQeDRrQ2RzSHdtYUFJdjdzRmk5czJPdkc3bks5T3RkUW5QYjd2Sy1WNS0tYUczT0dBb2JFTlVralpnX2tibENYcDhqSlpwR2lkZzFyR1lqcC1Td1Ezblc4a0ZOZU9ZUW9SYnFKZW55M2tGNk1faUdGS0htdks0cXhVVTMxUGN4RGN1U3dLWTRlN3NPTjhoZS1xNzRzMXdRRnVu?oc=5",
+      "source": "spectrumnews1.com",
+      "date": "Fri, 04 Sep 2026 10:52:00 GMT",
+      "sourceUrl": "https://spectrumnews1.com/oh/cincinnati/news/2026/09/04/ohio-renaissance-festival-returns-to-waynesville-this-weekend",
+      "excerpt": "The Ohio Renaissance Festival returns to Waynesville this weekend as organizers and vendors finish months of prep for its run through Nov. 1."
+    },
     {
       "title": "David Liffick Obituary (2026) - Waynesville, OH - Dayton Daily News",
       "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQWE5BTnRpWW85c1ZHZ2RlWFNhNWY5RmIwUGxYRVZZSkpWSnJlSU1HeHdVYVRLbzhFMVJRWjhYeXZmeUl6cWdpX2ZzUFIwREtyWDBIS0VLV2ZCMXlFNGFrTTAzR0M1WlYwYzljNkFnNGk3WWRxMEI1cVdWQ2Zqbm9ySllWc0pKRGdhZDFv?oc=5",
       "source": "Legacy obituary",
-      "date": "Fri, 04 Sep 2026 05:36:35 GMT"
+      "date": "Fri, 04 Sep 2026 05:36:35 GMT",
+      "sourceUrl": "https://www.legacy.com/us/obituaries/dayton/name/david-liffick-obituary?id=62348223",
+      "excerpt": "View David Liffick's obituary, send flowers and sign the guestbook."
     },
     {
       "title": "Magic abounds at Ohio RenFest",
       "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNcTNHM005ZzZ1VXAxb0VIbUltRnBBTnpQQXJTXzJCRlJhNjVRMmtaYlVSaktNdFhvNDVpZ0RfNVM0SHlwUW43S2prUlVHWUx1LWx3dHd6ZmtuWlN3a2RtcUs0NzRfZEMxX0N1bFJvdTZTT2N4SE9VX1RQZm1pREtMenRseUxIYkp4bGFtQ3RmOGlmc3NWb29rTlVoWlpYQ2xn?oc=5",
       "source": "Axios",
-      "date": "Thu, 03 Sep 2026 10:30:35 GMT"
-    },
-    {
-      "title": "Warren County man pleads guilty to 100 child pornography charges, assault on Mason woman",
-      "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPNWV1ZlYyaEV4RWEwLUd2UUVvcENoRzV1TlBRZmtMSU1Vek5aMWVfX0dabmFWcWtTMkFRdkJETm42ZDZ4cDlpVlZSdEVzRm5HRl95NzMwWEhjNlpXN3pRSlktRmRWNmRDdmlRZzZfcVpjck5sUlJfTnhkREpFZlFQTnh6N3lNaG5qYkZaWFJkVG1ydy1RQ2xJSFcyMA?oc=5",
-      "source": "WLWT",
-      "date": "Wed, 02 Sep 2026 22:10:00 GMT"
+      "date": "Thu, 03 Sep 2026 10:30:35 GMT",
+      "sourceUrl": "https://www.axios.com/local/north-of-cincy/2026/09/03/ohio-renfest-finds-its-magic-in-warren-county",
+      "excerpt": "The Ohio Renaissance Festival has grown from a quirky fall attraction into a major Warren County tourism draw."
     },
     {
       "title": "Ohio Renaissance Festival Named America's #1 Renaissance Festival, Opens 2026 Season September 5",
       "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOeFRpWTNERFgzb1d5OW02YzZlSFU3TFprcGRxUzhYSVNleGZCTWJndUxpYkNSNGtmSDhOSDBnSzl1Qi1SQ05wMzl1bFJGN1ZfRDJVYUdIeExYMEVBdURjbkE2aHVES2ozNUN0OUt3NXlJUjkwUUlBMUwtSGZWdjgteXFNdnRtejZ6bTg1MUlLanA0ZjFJRnhjLWdnT1pxZU92aXpiMmlXd2RwTHliTF94VDhZZHdzdWx3ZzVZdUNGLVV0UQ?oc=5",
-      "source": "warrencountypost.com",
+      "source": "Warren County Post",
       "date": "Tue, 01 Sep 2026 02:55:14 GMT"
     },
     {
