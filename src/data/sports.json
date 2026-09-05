@@ -1,18 +1,7 @@
 {
   "_note": "Waynesville Spartans schedule + results (MaxPreps), past 7 days / next 7 days. Scraped directly from each sport's own schedule page (football, volleyball, soccer -- varsity + JV), not the school hub page, which has been observed to silently omit some contests. Scores and matchups reproduced verbatim from MaxPreps' own markup; each links to their game page.",
-  "updated": "2026-09-04T14:24:24.622Z",
+  "updated": "2026-09-05T13:29:06.169Z",
   "results": [
-    {
-      "dateISO": "2026-08-28T19:00:00",
-      "sport": "Football",
-      "level": "Varsity",
-      "opponent": "Greeneview",
-      "wayneScore": 28,
-      "opponentScore": 14,
-      "result": "W",
-      "isHome": false,
-      "link": "https://www.maxpreps.com/oh/football/game/greeneview-jamestown-vs-waynesville/8-28-2026/?c=60c46039-f795-4c2b-a754-3ad6f0246788"
-    },
     {
       "dateISO": "2026-08-31T17:30:00",
       "sport": "Boys Soccer",
@@ -100,20 +89,20 @@
       "result": "T",
       "isHome": true,
       "link": "https://www.maxpreps.com/oh/soccer/match/miamisburg-vs-waynesville/9-3-2026/?c=ac8e19c8-a2dd-497a-b699-cdf265abd60f"
+    },
+    {
+      "dateISO": "2026-09-04T20:00:00",
+      "sport": "Football",
+      "level": "Varsity",
+      "opponent": "Hillsboro",
+      "wayneScore": 52,
+      "opponentScore": 13,
+      "result": "W",
+      "isHome": true,
+      "link": "https://www.maxpreps.com/oh/football/game/hillsboro-vs-waynesville/9-4-2026/?c=a9ca0722-0301-4a84-b02f-80ae779d8c19"
     }
   ],
   "upcoming": [
-    {
-      "dateISO": "2026-08-29T10:00:00",
-      "sport": "Football",
-      "level": "JV",
-      "opponent": "Greeneview",
-      "wayneScore": null,
-      "opponentScore": null,
-      "result": null,
-      "isHome": true,
-      "link": "https://www.maxpreps.com/oh/football/game/greeneview-jamestown-vs-waynesville/jv/8-29-2026/?c=8399d46d-a9ab-4b83-a286-4d2d3592a5f3"
-    },
     {
       "dateISO": "2026-08-31T17:00:00",
       "sport": "Volleyball",
@@ -157,17 +146,6 @@
       "result": null,
       "isHome": true,
       "link": "https://www.maxpreps.com/oh/volleyball/match/dayton-christian-miamisburg-vs-waynesville/jv/9-3-2026/?c=659794fd-bda5-4919-bf86-422db9225439"
-    },
-    {
-      "dateISO": "2026-09-04T20:00:00",
-      "sport": "Football",
-      "level": "Varsity",
-      "opponent": "Hillsboro",
-      "wayneScore": null,
-      "opponentScore": null,
-      "result": null,
-      "isHome": true,
-      "link": "https://www.maxpreps.com/oh/football/game/hillsboro-vs-waynesville/9-4-2026/?c=a9ca0722-0301-4a84-b02f-80ae779d8c19"
     },
     {
       "dateISO": "2026-09-05T10:00:00",
@@ -245,6 +223,50 @@
       "result": null,
       "isHome": false,
       "link": "https://www.maxpreps.com/oh/soccer/girls/match/eaton-vs-waynesville/9-10-2026/?c=3904d408-f15a-4b96-beaa-e721a6fb796f"
+    },
+    {
+      "dateISO": "2026-09-11T19:00:00",
+      "sport": "Football",
+      "level": "Varsity",
+      "opponent": "Brookville*",
+      "wayneScore": null,
+      "opponentScore": null,
+      "result": null,
+      "isHome": true,
+      "link": "https://www.maxpreps.com/oh/football/game/brookville-vs-waynesville/9-11-2026/?c=ff3050e0-2487-49e6-8d11-f8b9baa6cd80"
+    },
+    {
+      "dateISO": "2026-09-12T10:00:00",
+      "sport": "Football",
+      "level": "JV",
+      "opponent": "Brookville*",
+      "wayneScore": null,
+      "opponentScore": null,
+      "result": null,
+      "isHome": false,
+      "link": "https://www.maxpreps.com/oh/football/game/brookville-vs-waynesville/jv/9-12-2026/?c=b684ff3e-5936-456c-bca0-7ac85bfc0be6"
+    },
+    {
+      "dateISO": "2026-09-12T10:00:00",
+      "sport": "Volleyball",
+      "level": "JV",
+      "opponent": "Clinton-Massie",
+      "wayneScore": null,
+      "opponentScore": null,
+      "result": null,
+      "isHome": false,
+      "link": "https://www.maxpreps.com/oh/volleyball/match/clinton-massie-clarksville-vs-waynesville/jv/9-12-2026/?c=67690724-bbb9-44c9-8f89-e44d360b3e02"
+    },
+    {
+      "dateISO": "2026-09-12T11:00:00",
+      "sport": "Volleyball",
+      "level": "Varsity",
+      "opponent": "Clinton-Massie",
+      "wayneScore": null,
+      "opponentScore": null,
+      "result": null,
+      "isHome": false,
+      "link": "https://www.maxpreps.com/oh/volleyball/match/clinton-massie-clarksville-vs-waynesville/9-12-2026/?c=232dc243-3a5e-4b5c-af00-5967391b4722"
     }
   ]
 }
