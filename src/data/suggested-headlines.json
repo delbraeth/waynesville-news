@@ -1,30 +1,24 @@
 {
   "_note": "Candidate local headlines (Google News RSS). Published as a quoted headline (or, when available, a short publisher-written excerpt) + source + link; never reproduce article body text.",
-  "updated": "2026-09-06T13:42:47.839Z",
+  "updated": "2026-09-06T23:41:26.054Z",
   "items": [
-    {
-      "title": "Frank Mattia Obituary (2026) - Waynesville, OH - Dayton Daily News",
-      "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOMllpQ2d0RHI4TjlUaHFsTFNPVkQ3MG51cU43Y2tlRGE5QzIxT1pmOVd6U1NfZ1BJZzV1bE9Ob09KUmhWMENCejB0ejFkVzRsQkJhbENYYUJHSG5NRzdlS1J1YVlrRXI2a2NIc3F4S0Rsd2I0eWY1NENtSTA4SkxXT1pyNmdlSXlhSmc?oc=5",
-      "source": "Legacy obituary",
-      "date": "Sun, 06 Sep 2026 06:38:52 GMT",
-      "sourceUrl": "https://www.legacy.com/us/obituaries/dayton/name/frank-mattia-obituary?id=62360947",
-      "excerpt": "View Frank Mattia's obituary, send flowers and sign the guestbook."
-    },
     {
       "title": "Ohio Renaissance Festival returns to Waynesville this weekend",
       "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPTUdWM0J4XzZXNnItZXY5MllIekI5RFhQeDRrQ2RzSHdtYUFJdjdzRmk5czJPdkc3bks5T3RkUW5QYjd2Sy1WNS0tYUczT0dBb2JFTlVralpnX2tibENYcDhqSlpwR2lkZzFyR1lqcC1Td1Ezblc4a0ZOZU9ZUW9SYnFKZW55M2tGNk1faUdGS0htdks0cXhVVTMxUGN4RGN1U3dLWTRlN3NPTjhoZS1xNzRzMXdRRnVu?oc=5",
       "source": "Spectrum News",
-      "date": "Fri, 04 Sep 2026 10:52:00 GMT",
-      "sourceUrl": "https://spectrumnews1.com/oh/cincinnati/news/2026/09/04/ohio-renaissance-festival-returns-to-waynesville-this-weekend",
-      "excerpt": "The Ohio Renaissance Festival returns to Waynesville this weekend as organizers and vendors finish months of prep for its run through Nov. 1."
+      "date": "Fri, 04 Sep 2026 10:52:00 GMT"
+    },
+    {
+      "title": "Frank Mattia Obituary (2026) - Waynesville, OH - Dayton Daily News",
+      "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOMllpQ2d0RHI4TjlUaHFsTFNPVkQ3MG51cU43Y2tlRGE5QzIxT1pmOVd6U1NfZ1BJZzV1bE9Ob09KUmhWMENCejB0ejFkVzRsQkJhbENYYUJHSG5NRzdlS1J1YVlrRXI2a2NIc3F4S0Rsd2I0eWY1NENtSTA4SkxXT1pyNmdlSXlhSmc?oc=5",
+      "source": "Legacy obituary",
+      "date": "Sun, 06 Sep 2026 06:38:52 GMT"
     },
     {
       "title": "Magic abounds at Ohio RenFest",
       "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNcTNHM005ZzZ1VXAxb0VIbUltRnBBTnpQQXJTXzJCRlJhNjVRMmtaYlVSaktNdFhvNDVpZ0RfNVM0SHlwUW43S2prUlVHWUx1LWx3dHd6ZmtuWlN3a2RtcUs0NzRfZEMxX0N1bFJvdTZTT2N4SE9VX1RQZm1pREtMenRseUxIYkp4bGFtQ3RmOGlmc3NWb29rTlVoWlpYQ2xn?oc=5",
       "source": "Axios",
-      "date": "Thu, 03 Sep 2026 10:30:35 GMT",
-      "sourceUrl": "https://www.axios.com/local/north-of-cincy/2026/09/03/ohio-renfest-finds-its-magic-in-warren-county",
-      "excerpt": "The Ohio Renaissance Festival has grown from a quirky fall attraction into a major Warren County tourism draw."
+      "date": "Thu, 03 Sep 2026 10:30:35 GMT"
     },
     {
       "title": "DHS secretary visits Warren County, defends ICE enforcement and Haitian migrant crackdown in Springfield",
@@ -35,7 +29,7 @@
     {
       "title": "Mullin: DHS 'not responsible' for death of Haitian student in Ohio",
       "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPcFBaNjY2NWp2MmxkMXdsQmpDVnNjSmpBRVBPVUN4OWVObElvdVJqNk5wOVV4MTNfaWs5LXdVcm84YkRXTDNIa29wTDFZNFQ3T1EtZldoUlZtZUxIRmE5ck9xaFE1a0tVMk1wX2p1TGlBeVRxOVlwT19wZVcyUVRlUWF0UXJ2ZjdaajRGM2FTN3V2dlFsVFZ1RVd4by1GX1dxSmtiWGVzUXV3VmM?oc=5",
-      "source": "91.7 WVXU",
+      "source": "WVXU",
       "date": "Fri, 04 Sep 2026 19:46:00 GMT"
     },
     {
@@ -45,18 +39,16 @@
       "date": "Fri, 04 Sep 2026 17:59:00 GMT"
     },
     {
+      "title": "State patrol: Driver fled scene of fatal Warren County crash after passenger was ejected",
+      "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQbG9UWUZtYU12TGJCd29Xcnl3QnJUekJxSGR5eFZwWktSY0habFIwNERfbWtwWFg0TXZLdzRXTVBKZUdjZzRmODhnM0Z2a2JpSVlVMmg0NDljbmNFb1Zad1puby1yLXFDeFlNNlk5dXF6a0Q5azM4MVZMeFkwckxnUXhLQkFYVGJsSnVJaHpkOG9nOTE0?oc=5",
+      "source": "Dayton Daily News",
+      "date": "Sat, 05 Sep 2026 13:56:35 GMT"
+    },
+    {
       "title": "Enter the Ohio Wildlife Legacy Stamp Photo Contest",
       "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxONkgyWGxmVWtsYjVqVUhZYUl5bG9hbE9fX1NJRkFfMV9sUDd0cEpMQWlKUmJqZFIwc2RJbDVLM1FCbFBCbWl5MmNRS3EwME1uVFpZTnNxUUkwS3dSSGtFU194YkdRelZ3TWVPSnE1SllUUGE4TEhmZnRjUWVhSm92VE5GSTdnYlU3aTBCUC1DeUNBVlpKcGFfTXBiN1JVdw?oc=5",
       "source": "Warren County Post",
       "date": "Sat, 05 Sep 2026 03:03:43 GMT"
-    },
-    {
-      "title": "Waynesville vs Away - Boys Junior Varsity Soccer 09/28/2026 | Live & On Demand",
-      "link": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxQQ1VWMnBtQkRTblBzb0xEM0JBMExvd3ZvYW1xTWltQThSUENEUEx2NkRFNzRIbERLSk05MFJHbkVvQ2FJdDBVUmdFV2NnelQxYVJoRTNFSVNheTEtSXRwT3pQQkRoSEJRalZ0eG9hWTQtem9vclZpSDBoSElaQ0V5RE4wZU1selpyN01IblFEdEhNS1pWaUZOdDlwSU4tcUM1XzROUExPTUFlZThtYnFMX09jeU81QXdCRG1zOVJ0alZoTGtMVEtZYzlRdTg3eUFDbVNEc21idW8tSjhYZFV6VFV6UHNQRVA0?oc=5",
-      "source": "NFHS Network",
-      "date": "Fri, 04 Sep 2026 20:29:59 GMT",
-      "sourceUrl": "https://www.nfhsnetwork.com/events/waynesville-waynesville-oh/gam3934ec33aa?maxpreps=maxpreps&utm_campaign=schema&utm_medium=referral&utm_source=maxpreps",
-      "excerpt": "Watch the Waynesville vs Away - Boys Junior Varsity Soccer 09/28/2026 live and on demand online on the NFHS Network"
     }
   ]
 }
