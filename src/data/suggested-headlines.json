@@ -1,30 +1,24 @@
 {
   "_note": "Candidate local headlines (Google News RSS). Published as a quoted headline (or, when available, a short publisher-written excerpt) + source + link; never reproduce article body text.",
-  "updated": "2026-09-06T23:41:26.054Z",
+  "updated": "2026-09-07T10:53:07.431Z",
   "items": [
     {
       "title": "Ohio Renaissance Festival returns to Waynesville this weekend",
-      "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPTUdWM0J4XzZXNnItZXY5MllIekI5RFhQeDRrQ2RzSHdtYUFJdjdzRmk5czJPdkc3bks5T3RkUW5QYjd2Sy1WNS0tYUczT0dBb2JFTlVralpnX2tibENYcDhqSlpwR2lkZzFyR1lqcC1Td1Ezblc4a0ZOZU9ZUW9SYnFKZW55M2tGNk1faUdGS0htdks0cXhVVTMxUGN4RGN1U3dLWTRlN3NPTjhoZS1xNzRzMXdRRnVu?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxObFA0Qjd4WWFGZ01DM05KTU80a21FVHhLV1FDX2JQbW5Na3lPdGwtMms0NDZBZDMtdVluaE1nUTdBdjEtSmItc0tpTHA0WC1qajlnTk5RXzBRZWt3S3lidmtYRHZSaEVkcDlFaVF1MnZxQzZCSTZLbW9CbFIxNFpXaExzcEtNNzMzYzNpaW1NLXktelNMeU9iUzJiUW5kVGVYQ0FKTDZEWnNGRl9tdDhnN3VSWkRYZw?oc=5",
       "source": "Spectrum News",
       "date": "Fri, 04 Sep 2026 10:52:00 GMT"
-    },
-    {
-      "title": "Frank Mattia Obituary (2026) - Waynesville, OH - Dayton Daily News",
-      "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOMllpQ2d0RHI4TjlUaHFsTFNPVkQ3MG51cU43Y2tlRGE5QzIxT1pmOVd6U1NfZ1BJZzV1bE9Ob09KUmhWMENCejB0ejFkVzRsQkJhbENYYUJHSG5NRzdlS1J1YVlrRXI2a2NIc3F4S0Rsd2I0eWY1NENtSTA4SkxXT1pyNmdlSXlhSmc?oc=5",
-      "source": "Legacy obituary",
-      "date": "Sun, 06 Sep 2026 06:38:52 GMT"
-    },
-    {
-      "title": "Magic abounds at Ohio RenFest",
-      "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNcTNHM005ZzZ1VXAxb0VIbUltRnBBTnpQQXJTXzJCRlJhNjVRMmtaYlVSaktNdFhvNDVpZ0RfNVM0SHlwUW43S2prUlVHWUx1LWx3dHd6ZmtuWlN3a2RtcUs0NzRfZEMxX0N1bFJvdTZTT2N4SE9VX1RQZm1pREtMenRseUxIYkp4bGFtQ3RmOGlmc3NWb29rTlVoWlpYQ2xn?oc=5",
-      "source": "Axios",
-      "date": "Thu, 03 Sep 2026 10:30:35 GMT"
     },
     {
       "title": "DHS secretary visits Warren County, defends ICE enforcement and Haitian migrant crackdown in Springfield",
       "link": "https://news.google.com/rss/articles/CBMihgJBVV95cUxNeGJldWd2TmhjbXN3Q3ZXaWhLSjFpT3BWZnRpb2hLVUNxejhpVmxuMnNEWXNGc1dvbHJvekotVmY3ODhyOXRuR01OMTRrdEhVLUhhZ1RzTTZ2MDFySTdaMXd0b3VCNnFSaFo2UV9oQnN6ZENJUVBfY3VON3drQ1IyTWNvdXVkZnFRSVJMSmhBTHRpWmItUmZpWjdlWVd2aFZwdlphektERU1VdjBQcXJXenJEM3ZVRDZMMVpZbjBzR1V1MkpBWFlsZlVYbWx2bFI3Q19RNWFHQjNIU1dvVm9fS19wc3F3Zk1ILTZieDM5X3U4MnhDTXE2TjZEYnFoWDFIT0R6dGxn?oc=5",
       "source": "WCPO 9 Cincinnati",
       "date": "Fri, 04 Sep 2026 22:44:29 GMT"
+    },
+    {
+      "title": "Magic abounds at Ohio RenFest",
+      "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNcTNHM005ZzZ1VXAxb0VIbUltRnBBTnpQQXJTXzJCRlJhNjVRMmtaYlVSaktNdFhvNDVpZ0RfNVM0SHlwUW43S2prUlVHWUx1LWx3dHd6ZmtuWlN3a2RtcUs0NzRfZEMxX0N1bFJvdTZTT2N4SE9VX1RQZm1pREtMenRseUxIYkp4bGFtQ3RmOGlmc3NWb29rTlVoWlpYQ2xn?oc=5",
+      "source": "Axios",
+      "date": "Thu, 03 Sep 2026 10:30:35 GMT"
     },
     {
       "title": "Mullin: DHS 'not responsible' for death of Haitian student in Ohio",
@@ -39,16 +33,22 @@
       "date": "Fri, 04 Sep 2026 17:59:00 GMT"
     },
     {
+      "title": "Enter the Ohio Wildlife Legacy Stamp Photo Contest",
+      "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxONkgyWGxmVWtsYjVqVUhZYUl5bG9hbE9fX1NJRkFfMV9sUDd0cEpMQWlKUmJqZFIwc2RJbDVLM1FCbFBCbWl5MmNRS3EwME1uVFpZTnNxUUkwS3dSSGtFU194YkdRelZ3TWVPSnE1SllUUGE4TEhmZnRjUWVhSm92VE5GSTdnYlU3aTBCUC1DeUNBVlpKcGFfTXBiN1JVdw?oc=5",
+      "source": "Warren County Post",
+      "date": "Sat, 05 Sep 2026 03:03:43 GMT"
+    },
+    {
       "title": "State patrol: Driver fled scene of fatal Warren County crash after passenger was ejected",
       "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQbG9UWUZtYU12TGJCd29Xcnl3QnJUekJxSGR5eFZwWktSY0habFIwNERfbWtwWFg0TXZLdzRXTVBKZUdjZzRmODhnM0Z2a2JpSVlVMmg0NDljbmNFb1Zad1puby1yLXFDeFlNNlk5dXF6a0Q5azM4MVZMeFkwckxnUXhLQkFYVGJsSnVJaHpkOG9nOTE0?oc=5",
       "source": "Dayton Daily News",
       "date": "Sat, 05 Sep 2026 13:56:35 GMT"
     },
     {
-      "title": "Enter the Ohio Wildlife Legacy Stamp Photo Contest",
-      "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxONkgyWGxmVWtsYjVqVUhZYUl5bG9hbE9fX1NJRkFfMV9sUDd0cEpMQWlKUmJqZFIwc2RJbDVLM1FCbFBCbWl5MmNRS3EwME1uVFpZTnNxUUkwS3dSSGtFU194YkdRelZ3TWVPSnE1SllUUGE4TEhmZnRjUWVhSm92VE5GSTdnYlU3aTBCUC1DeUNBVlpKcGFfTXBiN1JVdw?oc=5",
-      "source": "Warren County Post",
-      "date": "Sat, 05 Sep 2026 03:03:43 GMT"
+      "title": "Frank Mattia Obituary (2026) - Waynesville, OH - Dayton Daily News",
+      "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOMllpQ2d0RHI4TjlUaHFsTFNPVkQ3MG51cU43Y2tlRGE5QzIxT1pmOVd6U1NfZ1BJZzV1bE9Ob09KUmhWMENCejB0ejFkVzRsQkJhbENYYUJHSG5NRzdlS1J1YVlrRXI2a2NIc3F4S0Rsd2I0eWY1NENtSTA4SkxXT1pyNmdlSXlhSmc?oc=5",
+      "source": "legacy.com",
+      "date": "Sun, 06 Sep 2026 06:38:52 GMT"
     }
   ]
 }
