@@ -1,18 +1,7 @@
 {
   "_note": "Waynesville Spartans schedule + results (MaxPreps), past 7 days / next 7 days. Scraped directly from each sport's own schedule page (football, volleyball, soccer -- varsity + JV), not the school hub page, which has been observed to silently omit some contests. Scores and matchups reproduced verbatim from MaxPreps' own markup; each links to their game page.",
-  "updated": "2026-09-08T14:35:19.285Z",
+  "updated": "2026-09-09T10:50:23.802Z",
   "results": [
-    {
-      "dateISO": "2026-09-01T19:00:00",
-      "sport": "Volleyball",
-      "level": "Varsity",
-      "opponent": "Oakwood*",
-      "wayneScore": 1,
-      "opponentScore": 3,
-      "result": "L",
-      "isHome": false,
-      "link": "https://www.maxpreps.com/oh/volleyball/match/oakwood-dayton-vs-waynesville/9-1-2026/?c=77953fba-65b7-4245-8da9-235610d09b8c"
-    },
     {
       "dateISO": "2026-09-03T18:30:00",
       "sport": "Volleyball",
@@ -48,28 +37,6 @@
     }
   ],
   "upcoming": [
-    {
-      "dateISO": "2026-09-01T17:30:00",
-      "sport": "Volleyball",
-      "level": "JV",
-      "opponent": "Oakwood*",
-      "wayneScore": null,
-      "opponentScore": null,
-      "result": null,
-      "isHome": false,
-      "link": "https://www.maxpreps.com/oh/volleyball/match/oakwood-dayton-vs-waynesville/jv/9-1-2026/?c=918bed37-cc80-465e-bb7f-fc266b653bab"
-    },
-    {
-      "dateISO": "2026-09-01T17:30:00",
-      "sport": "Volleyball",
-      "level": "JV",
-      "opponent": "Valley View*",
-      "wayneScore": null,
-      "opponentScore": null,
-      "result": null,
-      "isHome": false,
-      "link": "https://www.maxpreps.com/oh/volleyball/match/valley-view-germantown-vs-waynesville/jv/9-1-2026/?c=f270f43a-65f0-406a-ba41-db432402afb2"
-    },
     {
       "dateISO": "2026-09-03T17:30:00",
       "sport": "Volleyball",
@@ -126,6 +93,17 @@
       "link": "https://www.maxpreps.com/oh/soccer/girls/match/eaton-vs-waynesville/jv/9-10-2026/?c=513f3d1e-5e2e-4430-bb9e-8759e4462e7b"
     },
     {
+      "dateISO": "2026-09-10T18:00:00",
+      "sport": "Boys Soccer",
+      "level": "Varsity",
+      "opponent": "Eaton*",
+      "wayneScore": null,
+      "opponentScore": null,
+      "result": null,
+      "isHome": true,
+      "link": "https://www.maxpreps.com/oh/soccer/match/eaton-vs-waynesville/9-10-2026/?c=eda61cf7-1b9e-46c9-bebc-f69ff45b2716"
+    },
+    {
       "dateISO": "2026-09-10T18:30:00",
       "sport": "Volleyball",
       "level": "Varsity",
@@ -135,17 +113,6 @@
       "result": null,
       "isHome": false,
       "link": "https://www.maxpreps.com/oh/volleyball/match/carlisle-vs-waynesville/9-10-2026/?c=d82dd96c-98ea-48d9-b891-41d1b60be917"
-    },
-    {
-      "dateISO": "2026-09-10T19:15:00",
-      "sport": "Boys Soccer",
-      "level": "Varsity",
-      "opponent": "Eaton*",
-      "wayneScore": null,
-      "opponentScore": null,
-      "result": null,
-      "isHome": true,
-      "link": "https://www.maxpreps.com/oh/soccer/match/eaton-vs-waynesville/9-10-2026/?c=eda61cf7-1b9e-46c9-bebc-f69ff45b2716"
     },
     {
       "dateISO": "2026-09-10T19:15:00",
@@ -221,7 +188,7 @@
       "wayneScore": null,
       "opponentScore": null,
       "result": null,
-      "isHome": true,
+      "isHome": false,
       "link": "https://www.maxpreps.com/oh/soccer/match/cincinnati-hills-christian-academy-vs-waynesville/jv/9-14-2026/?c=d83db031-d2e4-4b6e-b3f4-ed7af6fa41fb"
     },
     {
@@ -245,6 +212,28 @@
       "result": null,
       "isHome": true,
       "link": "https://www.maxpreps.com/oh/soccer/match/cincinnati-hills-christian-academy-vs-waynesville/9-14-2026/?c=7d161cef-e5de-4f39-976f-6480c16b9830"
+    },
+    {
+      "dateISO": "2026-09-15T17:30:00",
+      "sport": "Volleyball",
+      "level": "JV",
+      "opponent": "Madison*",
+      "wayneScore": null,
+      "opponentScore": null,
+      "result": null,
+      "isHome": true,
+      "link": "https://www.maxpreps.com/oh/volleyball/match/madison-middletown-vs-waynesville/jv/9-15-2026/?c=c6ad11df-36aa-47f4-85af-3862bbfd9330"
+    },
+    {
+      "dateISO": "2026-09-15T18:30:00",
+      "sport": "Volleyball",
+      "level": "Varsity",
+      "opponent": "Madison*",
+      "wayneScore": null,
+      "opponentScore": null,
+      "result": null,
+      "isHome": true,
+      "link": "https://www.maxpreps.com/oh/volleyball/match/madison-middletown-vs-waynesville/9-15-2026/?c=9ce30e7b-0634-48d6-8096-a21c9eaef717"
     }
   ]
 }
