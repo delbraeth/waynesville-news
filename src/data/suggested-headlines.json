@@ -1,41 +1,51 @@
 {
   "_note": "Candidate local headlines (Google News RSS). Published as a quoted headline (or, when available, a short publisher-written excerpt) + source + link; never reproduce article body text.",
-  "updated": "2026-09-09T10:50:00.361Z",
+  "updated": "2026-09-09T14:38:45.242Z",
   "items": [
     {
       "title": "Break Some Glass: Waynesville's Darren Goodman Brings Interactive Art Exhibit to Downtown Hamilton",
       "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQRVRFM0ZJSklWanB2dUZLbXdfdVU1ZGthMWNZa1RLcG5KTVhzLXNIcngyUmxGVGxYeGxubVpmZ3Q4WG1ETFNKVEJVclp0RFU4ZGx3bzRDYXhUQWdKWXI3OGltYnJNaS1xZTVkbFo4d2dnOUZxWmJyZkJ5d3hKRXdSaFdYeEZMMXZnVG1VR1V4MjhhaTdlYm54SlpVQTZyYTJ5eTBKVFRkM2c2amJDNjNuVTlEZFRuZ3UtQlRScHFsSQ?oc=5",
       "source": "Warren County Post",
-      "date": "Wed, 09 Sep 2026 02:47:51 GMT"
+      "date": "Wed, 09 Sep 2026 02:47:51 GMT",
+      "sourceUrl": "https://warrencountypost.com/g/waynesville-oh/n/386983/break-some-glass-waynesvilles-darren-goodman-brings-interactive-art",
+      "excerpt": "Creation, destruction and creation again when it comes to breaking glass with Warren County's Darren Goodman."
     },
     {
       "title": "More Warren County drivers being ticketed due to hands-free law",
       "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPcTh3MThKQktDNTN1TmJaQlVsMWoyRk9WcnJONUF5bE9EX1FxVUlZcTN3T095MUhGNFlOaXVmbFIwUUxfWUxRZDhGVDhvdWRWV2V6aU5HQ3BERVVCNnB0WWQ1bVM1dWJZWW80NGo1MHZDRTM2WkJfUFNkOWxhSl82SEtoNWkxZHI5RmpsbDVydVQ4bm5wdGJpMkhJMGlPUzVTLTY2Uw?oc=5",
       "source": "Axios",
-      "date": "Tue, 08 Sep 2026 10:42:50 GMT"
+      "date": "Tue, 08 Sep 2026 10:42:50 GMT",
+      "sourceUrl": "https://www.axios.com/local/north-of-cincy/2026/09/08/ohio-hands-free-law-distracted-driving-citations",
+      "excerpt": "Troopers issued more distracted-driving citations after primary enforcement began."
     },
     {
       "title": "Ohio Renaissance Festival returns to Waynesville this weekend",
       "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxObFA0Qjd4WWFGZ01DM05KTU80a21FVHhLV1FDX2JQbW5Na3lPdGwtMms0NDZBZDMtdVluaE1nUTdBdjEtSmItc0tpTHA0WC1qajlnTk5RXzBRZWt3S3lidmtYRHZSaEVkcDlFaVF1MnZxQzZCSTZLbW9CbFIxNFpXaExzcEtNNzMzYzNpaW1NLXktelNMeU9iUzJiUW5kVGVYQ0FKTDZEWnNGRl9tdDhnN3VSWkRYZw?oc=5",
       "source": "Spectrum News",
-      "date": "Fri, 04 Sep 2026 10:52:00 GMT"
-    },
-    {
-      "title": "Ohio Renaissance Festival opens gates to welcome crowds in Waynesville",
-      "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNeHp1MDFzbFVqNFI5ZWlkYzRidlNlaWdwbDVSQzRpcHk4RkdEajdldnl5SVM4VHRGQTNCWERudlNMMm8xZmNGaHpMRGZ6Ny1VZzlTS1ZzZDZKR0h0ZFNWZXlVTHRPdkstcC12c2V2QnFVZU93OHMyalBERmtGaTRGUUllelh3ZnpHSHRES2VPMzNzbmR5eTZYMjZ5bTJBX0FZNGVUZDFUT0N0NkZLNVpzSGNIM2ZyUlNyUzRzaGcyRkQwa2JHaWRZNUtmcDlVWkU?oc=5",
-      "source": "Cincinnati Enquirer",
-      "date": "Tue, 08 Sep 2026 12:52:00 GMT"
+      "date": "Fri, 04 Sep 2026 10:52:00 GMT",
+      "sourceUrl": "https://spectrumnews1.com/oh/columbus/news/2026/09/04/ohio-renaissance-festival-returns-to-waynesville-this-weekend",
+      "excerpt": "The Ohio Renaissance Festival returns to Waynesville this weekend as organizers and vendors finish months of prep for its run through Nov. 1."
     },
     {
       "title": "Mullin: DHS 'not responsible' for death of Haitian student in Ohio",
       "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPcFBaNjY2NWp2MmxkMXdsQmpDVnNjSmpBRVBPVUN4OWVObElvdVJqNk5wOVV4MTNfaWs5LXdVcm84YkRXTDNIa29wTDFZNFQ3T1EtZldoUlZtZUxIRmE5ck9xaFE1a0tVMk1wX2p1TGlBeVRxOVlwT19wZVcyUVRlUWF0UXJ2ZjdaajRGM2FTN3V2dlFsVFZ1RVd4by1GX1dxSmtiWGVzUXV3VmM?oc=5",
       "source": "WVXU",
-      "date": "Fri, 04 Sep 2026 19:46:00 GMT"
+      "date": "Fri, 04 Sep 2026 19:46:00 GMT",
+      "sourceUrl": "https://www.wvxu.org/local-news/2026-09-04/markwayne-mullin-dhs-homeland-security-ice-pierre-damas-bel-ohio",
+      "excerpt": "Homeland Security Secretary Markwayne Mullin said the department won't stop using GPS ankle devices or seeking to detain and deport Haitian immigrants who no longer have Temporary Protected Status."
+    },
+    {
+      "title": "Ohio Renaissance Festival opens gates to welcome crowds in Waynesville",
+      "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNeHp1MDFzbFVqNFI5ZWlkYzRidlNlaWdwbDVSQzRpcHk4RkdEajdldnl5SVM4VHRGQTNCWERudlNMMm8xZmNGaHpMRGZ6Ny1VZzlTS1ZzZDZKR0h0ZFNWZXlVTHRPdkstcC12c2V2QnFVZU93OHMyalBERmtGaTRGUUllelh3ZnpHSHRES2VPMzNzbmR5eTZYMjZ5bTJBX0FZNGVUZDFUT0N0NkZLNVpzSGNIM2ZyUlNyUzRzaGcyRkQwa2JHaWRZNUtmcDlVWkU?oc=5",
+      "source": "Cincinnati Enquirer",
+      "date": "Tue, 08 Sep 2026 12:52:00 GMT",
+      "sourceUrl": "https://www.cincinnati.com/picture-gallery/entertainment/2026/09/08/ohio-renaissance-festival-2026-opening-weekend-photos/91655050007/",
+      "excerpt": "The Ohio Renaissance Festival returned to Waynesville over the Labor Day weekend, welcoming crowds with food, vendors and a variety of shows."
     },
     {
       "title": "DHS secretary visits Warren County, defends ICE enforcement and Haitian migrant crackdown in Springfield",
       "link": "https://news.google.com/rss/articles/CBMihgJBVV95cUxNeGJldWd2TmhjbXN3Q3ZXaWhLSjFpT3BWZnRpb2hLVUNxejhpVmxuMnNEWXNGc1dvbHJvekotVmY3ODhyOXRuR01OMTRrdEhVLUhhZ1RzTTZ2MDFySTdaMXd0b3VCNnFSaFo2UV9oQnN6ZENJUVBfY3VON3drQ1IyTWNvdXVkZnFRSVJMSmhBTHRpWmItUmZpWjdlWVd2aFZwdlphektERU1VdjBQcXJXenJEM3ZVRDZMMVpZbjBzR1V1MkpBWFlsZlVYbWx2bFI3Q19RNWFHQjNIU1dvVm9fS19wc3F3Zk1ILTZieDM5X3U4MnhDTXE2TjZEYnFoWDFIT0R6dGxn?oc=5",
-      "source": "WCPO 9 Cincinnati",
+      "source": "wcpo.com",
       "date": "Fri, 04 Sep 2026 22:44:29 GMT"
     },
     {
@@ -45,10 +55,10 @@
       "date": "Sun, 06 Sep 2026 06:38:52 GMT"
     },
     {
-      "title": "𝗭𝗮𝗰 𝗛𝗮𝗶𝗻𝗲𝘀 𝗘𝗻𝗱𝗼𝗿𝘀𝗲𝗱 𝗯𝘆 𝘁𝗵𝗲 𝗛𝗼𝗺𝗲 𝗕𝘂𝗶𝗹𝗱𝗲𝗿𝘀 𝗔𝘀𝘀𝗼𝗰𝗶𝗮𝘁𝗶𝗼𝗻 𝗼𝗳 𝗚𝗿𝗲𝗮𝘁𝗲𝗿 𝗖𝗶𝗻𝗰𝗶𝗻𝗻𝗮𝘁𝗶 𝗳𝗼𝗿 𝗢𝗵𝗶𝗼 𝗦𝘁𝗮𝘁𝗲 𝗦𝗲𝗻𝗮𝘁𝗲 𝗦𝗲𝗮𝘁",
-      "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5vUkRNcVFqVVNsejFUWXFpNXc5djNFX0RRei1XcVRRaUdoWXJKTlRtSVltSk56RzJyUFZQcWxudFgwbEhlaDZaaVJYMHNDY2toRlR5RFlhdmU2dDhqeTJF?oc=5",
-      "source": "Warren County Post",
-      "date": "Wed, 09 Sep 2026 02:53:51 GMT"
+      "title": "State patrol: Driver fled scene of fatal Warren County crash after passenger was ejected",
+      "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQbG9UWUZtYU12TGJCd29Xcnl3QnJUekJxSGR5eFZwWktSY0habFIwNERfbWtwWFg0TXZLdzRXTVBKZUdjZzRmODhnM0Z2a2JpSVlVMmg0NDljbmNFb1Zad1puby1yLXFDeFlNNlk5dXF6a0Q5azM4MVZMeFkwckxnUXhLQkFYVGJsSnVJaHpkOG9nOTE0?oc=5",
+      "source": "Dayton Daily News",
+      "date": "Sat, 05 Sep 2026 13:56:35 GMT"
     }
   ]
 }
