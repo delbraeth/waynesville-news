@@ -1,6 +1,6 @@
 {
   "_note": "Waynesville Spartans schedule + results (MaxPreps), past 7 days / next 7 days. Scraped directly from each sport's own schedule page (football, volleyball, soccer -- varsity + JV), not the school hub page, which has been observed to silently omit some contests. Scores and matchups reproduced verbatim from MaxPreps' own markup; each links to their game page.",
-  "updated": "2026-09-10T11:07:50.836Z",
+  "updated": "2026-09-10T14:29:48.137Z",
   "results": [
     {
       "dateISO": "2026-09-03T18:30:00",
@@ -34,6 +34,17 @@
       "result": "W",
       "isHome": true,
       "link": "https://www.maxpreps.com/oh/football/game/hillsboro-vs-waynesville/9-4-2026/?c=a9ca0722-0301-4a84-b02f-80ae779d8c19"
+    },
+    {
+      "dateISO": "2026-09-08T18:00:00",
+      "sport": "Girls Soccer",
+      "level": "Varsity",
+      "opponent": "Carlisle*",
+      "wayneScore": 11,
+      "opponentScore": 0,
+      "result": "W",
+      "isHome": true,
+      "link": "https://www.maxpreps.com/oh/soccer/girls/match/carlisle-vs-waynesville/9-8-2026/?c=6e4e3d1d-380b-4004-84d1-a0bb1183f0d5"
     }
   ],
   "upcoming": [
@@ -58,17 +69,6 @@
       "result": null,
       "isHome": false,
       "link": "https://www.maxpreps.com/oh/football/game/hillsboro-vs-waynesville/jv/9-5-2026/?c=1275c9ec-9bbf-4ec7-911b-f1249bf67100"
-    },
-    {
-      "dateISO": "2026-09-08T18:00:00",
-      "sport": "Girls Soccer",
-      "level": "Varsity",
-      "opponent": "Carlisle*",
-      "wayneScore": null,
-      "opponentScore": null,
-      "result": null,
-      "isHome": true,
-      "link": "https://www.maxpreps.com/oh/soccer/girls/match/carlisle-vs-waynesville/9-8-2026/?c=6e4e3d1d-380b-4004-84d1-a0bb1183f0d5"
     },
     {
       "dateISO": "2026-09-10T17:30:00",
