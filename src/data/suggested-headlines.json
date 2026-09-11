@@ -1,12 +1,14 @@
 {
   "_note": "Candidate local headlines (Google News RSS). Published as a quoted headline (or, when available, a short publisher-written excerpt) + source + link; never reproduce article body text.",
-  "updated": "2026-09-11T10:50:55.111Z",
+  "updated": "2026-09-11T14:28:27.054Z",
   "items": [
     {
       "title": "Warren County seeks more foster families as licensed homes drop 50%",
       "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxQRWtoTm9CWmt0NThLNUlEX0FSOHFBdDRsRkJ4OUFJY0hTV29FR2JuU2hPdW1ERGN6Y0hZN1dSMU4yQnc2TFB4d1BlSmVRTVREaHdwZ0hHYjNrZkpFQXAxalByLTViRGxac2I5V3NaMlpRLWNCTE41UHBXczdKaGs2RDFaakluYjVQbG1CNWxWcklySzJ0aVB5Q1plNExTdw?oc=5",
       "source": "FOX19 | Cincinnati",
-      "date": "Thu, 10 Sep 2026 20:21:00 GMT"
+      "date": "Thu, 10 Sep 2026 20:21:00 GMT",
+      "sourceUrl": "https://www.fox19.com/2026/09/10/warren-county-seeks-more-foster-families-licensed-homes-drop-50/",
+      "excerpt": "92 kids need placement but county has only 30 licensed foster families"
     },
     {
       "title": "Frank Mattia Obituary (2026) - Waynesville, OH - Greene County Dailies",
@@ -27,28 +29,32 @@
       "date": "Tue, 08 Sep 2026 12:52:00 GMT"
     },
     {
-      "title": "Ohio Renaissance Festival returns to Waynesville this weekend",
-      "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxObFA0Qjd4WWFGZ01DM05KTU80a21FVHhLV1FDX2JQbW5Na3lPdGwtMms0NDZBZDMtdVluaE1nUTdBdjEtSmItc0tpTHA0WC1qajlnTk5RXzBRZWt3S3lidmtYRHZSaEVkcDlFaVF1MnZxQzZCSTZLbW9CbFIxNFpXaExzcEtNNzMzYzNpaW1NLXktelNMeU9iUzJiUW5kVGVYQ0FKTDZEWnNGRl9tdDhnN3VSWkRYZw?oc=5",
-      "source": "Spectrum News",
-      "date": "Fri, 04 Sep 2026 10:52:00 GMT"
-    },
-    {
       "title": "Mullin: DHS 'not responsible' for death of Haitian student in Ohio",
       "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPcFBaNjY2NWp2MmxkMXdsQmpDVnNjSmpBRVBPVUN4OWVObElvdVJqNk5wOVV4MTNfaWs5LXdVcm84YkRXTDNIa29wTDFZNFQ3T1EtZldoUlZtZUxIRmE5ck9xaFE1a0tVMk1wX2p1TGlBeVRxOVlwT19wZVcyUVRlUWF0UXJ2ZjdaajRGM2FTN3V2dlFsVFZ1RVd4by1GX1dxSmtiWGVzUXV3VmM?oc=5",
       "source": "WVXU",
-      "date": "Fri, 04 Sep 2026 19:46:00 GMT"
+      "date": "Fri, 04 Sep 2026 19:46:00 GMT",
+      "sourceUrl": "https://www.wvxu.org/local-news/2026-09-04/markwayne-mullin-dhs-homeland-security-ice-pierre-damas-bel-ohio",
+      "excerpt": "Homeland Security Secretary Markwayne Mullin said the department won't stop using GPS ankle devices or seeking to detain and deport Haitian immigrants who no longer have Temporary Protected Status."
     },
     {
       "title": "Break Some Glass: Waynesville's Darren Goodman Brings Interactive Art Exhibit to Downtown Hamilton",
       "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQRVRFM0ZJSklWanB2dUZLbXdfdVU1ZGthMWNZa1RLcG5KTVhzLXNIcngyUmxGVGxYeGxubVpmZ3Q4WG1ETFNKVEJVclp0RFU4ZGx3bzRDYXhUQWdKWXI3OGltYnJNaS1xZTVkbFo4d2dnOUZxWmJyZkJ5d3hKRXdSaFdYeEZMMXZnVG1VR1V4MjhhaTdlYm54SlpVQTZyYTJ5eTBKVFRkM2c2amJDNjNuVTlEZFRuZ3UtQlRScHFsSQ?oc=5",
       "source": "Warren County Post",
-      "date": "Wed, 09 Sep 2026 02:47:51 GMT"
+      "date": "Wed, 09 Sep 2026 02:47:51 GMT",
+      "sourceUrl": "https://warrencountypost.com/g/waynesville-oh/n/386983/break-some-glass-waynesvilles-darren-goodman-brings-interactive-art",
+      "excerpt": "Creation, destruction and creation again when it comes to breaking glass with Warren County's Darren Goodman."
     },
     {
       "title": "Targets Car Seat Trade-in Is Back!",
       "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOMXI4aDFTMkVoX0VBRExMLTdrTjVZQkpsYUJlWEozcXNmLVRNMEhPZHdoLUtUX01ERVJFU3hVQnc1eUdQNF9pN3lIZVdkV2FzR0ZoSFRsNS1tdzBXRnFkRDlNQW15SW9tVUZEdXdLZm1ueEJkcTZDb1Ria1RYT3FidENxdnc?oc=5",
       "source": "Warren County Post",
       "date": "Thu, 10 Sep 2026 06:29:27 GMT"
+    },
+    {
+      "title": "Enter the Ohio Wildlife Legacy Stamp Photo Contest",
+      "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxONkgyWGxmVWtsYjVqVUhZYUl5bG9hbE9fX1NJRkFfMV9sUDd0cEpMQWlKUmJqZFIwc2RJbDVLM1FCbFBCbWl5MmNRS3EwME1uVFpZTnNxUUkwS3dSSGtFU194YkdRelZ3TWVPSnE1SllUUGE4TEhmZnRjUWVhSm92VE5GSTdnYlU3aTBCUC1DeUNBVlpKcGFfTXBiN1JVdw?oc=5",
+      "source": "Warren County Post",
+      "date": "Sat, 05 Sep 2026 03:03:43 GMT"
     }
   ]
 }
