@@ -1,6 +1,6 @@
 {
   "_note": "Waynesville Spartans schedule + results (MaxPreps), past 7 days / next 7 days. Scraped directly from each sport's own schedule page (football, volleyball, soccer -- varsity + JV), not the school hub page, which has been observed to silently omit some contests. Scores and matchups reproduced verbatim from MaxPreps' own markup; each links to their game page.",
-  "updated": "2026-09-12T13:37:54.791Z",
+  "updated": "2026-09-13T14:25:42.286Z",
   "results": [
     {
       "dateISO": "2026-09-08T18:00:00",
@@ -56,6 +56,17 @@
       "result": "W",
       "isHome": true,
       "link": "https://www.maxpreps.com/oh/football/game/brookville-vs-waynesville/9-11-2026/?c=ff3050e0-2487-49e6-8d11-f8b9baa6cd80"
+    },
+    {
+      "dateISO": "2026-09-12T11:00:00",
+      "sport": "Volleyball",
+      "level": "Varsity",
+      "opponent": "Clinton-Massie",
+      "wayneScore": 0,
+      "opponentScore": 3,
+      "result": "L",
+      "isHome": false,
+      "link": "https://www.maxpreps.com/oh/volleyball/match/clinton-massie-clarksville-vs-waynesville/9-12-2026/?c=232dc243-3a5e-4b5c-af00-5967391b4722"
     }
   ],
   "upcoming": [
@@ -102,17 +113,6 @@
       "result": null,
       "isHome": false,
       "link": "https://www.maxpreps.com/oh/volleyball/match/clinton-massie-clarksville-vs-waynesville/jv/9-12-2026/?c=67690724-bbb9-44c9-8f89-e44d360b3e02"
-    },
-    {
-      "dateISO": "2026-09-12T11:00:00",
-      "sport": "Volleyball",
-      "level": "Varsity",
-      "opponent": "Clinton-Massie",
-      "wayneScore": null,
-      "opponentScore": null,
-      "result": null,
-      "isHome": false,
-      "link": "https://www.maxpreps.com/oh/volleyball/match/clinton-massie-clarksville-vs-waynesville/9-12-2026/?c=232dc243-3a5e-4b5c-af00-5967391b4722"
     },
     {
       "dateISO": "2026-09-14T17:00:00",
