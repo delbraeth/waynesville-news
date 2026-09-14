@@ -1,7 +1,13 @@
 {
   "_note": "Wayne Township Trustees — most recently posted meeting agendas (titles/dates/links only, reproduced verbatim; agenda text lives in the linked PDF).",
-  "updated": "2026-09-13T14:25:43.099Z",
+  "updated": "2026-09-14T10:50:27.823Z",
   "items": [
+    {
+      "title": "Trustees Meeting Agenda",
+      "dateISO": "2026-09-15T16:00:00.000Z",
+      "dateLabel": "Sep 15, 2026",
+      "link": "https://www.waynetownship.us/app/download/971652630/September+15+2026.pdf"
+    },
     {
       "title": "Trustees Meeting Agenda",
       "dateISO": "2026-09-01T16:00:00.000Z",
@@ -13,12 +19,6 @@
       "dateISO": "2026-08-18T16:00:00.000Z",
       "dateLabel": "Aug 18, 2026",
       "link": "https://www.waynetownship.us/app/download/971641273/August+18+2026.pdf"
-    },
-    {
-      "title": "Township Meeting Agenda",
-      "dateISO": "2026-08-04T16:00:00.000Z",
-      "dateLabel": "Aug 4, 2026",
-      "link": "https://www.waynetownship.us/app/download/971633979/August+4+2026.pdf"
     }
   ]
 }
