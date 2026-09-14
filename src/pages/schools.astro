@@ -9,6 +9,7 @@ const sources = [
   { name: "Waynesville Spartans Athletics", href: "https://www.waynesvillesports.com/", what: "team schedules, results, athletic news" },
   { name: "MaxPreps — Waynesville", href: "https://www.maxpreps.com/oh/waynesville/waynesville-spartans/", what: "structured scores & schedules, all sports" },
   { name: "Mary L. Cook Public Library", href: "https://www.mlcook.lib.oh.us/", what: "kids & teen programs, community events" },
+  { name: "Wayne Local Schools — Facebook", href: "https://www.facebook.com/waynelocalschools", what: "closings, delays, events & announcements (auto-pulled)" },
 ];
 
 const items = await sectionFeed(["Schools", "This week in sports"], { limit: 24 });

@@ -52,6 +52,8 @@ let shopsEvents = [];
 try { shopsEvents = (await readJSON("src/data/shops-events.json")).items ?? []; } catch { /* optional */ }
 let villageMinutes = null;
 try { villageMinutes = (await readJSON("src/data/village-minutes.json")).item ?? null; } catch { /* optional */ }
+let fbSchools = [];
+try { fbSchools = (await readJSON("src/data/fb-schools.json")).items ?? []; } catch { /* optional */ }
 
 const longDate = now.toLocaleDateString("en-US", {
   weekday: "long", month: "long", day: "numeric", year: "numeric", timeZone: "America/New_York",
@@ -75,6 +77,7 @@ const SOURCES = {
     "District news — https://www.wayne-local.com/district-news",
     "Spartans / MaxPreps — https://www.maxpreps.com/oh/waynesville/waynesville-spartans/",
     "Mary L. Cook Library — https://www.mlcook.lib.oh.us/",
+    "Wayne Local Schools Facebook (auto-pulled below via fb-schools.json) — https://www.facebook.com/waynelocalschools",
   ],
   "Local Government": [
     "Commissioners agendas/minutes — https://commissioners.warrencountyohio.gov/News/AgendaMinutes/Index",
@@ -139,6 +142,14 @@ const sportsBlock = (sportsResultsBlock || sportsUpcomingBlock)
 
 const libraryBlock = libraryEvents.length
   ? libraryEvents.map((e) => `- **${e.dateLabel}** — [${e.title}](${e.link})`).join("\n")
+  : null;
+
+// Facebook is robots-blocked, so the writer can't open the posts — the excerpt
+// here must carry the substance. Summarize + attribute to the district + link
+// the post; never copy verbatim.
+const fbBlock = fbSchools.length
+  ? "**From Wayne Local Schools on Facebook** (the district's own posts — summarize, attribute, link; don't copy verbatim):\n" +
+    fbSchools.slice(0, 6).map((p) => `- **${p.dateLabel}** — ${p.title} ${p.excerpt} ([post](${p.link}))`).join("\n")
   : null;
 
 const shopsBlock = shopsEvents.length
@@ -207,7 +218,7 @@ ${weatherBlock ?? "TODO — weather unavailable this morning; check https://fore
 ## Schools
 TODO — Wayne Local board, Spartans, closings, library programs. Check:
 ${listSrc("Schools")}
-${libraryBlock ? `\n**Library programs** (Mary L. Cook Public Library)\n${libraryBlock}\n` : ""}
+${fbBlock ? `\n${fbBlock}\n` : ""}${libraryBlock ? `\n**Library programs** (Mary L. Cook Public Library)\n${libraryBlock}\n` : ""}
 ${sportsBlock ? `\n## This week in sports\n${sportsBlock}\n` : ""}
 ## Local government
 Next up: **${meeting.body}**, ${meeting.whenLabel} — [agenda](${meeting.source}).
