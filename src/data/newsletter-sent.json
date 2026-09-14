@@ -1,0 +1,6 @@
+{
+  "_note": "Local record of the last edition emailed to subscribers (written by scripts/send-newsletter.mjs). The authoritative duplicate check is against Buttondown itself; this is the fallback.",
+  "lastSent": null,
+  "sentAt": null,
+  "subject": null
+}
