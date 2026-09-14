@@ -5,10 +5,37 @@
       "title": "Toddler Trek: Butterflies and Moths at Armco Park",
       "dateISO": "2026-09-14T10:30:00-04:00",
       "dateLabel": "Mon, Sep 14 · 10:30–11:30 AM",
-      "venue": "Armco Park, Waynesville",
+      "venue": "Armco Park – Shelter 30, Lebanon",
       "category": "Outdoors",
       "source": "https://www.warrencountyparks.com/events/",
       "note": "Warren County Park District program for ages 2-6 and a grown-up"
+    },
+    {
+      "title": "Wayne Local Schools Board of Education — Regular Meeting",
+      "dateISO": "2026-09-14T18:00:00-04:00",
+      "dateLabel": "Mon, Sep 14 · 6:00 PM",
+      "venue": "Performing Arts Center, second floor, 625 Dayton Rd., Waynesville",
+      "category": "Local Government",
+      "source": "https://www.wayne-local.com/",
+      "note": "Monthly regular board meeting; the district says everyone is welcome to attend"
+    },
+    {
+      "title": "Warren County Commissioners — Weekly Session",
+      "dateISO": "2026-09-15T09:00:00-04:00",
+      "dateLabel": "Tue, Sep 15 · 9:00 AM",
+      "venue": "406 Justice Dr, Lebanon",
+      "category": "Government",
+      "source": "https://commissioners.warrencountyohio.gov/News/AgendaMinutes/Index",
+      "note": "Commissioners meet every Tuesday at 9 AM; standing weekly pattern verified on the county site 2026-09-09"
+    },
+    {
+      "title": "Warren County Board of Park Commissioners Meeting",
+      "dateISO": "2026-09-18T08:00:00-04:00",
+      "dateLabel": "Fri, Sep 18 · 8:00–9:30 AM",
+      "venue": "Armco Park - 1267 Building, Lebanon",
+      "category": "Local Government",
+      "source": "https://www.warrencountyparks.com/events/",
+      "note": "Park Commissioners meet the third Friday of each month to oversee Park District policy, finances, and projects"
     },
     {
       "title": "Clean Sweep of the Great Miami River",
@@ -20,6 +47,15 @@
       "note": "Annual volunteer river cleanup on the Great Miami River; free t-shirts for those who pre-register by Sep 1; Scout badges available"
     },
     {
+      "title": "Ohio Renaissance Festival — Pirates Weekend",
+      "dateISO": "2026-09-19T10:30:00-04:00",
+      "dateLabel": "Sep 19–20 · 10:30 AM–7:00 PM",
+      "venue": "Renaissance Park, Waynesville",
+      "category": "Festival",
+      "source": "https://renfestival.com/",
+      "note": "Themed weekend during the festival's regular Sep 5–Nov 1, 2026 season"
+    },
+    {
       "title": "Waynesville Fall Fest — Opening Day",
       "dateISO": "2026-09-19T11:00:00-04:00",
       "dateLabel": "Opens Sat, Sep 19 · Sat/Sun through Nov 1 (Sat 11–6, Sun 12–6)",
@@ -29,13 +65,13 @@
       "note": "Corn maze, mini golf, petting farm, and other fall activities; $16 adult / $14 ages 10 & under daily admission. Not affiliated with Hisey Fall Fest."
     },
     {
-      "title": "Ohio Renaissance Festival — Pirates Weekend",
-      "dateISO": "2026-09-19T10:30:00-04:00",
-      "dateLabel": "Sep 19–20 · 10:30 AM–7:00 PM",
-      "venue": "Renaissance Park, Waynesville",
-      "category": "Festival",
-      "source": "https://renfestival.com/",
-      "note": "Themed weekend during the festival's regular Sep 5–Nov 1, 2026 season"
+      "title": "Fox Hollow Rodeo — Bull Riding",
+      "dateISO": "2026-09-19T18:00:00-04:00",
+      "dateLabel": "Every Saturday · office opens 5 PM, show 6 PM (next: Sep 19)",
+      "venue": "Fox Hollow Rodeo, Waynesville",
+      "category": "Rodeo",
+      "source": "https://foxhollowrodeo.com/",
+      "note": "Bull riding, barrel racing, mutton bustin' — year-round, rain or shine"
     },
     {
       "title": "Business to Business Networking Mixer",
@@ -65,15 +101,6 @@
       "note": "Warren County Park District family fishing program"
     },
     {
-      "title": "Full Moon Hike at Gulley Park",
-      "dateISO": "2026-09-27T21:00:00-04:00",
-      "dateLabel": "Sun, Sep 27 · 9:00–10:00 PM",
-      "venue": "Gulley Park, Clarksville",
-      "category": "Outdoors",
-      "source": "https://www.warrencountyparks.com/events/",
-      "note": "Easy-terrain night hike under the full moon, ages 4+; registration ends 24 hrs prior"
-    },
-    {
       "title": "Ohio Renaissance Festival — Highland Weekend",
       "dateISO": "2026-09-26T10:30:00-04:00",
       "dateLabel": "Sep 26–27 · 10:30 AM–7:00 PM",
@@ -83,13 +110,22 @@
       "note": "Themed weekend during the festival's regular Sep 5–Nov 1, 2026 season"
     },
     {
-      "title": "Toddler Trek: Spider Kid at Landen-Deerfield Park",
-      "dateISO": "2026-10-07T10:30:00-04:00",
-      "dateLabel": "Wed, Oct 7 · 10:30–11:30 AM",
-      "venue": "Landen-Deerfield Park, 2258 US-22/3, Maineville",
+      "title": "Full Moon Hike at Gulley Park",
+      "dateISO": "2026-09-27T21:00:00-04:00",
+      "dateLabel": "Sun, Sep 27 · 9:00–10:00 PM",
+      "venue": "Gulley Park, Clarksville",
       "category": "Outdoors",
       "source": "https://www.warrencountyparks.com/events/",
-      "note": "Warren County Park District toddler nature program"
+      "note": "Easy-terrain night hike under the full moon, ages 4+; registration ends 24 hrs prior"
+    },
+    {
+      "title": "Ohio Renaissance Festival — Viking Weekend",
+      "dateISO": "2026-10-03T10:30:00-04:00",
+      "dateLabel": "Oct 3–4 · 10:30 AM–7:00 PM",
+      "venue": "Renaissance Park, Waynesville",
+      "category": "Festival",
+      "source": "https://renfestival.com/",
+      "note": "Themed weekend during the festival's regular Sep 5–Nov 1, 2026 season"
     },
     {
       "title": "Hisey Fall Fest",
@@ -110,13 +146,13 @@
       "note": "Second WCAS night sky tour date this fall; free astronomy presentation and stargazing, open to the public, no registration required; check WCAS site/Facebook for weather cancellations"
     },
     {
-      "title": "Ohio Renaissance Festival — Viking Weekend",
-      "dateISO": "2026-10-03T10:30:00-04:00",
-      "dateLabel": "Oct 3–4 · 10:30 AM–7:00 PM",
-      "venue": "Renaissance Park, Waynesville",
-      "category": "Festival",
-      "source": "https://renfestival.com/",
-      "note": "Themed weekend during the festival's regular Sep 5–Nov 1, 2026 season"
+      "title": "Toddler Trek: Spider Kid at Landen-Deerfield Park",
+      "dateISO": "2026-10-07T10:30:00-04:00",
+      "dateLabel": "Wed, Oct 7 · 10:30–11:30 AM",
+      "venue": "Landen-Deerfield Park, 2258 US-22/3, Maineville",
+      "category": "Outdoors",
+      "source": "https://www.warrencountyparks.com/events/",
+      "note": "Warren County Park District toddler nature program"
     },
     {
       "title": "Ohio Sauerkraut Festival",
@@ -135,6 +171,15 @@
       "category": "Festival",
       "source": "https://renfestival.com/",
       "note": "Themed weekend during the festival's regular Sep 5–Nov 1, 2026 season; coincides with Sauerkraut Festival weekend"
+    },
+    {
+      "title": "Business to Business Networking Mixer — October",
+      "dateISO": "2026-10-28T17:00:00-04:00",
+      "dateLabel": "Wed, Oct 28 · 5:00 PM",
+      "venue": "Village Family Restaurant / Villager Pub, Waynesville",
+      "category": "Chamber",
+      "source": "https://www.waynesvilleohio.com/events",
+      "note": "Waynesville Area Chamber of Commerce networking mixer"
     },
     {
       "title": "Village Trick or Treat",
@@ -164,42 +209,6 @@
       "source": "https://www.sixflags.com/kingsisland/events",
       "evergreen": true,
       "note": "Amusement park; seasonal festivals & concerts"
-    },
-    {
-      "title": "Warren County Commissioners — Weekly Session",
-      "dateISO": "2026-09-15T09:00:00-04:00",
-      "dateLabel": "Tue, Sep 15 · 9:00 AM",
-      "venue": "406 Justice Dr, Lebanon",
-      "category": "Government",
-      "source": "https://commissioners.warrencountyohio.gov/News/AgendaMinutes/Index",
-      "note": "Commissioners meet every Tuesday at 9 AM; standing weekly pattern verified on the county site 2026-09-09"
-    },
-    {
-      "title": "Warren County Board of Park Commissioners Meeting",
-      "dateISO": "2026-09-18T08:00:00-04:00",
-      "dateLabel": "Fri, Sep 18 · 8:00–9:30 AM",
-      "venue": "Armco Park - 1267 Building, Lebanon",
-      "category": "Local Government",
-      "source": "https://www.warrencountyparks.com/events/",
-      "note": "Park Commissioners meet the third Friday of each month to oversee Park District policy, finances, and projects"
-    },
-    {
-      "title": "Fox Hollow Rodeo — Bull Riding",
-      "dateISO": "2026-09-19T18:00:00-04:00",
-      "dateLabel": "Every Saturday · office opens 5 PM, show 6 PM (next: Sep 19)",
-      "venue": "Fox Hollow Rodeo, Waynesville",
-      "category": "Rodeo",
-      "source": "https://foxhollowrodeo.com/",
-      "note": "Bull riding, barrel racing, mutton bustin' — year-round, rain or shine"
-    },
-    {
-      "title": "Business to Business Networking Mixer — October",
-      "dateISO": "2026-10-28T17:00:00-04:00",
-      "dateLabel": "Wed, Oct 28 · 5:00 PM",
-      "venue": "Village Family Restaurant / Villager Pub, Waynesville",
-      "category": "Chamber",
-      "source": "https://www.waynesvilleohio.com/events",
-      "note": "Waynesville Area Chamber of Commerce networking mixer"
     }
   ]
 }
