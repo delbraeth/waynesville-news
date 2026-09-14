@@ -26,14 +26,49 @@ const OCR_SCALE = 3; // low-res renders produce garbled OCR; this range tested c
 const write = (data, note) =>
   writeFile(OUT, JSON.stringify({ _note: note, updated: new Date().toISOString(), ...data }, null, 2) + "\n");
 
-function cleanContext(raw, isFromStart) {
-  // strip angle brackets too — OCR text goes into auto-published Markdown
-  let context = raw.replace(/\s*\n\s*/g, " ").replace(/--\s*\d+ of \d+\s*--/g, "").replace(/[<>]/g, "").trim();
-  if (!isFromStart) {
-    const firstSpace = context.indexOf(" ");
-    if (firstSpace > 0 && firstSpace < 40) context = context.slice(firstSpace + 1);
-  }
-  return context;
+const MONTHS = "January|February|March|April|May|June|July|August|September|October|November|December";
+
+// The minutes are a scan of a bordered table, so OCR emits the borders and
+// margin marks as stray characters. Strip them before the text reaches
+// auto-published Markdown (pipes would also break table rendering).
+function scrubOcr(s) {
+  return s
+    .replace(/[<>|]/g, " ")
+    .replace(/--\s*\d+ of \d+\s*--/g, "")
+    // superscript ordinals scan as quotes/percent: August 17" → August 17
+    .replace(new RegExp(`(?:${MONTHS})\\s+\\d{1,2}\\s*["'’%]+`, "gi"), (t) => t.replace(/\s*["'’%]+$/, ""))
+    .replace(new RegExp(`((?:${MONTHS})\\s+\\d{1,2})\\s+(\\d{4})`, "gi"), "$1, $2")
+    .split("\n")
+    .filter((line) => {
+      const t = line.trim().split(/\s+/).filter(Boolean);
+      if (t.length === 1 && /^\d{1,3}$/.test(t[0])) return false; // stray page number
+      // rule/border rows OCR as runs of tiny letter tokens ("Ee A A TT TTT")
+      return !(t.length >= 2 && !t.some((w) => /[A-Za-z]{4,}/.test(w)) && !t.some((w) => /\d/.test(w)));
+    })
+    .join("\n")
+    .replace(/\s+[:;!i’']\s*$/gm, "") // margin marks stranded at line ends
+    .replace(/[ \t]{2,}/g, " ");
+}
+
+// Snap the start of a vote's context to a structural boundary. A fixed-width
+// backward slice used to cut through an item heading — which once dropped
+// "Ordinance 2026-034" and left the subordinate "Ordinance No. 2026-029" it
+// amends, attributing the vote to the wrong ordinance.
+const HEADING_RE = /(?:^|\n)[ \t]*(?:Ordinance|Resolution)\s+(?:No\.\s*)?\d{4}-\d{2,4}/gi;
+const MOTION_RE = /(?:^|\n)[ \t]*(?:Mr|Mrs|Ms|Mayor|Mer|Mis)\.?\s+[A-Za-z]+\s+(?:moved|motioned|made a motion)/gi;
+
+function lastMatchIndex(re, hay) {
+  re.lastIndex = 0;
+  let m, last = -1;
+  while ((m = re.exec(hay))) last = m.index + (m[0].startsWith("\n") ? 1 : 0);
+  return last;
+}
+
+function cleanContext(win) {
+  let rel = lastMatchIndex(HEADING_RE, win);
+  if (rel < 0) rel = lastMatchIndex(MOTION_RE, win);
+  if (rel < 0) rel = Math.max(0, win.length - 350);
+  return scrubOcr(win.slice(rel)).replace(/\s*\n\s*/g, " ").trim();
 }
 
 async function findLatestAgenda() {
@@ -108,8 +143,8 @@ async function main() {
   let m;
   let prevEnd = 0;
   while ((m = voteRe.exec(combined))) {
-    const start = Math.max(prevEnd, m.index - 350);
-    const context = cleanContext(combined.slice(start, m.index), start === 0);
+    const start = Math.max(prevEnd, m.index - 800);
+    const context = cleanContext(combined.slice(start, m.index));
     votes.push({ context, motion: m[1].trim(), second: m[2].trim(), rollCall: `${m[3]} ${m[4]}` });
     prevEnd = voteRe.lastIndex;
   }
