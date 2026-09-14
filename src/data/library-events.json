@@ -1,5 +1,42 @@
 {
   "_note": "Mary L. Cook Public Library — upcoming programs from the library's own homepage event feed. Canceled events excluded.",
-  "updated": "2026-09-14T10:50:27.352Z",
-  "items": []
+  "updated": "2026-09-14T16:23:23.068Z",
+  "items": [
+    {
+      "title": "Toddler Time",
+      "dateISO": "2026-09-15T10:30:00Z",
+      "dateLabel": "Tue · Sep 15, 10:30 AM",
+      "link": "https://marylcook-main-oh.whofi.com/calendar/event/325781/"
+    },
+    {
+      "title": "Teen Tuesday (6th-12th Grade)",
+      "dateISO": "2026-09-15T15:00:00Z",
+      "dateLabel": "Tue · Sep 15, 3:00 PM",
+      "link": "https://marylcook-main-oh.whofi.com/calendar/event/325885/"
+    },
+    {
+      "title": "Rapid Readers Book Club",
+      "dateISO": "2026-09-15T16:00:00Z",
+      "dateLabel": "Tue · Sep 15, 4:00 PM",
+      "link": "https://marylcook-main-oh.whofi.com/calendar/event/325793/"
+    },
+    {
+      "title": "Genre Exploration Book Club Meeting",
+      "dateISO": "2026-09-15T17:30:00Z",
+      "dateLabel": "Tue · Sep 15, 5:30 PM",
+      "link": "https://marylcook-main-oh.whofi.com/calendar/event/307602/"
+    },
+    {
+      "title": "Library Regular Board Meeting",
+      "dateISO": "2026-09-15T18:30:00Z",
+      "dateLabel": "Tue · Sep 15, 6:30 PM",
+      "link": "https://marylcook-main-oh.whofi.com/calendar/event/351348/"
+    },
+    {
+      "title": "Baby Bookworms",
+      "dateISO": "2026-09-16T10:30:00Z",
+      "dateLabel": "Wed · Sep 16, 10:30 AM",
+      "link": "https://marylcook-main-oh.whofi.com/calendar/event/325784/"
+    }
+  ]
 }
