@@ -1,6 +1,10 @@
 ---
 interface Props { dateLine?: string; }
-const { dateLine = "Wednesday, August 12, 2026" } = Astro.props;
+// Last-resort fallback only — Base.astro passes the current edition's date. This
+// keeps the masthead from ever showing a stale hardcoded date if used directly.
+const { dateLine = new Intl.DateTimeFormat("en-US", {
+  weekday: "long", month: "long", day: "numeric", year: "numeric", timeZone: "UTC",
+}).format(new Date()) } = Astro.props;
 
 const nav = [
   { label: "Daily Briefs", href: "/briefs/" },

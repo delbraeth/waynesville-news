@@ -264,6 +264,29 @@ main { display: block; padding: 1.5rem 0 3rem; }
 }
 .signup .btn { padding: 0.5rem 0.9rem; margin-top: 0; }
 
+/* ---------- section feed (schools, government, around town, public safety) ---------- */
+.sectionfeed { margin-top: 1.5rem; }
+.sf-item { padding: 1.3rem 0; border-top: 1px solid var(--rule); }
+.sf-item:first-child { border-top: 0; padding-top: 0.25rem; }
+.sf-date {
+  display: inline-block; font-family: var(--font-sans); font-size: 0.72rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.06em; color: var(--accent); margin-bottom: 0.5rem;
+}
+.sf-date:hover { color: var(--accent-deep); text-decoration: none; }
+.sf-body { font-size: 1.05rem; }
+.sf-body > :first-child { margin-top: 0; }
+.sf-body > :last-child { margin-bottom: 0; }
+.sf-body h3, .sf-body h4 { font-size: 1.08rem; margin: 1rem 0 0.3rem; }
+.sf-sources {
+  margin-top: 2.5rem; padding-top: 1.1rem; border-top: 2px solid var(--ink); font-size: 0.9rem;
+}
+.sf-sources h3 {
+  font-family: var(--font-sans); text-transform: uppercase; letter-spacing: 0.08em;
+  font-size: 0.72rem; color: var(--muted); border: 0; padding: 0; margin: 0 0 0.6rem;
+}
+.sf-sources ul { list-style: none; margin: 0; padding: 0; }
+.sf-sources li { margin-bottom: 0.35rem; color: var(--muted); }
+
 /* ---------- responsive ---------- */
 @media (max-width: 640px) {
   .grid2 { grid-template-columns: 1fr; }

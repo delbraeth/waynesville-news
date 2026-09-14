@@ -1,6 +1,8 @@
 ---
 import Base from "../layouts/Base.astro";
-import SectionScaffold from "../components/SectionScaffold.astro";
+import SectionFeed from "../components/SectionFeed.astro";
+import { sectionFeed } from "../lib/sections.js";
+
 const sources = [
   { name: "Wayne Local Board of Education (BoardDocs)", href: "https://go.boarddocs.com/oh/waylo/Board.nsf/Public", what: "official board agendas, minutes & meeting records" },
   { name: "Wayne Local — District News", href: "https://www.wayne-local.com/district-news", what: "closings, staffing, operations, announcements" },
@@ -8,12 +10,16 @@ const sources = [
   { name: "MaxPreps — Waynesville", href: "https://www.maxpreps.com/oh/waynesville/waynesville-spartans/", what: "structured scores & schedules, all sports" },
   { name: "Mary L. Cook Public Library", href: "https://www.mlcook.lib.oh.us/", what: "kids & teen programs, community events" },
 ];
+
+const items = await sectionFeed(["Schools", "This week in sports"], { limit: 24 });
 ---
 <Base title="Schools · Waynesville Daily Brief" showInfoBar={false}>
-  <SectionScaffold
+  <SectionFeed
     title="Schools"
     kicker="Lead Section"
-    intro="Wayne Local board decisions, Spartans sports, closings, and library programs — the beat this community cares about most."
+    intro="Wayne Local board decisions, Spartans sports, closings, and library programs — the beat this community cares about most, pulled from every edition."
+    items={items}
+    showHeading={true}
     sources={sources}
   />
 </Base>

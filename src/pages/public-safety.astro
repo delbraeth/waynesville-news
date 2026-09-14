@@ -1,16 +1,22 @@
 ---
 import Base from "../layouts/Base.astro";
-import SectionScaffold from "../components/SectionScaffold.astro";
+import SectionFeed from "../components/SectionFeed.astro";
+import { sectionFeed } from "../lib/sections.js";
+
 const sources = [
   { name: "Warren County Sheriff", href: "https://sheriff.warrencountyohio.gov/", what: "media releases, alerts" },
   { name: "Warren County Prosecutor — Press", href: "https://prosecutor.warrencountyohio.gov/Public/Press/Index", what: "charges, case outcomes" },
+  { name: "Warren County EMA — Everbridge alerts", href: "https://warrencountyema.com/", what: "severe-weather, road-closure & emergency notifications" },
 ];
+
+const items = await sectionFeed(["Public safety"], { limit: 20 });
 ---
 <Base title="Public Safety · Waynesville Daily Brief" showInfoBar={false}>
-  <SectionScaffold
+  <SectionFeed
     title="Public Safety"
     kicker="Section · Handle With Care"
-    intro="Road reports, weather alerts, and sheriff/prosecutor news — held to a strict standard: presumption of innocence, no naming un-convicted arrestees, human review before anything publishes."
+    intro="Advisories, road and weather alerts, and adjudicated case outcomes — held to a strict standard: presumption of innocence, no naming un-convicted arrestees, no minors, human review before anything publishes."
+    items={items}
     sources={sources}
   />
 </Base>

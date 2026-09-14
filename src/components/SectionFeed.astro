@@ -1,0 +1,50 @@
+---
+interface FeedItem { date: Date; id: string; heading: string; html: string; }
+interface Source { name: string; href: string; what?: string; }
+interface Props {
+  title: string;
+  kicker?: string;
+  intro?: string;
+  items: FeedItem[];
+  showHeading?: boolean;
+  sources?: Source[];
+}
+const { title, kicker = "Section", intro, items, showHeading = false, sources = [] } = Astro.props;
+
+const dfmt = new Intl.DateTimeFormat("en-US", {
+  weekday: "short", month: "long", day: "numeric", year: "numeric", timeZone: "UTC",
+});
+---
+<div class="reading">
+  <p class="kicker">{kicker}</p>
+  <h1>{title}</h1>
+  {intro && <p class="dek">{intro}</p>}
+
+  {items.length === 0 ? (
+    <p class="muted" style="margin-top:1.5rem;">Nothing in this section yet — it fills in as new briefs publish.</p>
+  ) : (
+    <div class="sectionfeed">
+      {items.map((it) => (
+        <article class="sf-item">
+          <a class="sf-date" href={`/briefs/${it.id}/`}>
+            {dfmt.format(it.date)}{showHeading ? ` · ${it.heading}` : ""} →
+          </a>
+          <div class="prose sf-body" set:html={it.html} />
+        </article>
+      ))}
+    </div>
+  )}
+
+  {sources.length > 0 && (
+    <div class="sf-sources">
+      <h3>Sources we watch</h3>
+      <ul>
+        {sources.map((s) => (
+          <li>
+            <a href={s.href} target="_blank" rel="noopener">{s.name}</a>{s.what ? ` — ${s.what}` : ""}
+          </li>
+        ))}
+      </ul>
+    </div>
+  )}
+</div>

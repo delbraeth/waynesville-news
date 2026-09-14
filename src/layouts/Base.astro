@@ -6,7 +6,7 @@ import InfoBar from "../components/InfoBar.astro";
 import SiteFooter from "../components/SiteFooter.astro";
 import { getPublicBriefs } from "../lib/briefs.js";
 
-const { isDemoMode } = await getPublicBriefs();
+const { briefs, isDemoMode } = await getPublicBriefs();
 
 interface Props {
   title?: string;
@@ -20,6 +20,14 @@ const {
   dateLine,
   showInfoBar = true,
 } = Astro.props;
+
+// Masthead date = the current edition (latest published brief), the SAME on every
+// page. Falls back to the build date before any brief exists. Formatted in UTC so
+// a brief's midnight-UTC date always renders as its intended calendar day.
+const editionFmt = new Intl.DateTimeFormat("en-US", {
+  weekday: "long", month: "long", day: "numeric", year: "numeric", timeZone: "UTC",
+});
+const editionDateLine = editionFmt.format(briefs[0]?.data?.date ?? new Date());
 
 const canonical = new URL(Astro.url.pathname, Astro.site);
 const ogImage = new URL("/og.png", Astro.site);
@@ -58,7 +66,7 @@ const ogImage = new URL("/og.png", Astro.site);
   </head>
   <body>
     {isDemoMode && <DemoBanner />}
-    <Masthead dateLine={dateLine} />
+    <Masthead dateLine={dateLine ?? editionDateLine} />
     {showInfoBar && <InfoBar />}
     <main>
       <slot />
