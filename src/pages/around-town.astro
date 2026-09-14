@@ -9,7 +9,9 @@ const sources = [
   { name: "Waynesville Merchants Association", href: "https://waynesvilleshops.com/", what: "downtown shops, the antiques district" },
 ];
 
-const items = await sectionFeed(["Around town"], { limit: 20 });
+// "Business spotlight" = free, editorial profiles of local businesses (coverage,
+// not sponsorship — paid supporters live on /supporters/ and never mix in here).
+const items = await sectionFeed(["Around town", "Business spotlight"], { limit: 20 });
 ---
 <Base title="Around Town · Waynesville Daily Brief" showInfoBar={false}>
   <SectionFeed

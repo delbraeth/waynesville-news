@@ -1,10 +1,12 @@
 ---
 import { getPublicBriefs } from "../lib/briefs.js";
 import site from "../data/site.json";
+import supporters from "../data/supporters.json";
 const year = 2026;
 const { isDemoMode } = await getPublicBriefs();
 const nl = site.newsletter;
 const nlReady = nl && nl.username && nl.username !== "REPLACE_ME";
+const supporterItems = (supporters.items ?? []).filter((s) => s && s.name);
 ---
 <footer class="site-footer">
   <div class="inner">
@@ -27,6 +29,7 @@ const nlReady = nl && nl.username && nl.username !== "REPLACE_ME";
           <li><a href="/government/">Local Government</a></li>
           <li><a href="/around-town/">Around Town</a></li>
           <li><a href="/public-safety/">Public Safety</a></li>
+          <li><a href="/supporters/">Supporters</a></li>
         </ul>
       </div>
       <div>
@@ -57,6 +60,18 @@ const nlReady = nl && nl.username && nl.username !== "REPLACE_ME";
         <p class="small"><a href="/about/">About &amp; contact</a> · editor@waynesville.news</p>
       </div>
     </div>
+    {supporterItems.length > 0 && (
+      <p class="supported-by">
+        <span class="label">Supported by</span>
+        {supporterItems.map((s, i) => (
+          <>
+            {i > 0 && <span class="sep"> · </span>}
+            <a href={s.website || "/supporters/"} target={s.website ? "_blank" : undefined} rel={s.website ? "noopener" : undefined}>{s.name}</a>
+          </>
+        ))}
+        <a class="more" href="/supporters/">All supporters →</a>
+      </p>
+    )}
     <p class="fine">
       © {year} Waynesville Daily Brief · waynesville.news{isDemoMode ? " · Built as a demo — not yet publishing real news." : ""}
     </p>

@@ -287,6 +287,25 @@ main { display: block; padding: 1.5rem 0 3rem; }
 .sf-sources ul { list-style: none; margin: 0; padding: 0; }
 .sf-sources li { margin-bottom: 0.35rem; color: var(--muted); }
 
+/* ---------- supporters (local business directory) ---------- */
+.supporters { list-style: none; margin: 1.5rem 0 0; padding: 0; }
+.supporters li { padding: 0.95rem 0; border-bottom: 1px solid var(--rule); }
+.supporters li:last-child { border-bottom: 0; }
+.supporters .sp-name { font-family: var(--font-serif); font-size: 1.18rem; }
+.supporters .sp-name a { color: var(--ink); }
+.supporters .sp-name a:hover { color: var(--accent); text-decoration: none; }
+.supporters .sp-what { font-size: 0.86rem; color: var(--muted); margin-top: 0.1rem; }
+.supporters .sp-contact { font-family: var(--font-sans); font-size: 0.86rem; margin-top: 0.3rem; }
+.sp-join { margin-top: 2.5rem; padding-top: 1.2rem; border-top: 2px solid var(--ink); }
+.site-footer .supported-by {
+  font-size: 0.8rem; color: var(--muted); margin: 1.4rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule);
+}
+.site-footer .supported-by .label {
+  text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.66rem; font-weight: 700;
+  color: var(--accent); margin-right: 0.5rem;
+}
+.site-footer .supported-by .more { margin-left: 0.7rem; font-weight: 600; white-space: nowrap; }
+
 /* ---------- responsive ---------- */
 @media (max-width: 640px) {
   .grid2 { grid-template-columns: 1fr; }

@@ -230,6 +230,7 @@ ${villageMinutesBlock ? `\n${villageMinutesBlock}\n` : ""}
 ## Around town
 TODO — new businesses, the antiques district. Check:
 ${listSrc("Around Town")}
+(Occasionally write a free \`## Business spotlight\` section — a short editorial profile of a local business. It's coverage, not sponsorship: never tied to the paid Supporters list, and labeled as a spotlight.)
 ${shopsBlock ? `\n**Merchant Association events** (waynesvilleshops.com)\n${shopsBlock}\n` : ""}
 
 ## Public safety

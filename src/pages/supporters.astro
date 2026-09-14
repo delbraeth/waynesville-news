@@ -1,0 +1,56 @@
+---
+import Base from "../layouts/Base.astro";
+import supporters from "../data/supporters.json";
+
+const items = (supporters.items ?? []).filter((s) => s && s.name);
+const telHref = (p: string) => "tel:" + p.replace(/[^\d+]/g, "");
+const prettyUrl = (u: string) => u.replace(/^https?:\/\/(www\.)?/, "").replace(/\/$/, "");
+---
+<Base
+  title="Supporters · Waynesville Daily Brief"
+  description="The local businesses that help keep the Waynesville Daily Brief free and independent."
+  showInfoBar={false}
+>
+  <div class="reading">
+    <p class="kicker">Local business</p>
+    <h1>Supporters</h1>
+    <p class="dek">The local businesses that help keep the Daily Brief free and independent.</p>
+
+    <div class="callout">
+      <strong>How this works.</strong> Supporters back independent local news for Waynesville.
+      They have no say in what we cover or how — coverage decisions are the editor's alone,
+      and supporting the Brief never buys a story. This is a directory, not an endorsement.
+    </div>
+
+    {items.length === 0 ? (
+      <p class="muted" style="margin-top:1.5rem;">Our founding supporters will be listed here soon.</p>
+    ) : (
+      <ul class="supporters">
+        {items.map((s) => (
+          <li>
+            <div class="sp-name">
+              {s.website ? <a href={s.website} target="_blank" rel="noopener">{s.name}</a> : s.name}
+            </div>
+            {s.what && <div class="sp-what">{s.what}</div>}
+            {(s.phone || s.website) && (
+              <div class="sp-contact">
+                {s.phone && <a href={telHref(s.phone)}>{s.phone}</a>}
+                {s.phone && s.website && <span class="muted"> · </span>}
+                {s.website && <a href={s.website} target="_blank" rel="noopener">{prettyUrl(s.website)}</a>}
+              </div>
+            )}
+          </li>
+        ))}
+      </ul>
+    )}
+
+    <div class="sp-join">
+      <h3>Become a founding supporter</h3>
+      <p>
+        We're starting with a small group of local businesses. If you'd like to help keep
+        independent local news going in Waynesville,
+        <a href="mailto:editor@waynesville.news?subject=Supporting%20the%20Waynesville%20Daily%20Brief">email the editor</a>.
+      </p>
+    </div>
+  </div>
+</Base>
