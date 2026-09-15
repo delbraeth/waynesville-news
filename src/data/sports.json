@@ -1,6 +1,6 @@
 {
   "_note": "Waynesville Spartans schedule + results (MaxPreps), past 7 days / next 7 days. Scraped directly from each sport's own schedule page (football, volleyball, soccer -- varsity + JV), not the school hub page, which has been observed to silently omit some contests. Scores and matchups reproduced verbatim from MaxPreps' own markup; each links to their game page.",
-  "updated": "2026-09-14T16:23:22.421Z",
+  "updated": "2026-09-15T15:03:10.649Z",
   "results": [
     {
       "dateISO": "2026-09-08T18:00:00",
@@ -67,6 +67,39 @@
       "result": "L",
       "isHome": false,
       "link": "https://www.maxpreps.com/oh/volleyball/match/clinton-massie-clarksville-vs-waynesville/9-12-2026/?c=232dc243-3a5e-4b5c-af00-5967391b4722"
+    },
+    {
+      "dateISO": "2026-09-14T17:30:00",
+      "sport": "Boys Soccer",
+      "level": "JV",
+      "opponent": "CHCA",
+      "wayneScore": 0,
+      "opponentScore": 3,
+      "result": "L",
+      "isHome": true,
+      "link": "https://www.maxpreps.com/oh/soccer/match/cincinnati-hills-christian-academy-vs-waynesville/jv/9-14-2026/?c=d83db031-d2e4-4b6e-b3f4-ed7af6fa41fb"
+    },
+    {
+      "dateISO": "2026-09-14T19:00:00",
+      "sport": "Girls Soccer",
+      "level": "Varsity",
+      "opponent": "Archbishop Alter",
+      "wayneScore": 2,
+      "opponentScore": 6,
+      "result": "L",
+      "isHome": false,
+      "link": "https://www.maxpreps.com/oh/soccer/girls/match/archbishop-alter-knights-dayton-vs-waynesville/9-14-2026/?c=76aa40e7-c50d-4591-bc3e-c42d44ebad18"
+    },
+    {
+      "dateISO": "2026-09-14T19:15:00",
+      "sport": "Boys Soccer",
+      "level": "Varsity",
+      "opponent": "CHCA",
+      "wayneScore": 1,
+      "opponentScore": 2,
+      "result": "L",
+      "isHome": true,
+      "link": "https://www.maxpreps.com/oh/soccer/match/cincinnati-hills-christian-academy-vs-waynesville/9-14-2026/?c=7d161cef-e5de-4f39-976f-6480c16b9830"
     }
   ],
   "upcoming": [
@@ -124,39 +157,6 @@
       "result": null,
       "isHome": false,
       "link": "https://www.maxpreps.com/oh/soccer/girls/match/archbishop-alter-knights-dayton-vs-waynesville/jv/9-14-2026/?c=a51b25ab-28b4-4918-a273-74254d086d5f"
-    },
-    {
-      "dateISO": "2026-09-14T17:30:00",
-      "sport": "Boys Soccer",
-      "level": "JV",
-      "opponent": "CHCA",
-      "wayneScore": null,
-      "opponentScore": null,
-      "result": null,
-      "isHome": true,
-      "link": "https://www.maxpreps.com/oh/soccer/match/cincinnati-hills-christian-academy-vs-waynesville/jv/9-14-2026/?c=d83db031-d2e4-4b6e-b3f4-ed7af6fa41fb"
-    },
-    {
-      "dateISO": "2026-09-14T19:00:00",
-      "sport": "Girls Soccer",
-      "level": "Varsity",
-      "opponent": "Archbishop Alter",
-      "wayneScore": null,
-      "opponentScore": null,
-      "result": null,
-      "isHome": false,
-      "link": "https://www.maxpreps.com/oh/soccer/girls/match/archbishop-alter-knights-dayton-vs-waynesville/9-14-2026/?c=76aa40e7-c50d-4591-bc3e-c42d44ebad18"
-    },
-    {
-      "dateISO": "2026-09-14T19:15:00",
-      "sport": "Boys Soccer",
-      "level": "Varsity",
-      "opponent": "CHCA",
-      "wayneScore": null,
-      "opponentScore": null,
-      "result": null,
-      "isHome": true,
-      "link": "https://www.maxpreps.com/oh/soccer/match/cincinnati-hills-christian-academy-vs-waynesville/9-14-2026/?c=7d161cef-e5de-4f39-976f-6480c16b9830"
     },
     {
       "dateISO": "2026-09-15T17:30:00",
@@ -267,6 +267,61 @@
       "result": null,
       "isHome": true,
       "link": "https://www.maxpreps.com/oh/football/game/oakwood-dayton-vs-waynesville/jv/9-19-2026/?c=90e2478c-f269-42b0-a2ee-0cadaaaa1f84"
+    },
+    {
+      "dateISO": "2026-09-21T17:30:00",
+      "sport": "Volleyball",
+      "level": "JV",
+      "opponent": "Carroll",
+      "wayneScore": null,
+      "opponentScore": null,
+      "result": null,
+      "isHome": false,
+      "link": "https://www.maxpreps.com/oh/volleyball/match/carroll-dayton-vs-waynesville/jv/9-21-2026/?c=0dc9c12c-710e-4e0f-a504-e83b323ea547"
+    },
+    {
+      "dateISO": "2026-09-21T17:30:00",
+      "sport": "Boys Soccer",
+      "level": "JV",
+      "opponent": "Centerville",
+      "wayneScore": null,
+      "opponentScore": null,
+      "result": null,
+      "isHome": false,
+      "link": "https://www.maxpreps.com/oh/soccer/match/centerville-vs-waynesville/jv/9-21-2026/?c=36218d17-25bf-4e92-ae25-e6faaffb6fb5"
+    },
+    {
+      "dateISO": "2026-09-21T17:30:00",
+      "sport": "Girls Soccer",
+      "level": "JV",
+      "opponent": "Miamisburg",
+      "wayneScore": null,
+      "opponentScore": null,
+      "result": null,
+      "isHome": true,
+      "link": "https://www.maxpreps.com/oh/soccer/girls/match/miamisburg-vs-waynesville/jv/9-21-2026/?c=9b60bcae-60c3-4441-a160-36e7e888b6fe"
+    },
+    {
+      "dateISO": "2026-09-21T18:30:00",
+      "sport": "Volleyball",
+      "level": "Varsity",
+      "opponent": "Carroll",
+      "wayneScore": null,
+      "opponentScore": null,
+      "result": null,
+      "isHome": false,
+      "link": "https://www.maxpreps.com/oh/volleyball/match/carroll-dayton-vs-waynesville/9-21-2026/?c=2c19acae-1947-453f-a30a-dc49d11db45c"
+    },
+    {
+      "dateISO": "2026-09-21T19:15:00",
+      "sport": "Girls Soccer",
+      "level": "Varsity",
+      "opponent": "Miamisburg",
+      "wayneScore": null,
+      "opponentScore": null,
+      "result": null,
+      "isHome": true,
+      "link": "https://www.maxpreps.com/oh/soccer/girls/match/miamisburg-vs-waynesville/9-21-2026/?c=af132852-0887-4845-8b56-40f527d45962"
     }
   ]
 }
