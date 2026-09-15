@@ -1,6 +1,5 @@
 {
-  "_note": "Local record of the last edition emailed to subscribers (written by scripts/send-newsletter.mjs). The authoritative duplicate check is against Buttondown itself; this is the fallback.",
-  "lastSent": null,
-  "sentAt": null,
-  "subject": null
+  "lastSent": "2026-09-15",
+  "sentAt": "2026-09-15T10:52:33.825Z",
+  "subject": "Volleyball hosts Madison tonight as township trustees and the library board both meet"
 }
