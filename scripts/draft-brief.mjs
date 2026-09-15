@@ -148,7 +148,7 @@ const libraryBlock = libraryEvents.length
 // here must carry the substance. Summarize + attribute to the district + link
 // the post; never copy verbatim.
 const fbBlock = fbSchools.length
-  ? "**From Wayne Local Schools on Facebook** (the district's own posts — summarize, attribute, link; don't copy verbatim):\n" +
+  ? "**From Wayne Local Schools on Facebook**\n" +
     fbSchools.slice(0, 6).map((p) => `- **${p.dateLabel}** — ${p.title} ${p.excerpt} ([post](${p.link}))`).join("\n")
   : null;
 
