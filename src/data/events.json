@@ -2,24 +2,6 @@
   "_note": "Real venues and sources, verified against each listed source on 2026-09-14 (daily automated refresh). Recurring items (rodeo, commissioners) show the next occurrence.",
   "items": [
     {
-      "title": "Toddler Trek: Butterflies and Moths at Armco Park",
-      "dateISO": "2026-09-14T10:30:00-04:00",
-      "dateLabel": "Mon, Sep 14 · 10:30–11:30 AM",
-      "venue": "Armco Park – Shelter 30, Lebanon",
-      "category": "Outdoors",
-      "source": "https://www.warrencountyparks.com/events/",
-      "note": "Warren County Park District program for ages 2-6 and a grown-up"
-    },
-    {
-      "title": "Wayne Local Schools Board of Education — Regular Meeting",
-      "dateISO": "2026-09-14T18:00:00-04:00",
-      "dateLabel": "Mon, Sep 14 · 6:00 PM",
-      "venue": "Performing Arts Center, second floor, 625 Dayton Rd., Waynesville",
-      "category": "Local Government",
-      "source": "https://www.wayne-local.com/",
-      "note": "Monthly regular board meeting; the district says everyone is welcome to attend"
-    },
-    {
       "title": "Warren County Commissioners — Weekly Session",
       "dateISO": "2026-09-15T09:00:00-04:00",
       "dateLabel": "Tue, Sep 15 · 9:00 AM",
@@ -72,6 +54,24 @@
       "category": "Rodeo",
       "source": "https://foxhollowrodeo.com/",
       "note": "Bull riding, barrel racing, mutton bustin' — year-round, rain or shine"
+    },
+    {
+      "title": "Monarch Family Story Time at Mason Public Library",
+      "dateISO": "2026-09-22T19:00:00-04:00",
+      "dateLabel": "Tue, Sep 22 · 7:00–8:00 PM",
+      "venue": "Mason Public Library, 200 Reading Rd, Mason",
+      "category": "Family",
+      "source": "https://www.warrencountyparks.com/events/",
+      "note": "Warren County Park District naturalists lead a free family story time on monarchs; ages 2-10 with an adult, no pre-registration"
+    },
+    {
+      "title": "Monarch Story Time and Craft at Salem Twp Public Library",
+      "dateISO": "2026-09-23T11:00:00-04:00",
+      "dateLabel": "Wed, Sep 23 · 11:00–11:30 AM",
+      "venue": "Salem Twp Public Library",
+      "category": "Family",
+      "source": "https://www.warrencountyparks.com/events/",
+      "note": "Warren County Park District naturalist program pairing a monarch story with a craft"
     },
     {
       "title": "Business to Business Networking Mixer",
