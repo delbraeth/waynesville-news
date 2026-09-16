@@ -1,6 +1,6 @@
 {
   "_note": "Waynesville Spartans schedule + results (MaxPreps), past 7 days / next 7 days. Scraped directly from each sport's own schedule page (football, volleyball, soccer -- varsity + JV), not the school hub page, which has been observed to silently omit some contests. Scores and matchups reproduced verbatim from MaxPreps' own markup; each links to their game page.",
-  "updated": "2026-09-16T10:50:51.526Z",
+  "updated": "2026-09-16T15:00:11.204Z",
   "results": [
     {
       "dateISO": "2026-09-10T18:00:00",
@@ -89,6 +89,17 @@
       "result": "L",
       "isHome": true,
       "link": "https://www.maxpreps.com/oh/soccer/match/cincinnati-hills-christian-academy-vs-waynesville/9-14-2026/?c=7d161cef-e5de-4f39-976f-6480c16b9830"
+    },
+    {
+      "dateISO": "2026-09-15T18:30:00",
+      "sport": "Volleyball",
+      "level": "Varsity",
+      "opponent": "Madison*",
+      "wayneScore": 3,
+      "opponentScore": 1,
+      "result": "W",
+      "isHome": true,
+      "link": "https://www.maxpreps.com/oh/volleyball/match/madison-middletown-vs-waynesville/9-15-2026/?c=9ce30e7b-0634-48d6-8096-a21c9eaef717"
     }
   ],
   "upcoming": [
@@ -157,17 +168,6 @@
       "result": null,
       "isHome": true,
       "link": "https://www.maxpreps.com/oh/volleyball/match/madison-middletown-vs-waynesville/jv/9-15-2026/?c=c6ad11df-36aa-47f4-85af-3862bbfd9330"
-    },
-    {
-      "dateISO": "2026-09-15T18:30:00",
-      "sport": "Volleyball",
-      "level": "Varsity",
-      "opponent": "Madison*",
-      "wayneScore": null,
-      "opponentScore": null,
-      "result": null,
-      "isHome": true,
-      "link": "https://www.maxpreps.com/oh/volleyball/match/madison-middletown-vs-waynesville/9-15-2026/?c=9ce30e7b-0634-48d6-8096-a21c9eaef717"
     },
     {
       "dateISO": "2026-09-17T17:30:00",
