@@ -1,15 +1,6 @@
 {
-  "_note": "Real venues and sources, verified against each listed source on 2026-09-14 (daily automated refresh). Recurring items (rodeo, commissioners) show the next occurrence.",
+  "_note": "Real venues and sources, verified against each listed source on 2026-09-16 (daily automated refresh). Recurring items (rodeo, commissioners) show the next occurrence.",
   "items": [
-    {
-      "title": "Warren County Commissioners — Weekly Session",
-      "dateISO": "2026-09-15T09:00:00-04:00",
-      "dateLabel": "Tue, Sep 15 · 9:00 AM",
-      "venue": "406 Justice Dr, Lebanon",
-      "category": "Government",
-      "source": "https://commissioners.warrencountyohio.gov/News/AgendaMinutes/Index",
-      "note": "Commissioners meet every Tuesday at 9 AM; standing weekly pattern verified on the county site 2026-09-09"
-    },
     {
       "title": "Warren County Board of Park Commissioners Meeting",
       "dateISO": "2026-09-18T08:00:00-04:00",
@@ -54,6 +45,15 @@
       "category": "Rodeo",
       "source": "https://foxhollowrodeo.com/",
       "note": "Bull riding, barrel racing, mutton bustin' — year-round, rain or shine"
+    },
+    {
+      "title": "Warren County Commissioners — Weekly Session",
+      "dateISO": "2026-09-22T09:00:00-04:00",
+      "dateLabel": "Tue, Sep 22 · 9:00 AM",
+      "venue": "406 Justice Dr, Lebanon",
+      "category": "Government",
+      "source": "https://commissioners.warrencountyohio.gov/News/AgendaMinutes/Index",
+      "note": "Commissioners meet every Tuesday at 9 AM; standing weekly pattern verified on the county site"
     },
     {
       "title": "Monarch Family Story Time at Mason Public Library",

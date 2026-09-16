@@ -1,7 +1,21 @@
 {
   "_note": "Recent Wayne Local Schools Facebook posts via rss.app bridge. Title + link + short excerpt; the district's own words. Fail-safe: kept from last run if the bridge is down.",
-  "updated": "2026-09-15T10:50:36.695Z",
+  "updated": "2026-09-16T10:50:16.465Z",
   "items": [
+    {
+      "title": "Today is National IT Professionals Day! We're recognizing our amazing IT pros who keep our technology running smoothly,...",
+      "link": "https://www.facebook.com/waynelocalschools/posts/pfbid02sAeVuEESfRdXiPEAAkTVfH5K1gjfrSaND6f14AB3qA67kB8Dee1NwFUiR6zsqSftl",
+      "date": "Tue, 15 Sep 2026 20:33:28 GMT",
+      "dateLabel": "Tue, Sep 15",
+      "excerpt": "our systems secure, and our staff and students connected. Thank you, Nick Jones and Kory Stilwell, for all you do for Wayne Local Schools!🧡🖤"
+    },
+    {
+      "title": "Wayne Local Schools earned an overall 4.5-star rating on the 2025-26 Ohio School Report Card. The rating reflects impres...",
+      "link": "https://www.facebook.com/waynelocalschools/posts/pfbid02heUrSYHvpyR7xKA1Je543Bmh3Mxeju6KPaxdc1LeAu1JPksbRLgyCZLhVm9kprpDl",
+      "date": "Tue, 15 Sep 2026 18:58:05 GMT",
+      "dateLabel": "Tue, Sep 15",
+      "excerpt": "sive performance across the district and the continued dedication of our students and staff. Here are the results at the building level: ⭐⭐⭐⭐⭐Waynesville High School earned 5 stars. ⭐⭐⭐⭐⭐Waynesville Elementary earned 5 stars. ⭐⭐⭐⭐ Waynesville Middle School earned 4 stars, up from 3.5 stars last…"
+    },
     {
       "title": "The rain cleared; the stars came out, and WHS students had a perfect Homecoming night at Fall Fest, with more than 400 s...",
       "link": "https://www.facebook.com/waynelocalschools/posts/pfbid0xhQ3ET9asoHTAR3Neo5D1o9EnywEq22c6vePXvcvNwBhn729fGP1Uw6kBaRC9a1Wl",
@@ -43,20 +57,6 @@
       "date": "Fri, 11 Sep 2026 20:35:34 GMT",
       "dateLabel": "Fri, Sep 11",
       "excerpt": "k lesson in school finance: not every school expense comes from the same pot of money. 💰Clubs, teams, student organizations, and other groups may have money specifically designated for their activities. These funds are accounted for separately from regular district operations. 💲Students and…"
-    },
-    {
-      "title": "Register for Waynesville Elementary's Fun Run! Details below.🏃‍♀️REGISTRATION FOR FUN RUN IS FREE!!! 🏃‍♂️ Not sure wha...",
-      "link": "https://www.facebook.com/waynelocalschools/posts/pfbid02HiRJ8ALDa7q7EZg4F6u4oigVhFjFehuWbf2AdSvwEG1Kc9npuC64XX7pAfQzb88Sl",
-      "date": "Fri, 11 Sep 2026 20:13:10 GMT",
-      "dateLabel": "Fri, Sep 11",
-      "excerpt": "Register for Waynesville Elementary's Fun Run! Details below. 🏃‍♀️REGISTRATION FOR FUN RUN IS FREE!!! 🏃‍♂️ Not sure what this is all about?? This is how we raise money for enrichment assemblies and various school activities throughout the school year!!! And just a reminder: registration is…"
-    },
-    {
-      "title": "WMS and WHS students have transformed their hallways for one of our favorite Homecoming traditions: Battle of the Hallwa...",
-      "link": "https://www.facebook.com/waynelocalschools/posts/pfbid02YKTGbHhKr2kiZi8vpjWxj13YUUpDbetWt4TG3FYxqmTAbH7ebHdzMvDXtD7VApiEl",
-      "date": "Fri, 11 Sep 2026 18:30:42 GMT",
-      "dateLabel": "Fri, Sep 11",
-      "excerpt": "ys! 🎨Led by our Student Councils, students in grades 6–12 worked together during Connect to bring their themes to life with creativity, teamwork, school spirit, and some seriously impressive artwork. 🌍This year’s Spartan World Showcase took us around the globe: 🇪🇬6th Graders — Egypt 🇯🇵7th…"
     }
   ]
 }
