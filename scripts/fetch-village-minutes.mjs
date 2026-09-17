@@ -13,6 +13,7 @@
 // anything not captured here.
 import { writeFile } from "node:fs/promises";
 import { existsSync } from "node:fs";
+import { keepOrExpire } from "./lib/stale-cache.mjs";
 import { PDFParse } from "pdf-parse";
 import { createWorker } from "tesseract.js";
 
@@ -169,10 +170,11 @@ async function main() {
 
 main().catch(async (e) => {
   console.error("village minutes refresh failed:", e.message);
-  if (existsSync(OUT)) {
-    console.error("keeping previously fetched data (source may be temporarily down)");
-  } else {
-    await write({ item: null }, "village minutes fetch failed; empty (draft omits the minutes summary).");
-  }
+  // Bounded fallback — see scripts/lib/stale-cache.mjs for why.
+  await keepOrExpire({
+    out: OUT,
+    label: "village-minutes",
+    writeEmpty: async (note) => { await write({ item: null }, note); },
+  });
   process.exit(0); // don't fail the workflow
 });

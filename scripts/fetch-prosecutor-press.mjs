@@ -9,6 +9,7 @@
 // prosecutor's own PDF release for verification.
 import { writeFile } from "node:fs/promises";
 import { existsSync } from "node:fs";
+import { keepOrExpire } from "./lib/stale-cache.mjs";
 
 const INDEX_URL = "https://prosecutor.warrencountyohio.gov/Public/Press/Index";
 const BASE = "https://prosecutor.warrencountyohio.gov";
@@ -44,6 +45,10 @@ async function main() {
 
   const cutoff = new Date();
   cutoff.setDate(cutoff.getDate() - LOOKBACK_DAYS);
+  // Entries carry a date but no time, so they parse to local midnight. Without
+  // this the cutoff keeps the current time of day and anything dated exactly
+  // LOOKBACK_DAYS ago is dropped — a silently one-day-short window.
+  cutoff.setHours(0, 0, 0, 0);
 
   const items = [...html.matchAll(rowRe)]
     .map((m) => {
@@ -62,10 +67,11 @@ async function main() {
 
 main().catch(async (e) => {
   console.error("prosecutor press refresh failed:", e.message);
-  if (existsSync(OUT)) {
-    console.error("keeping previously fetched data (source may be temporarily down)");
-  } else {
-    await write([], "prosecutor press fetch failed; empty list (draft falls back to the check-links line).");
-  }
+  // Bounded fallback — see scripts/lib/stale-cache.mjs for why.
+  await keepOrExpire({
+    out: OUT,
+    label: "prosecutor-press",
+    writeEmpty: async (note) => { await write([], note); },
+  });
   process.exit(0); // don't fail the workflow
 });

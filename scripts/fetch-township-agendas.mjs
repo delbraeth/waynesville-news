@@ -7,6 +7,7 @@
 // straight to the township's own PDF.
 import { writeFile } from "node:fs/promises";
 import { existsSync } from "node:fs";
+import { keepOrExpire } from "./lib/stale-cache.mjs";
 
 const AGENDAS_URL = "https://www.waynetownship.us/minutes-agendas/agendas-2026/";
 const CAP = 3;
@@ -60,10 +61,11 @@ async function main() {
 
 main().catch(async (e) => {
   console.error("township agendas refresh failed:", e.message);
-  if (existsSync(OUT)) {
-    console.error("keeping previously fetched data (source may be temporarily down)");
-  } else {
-    await write({ items: [] }, "township agendas fetch failed; empty (draft falls back to the general schedule).");
-  }
+  // Bounded fallback — see scripts/lib/stale-cache.mjs for why.
+  await keepOrExpire({
+    out: OUT,
+    label: "township-agendas",
+    writeEmpty: async (note) => { await write({ items: [] }, note); },
+  });
   process.exit(0); // don't fail the workflow
 });

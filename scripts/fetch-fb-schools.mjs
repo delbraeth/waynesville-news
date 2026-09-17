@@ -8,6 +8,7 @@
 // or break); it must never fail the workflow.
 import { writeFile } from "node:fs/promises";
 import { existsSync } from "node:fs";
+import { keepOrExpire } from "./lib/stale-cache.mjs";
 
 // Public RSS-bridge feed for facebook.com/waynelocalschools. Not a secret — an
 // unauthenticated feed URL. To change the source, regenerate the feed and swap
@@ -86,10 +87,11 @@ async function main() {
 
 main().catch(async (e) => {
   console.error("fb-schools refresh failed:", e.message);
-  if (existsSync(OUT)) {
-    console.error("keeping previously fetched data (rss.app bridge may be temporarily down)");
-  } else {
-    await write([]);
-  }
-  process.exit(0); // never fail the workflow — the draft still works without it
+  // Bounded fallback — see scripts/lib/stale-cache.mjs for why.
+  await keepOrExpire({
+    out: OUT,
+    label: "fb-schools",
+    writeEmpty: async (note) => { await write([]); },
+  });
+  process.exit(0); // don't fail the workflow
 });

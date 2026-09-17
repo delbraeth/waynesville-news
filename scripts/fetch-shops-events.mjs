@@ -8,6 +8,7 @@
 // of 20s between requests.
 import { writeFile } from "node:fs/promises";
 import { existsSync } from "node:fs";
+import { keepOrExpire } from "./lib/stale-cache.mjs";
 
 const HOME_URL = "https://waynesvilleshops.com/";
 const CAP = 6;
@@ -112,10 +113,11 @@ async function main() {
 
 main().catch(async (e) => {
   console.error("shops events refresh failed:", e.message);
-  if (existsSync(OUT)) {
-    console.error("keeping previously fetched data (source may be temporarily down)");
-  } else {
-    await write({ items: [] }, "shops events fetch failed; empty (draft omits the shops events line).");
-  }
+  // Bounded fallback — see scripts/lib/stale-cache.mjs for why.
+  await keepOrExpire({
+    out: OUT,
+    label: "shops-events",
+    writeEmpty: async (note) => { await write({ items: [] }, note); },
+  });
   process.exit(0); // don't fail the workflow
 });

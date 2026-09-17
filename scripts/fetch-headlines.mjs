@@ -11,6 +11,7 @@
 // exactly as before. It must never fail the workflow.
 import { writeFile } from "node:fs/promises";
 import { existsSync } from "node:fs";
+import { keepOrExpire } from "./lib/stale-cache.mjs";
 
 const QUERY = '("Waynesville" OR "Warren County") Ohio';
 const FEED = `https://news.google.com/rss/search?q=${encodeURIComponent(QUERY)}&hl=en-US&gl=US&ceid=US:en`;
@@ -157,10 +158,11 @@ async function main() {
 
 main().catch(async (e) => {
   console.error("headlines refresh failed:", e.message);
-  if (existsSync(OUT)) {
-    console.error("keeping previously fetched data (source may be temporarily down)");
-  } else {
-    await write([], "headlines fetch failed; empty list (draft falls back to source pages).");
-  }
-  process.exit(0); // don't fail the workflow — the draft still works
+  // Bounded fallback — see scripts/lib/stale-cache.mjs for why.
+  await keepOrExpire({
+    out: OUT,
+    label: "suggested-headlines",
+    writeEmpty: async (note) => { await write([], note); },
+  });
+  process.exit(0); // don't fail the workflow
 });

@@ -7,6 +7,7 @@
 // the library's own event page.
 import { writeFile } from "node:fs/promises";
 import { existsSync } from "node:fs";
+import { keepOrExpire } from "./lib/stale-cache.mjs";
 
 const LIBRARY_URL = "https://www.mlcook.lib.oh.us/";
 const CAP = 8;
@@ -59,10 +60,11 @@ async function main() {
 
 main().catch(async (e) => {
   console.error("library events refresh failed:", e.message);
-  if (existsSync(OUT)) {
-    console.error("keeping previously fetched data (source may be temporarily down)");
-  } else {
-    await write({ items: [] }, "library events fetch failed; empty (draft omits the library programs line).");
-  }
+  // Bounded fallback — see scripts/lib/stale-cache.mjs for why.
+  await keepOrExpire({
+    out: OUT,
+    label: "library-events",
+    writeEmpty: async (note) => { await write({ items: [] }, note); },
+  });
   process.exit(0); // don't fail the workflow
 });

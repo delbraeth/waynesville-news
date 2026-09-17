@@ -20,6 +20,7 @@
 // markup, each linking to their game page.
 import { writeFile } from "node:fs/promises";
 import { existsSync } from "node:fs";
+import { keepOrExpire } from "./lib/stale-cache.mjs";
 
 const UA = "Mozilla/5.0 (WaynesvilleDailyBrief/1.0; waynesville.news)";
 const OUT = new URL("../src/data/sports.json", import.meta.url);
@@ -147,10 +148,11 @@ async function main() {
 
 main().catch(async (e) => {
   console.error("sports refresh failed:", e.message);
-  if (existsSync(OUT)) {
-    console.error("keeping previously fetched data (source may be temporarily down)");
-  } else {
-    await write({ results: [], upcoming: [] }, "sports fetch failed; empty (draft falls back to no sports section).");
-  }
+  // Bounded fallback — see scripts/lib/stale-cache.mjs for why.
+  await keepOrExpire({
+    out: OUT,
+    label: "sports",
+    writeEmpty: async (note) => { await write({ results: [], upcoming: [] }, note); },
+  });
   process.exit(0); // don't fail the workflow
 });
