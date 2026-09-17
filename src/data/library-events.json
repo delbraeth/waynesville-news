@@ -1,5 +1,24 @@
 {
   "_note": "Mary L. Cook Public Library — upcoming programs from the library's own homepage event feed. Canceled events excluded.",
-  "updated": "2026-09-16T15:00:11.645Z",
-  "items": []
+  "updated": "2026-09-17T11:05:16.947Z",
+  "items": [
+    {
+      "title": "Early Readers Kindergarten Book Club",
+      "dateISO": "2026-09-17T16:00:00Z",
+      "dateLabel": "Thu · Sep 17, 4:00 PM",
+      "link": "https://marylcook-main-oh.whofi.com/calendar/event/325791/"
+    },
+    {
+      "title": "Armchair Ghost Walk with the Friends Museum",
+      "dateISO": "2026-09-17T18:00:00Z",
+      "dateLabel": "Thu · Sep 17, 6:00 PM",
+      "link": "https://marylcook-main-oh.whofi.com/calendar/event/342950/"
+    },
+    {
+      "title": "Crafting Fun Drop-in Program (Adults)",
+      "dateISO": "2026-09-19T10:30:00Z",
+      "dateLabel": "Sat · Sep 19, 10:30 AM",
+      "link": "https://marylcook-main-oh.whofi.com/calendar/event/351349/"
+    }
+  ]
 }

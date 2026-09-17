@@ -1,6 +1,6 @@
 {
   "_note": "Waynesville Spartans schedule + results (MaxPreps), past 7 days / next 7 days. Scraped directly from each sport's own schedule page (football, volleyball, soccer -- varsity + JV), not the school hub page, which has been observed to silently omit some contests. Scores and matchups reproduced verbatim from MaxPreps' own markup; each links to their game page.",
-  "updated": "2026-09-16T15:00:11.204Z",
+  "updated": "2026-09-17T11:05:16.396Z",
   "results": [
     {
       "dateISO": "2026-09-10T18:00:00",
@@ -199,7 +199,7 @@
       "wayneScore": null,
       "opponentScore": null,
       "result": null,
-      "isHome": false,
+      "isHome": true,
       "link": "https://www.maxpreps.com/oh/soccer/girls/match/brookville-vs-waynesville/jv/9-17-2026/?c=82c35dbb-f36a-4a35-be35-65bb85af179a"
     },
     {
