@@ -1,24 +1,28 @@
 {
   "_note": "Candidate local headlines (Google News RSS). Published as a quoted headline (or, when available, a short publisher-written excerpt) + source + link; never reproduce article body text.",
-  "updated": "2026-09-17T13:13:08.065Z",
+  "updated": "2026-09-17T15:02:54.117Z",
   "items": [
     {
       "title": "CRACK! Jacques the Whipper Brings His Whip-Cracking Spectacle to the Ohio Renaissance Festival",
       "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNUlNpMzBaTXN5RlIzYUg1aGlTSjF5RmxEbkhaUDFtc3JYaTBVSTdKa3lrVWtTdVM4Q0hJN0JvU1BXYmpqX0JEUXBDSi0zWmF3NHp5bTdqZ0duZFF6N1V6ZS02TkMyX3QtbTdnakFZUXdGUHNscHc0NVBvdERBam9JSmdqWWRROWsxMWlLdjZvUGNwY1RWYjlfSEI0dEg0NGNNUjg3YmRxelRPbDR0elhlbm5hMDBSM1FBRk90YmFrMTZXbV84V2pn?oc=5",
       "source": "Warren County Post",
-      "date": "Thu, 17 Sep 2026 03:17:35 GMT"
+      "date": "Thu, 17 Sep 2026 03:17:35 GMT",
+      "sourceUrl": "https://warrencountypost.com/g/waynesville-oh/n/390605/crack-jacques-whipper-brings-his-whip-cracking-spectacle-ohio-renaissance",
+      "excerpt": "Internationally known performer takes the Shipwrecked Stage four times daily, September 19–20 and 26–27"
+    },
+    {
+      "title": "2024 Boys Soccer Semifinal Waynesville High School vs. Bishop Fenwick - 10/22/2024 | Live & On Demand",
+      "link": "https://news.google.com/rss/articles/CBMimgJBVV95cUxNV0RUYWtjZkZtNGdIU2JVMmJ1aGJjZFI1b2lzQXA2aTBwODVGWDc1Y3NKelZBWEJtZHlSTTBKZHB3U056YXdZRzcxSkJIbGtNQ0hZbWswSExWUnUteVMzVWpLUkJ3OFRWTUhsVmJNSDVYa3hldzZkb2xpSFZER2pPYk1HMmFRZW1nQ08wdS1KekFNRlhtdlB5Rk5RLXZEWGdHNF91ZzY5UTc0MDlnbWp5dUUxdnFyR0NVYWZPY1lCcDlPSUVNZnZ2aXBNOXU1bHAydktkU3ZBb1NZUzIzVlBWVjk5bXVSNHhnMDJna0YwQjNtSG5PWldZLXNWa01FeGJVTTRINWc0ZEIxOEZkV1hfNWwwZWUwWUZMWUE?oc=5",
+      "source": "NFHS Network",
+      "date": "Wed, 16 Sep 2026 18:27:47 GMT"
     },
     {
       "title": "ODNR Launches New Website to Buy Ohio-Grown Trees",
       "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxPQm10dGxsR1Rnd2NxVWdJR2RpSWp3bWhYd3FLT3k1eDFmOE1TWjJCVEwzeEpDZGtob2xqaGFLZjZtalRiWW9vTTZJT25vMlJzcGF4LUZDaVEwcVBDbUZyMHBEYXRkWE9Mb1cxT094NUEwUnUwM2xZVVlmTmN6amJ3VnctSjA1RzB1MExTOUVvRG1JaHl5NmxaaGx3R1dXQQ?oc=5",
       "source": "Warren County Post",
-      "date": "Thu, 17 Sep 2026 02:58:32 GMT"
-    },
-    {
-      "title": "Waynesville vs Mem. Pathway - Boys Junior Varsity Soccer 09/14/2026 | Watch Live & On Demand",
-      "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPOVM0dHpSa3d3S2RpSGFRc0dQcU1qbzZ2bWdtZ0VSdFpLR2U0MVRocEU0X1JSNEl5MllnRllhaGtQWDZDc1lqVG5xU3FDdXQ3OG9fc0w2TWN3UFF6Qzl1ZEVjaTBOejZsMjd4c0Y1Vmw3eDFtclg5TExpWFVvbHI1TA?oc=5",
-      "source": "NFHS Network",
-      "date": "Sat, 12 Sep 2026 23:22:37 GMT"
+      "date": "Thu, 17 Sep 2026 02:58:32 GMT",
+      "sourceUrl": "https://warrencountypost.com/g/lebanon-oh/n/390609/odnr-launches-new-website-buy-ohio-grown-trees",
+      "excerpt": "Growing seedlings from seeds collected in Ohio also helps ensure trees are well-suited to the state’s climate and growing conditions"
     },
     {
       "title": "Warren County seeks more foster families as licensed homes drop 50%",
@@ -31,6 +35,12 @@
       "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE0xaS1YNnRMbXlTZUdZZkd1cUk1SmpDakRIMTVkWVBJTGtkLVQ0VnNzV1BEWGQ5V0lKOF9oVzBVbE95MTF1aVVURWVFMlZwa0V0ZzRVN0p4RU5zS09QTFliQkJZb2JiUk9zdVhDcjMwemtsWmRFenNUd2dwcEtfdUk?oc=5",
       "source": "AOL.com",
       "date": "Sat, 12 Sep 2026 04:14:00 GMT"
+    },
+    {
+      "title": "Waynesville vs Mem. Pathway - Boys Junior Varsity Soccer 09/14/2026 | Watch Live & On Demand",
+      "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPOVM0dHpSa3d3S2RpSGFRc0dQcU1qbzZ2bWdtZ0VSdFpLR2U0MVRocEU0X1JSNEl5MllnRllhaGtQWDZDc1lqVG5xU3FDdXQ3OG9fc0w2TWN3UFF6Qzl1ZEVjaTBOejZsMjd4c0Y1Vmw3eDFtclg5TExpWFVvbHI1TA?oc=5",
+      "source": "NFHS Network",
+      "date": "Sat, 12 Sep 2026 23:22:37 GMT"
     },
     {
       "title": "Most School Districts Serving Warren County Earn 4 Stars or Better on Ohio Report Cards",
