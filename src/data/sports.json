@@ -1,40 +1,7 @@
 {
   "_note": "Waynesville Spartans schedule + results (MaxPreps), past 7 days / next 7 days. Scraped directly from each sport's own schedule page (football, volleyball, soccer -- varsity + JV), not the school hub page, which has been observed to silently omit some contests. Scores and matchups reproduced verbatim from MaxPreps' own markup; each links to their game page.",
-  "updated": "2026-09-17T15:03:01.875Z",
+  "updated": "2026-09-18T02:22:53.404Z",
   "results": [
-    {
-      "dateISO": "2026-09-10T18:00:00",
-      "sport": "Boys Soccer",
-      "level": "Varsity",
-      "opponent": "Eaton*",
-      "wayneScore": 9,
-      "opponentScore": 0,
-      "result": "W",
-      "isHome": true,
-      "link": "https://www.maxpreps.com/oh/soccer/match/eaton-vs-waynesville/9-10-2026/?c=eda61cf7-1b9e-46c9-bebc-f69ff45b2716"
-    },
-    {
-      "dateISO": "2026-09-10T18:30:00",
-      "sport": "Volleyball",
-      "level": "Varsity",
-      "opponent": "Carlisle*",
-      "wayneScore": 3,
-      "opponentScore": 1,
-      "result": "W",
-      "isHome": false,
-      "link": "https://www.maxpreps.com/oh/volleyball/match/carlisle-vs-waynesville/9-10-2026/?c=d82dd96c-98ea-48d9-b891-41d1b60be917"
-    },
-    {
-      "dateISO": "2026-09-10T19:15:00",
-      "sport": "Girls Soccer",
-      "level": "Varsity",
-      "opponent": "Eaton*",
-      "wayneScore": 2,
-      "opponentScore": 3,
-      "result": "L",
-      "isHome": false,
-      "link": "https://www.maxpreps.com/oh/soccer/girls/match/eaton-vs-waynesville/9-10-2026/?c=3904d408-f15a-4b96-beaa-e721a6fb796f"
-    },
     {
       "dateISO": "2026-09-11T19:00:00",
       "sport": "Football",
@@ -100,31 +67,20 @@
       "result": "W",
       "isHome": true,
       "link": "https://www.maxpreps.com/oh/volleyball/match/madison-middletown-vs-waynesville/9-15-2026/?c=9ce30e7b-0634-48d6-8096-a21c9eaef717"
+    },
+    {
+      "dateISO": "2026-09-17T19:15:00",
+      "sport": "Boys Soccer",
+      "level": "Varsity",
+      "opponent": "Brookville*",
+      "wayneScore": 7,
+      "opponentScore": 2,
+      "result": "W",
+      "isHome": false,
+      "link": "https://www.maxpreps.com/oh/soccer/match/brookville-vs-waynesville/9-17-2026/?c=746f88d9-7de0-4f4c-95e4-c9d8a7d6eb18"
     }
   ],
   "upcoming": [
-    {
-      "dateISO": "2026-09-10T17:30:00",
-      "sport": "Volleyball",
-      "level": "JV",
-      "opponent": "Carlisle*",
-      "wayneScore": null,
-      "opponentScore": null,
-      "result": null,
-      "isHome": false,
-      "link": "https://www.maxpreps.com/oh/volleyball/match/carlisle-vs-waynesville/jv/9-10-2026/?c=0fcc7407-1d1e-4960-b155-a2eafe8e4ef0"
-    },
-    {
-      "dateISO": "2026-09-10T17:30:00",
-      "sport": "Girls Soccer",
-      "level": "JV",
-      "opponent": "Eaton*",
-      "wayneScore": null,
-      "opponentScore": null,
-      "result": null,
-      "isHome": false,
-      "link": "https://www.maxpreps.com/oh/soccer/girls/match/eaton-vs-waynesville/jv/9-10-2026/?c=513f3d1e-5e2e-4430-bb9e-8759e4462e7b"
-    },
     {
       "dateISO": "2026-09-12T10:00:00",
       "sport": "Football",
@@ -212,17 +168,6 @@
       "result": null,
       "isHome": true,
       "link": "https://www.maxpreps.com/oh/volleyball/match/valley-view-germantown-vs-waynesville/9-17-2026/?c=3ca0aa70-1b7d-4685-a659-be22fc862fea"
-    },
-    {
-      "dateISO": "2026-09-17T19:15:00",
-      "sport": "Boys Soccer",
-      "level": "Varsity",
-      "opponent": "Brookville*",
-      "wayneScore": null,
-      "opponentScore": null,
-      "result": null,
-      "isHome": false,
-      "link": "https://www.maxpreps.com/oh/soccer/match/brookville-vs-waynesville/9-17-2026/?c=746f88d9-7de0-4f4c-95e4-c9d8a7d6eb18"
     },
     {
       "dateISO": "2026-09-17T19:15:00",
@@ -333,6 +278,72 @@
       "result": null,
       "isHome": true,
       "link": "https://www.maxpreps.com/oh/volleyball/match/brookville-vs-waynesville/9-22-2026/?c=576496e4-0bbd-4735-af0c-ac7558cb23e9"
+    },
+    {
+      "dateISO": "2026-09-24T17:30:00",
+      "sport": "Volleyball",
+      "level": "JV",
+      "opponent": "Eaton*",
+      "wayneScore": null,
+      "opponentScore": null,
+      "result": null,
+      "isHome": false,
+      "link": "https://www.maxpreps.com/oh/volleyball/match/eaton-vs-waynesville/jv/9-24-2026/?c=a7e08dce-cc1a-4127-951e-fa3564c110c5"
+    },
+    {
+      "dateISO": "2026-09-24T17:30:00",
+      "sport": "Boys Soccer",
+      "level": "JV",
+      "opponent": "Oakwood*",
+      "wayneScore": null,
+      "opponentScore": null,
+      "result": null,
+      "isHome": false,
+      "link": "https://www.maxpreps.com/oh/soccer/match/oakwood-dayton-vs-waynesville/jv/9-24-2026/?c=509f54a8-d168-4150-9094-3455211ab6fc"
+    },
+    {
+      "dateISO": "2026-09-24T17:30:00",
+      "sport": "Girls Soccer",
+      "level": "JV",
+      "opponent": "Oakwood*",
+      "wayneScore": null,
+      "opponentScore": null,
+      "result": null,
+      "isHome": true,
+      "link": "https://www.maxpreps.com/oh/soccer/girls/match/oakwood-dayton-vs-waynesville/jv/9-24-2026/?c=53428571-2eff-499e-8c9b-a676855fcf48"
+    },
+    {
+      "dateISO": "2026-09-24T18:00:00",
+      "sport": "Girls Soccer",
+      "level": "Varsity",
+      "opponent": "Oakwood*",
+      "wayneScore": null,
+      "opponentScore": null,
+      "result": null,
+      "isHome": true,
+      "link": "https://www.maxpreps.com/oh/soccer/girls/match/oakwood-dayton-vs-waynesville/9-24-2026/?c=d381bc2a-0575-4052-be7a-3561cf5fafe9"
+    },
+    {
+      "dateISO": "2026-09-24T19:00:00",
+      "sport": "Volleyball",
+      "level": "Varsity",
+      "opponent": "Eaton*",
+      "wayneScore": null,
+      "opponentScore": null,
+      "result": null,
+      "isHome": false,
+      "link": "https://www.maxpreps.com/oh/volleyball/match/eaton-vs-waynesville/9-24-2026/?c=87963373-2ae8-489c-8d6b-5c95e612d589"
+    },
+    {
+      "dateISO": "2026-09-24T19:15:00",
+      "sport": "Boys Soccer",
+      "level": "Varsity",
+      "opponent": "Oakwood*",
+      "wayneScore": null,
+      "opponentScore": null,
+      "result": null,
+      "isHome": false,
+      "link": "https://www.maxpreps.com/oh/soccer/match/oakwood-dayton-vs-waynesville/9-24-2026/?c=e82847e1-e60e-4fea-938f-cf67bc89ba98"
     }
   ]
 }

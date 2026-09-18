@@ -182,6 +182,24 @@
       "note": "Themed weekend during the festival's regular Sep 5–Nov 1, 2026 season; coincides with Sauerkraut Festival weekend"
     },
     {
+      "title": "Ohio Renaissance Festival — Romance Weekend",
+      "dateISO": "2026-10-17T10:30:00-04:00",
+      "dateLabel": "Oct 17–18 · 10:30 AM–7:00 PM",
+      "venue": "Renaissance Park, Waynesville",
+      "category": "Festival",
+      "source": "https://renfestival.com/",
+      "note": "Themed weekend in the 2026 season, which runs weekends through Nov 1."
+    },
+    {
+      "title": "Ohio Renaissance Festival — Myths & Monsters Weekend",
+      "dateISO": "2026-10-24T10:30:00-04:00",
+      "dateLabel": "Oct 24–25 · 10:30 AM–7:00 PM",
+      "venue": "Renaissance Park, Waynesville",
+      "category": "Festival",
+      "source": "https://renfestival.com/",
+      "note": "Themed weekend in the 2026 season, which runs weekends through Nov 1."
+    },
+    {
       "title": "Business to Business Networking Mixer — October",
       "dateISO": "2026-10-28T17:00:00-04:00",
       "dateLabel": "Wed, Oct 28 · 5:00 PM",
@@ -189,6 +207,15 @@
       "category": "Chamber",
       "source": "https://www.waynesvilleohio.com/events",
       "note": "Waynesville Area Chamber of Commerce networking mixer"
+    },
+    {
+      "title": "Ohio Renaissance Festival — Heroes and Villains Weekend",
+      "dateISO": "2026-10-31T10:30:00-04:00",
+      "dateLabel": "Oct 31–Nov 1 · 10:30 AM–7:00 PM",
+      "venue": "Renaissance Park, Waynesville",
+      "category": "Festival",
+      "source": "https://renfestival.com/",
+      "note": "Closing weekend of the 2026 season."
     },
     {
       "title": "Village Trick or Treat",
