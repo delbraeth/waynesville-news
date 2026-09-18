@@ -60,7 +60,15 @@ try { fbSchools = (await readJSON("src/data/fb-schools.json")).items ?? []; } ca
 const longDate = now.toLocaleDateString("en-US", {
   weekday: "long", month: "long", day: "numeric", year: "numeric", timeZone: "America/New_York",
 });
-const todayStart = new Date(iso);
+// `new Date("YYYY-MM-DD")` is UTC midnight — 8:00 PM ET the PREVIOUS evening —
+// so a 9 PM event stayed "upcoming" for four hours after it ended. Anchor to
+// Eastern midnight using the offset actually in effect on that date.
+const etOffset = (() => {
+  const s = new Intl.DateTimeFormat("en-US", { timeZone: "America/New_York", timeZoneName: "longOffset" })
+    .formatToParts(now).find((p) => p.type === "timeZoneName")?.value ?? "GMT-05:00";
+  return s.replace("GMT", "") || "-05:00";
+})();
+const todayStart = new Date(`${iso}T00:00:00${etOffset}`);
 
 const soon = events.items
   .filter((e) => !e.evergreen && e.dateISO)
@@ -79,7 +87,7 @@ const SOURCES = {
     "District news — https://www.wayne-local.com/district-news",
     "Spartans / MaxPreps — https://www.maxpreps.com/oh/waynesville/waynesville-spartans/",
     "Mary L. Cook Library — https://www.mlcook.lib.oh.us/",
-    "Wayne Local Schools Facebook (auto-pulled below via fb-schools.json) — https://www.facebook.com/waynelocalschools",
+    "Wayne Local Schools Facebook — https://www.facebook.com/waynelocalschools",
   ],
   "Local Government": [
     "Commissioners agendas/minutes — https://commissioners.warrencountyohio.gov/News/AgendaMinutes/Index",
@@ -100,19 +108,24 @@ const SOURCES = {
   ],
 };
 
+// Several data files are hand- or OCR-written and are not schema-validated.
+// A missing URL used to interpolate as `](undefined)`, publishing a 404 under
+// an authoritative label. Drop the link instead of shipping a broken one.
+const link = (label, url) => (url ? `[${label}](${encodeURI(String(url)).replace(/\(/g, "%28").replace(/\)/g, "%29")})` : label);
+
 const listSrc = (section) => (SOURCES[section] || []).map((s) => `  - ${s}`).join("\n");
 const eventsBlock = soon.length
-  ? soon.map((e) => `- **${e.dateLabel}** — ${e.title} (${e.venue})${e.source ? ` — [details](${e.source})` : ""}${e.registrationUrl ? ` — [register](${e.registrationUrl})` : ""}`).join("\n")
+  ? soon.map((e) => `- **${e.dateLabel}** — ${e.title} (${e.venue})${e.source ? ` — ${link("details", e.source)}` : ""}${e.registrationUrl ? ` — ${link("register", e.registrationUrl)}` : ""}`).join("\n")
   : "- (no dated events in the window — see the full calendar)";
 
 const safetyBlock = prosecutorItems.length
   ? `From the Warren County Prosecutor's Office, released in the past week:\n` +
-    prosecutorItems.map((p) => `- **${p.dateLabel}** — ${p.title} ([release](${p.link}))`).join("\n") +
+    prosecutorItems.map((p) => `- **${p.dateLabel}** — ${p.title} (${link("release", p.link)})`).join("\n") +
     `\n\nCheck:`
   : "TODO — road/weather alerts, sheriff/prosecutor news (handle with care). Check:";
 
 const obituariesBlock = obituaries.length
-  ? obituaries.map((o) => `- **${o.name}** — ${o.dateRange} ([tribute](${o.link}))`).join("\n")
+  ? obituaries.map((o) => `- **${o.name}** — ${o.dateRange} (${link("tribute", o.link)})`).join("\n")
   : null;
 
 // sports.json dateISO values are naive ET wall-clock strings (no offset),
@@ -127,12 +140,20 @@ const fmtGameDate = (iso) =>
 
 const sportsResultsBlock = sports.results.length
   ? sports.results.map((g) =>
-      `- **${g.sport} (${g.level})** — Waynesville ${g.wayneScore}, ${g.opponent} ${g.opponentScore}${g.sport === "Volleyball" ? " (sets)" : ""}${g.isHome === true ? " (Home)" : g.isHome === false ? " (Away)" : ""} — [box score](${g.link})`
+      `- **${g.sport} (${g.level})** — Waynesville ${g.wayneScore}, ${g.opponent} ${g.opponentScore}${g.sport === "Volleyball" ? " (sets)" : ""}${g.isHome === true ? " (Home)" : g.isHome === false ? " (Away)" : ""} — ${link("box score", g.link)}`
     ).join("\n")
   : null;
+// sports.json can be served from cache on the staleness path, so re-filter by
+// date here too — "Upcoming" must never contain a game that has been played.
+const nowFakeET = new Date(
+  new Date().toLocaleString("sv-SE", { timeZone: "America/New_York" }).replace(" ", "T") + "Z"
+);
+sports.upcoming = (sports.upcoming ?? []).filter(
+  (g) => !g.dateISO || new Date(g.dateISO + "Z") >= new Date(nowFakeET.getTime() - 3 * 3600e3)
+);
 const sportsUpcomingBlock = sports.upcoming.length
   ? sports.upcoming.map((g) =>
-      `- **${g.sport} (${g.level})** — ${g.isHome === false ? "@" : "vs"} ${g.opponent}, ${fmtGameDate(g.dateISO)} — [details](${g.link})`
+      `- **${g.sport} (${g.level})** — ${g.isHome === false ? "@" : "vs"} ${g.opponent}, ${fmtGameDate(g.dateISO)} — ${link("details", g.link)}`
     ).join("\n")
   : null;
 const sportsBlock = (sportsResultsBlock || sportsUpcomingBlock)
@@ -143,19 +164,19 @@ const sportsBlock = (sportsResultsBlock || sportsUpcomingBlock)
   : null;
 
 const libraryBlock = libraryEvents.length
-  ? libraryEvents.map((e) => `- **${e.dateLabel}** — [${e.title}](${e.link})`).join("\n")
+  ? libraryEvents.map((e) => `- **${e.dateLabel}** — ${link(e.title, e.link)}`).join("\n")
   : null;
 
 // Facebook is robots-blocked, so the writer can't open the posts — the excerpt
-// here must carry the substance. Summarize + attribute to the district + link
-// the post; never copy verbatim.
+// here carries the substance, reproduced from the district's own post and
+// attributed to it, with a link back.
 const fbBlock = fbSchools.length
   ? "**From Wayne Local Schools on Facebook**\n" +
-    fbSchools.slice(0, 6).map((p) => `- **${p.dateLabel}** — ${p.title} ${p.excerpt} ([post](${p.link}))`).join("\n")
+    fbSchools.slice(0, 6).map((p) => `- **${p.dateLabel}** — ${p.title} ${p.excerpt} (${link("post", p.link)})`).join("\n")
   : null;
 
 const shopsBlock = shopsEvents.length
-  ? shopsEvents.map((e) => `- **${e.dateLabel}** — [${e.title}](${e.link})`).join("\n")
+  ? shopsEvents.map((e) => `- **${e.dateLabel}** — ${link(e.title, e.link)}`).join("\n")
   : null;
 
 const villageMinutesBlock = villageMinutes?.meetingDateLabel
@@ -163,8 +184,13 @@ const villageMinutesBlock = villageMinutes?.meetingDateLabel
       `**Village Council** — minutes of the ${villageMinutes.meetingDateLabel} meeting (posted as part of the ${villageMinutes.agendaDateLabel} agenda packet)` +
       `${villageMinutes.calledToOrder ? `, called to order ${villageMinutes.calledToOrder}` : ""}` +
       `${villageMinutes.adjourned ? `, adjourned ${villageMinutes.adjourned}` : ""}` + ":",
-      ...villageMinutes.votes.map((v) => `- ${v.context} *(Motion: ${v.motion}, Second: ${v.second}, Roll Call: ${v.rollCall})*`),
-      `[full agenda/minutes packet](${encodeURI(villageMinutes.link)})`,
+      ...(villageMinutes.votes ?? []).map((v) => `- ${v.context} *(Motion: ${v.motion}, Second: ${v.second}, Roll Call: ${v.rollCall})*`),
+      // Only the first few votes are stored. Saying so beats implying the list
+      // is the meeting's complete formal record.
+      villageMinutes.voteCountTotal > (villageMinutes.votes ?? []).length
+        ? `*(${villageMinutes.voteCountTotal - villageMinutes.votes.length} further recorded vote(s) not shown — see the full packet.)*`
+        : "",
+      link("full agenda/minutes packet", villageMinutes.link),
     ].join("\n")
   : null;
 
@@ -191,7 +217,7 @@ const boardRecapBlock = recapFresh
       boardRecap.nextMeeting
         ? `\nNext meeting: **${boardRecap.nextMeeting.label}**, ${boardRecap.nextMeeting.location}.`
         : "",
-      `[full agenda and minutes on BoardDocs](${boardRecap.boardDocs})`,
+      link("full agenda and minutes on BoardDocs", boardRecap.boardDocs),
     ].filter(Boolean).join("\n")
   : null;
 
@@ -200,9 +226,9 @@ const boardRecapSchoolsBlock = recapFresh && (boardRecap.schools ?? []).length
     boardRecap.schools.map((t) => `- ${t}`).join("\n")
   : null;
 
-const weatherBlock = weather
+const weatherBlock = weather && weather.tempF != null
   ? [
-      `**Today:** ${weather.tempF}°F, ${weather.condition} (high ${weather.highF}° / low ${weather.lowF}°)`,
+      `**${weather.periodName ?? "Today"}:** ${weather.tempF}°F, ${weather.condition} (high ${weather.highF}° / low ${weather.lowF}°)`,
       weather.outlook?.length
         ? `\n**Outlook:**\n${weather.outlook.map((d) =>
             `- **${d.dayLabel}** — high ${d.highF}°${d.lowF !== null ? ` / low ${d.lowF}°` : ""}, ${d.condition}`
@@ -214,9 +240,15 @@ const weatherBlock = weather
 
 const candidateBlock = suggested.length
   ? suggested.map((h) => {
-      const quote = h.excerpt || h.title;
+      // Always quote the publisher's headline. The excerpt is extra context,
+      // appended unquoted — never a substitute for the title, which is how
+      // lede sentences ("The 32-year-old was pronounced dead at the scene")
+      // and "send flowers and sign the guestbook" reached Local headlines.
       const url = h.sourceUrl || h.link;
-      return `- "${quote}"${h.source ? ` — ${h.source}` : ""}, [full story](${url})`;
+      const extra = h.excerpt && h.excerpt.trim() && h.excerpt.trim() !== h.title.trim()
+        ? ` ${h.excerpt.trim().replace(/\s+/g, " ")}`
+        : "";
+      return `- "${h.title}"${h.source ? ` — ${h.source}` : ""}, ${link("full story", url)}.${extra}`;
     }).join("\n")
   : listSrc("Headlines");
 
@@ -237,7 +269,7 @@ published: false
     2) set the title and dek,
     3) delete this comment,
     4) change published: false  ->  published: true, and commit.
-  QA: names/dates verified, links resolve, no unverified crime claims.
+  QA: names/dates verified, links resolve.
 -->
 
 ## Weather
@@ -256,7 +288,7 @@ ${boardRecapSchoolsBlock ? `\n${boardRecapSchoolsBlock}\n` : ""}${fbBlock ? `\n$
 ${sportsBlock ? `\n## This week in sports\n${sportsBlock}\n` : ""}
 ## Local government
 Next up: **${meeting.body}**, ${meeting.whenLabel} — [agenda](${meeting.source}).
-Also next up: **${townshipMeeting.body}**, ${townshipMeeting.whenLabel}, ${townshipMeeting.location}${latestAgenda ? ` — [latest posted agenda: ${latestAgenda.title}, ${latestAgenda.dateLabel}](${latestAgenda.link})` : ` — [agendas](${townshipMeeting.source})`}.
+Also next up: **${townshipMeeting.body}**, ${townshipMeeting.whenLabel}, ${townshipMeeting.location}${latestAgenda ? ` — ${link(`latest posted agenda: ${latestAgenda.title}, ${latestAgenda.dateLabel}`, latestAgenda.link)}` : ` — [agendas](${townshipMeeting.source})`}.
 TODO — village council & county items, each linked to the agenda/minutes. Check:
 ${listSrc("Local Government")}
 ${villageMinutesBlock ? `\n${villageMinutesBlock}\n` : ""}${boardRecapBlock ? `\n${boardRecapBlock}\n` : ""}
@@ -264,7 +296,7 @@ ${villageMinutesBlock ? `\n${villageMinutesBlock}\n` : ""}${boardRecapBlock ? `\
 ## Around town
 TODO — new businesses, the antiques district. Check:
 ${listSrc("Around Town")}
-(Occasionally write a free \`## Business spotlight\` section — a short editorial profile of a local business. It's coverage, not sponsorship: never tied to the paid Supporters list, and labeled as a spotlight.)
+<!-- Editor note (stripped before publication): occasionally write a free \`## Business spotlight\` section — a short editorial profile of a local business. It's coverage, not sponsorship: never tied to the paid Supporters list, and labeled as a spotlight. -->
 ${shopsBlock ? `\n**Merchant Association events** (waynesvilleshops.com)\n${shopsBlock}\n` : ""}
 
 ## Public safety

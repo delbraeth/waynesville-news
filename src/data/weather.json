@@ -3,6 +3,7 @@
   "location": "Waynesville, OH",
   "tempF": 69,
   "condition": "Mostly Cloudy then Chance Showers And Thunderstorms",
+  "periodName": "Tonight",
   "highF": 82,
   "lowF": 69,
   "outlook": [
@@ -25,5 +26,5 @@
       "condition": "Chance Showers And Thunderstorms"
     }
   ],
-  "updated": "2026-09-18T02:22:16.022Z"
+  "updated": "2026-09-18T03:06:14.283Z"
 }

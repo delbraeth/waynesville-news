@@ -75,7 +75,9 @@ function parseSchedule(html, sport, level) {
     const [, mo, day, year] = dateMatch;
     const opponentMatch = NAME_RE.exec(row);
     // strip angle brackets — opponent names go into auto-published Markdown
-    const opponent = opponentMatch ? opponentMatch[1].replace(/[<>]/g, "") : "TBA";
+    // Strip MaxPreps' trailing league-game asterisk ("Brookville*") — it is
+    // site jargon and was publishing verbatim into the brief.
+    const opponent = opponentMatch ? opponentMatch[1].replace(/[<>]/g, "").replace(/\*+$/, "").trim() : "TBA";
     const isHome = vsAt === "vs";
     const dateISO = toISO(year, mo, day, time);
 
@@ -89,6 +91,17 @@ function parseSchedule(html, sport, level) {
       // in the right order; a tie is symmetric either way.
       const [, result, a, b] = rm;
       const [wayneScore, opponentScore] = result === "L" ? [Number(b), Number(a)] : [Number(a), Number(b)];
+      // The swap above rests on MaxPreps printing the winner first. If that
+      // ever stops holding, the scores publish REVERSED with no error. Assert
+      // the invariant and drop the row rather than print a false score.
+      const consistent =
+        (result === "W" && wayneScore > opponentScore) ||
+        (result === "L" && wayneScore < opponentScore) ||
+        (result === "T" && wayneScore === opponentScore);
+      if (!consistent) {
+        console.log(`sports: dropping inconsistent result ${sport} ${level} vs ${opponent} (${result} ${a}-${b})`);
+        continue;
+      }
       results.push({ dateISO, sport, level, opponent, wayneScore, opponentScore, result, isHome, link });
     } else {
       upcoming.push({ dateISO, sport, level, opponent, wayneScore: null, opponentScore: null, result: null, isHome, link });
@@ -111,7 +124,7 @@ async function main() {
 
   for (const { sport, level, url } of SCHEDULE_PAGES) {
     try {
-      const res = await fetch(url, { headers: { "User-Agent": UA } });
+      const res = await fetch(url, { headers: { "User-Agent": UA }, signal: AbortSignal.timeout(20_000) });
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       const html = await res.text();
       const { results, upcoming } = parseSchedule(html, sport, level);
@@ -125,15 +138,25 @@ async function main() {
   // dateISO strings are naive ET wall-clock (no offset). Parse them as UTC
   // ("+Z") so windowing behaves identically on UTC CI runners and local
   // Eastern machines — the 7-day window has hours of margin either way.
-  const inWindow = (list) =>
+  // dateISO digits are ET wall-clock, so compare them against an ET
+  // wall-clock "now" expressed the same fake-UTC way.
+  const nowET = new Date(
+    new Date().toLocaleString("sv-SE", { timeZone: "America/New_York" }).replace(" ", "T") + "Z"
+  );
+  const inWindow = (list, lower = from) =>
     list
       .map((g) => ({ ...g, _d: new Date(g.dateISO + "Z") }))
-      .filter((g) => g._d >= from && g._d <= to)
+      .filter((g) => g._d >= lower && g._d <= to)
       .sort((a, b) => a._d - b._d)
       .map(({ _d, ...g }) => g);
 
   const results = inWindow(allResults);
-  const upcoming = inWindow(allUpcoming);
+  // A game lands in `upcoming` because no score parsed, NOT because it is in
+  // the future — MaxPreps rarely posts JV scores, so played games sat here for
+  // a week and published under "Upcoming". Require an actually-future date;
+  // the 3h grace keeps a game in progress listed.
+  const upcoming = inWindow(allUpcoming, new Date(nowET.getTime() - 3 * 3600e3));
+  const orphaned = allUpcoming.length - upcoming.length;
 
   const note =
     `Waynesville Spartans schedule + results (MaxPreps), past ${LOOKBACK_DAYS} days / next ${LOOKAHEAD_DAYS} days. ` +

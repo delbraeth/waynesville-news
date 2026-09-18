@@ -73,7 +73,7 @@ function cleanContext(win) {
 }
 
 async function findLatestAgenda() {
-  const res = await fetch(MEETINGS_URL, { headers: UA });
+  const res = await fetch(MEETINGS_URL, { headers: UA, signal: AbortSignal.timeout(20_000) });
   if (!res.ok) throw new Error(`HTTP ${res.status}`);
   const html = await res.text();
 
@@ -101,7 +101,7 @@ async function main() {
   const agenda = await findLatestAgenda();
   if (!agenda) { await write({ item: null }, "No Village Council agenda with a posted PDF found."); console.log("village-minutes.json: no agenda found"); return; }
 
-  const pdfRes = await fetch(encodeURI(agenda.link), { headers: UA });
+  const pdfRes = await fetch(encodeURI(agenda.link), { headers: UA, signal: AbortSignal.timeout(60_000) });
   if (!pdfRes.ok) throw new Error(`Agenda PDF fetch HTTP ${pdfRes.status}`);
   const buf = Buffer.from(await pdfRes.arrayBuffer());
   const parser = new PDFParse({ data: buf });
@@ -139,14 +139,35 @@ async function main() {
   // tacks a stray character onto the end of these short lines (a table
   // border or margin mark misread as a letter), which a greedy [^\n]+
   // would otherwise pull in.
-  const voteRe = /Motion\s*[–—-]\s*([A-Za-z][A-Za-z.'-]*)[^\n]*\nSecond\s*[–—-]\s*([A-Za-z][A-Za-z.'-]*)[^\n]*\n\S*\s*Roll Call\s*[–—-]\s*(\d+)\s*(yeas?|nays?)/gi;
+  // The roll-call tail must be captured WHOLE. Capturing only the first
+  // "<n> yeas" silently discarded any ", 2 nays" / ", 1 abstain" that
+  // followed, so a contested or FAILED motion published as though it were
+  // unanimous — "Roll Call: 3 yeas" for a 3-4 defeat, under context text
+  // saying the member moved to adopt. Take the rest of the line verbatim.
+  const voteRe = /Motion\s*[–—-]\s*([A-Za-z][A-Za-z.'-]*)[^\n]*\nSecond\s*[–—-]\s*([A-Za-z][A-Za-z.'-]*)[^\n]*\n\S*\s*Roll Call\s*[–—-]\s*(\d+\s*(?:yeas?|nays?)[^\n]*)/gi;
+  // Waynesville Village Council: mayor + six members. Used only as an upper
+  // bound to reject an OCR misread that produces an impossible tally.
+  const COUNCIL_SEATS = 7;
   const votes = [];
   let m;
   let prevEnd = 0;
   while ((m = voteRe.exec(combined))) {
     const start = Math.max(prevEnd, m.index - 800);
     const context = cleanContext(combined.slice(start, m.index));
-    votes.push({ context, motion: m[1].trim(), second: m[2].trim(), rollCall: `${m[3]} ${m[4]}` });
+    // Normalise whitespace and trim trailing OCR debris, but keep every
+    // yea/nay/abstain count the line actually states.
+    const rollCall = m[3].replace(/\s+/g, " ").replace(/[\s.,;:]+$/, "").trim();
+    // A tally we cannot read in full is worse than no tally: drop it rather
+    // than publish a partial vote as a complete one.
+    if (!/^\d+\s*(yeas?|nays?)/i.test(rollCall)) { prevEnd = voteRe.lastIndex; continue; }
+    const tally = [...rollCall.matchAll(/(\d+)\s*(yeas?|nays?|abstain\w*|absent)/gi)]
+      .reduce((n, x) => n + Number(x[1]), 0);
+    if (tally > COUNCIL_SEATS) {
+      console.log(`village-minutes: implausible roll call "${rollCall}" (${tally} > ${COUNCIL_SEATS} seats) — dropping vote`);
+      prevEnd = voteRe.lastIndex;
+      continue;
+    }
+    votes.push({ context, motion: m[1].trim(), second: m[2].trim(), rollCall });
     prevEnd = voteRe.lastIndex;
   }
 

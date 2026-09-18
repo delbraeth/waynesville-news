@@ -31,15 +31,16 @@ const clean = (s) =>
     .replace(/\s+/g, " ")
     .trim();
 
-const write = (items) =>
+const DEFAULT_NOTE = "Recent Wayne Local Schools Facebook posts via rss.app bridge. Title + link + short excerpt; the district's own words. Fail-safe: kept from last run if the bridge is down.";
+const write = (items, note = DEFAULT_NOTE) =>
   writeFile(OUT, JSON.stringify({
-    _note: "Recent Wayne Local Schools Facebook posts via rss.app bridge. Title + link + short excerpt; the district's own words. Fail-safe: kept from last run if the bridge is down.",
+    _note: note,
     updated: new Date().toISOString(),
     items,
   }, null, 2) + "\n");
 
 async function main() {
-  const res = await fetch(FEED, { headers: { "User-Agent": "WaynesvilleDailyBrief/1.0 (waynesville.news)" } });
+  const res = await fetch(FEED, { headers: { "User-Agent": "WaynesvilleDailyBrief/1.0 (waynesville.news)" }, signal: AbortSignal.timeout(20_000) });
   if (!res.ok) throw new Error(`HTTP ${res.status}`);
   const xml = await res.text();
 
@@ -56,7 +57,20 @@ async function main() {
     // rss.app often repeats the post's opening line as the title; if the excerpt
     // starts with the (de-ellipsised) title, drop the duplication.
     const t = title.replace(/[.…]+$/, "").trim();
-    if (t && excerpt.toLowerCase().startsWith(t.toLowerCase())) excerpt = excerpt.slice(t.length).replace(/^[\s.…-]+/, "");
+    if (t && excerpt.toLowerCase().startsWith(t.toLowerCase())) {
+      // rss.app truncates the title MID-WORD ("…welcomed special guest music..."),
+      // so slicing the excerpt by the title's length resumed mid-word too
+      // ("ians from Mrs. Weiland's class") and the two published as
+      // "special guest music... ians from". Back the cut up to the last word
+      // boundary inside the title so both sides keep whole words.
+      let cut = t.length;
+      if (/\w/.test(excerpt.charAt(cut) || "") && /\w/.test(t.slice(-1))) {
+        const back = t.lastIndexOf(" ");
+        if (back > 0) cut = back;
+      }
+      title = t.slice(0, cut).trim() + "…";
+      excerpt = excerpt.slice(cut).replace(/^[\s.…-]+/, "");
+    }
     // Trim boilerplate some bridges append.
     excerpt = excerpt.replace(/\bThe post .*? appeared first on .*$/i, "").trim();
     if (excerpt.length > 300) excerpt = excerpt.slice(0, 297).replace(/\s+\S*$/, "") + "…";
@@ -91,7 +105,7 @@ main().catch(async (e) => {
   await keepOrExpire({
     out: OUT,
     label: "fb-schools",
-    writeEmpty: async (note) => { await write([]); },
+    writeEmpty: async (note) => { await write([], note); },
   });
   process.exit(0); // don't fail the workflow
 });

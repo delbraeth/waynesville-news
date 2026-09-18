@@ -22,7 +22,7 @@ const diedFrom = (dateRange) => {
 };
 
 async function main() {
-  const res = await fetch(INDEX_URL, { headers: { "User-Agent": "WaynesvilleDailyBrief/1.0 (waynesville.news)" } });
+  const res = await fetch(INDEX_URL, { headers: { "User-Agent": "WaynesvilleDailyBrief/1.0 (waynesville.news)" }, signal: AbortSignal.timeout(20_000) });
   if (!res.ok) throw new Error(`HTTP ${res.status}`);
   const html = await res.text();
 
@@ -39,7 +39,14 @@ async function main() {
   // LOOKBACK_DAYS ago is dropped — a silently one-day-short window.
   cutoff.setHours(0, 0, 0, 0);
 
-  const items = [...html.matchAll(blockRe)]
+  // A 200 whose body no longer matches (redesign, Cloudflare interstitial,
+  // WAF stub) used to write items:[] as a confident success — "no deaths this
+  // week" — bypassing the staleness ceiling entirely. Zero RAW blocks means
+  // the page did not parse; throw so keepOrExpire decides what ships.
+  const rawBlocks = [...html.matchAll(blockRe)];
+  if (rawBlocks.length === 0) throw new Error("obituary listing markup not found — parse failed, not an empty week");
+
+  const items = rawBlocks
     .map((m) => {
       const block = m[0];
       const nameMatch = nameRe.exec(block);

@@ -16,13 +16,14 @@
 // that ceiling the data is dropped and the section disappears from the brief,
 // which is the honest failure: better an absent section than a wrong one.
 import { existsSync } from "node:fs";
-import { readFile } from "node:fs/promises";
+import { readFile, writeFile } from "node:fs/promises";
 
 // How long each source's cache may survive an outage, in days. Roughly: the
 // tighter the recency a section claims, the tighter the ceiling. Forward-dated
 // event lists self-expire as their dates pass, so they tolerate more; minutes
 // are historical by nature and barely decay at all.
 export const CEILINGS = {
+  weather: 1,           // a forecast is wrong the moment it is a day old
   obituaries: 2,        // "past 7 days"; highest harm if wrong or missing
   "suggested-headlines": 2, // today's news
   sports: 2,            // results and upcoming games move daily
@@ -61,16 +62,31 @@ export async function keepOrExpire({ out, label, writeEmpty, maxStaleDays }) {
     return "expired";
   }
 
-  const updated = new Date(cached?.updated ?? 0);
+  // Age against the last GOOD fetch, not the file's write time. The expiry
+  // path below rewrites the file, which used to restamp `updated` to now —
+  // so the EXPIRED alarm fired once and every later run saw a 0-day-old file
+  // and reported the dead source as healthy, forever.
+  const updated = new Date(cached?.lastGoodUpdated ?? cached?.updated ?? 0);
   const ageDays = (Date.now() - updated.getTime()) / 86400000;
   const known = isFinite(ageDays) && !isNaN(updated.getTime()) && updated.getTime() > 0;
 
   if (!known || ageDays > ceiling) {
-    const since = known ? updated.toISOString().slice(0, 10) : "an unknown date";
+    // Report the date the Ohio reader is actually in, not the UTC date.
+    const since = known
+      ? new Intl.DateTimeFormat("en-CA", { timeZone: "America/New_York" }).format(updated)
+      : "an unknown date";
     await writeEmpty(
       `${label} source unreachable since ${since}; cached data passed the ` +
         `${ceiling}-day staleness ceiling and was dropped rather than republished stale.`
     );
+    // Re-open what writeEmpty just wrote and stamp the outage onto it, so the
+    // next run and check-staleness both still see how long this has been down.
+    try {
+      const justWritten = JSON.parse(await readFile(out, "utf8"));
+      justWritten.lastGoodUpdated = known ? updated.toISOString() : null;
+      justWritten.sourceDownSince = justWritten.sourceDownSince ?? new Date().toISOString();
+      await writeFile(out, JSON.stringify(justWritten, null, 2) + "\n");
+    } catch { /* best effort — the empty write already succeeded */ }
     console.error(
       `${label.toUpperCase()} STALE: last good fetch ${known ? `${ageDays.toFixed(1)} days ago` : "unknown"} ` +
         `(ceiling ${ceiling}d) — cache dropped; this section will be omitted from the brief. ` +

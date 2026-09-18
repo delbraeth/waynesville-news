@@ -32,11 +32,15 @@ function parseDateFromFilename(filename) {
 }
 
 async function main() {
-  const res = await fetch(AGENDAS_URL, { headers: { "User-Agent": "Mozilla/5.0 (WaynesvilleDailyBrief/1.0; waynesville.news)" } });
+  const res = await fetch(AGENDAS_URL, { headers: { "User-Agent": "Mozilla/5.0 (WaynesvilleDailyBrief/1.0; waynesville.news)" }, signal: AbortSignal.timeout(20_000) });
   if (!res.ok) throw new Error(`HTTP ${res.status}`);
   const html = await res.text();
 
   const re = /class="rightDownload">\s*<strong>([^<]*)<\/strong><br\/>\s*<a href="([^"]+)"[^>]*>([^<]+)<\/a>/g;
+  // A 200 that matches nothing is a changed page, not an empty agenda list —
+  // without this it wrote items:[] as a success and never reached the ceiling.
+  if (!re.test(html)) throw new Error("agenda listing markup not found — parse failed");
+  re.lastIndex = 0;
   const items = [];
   let m;
   while ((m = re.exec(html))) {

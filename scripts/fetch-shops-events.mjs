@@ -49,7 +49,7 @@ const fmtTime = (d) =>
   d.toLocaleTimeString("en-US", { hour: "numeric", minute: "2-digit", timeZone: "UTC" });
 
 async function main() {
-  const res = await fetch(HOME_URL, { headers: UA });
+  const res = await fetch(HOME_URL, { headers: UA, signal: AbortSignal.timeout(20_000) });
   if (!res.ok) throw new Error(`HTTP ${res.status}`);
   const html = await res.text();
 
@@ -69,7 +69,7 @@ async function main() {
     const isLast = idx === capped.length - 1;
     let detailHtml;
     try {
-      const r = await fetch(link, { headers: UA });
+      const r = await fetch(link, { headers: UA, signal: AbortSignal.timeout(15_000) });
       if (!r.ok) { if (!isLast) await sleep(CRAWL_DELAY_MS); continue; }
       detailHtml = await r.text();
     } catch {
@@ -99,9 +99,15 @@ async function main() {
     if (!isLast) await sleep(CRAWL_DELAY_MS); // no need to be polite after the final request
   }
 
-  const now = new Date();
+  // The dateISO digits parsed below are ET wall-clock carrying a Z suffix, so
+  // "now" must be expressed the same fake-UTC way — comparing them against a
+  // real instant ran 4-5 hours fast and silently dropped same-day morning
+  // events from the morning brief.
+  const nowET = new Date(
+    new Date().toLocaleString("sv-SE", { timeZone: "America/New_York" }).replace(" ", "T") + "Z"
+  );
   const upcoming = items
-    .filter((e) => new Date(e.dateISO) >= now)
+    .filter((e) => new Date(e.dateISO) >= nowET)
     .sort((a, b) => new Date(a.dateISO) - new Date(b.dateISO));
 
   await write(

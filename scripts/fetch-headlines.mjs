@@ -21,12 +21,25 @@ const LIMIT = 8;
 // games — they are not local news, they displace real headlines, and their
 // titles are sometimes placeholders ("Waynesville vs Away"). Games belong in
 // the sports section, which is fed properly from MaxPreps.
-const BLOCKED_SOURCES = new Set(["nfhs network"]);
+const BLOCKED_SOURCES = new Set([
+  // Broadcast/stream schedules — listings, not journalism.
+  "nfhs network", "maxpreps",
+  // Data and widget pages that match on place name alone.
+  "iqair", "weather underground", "census.gov", "city-data.com", "niche",
+  // Legacy.com white-labels every local obituary out through unrelated
+  // out-of-state mastheads; obituaries have their own sourced section.
+  "post and courier", "lawrence journal-world",
+]);
 const LOOKBACK_DAYS = 7; // Google News ranks by relevance, not recency — a
 // query can surface months-old articles (an obituary notice, a stale event
 // writeup) mixed in with today's news. Filter to the same window used
 // elsewhere in this pipeline before capping to LIMIT.
 const OUT = new URL("../src/data/suggested-headlines.json", import.meta.url);
+// The runner is UTC; between 7 PM ET and midnight UTC on Dec 31 its year is
+// already next year, which would drop every current-year item.
+const etYear = () =>
+  Number(new Intl.DateTimeFormat("en-US", { timeZone: "America/New_York", year: "numeric" }).format(new Date()));
+
 const UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36";
 const PER_PAGE_TIMEOUT_MS = 12_000;
 const TOTAL_BROWSER_BUDGET_MS = 90_000;
@@ -36,7 +49,11 @@ const TOTAL_BROWSER_BUDGET_MS = 90_000;
 // Markdown — with auto-publish and no human review, a hostile headline
 // containing markup would otherwise ship straight to the live site.
 const decode = (s) =>
-  s.replace(/<!\[CDATA\[(.*?)\]\]>/gs, "$1")
+  // NFKC folds Mathematical Sans-Serif Bold and friends back to ASCII —
+  // campaign press releases publish in styled unicode, which screen readers
+  // announce character by character.
+  s.normalize("NFKC")
+    .replace(/<!\[CDATA\[(.*?)\]\]>/gs, "$1")
     .replace(/&amp;/g, "&").replace(/&lt;/g, "<").replace(/&gt;/g, ">")
     .replace(/&quot;/g, '"').replace(/&#0?39;/g, "'").replace(/&apos;/g, "'")
     .replace(/[<>]/g, "")
@@ -108,7 +125,11 @@ async function enrichWithExcerpts(items) {
         await page.close();
 
         const redirected = resolvedUrl && !resolvedUrl.startsWith("https://news.google.com/");
-        const usableExcerpt = excerpt && excerpt.length > 20 && excerpt.toLowerCase() !== item.title.toLowerCase();
+        const BOILERPLATE = /^(view .*(obituary|memorial)|send flowers|sign the guestbook|watch live|subscribe|sign up|log in|read more|advertisement)/i;
+        const usableExcerpt =
+          excerpt && excerpt.length > 20 &&
+          excerpt.toLowerCase() !== item.title.toLowerCase() &&
+          !BOILERPLATE.test(excerpt.trim());
         enriched.push(
           redirected && usableExcerpt ? { ...item, sourceUrl: resolvedUrl, excerpt } : item
         );
@@ -124,7 +145,7 @@ async function enrichWithExcerpts(items) {
 }
 
 async function main() {
-  const res = await fetch(FEED, { headers: { "User-Agent": "WaynesvilleDailyBrief/1.0 (waynesville.news)" } });
+  const res = await fetch(FEED, { headers: { "User-Agent": "WaynesvilleDailyBrief/1.0 (waynesville.news)" }, signal: AbortSignal.timeout(20_000) });
   if (!res.ok) throw new Error(`HTTP ${res.status}`);
   const xml = await res.text();
 
@@ -153,7 +174,7 @@ async function main() {
       // the true year(s) as "Obituary (YYYY)" or "Obituary (YYYY - YYYY)" — drop
       // the item if that (most recent) year isn't the current year.
       const m = /Obituary\s*\((?:\d{4}\s*-\s*)?(\d{4})\)/.exec(i.title);
-      return !m || Number(m[1]) === new Date().getFullYear();
+      return !m || Number(m[1]) === etYear();
     })
     .filter((i) => {
       // Same recrawl problem, general case: Google stamps a re-crawled page
@@ -173,7 +194,19 @@ async function main() {
         if (!isNaN(t) && t < cutoff) return false;
       }
       const leading = /^(\d{4})\b/.exec(i.title);
-      if (leading && Number(leading[1]) < new Date().getFullYear()) return false;
+      if (leading && Number(leading[1]) < etYear()) return false;
+      // Spelled-out dates ("... Obituary May 25, 2026") matched neither guard
+      // above, so a May obituary published in an August brief.
+      const spelled = /\b(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\.?\s+(\d{1,2}),?\s+(\d{4})\b/i.exec(i.title);
+      if (spelled) {
+        const t = Date.parse(`${spelled[1]} ${spelled[2]}, ${spelled[3]} UTC`);
+        if (!isNaN(t) && t < cutoff) return false;
+      }
+      // A title dated well in the future is a schedule entry, not news.
+      const future = Date.now() + 2 * 24 * 60 * 60 * 1000;
+      for (const d of [explicit && Date.UTC(+explicit[3], +explicit[1] - 1, +explicit[2])]) {
+        if (d && !isNaN(d) && d > future) return false;
+      }
       return true;
     })
     .slice(0, LIMIT);

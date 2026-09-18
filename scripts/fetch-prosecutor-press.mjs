@@ -35,7 +35,7 @@ function resolveLink(href) {
 }
 
 async function main() {
-  const res = await fetch(INDEX_URL, { headers: { "User-Agent": "WaynesvilleDailyBrief/1.0 (waynesville.news)" } });
+  const res = await fetch(INDEX_URL, { headers: { "User-Agent": "WaynesvilleDailyBrief/1.0 (waynesville.news)" }, signal: AbortSignal.timeout(20_000) });
   if (!res.ok) throw new Error(`HTTP ${res.status}`);
   const html = await res.text();
 
@@ -50,7 +50,13 @@ async function main() {
   // LOOKBACK_DAYS ago is dropped — a silently one-day-short window.
   cutoff.setHours(0, 0, 0, 0);
 
-  const items = [...html.matchAll(rowRe)]
+  // Zero RAW rows means the table markup changed, not that the office had a
+  // quiet week — the page always lists historical releases. Throw rather than
+  // publish silence as fact.
+  const rawRows = [...html.matchAll(rowRe)];
+  if (rawRows.length === 0) throw new Error("press release table markup not found — parse failed, not an empty week");
+
+  const items = rawRows
     .map((m) => {
       const [, href, dateStr, titleRaw] = m;
       const [mo, day, yr] = dateStr.split("/").map(Number);

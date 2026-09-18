@@ -10,6 +10,7 @@
 // Fail-safe: any error logs and exits 0 so the workflow never fails on email.
 import { readFile, writeFile } from "node:fs/promises";
 import { existsSync } from "node:fs";
+import { briefProblems } from "./lib/brief-gate.mjs";
 
 const root = new URL("..", import.meta.url);
 const SITE = "https://waynesville.news";
@@ -43,22 +44,34 @@ async function main() {
   // Hard gates — the email must only ever carry a real, finished, public edition.
   if (get("published") !== "true") { console.log("newsletter: brief is not published — skipping"); return; }
   if (get("demo") === "true") { console.log("newsletter: demo brief — skipping"); return; }
-  if (/TODO\s+—/.test(bodyRaw)) { console.log("newsletter: brief still has TODO placeholders — skipping"); return; }
-  if (!title) { console.log("newsletter: brief has no title — skipping"); return; }
+  // Exactly the checks that gate the BUILD. If the site would refuse to
+  // deploy this edition, subscribers must not receive it either — otherwise
+  // the "read this on the web" footer links to a page that never shipped.
+  const problems = briefProblems(raw, `${iso}.md`);
+  if (problems.length) {
+    console.log(`newsletter: brief fails the publish gate — skipping\n  - ${problems.join("\n  - ")}`);
+    return;
+  }
 
   // Idempotency, checked against Buttondown itself (survives fresh clones and
   // same-day re-runs): skip if an email with this exact subject already exists.
-  const list = await fetch(`${API}?page_size=50`, { headers });
+  // The local record is checked UNCONDITIONALLY and FIRST. It used to be
+  // consulted only when the remote list call failed, so any 200 that did not
+  // happen to contain today's subject — a paginated or reshaped payload, a
+  // normalized subject, today's email past the 50-item window — let a second
+  // full edition go out. Email cannot be unsent, so the cheap local check wins.
+  try {
+    const st = JSON.parse(await readFile(STATE, "utf8"));
+    if (st.lastSent === iso) { console.log(`newsletter: ${iso} already sent per local state — skipping`); return; }
+  } catch { /* no state yet */ }
+
+  const list = await fetch(`${API}?page_size=50`, { headers, signal: AbortSignal.timeout(20_000) });
   if (list.ok) {
     const data = await list.json();
     const existing = (data.results ?? []).find((e) => (e.subject ?? "").trim() === title.trim());
     if (existing) { console.log(`newsletter: "${title}" already sent (${existing.status}) — skipping`); return; }
   } else {
-    console.log(`newsletter: could not list existing emails (HTTP ${list.status}) — proceeding with local check only`);
-    try {
-      const st = JSON.parse(await readFile(STATE, "utf8"));
-      if (st.lastSent === iso) { console.log(`newsletter: ${iso} already sent per local state — skipping`); return; }
-    } catch { /* no state yet */ }
+    console.log(`newsletter: could not list existing emails (HTTP ${list.status}) — relying on the local record checked above`);
   }
 
   // Prepare the Markdown for email: strip editor comments, make site-relative

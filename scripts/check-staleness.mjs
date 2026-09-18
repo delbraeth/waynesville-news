@@ -29,7 +29,8 @@ for (const f of files) {
   const count = Array.isArray(d?.items) ? d.items.length
     : Array.isArray(d?.results) ? `${d.results.length}+${d.upcoming?.length ?? 0}`
     : d?.item ? 1 : "-";
-  const u = d?.updated ? new Date(d.updated) : null;
+  // lastGoodUpdated survives the expiry rewrite; `updated` does not.
+  const u = d?.lastGoodUpdated ? new Date(d.lastGoodUpdated) : d?.updated ? new Date(d.updated) : null;
   if (!u || isNaN(u)) {
     rows.push({ label, age: null, ceiling, state: ceiling ? "NO TIMESTAMP" : "static", count });
     continue;
@@ -37,8 +38,11 @@ for (const f of files) {
   const age = (Date.now() - u.getTime()) / 86400000;
   let state = "ok";
   if (ceiling != null) {
-    if (age > ceiling) state = "EXPIRED";
+    if (d?.sourceDownSince || age > ceiling) state = "EXPIRED";
     else if (age > ceiling * 0.7) state = "aging";
+    // A ceiling-bearing source that parsed fine but produced nothing is not
+    // self-evidently healthy — it looks identical to a silently broken scrape.
+    else if (count === 0) state = "empty?";
   }
   rows.push({ label, age, ceiling, state, count });
 }

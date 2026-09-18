@@ -3,6 +3,7 @@
 // NOTE: not run inside the Cowork sandbox (its web-fetch policy blocks it) —
 // it is exercised for real by the scheduled GitHub Action.
 import { writeFile } from "node:fs/promises";
+import { keepOrExpire } from "./lib/stale-cache.mjs";
 
 const LAT = 39.5287;
 const LON = -84.0891; // Waynesville, OH
@@ -12,7 +13,7 @@ const headers = {
 };
 
 async function getJSON(url) {
-  const r = await fetch(url, { headers });
+  const r = await fetch(url, { headers, signal: AbortSignal.timeout(20_000) });
   if (!r.ok) throw new Error(`${url} → HTTP ${r.status}`);
   return r.json();
 }
@@ -50,6 +51,11 @@ async function main() {
     location: "Waynesville, OH",
     tempF: now.temperature,
     condition: now.shortForecast,
+    // periods[0] is "Today" on a morning run but "Tonight" on an evening one,
+    // in which case tempF is the overnight low and highF is TOMORROW's high.
+    // Carry the NWS period's own name so consumers can say which it is instead
+    // of asserting "Today".
+    periodName: now.name,
     highF: day.temperature,
     lowF: night.temperature,
     outlook,
@@ -63,7 +69,24 @@ async function main() {
   console.log(`weather.json updated: ${data.tempF}° ${data.condition}`);
 }
 
-main().catch((e) => {
+const OUT = new URL("../src/data/weather.json", import.meta.url);
+
+main().catch(async (e) => {
   console.error("weather refresh failed:", e.message);
-  process.exit(1);
+  // Weather had NO staleness ceiling: a multi-day NWS outage left the last
+  // good forecast on the masthead and in the brief, presented as today's,
+  // with check-staleness reporting it healthy. Route it through the same
+  // guard as every other source (ceiling 1 day).
+  await keepOrExpire({
+    out: OUT,
+    label: "weather",
+    writeEmpty: async (note) => {
+      await writeFile(OUT, JSON.stringify({
+        _note: note, location: "Waynesville, OH",
+        tempF: null, condition: null, periodName: null, highF: null, lowF: null,
+        outlook: [], updated: new Date().toISOString(),
+      }, null, 2) + "\n");
+    },
+  });
+  process.exit(0); // don't fail the workflow; the guard decided what ships
 });

@@ -32,21 +32,27 @@ const fmtDate = (iso) =>
   }).replace(",", " ·");
 
 async function main() {
-  const res = await fetch(LIBRARY_URL, { headers: { "User-Agent": "Mozilla/5.0 (WaynesvilleDailyBrief/1.0; waynesville.news)" } });
+  const res = await fetch(LIBRARY_URL, { headers: { "User-Agent": "Mozilla/5.0 (WaynesvilleDailyBrief/1.0; waynesville.news)" }, signal: AbortSignal.timeout(20_000) });
   if (!res.ok) throw new Error(`HTTP ${res.status}`);
   const html = await res.text();
 
   // Each event card: <a href="{eventUrl}?method=rss">{title}</a><br />\s*<time datetime="{ISO}" ...>
   const re = /<a href="(https:\/\/marylcook-main-oh\.whofi\.com\/calendar\/event\/\d+\/)\?method=rss">([^<]*)<\/a><br \/>\s*<time datetime="([^"]+)" class="datetime">/g;
 
-  const now = new Date();
+  // The dateISO digits parsed below are ET wall-clock carrying a Z suffix, so
+  // "now" must be expressed the same fake-UTC way — comparing them against a
+  // real instant ran 4-5 hours fast and silently dropped same-day morning
+  // events from the morning brief.
+  const nowET = new Date(
+    new Date().toLocaleString("sv-SE", { timeZone: "America/New_York" }).replace(" ", "T") + "Z"
+  );
   const items = [];
   let m;
   while ((m = re.exec(html))) {
     const [, link, rawTitle, dateISO] = m;
     const title = decodeEntities(rawTitle);
     if (/canceled event/i.test(title)) continue; // don't publish canceled programs
-    if (new Date(dateISO) < now) continue; // only upcoming
+    if (new Date(dateISO) < nowET) continue; // only upcoming (ET wall-clock, see nowET)
     items.push({ title, dateISO, dateLabel: fmtDate(dateISO), link });
   }
   items.sort((a, b) => new Date(a.dateISO) - new Date(b.dateISO));

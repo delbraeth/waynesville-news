@@ -6,10 +6,12 @@ const meeting = nextCommissionersMeeting();
 ---
 <div class="infobar">
   <div class="inner">
-    <span class="item">
-      <span class="label">Weather</span>
-      <strong>{weather.tempF}°</strong> {weather.condition} · H {weather.highF}° / L {weather.lowF}°
-    </span>
+    {weather.tempF != null && (
+      <span class="item">
+        <span class="label">{weather.periodName ?? "Weather"}</span>
+        <strong>{weather.tempF}°</strong> {weather.condition} · H {weather.highF}° / L {weather.lowF}°
+      </span>
+    )}
     <span class="item">
       <span class="label">Next Meeting</span>
       <strong>{meeting.body}</strong> · {meeting.whenLabel}

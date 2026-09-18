@@ -5,20 +5,14 @@
 // turns the failure mode "placeholder text goes live on waynesville.news"
 // into "the build fails and nothing deploys."
 import { readFile, readdir } from "node:fs/promises";
+import { briefProblems } from "./lib/brief-gate.mjs";
 
 const dir = new URL("../src/content/briefs/", import.meta.url);
 const problems = [];
 
 for (const file of (await readdir(dir)).filter((f) => f.endsWith(".md"))) {
   const text = await readFile(new URL(file, dir), "utf8");
-  // Only frontmatter `published: true` counts — the instruction comment in
-  // unpublished drafts mentions the literal string "published: true", so
-  // check the frontmatter block only (between the first pair of --- lines).
-  const fm = /^---\n([\s\S]*?)\n---/.exec(text)?.[1] ?? "";
-  if (!/^published:\s*true\s*$/m.test(fm)) continue;
-
-  if (/\bTODO\b/.test(text)) problems.push(`${file}: contains a TODO placeholder`);
-  if (text.includes("<!--")) problems.push(`${file}: contains an HTML comment (draft instructions?)`);
+  problems.push(...briefProblems(text, file));
 }
 
 if (problems.length) {
