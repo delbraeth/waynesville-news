@@ -1,12 +1,28 @@
-name: Refresh (weather + weekday draft)
+name: Refresh sources (manual safety net)
 
-# Every morning: refresh weather from the NWS API and pull candidate headlines.
-# On weekdays it also generates a fresh draft brief into src/content/briefs/
-# (published: false). Everything that changes is committed (which redeploys the
-# site for the weather update).
+# MANUAL ONLY — the daily schedule was removed on 2026-09-17.
+#
+# This workflow and the "news-feed" scheduled Claude task were both refreshing
+# the same nine sources every morning, 20 minutes apart, and both pushing to
+# main. That caused a push race, and it meant whichever ran second overwrote the
+# other's data. The Claude task now owns the daily run end to end: refreshing
+# every source, gathering events, drafting and publishing the brief, and mailing
+# subscribers.
+#
+# Two steps were also deleted rather than just unscheduled, because they corrupt
+# state if anyone dispatches this by hand:
+#   * "Generate weekday draft" — the Claude run creates the draft. If this ran
+#     first, draft-brief.mjs would refuse to overwrite and the Claude run would
+#     inherit a bare TODO scaffold instead of writing its own.
+#   * "Pull obituaries" — obituaries now come from the funeral home's
+#     notification emails, which only the Claude session can read. Running the
+#     scraper here hits a Cloudflare-gated site, trips the staleness ceiling in
+#     scripts/lib/stale-cache.mjs, and empties data the Claude run had just
+#     written correctly.
+#
+# What's left is a hand-dispatchable refresh of the deterministic sources, for
+# use if the Claude task is down and the data needs topping up.
 on:
-  schedule:
-    - cron: "20 10 * * *" # 6:20 AM EDT / 5:20 AM EST (cron is UTC year-round)
   workflow_dispatch: {}
 
 permissions:
@@ -36,8 +52,6 @@ jobs:
         run: npm run refresh:headlines || echo "headlines refresh skipped/failed"
       - name: Pull Prosecutor press releases
         run: npm run refresh:safety || echo "prosecutor press refresh skipped/failed"
-      - name: Pull obituaries
-        run: npm run refresh:obituaries || echo "obituaries refresh skipped/failed"
       - name: Pull Spartans sports schedule/results
         run: npm run refresh:sports || echo "sports refresh skipped/failed"
       - name: Pull library events
@@ -48,21 +62,15 @@ jobs:
         run: npm run refresh:shops || echo "shops events refresh skipped/failed"
       - name: Pull Village Council minutes (OCR)
         run: npm run refresh:village-minutes || echo "village minutes refresh skipped/failed"
-      - name: Generate weekday draft
-        run: |
-          dow=$(date -u +%u)   # 1=Mon .. 7=Sun (UTC morning == ET morning)
-          if [ "$dow" -ge 1 ] && [ "$dow" -le 5 ]; then
-            npm run draft
-          else
-            echo "Weekend — no draft generated."
-          fi
+      - name: Report source freshness
+        run: npm run check:staleness || true
       - name: Commit if changed
         run: |
           if [[ -n "$(git status --porcelain)" ]]; then
             git config user.name "waynesville-news-bot"
             git config user.email "actions@users.noreply.github.com"
             git add -A
-            git commit -m "chore: daily refresh (weather + draft)"
+            git commit -m "chore: manual source refresh"
             # Rebase onto whatever landed on main since checkout (e.g. a same-day
             # publish) before pushing, and retry — avoids losing this commit to a
             # race. If a rebase conflicts, abort it so the next attempt starts
