@@ -16,6 +16,12 @@ import { keepOrExpire } from "./lib/stale-cache.mjs";
 const QUERY = '("Waynesville" OR "Warren County") Ohio';
 const FEED = `https://news.google.com/rss/search?q=${encodeURIComponent(QUERY)}&hl=en-US&gl=US&ceid=US:en`;
 const LIMIT = 8;
+// Sources that only ever publish listings, not journalism. NFHS Network pages
+// are broadcast schedule entries ("Watch Live & On Demand") for individual
+// games — they are not local news, they displace real headlines, and their
+// titles are sometimes placeholders ("Waynesville vs Away"). Games belong in
+// the sports section, which is fed properly from MaxPreps.
+const BLOCKED_SOURCES = new Set(["nfhs network"]);
 const LOOKBACK_DAYS = 7; // Google News ranks by relevance, not recency — a
 // query can surface months-old articles (an obituary notice, a stale event
 // writeup) mixed in with today's news. Filter to the same window used
@@ -139,6 +145,7 @@ async function main() {
       const t = Date.parse(i.date);
       return !isNaN(t) && t >= cutoff; // drop undated or stale-dated items rather than risk showing them
     })
+    .filter((i) => !BLOCKED_SOURCES.has((i.source || "").trim().toLowerCase()))
     .filter((i) => {
       // Funeral-home obituary pages get re-crawled by Google long after the
       // person's actual obituary year, which gives old content a fresh-looking
@@ -147,6 +154,27 @@ async function main() {
       // the item if that (most recent) year isn't the current year.
       const m = /Obituary\s*\((?:\d{4}\s*-\s*)?(\d{4})\)/.exec(i.title);
       return !m || Number(m[1]) === new Date().getFullYear();
+    })
+    .filter((i) => {
+      // Same recrawl problem, general case: Google stamps a re-crawled page
+      // with today's pubDate, so the feed date cannot be trusted on its own.
+      // When a title states its OWN date, believe the title over the feed.
+      // Deliberately narrow, to avoid dropping a current story that merely
+      // mentions a past year ("Village revisits 2019 zoning plan"):
+      //   a) an explicit M/D/YYYY date anywhere in the title, or
+      //   b) a four-digit year the title LEADS with ("2024 Boys Soccer Semifinal").
+      // Anything older than the lookback window is stale content wearing a
+      // fresh date. (This is what let a 2024 playoff broadcast publish as a
+      // current local headline on 2026-09-17.)
+      const explicit = /\b(\d{1,2})\/(\d{1,2})\/(\d{4})\b/.exec(i.title);
+      if (explicit) {
+        const [, mm, dd, yyyy] = explicit;
+        const t = Date.UTC(Number(yyyy), Number(mm) - 1, Number(dd));
+        if (!isNaN(t) && t < cutoff) return false;
+      }
+      const leading = /^(\d{4})\b/.exec(i.title);
+      if (leading && Number(leading[1]) < new Date().getFullYear()) return false;
+      return true;
     })
     .slice(0, LIMIT);
 
