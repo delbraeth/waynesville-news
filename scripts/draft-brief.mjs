@@ -52,6 +52,8 @@ let shopsEvents = [];
 try { shopsEvents = (await readJSON("src/data/shops-events.json")).items ?? []; } catch { /* optional */ }
 let villageMinutes = null;
 try { villageMinutes = (await readJSON("src/data/village-minutes.json")).item ?? null; } catch { /* optional */ }
+let boardRecap = null;
+try { boardRecap = (await readJSON("src/data/board-recap.json")).item ?? null; } catch { /* optional */ }
 let fbSchools = [];
 try { fbSchools = (await readJSON("src/data/fb-schools.json")).items ?? []; } catch { /* optional */ }
 
@@ -166,6 +168,38 @@ const villageMinutesBlock = villageMinutes?.meetingDateLabel
     ].join("\n")
   : null;
 
+// A board recap is written up once, in the brief that follows the meeting.
+// RECAP_MAX_AGE_DAYS keeps a recap from resurfacing in every edition for weeks
+// after the meeting; drop the file (or let the next one replace it) once used.
+const RECAP_MAX_AGE_DAYS = 21;
+const recapFresh = (() => {
+  if (!boardRecap?.meetingDate) return false;
+  const age = (Date.now() - new Date(boardRecap.meetingDate).getTime()) / 86400000;
+  return age >= 0 && age <= RECAP_MAX_AGE_DAYS;
+})();
+
+// NOTE: never copy links out of the district's recap newsletter — they are
+// per-recipient tracking URLs with the subscriber's email address encoded in
+// them. Link to BoardDocs instead, as this block does.
+const boardRecapBlock = recapFresh
+  ? [
+      `**${boardRecap.body}** — from the district's recap of the ${boardRecap.meetingDateLabel} meeting` +
+        `${boardRecap.attendanceNote ? ` (${boardRecap.attendanceNote})` : ""}:`,
+      ...(boardRecap.lead ?? []).map((t) => `- ${t}`),
+      ...(boardRecap.finance ?? []).map((t) => `- ${t}`),
+      ...(boardRecap.operations ?? []).map((t) => `- ${t}`),
+      boardRecap.nextMeeting
+        ? `\nNext meeting: **${boardRecap.nextMeeting.label}**, ${boardRecap.nextMeeting.location}.`
+        : "",
+      `[full agenda and minutes on BoardDocs](${boardRecap.boardDocs})`,
+    ].filter(Boolean).join("\n")
+  : null;
+
+const boardRecapSchoolsBlock = recapFresh && (boardRecap.schools ?? []).length
+  ? `**From the ${boardRecap.meetingDateLabel} board meeting**\n` +
+    boardRecap.schools.map((t) => `- ${t}`).join("\n")
+  : null;
+
 const weatherBlock = weather
   ? [
       `**Today:** ${weather.tempF}°F, ${weather.condition} (high ${weather.highF}° / low ${weather.lowF}°)`,
@@ -218,14 +252,14 @@ ${weatherBlock ?? "TODO — weather unavailable this morning; check https://fore
 ## Schools
 TODO — Wayne Local board, Spartans, closings, library programs. Check:
 ${listSrc("Schools")}
-${fbBlock ? `\n${fbBlock}\n` : ""}${libraryBlock ? `\n**Library programs** (Mary L. Cook Public Library)\n${libraryBlock}\n` : ""}
+${boardRecapSchoolsBlock ? `\n${boardRecapSchoolsBlock}\n` : ""}${fbBlock ? `\n${fbBlock}\n` : ""}${libraryBlock ? `\n**Library programs** (Mary L. Cook Public Library)\n${libraryBlock}\n` : ""}
 ${sportsBlock ? `\n## This week in sports\n${sportsBlock}\n` : ""}
 ## Local government
 Next up: **${meeting.body}**, ${meeting.whenLabel} — [agenda](${meeting.source}).
 Also next up: **${townshipMeeting.body}**, ${townshipMeeting.whenLabel}, ${townshipMeeting.location}${latestAgenda ? ` — [latest posted agenda: ${latestAgenda.title}, ${latestAgenda.dateLabel}](${latestAgenda.link})` : ` — [agendas](${townshipMeeting.source})`}.
 TODO — village council & county items, each linked to the agenda/minutes. Check:
 ${listSrc("Local Government")}
-${villageMinutesBlock ? `\n${villageMinutesBlock}\n` : ""}
+${villageMinutesBlock ? `\n${villageMinutesBlock}\n` : ""}${boardRecapBlock ? `\n${boardRecapBlock}\n` : ""}
 
 ## Around town
 TODO — new businesses, the antiques district. Check:
