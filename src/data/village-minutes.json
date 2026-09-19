@@ -1,51 +1,51 @@
 {
   "_note": "Village of Waynesville Council — draft minutes of the meeting prior to the most recently posted agenda, OCR'd from that agenda packet's own embedded scan (the site's dedicated Minutes postings run months behind, but each agenda includes the previous meeting's minutes for approval). OCR output may contain occasional character errors; each vote's context text is extracted verbatim, not generated or paraphrased. Links to the full agenda PDF.",
-  "updated": "2026-09-18T10:45:04.528Z",
+  "updated": "2026-09-19T10:44:05.365Z",
   "item": {
-    "agendaDateLabel": "September 8, 2026",
-    "meetingDateLabel": "August 17, 2026",
+    "agendaDateLabel": "September 21, 2026",
+    "meetingDateLabel": "September 8, 2026",
     "calledToOrder": "7:00 p.m.",
-    "adjourned": "8:03 p.m.",
-    "link": "https://www.villageofwaynesville.org/media/site/meetings/Council Agenda 09.08.2026.pdf",
+    "adjourned": "7:45 p.m.",
+    "link": "https://www.villageofwaynesville.org/media/site/meetings/Council Agenda 09.21.26.pdf",
     "votes": [
       {
-        "context": "Mayor Isaacs motioned to excuse Mr. Gallagher from the last Council meeting, and Mrs. Miller seconded the motion.",
-        "motion": "Isaacs",
-        "second": "Miller",
-        "rollCall": "6 yeas"
-      },
-      {
-        "context": "Mr. Nation moved to excuse Mr. Powell from tonight’s Council meeting, and Mr. Gallagher seconded the motion.",
-        "motion": "Nation",
+        "context": "Mrs. Miller moved to excuse Mr. Colvin, Mr. Lauffer, and Mr. Powell from tonights Council meeting, and Mr. Gallagher seconded the motion.",
+        "motion": "Miller",
         "second": "Gallagher",
-        "rollCall": "6 yeas"
+        "rollCall": "4 yeas"
       },
       {
-        "context": "Mrs. Miller made a motion to approve the minutes for the Council meeting on August 3, 2026 as written, and Mr. Nation seconded the motion.",
+        "context": "Mrs. Miller made a motion to approve the minutes for the Council meeting on August 17, 2026, as written, and Mr. Nation seconded the motion.",
         "motion": "Miller",
         "second": "Nation",
-        "rollCall": "6 yeas"
+        "rollCall": "4 yeas"
       },
       {
-        "context": "Ordinance No. 2026-033 An Ordinance Accepting the Recommendation of the Village Engineer and Awarding a Contract to Ford Development Corp. for the Fifth Street and Sixth Street Water Main Replacement and Resurfacing Project and Authorizing the Village Manager to Execute a Construction Agreement and Related Contract Documents Mr. Gallagher moved to have the first reading for Ordinance 2026-033, and Mrs. Miller seconded the motion.",
-        "motion": "Gallagher",
-        "second": "Miller",
-        "rollCall": "6 yeas"
+        "context": "Mrs. Miller moved to have the first reading for Ordinance 2026-038, and Mr. Nation seconded the motion.",
+        "motion": "Miller",
+        "second": "Nation",
+        "rollCall": "4 yeas |"
       },
       {
-        "context": "Ordinance 2026-034 Amending Ordinance No. 2026-029 Regarding a Contract with Choice One Engineering for Professional Services Related to the Old State Route 73 Utility Replacement and Resurfacing Project and Declaring an Emergency Mr. Gallagher moved to waive the first reading for Ordinance 2026-034 and declare an emergency, and Mr. Nation seconded the motion.",
+        "context": "Resolution 2026-039 Resolution Accepting the Amounts and Rates as Determined by the Budget Commission and Authorizing the Necessary Tax Levies and Certifying them to the County Auditor and Declaring an Emergency Mrs. Miller moved to have the first reading for Resolution 2026-039, and Mr. Gallagher seconded the motion.",
+        "motion": "Miller",
+        "second": "Gallagher",
+        "rollCall": "4 yeas"
+      },
+      {
+        "context": "Ordinance No. 2026-033 An Ordinance Accepting the Recommendation of the Village Engineer and Awardin g a Contract to Ford Development Corp. for the Fifth Street and Sixth Street Water Main Replacement and Resurfacing Project and Authorizing the Village Manager to Execute a Construction Agreement and Related Contract Documents : Mr. Gallagher moved to adopt Ordinance 2026-033, and Mr. Nation seconded the motion.",
         "motion": "Gallagher",
         "second": "Nation",
-        "rollCall": "6 yeas !"
+        "rollCall": "4 yeas |"
       },
       {
-        "context": "Mr. Gallagher moved to adopt Ordinance 2026-034 as an emergency, and Mr. Colvin seconded the motion.",
+        "context": "Ordinance No. 2026-037 An Ordinance Authorizing the Village Manager to Execute a Subdivision Public Improvement Performance and Maintenance Security Agreement (Water) with C. Ellis Properties, LLC and Peoples Bank, and to Accept the Associated Escrow Security, for the Installation of Water Improvements in the Settlers Grove Subdivision, Section/Phase 1. Mr. Gallagher moved to adopt Ordinance 2026-037, and Mrs. Miller seconded the motion,",
         "motion": "Gallagher",
-        "second": "Colvin",
-        "rollCall": "6 yeas"
+        "second": "Miller",
+        "rollCall": "4 yeas |"
       }
     ],
-    "voteCountTotal": 11,
-    "pagesScanned": 7
+    "voteCountTotal": 6,
+    "pagesScanned": 6
   }
 }

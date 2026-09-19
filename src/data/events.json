@@ -1,15 +1,6 @@
 {
-  "_note": "Real venues and sources, verified against each listed source on 2026-09-16 (daily automated refresh). Recurring items (rodeo, commissioners) show the next occurrence.",
+  "_note": "Real venues and sources, verified against each listed source on 2026-09-19 (daily automated refresh). Recurring items (rodeo, commissioners, ghost walk) show the next occurrence.",
   "items": [
-    {
-      "title": "Warren County Board of Park Commissioners Meeting",
-      "dateISO": "2026-09-18T08:00:00-04:00",
-      "dateLabel": "Fri, Sep 18 · 8:00–9:30 AM",
-      "venue": "Armco Park - 1267 Building, Lebanon",
-      "category": "Local Government",
-      "source": "https://www.warrencountyparks.com/events/",
-      "note": "Park Commissioners meet the third Friday of each month to oversee Park District policy, finances, and projects"
-    },
     {
       "title": "Historical Haunts — ghost walk of downtown Waynesville",
       "dateISO": "2026-09-19T00:00:00-04:00",
