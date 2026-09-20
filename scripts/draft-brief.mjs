@@ -50,6 +50,8 @@ let townshipAgendas = [];
 try { townshipAgendas = (await readJSON("src/data/township-agendas.json")).items ?? []; } catch { /* optional */ }
 let shopsEvents = [];
 try { shopsEvents = (await readJSON("src/data/shops-events.json")).items ?? []; } catch { /* optional */ }
+let caesarCreekEvents = [];
+try { caesarCreekEvents = (await readJSON("src/data/caesar-creek-events.json")).items ?? []; } catch { /* optional */ }
 let villageMinutes = null;
 try { villageMinutes = (await readJSON("src/data/village-minutes.json")).item ?? null; } catch { /* optional */ }
 let boardRecap = null;
@@ -70,9 +72,32 @@ const etOffset = (() => {
 })();
 const todayStart = new Date(`${iso}T00:00:00${etOffset}`);
 
-const soon = events.items
-  .filter((e) => !e.evergreen && e.dateISO)
+// Caesar Creek State Park runs naturalist programs most weeks, and the cache
+// holds 60 days of them. Showing all of that daily would bury everything else,
+// so the brief works from a two-week window.
+const CAESAR_WINDOW_DAYS = 14;
+// How many park programs may also appear in "This week's events". They already
+// get their own section; a couple of entries in the shared list is a pointer,
+// more would let one source crowd out the village calendar.
+const CAESAR_IN_EVENTS_LIST = 2;
+
+const caesarHorizon = new Date(todayStart.getTime() + CAESAR_WINDOW_DAYS * 86_400_000);
+const caesarSoon = caesarCreekEvents
+  .filter((e) => e.dateISO)
   .map((e) => ({ ...e, _d: new Date(e.dateISO) }))
+  .filter((e) => e._d >= todayStart && e._d <= caesarHorizon)
+  .sort((a, b) => a._d - b._d);
+
+const soon = [
+  ...events.items
+    .filter((e) => !e.evergreen && e.dateISO)
+    .map((e) => ({ ...e, _d: new Date(e.dateISO) })),
+  ...caesarSoon.slice(0, CAESAR_IN_EVENTS_LIST).map((e) => ({
+    ...e,
+    venue: "Caesar Creek State Park",
+    source: e.link,
+  })),
+]
   .filter((e) => e._d >= todayStart)
   .sort((a, b) => a._d - b._d)
   .slice(0, 6);
@@ -96,6 +121,10 @@ const SOURCES = {
   ],
   "Around Town": [
     "Chamber — https://www.waynesvilleohio.com/ · Merchants — https://waynesvilleshops.com/",
+  ],
+  "Caesar Creek": [
+    "ODNR events calendar — https://ohiodnr.gov/go-and-do/plan-a-visit/events-calendar/events-calendar?keyword=Caesar%20Creek",
+    "Caesar Creek State Park — https://ohiodnr.gov/go-and-do/plan-a-visit/find-a-property/caesar-creek-state-park",
   ],
   "Public Safety": [
     "Sheriff — https://sheriff.warrencountyohio.gov/",
@@ -177,6 +206,24 @@ const fbBlock = fbSchools.length
 
 const shopsBlock = shopsEvents.length
   ? shopsEvents.map((e) => `- **${e.dateLabel}** — ${link(e.title, e.link)}`).join("\n")
+  : null;
+
+// ODNR stores a meeting point in locationName, but it is free text: sometimes a
+// place ("Nature Center"), sometimes a whole sentence that repeats the summary
+// ("Meet at Pioneer Village."). Only the short place-like values are worth
+// printing; the rest would just duplicate the line beside it.
+const meetingPoint = (e) => {
+  const m = e.meetAt;
+  if (!m || m.length > 45 || /^meet\b/i.test(m)) return null;
+  if (e.summary && e.summary.toLowerCase().includes(m.toLowerCase())) return null;
+  return m;
+};
+
+const caesarBlock = caesarSoon.length
+  ? caesarSoon.map((e) => {
+      const where = meetingPoint(e);
+      return `- **${e.dateLabel}** — ${link(e.title, e.link)}${where ? ` (${where})` : ""}`;
+    }).join("\n")
   : null;
 
 const villageMinutesBlock = villageMinutes?.meetingDateLabel
@@ -299,6 +346,7 @@ ${listSrc("Around Town")}
 <!-- Editor note (stripped before publication): occasionally write a free \`## Business spotlight\` section — a short editorial profile of a local business. It's coverage, not sponsorship: never tied to the paid Supporters list, and labeled as a spotlight. -->
 ${shopsBlock ? `\n**Merchant Association events** (waynesvilleshops.com)\n${shopsBlock}\n` : ""}
 
+${caesarBlock ? `\n## Caesar Creek State Park\nNaturalist programs at the park, about five miles east of the village, over the next ${CAESAR_WINDOW_DAYS} days. Times and meeting points are ODNR's own. Check:\n${listSrc("Caesar Creek")}\n\n${caesarBlock}\n` : ""}
 ## Public safety
 ${safetyBlock}
 ${listSrc("Public Safety")}
@@ -313,4 +361,4 @@ ${candidateBlock}
 `;
 
 await writeFile(targetPath, draft);
-console.log(`Unpublished brief written: src/content/briefs/${iso}.md  (${soon.length} events, next meeting ${meeting.whenLabel})`);
+console.log(`Unpublished brief written: src/content/briefs/${iso}.md  (${soon.length} events, ${caesarSoon.length} Caesar Creek, next meeting ${meeting.whenLabel})`);

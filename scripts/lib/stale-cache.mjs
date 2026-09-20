@@ -31,6 +31,7 @@ export const CEILINGS = {
   "fb-schools": 3,      // recent district posts
   "library-events": 7,  // dated, forward-looking
   "shops-events": 7,    // dated, forward-looking
+  "caesar-creek-events": 7, // dated, forward-looking
   "township-agendas": 10, // agendas post irregularly
   "village-minutes": 21,  // historical record; slow-moving by design
 };
