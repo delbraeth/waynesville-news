@@ -1,18 +1,7 @@
 {
   "_note": "Waynesville Spartans schedule + results (MaxPreps), past 7 days / next 7 days. Scraped directly from each sport's own schedule page (football, volleyball, soccer -- varsity + JV), not the school hub page, which has been observed to silently omit some contests. Scores and matchups reproduced verbatim from MaxPreps' own markup; each links to their game page.",
-  "updated": "2026-09-19T10:50:55.785Z",
+  "updated": "2026-09-20T10:45:34.883Z",
   "results": [
-    {
-      "dateISO": "2026-09-12T11:00:00",
-      "sport": "Volleyball",
-      "level": "Varsity",
-      "opponent": "Clinton-Massie",
-      "wayneScore": 0,
-      "opponentScore": 3,
-      "result": "L",
-      "isHome": false,
-      "link": "https://www.maxpreps.com/oh/volleyball/match/clinton-massie-clarksville-vs-waynesville/9-12-2026/?c=232dc243-3a5e-4b5c-af00-5967391b4722"
-    },
     {
       "dateISO": "2026-09-14T17:30:00",
       "sport": "Boys Soccer",
@@ -103,17 +92,6 @@
     }
   ],
   "upcoming": [
-    {
-      "dateISO": "2026-09-19T10:00:00",
-      "sport": "Football",
-      "level": "JV",
-      "opponent": "Oakwood",
-      "wayneScore": null,
-      "opponentScore": null,
-      "result": null,
-      "isHome": false,
-      "link": "https://www.maxpreps.com/oh/football/game/oakwood-dayton-vs-waynesville/jv/9-19-2026/?c=90e2478c-f269-42b0-a2ee-0cadaaaa1f84"
-    },
     {
       "dateISO": "2026-09-21T17:30:00",
       "sport": "Volleyball",
@@ -278,6 +256,28 @@
       "result": null,
       "isHome": true,
       "link": "https://www.maxpreps.com/oh/football/game/dayton-christian-miamisburg-vs-waynesville/jv/9-26-2026/?c=7057d297-7694-40cc-86d3-7878c8e25efa"
+    },
+    {
+      "dateISO": "2026-09-26T13:00:00",
+      "sport": "Girls Soccer",
+      "level": "JV",
+      "opponent": "Lebanon",
+      "wayneScore": null,
+      "opponentScore": null,
+      "result": null,
+      "isHome": true,
+      "link": "https://www.maxpreps.com/oh/soccer/girls/match/lebanon-vs-waynesville/jv/9-26-2026/?c=396a1c65-35aa-43b0-b953-ef21e86b6b0c"
+    },
+    {
+      "dateISO": "2026-09-26T14:45:00",
+      "sport": "Girls Soccer",
+      "level": "Varsity",
+      "opponent": "Lebanon",
+      "wayneScore": null,
+      "opponentScore": null,
+      "result": null,
+      "isHome": true,
+      "link": "https://www.maxpreps.com/oh/soccer/girls/match/lebanon-vs-waynesville/9-26-2026/?c=8d6a91a0-7da4-4bc7-936a-c1389257e72f"
     }
   ]
 }

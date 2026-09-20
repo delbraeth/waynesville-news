@@ -1,70 +1,23 @@
 {
-  "_note": "Real venues and sources, verified against each listed source on 2026-09-19 (daily automated refresh). Recurring items (rodeo, commissioners, ghost walk) show the next occurrence.",
+  "_note": "Real venues and sources, verified against each listed source on 2026-09-20 (daily automated refresh). Recurring items (rodeo, commissioners, ghost walk) show the next occurrence.",
   "items": [
     {
-      "title": "Historical Haunts — ghost walk of downtown Waynesville",
-      "dateISO": "2026-09-19T00:00:00-04:00",
-      "dateLabel": "Wednesdays, Fridays & Saturdays through October · $20",
-      "venue": "Downtown Waynesville (Museum at the Friends Home)",
-      "category": "Tour",
-      "source": "https://www.friendshomemuseum.org/ghost-tours-class-dinners",
-      "note": "Two-hour guided walking tour of the historic district drawing on the village’s 228-year history, run by the Museum at the Friends Home. The museum also runs a $60 Ghost & Goblet dinner and tour at The Venue at the Historic Lockup, and a $50 Ghost Hunting 101 class with ParaVizionz. Start times are not published on the site — they are set in the booking system, so confirm before printing one."
-    },
-    {
-      "title": "Clean Sweep of the Great Miami River",
-      "dateISO": "2026-09-19T09:00:00-04:00",
-      "dateLabel": "Sat, Sep 19 · 9:00 AM–12:00 PM",
-      "venue": "Carmody Park, 7499 Martz Paulin Rd, Franklin",
-      "category": "Outdoors",
-      "source": "https://www.warrencountyparks.com/events/",
-      "note": "Annual volunteer river cleanup on the Great Miami River; free t-shirts for those who pre-register by Sep 1; Scout badges available"
-    },
-    {
       "title": "Ohio Renaissance Festival — Pirates Weekend",
-      "dateISO": "2026-09-19T10:30:00-04:00",
-      "dateLabel": "Sep 19–20 · 10:30 AM–7:00 PM",
+      "dateISO": "2026-09-20T10:30:00-04:00",
+      "dateLabel": "Sun, Sep 20 · 10:30 AM–7:00 PM (final day of Pirates Weekend)",
       "venue": "Renaissance Park, Waynesville",
       "category": "Festival",
       "source": "https://renfestival.com/",
       "note": "Themed weekend during the festival's regular Sep 5–Nov 1, 2026 season"
     },
     {
-      "title": "Waynesville Fall Fest — Opening Day",
-      "dateISO": "2026-09-19T11:00:00-04:00",
-      "dateLabel": "Opens Sat, Sep 19 · Sat/Sun through Nov 1 (Sat 11–6, Sun 12–6)",
+      "title": "Waynesville Fall Fest",
+      "dateISO": "2026-09-20T12:00:00-04:00",
+      "dateLabel": "Sat/Sun through Nov 1 · Sat 11–6, Sun 12–6",
       "venue": "7392 E State Route 73, Waynesville",
       "category": "Festival",
       "source": "https://waynesvillefallfest.com/",
       "note": "Corn maze, mini golf, petting farm, and other fall activities; $16 adult / $14 ages 10 & under daily admission. Not affiliated with Hisey Fall Fest."
-    },
-    {
-      "title": "Fox Hollow Rodeo — Bull Riding",
-      "dateISO": "2026-09-19T18:00:00-04:00",
-      "dateLabel": "Every Saturday · office opens 5 PM, show 6 PM (next: Sep 19)",
-      "venue": "Fox Hollow Rodeo, Waynesville",
-      "category": "Rodeo",
-      "source": "https://foxhollowrodeo.com/",
-      "note": "Bull riding, barrel racing, mutton bustin' — year-round, rain or shine"
-    },
-    {
-      "title": "Witches’ Night Out in Waynesville",
-      "dateISO": "2026-09-19T18:00:00-04:00",
-      "dateLabel": "Sat, Sep 19 · 6:00–9:00 PM",
-      "venue": "195 S Main St, downtown Waynesville",
-      "category": "Shopping",
-      "source": "https://www.facebook.com/events/2008417456428317",
-      "registrationUrl": "https://checkout.square.site/merchant/J4FAESB04XKMH/checkout/JT2SBTM4KT6TWJIY4X2CCVI7",
-      "note": "Downtown evening shopping event with exclusive merch and a dried-flower workshop. Hosted jointly by Taylor’s Coffee & Creamery, Petal Vintage, The Fine Print Tattoo, Hailstorm Vintage, Buckeye Charm, Lucky Kat and Love Your Flowers. Ticketed."
-    },
-    {
-      "title": "Billy “Crash” Craddock, hosted by the Richard Lynch Band",
-      "dateISO": "2026-09-19T19:00:00-04:00",
-      "dateLabel": "Sat, Sep 19 · 7:00 PM",
-      "venue": "Keepin’ It Country Farm, 5315 Township Line Rd, Waynesville",
-      "category": "Music",
-      "source": "https://www.facebook.com/events/907696838648350",
-      "registrationUrl": "https://lovetattoofoundation.org/product/1226158-one-1-ticket-to-billy-crash-craddock-september-19-2026",
-      "note": "Country and rockabilly singer Billy “Crash” Craddock, hosted by the Richard Lynch Band. Public event; ticketed."
     },
     {
       "title": "Warren County Commissioners — Weekly Session",
@@ -83,6 +36,15 @@
       "category": "Family",
       "source": "https://www.warrencountyparks.com/events/",
       "note": "Warren County Park District naturalists lead a free family story time on monarchs; ages 2-10 with an adult, no pre-registration"
+    },
+    {
+      "title": "Historical Haunts — ghost walk of downtown Waynesville",
+      "dateISO": "2026-09-23T00:00:00-04:00",
+      "dateLabel": "Wednesdays, Fridays & Saturdays through October · $20",
+      "venue": "Downtown Waynesville (Museum at the Friends Home)",
+      "category": "Tour",
+      "source": "https://www.friendshomemuseum.org/ghost-tours-class-dinners",
+      "note": "Two-hour guided walking tour of the historic district drawing on the village’s 228-year history, run by the Museum at the Friends Home. The museum also runs a $60 Ghost & Goblet dinner and tour at The Venue at the Historic Lockup, and a $50 Ghost Hunting 101 class with ParaVizionz. Start times are not published on the site — they are set in the booking system, so confirm before printing one."
     },
     {
       "title": "Monarch Story Time and Craft at Salem Twp Public Library",
@@ -146,6 +108,15 @@
       "category": "Festival",
       "source": "https://renfestival.com/",
       "note": "Themed weekend during the festival's regular Sep 5–Nov 1, 2026 season"
+    },
+    {
+      "title": "Fox Hollow Rodeo — Bull Riding",
+      "dateISO": "2026-09-26T18:00:00-04:00",
+      "dateLabel": "Every Saturday · office opens 5 PM, show 6 PM (next: Sep 26)",
+      "venue": "Fox Hollow Rodeo, Waynesville",
+      "category": "Rodeo",
+      "source": "https://foxhollowrodeo.com/",
+      "note": "Bull riding, barrel racing, mutton bustin' — year-round, rain or shine"
     },
     {
       "title": "Full Moon Hike at Gulley Park",
