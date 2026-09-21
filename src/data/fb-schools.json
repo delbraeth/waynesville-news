@@ -1,7 +1,21 @@
 {
   "_note": "Recent Wayne Local Schools Facebook posts via rss.app bridge. Title + link + short excerpt; the district's own words. Fail-safe: kept from last run if the bridge is down.",
-  "updated": "2026-09-20T10:52:13.942Z",
+  "updated": "2026-09-21T10:41:40.986Z",
   "items": [
+    {
+      "title": "⭐Spartan Staff Spotlight⭐ Meet Brooke Bliznik, our new 6th Grade Science Teacher at Waynesville Middle School! Brooke is…",
+      "link": "https://www.facebook.com/waynelocalschools/posts/pfbid02MtS5LPahPjDvxNufgasaGHSukU9GM1rDX9EWPy4wK4fE4yZyEogZDK2DDvDJqQw4l",
+      "date": "Sun, 20 Sep 2026 18:30:06 GMT",
+      "dateLabel": "Sun, Sep 20",
+      "excerpt": "passionate about building a community and is excited to meet new people, explore a new curriculum, and learn more about Waynesville. Education runs in the family for Brooke; both of her parents were middle school teachers and helped inspire her own love of learning. 🎭A fun fact about Brooke:…"
+    },
+    {
+      "title": "Students in Dr. Heather Kerns’ K-5 classroom are putting learning into action through Waynesville Elementary's Recycling…",
+      "link": "https://www.facebook.com/waynelocalschools/posts/pfbid02CqEwzXRR2PUnqx2BiCNqHkZsZQrdxSayMxDEW9kwG2xdx119uvvHjN3gMCzvZ6gal",
+      "date": "Sun, 20 Sep 2026 15:16:42 GMT",
+      "dateLabel": "Sun, Sep 20",
+      "excerpt": "Program. For the past 11 years, Dr. Kerns’ students have played an important role in this schoolwide effort, helping care for their school and the environment. That’s 11 years of making a difference!♻️ The program includes filling and emptying recycling bins throughout classrooms, hallways, and…"
+    },
     {
       "title": "Today's WLS Fiscal Focus: What Are We Investing In? This week, Ohio released its annual School Report Cards, and Wayne…",
       "link": "https://www.facebook.com/waynelocalschools/posts/pfbid0CnHxh3JZZ1TTDoX7dYQow8XsZdLDaDhwHjybs1bdv2WaWcCgmVkzaMFtUmtJPTmDl",
@@ -43,20 +57,6 @@
       "date": "Thu, 17 Sep 2026 20:47:09 GMT",
       "dateLabel": "Thu, Sep 17",
       "excerpt": ""
-    },
-    {
-      "title": "Music, smiles, and lots of strumming filled Mrs. Jones’ preschool classroom today! Students welcomed special guest…",
-      "link": "https://www.facebook.com/waynelocalschools/posts/pfbid031cEjKVdQ4aZfdMN77fS2yegNXRj61CLEZAH5VghmEZ4u1EJJ8taY9qBroAkUH1xul",
-      "date": "Thu, 17 Sep 2026 18:16:04 GMT",
-      "dateLabel": "Thu, Sep 17",
-      "excerpt": "musicians from Mrs. Weiland’s class for an interactive ukulele sing-along.🎵 Our preschoolers sang favorite nursery rhymes, danced, clapped to the beat, and even got an up-close look at the ukulele. It was a fun, hands-on way to make learning relevant while building relationships. A morning full…"
-    },
-    {
-      "title": "🧪🔬Here’s a neat STEM activity WMS eighth graders took part in this week. They learned how a “real” hot air balloon…",
-      "link": "https://www.facebook.com/reel/1300057872140651/",
-      "date": "Thu, 17 Sep 2026 15:05:17 GMT",
-      "dateLabel": "Thu, Sep 17",
-      "excerpt": "functions with the hot air making the balloon buoyant and therefore float in the air; technically the hot air is a fluid even though we don't think or see it that way!😉 Warren County Career Center"
     }
   ]
 }
