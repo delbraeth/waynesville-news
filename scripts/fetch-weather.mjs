@@ -46,6 +46,24 @@ async function main() {
     condition: d.shortForecast,
   }));
 
+  // Active NWS alerts for the point. Kept separate from the forecast so an
+  // alerts outage can't take the forecast down with it: null means the check
+  // itself failed (unknown), [] means checked and clear. draft-brief.mjs only
+  // says "no alerts" on [].
+  let alerts = null;
+  try {
+    const a = await getJSON(`https://api.weather.gov/alerts/active?point=${LAT},${LON}`);
+    alerts = (a.features ?? []).map((f) => ({
+      event: f.properties?.event ?? "Alert",
+      headline: f.properties?.headline ?? null,
+      severity: f.properties?.severity ?? null,
+      expires: f.properties?.expires ?? null,
+      url: f.id ?? null,
+    }));
+  } catch (e) {
+    console.error("weather alerts check failed (forecast still updated):", e.message);
+  }
+
   const data = {
     _note: "Auto-refreshed from the NWS API (api.weather.gov, ILN/Wilmington office).",
     location: "Waynesville, OH",
@@ -59,6 +77,7 @@ async function main() {
     highF: day.temperature,
     lowF: night.temperature,
     outlook,
+    alerts,
     updated: new Date().toISOString(),
   };
 
@@ -66,7 +85,8 @@ async function main() {
     new URL("../src/data/weather.json", import.meta.url),
     JSON.stringify(data, null, 2) + "\n"
   );
-  console.log(`weather.json updated: ${data.tempF}° ${data.condition}`);
+  console.log(`weather.json updated: ${data.tempF}° ${data.condition}` +
+    (alerts === null ? " (alerts: unknown)" : ` (alerts: ${alerts.length})`));
 }
 
 const OUT = new URL("../src/data/weather.json", import.meta.url);
@@ -84,7 +104,7 @@ main().catch(async (e) => {
       await writeFile(OUT, JSON.stringify({
         _note: note, location: "Waynesville, OH",
         tempF: null, condition: null, periodName: null, highF: null, lowF: null,
-        outlook: [], updated: new Date().toISOString(),
+        outlook: [], alerts: null, updated: new Date().toISOString(),
       }, null, 2) + "\n");
     },
   });

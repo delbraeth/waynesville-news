@@ -147,11 +147,25 @@ const eventsBlock = soon.length
   ? soon.map((e) => `- **${e.dateLabel}** — ${e.title} (${e.venue})${e.source ? ` — ${link("details", e.source)}` : ""}${e.registrationUrl ? ` — ${link("register", e.registrationUrl)}` : ""}`).join("\n")
   : "- (no dated events in the window — see the full calendar)";
 
+// NWS active alerts, fetched by refresh:weather. null = the alerts check itself
+// failed (unknown), [] = checked and clear. Never claim "no alerts" on null.
+const alerts = weather ? weather.alerts : null;
+const alertsLine = Array.isArray(alerts)
+  ? (alerts.length
+      ? `\n**Alerts:** ` + alerts.map((a) => `${a.event}${a.headline ? ` — ${a.headline}` : ""}`).join("; ")
+      : "\nNo NWS alerts in effect.")
+  : "\nAlert status unavailable this morning — check the NWS link below.";
+const alertsSafety = Array.isArray(alerts)
+  ? (alerts.length
+      ? `NWS alerts in effect: ` + alerts.map((a) => `**${a.event}**${a.headline ? ` (${a.headline})` : ""}`).join("; ") + "."
+      : "No NWS weather alerts are in effect this morning.")
+  : "NWS alert status could not be checked this morning.";
+
 const safetyBlock = prosecutorItems.length
   ? `From the Warren County Prosecutor's Office, released in the past week:\n` +
     prosecutorItems.map((p) => `- **${p.dateLabel}** — ${p.title} (${link("release", p.link)})`).join("\n") +
-    `\n\nCheck:`
-  : "TODO — road/weather alerts, sheriff/prosecutor news (handle with care). Check:";
+    `\n\n${alertsSafety} Check:`
+  : `${alertsSafety} TODO — road closures, sheriff/prosecutor news (handle with care). Check:`;
 
 const obituariesBlock = obituaries.length
   ? obituaries.map((o) => `- **${o.name}** — ${o.dateRange} (${link("tribute", o.link)})`).join("\n")
@@ -192,8 +206,13 @@ const sportsBlock = (sportsResultsBlock || sportsUpcomingBlock)
     ].filter(Boolean).join("\n\n")
   : null;
 
-const libraryBlock = libraryEvents.length
-  ? libraryEvents.map((e) => `- **${e.dateLabel}** — ${link(e.title, e.link)}`).join("\n")
+// library-events.json can be served from cache on the staleness path, so drop
+// anything dated before today: a cached feed must not print yesterday's story
+// times as today's. dateISO is a naive ET wall-clock string mislabelled "Z",
+// so compare the calendar-date part only.
+const libraryUpcoming = libraryEvents.filter((e) => !e.dateISO || e.dateISO.slice(0, 10) >= iso);
+const libraryBlock = libraryUpcoming.length
+  ? libraryUpcoming.map((e) => `- **${e.dateLabel}** — ${link(e.title, e.link)}`).join("\n")
   : null;
 
 // Facebook is robots-blocked, so the writer can't open the posts — the excerpt
@@ -281,6 +300,7 @@ const weatherBlock = weather && weather.tempF != null
             `- **${d.dayLabel}** — high ${d.highF}°${d.lowF !== null ? ` / low ${d.lowF}°` : ""}, ${d.condition}`
           ).join("\n")}`
         : "",
+      alertsLine,
       `\nSource: [National Weather Service](https://forecast.weather.gov/MapClick.php?lat=39.5287&lon=-84.0891)`,
     ].join("\n")
   : null;
