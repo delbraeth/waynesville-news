@@ -1,6 +1,6 @@
 {
   "_note": "Waynesville Spartans schedule + results (MaxPreps), past 7 days / next 7 days. Scraped directly from each sport's own schedule page (football, volleyball, soccer -- varsity + JV), not the school hub page, which has been observed to silently omit some contests. Scores and matchups reproduced verbatim from MaxPreps' own markup; each links to their game page.",
-  "updated": "2026-09-23T10:42:31.318Z",
+  "updated": "2026-09-23T13:45:49.491Z",
   "results": [
     {
       "dateISO": "2026-09-17T17:30:00",
@@ -78,6 +78,17 @@
       "result": "L",
       "isHome": false,
       "link": "https://www.maxpreps.com/oh/soccer/match/centerville-vs-waynesville/jv/9-21-2026/?c=36218d17-25bf-4e92-ae25-e6faaffb6fb5"
+    },
+    {
+      "dateISO": "2026-09-21T17:30:00",
+      "sport": "Girls Soccer",
+      "level": "JV",
+      "opponent": "Miamisburg",
+      "wayneScore": 2,
+      "opponentScore": 2,
+      "result": "T",
+      "isHome": true,
+      "link": "https://www.maxpreps.com/oh/soccer/girls/match/miamisburg-vs-waynesville/jv/9-21-2026/?c=9b60bcae-60c3-4441-a160-36e7e888b6fe"
     },
     {
       "dateISO": "2026-09-21T19:15:00",

@@ -1,12 +1,18 @@
 {
   "_note": "Candidate local headlines (Google News RSS). Published as a quoted headline (or, when available, a short publisher-written excerpt) + source + link; never reproduce article body text.",
-  "updated": "2026-09-23T10:42:26.496Z",
+  "updated": "2026-09-23T13:45:41.243Z",
   "items": [
     {
       "title": "IT’S A CONSTITUTIONAL WRAP: YEAR 2",
       "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQZnhCY0NaYUxhb2pqOUtqSmtfRG5XLVpnX0VVWGFTV1JJSUtVSUdQVFE5NTVWMHJYa2xGVnZGN2FXNThud1N1TjV1SFp5VFBUd0VWX3hlcUxmMWdIamxSaHpDRW43a0FPSWJRX2YycDk4UGVjYlpDRWpuM0Zib29ZSUZ3VFFhaHZW?oc=5",
       "source": "Warren County Post",
       "date": "Wed, 23 Sep 2026 08:51:21 GMT"
+    },
+    {
+      "title": "Oakwood throttles Waynesville 56-28, Lumberjacks stay unbeaten at 5-0",
+      "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPUTJiaTk0RWxpakpIaFZLeVU3RWxMaUVfNVFMRi1TN3FjNWxMQUJiLU9NdlBFTHlBLUdmWDdQV0pKX3VBRW94OFdmT0dlMTFnV1hsYUZiRUJfbGNSS2l2cExrUGZaN3Y1dElFOVR6aTVFQ2xTekxTMGdVc1diWnZXS3BKVnp4RFF6bVZHVXFXUHh0Vk40T3F3SmZFajlsUkYzSWRDb2tpd0FVYlJibHZHdlZrT0VfeWpMeFU1ZmZsRlNPamdqUlBicVAydV9ZWkpp0gHWAUFVX3lxTE5EVnpQV0kwZ2JnOFlXVTZ3YUx1NmhaMHhyTnNYUE9TYUpTMUtwQXFvNkVpRVJySnNPcmx1NzZKYzNkRnVzZkZ5YjNpZ0JWZHlUOVlBOEd5bDc2X18ycWctckJFWjVWb0NESEpfSVdxVllpV2RzenQ3STlPTEdha3MxNmRHR0Q4N0I4bFJzdk1WckloYndKeE5GX3owY0RNRDN3ZFUwYnh2RURRN2RISTZnX0J6NlBrSkFfTlkwNVh3T3FaX2RlcGRPT19mZWwtUXc1N1ZnN2c?oc=5",
+      "source": "wdtn.com",
+      "date": "Sat, 19 Sep 2026 04:05:06 GMT"
     },
     {
       "title": "Betty Patton Obituary (2026) - Waynesville, OH - Greene County Dailies",
@@ -33,22 +39,16 @@
       "date": "Thu, 17 Sep 2026 03:17:35 GMT"
     },
     {
-      "title": "Ray Davis Obituary (2026) - Wilmington, OH - Greene County Dailies",
-      "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOeGEwUzIyR2FyMUI4cEFpQWZzVU1ySmdYc1lSU29jYndfdFlLOVM0T3lWcmRnbU9GXzEwMTRTRjNaYkE2ZzdfX3dUcm1WT2RnZ1M2NWs1WUVJSTh5b2Ytb1pfR0tBRkdtdDVQOGVKRUZLSG16WjlXb1lJWkNtUWFpd0FJR1htaGY5TGk2VFQzT2Jwdw?oc=5",
-      "source": "Legacy obituary",
-      "date": "Tue, 22 Sep 2026 13:19:07 GMT"
-    },
-    {
       "title": "Jerry Frederick Obituary (2026) - Waynesville, OH - Greene County Dailies",
       "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNYmp4aEcwZ2pRNXVKSjM3YzJJakUyOW9Xby1IN3dWM1hZbGxuUDlWRlo3aG0yd1JpUWdiR084WU52N0Y2U0tGT0JtM3IwbWp6WnRtWWh5ZnpVVnNjWkl0eW52aVE5NWI3OWZMeXVlZXNQd2lLam1TbHdKcm9BdmdtTmgzZlhGX2UxbHZiTkdmSUR6eUVmXy1uNFZn?oc=5",
       "source": "Legacy obituary",
       "date": "Mon, 21 Sep 2026 07:00:00 GMT"
     },
     {
-      "title": "Ray Davis Obituary (2026) - Wilmington, OH - Dayton Daily News",
-      "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNUFFFWjg4N3VIRWFqbWdqVU1lZEFqaUlNNEltRmV2SDJtdE8xT040MGlWVEhRd0hyT1N4UzZnc1FuWW5wS2JPcGVKNEM3MmtnUWlOaW5IcmoyWjB4d3J6d2d6eVNmX2lpT29KdWtvWTlnc2tsRXM2ZXBTS25SRlRVYWZ4RU4yQQ?oc=5",
+      "title": "Ray Davis Obituary (2026) - Wilmington, OH - Greene County Dailies",
+      "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOeGEwUzIyR2FyMUI4cEFpQWZzVU1ySmdYc1lSU29jYndfdFlLOVM0T3lWcmRnbU9GXzEwMTRTRjNaYkE2ZzdfX3dUcm1WT2RnZ1M2NWs1WUVJSTh5b2Ytb1pfR0tBRkdtdDVQOGVKRUZLSG16WjlXb1lJWkNtUWFpd0FJR1htaGY5TGk2VFQzT2Jwdw?oc=5",
       "source": "Legacy obituary",
-      "date": "Tue, 22 Sep 2026 05:38:03 GMT"
+      "date": "Tue, 22 Sep 2026 13:19:07 GMT"
     }
   ]
 }
