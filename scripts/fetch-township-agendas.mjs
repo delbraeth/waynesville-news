@@ -1,15 +1,18 @@
-// Pull the most recently posted Wayne Township meeting agendas. The site
-// (an IONOS MyWebsite CMS page, no JS needed) lists each posted agenda as a
-// PDF download block with a title ("Trustees Meeting Agenda") and a
-// filename that encodes the date ("August+18+2026.pdf" /
-// "June+15%2C+2026.pdf" — format is inconsistent, so we parse leniently).
-// No agenda text is scraped, only title/date/link — each item links
-// straight to the township's own PDF.
+// Pull the most recently posted Wayne Township trustee meeting agendas.
+// The township moved to a WordPress site in 2026 (waynetwpwarrencooh.gov).
+// The Board of Trustees page lists each meeting on its own line:
+//   "September 15 — <a>Minutes</a> | <a>Agenda</a><br />"
+// Minutes may be absent for recent meetings. The agenda PDF filename encodes
+// the full date ("September-15-2026.pdf", "January-6-2026.pdf") and is the
+// reliable date source; minutes filenames are inconsistent, so a minutes link
+// is only attached when it sits on the same line as its agenda.
+// No agenda text is scraped, only title/date/links — each item links straight
+// to the township's own PDF.
 import { writeFile } from "node:fs/promises";
 import { existsSync } from "node:fs";
 import { keepOrExpire } from "./lib/stale-cache.mjs";
 
-const AGENDAS_URL = "https://www.waynetownship.us/minutes-agendas/agendas-2026/";
+const AGENDAS_URL = "https://waynetwpwarrencooh.gov/board-of-trustees/";
 const CAP = 3;
 const OUT = new URL("../src/data/township-agendas.json", import.meta.url);
 
@@ -19,16 +22,13 @@ const write = (data, note) =>
 const MONTHS = ["january","february","march","april","may","june","july","august","september","october","november","december"];
 
 function parseDateFromFilename(filename) {
-  // e.g. "August 18 2026.pdf" or "June 15, 2026.pdf" (after URL-decoding).
-  const decoded = decodeURIComponent(filename).replace(/\.pdf$/i, "").replace(",", "");
-  const m = /([A-Za-z]+)\s+(\d{1,2})\s+(\d{4})/.exec(decoded);
+  // e.g. "September-15-2026.pdf", "January-6-2026.pdf", "September-01-2026.pdf"
+  const m = /([A-Za-z]+)-(\d{1,2})-(\d{4})\.pdf$/i.exec(decodeURIComponent(filename));
   if (!m) return null;
   const monthIdx = MONTHS.indexOf(m[1].toLowerCase());
   if (monthIdx === -1) return null;
-  const day = Number(m[2]);
-  const year = Number(m[3]);
-  // Store as a plain date (no reliable time on the source) at noon Eastern.
-  return new Date(Date.UTC(year, monthIdx, day, 16, 0, 0));
+  // Plain date (no reliable time on the source) at noon Eastern.
+  return new Date(Date.UTC(Number(m[3]), monthIdx, Number(m[2]), 16, 0, 0));
 }
 
 async function main() {
@@ -36,31 +36,39 @@ async function main() {
   if (!res.ok) throw new Error(`HTTP ${res.status}`);
   const html = await res.text();
 
-  const re = /class="rightDownload">\s*<strong>([^<]*)<\/strong><br\/>\s*<a href="([^"]+)"[^>]*>([^<]+)<\/a>/g;
-  // A 200 that matches nothing is a changed page, not an empty agenda list —
-  // without this it wrote items:[] as a success and never reached the ceiling.
-  if (!re.test(html)) throw new Error("agenda listing markup not found — parse failed");
-  re.lastIndex = 0;
+  // One meeting per <br />-separated line. Match the agenda anchor by its
+  // filename shape, then look for a minutes anchor on the same line.
+  const agendaRe = /<a\s+href="([^"]+\/([A-Za-z]+-\d{1,2}-\d{4}\.pdf))"[^>]*>\s*Agenda\s*<\/a>/i;
+  const minutesRe = /<a\s+href="([^"]+\.pdf)"[^>]*>\s*Minutes\s*<\/a>/i;
+  const lines = html.split(/<br\s*\/?>/i);
   const items = [];
-  let m;
-  while ((m = re.exec(html))) {
-    const [, title, link, filename] = m;
-    const date = parseDateFromFilename(filename);
+  for (const line of lines) {
+    const a = agendaRe.exec(line);
+    if (!a) continue;
+    const date = parseDateFromFilename(a[2]);
     if (!date) continue;
+    // Minutes precede Agenda on each line; only look BEFORE the agenda anchor so
+    // a trailing line that runs into the next year's block can't borrow its
+    // first Minutes link.
+    const mm = minutesRe.exec(line.slice(0, a.index));
     items.push({
-      title: title.replace(/[<>]/g, "").trim(), // goes into auto-published Markdown
+      title: "Trustees Meeting Agenda",
       dateISO: date.toISOString(),
       dateLabel: date.toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric", timeZone: "UTC" }),
-      link,
+      link: a[1],
+      ...(mm ? { minutesLink: mm[1] } : {}),
     });
   }
-  items.sort((a, b) => new Date(b.dateISO) - new Date(a.dateISO));
+  // A 200 that matches nothing is a changed page, not an empty agenda list —
+  // throw so the staleness guard runs instead of writing items:[] as success.
+  if (!items.length) throw new Error("agenda listing markup not found — parse failed");
 
+  items.sort((a, b) => new Date(b.dateISO) - new Date(a.dateISO));
   await write(
     { items: items.slice(0, CAP) },
-    "Wayne Township Trustees — most recently posted meeting agendas (titles/dates/links only, reproduced verbatim; agenda text lives in the linked PDF)."
+    "Wayne Township Trustees — most recently posted meeting agendas (titles/dates/links only, reproduced verbatim; agenda text lives in the linked PDF; minutesLink present when the township has posted minutes for that meeting)."
   );
-  console.log(`township-agendas.json: ${Math.min(items.length, CAP)} agenda(s)`);
+  console.log(`township-agendas.json: ${Math.min(items.length, CAP)} agenda(s), latest ${items[0].dateLabel}`);
 }
 
 main().catch(async (e) => {
