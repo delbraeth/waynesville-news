@@ -49,7 +49,7 @@ export function nextTownshipMeeting(now = new Date()) {
           when: target.toISOString(),
           whenLabel: `${label} · 7:00 PM`,
           location: '6050 N. Clarksville Rd., Waynesville',
-          source: 'https://www.waynetownship.us/minutes-agendas/agendas-2026/',
+          source: 'https://waynetwpwarrencooh.gov/board-of-trustees/',
         };
       }
     }
@@ -62,6 +62,6 @@ export function nextTownshipMeeting(now = new Date()) {
     when: now.toISOString(),
     whenLabel: '1st & 3rd Tue · 7:00 PM',
     location: '6050 N. Clarksville Rd., Waynesville',
-    source: 'https://www.waynetownship.us/minutes-agendas/agendas-2026/',
+    source: 'https://waynetwpwarrencooh.gov/board-of-trustees/',
   };
 }

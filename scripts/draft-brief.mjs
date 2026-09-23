@@ -117,7 +117,7 @@ const SOURCES = {
   "Local Government": [
     "Commissioners agendas/minutes — https://commissioners.warrencountyohio.gov/News/AgendaMinutes/Index",
     "Village of Waynesville — https://www.villageofwaynesville.org/news/ and /meetings/",
-    "Wayne Township (covers Waynesville & Corwin) — https://www.waynetownship.us/minutes-agendas/agendas-2026/",
+    "Wayne Township (covers Waynesville & Corwin) — https://waynetwpwarrencooh.gov/board-of-trustees/",
   ],
   "Around Town": [
     "Chamber — https://www.waynesvilleohio.com/ · Merchants — https://waynesvilleshops.com/",
