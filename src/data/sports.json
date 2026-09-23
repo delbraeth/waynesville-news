@@ -1,18 +1,7 @@
 {
   "_note": "Waynesville Spartans schedule + results (MaxPreps), past 7 days / next 7 days. Scraped directly from each sport's own schedule page (football, volleyball, soccer -- varsity + JV), not the school hub page, which has been observed to silently omit some contests. Scores and matchups reproduced verbatim from MaxPreps' own markup; each links to their game page.",
-  "updated": "2026-09-22T10:42:11.275Z",
+  "updated": "2026-09-23T10:42:31.318Z",
   "results": [
-    {
-      "dateISO": "2026-09-15T18:30:00",
-      "sport": "Volleyball",
-      "level": "Varsity",
-      "opponent": "Madison",
-      "wayneScore": 3,
-      "opponentScore": 1,
-      "result": "W",
-      "isHome": true,
-      "link": "https://www.maxpreps.com/oh/volleyball/match/madison-middletown-vs-waynesville/9-15-2026/?c=9ce30e7b-0634-48d6-8096-a21c9eaef717"
-    },
     {
       "dateISO": "2026-09-17T17:30:00",
       "sport": "Boys Soccer",
@@ -80,6 +69,17 @@
       "link": "https://www.maxpreps.com/oh/football/game/oakwood-dayton-vs-waynesville/jv/9-19-2026/?c=90e2478c-f269-42b0-a2ee-0cadaaaa1f84"
     },
     {
+      "dateISO": "2026-09-21T17:30:00",
+      "sport": "Boys Soccer",
+      "level": "JV",
+      "opponent": "Centerville",
+      "wayneScore": 0,
+      "opponentScore": 3,
+      "result": "L",
+      "isHome": false,
+      "link": "https://www.maxpreps.com/oh/soccer/match/centerville-vs-waynesville/jv/9-21-2026/?c=36218d17-25bf-4e92-ae25-e6faaffb6fb5"
+    },
+    {
       "dateISO": "2026-09-21T19:15:00",
       "sport": "Girls Soccer",
       "level": "Varsity",
@@ -92,28 +92,6 @@
     }
   ],
   "upcoming": [
-    {
-      "dateISO": "2026-09-22T17:30:00",
-      "sport": "Volleyball",
-      "level": "JV",
-      "opponent": "Brookville",
-      "wayneScore": null,
-      "opponentScore": null,
-      "result": null,
-      "isHome": true,
-      "link": "https://www.maxpreps.com/oh/volleyball/match/brookville-vs-waynesville/jv/9-22-2026/?c=b3d63745-7e3c-4fa4-a366-c0616273e697"
-    },
-    {
-      "dateISO": "2026-09-22T18:30:00",
-      "sport": "Volleyball",
-      "level": "Varsity",
-      "opponent": "Brookville",
-      "wayneScore": null,
-      "opponentScore": null,
-      "result": null,
-      "isHome": true,
-      "link": "https://www.maxpreps.com/oh/volleyball/match/brookville-vs-waynesville/9-22-2026/?c=576496e4-0bbd-4735-af0c-ac7558cb23e9"
-    },
     {
       "dateISO": "2026-09-24T17:30:00",
       "sport": "Volleyball",
@@ -289,6 +267,28 @@
       "result": null,
       "isHome": false,
       "link": "https://www.maxpreps.com/oh/soccer/girls/match/troy-vs-waynesville/9-28-2026/?c=f17436d4-fa04-4244-a301-29d7cf535522"
+    },
+    {
+      "dateISO": "2026-09-29T17:30:00",
+      "sport": "Volleyball",
+      "level": "JV",
+      "opponent": "Oakwood",
+      "wayneScore": null,
+      "opponentScore": null,
+      "result": null,
+      "isHome": true,
+      "link": "https://www.maxpreps.com/oh/volleyball/match/oakwood-dayton-vs-waynesville/jv/9-29-2026/?c=2b0b6016-c3ad-4dcb-8049-acf192a5ef13"
+    },
+    {
+      "dateISO": "2026-09-29T18:30:00",
+      "sport": "Volleyball",
+      "level": "Varsity",
+      "opponent": "Oakwood",
+      "wayneScore": null,
+      "opponentScore": null,
+      "result": null,
+      "isHome": true,
+      "link": "https://www.maxpreps.com/oh/volleyball/match/oakwood-dayton-vs-waynesville/9-29-2026/?c=4faeb4ec-2214-4124-89f0-abfee436efc5"
     }
   ]
 }

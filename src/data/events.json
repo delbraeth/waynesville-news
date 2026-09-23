@@ -1,24 +1,6 @@
 {
-  "_note": "Real venues and sources, verified against each listed source on 2026-09-21 (daily automated refresh). Recurring items (rodeo, commissioners, ghost walk) show the next occurrence.",
+  "_note": "Real venues and sources, verified against each listed source on 2026-09-23 (daily automated refresh). Recurring items (rodeo, commissioners, ghost walk) show the next occurrence.",
   "items": [
-    {
-      "title": "Warren County Commissioners — Weekly Session",
-      "dateISO": "2026-09-22T09:00:00-04:00",
-      "dateLabel": "Tue, Sep 22 · 9:00 AM",
-      "venue": "406 Justice Dr, Lebanon",
-      "category": "Government",
-      "source": "https://commissioners.warrencountyohio.gov/News/AgendaMinutes/Index",
-      "note": "Commissioners meet every Tuesday at 9 AM; standing weekly pattern verified on the county site"
-    },
-    {
-      "title": "Monarch Family Story Time at Mason Public Library",
-      "dateISO": "2026-09-22T19:00:00-04:00",
-      "dateLabel": "Tue, Sep 22 · 7:00–8:00 PM",
-      "venue": "Mason Public Library, 200 Reading Rd, Mason",
-      "category": "Family",
-      "source": "https://www.warrencountyparks.com/events/",
-      "note": "Warren County Park District naturalists lead a free family story time on monarchs; ages 2-10 with an adult, no pre-registration"
-    },
     {
       "title": "Historical Haunts — ghost walk of downtown Waynesville",
       "dateISO": "2026-09-23T00:00:00-04:00",
@@ -111,12 +93,21 @@
     },
     {
       "title": "Full Moon Hike at Gulley Park",
-      "dateISO": "2026-09-27T21:00:00-04:00",
-      "dateLabel": "Sun, Sep 27 · 9:00–10:00 PM",
+      "dateISO": "2026-09-27T19:45:00-04:00",
+      "dateLabel": "Sun, Sep 27 · 7:45–8:45 PM",
       "venue": "Gulley Park, Clarksville",
       "category": "Outdoors",
       "source": "https://www.warrencountyparks.com/events/",
       "note": "Easy-terrain night hike under the full moon, ages 4+; registration ends 24 hrs prior"
+    },
+    {
+      "title": "Warren County Commissioners — Weekly Session",
+      "dateISO": "2026-09-29T09:00:00-04:00",
+      "dateLabel": "Tue, Sep 29 · 9:00 AM",
+      "venue": "406 Justice Dr, Lebanon",
+      "category": "Government",
+      "source": "https://commissioners.warrencountyohio.gov/News/AgendaMinutes/Index",
+      "note": "Weekly commissioners session; agendas and minutes posted online"
     },
     {
       "title": "Ohio Renaissance Festival — Viking Weekend",
@@ -248,7 +239,7 @@
     {
       "title": "Kings Island",
       "dateISO": null,
-      "dateLabel": "Open daily this summer",
+      "dateLabel": "Seasonal — check the park calendar",
       "venue": "Mason (Warren County)",
       "category": "Attraction",
       "source": "https://www.sixflags.com/kingsisland/events",
