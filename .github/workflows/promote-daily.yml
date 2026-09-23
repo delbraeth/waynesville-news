@@ -1,0 +1,40 @@
+name: Promote claude/daily to main
+
+# The daily Claude run can only push to claude/-prefixed branches (cloud
+# sessions refuse pushes to any other branch that carries commits by someone
+# other than the account owner, and main carries commits by this Actions bot).
+# So the run publishes to claude/daily and this workflow moves it onto main,
+# where Cloudflare deploys from.
+#
+# Fast-forward ONLY. If main has moved in a way claude/daily doesn't contain
+# (someone pushed to main directly), this fails loudly instead of forcing, and
+# the next daily run rebases onto main before publishing. Never add --force.
+on:
+  push:
+    branches: [claude/daily]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: promote-daily
+  cancel-in-progress: false
+
+jobs:
+  promote:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+      - name: Fast-forward main to claude/daily
+        run: |
+          set -euo pipefail
+          git fetch origin main claude/daily
+          if git merge-base --is-ancestor origin/main origin/claude/daily; then
+            git push origin origin/claude/daily:main
+            echo "main fast-forwarded to $(git rev-parse --short origin/claude/daily)"
+          else
+            echo "::error::main has commits not in claude/daily — refusing to force. Rebase claude/daily onto main and push again."
+            exit 1
+          fi
