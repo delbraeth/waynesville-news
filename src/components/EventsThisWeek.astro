@@ -9,8 +9,13 @@ startOfToday.setHours(0, 0, 0, 0);
 
 const upcoming = eventsData.items
   .filter((e) => !e.evergreen && e.dateISO)
-  .map((e) => ({ ...e, _d: new Date(e.dateISO as string) }))
-  .filter((e) => e._d >= startOfToday)
+  .map((e) => ({
+    ...e,
+    _d: new Date(e.dateISO as string),
+    // Multi-day events stay listed until their last day.
+    _end: new Date(((e as { endISO?: string }).endISO ?? e.dateISO) as string),
+  }))
+  .filter((e) => e._end >= startOfToday)
   .sort((a, b) => a._d.getTime() - b._d.getTime())
   .slice(0, limit);
 ---

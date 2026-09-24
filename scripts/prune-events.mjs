@@ -1,6 +1,7 @@
 // Drop dated events more than PAST_GRACE_DAYS days in the past from
 // src/data/events.json. Evergreen entries and entries without a dateISO are
-// always kept. Recently past events stay in the file for a few days so they
+// always kept, as is anything whose endISO (multi-day events) is within the
+// window. Recently past events stay in the file for a few days so they
 // can still be referenced (recaps, "last weekend's ..."), but the site itself
 // only renders events from today forward.
 //
@@ -27,7 +28,9 @@ const data = JSON.parse(await readFile(path, "utf8"));
 const dropped = [];
 data.items = data.items.filter((e) => {
   if (e.evergreen || !e.dateISO) return true;
-  if (etDate(new Date(e.dateISO)) >= cutoff) return true;
+  // Multi-day events carry an endISO; they age from their last day, so a
+  // running event is never dropped.
+  if (etDate(new Date(e.endISO ?? e.dateISO)) >= cutoff) return true;
   dropped.push(e);
   return false;
 });
