@@ -91,14 +91,15 @@ const caesarSoon = caesarCreekEvents
 const soon = [
   ...events.items
     .filter((e) => !e.evergreen && e.dateISO)
-    .map((e) => ({ ...e, _d: new Date(e.dateISO) })),
+    // Multi-day events stay listed until their last day (_end).
+    .map((e) => ({ ...e, _d: new Date(e.dateISO), _end: new Date(e.endISO ?? e.dateISO) })),
   ...caesarSoon.slice(0, CAESAR_IN_EVENTS_LIST).map((e) => ({
     ...e,
     venue: "Caesar Creek State Park",
     source: e.link,
   })),
 ]
-  .filter((e) => e._d >= todayStart)
+  .filter((e) => (e._end ?? e._d) >= todayStart)
   .sort((a, b) => a._d - b._d)
   .slice(0, 6);
 
