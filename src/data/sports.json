@@ -1,6 +1,6 @@
 {
   "_note": "Waynesville Spartans schedule + results (MaxPreps), past 7 days / next 7 days. Scraped directly from each sport's own schedule page (football, volleyball, soccer -- varsity + JV), not the school hub page, which has been observed to silently omit some contests. Scores and matchups reproduced verbatim from MaxPreps' own markup; each links to their game page.",
-  "updated": "2026-09-23T13:45:49.491Z",
+  "updated": "2026-09-24T10:41:14.465Z",
   "results": [
     {
       "dateISO": "2026-09-17T17:30:00",
@@ -91,6 +91,17 @@
       "link": "https://www.maxpreps.com/oh/soccer/girls/match/miamisburg-vs-waynesville/jv/9-21-2026/?c=9b60bcae-60c3-4441-a160-36e7e888b6fe"
     },
     {
+      "dateISO": "2026-09-21T18:30:00",
+      "sport": "Volleyball",
+      "level": "Varsity",
+      "opponent": "Carroll",
+      "wayneScore": 0,
+      "opponentScore": 3,
+      "result": "L",
+      "isHome": false,
+      "link": "https://www.maxpreps.com/oh/volleyball/match/carroll-dayton-vs-waynesville/9-21-2026/?c=2c19acae-1947-453f-a30a-dc49d11db45c"
+    },
+    {
       "dateISO": "2026-09-21T19:15:00",
       "sport": "Girls Soccer",
       "level": "Varsity",
@@ -100,6 +111,17 @@
       "result": "W",
       "isHome": true,
       "link": "https://www.maxpreps.com/oh/soccer/girls/match/miamisburg-vs-waynesville/9-21-2026/?c=af132852-0887-4845-8b56-40f527d45962"
+    },
+    {
+      "dateISO": "2026-09-22T18:30:00",
+      "sport": "Volleyball",
+      "level": "Varsity",
+      "opponent": "Brookville",
+      "wayneScore": 0,
+      "opponentScore": 3,
+      "result": "L",
+      "isHome": true,
+      "link": "https://www.maxpreps.com/oh/volleyball/match/brookville-vs-waynesville/9-22-2026/?c=576496e4-0bbd-4735-af0c-ac7558cb23e9"
     }
   ],
   "upcoming": [
@@ -300,6 +322,17 @@
       "result": null,
       "isHome": true,
       "link": "https://www.maxpreps.com/oh/volleyball/match/oakwood-dayton-vs-waynesville/9-29-2026/?c=4faeb4ec-2214-4124-89f0-abfee436efc5"
+    },
+    {
+      "dateISO": "2026-09-30T18:00:00",
+      "sport": "Boys Soccer",
+      "level": "Varsity",
+      "opponent": "Carlisle",
+      "wayneScore": null,
+      "opponentScore": null,
+      "result": null,
+      "isHome": false,
+      "link": "https://www.maxpreps.com/oh/soccer/match/carlisle-vs-waynesville/9-30-2026/?c=20cad10b-35da-4dc5-a145-390b4b49cb33"
     }
   ]
 }

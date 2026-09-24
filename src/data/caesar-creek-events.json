@@ -1,6 +1,6 @@
 {
   "_note": "Caesar Creek State Park programs from the ODNR events calendar, next 60 days. Titles, times and meeting points reproduced from ODNR's own listing.",
-  "updated": "2026-09-23T13:47:38.640Z",
+  "updated": "2026-09-24T10:42:55.676Z",
   "source": "https://ohiodnr.gov/go-and-do/plan-a-visit/events-calendar/events-calendar?keyword=Caesar%20Creek",
   "items": [
     {
@@ -90,6 +90,14 @@
       "meetAt": "Campground Amphitheater",
       "summary": "Meet at the Campground Amphitheater. All are welcome.",
       "link": "https://ohiodnr.gov/home/news-and-events/all-events/parks-wc-events/SW-Ohio/NightHikeCaesarCreek-10-9-26"
+    },
+    {
+      "title": "Giving Back to the Wild: Land Stewardship",
+      "dateISO": "2026-10-15T13:30:00.000Z",
+      "dateLabel": "Thu, Oct 15 · 9:30 AM–11:00 AM",
+      "meetAt": "Nature Center",
+      "summary": "Meet at the Nature Center",
+      "link": "https://ohiodnr.gov/home/news-and-events/all-events/parks-wc-events/SW-Ohio/GivingbackCaesarCreek-10-15-26"
     },
     {
       "title": "Nature Shapes and Shadows",

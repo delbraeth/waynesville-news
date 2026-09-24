@@ -1,32 +1,14 @@
 {
-  "_note": "Real venues and sources, verified against each listed source on 2026-09-23 (daily automated refresh). Recurring items (rodeo, commissioners, ghost walk) show the next occurrence.",
+  "_note": "Real venues and sources, verified against each listed source on 2026-09-24 (daily automated refresh). Recurring items (rodeo, commissioners, ghost walk) show the next occurrence. Warren County Park District items carried from the 2026-09-23 check (its events page returned a bot-check 403 on 2026-09-24).",
   "items": [
     {
       "title": "Historical Haunts — ghost walk of downtown Waynesville",
-      "dateISO": "2026-09-23T00:00:00-04:00",
+      "dateISO": "2026-09-25T00:00:00-04:00",
       "dateLabel": "Wednesdays, Fridays & Saturdays through October · $20",
       "venue": "Downtown Waynesville (Museum at the Friends Home)",
       "category": "Tour",
       "source": "https://www.friendshomemuseum.org/ghost-tours-class-dinners",
       "note": "Two-hour guided walking tour of the historic district drawing on the village’s 228-year history, run by the Museum at the Friends Home. The museum also runs a $60 Ghost & Goblet dinner and tour at The Venue at the Historic Lockup, and a $50 Ghost Hunting 101 class with ParaVizionz. Start times are not published on the site — they are set in the booking system, so confirm before printing one."
-    },
-    {
-      "title": "Monarch Story Time and Craft at Salem Twp Public Library",
-      "dateISO": "2026-09-23T11:00:00-04:00",
-      "dateLabel": "Wed, Sep 23 · 11:00–11:30 AM",
-      "venue": "Salem Twp Public Library",
-      "category": "Family",
-      "source": "https://www.warrencountyparks.com/events/",
-      "note": "Warren County Park District naturalist program pairing a monarch story with a craft"
-    },
-    {
-      "title": "Business to Business Networking Mixer",
-      "dateISO": "2026-09-23T12:00:00-04:00",
-      "dateLabel": "Wed, Sep 23 · 12:00 PM",
-      "venue": "Bentino's, Waynesville",
-      "category": "Chamber",
-      "source": "https://www.waynesvilleohio.com/events",
-      "note": "Waynesville Area Chamber of Commerce networking mixer"
     },
     {
       "title": "Monarch Preschool Story Time",
