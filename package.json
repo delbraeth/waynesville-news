@@ -22,6 +22,7 @@
     "refresh:fb": "node scripts/fetch-fb-schools.mjs",
     "newsletter:send": "node scripts/send-newsletter.mjs",
     "draft": "node scripts/draft-brief.mjs",
+    "prune:events": "node scripts/prune-events.mjs",
     "check:briefs": "node scripts/check-briefs.mjs",
     "check:staleness": "node scripts/check-staleness.mjs",
     "verify:live": "node scripts/verify-live.mjs"
