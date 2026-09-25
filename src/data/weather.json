@@ -1,31 +1,31 @@
 {
   "_note": "Auto-refreshed from the NWS API (api.weather.gov, ILN/Wilmington office).",
   "location": "Waynesville, OH",
-  "tempF": 73,
-  "condition": "Partly Sunny",
+  "tempF": 68,
+  "condition": "Mostly Sunny",
   "periodName": "Today",
-  "highF": 73,
-  "lowF": 46,
+  "highF": 68,
+  "lowF": 48,
   "outlook": [
     {
-      "dayLabel": "Friday",
-      "highF": 71,
-      "lowF": 47,
-      "condition": "Sunny"
-    },
-    {
       "dayLabel": "Saturday",
-      "highF": 74,
-      "lowF": 47,
+      "highF": 69,
+      "lowF": 46,
       "condition": "Sunny"
     },
     {
       "dayLabel": "Sunday",
-      "highF": 73,
+      "highF": 70,
       "lowF": 48,
+      "condition": "Sunny"
+    },
+    {
+      "dayLabel": "Monday",
+      "highF": 70,
+      "lowF": 51,
       "condition": "Sunny"
     }
   ],
   "alerts": [],
-  "updated": "2026-09-24T10:41:08.040Z"
+  "updated": "2026-09-25T10:41:09.160Z"
 }
