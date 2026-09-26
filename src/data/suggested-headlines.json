@@ -1,17 +1,11 @@
 {
   "_note": "Candidate local headlines (Google News RSS). Published as a quoted headline (or, when available, a short publisher-written excerpt) + source + link; never reproduce article body text.",
-  "updated": "2026-09-25T10:41:10.354Z",
+  "updated": "2026-09-26T10:40:57.065Z",
   "items": [
-    {
-      "title": "Wanda Cox Obituary (2026) - Waynesville, OH - Greene County Dailies",
-      "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNbkF6a2t3c3lyOFJfOUZYOVp4XzBsaS1YV3JkTmNTM0JDZWI3YXh1ZkFDa0EyMExVUERldnZQTURvNUFFTkNNMzU4RC1QbjlWU0lmR2F5V0RXOGNWSURmWW1BY013dFFVVTB1NklyekJyN0FlR2h1WkV3YUw4dVV5OUNOZnlNZFRHQ2tReS1WZzVWdw?oc=5",
-      "source": "legacy.com",
-      "date": "Thu, 24 Sep 2026 23:58:40 GMT"
-    },
     {
       "title": "Ohio Renaissance Festival warns of limited parking due to heavy rain",
       "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNdzdadFVrblFwSXhVU2l3US0zYzdiSTIzQlk2NzVvVUI1Wmp0Z0Z4NXBWQ3MweWE3QWhFcTI1V3hBclltSVJNcnloc2ZxdE5oN3JtSzhRbzRHTEtwbjUzOWpqN2FDYXVXWEFzSVU0SDdVeEIzMVhrMl9uVTBPNXktRUltam1WaktBUlVkMDRzR1VUMF9haE1KTmVfYThnSUl3enRDUkJEUm9jZzNOQVFvRzNCdnpNcHRBa250d0Nhc9IB0wFBVV95cUxPNUZ5Vy1wN0dGcjhfMlBsa0lSalpPWThJYVFQd2tSSUo3OUx2ZW1MTWZ2QkFmWVlVRURxcENVdkg5LVJ5bWN5RUtveTZ4ZnRxdlNCNTR5Vy02dzZ2YTVYZmxMeFNQNG1rRVVjazI3Tk9Mb0ZTRURGZFI0b25BWVBZRVBmMzhNdVdQOTJQZG9pVF9EcFpKVlo5MXVnRGlXVFM1VnUtQWlUbDZDeG9VTTh6TnFVaE1jU24zQ2xDeXYzSUZicmU2c2w3UFlzdmUzUEZRN0NN?oc=5",
-      "source": "WHIO TV",
+      "source": "WHIO-TV",
       "date": "Thu, 24 Sep 2026 00:51:00 GMT"
     },
     {
@@ -23,32 +17,20 @@
     {
       "title": "Warren County Commissioners Consider Moratorium on Data Centers",
       "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQODRYUVdySEtrTHpkeUJLRVRKazNmeTR3NzZxY2RLZUFXMHROdHc3WURQYmk0VEN3eXF6STlzOU5EaFZaWGtYcFZCek91WmhhczRUTk5aLThKazhSR3kyQmZmQ3Fod25CckIyX0F3U181c1FEdWt3LThrSzd0cWJQN0JnVzZGV1dmTkpRdGtLcWs4UkV1Q0E0VzlwX2g3SFljSHlRc1NMXzZZUzVlUWlGVQ?oc=5",
-      "source": "warrencountypost.com",
+      "source": "Warren County Post",
       "date": "Thu, 24 Sep 2026 03:17:57 GMT"
     },
     {
       "title": "Ohio mother convicted on counts of gross sexual imposition, child endangerment",
       "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPVDU0cWQxU0lQVzVlMVJ2SHpvM1JIbFVyZ19HbDFKczZNc2xzMkJjVG83LVVxYTB4dzJhSnZjUUJDc1RqSDk1cFZwc2RyZFlFTzVFUnViaktsZXNzeTVDYlZRdGs2cmUzMWVyeWJZVTFVN3MyS3N5OW82OW1NTEY2RHJuaWhEOEk1TWtwMzdDdHQ3bDdMMmZ4TEV0UUhsT3ljVDVCVWt4OGFScF9jUVJaRnpCOWVPcEF5RnVXYUpGZm16OXJVbnc?oc=5",
-      "source": "WCPO 9 Cincinnati",
+      "source": "WCPO 9 News",
       "date": "Thu, 24 Sep 2026 10:31:44 GMT"
-    },
-    {
-      "title": "Oakwood throttles Waynesville 56-28, Lumberjacks stay unbeaten at 5-0",
-      "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPUTJiaTk0RWxpakpIaFZLeVU3RWxMaUVfNVFMRi1TN3FjNWxMQUJiLU9NdlBFTHlBLUdmWDdQV0pKX3VBRW94OFdmT0dlMTFnV1hsYUZiRUJfbGNSS2l2cExrUGZaN3Y1dElFOVR6aTVFQ2xTekxTMGdVc1diWnZXS3BKVnp4RFF6bVZHVXFXUHh0Vk40T3F3SmZFajlsUkYzSWRDb2tpd0FVYlJibHZHdlZrT0VfeWpMeFU1ZmZsRlNPamdqUlBicVAydV9ZWkpp0gHWAUFVX3lxTE5EVnpQV0kwZ2JnOFlXVTZ3YUx1NmhaMHhyTnNYUE9TYUpTMUtwQXFvNkVpRVJySnNPcmx1NzZKYzNkRnVzZkZ5YjNpZ0JWZHlUOVlBOEd5bDc2X18ycWctckJFWjVWb0NESEpfSVdxVllpV2RzenQ3STlPTEdha3MxNmRHR0Q4N0I4bFJzdk1WckloYndKeE5GX3owY0RNRDN3ZFUwYnh2RURRN2RISTZnX0J6NlBrSkFfTlkwNVh3T3FaX2RlcGRPT19mZWwtUXc1N1ZnN2c?oc=5",
-      "source": "WDTN.com",
-      "date": "Sat, 19 Sep 2026 04:05:06 GMT"
     },
     {
       "title": "Greater Cincinnati woman convicted of molesting child but not guilty of rape",
       "link": "https://news.google.com/rss/articles/CBMiqwJBVV95cUxOTU9uZ050c2U3VEw4NVJqVG1oSm43UkI5R0haUGx3NHI4ZTc3U3hWTHlsaFNPVzdjYTJxQkJxWU43RkN1SG43eUZUcjM5aW5yY0VTTGtMMVVTZ1ZQZEJraklhaUtRTW5mNFN2Z054TFVnTGhIMXhWbS0xTVpaRjJmeUQwV1lSc2VrMEZOSkd5TlRnRkNObkJ1ZWo5X1JXOEF1TkRKXzhGYktLMDZ6RlBYT1NULWwyZHZIeWhrUWw0RkFTZDRNMVpiUk50NEUwaE0td2dwdnJTcnJ2XzZWbThBc29QUEpMVjZVNkRzSWJsakVOc19vNFNjMnBXZHlDQzNmcXRITUlGaFRkVURBXzNhbzNOMFRvTFNYWVI1Ri1SeWZHQVJWZUhDT1BzYw?oc=5",
       "source": "WKRC",
       "date": "Thu, 24 Sep 2026 02:57:33 GMT"
-    },
-    {
-      "title": "Warren County Airport invites public to check out growth at 2026 Airport Fest",
-      "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQemprN3R1OFhQTk0tdWloeUMwMHM0QWI3aWhxejlBRGJpYWRZZjdUcTJuUTliV1VNTW4yZW9oTkhrMHlJcTVCRHNhU0o4eGNaa0t0THNNOHd3c3NraGhiN2F5V0k2Q3BEbGxhcmxLY3hRLVhGM3pJLXdwN2lWVjVPaTBDWWJnUVVhQkc5SmdIbW96SW9HTTlPX2YtZ2Q5U3ZKMENCaDNuQ1JpTGtLaHFROVh0Zk4?oc=5",
-      "source": "WCPO 9 Cincinnati",
-      "date": "Sat, 19 Sep 2026 03:09:57 GMT"
     }
   ]
 }
