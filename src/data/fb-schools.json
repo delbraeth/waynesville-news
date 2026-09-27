@@ -1,7 +1,14 @@
 {
   "_note": "Recent Wayne Local Schools Facebook posts via rss.app bridge. Title + link + short excerpt; the district's own words. Fail-safe: kept from last run if the bridge is down.",
-  "updated": "2026-09-26T10:40:56.436Z",
+  "updated": "2026-09-27T10:40:50.328Z",
   "items": [
+    {
+      "title": "🏅Congratulations to our newest Waynesville Elementary Sparty Award recipients! Each month, students are recognized for…",
+      "link": "https://www.facebook.com/waynelocalschools/posts/pfbid02Y7zYvY3VxcEz3pZisonwqqrBBekh8LC74Di9gjy7REZcVR1HMkBXohmGPvTBST9el",
+      "date": "Sat, 26 Sep 2026 11:50:02 GMT",
+      "dateLabel": "Sat, Sep 26",
+      "excerpt": "consistently demonstrating the PBIS values that help make WES a great place to learn and grow: being Respectful, Responsible, and Kind. These students were nominated by teachers and staff for the positive choices they make each day. We’re proud of you, Spartans! Keep setting a great example!…"
+    },
     {
       "title": "🔎WLS Fiscal Focus: Who Checks the Books? Our 2025–2026 annual audit is officially underway! So, what exactly does that…",
       "link": "https://www.facebook.com/waynelocalschools/posts/pfbid0L9CVZ9gPGBuKdTNMxQjWCx21aNhDNEwxX4AiMC6odmn1fPAxBqYt2t6ALEjUQ6Ngl",
@@ -50,13 +57,6 @@
       "date": "Thu, 24 Sep 2026 20:03:20 GMT",
       "dateLabel": "Thu, Sep 24",
       "excerpt": "Waynesville Elementary Fun Run as a Platinum Sponsor! 🎉 Your generous support helps make enrichment assemblies possible throughout the school year and brings us closer to our fundraising goal of creating a new 4th and 5th grade playground and outdoor classroom for our students. It truly takes a…"
-    },
-    {
-      "title": "\"I mustache you a question. Never mind, I'll shave it for later.”😂 That's what we were messaged today by a few WES…",
-      "link": "https://www.facebook.com/waynelocalschools/posts/pfbid02QXYkdwZL1JxaqTsvgFimhLaJLYwJbWJUpfJBdRudduRqntnfsvtDo8HGtYoJD6Kvl",
-      "date": "Thu, 24 Sep 2026 19:13:25 GMT",
-      "dateLabel": "Thu, Sep 24",
-      "excerpt": "staff members who have been coming to school in wildly unpredictable attire. It has been going on since Monday.🍓 ⁉️No other clues were provided. Our students are super curious. Stay tuned…"
     }
   ]
 }

@@ -1,24 +1,18 @@
 {
   "_note": "Candidate local headlines (Google News RSS). Published as a quoted headline (or, when available, a short publisher-written excerpt) + source + link; never reproduce article body text.",
-  "updated": "2026-09-26T10:40:57.065Z",
+  "updated": "2026-09-27T10:40:51.066Z",
   "items": [
+    {
+      "title": "ODNR Urges Caution During Ohio’s Fall Wildfire Season",
+      "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPU1dzUzExWEgyNk8xcmdrbk82MUkzMDhQTk9CN1JvWWozeUNrWXRXUmQxeEo1V3loTUVyRXR0MUxmU2FxRkFaZEVDUVROZUlmWF84VHBWZWJQdVY3eFhqVE5rdDZNLThtV0puc1pxRmxUZEpoeUgwQ2pGZFhVQ2ZQaW5XV296dXBEZFRvem12QUxnWVBZVlNmSVhhWTByUnFFS3lGcHlR?oc=5",
+      "source": "Warren County Post",
+      "date": "Sun, 27 Sep 2026 02:17:09 GMT"
+    },
     {
       "title": "Ohio Renaissance Festival warns of limited parking due to heavy rain",
       "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNdzdadFVrblFwSXhVU2l3US0zYzdiSTIzQlk2NzVvVUI1Wmp0Z0Z4NXBWQ3MweWE3QWhFcTI1V3hBclltSVJNcnloc2ZxdE5oN3JtSzhRbzRHTEtwbjUzOWpqN2FDYXVXWEFzSVU0SDdVeEIzMVhrMl9uVTBPNXktRUltam1WaktBUlVkMDRzR1VUMF9haE1KTmVfYThnSUl3enRDUkJEUm9jZzNOQVFvRzNCdnpNcHRBa250d0Nhc9IB0wFBVV95cUxPNUZ5Vy1wN0dGcjhfMlBsa0lSalpPWThJYVFQd2tSSUo3OUx2ZW1MTWZ2QkFmWVlVRURxcENVdkg5LVJ5bWN5RUtveTZ4ZnRxdlNCNTR5Vy02dzZ2YTVYZmxMeFNQNG1rRVVjazI3Tk9Mb0ZTRURGZFI0b25BWVBZRVBmMzhNdVdQOTJQZG9pVF9EcFpKVlo5MXVnRGlXVFM1VnUtQWlUbDZDeG9VTTh6TnFVaE1jU24zQ2xDeXYzSUZicmU2c2w3UFlzdmUzUEZRN0NN?oc=5",
-      "source": "WHIO-TV",
+      "source": "WHIO TV",
       "date": "Thu, 24 Sep 2026 00:51:00 GMT"
-    },
-    {
-      "title": "Warren County woman in sex abuse case found guilty of several charges",
-      "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPNUJwTXZrMkhSV2hQV21fZG95WmVBX3NaUHpiVWp6UjFFLVpKWDBfY0g5OGtLQkkxd3NNWmtia0JianppdmdzQ2Y5ZGExYWdmRzR0dnRRdEltNTd5NkpBbG5VcEhDbWJvdXE5bXhUQzB6UzlGNE0tRUhfZEFuUi1YUVJFUXp1UTk5M1loY1otMHhBY25vODJhQlBGYi1JNjNOSG81S1NJVER0bWfSAb8BQVVfeXFMT1dVRkcyRndEUlk5TzdqMjBxQ3lxSWZjOHJRNkJlcWJ3TzdWazJoR2VTcG9hOWIxTjlGb1FLQ2dzNjNHUThxTmoyNVgtRDNVWTJ4b2RSa1g5WHRta0dyeGIxZnZoeW9YZDEySlNPb2dOc2J5clBIZVR6cWI2V3BmZEpEZ0hIS0MtTGJnU1FIUmtDTk5Md0NPdkF2OGpiSlRzMmNqaDktczZkNXRpaHVQRDdseG5aa21GWW9ua1V0WHM?oc=5",
-      "source": "FOX19 | Cincinnati",
-      "date": "Wed, 23 Sep 2026 16:22:00 GMT"
-    },
-    {
-      "title": "Warren County Commissioners Consider Moratorium on Data Centers",
-      "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQODRYUVdySEtrTHpkeUJLRVRKazNmeTR3NzZxY2RLZUFXMHROdHc3WURQYmk0VEN3eXF6STlzOU5EaFZaWGtYcFZCek91WmhhczRUTk5aLThKazhSR3kyQmZmQ3Fod25CckIyX0F3U181c1FEdWt3LThrSzd0cWJQN0JnVzZGV1dmTkpRdGtLcWs4UkV1Q0E0VzlwX2g3SFljSHlRc1NMXzZZUzVlUWlGVQ?oc=5",
-      "source": "Warren County Post",
-      "date": "Thu, 24 Sep 2026 03:17:57 GMT"
     },
     {
       "title": "Ohio mother convicted on counts of gross sexual imposition, child endangerment",
@@ -31,6 +25,30 @@
       "link": "https://news.google.com/rss/articles/CBMiqwJBVV95cUxOTU9uZ050c2U3VEw4NVJqVG1oSm43UkI5R0haUGx3NHI4ZTc3U3hWTHlsaFNPVzdjYTJxQkJxWU43RkN1SG43eUZUcjM5aW5yY0VTTGtMMVVTZ1ZQZEJraklhaUtRTW5mNFN2Z054TFVnTGhIMXhWbS0xTVpaRjJmeUQwV1lSc2VrMEZOSkd5TlRnRkNObkJ1ZWo5X1JXOEF1TkRKXzhGYktLMDZ6RlBYT1NULWwyZHZIeWhrUWw0RkFTZDRNMVpiUk50NEUwaE0td2dwdnJTcnJ2XzZWbThBc29QUEpMVjZVNkRzSWJsakVOc19vNFNjMnBXZHlDQzNmcXRITUlGaFRkVURBXzNhbzNOMFRvTFNYWVI1Ri1SeWZHQVJWZUhDT1BzYw?oc=5",
       "source": "WKRC",
       "date": "Thu, 24 Sep 2026 02:57:33 GMT"
+    },
+    {
+      "title": "Ray Davis Obituary (2026) - Wilmington, OH - Dayton Daily News",
+      "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNUFFFWjg4N3VIRWFqbWdqVU1lZEFqaUlNNEltRmV2SDJtdE8xT040MGlWVEhRd0hyT1N4UzZnc1FuWW5wS2JPcGVKNEM3MmtnUWlOaW5IcmoyWjB4d3J6d2d6eVNmX2lpT29KdWtvWTlnc2tsRXM2ZXBTS25SRlRVYWZ4RU4yQQ?oc=5",
+      "source": "legacy.com",
+      "date": "Tue, 22 Sep 2026 05:38:03 GMT"
+    },
+    {
+      "title": "Warren County man sentenced after stray bullet injures two women in Kroger",
+      "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOTDZ2ZHFzLVBZZm1yT3FfdW5mQ01oQldpbDFSbUxTX2Fqa20yX09vckl0OG02YlB5eUhQNFpheUMySlNrdzFmM19TLUpLalRUaHF5MVFwOE9ZSmVBVlhXV1h2S3pySE5NMHlJd1Q3d3RpaWRPVVo3QWlMZnZvVDVDRGtJMXFmSWt5Y09DdTlnSFRLaWdRYjc1cDh5cmYxMUM1cFVtNWNYcHg?oc=5",
+      "source": "FOX19 | Cincinnati",
+      "date": "Fri, 25 Sep 2026 22:09:00 GMT"
+    },
+    {
+      "title": "Ray Davis Obituary (2026) - Wilmington, OH - Greene County Dailies",
+      "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOeGEwUzIyR2FyMUI4cEFpQWZzVU1ySmdYc1lSU29jYndfdFlLOVM0T3lWcmRnbU9GXzEwMTRTRjNaYkE2ZzdfX3dUcm1WT2RnZ1M2NWs1WUVJSTh5b2Ytb1pfR0tBRkdtdDVQOGVKRUZLSG16WjlXb1lJWkNtUWFpd0FJR1htaGY5TGk2VFQzT2Jwdw?oc=5",
+      "source": "legacy.com",
+      "date": "Mon, 21 Sep 2026 07:00:00 GMT"
+    },
+    {
+      "title": "Warren County woman in sex abuse case found guilty of several charges",
+      "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPNUJwTXZrMkhSV2hQV21fZG95WmVBX3NaUHpiVWp6UjFFLVpKWDBfY0g5OGtLQkkxd3NNWmtia0JianppdmdzQ2Y5ZGExYWdmRzR0dnRRdEltNTd5NkpBbG5VcEhDbWJvdXE5bXhUQzB6UzlGNE0tRUhfZEFuUi1YUVJFUXp1UTk5M1loY1otMHhBY25vODJhQlBGYi1JNjNOSG81S1NJVER0bWfSAb8BQVVfeXFMT1dVRkcyRndEUlk5TzdqMjBxQ3lxSWZjOHJRNkJlcWJ3TzdWazJoR2VTcG9hOWIxTjlGb1FLQ2dzNjNHUThxTmoyNVgtRDNVWTJ4b2RSa1g5WHRta0dyeGIxZnZoeW9YZDEySlNPb2dOc2J5clBIZVR6cWI2V3BmZEpEZ0hIS0MtTGJnU1FIUmtDTk5Md0NPdkF2OGpiSlRzMmNqaDktczZkNXRpaHVQRDdseG5aa21GWW9ua1V0WHM?oc=5",
+      "source": "FOX19 | Cincinnati",
+      "date": "Wed, 23 Sep 2026 16:22:00 GMT"
     }
   ]
 }
