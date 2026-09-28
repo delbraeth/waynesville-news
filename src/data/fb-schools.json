@@ -1,7 +1,14 @@
 {
   "_note": "Recent Wayne Local Schools Facebook posts via rss.app bridge. Title + link + short excerpt; the district's own words. Fail-safe: kept from last run if the bridge is down.",
-  "updated": "2026-09-27T10:40:50.328Z",
+  "updated": "2026-09-28T10:41:38.377Z",
   "items": [
+    {
+      "title": "🦁Fall Into Giving! Stop by Kroger, 1095 S. Main Street in Centerville, where our Waynesville Leo Club members are…",
+      "link": "https://www.facebook.com/waynelocalschools/posts/pfbid02SEPGP4WfhRWp8848nBZ6iFUrfzHCQdo96EvXwVtVLDGRLN2XdhLbyzPhHacWxW21l",
+      "date": "Sun, 27 Sep 2026 15:20:36 GMT",
+      "dateLabel": "Sun, Sep 27",
+      "excerpt": "collecting food and household items for the Waynesville Food Pantry. Grab an extra item while you shop and help our students support local families in need. Monetary donations can also be made at: https://www.waynesvilleohiofoodpantry.org/ We’re proud of our Leo Club members for making a…"
+    },
     {
       "title": "🏅Congratulations to our newest Waynesville Elementary Sparty Award recipients! Each month, students are recognized for…",
       "link": "https://www.facebook.com/waynelocalschools/posts/pfbid02Y7zYvY3VxcEz3pZisonwqqrBBekh8LC74Di9gjy7REZcVR1HMkBXohmGPvTBST9el",
@@ -50,13 +57,6 @@
       "date": "Thu, 24 Sep 2026 20:26:03 GMT",
       "dateLabel": "Thu, Sep 24",
       "excerpt": "made a choice of toys, treats, and other fun prizes. Lucky Tray Day is about more than prizes. It’s one of the ways our Food Service team creates a fun, welcoming cafeteria and builds great connections with our students. Look out for Lucky Tray Days every month!🧡🖤"
-    },
-    {
-      "title": "🖤🏃‍♀️ THANK YOU, MIAMI VALLEY ROOFING! 🏃‍♂️🧡 We are incredibly grateful to Miami Valley Roofing for supporting the…",
-      "link": "https://www.facebook.com/waynelocalschools/posts/pfbid0UoM4FnK24ygXzEQRLYfa9s639Togur5Ls5eSgEUJo1BVtsJbdLeR7UaFqTfs16rKl",
-      "date": "Thu, 24 Sep 2026 20:03:20 GMT",
-      "dateLabel": "Thu, Sep 24",
-      "excerpt": "Waynesville Elementary Fun Run as a Platinum Sponsor! 🎉 Your generous support helps make enrichment assemblies possible throughout the school year and brings us closer to our fundraising goal of creating a new 4th and 5th grade playground and outdoor classroom for our students. It truly takes a…"
     }
   ]
 }
