@@ -1,5 +1,5 @@
 {
-  "_note": "Real venues and sources, verified against each listed source on 2026-09-28 (daily automated refresh). Recurring items (rodeo, commissioners, ghost walk) show the next occurrence. Warren County Park District items carried from the 2026-09-23 check (its events page redirect target returned a 403 on 2026-09-24 through 2026-09-28).",
+  "_note": "Real venues and sources, verified against each listed source on 2026-09-29 (daily automated refresh). Recurring items (rodeo, commissioners, ghost walk) show the next occurrence. Warren County Park District items carried from the 2026-09-23 check (its events page redirect target returned a 403 on 2026-09-24 through 2026-09-29).",
   "items": [
     {
       "title": "Historical Haunts — ghost walk of downtown Waynesville",
@@ -10,15 +10,6 @@
       "category": "Tour",
       "source": "https://www.friendshomemuseum.org/ghost-tours-class-dinners",
       "note": "Two-hour guided walking tour of the historic district drawing on the village’s 228-year history, run by the Museum at the Friends Home. The museum also runs a $60 Ghost & Goblet dinner and tour at The Venue at the Historic Lockup, and a $50 Ghost Hunting 101 class with ParaVizionz. Start times are not published on the site — they are set in the booking system, so confirm before printing one."
-    },
-    {
-      "title": "Monarch Preschool Story Time",
-      "dateISO": "2026-09-24T10:30:00-04:00",
-      "dateLabel": "Thu, Sep 24 · 10:30–11:30 AM",
-      "venue": "Mary L. Cook Library, Waynesville",
-      "category": "Family",
-      "source": "https://www.warrencountyparks.com/events/",
-      "note": "Warren County Park District naturalists team up with the library for a monarch-butterfly story time; ages 4-5/kindergarten, free, no pre-registration"
     },
     {
       "title": "Family Fishing Fun at Armco Park",

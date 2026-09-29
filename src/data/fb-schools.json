@@ -1,7 +1,21 @@
 {
   "_note": "Recent Wayne Local Schools Facebook posts via rss.app bridge. Title + link + short excerpt; the district's own words. Fail-safe: kept from last run if the bridge is down.",
-  "updated": "2026-09-28T10:41:38.377Z",
+  "updated": "2026-09-29T10:41:37.992Z",
   "items": [
+    {
+      "title": "Waynesville Elementary's Goodies with Grands event brought our preschoolers and their grandparents or special guests…",
+      "link": "https://www.facebook.com/waynelocalschools/posts/pfbid035jXJa4r7iPV3TY6Mi33DXpxoJUf1j1d9Y4rqzatvY1fuy8RG8y9wF5Vq3SnQRwTnl",
+      "date": "Mon, 28 Sep 2026 17:15:02 GMT",
+      "dateLabel": "Mon, Sep 28",
+      "excerpt": "together to celebrate learning, make memories, and kick off the school year with connection.🧡🖤 Because at Wayne Local Schools, belonging includes our families, too! #YouBelong #WeAreWayneLocal"
+    },
+    {
+      "title": "A big thank you to our Waynesville Leo Club members who spent the day at Kroger yesterday collecting food and supplies…",
+      "link": "https://www.facebook.com/waynelocalschools/posts/pfbid02KmU2eY9UShkqMLXJYXpJt3jwLuAZuW2Z9U1rmhCzSrehzaUjH3zEe1RwRpr1pEvol",
+      "date": "Mon, 28 Sep 2026 15:20:17 GMT",
+      "dateLabel": "Mon, Sep 28",
+      "excerpt": "for the Waynesville Food Pantry!🧡 We’re proud of these students for giving their time and making a meaningful difference right here in our community. Way to represent Waynesville with a spirit of service!"
+    },
     {
       "title": "🦁Fall Into Giving! Stop by Kroger, 1095 S. Main Street in Centerville, where our Waynesville Leo Club members are…",
       "link": "https://www.facebook.com/waynelocalschools/posts/pfbid02SEPGP4WfhRWp8848nBZ6iFUrfzHCQdo96EvXwVtVLDGRLN2XdhLbyzPhHacWxW21l",
@@ -43,20 +57,6 @@
       "date": "Fri, 25 Sep 2026 17:18:00 GMT",
       "dateLabel": "Fri, Sep 25",
       "excerpt": "that do exactly that during Built Environment Career Craze Day at Sinclair Community College. Students participated in stations including - 🔧 HVAC 📐 Architecture 🏗️ Construction Management 🚁 Civil Engineering and Drones ⚡ Energy Management It was a great opportunity to explore potential…"
-    },
-    {
-      "title": "Tickets - $8 Adult/$7 Student. www.daytonchristianathletics.com or CASH at the gate. SWBL Conference Passes accepted.…",
-      "link": "https://www.facebook.com/waynelocalschools/posts/pfbid0aJgGSrSEJSXkcjyLasnNEoyZNsBkhVz9JUserVNQ4Xreqitsf3wuZBMyp38XjQt2l",
-      "date": "Fri, 25 Sep 2026 12:01:01 GMT",
-      "dateLabel": "Fri, Sep 25",
-      "excerpt": "Lot behind stadium for handicap only. Thanks to this week’s sponsors, TWFG - Wade Insurance, Davidson Meat Processing Plant, and the Jamie Franz Manley family."
-    },
-    {
-      "title": "Lucky Tray Day made lunchtime even more fun today at WES! Students kept an eye out for the lucky trays, and our winners…",
-      "link": "https://www.facebook.com/waynelocalschools/posts/pfbid0txWfe1ZV3tMeScLTDV76DAX4xdXtQhF8dKHbSaTvy6DGhkpT6xSH1aPqRhK4hnB5l",
-      "date": "Thu, 24 Sep 2026 20:26:03 GMT",
-      "dateLabel": "Thu, Sep 24",
-      "excerpt": "made a choice of toys, treats, and other fun prizes. Lucky Tray Day is about more than prizes. It’s one of the ways our Food Service team creates a fun, welcoming cafeteria and builds great connections with our students. Look out for Lucky Tray Days every month!🧡🖤"
     }
   ]
 }

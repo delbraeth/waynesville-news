@@ -1,51 +1,7 @@
 {
   "_note": "Waynesville Spartans schedule + results (MaxPreps), past 7 days / next 7 days. Scraped directly from each sport's own schedule page (football, volleyball, soccer -- varsity + JV), not the school hub page, which has been observed to silently omit some contests. Scores and matchups reproduced verbatim from MaxPreps' own markup; each links to their game page.",
-  "updated": "2026-09-28T10:42:06.081Z",
+  "updated": "2026-09-29T10:41:43.322Z",
   "results": [
-    {
-      "dateISO": "2026-09-21T17:30:00",
-      "sport": "Boys Soccer",
-      "level": "JV",
-      "opponent": "Centerville",
-      "wayneScore": 0,
-      "opponentScore": 3,
-      "result": "L",
-      "isHome": false,
-      "link": "https://www.maxpreps.com/oh/soccer/match/centerville-vs-waynesville/jv/9-21-2026/?c=36218d17-25bf-4e92-ae25-e6faaffb6fb5"
-    },
-    {
-      "dateISO": "2026-09-21T17:30:00",
-      "sport": "Girls Soccer",
-      "level": "JV",
-      "opponent": "Miamisburg",
-      "wayneScore": 2,
-      "opponentScore": 2,
-      "result": "T",
-      "isHome": true,
-      "link": "https://www.maxpreps.com/oh/soccer/girls/match/miamisburg-vs-waynesville/jv/9-21-2026/?c=9b60bcae-60c3-4441-a160-36e7e888b6fe"
-    },
-    {
-      "dateISO": "2026-09-21T18:30:00",
-      "sport": "Volleyball",
-      "level": "Varsity",
-      "opponent": "Carroll",
-      "wayneScore": 0,
-      "opponentScore": 3,
-      "result": "L",
-      "isHome": false,
-      "link": "https://www.maxpreps.com/oh/volleyball/match/carroll-dayton-vs-waynesville/9-21-2026/?c=2c19acae-1947-453f-a30a-dc49d11db45c"
-    },
-    {
-      "dateISO": "2026-09-21T19:15:00",
-      "sport": "Girls Soccer",
-      "level": "Varsity",
-      "opponent": "Miamisburg",
-      "wayneScore": 3,
-      "opponentScore": 1,
-      "result": "W",
-      "isHome": true,
-      "link": "https://www.maxpreps.com/oh/soccer/girls/match/miamisburg-vs-waynesville/9-21-2026/?c=af132852-0887-4845-8b56-40f527d45962"
-    },
     {
       "dateISO": "2026-09-22T18:30:00",
       "sport": "Volleyball",
@@ -111,28 +67,26 @@
       "result": "W",
       "isHome": false,
       "link": "https://www.maxpreps.com/oh/football/game/dayton-christian-miamisburg-vs-waynesville/9-25-2026/?c=61eea59e-d2ff-4e5a-84f5-a0a0704072e2"
-    }
-  ],
-  "upcoming": [
+    },
     {
-      "dateISO": "2026-09-28T17:30:00",
-      "sport": "Volleyball",
-      "level": "JV",
-      "opponent": "Monroe",
-      "wayneScore": null,
-      "opponentScore": null,
-      "result": null,
-      "isHome": false,
-      "link": "https://www.maxpreps.com/oh/volleyball/match/monroe-vs-waynesville/jv/9-28-2026/?c=1948ab70-c8a9-4be9-abfa-02371dd53345"
+      "dateISO": "2026-09-26T14:45:00",
+      "sport": "Girls Soccer",
+      "level": "Varsity",
+      "opponent": "Lebanon",
+      "wayneScore": 2,
+      "opponentScore": 4,
+      "result": "L",
+      "isHome": true,
+      "link": "https://www.maxpreps.com/oh/soccer/girls/match/lebanon-vs-waynesville/9-26-2026/?c=8d6a91a0-7da4-4bc7-936a-c1389257e72f"
     },
     {
       "dateISO": "2026-09-28T17:30:00",
       "sport": "Boys Soccer",
       "level": "JV",
       "opponent": "Yellow Springs",
-      "wayneScore": null,
-      "opponentScore": null,
-      "result": null,
+      "wayneScore": 2,
+      "opponentScore": 1,
+      "result": "W",
       "isHome": true,
       "link": "https://www.maxpreps.com/oh/soccer/match/waynesville-vs-yellow-springs/jv/9-28-2026/?c=3c7fc133-7a1b-4e68-b527-67ea8b440539"
     },
@@ -141,9 +95,9 @@
       "sport": "Girls Soccer",
       "level": "JV",
       "opponent": "Troy",
-      "wayneScore": null,
-      "opponentScore": null,
-      "result": null,
+      "wayneScore": 0,
+      "opponentScore": 2,
+      "result": "L",
       "isHome": false,
       "link": "https://www.maxpreps.com/oh/soccer/girls/match/troy-vs-waynesville/jv/9-28-2026/?c=4e487dd2-97f5-4a12-a35a-b134a48d7599"
     },
@@ -152,9 +106,9 @@
       "sport": "Volleyball",
       "level": "Varsity",
       "opponent": "Monroe",
-      "wayneScore": null,
-      "opponentScore": null,
-      "result": null,
+      "wayneScore": 1,
+      "opponentScore": 3,
+      "result": "L",
       "isHome": false,
       "link": "https://www.maxpreps.com/oh/volleyball/match/monroe-vs-waynesville/9-28-2026/?c=8b13031a-71f5-48b8-9493-98fcdf5b703d"
     },
@@ -163,9 +117,9 @@
       "sport": "Boys Soccer",
       "level": "Varsity",
       "opponent": "Yellow Springs",
-      "wayneScore": null,
-      "opponentScore": null,
-      "result": null,
+      "wayneScore": 4,
+      "opponentScore": 0,
+      "result": "W",
       "isHome": true,
       "link": "https://www.maxpreps.com/oh/soccer/match/waynesville-vs-yellow-springs/9-28-2026/?c=7f5ccf62-ed3a-4ef5-8537-dff8069aecf0"
     },
@@ -174,12 +128,14 @@
       "sport": "Girls Soccer",
       "level": "Varsity",
       "opponent": "Troy",
-      "wayneScore": null,
-      "opponentScore": null,
-      "result": null,
+      "wayneScore": 1,
+      "opponentScore": 4,
+      "result": "L",
       "isHome": false,
       "link": "https://www.maxpreps.com/oh/soccer/girls/match/troy-vs-waynesville/9-28-2026/?c=f17436d4-fa04-4244-a301-29d7cf535522"
-    },
+    }
+  ],
+  "upcoming": [
     {
       "dateISO": "2026-09-29T17:30:00",
       "sport": "Volleyball",
@@ -322,6 +278,61 @@
       "result": null,
       "isHome": true,
       "link": "https://www.maxpreps.com/oh/soccer/match/bethel-tipp-city-vs-waynesville/10-3-2026/?c=6a3ca258-c83a-4595-a388-83285c5a0636"
+    },
+    {
+      "dateISO": "2026-10-05T17:30:00",
+      "sport": "Boys Soccer",
+      "level": "JV",
+      "opponent": "Legacy Christian Academy",
+      "wayneScore": null,
+      "opponentScore": null,
+      "result": null,
+      "isHome": true,
+      "link": "https://www.maxpreps.com/oh/soccer/match/legacy-christian-academy-xenia-vs-waynesville/jv/10-5-2026/?c=d2a5716b-2779-4f76-830d-d198205244d0"
+    },
+    {
+      "dateISO": "2026-10-05T17:30:00",
+      "sport": "Girls Soccer",
+      "level": "JV",
+      "opponent": "Tippecanoe",
+      "wayneScore": null,
+      "opponentScore": null,
+      "result": null,
+      "isHome": false,
+      "link": "https://www.maxpreps.com/oh/soccer/girls/match/tippecanoe-tipp-city-vs-waynesville/jv/10-5-2026/?c=0df9fe2e-3a5a-4cdf-ae19-e4edfcb8f32a"
+    },
+    {
+      "dateISO": "2026-10-05T18:30:00",
+      "sport": "Volleyball",
+      "level": "Varsity",
+      "opponent": "Fairmont",
+      "wayneScore": null,
+      "opponentScore": null,
+      "result": null,
+      "isHome": true,
+      "link": "https://www.maxpreps.com/oh/volleyball/match/fairmont-kettering-vs-waynesville/10-5-2026/?c=66afc101-4866-44e7-94e1-4fb95f0d893d"
+    },
+    {
+      "dateISO": "2026-10-05T19:15:00",
+      "sport": "Boys Soccer",
+      "level": "Varsity",
+      "opponent": "Legacy Christian Academy",
+      "wayneScore": null,
+      "opponentScore": null,
+      "result": null,
+      "isHome": true,
+      "link": "https://www.maxpreps.com/oh/soccer/match/legacy-christian-academy-xenia-vs-waynesville/10-5-2026/?c=b4621e82-a93a-4826-848b-6cecc7d04ccc"
+    },
+    {
+      "dateISO": "2026-10-05T19:15:00",
+      "sport": "Girls Soccer",
+      "level": "Varsity",
+      "opponent": "Tippecanoe",
+      "wayneScore": null,
+      "opponentScore": null,
+      "result": null,
+      "isHome": false,
+      "link": "https://www.maxpreps.com/oh/soccer/girls/match/tippecanoe-tipp-city-vs-waynesville/10-5-2026/?c=523bb5e8-b07c-4123-bcf2-2f9f156e1d41"
     }
   ]
 }
