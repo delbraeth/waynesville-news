@@ -1,5 +1,5 @@
 {
-  "_note": "Real venues and sources, verified against each listed source on 2026-09-29 (daily automated refresh). Recurring items (rodeo, commissioners, ghost walk) show the next occurrence. Warren County Park District items carried from the 2026-09-23 check (its events page redirect target returned a 403 on 2026-09-24 through 2026-09-29).",
+  "_note": "Real venues and sources, verified against each listed source on 2026-09-30 (daily automated refresh). Recurring items (rodeo, commissioners, ghost walk) show the next occurrence. Warren County Park District items carried from the 2026-09-23 check (its events page redirect target returned a 403 on 2026-09-24 through 2026-09-30).",
   "items": [
     {
       "title": "Historical Haunts — ghost walk of downtown Waynesville",
@@ -10,15 +10,6 @@
       "category": "Tour",
       "source": "https://www.friendshomemuseum.org/ghost-tours-class-dinners",
       "note": "Two-hour guided walking tour of the historic district drawing on the village’s 228-year history, run by the Museum at the Friends Home. The museum also runs a $60 Ghost & Goblet dinner and tour at The Venue at the Historic Lockup, and a $50 Ghost Hunting 101 class with ParaVizionz. Start times are not published on the site — they are set in the booking system, so confirm before printing one."
-    },
-    {
-      "title": "Family Fishing Fun at Armco Park",
-      "dateISO": "2026-09-25T10:00:00-04:00",
-      "dateLabel": "Fri, Sep 25 · 10:00 AM–12:00 PM",
-      "venue": "Armco Park (Shelter 30, solar array), 1223 N SR 741, Lebanon",
-      "category": "Outdoors",
-      "source": "https://www.warrencountyparks.com/events/",
-      "note": "Warren County Park District family fishing program"
     },
     {
       "title": "Windmill Farm Market Spooktacular",
@@ -60,15 +51,6 @@
       "note": "Corn maze, mini golf, petting farm, and other fall activities; $16 adult / $14 ages 10 & under daily admission. Not affiliated with Hisey Fall Fest."
     },
     {
-      "title": "Fox Hollow Rodeo — Bull Riding",
-      "dateISO": "2026-10-03T18:00:00-04:00",
-      "dateLabel": "Sat, Oct 3 · 6:00 PM",
-      "venue": "Fox Hollow Rodeo, Waynesville",
-      "category": "Rodeo",
-      "source": "https://foxhollowrodeo.com/",
-      "note": "Bull riding, barrel racing, mutton bustin' — year-round, rain or shine"
-    },
-    {
       "title": "Full Moon Hike at Gulley Park",
       "dateISO": "2026-09-27T19:45:00-04:00",
       "dateLabel": "Sun, Sep 27 · 7:45–8:45 PM",
@@ -76,15 +58,6 @@
       "category": "Outdoors",
       "source": "https://www.warrencountyparks.com/events/",
       "note": "Easy-terrain night hike under the full moon, ages 4+; registration ends 24 hrs prior"
-    },
-    {
-      "title": "Warren County Commissioners — Weekly Session",
-      "dateISO": "2026-09-29T09:00:00-04:00",
-      "dateLabel": "Tue, Sep 29 · 9:00 AM",
-      "venue": "406 Justice Dr, Lebanon",
-      "category": "Government",
-      "source": "https://commissioners.warrencountyohio.gov/News/AgendaMinutes/Index",
-      "note": "Weekly commissioners session; agendas and minutes posted online"
     },
     {
       "title": "Ohio Renaissance Festival — Viking Weekend",
@@ -106,6 +79,15 @@
       "note": "Established annual event (21st year in 2026), hosted by Warren County Park District & Friends of Warren County Park District; free admission and activities include free pumpkins while supplies last, pumpkin decorating, hayrides, live reptiles, native taxidermy, 4-H archery, 4-H petting zoo, and historic farmhouse tours; no registration required"
     },
     {
+      "title": "Fox Hollow Rodeo — Bull Riding",
+      "dateISO": "2026-10-03T18:00:00-04:00",
+      "dateLabel": "Sat, Oct 3 · 6:00 PM",
+      "venue": "Fox Hollow Rodeo, Waynesville",
+      "category": "Rodeo",
+      "source": "https://foxhollowrodeo.com/",
+      "note": "Bull riding, barrel racing, mutton bustin' — year-round, rain or shine"
+    },
+    {
       "title": "Night Sky Tour with Warren County Astronomical Society",
       "dateISO": "2026-10-03T18:30:00-04:00",
       "dateLabel": "Sat, Oct 3 · 6:30–10:30 PM",
@@ -122,6 +104,15 @@
       "category": "Government",
       "source": "https://go.boarddocs.com/oh/waylo/Board.nsf/Public",
       "note": "Regularly scheduled business meeting; open to the public. Date announced in the district's September 14 board meeting recap."
+    },
+    {
+      "title": "Warren County Commissioners — Weekly Session",
+      "dateISO": "2026-10-06T09:00:00-04:00",
+      "dateLabel": "Tue, Oct 6 · 9:00 AM",
+      "venue": "406 Justice Dr, Lebanon",
+      "category": "Government",
+      "source": "https://commissioners.warrencountyohio.gov/News/AgendaMinutes/Index",
+      "note": "Weekly commissioners session; agendas and minutes posted online"
     },
     {
       "title": "Toddler Trek: Spider Kid at Landen-Deerfield Park",
