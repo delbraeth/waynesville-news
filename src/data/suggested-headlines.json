@@ -1,18 +1,24 @@
 {
   "_note": "Candidate local headlines (Google News RSS). Published as a quoted headline (or, when available, a short publisher-written excerpt) + source + link; never reproduce article body text.",
-  "updated": "2026-09-30T10:41:11.797Z",
+  "updated": "2026-10-01T10:41:25.550Z",
   "items": [
-    {
-      "title": "Cupid Finds A Match At The Ohio Renaissance Festival",
-      "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQZVVOYmJ4ZjJNWllJbDZSRUZGS2s4LXpCVG5PZ1Nhenp5Q0RFWExQbC1ILUhjMUFDb2xlY1FILTJqWmdESlRUM21EQXdlNTMzVFprNG91VU05UEM3ZWhGLWdiTzVwN2duaWNBaE5FVW9rR1FEeDhkSjdTQ0tUOEVhUk5NVmlzaW1oQlZ6Z3FyZWxsS1ZkZ1pJdGs0d1hPRFU?oc=5",
-      "source": "warrencountypost.com",
-      "date": "Tue, 29 Sep 2026 02:07:34 GMT"
-    },
     {
       "title": "Warren County man pleads guilty to child pornography, animal sex charges as sex crimes case heads to trial",
       "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPTnFpVWhiX0RDNDR6MFE1LWZzd0Q2UHJCanBTTHpDSjBLeXdwdDJ6NHl6bThMd194WFRwM0RBV3p3WTBVX0NaNTBXcHdFUGtobWxoVHNPSG5mcWUyQ2dQdGlIeGtxLVZESlo0cmhHYjc2YXg0dkd6S3R6VFFDVzRTMFlCdFgtMWdOeFliZ2MyTnRMTXQxYkFn?oc=5",
       "source": "WLWT",
       "date": "Mon, 28 Sep 2026 13:23:00 GMT"
+    },
+    {
+      "title": "ODNR Accepting Applications for Student Geologic Research Grants",
+      "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOcUR0S0tMZUQxUVFyU0s0cHNTTzBlaGRJQmJFMWo3TDdsbzRrbGhlOVh1TFhIWUlRMGhnZUl3RWxoRlUxdC1GLXMxQU4zellFUVVVNU1RZ2V2bkFvTThXeDNzVlpTWUExNEFXMkRWdUtqeUlMRklRTEFMdUgwLXFrMmVuRTdpRzJ5SjRBTVJvV2JiWnduZ2I0eE5iYnBMRWJqYUdhVUg4Vy1rWFhOLVRfdg?oc=5",
+      "source": "Warren County Post",
+      "date": "Thu, 01 Oct 2026 02:06:07 GMT"
+    },
+    {
+      "title": "Betty S. Lynch-Harrah Obituary (2026) - Waynesville, OH - Stubbs-Conner Funeral Home & Cremation Services",
+      "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNbXhEc3dQZEg2bDc2TGs4VmFVQ2FIb3oyLVFWVmxBZ2lQbTZoZXhINmNMMm5fWjN3bmxEeXJqejFRTkc2N3UwUkQzSVZWOUkteHlMcDh3dUNoaUxNSHRsQkM2NXhUZ1FPSnpmWW15cF9KdWtXTmNXUjBjRFoxSW9ZNm9iVW1KTml0?oc=5",
+      "source": "Legacy",
+      "date": "Thu, 01 Oct 2026 02:56:14 GMT"
     },
     {
       "title": "Walmart to invest $300M in Tri-State area fulfillment center, adding 300+ jobs",
@@ -27,28 +33,22 @@
       "date": "Tue, 29 Sep 2026 08:34:00 GMT"
     },
     {
+      "title": "Rodney D. Wheelen Obituary (2026) - Waynesville, OH - Stubbs-Conner Funeral Home & Cremation Services",
+      "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOV096alZvTVVOc1BvMUROcGYteVpnUDEtTFNtVnVRSmwwU09UQ3I5MjJHNldtNjFFSlNycWhCaFRLWkFXM3lPalJZT0Jxd19mZ3AyZDlIdjF2U2lpeTNkOGhQdHhuRWlUb2NyQm0zZGNydXVRYlIyREZYTzh2QV9JSjZVSQ?oc=5",
+      "source": "Legacy",
+      "date": "Thu, 01 Oct 2026 02:56:14 GMT"
+    },
+    {
       "title": "Warren County man sentenced after stray bullet injures two women in Kroger",
       "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOTDZ2ZHFzLVBZZm1yT3FfdW5mQ01oQldpbDFSbUxTX2Fqa20yX09vckl0OG02YlB5eUhQNFpheUMySlNrdzFmM19TLUpLalRUaHF5MVFwOE9ZSmVBVlhXV1h2S3pySE5NMHlJd1Q3d3RpaWRPVVo3QWlMZnZvVDVDRGtJMXFmSWt5Y09DdTlnSFRLaWdRYjc1cDh5cmYxMUM1cFVtNWNYcHg?oc=5",
       "source": "FOX19 | Cincinnati",
       "date": "Fri, 25 Sep 2026 22:09:00 GMT"
     },
     {
-      "title": "Ohio mother convicted on counts of gross sexual imposition, child endangerment",
-      "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPVDU0cWQxU0lQVzVlMVJ2SHpvM1JIbFVyZ19HbDFKczZNc2xzMkJjVG83LVVxYTB4dzJhSnZjUUJDc1RqSDk1cFZwc2RyZFlFTzVFUnViaktsZXNzeTVDYlZRdGs2cmUzMWVyeWJZVTFVN3MyS3N5OW82OW1NTEY2RHJuaWhEOEk1TWtwMzdDdHQ3bDdMMmZ4TEV0UUhsT3ljVDVCVWt4OGFScF9jUVJaRnpCOWVPcEF5RnVXYUpGZm16OXJVbnc?oc=5",
-      "source": "WCPO 9 Cincinnati",
-      "date": "Thu, 24 Sep 2026 10:31:44 GMT"
-    },
-    {
       "title": "Prosecutor: Warren County bookkeeper pleads guilty in $2 million theft case",
       "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQVEpxX3dvRHJRMVZTZlRHMkFfUmF1RjNQMzNEdkExSzlxbnVhU2R0eENVV1dhY0Q1ckxYTm9kQ1lvQnlWMHdzZ0twMENVb0Zia25lWUhLX3JqLWIwTWNSOHhJZWVoM1prVWFPRTJaMjYxQzB4cGFDWXhUdXJranVjS0s0MEdEODBaUWpXbXh2WmFITzc4WGl6SjVxeW0?oc=5",
       "source": "WLWT",
       "date": "Mon, 28 Sep 2026 18:06:00 GMT"
-    },
-    {
-      "title": "ODNR Urges Caution During Ohio’s Fall Wildfire Season",
-      "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPU1dzUzExWEgyNk8xcmdrbk82MUkzMDhQTk9CN1JvWWozeUNrWXRXUmQxeEo1V3loTUVyRXR0MUxmU2FxRkFaZEVDUVROZUlmWF84VHBWZWJQdVY3eFhqVE5rdDZNLThtV0puc1pxRmxUZEpoeUgwQ2pGZFhVQ2ZQaW5XV296dXBEZFRvem12QUxnWVBZVlNmSVhhWTByUnFFS3lGcHlR?oc=5",
-      "source": "warrencountypost.com",
-      "date": "Sun, 27 Sep 2026 02:17:09 GMT"
     }
   ]
 }

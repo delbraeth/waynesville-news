@@ -1,16 +1,8 @@
 {
   "_note": "Caesar Creek State Park programs from the ODNR events calendar, next 60 days. Titles, times and meeting points reproduced from ODNR's own listing.",
-  "updated": "2026-09-30T10:42:48.083Z",
+  "updated": "2026-10-01T10:43:11.597Z",
   "source": "https://ohiodnr.gov/go-and-do/plan-a-visit/events-calendar/events-calendar?keyword=Caesar%20Creek",
   "items": [
-    {
-      "title": "Celestial Stories of the Underground Railroad",
-      "dateISO": "2026-10-02T22:00:00.000Z",
-      "dateLabel": "Fri, Oct 2 · 6:00 PM–11:00 PM",
-      "meetAt": "Caesar Creek Pioneer Village",
-      "summary": "Meet at Pioneer Village. Free and Open to the Public. An ODNR America 250 event.",
-      "link": "https://ohiodnr.gov/home/news-and-events/all-events/parks-wc-events/SW-Ohio/stories-caesarcreek-10-2-26"
-    },
     {
       "title": "Cemetery Sunset Driving Tour and Celestial Stories of the Underground Railroad Special Event",
       "dateISO": "2026-10-02T22:00:00.000Z",
@@ -18,6 +10,14 @@
       "meetAt": "Meet at Pioneer Village.",
       "summary": "Discover how freedom seekers looked to the stars for hope and direction as we take a closer look at local history. Join us for all, or part of this special ‘America 250 Event’",
       "link": "https://ohiodnr.gov/home/news-and-events/all-events/parks-wc-events/SW-Ohio/CemeterySunsetDrivingTourandCelestialStoriesoftheUndergroundRailroadSpecialEventCaesarCreek-10-2-26."
+    },
+    {
+      "title": "Celestial Stories of the Underground Railroad",
+      "dateISO": "2026-10-02T22:00:00.000Z",
+      "dateLabel": "Fri, Oct 2 · 6:00 PM–11:00 PM",
+      "meetAt": "Caesar Creek Pioneer Village",
+      "summary": "Meet at Pioneer Village. Free and Open to the Public. An ODNR America 250 event.",
+      "link": "https://ohiodnr.gov/home/news-and-events/all-events/parks-wc-events/SW-Ohio/stories-caesarcreek-10-2-26"
     },
     {
       "title": "Stargazing and Storytelling and Celestial Stories of the Underground Railroad Special Event",
@@ -66,22 +66,6 @@
       "meetAt": "Nature Center",
       "summary": "Meet at the Nature Center. All are welcome.",
       "link": "https://ohiodnr.gov/home/news-and-events/all-events/parks-wc-events/SW-Ohio/MysteryAnimalMeetandGreetCaesarCreek-10-8-26."
-    },
-    {
-      "title": "Archery: Aim for Adventure",
-      "dateISO": "2026-10-09T19:00:00.000Z",
-      "dateLabel": "Fri, Oct 9 · 3:00 PM–5:00 PM",
-      "meetAt": "Nature Center",
-      "summary": "Meet at the Nature Center. All are welcome.",
-      "link": "https://ohiodnr.gov/home/news-and-events/all-events/parks-wc-events/SW-Ohio/ArcheryAimforAdventureCaesarCreek-10-9-26."
-    },
-    {
-      "title": "Night Hike",
-      "dateISO": "2026-10-09T23:00:00.000Z",
-      "dateLabel": "Fri, Oct 9 · 7:00 PM–8:00 PM",
-      "meetAt": "Campground Amphitheater",
-      "summary": "Meet at the Campground Amphitheater. All are welcome.",
-      "link": "https://ohiodnr.gov/home/news-and-events/all-events/parks-wc-events/SW-Ohio/NightHikeCaesarCreek-10-9-26"
     },
     {
       "title": "Giving Back to the Wild: Land Stewardship",
@@ -170,6 +154,14 @@
       "meetAt": "Visitor Center",
       "summary": "Meet us at the Visitor Center. See our facebook page for event details.",
       "link": "https://ohiodnr.gov/home/news-and-events/all-events/parks-wc-events/SW-Ohio/OwlFestCaesarCreek-11-14-26."
+    },
+    {
+      "title": "Cast Iron Cooking",
+      "dateISO": "2026-11-21T16:00:00.000Z",
+      "dateLabel": "Sat, Nov 21 · 11:00 AM–2:00 PM",
+      "meetAt": "Nature Center",
+      "summary": "Join us for a free cast iron cooking demonstration. Pre-register with the NCACC for the meal.",
+      "link": "https://ohiodnr.gov/home/news-and-events/all-events/parks-wc-events/SW-Ohio/CastIronCookingCaesarCreek-11-21-26."
     }
   ]
 }

@@ -1,6 +1,6 @@
 {
   "_note": "Waynesville Spartans schedule + results (MaxPreps), past 7 days / next 7 days. Scraped directly from each sport's own schedule page (football, volleyball, soccer -- varsity + JV), not the school hub page, which has been observed to silently omit some contests. Scores and matchups reproduced verbatim from MaxPreps' own markup; each links to their game page.",
-  "updated": "2026-09-30T10:41:17.169Z",
+  "updated": "2026-10-01T10:41:32.120Z",
   "results": [
     {
       "dateISO": "2026-09-24T17:30:00",
@@ -133,20 +133,20 @@
       "result": "L",
       "isHome": true,
       "link": "https://www.maxpreps.com/oh/volleyball/match/oakwood-dayton-vs-waynesville/9-29-2026/?c=4faeb4ec-2214-4124-89f0-abfee436efc5"
-    }
-  ],
-  "upcoming": [
+    },
     {
       "dateISO": "2026-09-30T18:00:00",
       "sport": "Boys Soccer",
       "level": "Varsity",
       "opponent": "Carlisle",
-      "wayneScore": null,
-      "opponentScore": null,
-      "result": null,
+      "wayneScore": 0,
+      "opponentScore": 0,
+      "result": "T",
       "isHome": false,
       "link": "https://www.maxpreps.com/oh/soccer/match/carlisle-vs-waynesville/9-30-2026/?c=20cad10b-35da-4dc5-a145-390b4b49cb33"
-    },
+    }
+  ],
+  "upcoming": [
     {
       "dateISO": "2026-10-01T17:30:00",
       "sport": "Volleyball",
