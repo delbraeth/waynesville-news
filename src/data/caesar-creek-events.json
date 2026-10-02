@@ -1,16 +1,8 @@
 {
   "_note": "Caesar Creek State Park programs from the ODNR events calendar, next 60 days. Titles, times and meeting points reproduced from ODNR's own listing.",
-  "updated": "2026-10-01T10:43:11.597Z",
+  "updated": "2026-10-02T10:42:50.975Z",
   "source": "https://ohiodnr.gov/go-and-do/plan-a-visit/events-calendar/events-calendar?keyword=Caesar%20Creek",
   "items": [
-    {
-      "title": "Cemetery Sunset Driving Tour and Celestial Stories of the Underground Railroad Special Event",
-      "dateISO": "2026-10-02T22:00:00.000Z",
-      "dateLabel": "Fri, Oct 2 · 6:00 PM–7:30 PM",
-      "meetAt": "Meet at Pioneer Village.",
-      "summary": "Discover how freedom seekers looked to the stars for hope and direction as we take a closer look at local history. Join us for all, or part of this special ‘America 250 Event’",
-      "link": "https://ohiodnr.gov/home/news-and-events/all-events/parks-wc-events/SW-Ohio/CemeterySunsetDrivingTourandCelestialStoriesoftheUndergroundRailroadSpecialEventCaesarCreek-10-2-26."
-    },
     {
       "title": "Celestial Stories of the Underground Railroad",
       "dateISO": "2026-10-02T22:00:00.000Z",
@@ -18,6 +10,14 @@
       "meetAt": "Caesar Creek Pioneer Village",
       "summary": "Meet at Pioneer Village. Free and Open to the Public. An ODNR America 250 event.",
       "link": "https://ohiodnr.gov/home/news-and-events/all-events/parks-wc-events/SW-Ohio/stories-caesarcreek-10-2-26"
+    },
+    {
+      "title": "Cemetery Sunset Driving Tour and Celestial Stories of the Underground Railroad Special Event",
+      "dateISO": "2026-10-02T22:00:00.000Z",
+      "dateLabel": "Fri, Oct 2 · 6:00 PM–7:30 PM",
+      "meetAt": "Meet at Pioneer Village.",
+      "summary": "Discover how freedom seekers looked to the stars for hope and direction as we take a closer look at local history. Join us for all, or part of this special ‘America 250 Event’",
+      "link": "https://ohiodnr.gov/home/news-and-events/all-events/parks-wc-events/SW-Ohio/CemeterySunsetDrivingTourandCelestialStoriesoftheUndergroundRailroadSpecialEventCaesarCreek-10-2-26."
     },
     {
       "title": "Stargazing and Storytelling and Celestial Stories of the Underground Railroad Special Event",

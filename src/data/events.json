@@ -1,5 +1,5 @@
 {
-  "_note": "Real venues and sources, verified against each listed source on 2026-10-01 (daily automated refresh). Recurring items (rodeo, commissioners, ghost walk) show the next occurrence. Warren County Park District items carried from the 2026-09-23 check (its events page redirect target returned a 403 on 2026-09-24 through 2026-10-01).",
+  "_note": "Real venues and sources, verified against each listed source on 2026-10-02 (daily automated refresh). Recurring items (rodeo, commissioners, ghost walk) show the next occurrence. Warren County Park District items carried from the 2026-09-23 check (its events page redirect target returned a 403 on 2026-09-24 through 2026-10-02).",
   "items": [
     {
       "title": "Historical Haunts — ghost walk of downtown Waynesville",
@@ -22,16 +22,6 @@
       "note": "Fall festival at Windmill Farm Market, on SR 73 a short drive east of the village, promoted on the Waynesville Merchant Association calendar. Daily hours are not published there — confirm before printing times."
     },
     {
-      "title": "Ohio Renaissance Festival — Highland Weekend",
-      "dateISO": "2026-09-26T10:30:00-04:00",
-      "endISO": "2026-09-27T19:00:00-04:00",
-      "dateLabel": "Sep 26–27 · 10:30 AM–7:00 PM",
-      "venue": "Renaissance Park, Waynesville",
-      "category": "Festival",
-      "source": "https://renfestival.com/",
-      "note": "Themed weekend during the festival's regular Sep 5–Nov 1, 2026 season"
-    },
-    {
       "title": "Waynesville Fall Fest",
       "dateISO": "2026-09-26T11:00:00-04:00",
       "endISO": "2026-11-01T18:00:00-05:00",
@@ -40,15 +30,6 @@
       "category": "Festival",
       "source": "https://waynesvillefallfest.com/",
       "note": "Corn maze, mini golf, petting farm, and other fall activities; $16 adult / $14 ages 10 & under daily admission. Not affiliated with Hisey Fall Fest."
-    },
-    {
-      "title": "Full Moon Hike at Gulley Park",
-      "dateISO": "2026-09-27T19:45:00-04:00",
-      "dateLabel": "Sun, Sep 27 · 7:45–8:45 PM",
-      "venue": "Gulley Park, Clarksville",
-      "category": "Outdoors",
-      "source": "https://www.warrencountyparks.com/events/",
-      "note": "Easy-terrain night hike under the full moon, ages 4+; registration ends 24 hrs prior"
     },
     {
       "title": "Ohio Renaissance Festival — Viking Weekend",
