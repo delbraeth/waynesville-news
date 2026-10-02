@@ -1,5 +1,5 @@
 {
-  "_note": "Real venues and sources, verified against each listed source on 2026-10-02 (daily automated refresh). Recurring items (rodeo, commissioners, ghost walk) show the next occurrence. Warren County Park District items carried from the 2026-09-23 check (its events page redirect target returned a 403 on 2026-09-24 through 2026-10-02).",
+  "_note": "Real venues and sources, verified against each listed source on 2026-10-02 (daily automated refresh). Wayne Local school dates per The Spartan (September 2026). Recurring items (rodeo, commissioners, ghost walk) show the next occurrence. Warren County Park District items carried from the 2026-09-23 check (its events page redirect target returned a 403 on 2026-09-24 through 2026-10-02).",
   "items": [
     {
       "title": "Historical Haunts — ghost walk of downtown Waynesville",
@@ -69,6 +69,15 @@
       "note": "Second WCAS night sky tour date this fall; free astronomy presentation and stargazing, open to the public, no registration required; check WCAS site/Facebook for weather cancellations"
     },
     {
+      "title": "Boys Soccer Senior Night / Volleyball Orange Out",
+      "dateISO": "2026-10-05T00:00:00-04:00",
+      "dateLabel": "Mon, Oct 5",
+      "venue": "Waynesville High School",
+      "category": "Schools",
+      "source": "https://www.wayne-local.com/",
+      "note": "Per The Spartan (September 2026); check the athletics schedule for times"
+    },
+    {
       "title": "Wayne Local Schools Board of Education — Regular Meeting",
       "dateISO": "2026-10-05T18:00:00-04:00",
       "dateLabel": "Mon, Oct 5 · 6:00 PM",
@@ -76,6 +85,15 @@
       "category": "Government",
       "source": "https://go.boarddocs.com/oh/waylo/Board.nsf/Public",
       "note": "Regularly scheduled business meeting; open to the public. Date announced in the district's September 14 board meeting recap."
+    },
+    {
+      "title": "Volleyball Senior Night",
+      "dateISO": "2026-10-06T00:00:00-04:00",
+      "dateLabel": "Tue, Oct 6",
+      "venue": "Waynesville High School",
+      "category": "Schools",
+      "source": "https://www.wayne-local.com/",
+      "note": "Per The Spartan (September 2026); check the athletics schedule for time"
     },
     {
       "title": "Warren County Commissioners — Weekly Session",
@@ -96,6 +114,33 @@
       "note": "Warren County Park District toddler nature program"
     },
     {
+      "title": "Parent-Teacher Conferences — Wayne Local Schools",
+      "dateISO": "2026-10-08T16:00:00-04:00",
+      "dateLabel": "Thu, Oct 8 · 4:00–7:00 PM",
+      "venue": "Wayne Local Schools (WES, WMS, WHS)",
+      "category": "Schools",
+      "source": "https://www.wayne-local.com/",
+      "note": "Per The Spartan (September 2026); WES, WMS and WHS"
+    },
+    {
+      "title": "No School for Students — Teacher Professional Day",
+      "dateISO": "2026-10-09T00:00:00-04:00",
+      "dateLabel": "Fri, Oct 9",
+      "venue": "Wayne Local Schools",
+      "category": "Schools",
+      "source": "https://www.wayne-local.com/",
+      "note": "Per The Spartan (September 2026)"
+    },
+    {
+      "title": "Waynesville Football Pink Out Game",
+      "dateISO": "2026-10-09T00:00:00-04:00",
+      "dateLabel": "Fri, Oct 9",
+      "venue": "Waynesville High School",
+      "category": "Schools",
+      "source": "https://www.wayne-local.com/",
+      "note": "Per The Spartan (September 2026); check the athletics schedule for kickoff time"
+    },
+    {
       "title": "Ohio Sauerkraut Festival",
       "dateISO": "2026-10-10T09:00:00-04:00",
       "endISO": "2026-10-11T18:00:00-04:00",
@@ -114,6 +159,42 @@
       "category": "Festival",
       "source": "https://renfestival.com/",
       "note": "Themed weekend during the festival's regular Sep 5–Nov 1, 2026 season; coincides with Sauerkraut Festival weekend"
+    },
+    {
+      "title": "No School — Fall Break",
+      "dateISO": "2026-10-12T00:00:00-04:00",
+      "dateLabel": "Mon, Oct 12",
+      "venue": "Wayne Local Schools",
+      "category": "Schools",
+      "source": "https://www.wayne-local.com/",
+      "note": "Per The Spartan (September 2026)"
+    },
+    {
+      "title": "Girls Soccer Senior Night",
+      "dateISO": "2026-10-13T00:00:00-04:00",
+      "dateLabel": "Tue, Oct 13",
+      "venue": "Waynesville High School",
+      "category": "Schools",
+      "source": "https://www.wayne-local.com/",
+      "note": "Per The Spartan (September 2026); check the athletics schedule for time"
+    },
+    {
+      "title": "Two-Hour Early Release — End of Quarter",
+      "dateISO": "2026-10-16T00:00:00-04:00",
+      "dateLabel": "Fri, Oct 16",
+      "venue": "Wayne Local Schools",
+      "category": "Schools",
+      "source": "https://www.wayne-local.com/",
+      "note": "Per The Spartan (September 2026)"
+    },
+    {
+      "title": "Football Senior Night (Football, Cheer, Band, XC & Boys Golf)",
+      "dateISO": "2026-10-16T00:00:00-04:00",
+      "dateLabel": "Fri, Oct 16",
+      "venue": "Waynesville High School",
+      "category": "Schools",
+      "source": "https://www.wayne-local.com/",
+      "note": "Per The Spartan (September 2026); check the athletics schedule for kickoff time"
     },
     {
       "title": "Ohio Renaissance Festival — Romance Weekend",
