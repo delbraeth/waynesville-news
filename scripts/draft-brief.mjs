@@ -58,6 +58,8 @@ let boardRecap = null;
 try { boardRecap = (await readJSON("src/data/board-recap.json")).item ?? null; } catch { /* optional */ }
 let fbSchools = [];
 try { fbSchools = (await readJSON("src/data/fb-schools.json")).items ?? []; } catch { /* optional */ }
+let fbCaesarCreek = [];
+try { fbCaesarCreek = (await readJSON("src/data/fb-caesar-creek.json")).items ?? []; } catch { /* optional */ }
 
 const longDate = now.toLocaleDateString("en-US", {
   weekday: "long", month: "long", day: "numeric", year: "numeric", timeZone: "America/New_York",
@@ -224,6 +226,11 @@ const fbBlock = fbSchools.length
     fbSchools.slice(0, 6).map((p) => `- **${p.dateLabel}** — ${p.title} ${p.excerpt} (${link("post", p.link)})`).join("\n")
   : null;
 
+const fbCaesarBlock = fbCaesarCreek.length
+  ? "**From Caesar Creek State Park on Facebook**\n" +
+    fbCaesarCreek.slice(0, 4).map((p) => `- **${p.dateLabel}** — ${p.title} ${p.excerpt} (${link("post", p.link)})`).join("\n")
+  : null;
+
 const shopsBlock = shopsEvents.length
   ? shopsEvents.map((e) => `- **${e.dateLabel}** — ${link(e.title, e.link)}`).join("\n")
   : null;
@@ -367,7 +374,7 @@ ${listSrc("Around Town")}
 <!-- Editor note (stripped before publication): occasionally write a free \`## Business spotlight\` section — a short editorial profile of a local business. It's coverage, not sponsorship: never tied to the paid Supporters list, and labeled as a spotlight. -->
 ${shopsBlock ? `\n**Merchant Association events** (waynesvilleshops.com)\n${shopsBlock}\n` : ""}
 
-${caesarBlock ? `\n## Caesar Creek State Park\nNaturalist programs at the park, about five miles east of the village, over the next ${CAESAR_WINDOW_DAYS} days. Times and meeting points are ODNR's own. Check:\n${listSrc("Caesar Creek")}\n\n${caesarBlock}\n` : ""}
+${caesarBlock || fbCaesarBlock ? `\n## Caesar Creek State Park\n${caesarBlock ? `Naturalist programs at the park, about five miles east of the village, over the next ${CAESAR_WINDOW_DAYS} days. Times and meeting points are ODNR's own. ` : ""}Check:\n${listSrc("Caesar Creek")}\n${caesarBlock ? `\n${caesarBlock}\n` : ""}${fbCaesarBlock ? `\n${fbCaesarBlock}\n` : ""}` : ""}
 ## Public safety
 ${safetyBlock}
 ${listSrc("Public Safety")}

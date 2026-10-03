@@ -1,20 +1,37 @@
-// Pull recent Wayne Local Schools Facebook posts via an RSS bridge (rss.app),
-// since Facebook itself is robots-blocked and cannot be fetched directly.
-// Published as a short quoted post title + link + a plain-text excerpt; the
-// district's own words, linked back to the post. Never invents anything.
+// Pull recent Facebook posts via an RSS bridge (rss.app), since Facebook itself
+// is robots-blocked and cannot be fetched directly. One data file per page:
+// Wayne Local Schools -> src/data/fb-schools.json, Caesar Creek State Park ->
+// src/data/fb-caesar-creek.json. Published as a short quoted post title + link
+// + a plain-text excerpt; the page's own words, linked back to the post. Never
+// invents anything.
 //
-// Fail-safe: on any fetch/parse error, or zero usable items, the previous
-// src/data/fb-schools.json is kept (the bridge is unofficial and may rate-limit
-// or break); it must never fail the workflow.
+// Fail-safe, per feed: on any fetch/parse error, or zero usable items, that
+// feed's previous data file is kept (the bridge is unofficial and may
+// rate-limit or break); one feed failing never affects the other, and it must
+// never fail the workflow.
 import { writeFile } from "node:fs/promises";
 import { existsSync } from "node:fs";
 import { keepOrExpire } from "./lib/stale-cache.mjs";
 
-// Public RSS-bridge feed for facebook.com/waynelocalschools. Not a secret — an
-// unauthenticated feed URL. To change the source, regenerate the feed and swap
-// this URL.
-const FEED = "https://rss.app/feeds/eZlZu4grcHXQYIpD.xml";
-const OUT = new URL("../src/data/fb-schools.json", import.meta.url);
+// Public RSS-bridge feeds. Not secrets — unauthenticated feed URLs. To change
+// a source, regenerate its feed and swap the URL. `label` is also the
+// stale-cache ceiling key (scripts/lib/stale-cache.mjs).
+const FEEDS = [
+  {
+    label: "fb-schools", // facebook.com/waynelocalschools
+    url: "https://rss.app/feeds/eZlZu4grcHXQYIpD.xml",
+    out: new URL("../src/data/fb-schools.json", import.meta.url),
+    what: "recent district posts",
+    note: "Recent Wayne Local Schools Facebook posts via rss.app bridge. Title + link + short excerpt; the district's own words. Fail-safe: kept from last run if the bridge is down.",
+  },
+  {
+    label: "fb-caesar-creek", // facebook.com/CaesarCreekStatePark
+    url: "https://rss.app/feeds/dT9ew5lQ8k75PcvI.xml",
+    out: new URL("../src/data/fb-caesar-creek.json", import.meta.url),
+    what: "recent Caesar Creek State Park posts",
+    note: "Recent Caesar Creek State Park Facebook posts via rss.app bridge. Title + link + short excerpt; the park's own words. Fail-safe: kept from last run if the bridge is down.",
+  },
+];
 const LOOKBACK_DAYS = 10;
 const LIMIT = 8;
 
@@ -31,16 +48,15 @@ const clean = (s) =>
     .replace(/\s+/g, " ")
     .trim();
 
-const DEFAULT_NOTE = "Recent Wayne Local Schools Facebook posts via rss.app bridge. Title + link + short excerpt; the district's own words. Fail-safe: kept from last run if the bridge is down.";
-const write = (items, note = DEFAULT_NOTE) =>
-  writeFile(OUT, JSON.stringify({
+const write = (feed, items, note = feed.note) =>
+  writeFile(feed.out, JSON.stringify({
     _note: note,
     updated: new Date().toISOString(),
     items,
   }, null, 2) + "\n");
 
-async function main() {
-  const res = await fetch(FEED, { headers: { "User-Agent": "WaynesvilleDailyBrief/1.0 (waynesville.news)" }, signal: AbortSignal.timeout(20_000) });
+async function refresh(feed) {
+  const res = await fetch(feed.url, { headers: { "User-Agent": "WaynesvilleDailyBrief/1.0 (waynesville.news)" }, signal: AbortSignal.timeout(20_000) });
   if (!res.ok) throw new Error(`HTTP ${res.status}`);
   const xml = await res.text();
 
@@ -95,17 +111,25 @@ async function main() {
 
   if (items.length === 0) throw new Error("no items in feed window");
 
-  await write(items);
-  console.log(`fb-schools.json: ${items.length} recent district posts`);
+  await write(feed, items);
+  console.log(`${feed.label}.json: ${items.length} ${feed.what}`);
 }
 
-main().catch(async (e) => {
-  console.error("fb-schools refresh failed:", e.message);
-  // Bounded fallback — see scripts/lib/stale-cache.mjs for why.
-  await keepOrExpire({
-    out: OUT,
-    label: "fb-schools",
-    writeEmpty: async (note) => { await write([], note); },
-  });
-  process.exit(0); // don't fail the workflow
-});
+for (const feed of FEEDS) {
+  try {
+    await refresh(feed);
+  } catch (e) {
+    console.error(`${feed.label} refresh failed:`, e.message);
+    // Bounded fallback — see scripts/lib/stale-cache.mjs for why.
+    try {
+      await keepOrExpire({
+        out: feed.out,
+        label: feed.label,
+        writeEmpty: async (note) => { await write(feed, [], note); },
+      });
+    } catch (e2) {
+      console.error(`${feed.label} fallback failed:`, e2.message);
+    }
+  }
+}
+process.exit(0); // don't fail the workflow

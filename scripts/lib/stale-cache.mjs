@@ -29,6 +29,7 @@ export const CEILINGS = {
   sports: 2,            // results and upcoming games move daily
   "prosecutor-press": 3, // "released in the past week"
   "fb-schools": 3,      // recent district posts
+  "fb-caesar-creek": 3, // recent park posts
   "library-events": 7,  // dated, forward-looking
   "shops-events": 7,    // dated, forward-looking
   "caesar-creek-events": 7, // dated, forward-looking
