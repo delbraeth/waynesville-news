@@ -1,18 +1,7 @@
 {
   "_note": "Waynesville Spartans schedule + results (MaxPreps), past 7 days / next 7 days. Scraped directly from each sport's own schedule page (football, volleyball, soccer -- varsity + JV), not the school hub page, which has been observed to silently omit some contests. Scores and matchups reproduced verbatim from MaxPreps' own markup; each links to their game page.",
-  "updated": "2026-10-02T11:59:34.144Z",
+  "updated": "2026-10-03T10:41:13.016Z",
   "results": [
-    {
-      "dateISO": "2026-09-25T19:00:00",
-      "sport": "Football",
-      "level": "Varsity",
-      "opponent": "Dayton Christian",
-      "wayneScore": 42,
-      "opponentScore": 14,
-      "result": "W",
-      "isHome": false,
-      "link": "https://www.maxpreps.com/oh/football/game/dayton-christian-miamisburg-vs-waynesville/9-25-2026/?c=61eea59e-d2ff-4e5a-84f5-a0a0704072e2"
-    },
     {
       "dateISO": "2026-09-26T14:45:00",
       "sport": "Girls Soccer",
@@ -100,20 +89,20 @@
       "result": "T",
       "isHome": false,
       "link": "https://www.maxpreps.com/oh/soccer/match/carlisle-vs-waynesville/9-30-2026/?c=20cad10b-35da-4dc5-a145-390b4b49cb33"
-    }
-  ],
-  "upcoming": [
+    },
     {
       "dateISO": "2026-10-02T19:00:00",
       "sport": "Football",
       "level": "Varsity",
       "opponent": "Carlisle",
-      "wayneScore": null,
-      "opponentScore": null,
-      "result": null,
+      "wayneScore": 13,
+      "opponentScore": 38,
+      "result": "L",
       "isHome": false,
       "link": "https://www.maxpreps.com/oh/football/game/carlisle-vs-waynesville/10-2-2026/?c=f42fd774-0962-4023-a065-4e04050c6b85"
-    },
+    }
+  ],
+  "upcoming": [
     {
       "dateISO": "2026-10-03T10:00:00",
       "sport": "Football",
@@ -333,6 +322,28 @@
       "result": null,
       "isHome": false,
       "link": "https://www.maxpreps.com/oh/soccer/girls/match/dayton-christian-miamisburg-vs-waynesville/10-8-2026/?c=976045a4-cf25-4872-9a14-f2f4afad0539"
+    },
+    {
+      "dateISO": "2026-10-09T19:00:00",
+      "sport": "Football",
+      "level": "Varsity",
+      "opponent": "Madison",
+      "wayneScore": null,
+      "opponentScore": null,
+      "result": null,
+      "isHome": true,
+      "link": "https://www.maxpreps.com/oh/football/game/madison-middletown-vs-waynesville/10-9-2026/?c=077b01be-2f75-46e9-8dba-5dd51aa90d48"
+    },
+    {
+      "dateISO": "2026-10-10T10:00:00",
+      "sport": "Football",
+      "level": "JV",
+      "opponent": "Madison",
+      "wayneScore": null,
+      "opponentScore": null,
+      "result": null,
+      "isHome": false,
+      "link": "https://www.maxpreps.com/oh/football/game/madison-middletown-vs-waynesville/jv/10-10-2026/?c=23075364-db96-476b-8de2-bfbcb70de633"
     }
   ]
 }

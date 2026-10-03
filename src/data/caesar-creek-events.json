@@ -1,40 +1,8 @@
 {
   "_note": "Caesar Creek State Park programs from the ODNR events calendar, next 60 days. Titles, times and meeting points reproduced from ODNR's own listing.",
-  "updated": "2026-10-02T12:01:03.468Z",
+  "updated": "2026-10-03T10:42:41.753Z",
   "source": "https://ohiodnr.gov/go-and-do/plan-a-visit/events-calendar/events-calendar?keyword=Caesar%20Creek",
   "items": [
-    {
-      "title": "Celestial Stories of the Underground Railroad",
-      "dateISO": "2026-10-02T22:00:00.000Z",
-      "dateLabel": "Fri, Oct 2 · 6:00 PM–11:00 PM",
-      "meetAt": "Caesar Creek Pioneer Village",
-      "summary": "Meet at Pioneer Village. Free and Open to the Public. An ODNR America 250 event.",
-      "link": "https://ohiodnr.gov/home/news-and-events/all-events/parks-wc-events/SW-Ohio/stories-caesarcreek-10-2-26"
-    },
-    {
-      "title": "Cemetery Sunset Driving Tour and Celestial Stories of the Underground Railroad Special Event",
-      "dateISO": "2026-10-02T22:00:00.000Z",
-      "dateLabel": "Fri, Oct 2 · 6:00 PM–7:30 PM",
-      "meetAt": "Meet at Pioneer Village.",
-      "summary": "Discover how freedom seekers looked to the stars for hope and direction as we take a closer look at local history. Join us for all, or part of this special ‘America 250 Event’",
-      "link": "https://ohiodnr.gov/home/news-and-events/all-events/parks-wc-events/SW-Ohio/CemeterySunsetDrivingTourandCelestialStoriesoftheUndergroundRailroadSpecialEventCaesarCreek-10-2-26."
-    },
-    {
-      "title": "Stargazing and Storytelling and Celestial Stories of the Underground Railroad Special Event",
-      "dateISO": "2026-10-02T22:00:00.000Z",
-      "dateLabel": "Fri, Oct 2 · 6:00 PM–7:30 PM",
-      "meetAt": "Fifty Springs Group Camping Area",
-      "summary": "Meet in the first parking lot of the Fifty Springs Group Camp Area. Programs are free and open to the public.",
-      "link": "https://ohiodnr.gov/home/news-and-events/all-events/parks-wc-events/SW-Ohio/StargazingandStorytellingandCelestialStoriesoftheUndergroundRailroadSpecialEventCaesarCreek-10-2-26."
-    },
-    {
-      "title": "Lantern Night Hike and Celestial Stories of the Underground Railroad Special Event",
-      "dateISO": "2026-10-02T23:30:00.000Z",
-      "dateLabel": "Fri, Oct 2 · 7:30 PM–8:30 PM",
-      "meetAt": "Meet at the Zion Cemetery in the Fifty Springs Group Camping Area",
-      "summary": "Discover how freedom seekers looked to the stars for hope and direction as we take a closer look at local history. Join us for all, or part of this special ‘America 250 Event’",
-      "link": "https://ohiodnr.gov/home/news-and-events/all-events/parks-wc-events/SW-Ohio/LanternNightHikeandCelestialStoriesoftheUndergroundRailroadSpecialEventCaesarCreek-10-2-26."
-    },
     {
       "title": "Field Trip to the National Underground Railroad Freedom Center",
       "dateISO": "2026-10-03T17:00:00.000Z",
@@ -42,6 +10,14 @@
       "meetAt": "The National Underground Railroad Freedom Center Museum",
       "summary": "Join us for a field trip! Refer to The National Underground Railroad Freedom Center Museum's website for directions and admission fee.",
       "link": "https://ohiodnr.gov/home/news-and-events/all-events/parks-wc-events/SW-Ohio/FieldTriptotheNationalUndergroundRailroadFreedomCenterCaesarCreek-10-3-26."
+    },
+    {
+      "title": "Meet the Crew: World Animal Day",
+      "dateISO": "2026-10-04T17:00:00.000Z",
+      "dateLabel": "Sun, Oct 4 · 1:00 PM–2:00 PM",
+      "meetAt": "Nature Center",
+      "summary": "Meet at the Nature Center. All are welcome.",
+      "link": "https://ohiodnr.gov/home/news-and-events/all-events/parks-wc-events/SW-Ohio/meetthecrew-caesarcreek-10-4-26"
     },
     {
       "title": "Fossil Hunt at the Spillway",
@@ -114,6 +90,14 @@
       "meetAt": "Campground Amphitheater",
       "summary": "Meet at the Campground Amphitheater. All are welcome.",
       "link": "https://ohiodnr.gov/home/news-and-events/all-events/parks-wc-events/SW-Ohio/CampfireandCraftCaesarCreek-10-18-26."
+    },
+    {
+      "title": "Rocks and Relics",
+      "dateISO": "2026-10-18T17:00:00.000Z",
+      "dateLabel": "Sun, Oct 18 · 1:00 PM–3:00 PM",
+      "meetAt": "Nature Center",
+      "summary": "Meet at the Nature Center. All are welcome.",
+      "link": "https://ohiodnr.gov/home/news-and-events/all-events/parks-wc-events/SW-Ohio/RocksandRelicsCaesarCreek-10-18-26"
     },
     {
       "title": "Fall Campout",
