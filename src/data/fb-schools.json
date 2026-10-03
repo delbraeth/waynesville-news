@@ -1,7 +1,14 @@
 {
   "_note": "Recent Wayne Local Schools Facebook posts via rss.app bridge. Title + link + short excerpt; the district's own words. Fail-safe: kept from last run if the bridge is down.",
-  "updated": "2026-10-03T12:32:15.031Z",
+  "updated": "2026-10-03T13:30:39.207Z",
   "items": [
+    {
+      "title": "🔥They were spicing things up in Global Foods class this week! WHS students are learning about spices used in cuisines…",
+      "link": "https://www.facebook.com/waynelocalschools/posts/pfbid0PQaF8ARhHxPgLZQMTUQLRUETZbAVfeH5y3ahbBjAtcW219p1iDmJWHnFSwjsFx57l",
+      "date": "Sat, 03 Oct 2026 11:56:05 GMT",
+      "dateLabel": "Sat, Oct 3",
+      "excerpt": "around the world, and this week they put that knowledge to the test by making Chicken Tikka Masala! A few lucky teachers got to be the official taste-testers and gave the Indian-inspired dish a big thumbs-up. Safe to say, this lesson was a hit from the first bite!"
+    },
     {
       "title": "💗💗💗The Waynesville community is coming together to celebrate, support, and surround one of our own, Holly Eckhardt Co...",
       "link": "https://www.facebook.com/waynelocalschools/posts/pfbid0XZnFP6445X2de97GG5xSdMENBic4o348tSPAHnGyFBrbCAJZHumi8kYpQXpDJEmkl",
@@ -50,13 +57,6 @@
       "date": "Wed, 30 Sep 2026 17:42:21 GMT",
       "dateLabel": "Wed, Sep 30",
       "excerpt": "American flags! The flags are already proudly on display, one at Waynesville Elementary and the other at our Performing Arts Center. Be sure to check them out when you're on campus next! 🇺🇸We appreciate Post 615 for its generosity and continued support of our district!🧡"
-    },
-    {
-      "title": "Waynesville Elementary's Goodies with Grands event brought our preschoolers and their grandparents or special guests…",
-      "link": "https://www.facebook.com/waynelocalschools/posts/pfbid035jXJa4r7iPV3TY6Mi33DXpxoJUf1j1d9Y4rqzatvY1fuy8RG8y9wF5Vq3SnQRwTnl",
-      "date": "Mon, 28 Sep 2026 17:15:02 GMT",
-      "dateLabel": "Mon, Sep 28",
-      "excerpt": "together to celebrate learning, make memories, and kick off the school year with connection.🧡🖤 Because at Wayne Local Schools, belonging includes our families, too! #YouBelong #WeAreWayneLocal"
     }
   ]
 }

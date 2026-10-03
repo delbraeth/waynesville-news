@@ -60,6 +60,8 @@ let fbSchools = [];
 try { fbSchools = (await readJSON("src/data/fb-schools.json")).items ?? []; } catch { /* optional */ }
 let fbCaesarCreek = [];
 try { fbCaesarCreek = (await readJSON("src/data/fb-caesar-creek.json")).items ?? []; } catch { /* optional */ }
+let fbWcpdFriends = [];
+try { fbWcpdFriends = (await readJSON("src/data/fb-wcpd-friends.json")).items ?? []; } catch { /* optional */ }
 
 const longDate = now.toLocaleDateString("en-US", {
   weekday: "long", month: "long", day: "numeric", year: "numeric", timeZone: "America/New_York",
@@ -231,6 +233,11 @@ const fbCaesarBlock = fbCaesarCreek.length
     fbCaesarCreek.slice(0, 4).map((p) => `- **${p.dateLabel}** — ${p.title} ${p.excerpt} (${link("post", p.link)})`).join("\n")
   : null;
 
+const fbWcpdBlock = fbWcpdFriends.length
+  ? "**From Friends of Warren County Park District on Facebook**\n" +
+    fbWcpdFriends.slice(0, 3).map((p) => `- **${p.dateLabel}** — ${p.title} ${p.excerpt} (${link("post", p.link)})`).join("\n")
+  : null;
+
 const shopsBlock = shopsEvents.length
   ? shopsEvents.map((e) => `- **${e.dateLabel}** — ${link(e.title, e.link)}`).join("\n")
   : null;
@@ -372,7 +379,7 @@ ${villageMinutesBlock ? `\n${villageMinutesBlock}\n` : ""}${boardRecapBlock ? `\
 TODO — new businesses, the antiques district. Check:
 ${listSrc("Around Town")}
 <!-- Editor note (stripped before publication): occasionally write a free \`## Business spotlight\` section — a short editorial profile of a local business. It's coverage, not sponsorship: never tied to the paid Supporters list, and labeled as a spotlight. -->
-${shopsBlock ? `\n**Merchant Association events** (waynesvilleshops.com)\n${shopsBlock}\n` : ""}
+${shopsBlock ? `\n**Merchant Association events** (waynesvilleshops.com)\n${shopsBlock}\n` : ""}${fbWcpdBlock ? `\n${fbWcpdBlock}\n` : ""}
 
 ${caesarBlock || fbCaesarBlock ? `\n## Caesar Creek State Park\n${caesarBlock ? `Naturalist programs at the park, about five miles east of the village, over the next ${CAESAR_WINDOW_DAYS} days. Times and meeting points are ODNR's own. ` : ""}Check:\n${listSrc("Caesar Creek")}\n${caesarBlock ? `\n${caesarBlock}\n` : ""}${fbCaesarBlock ? `\n${fbCaesarBlock}\n` : ""}` : ""}
 ## Public safety

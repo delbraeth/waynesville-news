@@ -1,7 +1,8 @@
 // Pull recent Facebook posts via an RSS bridge (rss.app), since Facebook itself
 // is robots-blocked and cannot be fetched directly. One data file per page:
 // Wayne Local Schools -> src/data/fb-schools.json, Caesar Creek State Park ->
-// src/data/fb-caesar-creek.json. Published as a short quoted post title + link
+// src/data/fb-caesar-creek.json, Friends of Warren County Park District ->
+// src/data/fb-wcpd-friends.json. Published as a short quoted post title + link
 // + a plain-text excerpt; the page's own words, linked back to the post. Never
 // invents anything.
 //
@@ -30,6 +31,16 @@ const FEEDS = [
     out: new URL("../src/data/fb-caesar-creek.json", import.meta.url),
     what: "recent Caesar Creek State Park posts",
     note: "Recent Caesar Creek State Park Facebook posts via rss.app bridge. Title + link + short excerpt; the park's own words. Fail-safe: kept from last run if the bridge is down.",
+  },
+  {
+    // The Park District's own events page (Constant Contact) sits behind a
+    // Cloudflare bot challenge, so its volunteer Friends group's page is the
+    // reachable stand-in. It is NOT the Park District itself — attribute it so.
+    label: "fb-wcpd-friends", // facebook.com/FriendsWCPD
+    url: "https://rss.app/feeds/cTEtys64i58eRDTL.xml",
+    out: new URL("../src/data/fb-wcpd-friends.json", import.meta.url),
+    what: "recent Friends of Warren County Park District posts",
+    note: "Recent Friends of Warren County Park District Facebook posts via rss.app bridge. Title + link + short excerpt; the group's own words. Fail-safe: kept from last run if the bridge is down.",
   },
 ];
 const LOOKBACK_DAYS = 10;
@@ -94,6 +105,8 @@ async function refresh(feed) {
     return { title, link: pick("link"), date: pick("pubDate"), excerpt };
   })
     .filter((i) => i.title && i.link)
+    // Photo-only posts arrive titled "<Page name> Posted" with no text.
+    .filter((i) => i.excerpt || !/\bPosted$/.test(i.title))
     .filter((i) => {
       const t = Date.parse(i.date);
       return !isNaN(t) && t >= cutoff; // drop undated or stale posts
