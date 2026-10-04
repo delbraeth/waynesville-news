@@ -1,7 +1,21 @@
 {
   "_note": "Recent Wayne Local Schools Facebook posts via rss.app bridge. Title + link + short excerpt; the district's own words. Fail-safe: kept from last run if the bridge is down.",
-  "updated": "2026-10-03T13:30:39.207Z",
+  "updated": "2026-10-04T10:41:18.660Z",
   "items": [
+    {
+      "title": "📝What better way to learn about history than from our community members who lived it? WES fifth graders in Mrs. Holtz’s…",
+      "link": "https://www.facebook.com/waynelocalschools/posts/pfbid024JxtgieNB7kUJWYh8kiWGGvgJQ6SnUYcdvfbdBpbuDe6KAzEMAv56uYFPySBXnRjl",
+      "date": "Sat, 03 Oct 2026 20:30:01 GMT",
+      "dateLabel": "Sat, Oct 3",
+      "excerpt": "and Mrs. Marcum’s Social Studies classes visited Ohio Living Quaker Heights to interview residents for a timeline project. 🧡Students asked about the toys they played with, the sports they enjoyed, the technology they used growing up, and major world events they remember. The conversations were…"
+    },
+    {
+      "title": "This month’s regular meeting of the Wayne Local Schools Board of Education is on Monday, October 5, at 6:00 p.m. in the…",
+      "link": "https://www.facebook.com/waynelocalschools/posts/pfbid032ia7N3EsLqiKJCQT8DHfAD6EckXpXbooW4sKXuPhpuGyVx4Hw3RdBfY6ZjA3SYCnl",
+      "date": "Sat, 03 Oct 2026 17:15:02 GMT",
+      "dateLabel": "Sat, Oct 3",
+      "excerpt": "Performing Arts Center, second floor, at 625 Dayton Rd. Attending a Board meeting is a valuable way to learn more about the planning, decisions, and discussions that help guide our schools and community. Join us!"
+    },
     {
       "title": "🔥They were spicing things up in Global Foods class this week! WHS students are learning about spices used in cuisines…",
       "link": "https://www.facebook.com/waynelocalschools/posts/pfbid0PQaF8ARhHxPgLZQMTUQLRUETZbAVfeH5y3ahbBjAtcW219p1iDmJWHnFSwjsFx57l",
@@ -43,20 +57,6 @@
       "date": "Thu, 01 Oct 2026 18:01:38 GMT",
       "dateLabel": "Thu, Oct 1",
       "excerpt": "Fun Run fun today at WES! Be sure to check out the last photo, too!🐷😊 It’s been a FUN morning, we can’t wait for this afternoon 🖤🧡🐷"
-    },
-    {
-      "title": "🍎 Fall fun is in full swing at WES! Mrs. Bowersox's young fives and kindergarten students just celebrated Apple Day…",
-      "link": "https://www.facebook.com/waynelocalschools/posts/pfbid036BBtQAVMZZ3UKQeEmB69S19Lu2NfXXsEjP7wytaEec1wT2fRpAuFMM5mCY5u8iACl",
-      "date": "Wed, 30 Sep 2026 19:56:04 GMT",
-      "dateLabel": "Wed, Sep 30",
-      "excerpt": "with hands-on learning, including tasting different apple products, using apples to measure and compare items, and estimating how many apples tall they are. Great work, students! Your creativity is off the charts!⭐"
-    },
-    {
-      "title": "Big shout-out to the Newland-Trimble American Legion Post 615 for making a trip to our campus to donate not one but two…",
-      "link": "https://www.facebook.com/waynelocalschools/posts/pfbid02AbqJttezW3PxPDxYek5CsC4QFgy5Q15Hqv8fs55f9esPVQ47Hh6t5GFrjWTFJN84l",
-      "date": "Wed, 30 Sep 2026 17:42:21 GMT",
-      "dateLabel": "Wed, Sep 30",
-      "excerpt": "American flags! The flags are already proudly on display, one at Waynesville Elementary and the other at our Performing Arts Center. Be sure to check them out when you're on campus next! 🇺🇸We appreciate Post 615 for its generosity and continued support of our district!🧡"
     }
   ]
 }
