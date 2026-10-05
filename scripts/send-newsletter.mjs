@@ -11,6 +11,7 @@
 import { readFile, writeFile } from "node:fs/promises";
 import { existsSync } from "node:fs";
 import { briefProblems } from "./lib/brief-gate.mjs";
+import { formatForEmail } from "./lib/email-format.mjs";
 
 const root = new URL("..", import.meta.url);
 const SITE = "https://waynesville.news";
@@ -75,12 +76,16 @@ async function main() {
   }
 
   // Prepare the Markdown for email: strip editor comments, make site-relative
-  // links absolute so they work in an inbox, add a web-version footer.
+  // links absolute so they work in an inbox, trim to the email edition (see
+  // lib/email-format.mjs), add a web-version footer.
   const webUrl = `${SITE}/briefs/${iso}/`;
-  const md = bodyRaw
-    .replace(/<!--[\s\S]*?-->/g, "")
-    .replace(/\]\(\//g, `](${SITE}/`)
-    .trim();
+  const md = formatForEmail(
+    bodyRaw
+      .replace(/<!--[\s\S]*?-->/g, "")
+      .replace(/\]\(\//g, `](${SITE}/`)
+      .trim(),
+    webUrl,
+  );
   const emailBody = [
     dek ? `*${dek}*\n` : "",
     md,
