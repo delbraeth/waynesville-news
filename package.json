@@ -23,6 +23,7 @@
     "refresh:roads": "node scripts/fetch-roads.mjs",
     "refresh:notices": "node scripts/fetch-notices.mjs",
     "refresh:museum": "node scripts/fetch-museum.mjs",
+    "refresh:permits": "node scripts/fetch-permits.mjs",
     "refresh:fb": "node scripts/fetch-fb-schools.mjs",
     "newsletter:send": "node scripts/send-newsletter.mjs",
     "draft": "node scripts/draft-brief.mjs",
