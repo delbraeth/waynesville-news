@@ -1,0 +1,112 @@
+{
+  "_note": "Warren County Board of Elections. Issue titles verbatim from the board's issue list; onWaynesvilleBallot is a keyword match (state/county/Wayne), not a precinct lookup. Early-voting hours transcribed from the board's Public Election Notice PDF.",
+  "updated": "2026-10-05T03:00:10.627Z",
+  "election": {
+    "dateISO": "2026-11-03",
+    "label": "November 3, 2026 General Election",
+    "noticeUrl": "https://vote.warrencountyohio.gov/doc/Public_Election_Notice.pdf",
+    "earlyVotingLocation": "Warren County Board of Elections, 520 Justice Dr, Lebanon",
+    "registrationDeadline": {
+      "dateISO": "2026-10-05",
+      "hours": "8:00 AM–9:00 PM"
+    },
+    "absenteeRequestDeadline": "2026-10-27",
+    "pollsHours": "6:30 AM–7:30 PM",
+    "earlyVoting": [
+      [
+        "2026-10-06",
+        "2026-10-09",
+        "8:00 AM–5:00 PM"
+      ],
+      [
+        "2026-10-12",
+        "2026-10-16",
+        "8:00 AM–5:00 PM"
+      ],
+      [
+        "2026-10-19",
+        "2026-10-23",
+        "8:00 AM–5:00 PM"
+      ],
+      [
+        "2026-10-24",
+        "2026-10-24",
+        "8:00 AM–4:00 PM"
+      ],
+      [
+        "2026-10-26",
+        "2026-10-26",
+        "7:30 AM–7:30 PM"
+      ],
+      [
+        "2026-10-27",
+        "2026-10-27",
+        "7:30 AM–8:30 PM"
+      ],
+      [
+        "2026-10-28",
+        "2026-10-30",
+        "7:30 AM–7:30 PM"
+      ],
+      [
+        "2026-10-31",
+        "2026-10-31",
+        "8:00 AM–4:00 PM"
+      ],
+      [
+        "2026-11-01",
+        "2026-11-01",
+        "1:00 PM–5:00 PM"
+      ]
+    ]
+  },
+  "issues": [
+    {
+      "number": "03",
+      "title": "Constitutional Amendment Requiring Photo Id for Voting with Pros and Cons",
+      "link": "https://vote.warrencountyohio.gov/doc/CandIssues/Elections/20261103/Issues/03_Constitutional_Amendment_Requiring_Photo_Id_for_Voting_with_Pros_and_Cons.pdf",
+      "onWaynesvilleBallot": true
+    },
+    {
+      "number": "04",
+      "title": "Franklin Schools 1.25 percent Income Tax 5 yrs",
+      "link": "https://vote.warrencountyohio.gov/doc/CandIssues/Elections/20261103/Issues/04_Franklin_Schools_1.25_percent_Income_Tax_5_yrs.pdf",
+      "onWaynesvilleBallot": false
+    },
+    {
+      "number": "05",
+      "title": "Lebanon Schools Income Tax 1 percent 10 yrs",
+      "link": "https://vote.warrencountyohio.gov/doc/CandIssues/Elections/20261103/Issues/05_Lebanon_Schools_Income_Tax_1_percent_10_yrs.pdf",
+      "onWaynesvilleBallot": false
+    },
+    {
+      "number": "06",
+      "title": "Mental Health Recovery Board Ren 1 Mil 5 yrs",
+      "link": "https://vote.warrencountyohio.gov/doc/CandIssues/Elections/20261103/Issues/06_Mental_Health_Recovery_Board_Ren_1_Mil_5_yrs.pdf",
+      "onWaynesvilleBallot": true
+    },
+    {
+      "number": "07",
+      "title": "Warren County Senior Services Ren 1.21 mills 5 Yrs",
+      "link": "https://vote.warrencountyohio.gov/doc/CandIssues/Elections/20261103/Issues/07_Warren_County_Senior_Services_Ren_1.21_mills_5_Yrs.pdf",
+      "onWaynesvilleBallot": true
+    },
+    {
+      "number": "08",
+      "title": "Franklin Twp Senior Ren .25 mil 5 yrs",
+      "link": "https://vote.warrencountyohio.gov/doc/CandIssues/Elections/20261103/Issues/08_Franklin_Twp_Senior_Ren_.25_mil_5_yrs.pdf",
+      "onWaynesvilleBallot": false
+    },
+    {
+      "number": "09",
+      "title": "Turtlecreek Twp Fire Add 4.5 mills CPT",
+      "link": "https://vote.warrencountyohio.gov/doc/CandIssues/Elections/20261103/Issues/09_Turtlecreek_Twp_Fire_Add_4.5_mills_CPT.pdf",
+      "onWaynesvilleBallot": false
+    }
+  ],
+  "resultsUrl": "https://liveresults.boe.ohio.gov/ENR/warrenohenr/18/en/R_Index_18.html",
+  "sources": {
+    "issues": "https://vote.warrencountyohio.gov/CandIssues/UpcomingIssues/Index",
+    "candidates": "https://vote.warrencountyohio.gov/CandIssues/UpcomingCandidates/Index"
+  }
+}

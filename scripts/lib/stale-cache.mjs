@@ -36,6 +36,10 @@ export const CEILINGS = {
   "caesar-creek-events": 7, // dated, forward-looking
   "township-agendas": 10, // agendas post irregularly
   "village-minutes": 21,  // historical record; slow-moving by design
+  roads: 2,
+  notices: 3,           // water-main breaks and boil advisories are urgent
+  "museum-events": 7,   // dated, forward-looking             // lane restrictions change daily
+  elections: 7,         // ballot issues are fixed once certified; hours are static
 };
 
 /**
