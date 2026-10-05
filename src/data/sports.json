@@ -1,6 +1,6 @@
 {
   "_note": "Waynesville Spartans schedule + results (MaxPreps), past 7 days / next 7 days. Scraped directly from each sport's own schedule page (football, volleyball, soccer -- varsity + JV), not the school hub page, which has been observed to silently omit some contests. Scores and matchups reproduced verbatim from MaxPreps' own markup; each links to their game page.",
-  "updated": "2026-10-04T10:41:24.637Z",
+  "updated": "2026-10-05T10:40:50.630Z",
   "results": [
     {
       "dateISO": "2026-09-28T17:30:00",
@@ -80,6 +80,17 @@
       "link": "https://www.maxpreps.com/oh/soccer/match/carlisle-vs-waynesville/9-30-2026/?c=20cad10b-35da-4dc5-a145-390b4b49cb33"
     },
     {
+      "dateISO": "2026-10-01T18:45:00",
+      "sport": "Volleyball",
+      "level": "Varsity",
+      "opponent": "Dayton Christian",
+      "wayneScore": 0,
+      "opponentScore": 3,
+      "result": "L",
+      "isHome": false,
+      "link": "https://www.maxpreps.com/oh/volleyball/match/dayton-christian-miamisburg-vs-waynesville/10-1-2026/?c=f0a5532d-34da-460b-87c3-7bd3a4045b22"
+    },
+    {
       "dateISO": "2026-10-02T19:00:00",
       "sport": "Football",
       "level": "Varsity",
@@ -100,6 +111,17 @@
       "result": "L",
       "isHome": true,
       "link": "https://www.maxpreps.com/oh/volleyball/match/batavia-vs-waynesville/jv/10-3-2026/?c=50e3c3b5-6032-4e9c-94e7-097bf00299f2"
+    },
+    {
+      "dateISO": "2026-10-03T11:00:00",
+      "sport": "Volleyball",
+      "level": "Varsity",
+      "opponent": "Batavia",
+      "wayneScore": 3,
+      "opponentScore": 1,
+      "result": "W",
+      "isHome": true,
+      "link": "https://www.maxpreps.com/oh/volleyball/match/batavia-vs-waynesville/10-3-2026/?c=9d53a516-5be3-49d7-86a1-e5cd0f7ab1e3"
     },
     {
       "dateISO": "2026-10-03T13:00:00",

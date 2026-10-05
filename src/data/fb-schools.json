@@ -1,7 +1,14 @@
 {
   "_note": "Recent Wayne Local Schools Facebook posts via rss.app bridge. Title + link + short excerpt; the district's own words. Fail-safe: kept from last run if the bridge is down.",
-  "updated": "2026-10-04T10:41:18.660Z",
+  "updated": "2026-10-05T10:40:45.413Z",
   "items": [
+    {
+      "title": "🎤The WHS & WMS Choirs are taking the stage for their fall concert on Wednesday, October 7, at 7 p.m. in the Performing…",
+      "link": "https://www.facebook.com/waynelocalschools/posts/pfbid027B5DNDEg4mVf4UFvmU8z5TauZgpgbwCoYbthwG8JKevDGWPP56CnWb9t3VxHbhK1l",
+      "date": "Sun, 04 Oct 2026 17:32:04 GMT",
+      "dateLabel": "Sun, Oct 4",
+      "excerpt": "Arts Center. Come enjoy an evening of music and support our talented Spartan singers as they share what they’ve been working on this fall. We hope to see you there!🎶"
+    },
     {
       "title": "📝What better way to learn about history than from our community members who lived it? WES fifth graders in Mrs. Holtz’s…",
       "link": "https://www.facebook.com/waynelocalschools/posts/pfbid024JxtgieNB7kUJWYh8kiWGGvgJQ6SnUYcdvfbdBpbuDe6KAzEMAv56uYFPySBXnRjl",
@@ -50,13 +57,6 @@
       "date": "Thu, 01 Oct 2026 23:36:20 GMT",
       "dateLabel": "Thu, Oct 1",
       "excerpt": "forecast tomorrow the Fun Run date for grades 1-5 has been moved to October 8. 🎉🐷 WHAT. A. DAY! 🐷🎉 Our Preschool & Kindergarten Fun Run was absolutely AMAZING today! The smiles, energy, cheering, and excitement made today one to remember! 🧡🖤 A HUGE THANK YOU to every teacher, parent,…"
-    },
-    {
-      "title": "Fun Run fun today at WES! Be sure to check out the last photo, too!🐷😊It’s been a FUN morning, we can’t wait for this a...",
-      "link": "https://www.facebook.com/waynelocalschools/posts/pfbid02vR3Wp1Dta8VCC3h9BLuPRRughmKog46HbTZ6XAMHDBRQNv9quY6LhJsQB35PR5Jal",
-      "date": "Thu, 01 Oct 2026 18:01:38 GMT",
-      "dateLabel": "Thu, Oct 1",
-      "excerpt": "Fun Run fun today at WES! Be sure to check out the last photo, too!🐷😊 It’s been a FUN morning, we can’t wait for this afternoon 🖤🧡🐷"
     }
   ]
 }
