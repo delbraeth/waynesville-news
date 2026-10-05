@@ -28,6 +28,7 @@ for (const f of files) {
   }
   const count = Array.isArray(d?.items) ? d.items.length
     : Array.isArray(d?.results) ? `${d.results.length}+${d.upcoming?.length ?? 0}`
+    : Array.isArray(d?.issues) ? d.issues.length
     : d?.item ? 1 : "-";
   // lastGoodUpdated survives the expiry rewrite; `updated` does not.
   const u = d?.lastGoodUpdated ? new Date(d.lastGoodUpdated) : d?.updated ? new Date(d.updated) : null;

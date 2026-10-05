@@ -1,0 +1,42 @@
+{
+  "_note": "State-route work within 8 miles of Waynesville (ODOT OHGO; Restricted/Closed only, ODOT's own descriptions) plus Warren County Engineer closure releases starting within 21 days back / 14 ahead (countywide; title and start date only).",
+  "updated": "2026-10-05T03:01:46.272Z",
+  "items": [
+    {
+      "source": "ohgo",
+      "route": "S.R. 73 Resurfacing and Turn Lane Addtiion",
+      "status": "Restricted",
+      "category": "Road Work - Planned",
+      "startISO": "2026-05-04",
+      "endISO": "2026-11-30",
+      "description": "Resurfacing S.R. 73, between Red Lion- Five Points Road and Harveysburg Road, as well as the installation of a left-turn lane on S.R. 73 at Old S.R. 73 near Waynesville. Traffic will be maintained in one lane in either direction with the use of flaggers and/or other traffic…",
+      "miles": 0.6
+    },
+    {
+      "source": "ohgo",
+      "route": "WAR-73-5.88",
+      "status": "Restricted",
+      "category": "Road Work - Planned",
+      "startISO": "2026-07-20",
+      "endISO": "2026-11-01",
+      "description": "Resurfacing on S.R. 73, between its junction with S.R. 741 in the city of Springboro to Red Lion Five Points Road. Traffic will be maintained in a minimum of one lane in either direction with the use of flaggers and traffic control devices.",
+      "miles": 7.5
+    },
+    {
+      "source": "engineer",
+      "title": "Innovation Way Closure Cyclocross Bike Race",
+      "startISO": "2026-10-16",
+      "link": "https://engineer.warrencountyohio.gov/doc/Information/NewsReleases/2026/20261016_Innovation_Way_Closure_Cyclocross_Bike_Race.pdf"
+    },
+    {
+      "source": "engineer",
+      "title": "Morrow-Woodville Rd Closure",
+      "startISO": "2026-09-14",
+      "link": "https://engineer.warrencountyohio.gov/doc/Information/NewsReleases/2026/20260914_Morrow-Woodville_Rd_Closure.pdf"
+    }
+  ],
+  "sources": {
+    "ohgo": "api.ohgo.com (keyless)",
+    "engineer": "https://engineer.warrencountyohio.gov/Information/NewsReleases/Index"
+  }
+}

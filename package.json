@@ -19,6 +19,8 @@
     "refresh:shops": "node scripts/fetch-shops-events.mjs",
     "refresh:caesar-creek": "node scripts/fetch-caesar-creek.mjs",
     "refresh:village-minutes": "node scripts/fetch-village-minutes.mjs",
+    "refresh:elections": "node scripts/fetch-elections.mjs",
+    "refresh:roads": "node scripts/fetch-roads.mjs",
     "refresh:fb": "node scripts/fetch-fb-schools.mjs",
     "newsletter:send": "node scripts/send-newsletter.mjs",
     "draft": "node scripts/draft-brief.mjs",

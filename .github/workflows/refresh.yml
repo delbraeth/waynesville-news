@@ -62,6 +62,10 @@ jobs:
         run: npm run refresh:shops || echo "shops events refresh skipped/failed"
       - name: Pull Village Council minutes (OCR)
         run: npm run refresh:village-minutes || echo "village minutes refresh skipped/failed"
+      - name: Pull Board of Elections ballot issues
+        run: npm run refresh:elections || echo "elections refresh skipped/failed"
+      - name: Pull road work and closures
+        run: npm run refresh:roads || echo "roads refresh skipped/failed"
       - name: Report source freshness
         run: npm run check:staleness || true
       - name: Commit if changed

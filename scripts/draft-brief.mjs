@@ -56,6 +56,10 @@ let villageMinutes = null;
 try { villageMinutes = (await readJSON("src/data/village-minutes.json")).item ?? null; } catch { /* optional */ }
 let boardRecap = null;
 try { boardRecap = (await readJSON("src/data/board-recap.json")).item ?? null; } catch { /* optional */ }
+let roads = [];
+try { roads = (await readJSON("src/data/roads.json")).items ?? []; } catch { /* optional */ }
+let elections = null;
+try { elections = await readJSON("src/data/elections.json"); } catch { /* optional */ }
 let fbSchools = [];
 try { fbSchools = (await readJSON("src/data/fb-schools.json")).items ?? []; } catch { /* optional */ }
 let fbCaesarCreek = [];
@@ -166,6 +170,20 @@ const alertsSafety = Array.isArray(alerts)
       : "No NWS weather alerts are in effect this morning.")
   : "NWS alert status could not be checked this morning.";
 
+// Road work: ODOT's own text for state routes near the village, and the
+// county engineer's closure-release titles (countywide) with their PDFs.
+const fmtShort = (d) => new Date(`${d}T12:00:00Z`).toLocaleDateString("en-US", { month: "short", day: "numeric", timeZone: "UTC" });
+const roadsOhgo = roads.filter((r) => r.source === "ohgo");
+const roadsCounty = roads.filter((r) => r.source === "engineer");
+const roadsBlock = roads.length
+  ? [
+      roadsOhgo.length ? `**Road work near Waynesville** (ODOT, within about 8 miles):\n` +
+        roadsOhgo.map((r) => `- **${r.route}** — ${r.status === "Closed" ? "closed" : "lane restrictions"}${r.endISO ? ` through ${fmtShort(r.endISO)}` : ""}. ${r.description}`).join("\n") : "",
+      roadsCounty.length ? `**County road closures** (Warren County Engineer, countywide):\n` +
+        roadsCounty.map((r) => `- ${r.startISO > iso ? "Starting" : "Began"} ${fmtShort(r.startISO)}: ${link(r.title, r.link)}${r.startISO > iso ? "" : " (see release for duration)"}`).join("\n") : "",
+    ].filter(Boolean).join("\n\n") + `\n\nSource: ${link("OHGO", "https://www.ohgo.com/")} · ${link("County Engineer releases", "https://engineer.warrencountyohio.gov/Information/NewsReleases/Index")}`
+  : null;
+
 const safetyBlock = prosecutorItems.length
   ? `From the Warren County Prosecutor's Office, released in the past week:\n` +
     prosecutorItems.map((p) => `- **${p.dateLabel}** — ${p.title} (${link("release", p.link)})`).join("\n") +
@@ -259,6 +277,48 @@ const caesarBlock = caesarSoon.length
       return `- **${e.dateLabel}** — ${link(e.title, e.link)}${where ? ` (${where})` : ""}`;
     }).join("\n")
   : null;
+
+// Election block: runs from the registration deadline through three days after
+// election day. Hours and issues are the Board of Elections' own; candidate
+// lists and results are linked (the state hosts them and blocks scraping).
+const electionBlock = (() => {
+  const el = elections?.election;
+  if (!el?.dateISO) return null;
+  const dayMs = 86400000;
+  const daysTo = Math.round((Date.parse(el.dateISO) - Date.parse(iso)) / dayMs);
+  if (daysTo > 45 || daysTo < -3) return null;
+  const fmt = (d) => new Date(`${d}T12:00:00Z`).toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric", timeZone: "UTC" });
+  const lines = [];
+  if (daysTo < 0) {
+    lines.push(`**${el.label}** — unofficial results: ${elections.resultsUrl ? link("Warren County results", elections.resultsUrl) : "check the Board of Elections site"}.`);
+    return lines.join("\n");
+  }
+  if (daysTo === 0) {
+    lines.push(`**Election Day.** Polls are open ${el.pollsHours}. Results after polls close: ${elections.resultsUrl ? link("Warren County results", elections.resultsUrl) : link("Board of Elections", "https://vote.warrencountyohio.gov/")}.`);
+  } else {
+    const head = `**${el.label}** — ${daysTo} day${daysTo === 1 ? "" : "s"} away.`;
+    const today = el.earlyVoting.find(([a, b]) => iso >= a && iso <= b);
+    const next = el.earlyVoting.find(([a]) => a > iso);
+    let ev = "";
+    if (today) ev = ` Early voting is open today, ${today[2]}, at the ${el.earlyVotingLocation}.`;
+    else if (next) ev = ` Early voting ${el.earlyVoting[0][0] > iso ? "begins" : "resumes"} ${fmt(next[0])} (${next[2]}) at the ${el.earlyVotingLocation}.`;
+    else ev = ` Early voting has ended; polls open ${el.pollsHours} on ${fmt(el.dateISO)}.`;
+    const reg = el.registrationDeadline?.dateISO === iso ? ` Today is the last day to register or update your address (${el.registrationDeadline.hours}).` : "";
+    const abs = el.absenteeRequestDeadline && iso <= el.absenteeRequestDeadline && daysTo <= 14
+      ? ` The last day to request an absentee ballot is ${fmt(el.absenteeRequestDeadline)}.` : "";
+    lines.push(head + reg + ev + abs + ` ${link("Full schedule", el.noticeUrl)}.`);
+  }
+  const ours = (elections.issues ?? []).filter((i) => i.onWaynesvilleBallot);
+  const others = (elections.issues ?? []).length - ours.length;
+  if (ours.length) {
+    // Titles are the board's file labels; the leading number is its file order,
+    // not necessarily the issue number printed on the ballot, so it is dropped.
+    lines.push(`Statewide and countywide issues on the ballot, as labeled on the Board of Elections' issue list:`);
+    for (const i of ours) lines.push(`- ${i.title} (${link("ballot language", i.link)})`);
+  }
+  if (others > 0) lines.push(`${others} other local issue${others === 1 ? "" : "s"} appear only on ballots elsewhere in the county. ${link("All issues", elections.sources?.issues ?? "https://vote.warrencountyohio.gov/CandIssues/UpcomingIssues/Index")} · ${link("candidates", elections.sources?.candidates ?? "https://vote.warrencountyohio.gov/CandIssues/UpcomingCandidates/Index")}`);
+  return lines.join("\n");
+})();
 
 const villageMinutesBlock = villageMinutes?.meetingDateLabel
   ? [
@@ -373,7 +433,7 @@ Next up: **${meeting.body}**, ${meeting.whenLabel} — [agenda](${meeting.source
 Also next up: **${townshipMeeting.body}**, ${townshipMeeting.whenLabel}, ${townshipMeeting.location}${latestAgenda ? ` — ${link(`latest posted agenda: ${latestAgenda.title}, ${latestAgenda.dateLabel}`, latestAgenda.link)}` : ` — [agendas](${townshipMeeting.source})`}.
 TODO — village council & county items, each linked to the agenda/minutes. Check:
 ${listSrc("Local Government")}
-${villageMinutesBlock ? `\n${villageMinutesBlock}\n` : ""}${boardRecapBlock ? `\n${boardRecapBlock}\n` : ""}
+${electionBlock ? `\n${electionBlock}\n` : ""}${villageMinutesBlock ? `\n${villageMinutesBlock}\n` : ""}${boardRecapBlock ? `\n${boardRecapBlock}\n` : ""}
 
 ## Around town
 TODO — new businesses, the antiques district. Check:
@@ -385,7 +445,7 @@ ${caesarBlock || fbCaesarBlock ? `\n## Caesar Creek State Park\n${caesarBlock ? 
 ## Public safety
 ${safetyBlock}
 ${listSrc("Public Safety")}
-
+${roadsBlock ? `\n${roadsBlock}\n` : ""}
 ## This week's events
 ${eventsBlock}
 
