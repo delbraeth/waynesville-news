@@ -1,0 +1,127 @@
+{
+  "_note": "Museum at the Friends Home bookable sessions in the next 45 days, from its Wix Bookings calendar. Names and times are the museum's own; sold-out sessions are kept and flagged.",
+  "updated": "2026-10-05T03:04:01.320Z",
+  "items": [
+    {
+      "title": "Historical Haunts - Downtown Waynesville",
+      "startISO": "2026-10-15T19:00:00.000-04:00",
+      "endISO": "2026-10-15T20:30:00.000-04:00",
+      "dateLabel": "Thu, Oct 15 · 7:00 PM",
+      "location": "Meet at the Gazebo across from the Hammel House 121 S Main St Waynesville, OH",
+      "soldOut": false,
+      "openSpots": 16,
+      "totalSpots": 30,
+      "link": "https://www.friendshomemuseum.org/service-page/historical-haunts-downtown-waynesville-1"
+    },
+    {
+      "title": "Historical Haunts - Downtown Waynesville",
+      "startISO": "2026-10-16T19:00:00.000-04:00",
+      "endISO": "2026-10-16T20:30:00.000-04:00",
+      "dateLabel": "Fri, Oct 16 · 7:00 PM",
+      "location": "Meet at the Gazebo across from the Hammel House 121 S Main St Waynesville, OH",
+      "soldOut": false,
+      "openSpots": 20,
+      "totalSpots": 30,
+      "link": "https://www.friendshomemuseum.org/service-page/historical-haunts-downtown-waynesville-1"
+    },
+    {
+      "title": "Ghost & Goblet Dinner/Tour",
+      "startISO": "2026-10-17T18:00:00.000-04:00",
+      "endISO": "2026-10-17T20:30:00.000-04:00",
+      "dateLabel": "Sat, Oct 17 · 6:00 PM",
+      "location": "260 Chapman St, Waynesville, OH, USA",
+      "soldOut": true,
+      "openSpots": 0,
+      "totalSpots": 32,
+      "link": "https://www.friendshomemuseum.org/service-page/ghost-goblet-dinner-tour"
+    },
+    {
+      "title": "Historical Haunts - Downtown Waynesville",
+      "startISO": "2026-10-17T19:00:00.000-04:00",
+      "endISO": "2026-10-17T20:30:00.000-04:00",
+      "dateLabel": "Sat, Oct 17 · 7:00 PM",
+      "location": "Meet at the Gazebo across from the Hammel House 121 S Main St Waynesville, OH",
+      "soldOut": false,
+      "openSpots": 12,
+      "totalSpots": 30,
+      "link": "https://www.friendshomemuseum.org/service-page/historical-haunts-downtown-waynesville-1"
+    },
+    {
+      "title": "Historical Haunts - Downtown Waynesville",
+      "startISO": "2026-10-22T19:00:00.000-04:00",
+      "endISO": "2026-10-22T20:30:00.000-04:00",
+      "dateLabel": "Thu, Oct 22 · 7:00 PM",
+      "location": "Meet at the Gazebo across from the Hammel House 121 S Main St Waynesville, OH",
+      "soldOut": false,
+      "openSpots": 30,
+      "totalSpots": 30,
+      "link": "https://www.friendshomemuseum.org/service-page/historical-haunts-downtown-waynesville-1"
+    },
+    {
+      "title": "Historical Haunts - Downtown Waynesville",
+      "startISO": "2026-10-23T19:00:00.000-04:00",
+      "endISO": "2026-10-23T20:30:00.000-04:00",
+      "dateLabel": "Fri, Oct 23 · 7:00 PM",
+      "location": "Meet at the Gazebo across from the Hammel House 121 S Main St Waynesville, OH",
+      "soldOut": false,
+      "openSpots": 26,
+      "totalSpots": 30,
+      "link": "https://www.friendshomemuseum.org/service-page/historical-haunts-downtown-waynesville-1"
+    },
+    {
+      "title": "Ghost & Goblet Dinner/Tour",
+      "startISO": "2026-10-24T18:00:00.000-04:00",
+      "endISO": "2026-10-24T20:30:00.000-04:00",
+      "dateLabel": "Sat, Oct 24 · 6:00 PM",
+      "location": "260 Chapman St, Waynesville, OH, USA",
+      "soldOut": true,
+      "openSpots": 0,
+      "totalSpots": 31,
+      "link": "https://www.friendshomemuseum.org/service-page/ghost-goblet-dinner-tour"
+    },
+    {
+      "title": "Historical Haunts - Downtown Waynesville",
+      "startISO": "2026-10-24T19:00:00.000-04:00",
+      "endISO": "2026-10-24T20:30:00.000-04:00",
+      "dateLabel": "Sat, Oct 24 · 7:00 PM",
+      "location": "Meet at the Gazebo across from the Hammel House 121 S Main St Waynesville, OH",
+      "soldOut": false,
+      "openSpots": 25,
+      "totalSpots": 30,
+      "link": "https://www.friendshomemuseum.org/service-page/historical-haunts-downtown-waynesville-1"
+    },
+    {
+      "title": "Historical Haunts - Downtown Waynesville",
+      "startISO": "2026-10-29T19:00:00.000-04:00",
+      "endISO": "2026-10-29T20:30:00.000-04:00",
+      "dateLabel": "Thu, Oct 29 · 7:00 PM",
+      "location": "Meet at the Gazebo across from the Hammel House 121 S Main St Waynesville, OH",
+      "soldOut": false,
+      "openSpots": 26,
+      "totalSpots": 30,
+      "link": "https://www.friendshomemuseum.org/service-page/historical-haunts-downtown-waynesville-1"
+    },
+    {
+      "title": "Historical Haunts - Downtown Waynesville",
+      "startISO": "2026-10-30T19:00:00.000-04:00",
+      "endISO": "2026-10-30T20:30:00.000-04:00",
+      "dateLabel": "Fri, Oct 30 · 7:00 PM",
+      "location": "Meet at the Gazebo across from the Hammel House 121 S Main St Waynesville, OH",
+      "soldOut": false,
+      "openSpots": 10,
+      "totalSpots": 30,
+      "link": "https://www.friendshomemuseum.org/service-page/historical-haunts-downtown-waynesville-1"
+    },
+    {
+      "title": "Historical Haunts - Downtown Waynesville",
+      "startISO": "2026-10-31T19:00:00.000-04:00",
+      "endISO": "2026-10-31T20:30:00.000-04:00",
+      "dateLabel": "Sat, Oct 31 · 7:00 PM",
+      "location": "Meet at the Gazebo across from the Hammel House 121 S Main St Waynesville, OH",
+      "soldOut": false,
+      "openSpots": 30,
+      "totalSpots": 30,
+      "link": "https://www.friendshomemuseum.org/service-page/historical-haunts-downtown-waynesville-1"
+    }
+  ]
+}

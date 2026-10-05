@@ -66,6 +66,10 @@ jobs:
         run: npm run refresh:elections || echo "elections refresh skipped/failed"
       - name: Pull road work and closures
         run: npm run refresh:roads || echo "roads refresh skipped/failed"
+      - name: Pull village and township notices
+        run: npm run refresh:notices || echo "notices refresh skipped/failed"
+      - name: Pull Museum at the Friends Home sessions
+        run: npm run refresh:museum || echo "museum refresh skipped/failed"
       - name: Report source freshness
         run: npm run check:staleness || true
       - name: Commit if changed

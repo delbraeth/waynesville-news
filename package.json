@@ -21,6 +21,8 @@
     "refresh:village-minutes": "node scripts/fetch-village-minutes.mjs",
     "refresh:elections": "node scripts/fetch-elections.mjs",
     "refresh:roads": "node scripts/fetch-roads.mjs",
+    "refresh:notices": "node scripts/fetch-notices.mjs",
+    "refresh:museum": "node scripts/fetch-museum.mjs",
     "refresh:fb": "node scripts/fetch-fb-schools.mjs",
     "newsletter:send": "node scripts/send-newsletter.mjs",
     "draft": "node scripts/draft-brief.mjs",
