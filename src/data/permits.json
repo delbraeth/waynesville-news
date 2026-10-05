@@ -1,0 +1,199 @@
+{
+  "_note": "Warren County Building Department monthly permit report, filtered to Wayne Township and the villages of Waynesville and Corwin. Published ~5-6 weeks after the month ends. Residential permits: street name only, no house number or names.",
+  "updated": "2026-10-05T03:12:26.050Z",
+  "reportMonth": "2026-08",
+  "reportLabel": "August 2026",
+  "reportUrl": "https://www.warrencountyohio.gov/bldginsp/doc/BuildingElectrical/MonthlyReportsWC\\2026\\08.pdf",
+  "indexUrl": "https://www.warrencountyohio.gov/bldginsp/BuildingElectrical/MonthlyReport/Index",
+  "firstSeen": "2026-10-05",
+  "countyTotal": 240,
+  "items": [
+    {
+      "issuedISO": "2026-08-03",
+      "permit": "20262129",
+      "type": "Residential",
+      "jurisdiction": "Wayne Township",
+      "useGroup": "U-CO UTILITY/MISC",
+      "location": "CIERRA WAY",
+      "projectName": null,
+      "description": "Electrical Hook Up for new 8x8 Hot Tub",
+      "cost": 3000
+    },
+    {
+      "issuedISO": "2026-08-03",
+      "permit": "20262080",
+      "type": "Residential",
+      "jurisdiction": "Wayne Township",
+      "useGroup": "U-CO UTILITY/MISC",
+      "location": "MOUNT HOLLY ROAD",
+      "projectName": null,
+      "description": "Generator & Transfer Switch Install",
+      "cost": 14573
+    },
+    {
+      "issuedISO": "2026-08-03",
+      "permit": "20261903",
+      "type": "Residential",
+      "jurisdiction": "Wayne Township",
+      "useGroup": "U-CO UTILITY/MISC",
+      "location": "PEKIN ROAD",
+      "projectName": null,
+      "description": "Furnish and install 400 Amp disconnect meter base, panel, and other required parts and",
+      "cost": 10000
+    },
+    {
+      "issuedISO": "2026-08-04",
+      "permit": "20262061",
+      "type": "Residential",
+      "jurisdiction": "Wayne Township",
+      "useGroup": "C-6 IN GROUND POOL - RESIDENTIAL",
+      "location": "CIERRA WAY",
+      "projectName": null,
+      "description": "16x35x5 Pool Trench, Bonding, Electric",
+      "cost": 100000
+    },
+    {
+      "issuedISO": "2026-08-06",
+      "permit": "20261920",
+      "type": "Residential",
+      "jurisdiction": "Village of Waynesville",
+      "useGroup": "U-CO UTILITY/MISC",
+      "location": "THIRD STREET",
+      "projectName": null,
+      "description": "Converting 2 unit house to single electric . Replacing 100amp overhead meter socket and disconnect",
+      "cost": 2000
+    },
+    {
+      "issuedISO": "2026-08-07",
+      "permit": "20262214",
+      "type": "Commercial",
+      "jurisdiction": "Village of Waynesville",
+      "useGroup": "U UTILITY/MISC ELLANEOUS",
+      "location": "10 N MAIN STREET",
+      "projectName": "Cobblestone",
+      "description": "inspect is needed to restore power to the building after being turned off for more than 30 days per AES",
+      "cost": null
+    },
+    {
+      "issuedISO": "2026-08-07",
+      "permit": "20262147",
+      "type": "Residential",
+      "jurisdiction": "Village of Waynesville",
+      "useGroup": "U-CO UTILITY/MISC",
+      "location": "TOWNSHIP LINE RD",
+      "projectName": null,
+      "description": "New service from transformer to detached garage",
+      "cost": 5000
+    },
+    {
+      "issuedISO": "2026-08-10",
+      "permit": "20262105",
+      "type": "Residential",
+      "jurisdiction": "Wayne Township",
+      "useGroup": "C-1A - ADDITION (DECK, BEDROOM, ETC.)",
+      "location": "SALES ROAD",
+      "projectName": null,
+      "description": "Roof between garages",
+      "cost": 5000
+    },
+    {
+      "issuedISO": "2026-08-12",
+      "permit": "20262225",
+      "type": "Residential",
+      "jurisdiction": "Wayne Township",
+      "useGroup": "C-1R - REMODEL",
+      "location": "TRILLIUM DRIVE",
+      "projectName": null,
+      "description": "extend deck and move stairs",
+      "cost": 23000
+    },
+    {
+      "issuedISO": "2026-08-13",
+      "permit": "20262265",
+      "type": "Residential",
+      "jurisdiction": "Wayne Township",
+      "useGroup": "U-CO UTILITY/MISC",
+      "location": "O NEALL ROAD",
+      "projectName": null,
+      "description": "Installing 10 SettleStop Push Pier",
+      "cost": 20150
+    },
+    {
+      "issuedISO": "2026-08-19",
+      "permit": "20262032",
+      "type": "Residential",
+      "jurisdiction": "Wayne Township",
+      "useGroup": "C-4 DET GARAGE/CARP ORT, RES STORA",
+      "location": "SANDY RUN DRIVE",
+      "projectName": null,
+      "description": "34x20 add on to detached garage",
+      "cost": 40000
+    },
+    {
+      "issuedISO": "2026-08-20",
+      "permit": "20261949",
+      "type": "Residential",
+      "jurisdiction": "Wayne Township",
+      "useGroup": "C-6 IN GROUND POOL - RESIDENTIAL",
+      "location": "FERRY ROAD",
+      "projectName": null,
+      "description": "in-ground fiberglass pool w/ concrete pool decking",
+      "cost": 103000
+    },
+    {
+      "issuedISO": "2026-08-24",
+      "permit": "20262293",
+      "type": "Residential",
+      "jurisdiction": "Village of Waynesville",
+      "useGroup": "C-6 IN GROUND POOL - RESIDENTIAL",
+      "location": "CRIMSON COURT",
+      "projectName": null,
+      "description": "18X36 INGROUND VINYL/STEEL POOL",
+      "cost": 90000
+    },
+    {
+      "issuedISO": "2026-08-25",
+      "permit": "20262360",
+      "type": "Residential",
+      "jurisdiction": "Village of Waynesville",
+      "useGroup": "U-CO UTILITY/MISC",
+      "location": "SIXTH STREET",
+      "projectName": null,
+      "description": "150 amp overhead service upgrade; add single 20A Circuit for pool and pool bonding",
+      "cost": 11374
+    },
+    {
+      "issuedISO": "2026-08-26",
+      "permit": "20262352",
+      "type": "Residential",
+      "jurisdiction": "Wayne Township",
+      "useGroup": "C-1R - REMODEL",
+      "location": "BRANDON LANE",
+      "projectName": null,
+      "description": "rebuild after fire",
+      "cost": 140000
+    },
+    {
+      "issuedISO": "2026-08-28",
+      "permit": "20262394",
+      "type": "Commercial",
+      "jurisdiction": "Village of Waynesville",
+      "useGroup": "U UTILITY/MISC ELLANEOUS",
+      "location": "174 S MAIN STREET",
+      "projectName": "Sauerkraut Festival",
+      "description": "22 Temp Poles for festival",
+      "cost": 1000
+    },
+    {
+      "issuedISO": "2026-08-31",
+      "permit": "20262224",
+      "type": "Residential",
+      "jurisdiction": "Wayne Township",
+      "useGroup": "U-CO UTILITY/MISC",
+      "location": "ADAMSMOOR DRIVE",
+      "projectName": null,
+      "description": "Ran a new 240V 60 amp circuit for a new swim/spa",
+      "cost": 3000
+    }
+  ]
+}

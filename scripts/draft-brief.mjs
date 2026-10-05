@@ -60,6 +60,8 @@ let notices = [];
 try { notices = (await readJSON("src/data/notices.json")).items ?? []; } catch { /* optional */ }
 let museumEvents = [];
 try { museumEvents = (await readJSON("src/data/museum-events.json")).items ?? []; } catch { /* optional */ }
+let permits = null;
+try { permits = await readJSON("src/data/permits.json"); } catch { /* optional */ }
 let roads = [];
 try { roads = (await readJSON("src/data/roads.json")).items ?? []; } catch { /* optional */ }
 let elections = null;
@@ -204,6 +206,25 @@ const museumBlock = museumSoon.length
   ? `**Museum at the Friends Home** (next 7 days, times from its booking calendar):\n` +
     museumSoon.map((m) => `- **${m.dateLabel}** — ${link(m.title, m.link)}${m.soldOut ? " (sold out)" : ""}${m.location ? ` — ${m.location}` : ""}`).join("\n")
   : null;
+
+// Building permits: the county's monthly report, shown for a week after a new
+// month's report first appears. Always states the 5-6 week lag. Residential
+// entries carry a street name only (no house number, no names).
+const PERMITS_SHOW_DAYS = 7;
+const permitsBlock = (() => {
+  const items = permits?.items ?? [];
+  if (!items.length || !permits.firstSeen) return null;
+  const age = (Date.parse(`${iso}T12:00:00Z`) - Date.parse(`${permits.firstSeen}T12:00:00Z`)) / 86400000;
+  if (age < 0 || age >= PERMITS_SHOW_DAYS) return null;
+  const dollars = (n) => `$${Math.round(n).toLocaleString("en-US")}`;
+  const total = items.reduce((t, i) => t + (i.cost ?? 0), 0);
+  const notable = items.filter((i) => i.type === "Commercial" || (i.cost ?? 0) >= 25000);
+  return [
+    `**Building permits, ${permits.reportLabel}** — ${items.length} permit${items.length === 1 ? "" : "s"} issued in Wayne Township and the villages of Waynesville and Corwin` +
+      `${total ? `, ${dollars(total)} in listed project costs` : ""}. The Warren County Building Department posts each month's report about five to six weeks after the month ends, so these are not new filings. ${link("Full report", permits.reportUrl)}`,
+    ...notable.map((i) => `- **${fmtShort(i.issuedISO)}** — ${i.projectName ? `${i.projectName}, ` : ""}${i.location} (${i.jurisdiction}): ${i.description}${i.cost ? ` — ${dollars(i.cost)}` : ""}`),
+  ].join("\n");
+})();
 
 const safetyBlock = prosecutorItems.length
   ? `From the Warren County Prosecutor's Office, released in the past week:\n` +
@@ -460,7 +481,7 @@ ${noticesBlock ? `\n${noticesBlock}\n` : ""}${electionBlock ? `\n${electionBlock
 TODO — new businesses, the antiques district. Check:
 ${listSrc("Around Town")}
 <!-- Editor note (stripped before publication): occasionally write a free \`## Business spotlight\` section — a short editorial profile of a local business. It's coverage, not sponsorship: never tied to the paid Supporters list, and labeled as a spotlight. -->
-${museumBlock ? `\n${museumBlock}\n` : ""}${shopsBlock ? `\n**Merchant Association events** (waynesvilleshops.com)\n${shopsBlock}\n` : ""}${fbWcpdBlock ? `\n${fbWcpdBlock}\n` : ""}
+${museumBlock ? `\n${museumBlock}\n` : ""}${permitsBlock ? `\n${permitsBlock}\n` : ""}${shopsBlock ? `\n**Merchant Association events** (waynesvilleshops.com)\n${shopsBlock}\n` : ""}${fbWcpdBlock ? `\n${fbWcpdBlock}\n` : ""}
 
 ${caesarBlock || fbCaesarBlock ? `\n## Caesar Creek State Park\n${caesarBlock ? `Naturalist programs at the park, about five miles east of the village, over the next ${CAESAR_WINDOW_DAYS} days. Times and meeting points are ODNR's own. ` : ""}Check:\n${listSrc("Caesar Creek")}\n${caesarBlock ? `\n${caesarBlock}\n` : ""}${fbCaesarBlock ? `\n${fbCaesarBlock}\n` : ""}` : ""}
 ## Public safety
