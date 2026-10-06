@@ -1,6 +1,6 @@
 {
   "_note": "State-route work within 8 miles of Waynesville (ODOT OHGO; Restricted/Closed only, ODOT's own descriptions) plus Warren County Engineer closure releases starting within 21 days back / 14 ahead (countywide; title and start date only).",
-  "updated": "2026-10-05T03:01:46.272Z",
+  "updated": "2026-10-06T10:43:34.725Z",
   "items": [
     {
       "source": "ohgo",
@@ -27,12 +27,6 @@
       "title": "Innovation Way Closure Cyclocross Bike Race",
       "startISO": "2026-10-16",
       "link": "https://engineer.warrencountyohio.gov/doc/Information/NewsReleases/2026/20261016_Innovation_Way_Closure_Cyclocross_Bike_Race.pdf"
-    },
-    {
-      "source": "engineer",
-      "title": "Morrow-Woodville Rd Closure",
-      "startISO": "2026-09-14",
-      "link": "https://engineer.warrencountyohio.gov/doc/Information/NewsReleases/2026/20260914_Morrow-Woodville_Rd_Closure.pdf"
     }
   ],
   "sources": {

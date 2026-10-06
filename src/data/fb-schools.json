@@ -1,7 +1,14 @@
 {
   "_note": "Recent Wayne Local Schools Facebook posts via rss.app bridge. Title + link + short excerpt; the district's own words. Fail-safe: kept from last run if the bridge is down.",
-  "updated": "2026-10-05T10:40:45.413Z",
+  "updated": "2026-10-06T10:41:23.838Z",
   "items": [
+    {
+      "title": "🔸October is National Bullying Prevention Month. Throughout this month, Wayne Local Schools is joining schools across…",
+      "link": "https://www.facebook.com/waynelocalschools/posts/pfbid0GUuBUTRvGXSJVUn4qHH138h33nmqnyAM8mjTfD2CCpGvAMctH5KZ2ahgZRNgtbRTl",
+      "date": "Mon, 05 Oct 2026 19:38:40 GMT",
+      "dateLabel": "Mon, Oct 5",
+      "excerpt": "the country in raising awareness about bullying and promoting kindness, acceptance, inclusion, and belonging among our students. ⭐We encourage every student to be an upstander - someone who speaks up, supports others, includes those who may feel left out, and reports bullying or unkind behavior…"
+    },
     {
       "title": "🎤The WHS & WMS Choirs are taking the stage for their fall concert on Wednesday, October 7, at 7 p.m. in the Performing…",
       "link": "https://www.facebook.com/waynelocalschools/posts/pfbid027B5DNDEg4mVf4UFvmU8z5TauZgpgbwCoYbthwG8JKevDGWPP56CnWb9t3VxHbhK1l",
@@ -50,13 +57,6 @@
       "date": "Fri, 02 Oct 2026 18:09:34 GMT",
       "dateLabel": "Fri, Oct 2",
       "excerpt": "Good luck, Spartans! Check out the ticket information below 👇 Big one in Carlisle tonight! Tickets are cash or card (tap) at the gate, or on the Hometown Ticketing Fan App. Thanks to this week’s sponsor, Collins Waterproofing & More LLC."
-    },
-    {
-      "title": "WOW! Less than $800 to go until Waynesville Elementary reaches its goal of $45,000! We’re so close! Also, due to the…",
-      "link": "https://www.facebook.com/waynelocalschools/posts/pfbid0237qH4iyizvFfGKtnnkpfEPvpvAbHDC5SggnaekaMMTdExeeLKPThxTfGdMkF1mzpl",
-      "date": "Thu, 01 Oct 2026 23:36:20 GMT",
-      "dateLabel": "Thu, Oct 1",
-      "excerpt": "forecast tomorrow the Fun Run date for grades 1-5 has been moved to October 8. 🎉🐷 WHAT. A. DAY! 🐷🎉 Our Preschool & Kindergarten Fun Run was absolutely AMAZING today! The smiles, energy, cheering, and excitement made today one to remember! 🧡🖤 A HUGE THANK YOU to every teacher, parent,…"
     }
   ]
 }
