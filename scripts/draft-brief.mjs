@@ -10,6 +10,7 @@ import { writeFile, readFile } from "node:fs/promises";
 import { existsSync } from "node:fs";
 import { nextCommissionersMeeting } from "../src/lib/nextMeeting.js";
 import { nextTownshipMeeting } from "../src/lib/nextTownshipMeeting.js";
+import { dropPastEventPosts } from "./lib/fb-past-events.mjs";
 
 const root = new URL("..", import.meta.url);
 const readJSON = async (p) => JSON.parse(await readFile(new URL(p, root), "utf8"));
@@ -67,11 +68,11 @@ try { roads = (await readJSON("src/data/roads.json")).items ?? []; } catch { /* 
 let elections = null;
 try { elections = await readJSON("src/data/elections.json"); } catch { /* optional */ }
 let fbSchools = [];
-try { fbSchools = (await readJSON("src/data/fb-schools.json")).items ?? []; } catch { /* optional */ }
+try { fbSchools = dropPastEventPosts((await readJSON("src/data/fb-schools.json")).items ?? []); } catch { /* optional */ }
 let fbCaesarCreek = [];
-try { fbCaesarCreek = (await readJSON("src/data/fb-caesar-creek.json")).items ?? []; } catch { /* optional */ }
+try { fbCaesarCreek = dropPastEventPosts((await readJSON("src/data/fb-caesar-creek.json")).items ?? []); } catch { /* optional */ }
 let fbWcpdFriends = [];
-try { fbWcpdFriends = (await readJSON("src/data/fb-wcpd-friends.json")).items ?? []; } catch { /* optional */ }
+try { fbWcpdFriends = dropPastEventPosts((await readJSON("src/data/fb-wcpd-friends.json")).items ?? []); } catch { /* optional */ }
 
 const longDate = now.toLocaleDateString("en-US", {
   weekday: "long", month: "long", day: "numeric", year: "numeric", timeZone: "America/New_York",
