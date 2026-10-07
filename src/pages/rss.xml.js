@@ -5,7 +5,7 @@ export async function GET(context) {
   const { briefs } = await getPublicBriefs();
   return rss({
     title: 'Waynesville Daily Brief',
-    description: "Waynesville, Two square miles, surrounded by reality since 1797.",
+    description: "Waynesville, two square miles, surrounded by reality since 1797.",
     site: context.site,
     items: recentBriefs(briefs).map((b) => ({
       title: b.data.title,
