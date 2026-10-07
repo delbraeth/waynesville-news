@@ -299,6 +299,16 @@
       "category": "Government",
       "source": "https://commissioners.warrencountyohio.gov/News/AgendaMinutes/Index",
       "note": "Weekly commissioners session; agendas and minutes posted online"
+    },
+    {
+      "title": "CareSource Invitational — outdoor college basketball doubleheader",
+      "dateISO": "2026-10-07T15:00:00-04:00",
+      "endISO": "2026-10-07T20:00:00-04:00",
+      "dateLabel": "Wed, Oct 7 · Cincinnati vs. Ohio State 3:00 PM; Dayton vs. Xavier 5:30 PM (gates 1 PM)",
+      "venue": "Lindner Family Tennis Center, Mason",
+      "category": "Sports",
+      "source": "https://cincycaresourceinvitational.carrd.co/",
+      "note": "Outdoor preseason exhibitions benefiting mental-health and suicide-prevention nonprofits. Tickets via Ticketmaster. Organizers say game times are subject to change; per WCPO, inclement weather moves the games to UD Arena in Dayton."
     }
   ]
 }
