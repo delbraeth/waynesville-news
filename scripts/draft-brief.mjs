@@ -11,6 +11,7 @@ import { existsSync } from "node:fs";
 import { nextCommissionersMeeting } from "../src/lib/nextMeeting.js";
 import { nextTownshipMeeting } from "../src/lib/nextTownshipMeeting.js";
 import { dropPastEventPosts } from "./lib/fb-past-events.mjs";
+import { isFridayET, buildWeekendPlanner } from "./lib/weekend-planner.mjs";
 
 const root = new URL("..", import.meta.url);
 const readJSON = async (p) => JSON.parse(await readFile(new URL(p, root), "utf8"));
@@ -423,6 +424,22 @@ const weatherBlock = weather && weather.tempF != null
     ].join("\n")
   : null;
 
+// Recurring Friday series: the weekend's events from every feed, by day.
+const weekendBlock = isFridayET(now)
+  ? buildWeekendPlanner({
+      iso, link,
+      events: events.items, caesar: caesarCreekEvents, library: libraryUpcoming, shops: shopsEvents,
+      museum: museumEvents, sports: sports.upcoming, weather,
+    })
+  : null;
+
+// Standing reader call-out at the foot of every brief. Questions go to the
+// editor's inbox; answers run in later editions once the editor has checked them.
+const ASK_SUBJECT = "Ask the Brief";
+const askBlock = `Have a question about Waynesville? A road project, a building going up, something you heard and want checked? ` +
+  `[Email the editor](mailto:editor@waynesville.news?subject=${encodeURIComponent(ASK_SUBJECT)}) at editor@waynesville.news with "${ASK_SUBJECT}" in the subject line. ` +
+  `We'll answer reader questions in upcoming editions.`;
+
 const candidateBlock = suggested.length
   ? suggested.map((h) => {
       // Always quote the publisher's headline. The excerpt is extra context,
@@ -465,7 +482,7 @@ ${weatherBlock ?? "TODO — weather unavailable this morning; check https://fore
 1. TODO — lead item (schools first). *(link the source)*
 2. TODO — second item. *(link the source)*
 3. TODO — third item. *(link the source)*
-
+${weekendBlock ? `\n## Weekend planner\n${weekendBlock}\n` : ""}
 ## Schools
 TODO — Wayne Local board, Spartans, closings, library programs. Check:
 ${listSrc("Schools")}
@@ -496,6 +513,9 @@ See the [full events calendar](/events/).
 ${obituariesBlock ? `\n## Obituaries\n${obituariesBlock}\n` : ""}
 ## Local headlines
 ${candidateBlock}
+
+## Ask the Brief
+${askBlock}
 `;
 
 await writeFile(targetPath, draft);
