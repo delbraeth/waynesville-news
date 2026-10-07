@@ -1,25 +1,7 @@
 {
   "_note": "Mary L. Cook Public Library — upcoming programs from the library's WhoFi event calendar (https://marylcook-main-oh.whofi.com/calendar/full), next 14 days. Canceled events excluded.",
-  "updated": "2026-10-06T10:41:30.829Z",
+  "updated": "2026-10-07T10:41:13.708Z",
   "items": [
-    {
-      "title": "Toddler Time",
-      "dateISO": "2026-10-06T10:30:00Z",
-      "dateLabel": "Tue · Oct 6, 10:30 AM",
-      "link": "https://marylcook-main-oh.whofi.com/calendar/event/352437/"
-    },
-    {
-      "title": "Teen Tuesday (6th-12th Grade)",
-      "dateISO": "2026-10-06T15:00:00Z",
-      "dateLabel": "Tue · Oct 6, 3:00 PM",
-      "link": "https://marylcook-main-oh.whofi.com/calendar/event/352461/"
-    },
-    {
-      "title": "Make your Own Veggie Super Hero",
-      "dateISO": "2026-10-06T15:00:00Z",
-      "dateLabel": "Tue · Oct 6, 3:00 PM",
-      "link": "https://marylcook-main-oh.whofi.com/calendar/event/342994/"
-    },
     {
       "title": "Baby Bookworms",
       "dateISO": "2026-10-07T10:30:00Z",
@@ -49,6 +31,24 @@
       "dateISO": "2026-10-12T17:30:00Z",
       "dateLabel": "Mon · Oct 12, 5:30 PM",
       "link": "https://marylcook-main-oh.whofi.com/calendar/event/334489/"
+    },
+    {
+      "title": "Toddler Time",
+      "dateISO": "2026-10-13T10:30:00Z",
+      "dateLabel": "Tue · Oct 13, 10:30 AM",
+      "link": "https://marylcook-main-oh.whofi.com/calendar/event/352438/"
+    },
+    {
+      "title": "Teen Tuesday (6th-12th Grade)",
+      "dateISO": "2026-10-13T15:00:00Z",
+      "dateLabel": "Tue · Oct 13, 3:00 PM",
+      "link": "https://marylcook-main-oh.whofi.com/calendar/event/352462/"
+    },
+    {
+      "title": "Chapters Book Club",
+      "dateISO": "2026-10-13T16:00:00Z",
+      "dateLabel": "Tue · Oct 13, 4:00 PM",
+      "link": "https://marylcook-main-oh.whofi.com/calendar/event/352449/"
     }
   ]
 }
