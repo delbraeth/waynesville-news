@@ -1,18 +1,18 @@
 {
   "_note": "Candidate local headlines (Google News RSS). Published as a quoted headline (or, when available, a short publisher-written excerpt) + source + link; never reproduce article body text.",
-  "updated": "2026-10-07T10:41:07.178Z",
+  "updated": "2026-10-08T10:41:13.972Z",
   "items": [
+    {
+      "title": "The 56th Waynesville Sauerkraut Fetival Is Happening This Weekend",
+      "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOSnI3b3BXZ3RvY1paLUdqVzhnSkZ0ZHBMa19TMS1FUkgtWFBKMlVvVlNBQWtNa0lUSE1zZVlIcDIteldGWG5SVWZWd214VThCQmd6VnZiTHVybVQ3b01uajA4ekxrSE9xT29rQ1lON1QwRnRod1k0dGFua3ExQnRlby0xbGZSQU9wSFMzbm90SFE2M1BSNlR1U1cwSC1taEQ4aWNTNTdadWVSSjRa?oc=5",
+      "source": "Warren County Post",
+      "date": "Wed, 07 Oct 2026 21:42:59 GMT"
+    },
     {
       "title": "Soybean Harvest Cab Cam – Mike Lutmer, Warren County",
       "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBQcWFEUjlzTTNzYjBJdldfWFFQZk02MlRTbFVyT2tyQlRjOFA0ZUpTeFQ1Q21pdzBHeUJRUkFmcC1reDM1b3JCSTNXOUxQY3piWkJVOGZIN2g2bHZYZHFaNGlBNnh3a1EzOWJ4MVVEYWtTUDFmR1F2ZVNXTWtVYlE?oc=5",
       "source": "Ohio's Country Journal",
       "date": "Tue, 06 Oct 2026 22:02:20 GMT"
-    },
-    {
-      "title": "Guided Fossil Collecting at Caesar Creek Highlights Ohio Earth Science Week",
-      "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOeGhjSGtEQjRSQVpHT1pIMTgweGhMQzZKaEJuQzZIX21PaGpUM3lHYVB0Rl84enFSelE4OExIR3laQnFEeUh3TWt2ZVdlUHNUbHFKUFJxMWRlZkRNcl9mdjY3bndZaU9MWkF0Z1hZa2ZNdWY2SjBXVzlsWTRpcGJiNFYzSmFSM1RnSEI4TXZmcm0xRkFJdEhkdHRlUHB6VXRRclB0RDdxcWcwajdsRnVKaHJPY2EwdkdhejFpdjNQVWZxLWs4Z3c?oc=5",
-      "source": "Warren County Post",
-      "date": "Wed, 07 Oct 2026 02:29:46 GMT"
     },
     {
       "title": "James E. \"Jim\" Fleenor Obituary (2026) - Waynesville, OH - Stubbs-Conner Funeral Home & Cremation Services",
@@ -21,22 +21,22 @@
       "date": "Wed, 07 Oct 2026 02:54:25 GMT"
     },
     {
-      "title": "Murder investigation underway at state prison in Warren County",
-      "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNVUZySzhkYjFfVmpCQU9SSXg1QV8wWlJGVkVobW9CMVdZOU5IZzd6SWtGWXRpMTU5azZqU1FjcUo3Q2xFTFZKX1kzTEVtaVZyWDJWdzk0WW5xU3Z2TGhyaGFONHNjYUtoYVZXOEp1dUxFWkRYd2gzR2k4aUR1dkM0bXVIcjFpUmh2UnFKaGhraVp1czlvd1ZoVDdqMks3djdGOTRLQTRNQdIBuwFBVV95cUxPN1ZYOE1pTHdoZEJmU1RKWnZTazJ4dXJfYnRBTVpqWDJKTnVfTGpheDlabWtmM3JDLWI4dmsxMEx5OGxfNUU2d3d4OW9IcUtHTlFCSG0wdG9ScUN6SjVWS2FGNXlTeVJ3WWNBRW1CTkJ3ZGR4anBnaUo3c0pxWUF5SkFlUDNuZ1diemVIRzlqRV83dXNTTmZESktkeGJFdFlMc2wxOHJ4azFmSXhwMzVlVjJRSTVNVmhyQ01v?oc=5",
-      "source": "FOX19 | Cincinnati",
-      "date": "Tue, 06 Oct 2026 11:45:00 GMT"
-    },
-    {
       "title": "Warren County sheriff searching for suspects after multiple people report shattered car windshields",
       "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOYmV2WDlaWkNNTVRXVzA4MDktWVB6THRva1FOeENHNVNDZUtlMk42Uk9GSDJDVl9jMUhNV2k5cHB0d2tvUGNTRHZ5d01DZTFpdmY3VndFTk9EQTdQY29IRkJQRmFMNW1OeXJSOVRfdDFKYWVQV0tPZGVyZGJjd3VPU2REcU5JbnhRekNtSi12Z3E0dGpNYU5yQjN1Vm4xUGNU?oc=5",
       "source": "WLWT",
       "date": "Mon, 05 Oct 2026 17:41:00 GMT"
     },
     {
-      "title": "McBride Pathways for Veterans Awarded $500,465 for Suicide Prevention Services",
-      "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQMzdSYWktd0JPWWF5SXI1aXhkNlNiNnhFMFU4SVRUMWo4cWlpb2p5NWlZLVB1VlJ0RDBzRnZUODVBSlBUMHBJZEtnZG5Sa19uVVllMVZUYzRPeDFZM0o2cm1DTUNBa2lyU1k3cy1EeUROdDJIeEhOQTQ3cG1GcDhmaFlLaDRYTFFDQ1VIVTU1bHBSTFVFYTNmMWROdFczd0g5NnFzNVpPS21EcHFSY1pRQ0dsSDBnZGVBbGJF?oc=5",
+      "title": "Murder investigation underway at state prison in Warren County",
+      "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNVUZySzhkYjFfVmpCQU9SSXg1QV8wWlJGVkVobW9CMVdZOU5IZzd6SWtGWXRpMTU5azZqU1FjcUo3Q2xFTFZKX1kzTEVtaVZyWDJWdzk0WW5xU3Z2TGhyaGFONHNjYUtoYVZXOEp1dUxFWkRYd2gzR2k4aUR1dkM0bXVIcjFpUmh2UnFKaGhraVp1czlvd1ZoVDdqMks3djdGOTRLQTRNQdIBuwFBVV95cUxPN1ZYOE1pTHdoZEJmU1RKWnZTazJ4dXJfYnRBTVpqWDJKTnVfTGpheDlabWtmM3JDLWI4dmsxMEx5OGxfNUU2d3d4OW9IcUtHTlFCSG0wdG9ScUN6SjVWS2FGNXlTeVJ3WWNBRW1CTkJ3ZGR4anBnaUo3c0pxWUF5SkFlUDNuZ1diemVIRzlqRV83dXNTTmZESktkeGJFdFlMc2wxOHJ4azFmSXhwMzVlVjJRSTVNVmhyQ01v?oc=5",
+      "source": "FOX19 | Cincinnati",
+      "date": "Tue, 06 Oct 2026 11:45:00 GMT"
+    },
+    {
+      "title": "56th OHIO SAUERKRAUT FESTIVAL",
+      "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNWGF3OEYzWWtpSnJUdE9ubjYzbW5hdkRIQ25VTWVnZ2JhRFNTTWFxQzVUZlBBZ1IzUVJEMXpnbllUNkk4LU1YRi1zZG5kTExsV3ZZb2twejQ2ZzB5QnBRQUdFek5HVkRxRFNXZEVfYWtnM1Q2UHlmY2M3RGpmdEdrQVJiNXZHdllk?oc=5",
       "source": "Warren County Post",
-      "date": "Wed, 07 Oct 2026 03:34:49 GMT"
+      "date": "Wed, 07 Oct 2026 22:20:33 GMT"
     },
     {
       "title": "Warren County enacts 6-month moratorium on new data centers",

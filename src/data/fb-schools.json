@@ -1,7 +1,14 @@
 {
   "_note": "Recent Wayne Local Schools Facebook posts via rss.app bridge. Title + link + short excerpt; the district's own words. Fail-safe: kept from last run if the bridge is down.",
-  "updated": "2026-10-07T10:41:06.239Z",
+  "updated": "2026-10-08T10:41:12.691Z",
   "items": [
+    {
+      "title": "💗PINK OUT this FRIDAY NIGHT at HOME vs Madison, BE THERE! #SPARTANPRIDE",
+      "link": "https://www.facebook.com/waynelocalschools/posts/pfbid04qSGGC2x9FmTyTrC8FRjbxuPYWB5jcACSxQhZfyLMJRWndt8zfPRnoXBEY8Lh8Xrl",
+      "date": "Wed, 07 Oct 2026 11:24:13 GMT",
+      "dateLabel": "Wed, Oct 7",
+      "excerpt": "💗 PINK OUT this FRIDAY NIGHT at HOME vs Madison, BE THERE! #SPARTANPRIDE"
+    },
     {
       "title": "💗Pink Out Night is this Friday, October 9. The Waynesville community is coming together to celebrate, support, and…",
       "link": "https://www.facebook.com/waynelocalschools/posts/pfbid0kKnpSYLRuXeHafAgVaFpMfTVxtaVRwX9upUxzdyXBGgADCRKnk4VJFfJwGT4789wl",
@@ -50,13 +57,6 @@
       "date": "Sat, 03 Oct 2026 17:15:02 GMT",
       "dateLabel": "Sat, Oct 3",
       "excerpt": "Performing Arts Center, second floor, at 625 Dayton Rd. Attending a Board meeting is a valuable way to learn more about the planning, decisions, and discussions that help guide our schools and community. Join us!"
-    },
-    {
-      "title": "🔥They were spicing things up in Global Foods class this week! WHS students are learning about spices used in cuisines…",
-      "link": "https://www.facebook.com/waynelocalschools/posts/pfbid0PQaF8ARhHxPgLZQMTUQLRUETZbAVfeH5y3ahbBjAtcW219p1iDmJWHnFSwjsFx57l",
-      "date": "Sat, 03 Oct 2026 11:56:05 GMT",
-      "dateLabel": "Sat, Oct 3",
-      "excerpt": "around the world, and this week they put that knowledge to the test by making Chicken Tikka Masala! A few lucky teachers got to be the official taste-testers and gave the Indian-inspired dish a big thumbs-up. Safe to say, this lesson was a hit from the first bite!"
     }
   ]
 }
