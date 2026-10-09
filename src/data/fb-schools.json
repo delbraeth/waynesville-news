@@ -1,7 +1,28 @@
 {
   "_note": "Recent Wayne Local Schools Facebook posts via rss.app bridge. Title + link + short excerpt; the district's own words. Fail-safe: kept from last run if the bridge is down.",
-  "updated": "2026-10-08T10:41:12.691Z",
+  "updated": "2026-10-09T10:41:27.578Z",
   "items": [
+    {
+      "title": "🎉WES is just $400 away from reaching its fundraising goal! Donations can be made until Friday, October 9 at 11:59 p.m.W...",
+      "link": "https://www.facebook.com/waynelocalschools/posts/pfbid022SxXhh3s48Fh9YKg4sMA4XfrtHjcVN9meBwoBQBp2WWvY6wevZ3DYZZrVXPRbdfhl",
+      "date": "Fri, 09 Oct 2026 01:49:11 GMT",
+      "dateLabel": "Thu, Oct 8",
+      "excerpt": "🎉WES is just $400 away from reaching its fundraising goal! Donations can be made until Friday, October 9 at 11:59 p.m. WHAT A DAY ☀️ 1st-5th graders finally got their turn for Fun Run and it was worth the wait! We played games, did yoga and RAN through the stations…and who could forget watching…"
+    },
+    {
+      "title": "Every Thursday following a WLS Board meeting, we share a recap to help you stay informed on the business of the…",
+      "link": "https://www.facebook.com/waynelocalschools/posts/pfbid037Nm32rHuAiHAyZoXD5FwGvRhLBs2XZ2g7sdeRzNzwevwQ2vbRJhRaNs8Kbt21TDNl",
+      "date": "Thu, 08 Oct 2026 19:25:21 GMT",
+      "dateLabel": "Thu, Oct 8",
+      "excerpt": "district. Here's our latest Board Meeting Recap:"
+    },
+    {
+      "title": "Community member Keith Goldsberry has been a big supporter of Waynesville Spartans Athletics for years, and this…",
+      "link": "https://www.facebook.com/waynelocalschools/posts/pfbid025s4ig6VwHBzir4gf6dvqd6nZHuC3aW8KNSzqRt8jb6z24LpuvfvnrfBRiy3rE7aal",
+      "date": "Thu, 08 Oct 2026 14:01:40 GMT",
+      "dateLabel": "Thu, Oct 8",
+      "excerpt": "volleyball season has been no exception! Keith has attended every single home game this year, along with several away games, cheering on the Spartans every step of the way. His dedication and support haven't gone unnoticed! Last week, the WHS volleyball seniors surprised Keith with a custom…"
+    },
     {
       "title": "💗PINK OUT this FRIDAY NIGHT at HOME vs Madison, BE THERE! #SPARTANPRIDE",
       "link": "https://www.facebook.com/waynelocalschools/posts/pfbid04qSGGC2x9FmTyTrC8FRjbxuPYWB5jcACSxQhZfyLMJRWndt8zfPRnoXBEY8Lh8Xrl",
@@ -36,27 +57,6 @@
       "date": "Mon, 05 Oct 2026 19:38:40 GMT",
       "dateLabel": "Mon, Oct 5",
       "excerpt": "the country in raising awareness about bullying and promoting kindness, acceptance, inclusion, and belonging among our students. ⭐We encourage every student to be an upstander - someone who speaks up, supports others, includes those who may feel left out, and reports bullying or unkind behavior…"
-    },
-    {
-      "title": "🎤The WHS & WMS Choirs are taking the stage for their fall concert on Wednesday, October 7, at 7 p.m. in the Performing…",
-      "link": "https://www.facebook.com/waynelocalschools/posts/pfbid027B5DNDEg4mVf4UFvmU8z5TauZgpgbwCoYbthwG8JKevDGWPP56CnWb9t3VxHbhK1l",
-      "date": "Sun, 04 Oct 2026 17:32:04 GMT",
-      "dateLabel": "Sun, Oct 4",
-      "excerpt": "Arts Center. Come enjoy an evening of music and support our talented Spartan singers as they share what they’ve been working on this fall. We hope to see you there!🎶"
-    },
-    {
-      "title": "📝What better way to learn about history than from our community members who lived it? WES fifth graders in Mrs. Holtz’s…",
-      "link": "https://www.facebook.com/waynelocalschools/posts/pfbid024JxtgieNB7kUJWYh8kiWGGvgJQ6SnUYcdvfbdBpbuDe6KAzEMAv56uYFPySBXnRjl",
-      "date": "Sat, 03 Oct 2026 20:30:01 GMT",
-      "dateLabel": "Sat, Oct 3",
-      "excerpt": "and Mrs. Marcum’s Social Studies classes visited Ohio Living Quaker Heights to interview residents for a timeline project. 🧡Students asked about the toys they played with, the sports they enjoyed, the technology they used growing up, and major world events they remember. The conversations were…"
-    },
-    {
-      "title": "This month’s regular meeting of the Wayne Local Schools Board of Education is on Monday, October 5, at 6:00 p.m. in the…",
-      "link": "https://www.facebook.com/waynelocalschools/posts/pfbid032ia7N3EsLqiKJCQT8DHfAD6EckXpXbooW4sKXuPhpuGyVx4Hw3RdBfY6ZjA3SYCnl",
-      "date": "Sat, 03 Oct 2026 17:15:02 GMT",
-      "dateLabel": "Sat, Oct 3",
-      "excerpt": "Performing Arts Center, second floor, at 625 Dayton Rd. Attending a Board meeting is a valuable way to learn more about the planning, decisions, and discussions that help guide our schools and community. Join us!"
     }
   ]
 }

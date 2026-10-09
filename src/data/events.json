@@ -1,5 +1,5 @@
 {
-  "_note": "Real venues and sources, verified against each listed source on 2026-10-08 (daily automated refresh). Wayne Local school dates per The Spartan (September and October 2026) and the district Community Events & Activities newsletter (October 2026). Recurring items (rodeo, commissioners, ghost walk) show the next occurrence. Warren County Park District events page SUSPENDED as a source per Cap'n (2026-10-03): it sits behind a Cloudflare bot challenge (403 since 2026-09-24). Do not fetch it or report it as failing; its items from the 2026-09-23 check are kept until they expire. Resume only when Cap'n provides a working source. Event notes and dateLabels are shown to readers: write them for readers (what, when, where, and a helpful pointer like \"check the event website for times\" when a detail is missing). Never put editorial or process notes in them (\"not published\", \"confirm before printing\", \"corrected from\", \"checked on\"); record corrections in the commit message instead.",
+  "_note": "Real venues and sources, verified against each listed source on 2026-10-09 (daily automated refresh). Wayne Local school dates per The Spartan (September and October 2026) and the district Community Events & Activities newsletter (October 2026) and Board Meeting Recap (October 2026). Recurring items (rodeo, commissioners, ghost walk) show the next occurrence. Warren County Park District events page SUSPENDED as a source per Cap'n (2026-10-03): it sits behind a Cloudflare bot challenge (403 since 2026-09-24). Do not fetch it or report it as failing; its items from the 2026-09-23 check are kept until they expire. Resume only when Cap'n provides a working source. Event notes and dateLabels are shown to readers: write them for readers (what, when, where, and a helpful pointer like \"check the event website for times\" when a detail is missing). Never put editorial or process notes in them (\"not published\", \"confirm before printing\", \"corrected from\", \"checked on\"); record corrections in the commit message instead.",
   "items": [
     {
       "title": "Historical Haunts — ghost walk of downtown Waynesville",
@@ -30,16 +30,6 @@
       "category": "Festival",
       "source": "https://waynesvillefallfest.com/",
       "note": "Corn maze, mini golf, petting farm, and other fall activities; $16 adult / $14 ages 10 & under daily admission. Not affiliated with Hisey Fall Fest."
-    },
-    {
-      "title": "Ohio Renaissance Festival — Viking Weekend",
-      "dateISO": "2026-10-03T10:30:00-04:00",
-      "endISO": "2026-10-04T19:00:00-04:00",
-      "dateLabel": "Oct 3–4 · 10:30 AM–7:00 PM",
-      "venue": "Renaissance Park, Waynesville",
-      "category": "Festival",
-      "source": "https://renfestival.com/",
-      "note": "Themed weekend during the festival's regular Sep 5–Nov 1, 2026 season."
     },
     {
       "title": "Boys Soccer Senior Night / Volleyball Orange Out",
@@ -321,6 +311,25 @@
       "category": "Festival",
       "source": "https://www.sixflags.com/kingsisland/events/winterfest",
       "note": "Per Kings Island: holiday event on select nights. Opening weekend hours Nov 27 & 29 5–10 PM, Nov 28 4–10 PM. December open dates on the park calendar: Dec 4–6, 11–23 and 26–31; check the calendar for each night's hours."
+    },
+    {
+      "title": "Wayne Local Schools Board of Education — Regular Meeting & Spartan Recognition Awards",
+      "dateISO": "2026-11-09T18:00:00-05:00",
+      "dateLabel": "Mon, Nov 9 · 6:00 PM",
+      "venue": "WLS Performing Arts Center (Auditorium), 625 Dayton Rd, Waynesville",
+      "category": "Government",
+      "source": "https://www.wayne-local.com/",
+      "note": "Per Wayne Local Board Meeting Recap (Oct 2026): the bi-annual Spartan Recognition Awards ceremony opens the meeting, followed by a short break and the regular business meeting. Open to the public."
+    },
+    {
+      "title": "Halloween Haunt at Kings Island",
+      "dateISO": "2026-09-25T00:00:00-04:00",
+      "endISO": "2026-10-31T23:59:00-04:00",
+      "dateLabel": "Thursdays–Sundays through Oct 31",
+      "venue": "Kings Island, 6300 Kings Island Dr, Mason",
+      "category": "Festival",
+      "source": "https://www.sixflags.com/kingsisland/events/halloween-haunt",
+      "note": "Select nights Thursday through Sunday. Per Kings Island, not recommended for children under 13, and every guest needs paid admission. Check the park calendar for nightly hours."
     }
   ]
 }

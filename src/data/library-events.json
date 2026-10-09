@@ -1,13 +1,7 @@
 {
   "_note": "Mary L. Cook Public Library — upcoming programs from the library's WhoFi event calendar (https://marylcook-main-oh.whofi.com/calendar/full), next 14 days. Canceled events excluded.",
-  "updated": "2026-10-08T10:41:20.708Z",
+  "updated": "2026-10-09T10:41:37.166Z",
   "items": [
-    {
-      "title": "Preschool Storytime",
-      "dateISO": "2026-10-08T10:30:00Z",
-      "dateLabel": "Thu · Oct 8, 10:30 AM",
-      "link": "https://marylcook-main-oh.whofi.com/calendar/event/352430/"
-    },
     {
       "title": "Sauerkraut Festival",
       "dateISO": "2026-10-10T10:00:00Z",
@@ -49,6 +43,12 @@
       "dateISO": "2026-10-13T17:30:00Z",
       "dateLabel": "Tue · Oct 13, 5:30 PM",
       "link": "https://marylcook-main-oh.whofi.com/calendar/event/306472/"
+    },
+    {
+      "title": "Baby Bookworms",
+      "dateISO": "2026-10-14T10:30:00Z",
+      "dateLabel": "Wed · Oct 14, 10:30 AM",
+      "link": "https://marylcook-main-oh.whofi.com/calendar/event/352434/"
     }
   ]
 }
