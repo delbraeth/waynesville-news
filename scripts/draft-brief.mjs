@@ -504,7 +504,7 @@ ${listSrc("Around Town")}
 <!-- Editor note (stripped before publication): occasionally write a free \`## Business spotlight\` section — a short editorial profile of a local business. It's coverage, not sponsorship: never tied to the paid Supporters list, and labeled as a spotlight. -->
 ${museumBlock ? `\n${museumBlock}\n` : ""}${permitsBlock ? `\n${permitsBlock}\n` : ""}${shopsBlock ? `\n**Merchant Association events** (waynesvilleshops.com)\n${shopsBlock}\n` : ""}${fbWcpdBlock ? `\n${fbWcpdBlock}\n` : ""}
 
-${caesarBlock || fbCaesarBlock ? `\n## Caesar Creek State Park\n${caesarBlock ? `Naturalist programs at the park, about five miles east of the village, over the next ${CAESAR_WINDOW_DAYS} days. Times and meeting points are ODNR's own. ` : ""}Check:\n${listSrc("Caesar Creek")}\n${caesarBlock ? `\n${caesarBlock}\n` : ""}${fbCaesarBlock ? `\n${fbCaesarBlock}\n` : ""}` : ""}
+${caesarBlock || fbCaesarBlock ? `\n## Caesar Creek State Park\n${caesarBlock ? `Naturalist programs at the park, about five miles east of the village, over the next ${CAESAR_WINDOW_DAYS} days. Check each program's page for meeting points and any changes. ` : ""}Check:\n${listSrc("Caesar Creek")}\n${caesarBlock ? `\n${caesarBlock}\n` : ""}${fbCaesarBlock ? `\n${fbCaesarBlock}\n` : ""}` : ""}
 ## Public safety
 ${safetyBlock}
 ${listSrc("Public Safety")}
