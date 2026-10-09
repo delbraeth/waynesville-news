@@ -301,6 +301,16 @@
       "category": "Schools",
       "source": "https://www.wayne-local.com/",
       "note": "Per the district Community Events & Activities newsletter (October 2026): carnival games, bingo, treat walk; costumes encouraged; food available"
+    },
+    {
+      "title": "Devil's Staircase Pro Hillclimb Weekend (77th annual)",
+      "dateISO": "2026-10-10T09:00:00-04:00",
+      "endISO": "2026-10-11T23:59:00-04:00",
+      "dateLabel": "Sat–Sun, Oct 10–11 · gates 9:00 AM",
+      "venue": "Dayton Motorcycle Club hillclimb grounds, 1086 Corwin Rd, Oregonia",
+      "category": "Sports",
+      "source": "https://www.daytonmc.com/",
+      "note": "Per the Dayton Motorcycle Club: Saturday Dirt Drags (racing 1 PM); Sunday Pro Hillclimb (450s round 1 at 11 AM, opening ceremonies and racing 1 PM). Kids 12 and under free Sunday. Weekend camping $20 per person, opens Friday 8 AM."
     }
   ]
 }
