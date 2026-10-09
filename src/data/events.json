@@ -1,5 +1,5 @@
 {
-  "_note": "Real venues and sources, verified against each listed source on 2026-10-08 (daily automated refresh). Wayne Local school dates per The Spartan (September and October 2026) and the district Community Events & Activities newsletter (October 2026). Recurring items (rodeo, commissioners, ghost walk) show the next occurrence. Warren County Park District events page SUSPENDED as a source per Cap'n (2026-10-03): it sits behind a Cloudflare bot challenge (403 since 2026-09-24). Do not fetch it or report it as failing; its items from the 2026-09-23 check are kept until they expire. Resume only when Cap'n provides a working source.",
+  "_note": "Real venues and sources, verified against each listed source on 2026-10-08 (daily automated refresh). Wayne Local school dates per The Spartan (September and October 2026) and the district Community Events & Activities newsletter (October 2026). Recurring items (rodeo, commissioners, ghost walk) show the next occurrence. Warren County Park District events page SUSPENDED as a source per Cap'n (2026-10-03): it sits behind a Cloudflare bot challenge (403 since 2026-09-24). Do not fetch it or report it as failing; its items from the 2026-09-23 check are kept until they expire. Resume only when Cap'n provides a working source. Event notes and dateLabels are shown to readers: write them for readers (what, when, where, and a helpful pointer like \"check the event website for times\" when a detail is missing). Never put editorial or process notes in them (\"not published\", \"confirm before printing\", \"corrected from\", \"checked on\"); record corrections in the commit message instead.",
   "items": [
     {
       "title": "Historical Haunts — ghost walk of downtown Waynesville",
@@ -9,23 +9,23 @@
       "venue": "Downtown Waynesville (Museum at the Friends Home)",
       "category": "Tour",
       "source": "https://www.friendshomemuseum.org/ghost-tours-class-dinners",
-      "note": "Two-hour guided walking tour of the historic district drawing on the village’s 228-year history, run by the Museum at the Friends Home. The museum also runs a $60 Ghost & Goblet dinner and tour at The Venue at the Historic Lockup, and a $50 Ghost Hunting 101 class with ParaVizionz. Start times are not published on the site — they are set in the booking system, so confirm before printing one."
+      "note": "Two-hour guided walking tour of the historic district drawing on the village’s 228-year history, run by the Museum at the Friends Home. The museum also runs a $60 Ghost & Goblet dinner and tour at The Venue at the Historic Lockup, and a $50 Ghost Hunting 101 class with ParaVizionz. Check the museum's booking page for tour times."
     },
     {
       "title": "Windmill Farm Market Spooktacular",
       "dateISO": "2026-09-26T00:00:00-04:00",
       "endISO": "2026-10-31T23:59:00-04:00",
-      "dateLabel": "Sep 26 – Oct 31 (times not published)",
+      "dateLabel": "Sep 26 – Oct 31",
       "venue": "Windmill Farm Market, 1454 E State Route 73, Springboro",
       "category": "Festival",
       "source": "https://waynesvilleshops.com/2026-calendar-of-events-in-waynesville/",
-      "note": "Fall festival at Windmill Farm Market, on SR 73 a short drive east of the village, promoted on the Waynesville Merchant Association calendar. Daily hours are not published there — confirm before printing times."
+      "note": "Fall festival at Windmill Farm Market, on SR 73 a short drive east of the village, promoted on the Waynesville Merchant Association calendar. Check the market's website for daily hours."
     },
     {
       "title": "Waynesville Fall Fest",
       "dateISO": "2026-09-26T11:00:00-04:00",
       "endISO": "2026-11-01T18:00:00-05:00",
-      "dateLabel": "Sat/Sun through Nov 1 · Sat 11–6, Sun 12–6 (next: Sep 26)",
+      "dateLabel": "Sat/Sun through Nov 1 · Sat 11–6, Sun 12–6",
       "venue": "7392 E State Route 73, Waynesville",
       "category": "Festival",
       "source": "https://waynesvillefallfest.com/",
@@ -39,7 +39,7 @@
       "venue": "Renaissance Park, Waynesville",
       "category": "Festival",
       "source": "https://renfestival.com/",
-      "note": "Themed weekend during the festival's regular Sep 5–Nov 1, 2026 season Saturday, Oct. 3 is sold out per the festival site (checked 2026-10-03); Sunday tickets available."
+      "note": "Themed weekend during the festival's regular Sep 5–Nov 1, 2026 season."
     },
     {
       "title": "Boys Soccer Senior Night / Volleyball Orange Out",
@@ -57,7 +57,7 @@
       "venue": "WLS Performing Arts Center (second floor), 625 Dayton Rd, Waynesville",
       "category": "Government",
       "source": "https://go.boarddocs.com/oh/waylo/Board.nsf/Public",
-      "note": "Regularly scheduled business meeting; open to the public. Date announced in the district's September 14 board meeting recap."
+      "note": "Regularly scheduled business meeting; open to the public."
     },
     {
       "title": "Volleyball Senior Night",
@@ -111,7 +111,7 @@
       "venue": "Spartan Community Field, Waynesville",
       "category": "Schools",
       "source": "https://www.wayne-local.com/",
-      "note": "Per the district Community Events & Activities newsletter (October 2026): breast cancer awareness game, wear pink. Time and venue corrected from \"Waynesville High School\" (time TBD)."
+      "note": "Per the district Community Events & Activities newsletter (October 2026): breast cancer awareness game, wear pink."
     },
     {
       "title": "Ohio Sauerkraut Festival",
@@ -253,7 +253,7 @@
       "category": "Attraction",
       "source": "https://www.sixflags.com/kingsisland/park-hours",
       "evergreen": true,
-      "note": "Park hours per the Kings Island calendar (checked 2026-10-09): Halloween Haunt season Thu 6–11 PM, Fri 6 PM–midnight, Sat 11 AM–midnight, Sun 11 AM–11 PM, closed Mon–Wed; Tricks and Treats Sat–Sun 11 AM–5 PM. Nov 1 and the Nov 7–8 Bonus Weekend 11 AM–7 PM. WinterFest opens Nov 27 (Nov 27 & 29 5–10 PM, Nov 28 4–10 PM) and runs select nights through Dec 31. Waterpark closed."
+      "note": "Park hours: Halloween Haunt season Thu 6–11 PM, Fri 6 PM–midnight, Sat 11 AM–midnight, Sun 11 AM–11 PM, closed Mon–Wed; Tricks and Treats Sat–Sun 11 AM–5 PM. Nov 1 and the Nov 7–8 Bonus Weekend 11 AM–7 PM. WinterFest opens Nov 27 (Nov 27 & 29 5–10 PM, Nov 28 4–10 PM) and runs select nights through Dec 31. Waterpark closed. Check the park calendar for any changes."
     },
     {
       "title": "Fox Hollow Rodeo — Bull Riding",

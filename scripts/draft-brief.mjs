@@ -205,7 +205,7 @@ const museumSoon = museumEvents.filter((m) => {
   return d >= iso && d <= new Date(Date.parse(`${iso}T12:00:00Z`) + 7 * 86400000).toISOString().slice(0, 10);
 });
 const museumBlock = museumSoon.length
-  ? `**Museum at the Friends Home** (next 7 days, times from its booking calendar):\n` +
+  ? `**Museum at the Friends Home** (next 7 days; book on the museum's site):\n` +
     museumSoon.map((m) => `- **${m.dateLabel}** — ${link(m.title, m.link)}${m.soldOut ? " (sold out)" : ""}${m.location ? ` — ${m.location}` : ""}`).join("\n")
   : null;
 
@@ -472,6 +472,9 @@ published: false
     3) delete this comment,
     4) change published: false  ->  published: true, and commit.
   QA: names/dates verified, links resolve.
+  Write for readers, not editors: no notes about how data was gathered or
+  checked. Where a time or detail is missing, say "check the event's website
+  for times" (or similar), not "not published" or "confirm before printing".
 -->
 
 ## Weather
