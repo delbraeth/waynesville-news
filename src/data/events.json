@@ -248,12 +248,12 @@
     {
       "title": "Kings Island",
       "dateISO": null,
-      "dateLabel": "Seasonal — check the park calendar",
+      "dateLabel": "Thu–Sun through Nov 1; Nov 7–8; Nov 27–29",
       "venue": "Mason (Warren County)",
       "category": "Attraction",
-      "source": "https://www.sixflags.com/kingsisland/events",
+      "source": "https://www.sixflags.com/kingsisland/park-hours",
       "evergreen": true,
-      "note": "Amusement park; seasonal festivals & concerts"
+      "note": "Park hours per the Kings Island calendar (checked 2026-10-09): Halloween Haunt season Thu 6–11 PM, Fri 6 PM–midnight, Sat 11 AM–midnight, Sun 11 AM–11 PM, closed Mon–Wed; Tricks and Treats Sat–Sun 11 AM–5 PM. Nov 1 and the Nov 7–8 Bonus Weekend 11 AM–7 PM. Nov 27 & 29 5–10 PM, Nov 28 4–10 PM. Waterpark closed."
     },
     {
       "title": "Fox Hollow Rodeo — Bull Riding",
