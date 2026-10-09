@@ -172,6 +172,10 @@ main { display: block; padding: 1.5rem 0 3rem; }
   padding: 0.6rem 1.1rem; border-radius: 2px;
 }
 .btn:hover { background: var(--accent-deep); color: #fff; text-decoration: none; }
+.btn-outline { color: var(--accent); background: transparent; box-shadow: inset 0 0 0 1.5px var(--accent); }
+.btn-outline:hover { color: #fff; background: var(--accent); }
+.featured-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 0 0.6rem; }
+.featured .submit-note { margin: 0.5rem 0 0; }
 
 /* ---------- headline lists ---------- */
 .headlines { list-style: none; margin: 0; padding: 0; counter-reset: h; }
