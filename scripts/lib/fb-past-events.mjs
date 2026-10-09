@@ -64,11 +64,27 @@ export function mentionedDates(text, postedAt) {
   return out;
 }
 
+// Look-back wording from a page recapping an event that just ended ("Our event
+// was moving… shout out of THANKS…"). Such posts name no dates, so the date
+// test above can't see they're over. Kept deliberately narrow: only phrasing
+// that is unambiguously retrospective, and only applied when the post also
+// names no date today or later.
+const RECAP = [
+  /\b(?:event|program|night|weekend|day)\s+(?:was|were)\s+(?:moving|eye[- ]opening|amazing|wonderful|fantastic|a (?:great|huge) success)\b/,
+  /\bshout[- ]out of thanks\b/,
+  /\bwe will do this event again\b/,
+  /\bthank(?:s| you) to everyone who (?:came|joined|attended|participated|helped)\b/,
+];
+
 export function isPastEventPost(post, now = new Date()) {
   const postedAt = new Date(post.date);
   if (Number.isNaN(postedAt.getTime())) return false;
-  const dates = mentionedDates(`${post.title ?? ""} ${post.excerpt ?? ""}`, postedAt);
-  if (!dates.length) return false;
+  const text = `${post.title ?? ""} ${post.excerpt ?? ""}`;
+  const dates = mentionedDates(text, postedAt);
+  if (!dates.length) {
+    const t = text.toLowerCase().replace(/[’‘]/g, "'");
+    return RECAP.some((re) => re.test(t));
+  }
   const today = etDay(now);
   return dates.every((d) => d < today);
 }
