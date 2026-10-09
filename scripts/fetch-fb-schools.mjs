@@ -13,6 +13,7 @@
 import { writeFile } from "node:fs/promises";
 import { existsSync } from "node:fs";
 import { keepOrExpire } from "./lib/stale-cache.mjs";
+import { dedupePosts } from "./lib/fb-dedupe.mjs";
 
 // Public RSS-bridge feeds. Not secrets — unauthenticated feed URLs. To change
 // a source, regenerate its feed and swap the URL. `label` is also the
@@ -77,7 +78,7 @@ async function refresh(feed) {
     return r ? clean(r[1]) : "";
   };
 
-  const items = [...xml.matchAll(/<item>(.*?)<\/item>/gs)].map((m) => {
+  const posts = [...xml.matchAll(/<item>(.*?)<\/item>/gs)].map((m) => {
     const pick = pickFrom(m[1]);
     let title = pick("title");
     let excerpt = pick("description");
@@ -119,8 +120,9 @@ async function refresh(feed) {
         weekday: "short", month: "short", day: "numeric", timeZone: "America/New_York",
       }),
       excerpt: i.excerpt,
-    }))
-    .slice(0, LIMIT);
+    }));
+  // Dedupe before trimming, so repeats don't eat slots meant for other posts.
+  const items = dedupePosts(posts).slice(0, LIMIT);
 
   if (items.length === 0) throw new Error("no items in feed window");
 
