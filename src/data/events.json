@@ -248,12 +248,12 @@
     {
       "title": "Kings Island",
       "dateISO": null,
-      "dateLabel": "Thu–Sun through Nov 1; Nov 7–8; Nov 27–29",
+      "dateLabel": "Thu–Sun through Nov 1; Nov 7–8; WinterFest select nights Nov 27–Dec 31",
       "venue": "Mason (Warren County)",
       "category": "Attraction",
       "source": "https://www.sixflags.com/kingsisland/park-hours",
       "evergreen": true,
-      "note": "Park hours per the Kings Island calendar (checked 2026-10-09): Halloween Haunt season Thu 6–11 PM, Fri 6 PM–midnight, Sat 11 AM–midnight, Sun 11 AM–11 PM, closed Mon–Wed; Tricks and Treats Sat–Sun 11 AM–5 PM. Nov 1 and the Nov 7–8 Bonus Weekend 11 AM–7 PM. Nov 27 & 29 5–10 PM, Nov 28 4–10 PM. Waterpark closed."
+      "note": "Park hours per the Kings Island calendar (checked 2026-10-09): Halloween Haunt season Thu 6–11 PM, Fri 6 PM–midnight, Sat 11 AM–midnight, Sun 11 AM–11 PM, closed Mon–Wed; Tricks and Treats Sat–Sun 11 AM–5 PM. Nov 1 and the Nov 7–8 Bonus Weekend 11 AM–7 PM. WinterFest opens Nov 27 (Nov 27 & 29 5–10 PM, Nov 28 4–10 PM) and runs select nights through Dec 31. Waterpark closed."
     },
     {
       "title": "Fox Hollow Rodeo — Bull Riding",
@@ -311,6 +311,16 @@
       "category": "Sports",
       "source": "https://www.daytonmc.com/",
       "note": "Per the Dayton Motorcycle Club: Saturday Dirt Drags (racing 1 PM); Sunday Pro Hillclimb (450s round 1 at 11 AM, opening ceremonies and racing 1 PM). Kids 12 and under free Sunday. Weekend camping $20 per person, opens Friday 8 AM."
+    },
+    {
+      "title": "WinterFest at Kings Island",
+      "dateISO": "2026-11-27T17:00:00-05:00",
+      "endISO": "2026-12-31T23:59:00-05:00",
+      "dateLabel": "Select nights, Nov 27 – Dec 31",
+      "venue": "Kings Island, Mason",
+      "category": "Festival",
+      "source": "https://www.sixflags.com/kingsisland/events/winterfest",
+      "note": "Per Kings Island: holiday event on select nights. Opening weekend hours Nov 27 & 29 5–10 PM, Nov 28 4–10 PM. December open dates on the park calendar: Dec 4–6, 11–23 and 26–31; check the calendar for each night's hours."
     }
   ]
 }
