@@ -1,20 +1,10 @@
 ---
 import Base from "../layouts/Base.astro";
+import SeasonalGuide from "../components/SeasonalGuide.astro";
 import eventsData from "../data/events.json";
+import { upcomingEvents } from "../lib/events.js";
 
-const startOfToday = new Date();
-startOfToday.setHours(0, 0, 0, 0);
-
-const upcoming = eventsData.items
-  .filter((e) => !e.evergreen && e.dateISO)
-  .map((e) => ({
-    ...e,
-    _d: new Date(e.dateISO as string),
-    // Multi-day events stay listed until their last day.
-    _end: new Date(((e as { endISO?: string }).endISO ?? e.dateISO) as string),
-  }))
-  .filter((e) => e._end >= startOfToday)
-  .sort((a, b) => a._d.getTime() - b._d.getTime());
+const upcoming = upcomingEvents();
 
 const evergreen = eventsData.items.filter((e) => e.evergreen);
 ---
@@ -25,6 +15,8 @@ const evergreen = eventsData.items.filter((e) => e.evergreen);
     <p class="dek">
       Everything happening in and around Waynesville, verified against each event’s own source.
     </p>
+
+    <SeasonalGuide />
 
     <h3>Upcoming</h3>
     <ul class="events">
