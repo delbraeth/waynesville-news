@@ -1,0 +1,12 @@
+---
+// Pull-out link to a seasonal guide; renders nothing once the season's events are past.
+import { upcomingEvents, TRICK_OR_TREAT } from "../lib/events.js";
+
+const count = upcomingEvents(TRICK_OR_TREAT).length;
+---
+{count > 0 && (
+  <p class="callout">
+    <strong>Trick-or-Treat Guide:</strong>{" "}{count} trick-or-treat {count === 1 ? "event" : "events"} in and around Waynesville, night by night.{" "}
+    <a href="/trick-or-treat/">See the guide →</a>
+  </p>
+)}

@@ -1,23 +1,11 @@
 ---
-import eventsData from "../data/events.json";
+import SeasonalGuide from "./SeasonalGuide.astro";
+import { upcomingEvents } from "../lib/events.js";
 
 interface Props { limit?: number; heading?: boolean; }
 const { limit = 6, heading = true } = Astro.props;
 
-const startOfToday = new Date();
-startOfToday.setHours(0, 0, 0, 0);
-
-const upcoming = eventsData.items
-  .filter((e) => !e.evergreen && e.dateISO)
-  .map((e) => ({
-    ...e,
-    _d: new Date(e.dateISO as string),
-    // Multi-day events stay listed until their last day.
-    _end: new Date(((e as { endISO?: string }).endISO ?? e.dateISO) as string),
-  }))
-  .filter((e) => e._end >= startOfToday)
-  .sort((a, b) => a._d.getTime() - b._d.getTime())
-  .slice(0, limit);
+const upcoming = upcomingEvents().slice(0, limit);
 ---
 <section class="section">
   {heading && (
@@ -29,6 +17,7 @@ const upcoming = eventsData.items
       </p>
     </>
   )}
+  <SeasonalGuide />
   <ul class="events">
     {upcoming.map((e) => (
       <li>

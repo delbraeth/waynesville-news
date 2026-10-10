@@ -164,6 +164,14 @@ const eventsBlock = soon.length
   ? soon.map((e) => `- **${e.dateLabel}** — ${e.title} (${e.venue})${e.source ? ` — ${link("details", e.source)}` : ""}${e.registrationUrl ? ` — ${link("register", e.registrationUrl)}` : ""}`).join("\n")
   : "- (no dated events in the window — see the full calendar)";
 
+// Seasonal pull-out: point readers at /trick-or-treat/ while it has upcoming events.
+const trickOrTreatCount = events.items
+  .filter((e) => (e.tags ?? []).includes("trick-or-treat") && e.dateISO)
+  .filter((e) => new Date(e.endISO ?? e.dateISO) >= todayStart).length;
+const seasonalLine = trickOrTreatCount
+  ? `\n**Trick-or-Treat Guide:** ${trickOrTreatCount} trick-or-treat ${trickOrTreatCount === 1 ? "event" : "events"} in and around Waynesville, night by night — [see the guide](/trick-or-treat/).\n`
+  : "";
+
 // NWS active alerts, fetched by refresh:weather. null = the alerts check itself
 // failed (unknown), [] = checked and clear. Never claim "no alerts" on null.
 const alerts = weather ? weather.alerts : null;
@@ -511,7 +519,7 @@ ${listSrc("Public Safety")}
 ${roadsBlock ? `\n${roadsBlock}\n` : ""}
 ## This week's events
 ${eventsBlock}
-
+${seasonalLine}
 See the [full events calendar](/events/).
 ${obituariesBlock ? `\n## Obituaries\n${obituariesBlock}\n` : ""}
 ## Local headlines

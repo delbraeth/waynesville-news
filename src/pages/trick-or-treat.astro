@@ -1,0 +1,59 @@
+---
+import Base from "../layouts/Base.astro";
+import { upcomingEvents, TRICK_OR_TREAT } from "../lib/events.js";
+
+const items = upcomingEvents(TRICK_OR_TREAT);
+
+// Group by Eastern calendar day so families can plan night by night.
+const dayFmt = new Intl.DateTimeFormat("en-US", {
+  weekday: "long", month: "long", day: "numeric", timeZone: "America/New_York",
+});
+const days = [];
+for (const e of items) {
+  const label = dayFmt.format(e._d);
+  const last = days[days.length - 1];
+  if (last && last.label === label) last.events.push(e);
+  else days.push({ label, events: [e] });
+}
+---
+<Base
+  title="Trick-or-Treat Guide · Waynesville Daily Brief"
+  description="Every trick-or-treat and trunk-or-treat in and around Waynesville this Halloween, in one list: dates, times and places."
+  showInfoBar={false}
+>
+  <div class="reading">
+    <p class="kicker">Halloween</p>
+    <h1>Trick-or-Treat Guide</h1>
+    <p class="dek">
+      Every trick-or-treat, trunk-or-treat and treat walk in and around Waynesville, night by night.
+    </p>
+
+    {days.length ? (
+      days.map((d) => (
+        <>
+          <h3>{d.label}</h3>
+          <ul class="events">
+            {d.events.map((e) => (
+              <li>
+                <div class="date">{e.dateLabel}</div>
+                <div>
+                  <a class="ev-title" href={e.source} target="_blank" rel="noopener">{e.title}</a>
+                  <div class="ev-meta">{e.venue}{e.note ? ` · ${e.note}` : ""}</div>
+                </div>
+              </li>
+            ))}
+          </ul>
+        </>
+      ))
+    ) : (
+      <p>Halloween is over for this year. See the <a href="/events/">full events calendar</a> for what's next.</p>
+    )}
+
+    <p class="callout">
+      Hosting a trick-or-treat or trunk-or-treat that's open to the community?
+      <a href="mailto:editor@waynesville.news?subject=Trick-or-treat%20listing">Email the editor</a>
+      with the date, time and place, and we'll add it.
+    </p>
+    <p><a class="more" href="/events/">Full events calendar →</a></p>
+  </div>
+</Base>
