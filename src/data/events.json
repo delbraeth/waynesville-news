@@ -1,5 +1,5 @@
 {
-  "_note": "Real venues and sources, verified against each listed source on 2026-10-09 (daily automated refresh). Wayne Local school dates per The Spartan (September and October 2026) and the district Community Events & Activities newsletter (October 2026) and Board Meeting Recap (October 2026). Recurring items (rodeo, commissioners, ghost walk) show the next occurrence. Warren County Park District events page SUSPENDED as a source per Cap'n (2026-10-03): it sits behind a Cloudflare bot challenge (403 since 2026-09-24). Do not fetch it or report it as failing; its items from the 2026-09-23 check are kept until they expire. Resume only when Cap'n provides a working source. Event notes and dateLabels are shown to readers: write them for readers (what, when, where, and a helpful pointer like \"check the event website for times\" when a detail is missing). Never put editorial or process notes in them (\"not published\", \"confirm before printing\", \"corrected from\", \"checked on\"); record corrections in the commit message instead.",
+  "_note": "Real venues and sources, verified against each listed source on 2026-10-10 (daily automated refresh). Wayne Local school dates per The Spartan (September and October 2026) and the district Community Events & Activities newsletter (October 2026) and Board Meeting Recap (October 2026). Recurring items (rodeo, commissioners, ghost walk) show the next occurrence. Warren County Park District events page SUSPENDED as a source per Cap'n (2026-10-03): it sits behind a Cloudflare bot challenge (403 since 2026-09-24). Do not fetch it or report it as failing; its items from the 2026-09-23 check are kept until they expire. Resume only when Cap'n provides a working source. Event notes and dateLabels are shown to readers: write them for readers (what, when, where, and a helpful pointer like \"check the event website for times\" when a detail is missing). Never put editorial or process notes in them (\"not published\", \"confirm before printing\", \"corrected from\", \"checked on\"); record corrections in the commit message instead.",
   "items": [
     {
       "title": "Historical Haunts — ghost walk of downtown Waynesville",
@@ -30,24 +30,6 @@
       "category": "Festival",
       "source": "https://waynesvillefallfest.com/",
       "note": "Corn maze, mini golf, petting farm, and other fall activities; $16 adult / $14 ages 10 & under daily admission. Not affiliated with Hisey Fall Fest."
-    },
-    {
-      "title": "Boys Soccer Senior Night / Volleyball Orange Out",
-      "dateISO": "2026-10-05T00:00:00-04:00",
-      "dateLabel": "Mon, Oct 5",
-      "venue": "Waynesville High School",
-      "category": "Schools",
-      "source": "https://www.wayne-local.com/",
-      "note": "Per The Spartan (September 2026); check the athletics schedule for times"
-    },
-    {
-      "title": "Wayne Local Schools Board of Education — Regular Meeting",
-      "dateISO": "2026-10-05T18:00:00-04:00",
-      "dateLabel": "Mon, Oct 5 · 6:00 PM",
-      "venue": "WLS Performing Arts Center (second floor), 625 Dayton Rd, Waynesville",
-      "category": "Government",
-      "source": "https://go.boarddocs.com/oh/waylo/Board.nsf/Public",
-      "note": "Regularly scheduled business meeting; open to the public."
     },
     {
       "title": "Volleyball Senior Night",
@@ -330,6 +312,24 @@
       "category": "Festival",
       "source": "https://www.sixflags.com/kingsisland/events/halloween-haunt",
       "note": "Select nights Thursday through Sunday. Per Kings Island, not recommended for children under 13, and every guest needs paid admission. Check the park calendar for nightly hours."
+    },
+    {
+      "title": "Fox Hollow Rodeo — Bull Riding",
+      "dateISO": "2026-10-17T18:00:00-04:00",
+      "dateLabel": "Sat, Oct 17 · 6:00 PM",
+      "venue": "Fox Hollow Rodeo, Waynesville",
+      "category": "Rodeo",
+      "source": "https://foxhollowrodeo.com/",
+      "note": "Every Saturday at 6:00 PM year-round; moves indoors October through April"
+    },
+    {
+      "title": "Warren County Commissioners — Weekly Session",
+      "dateISO": "2026-10-20T09:00:00-04:00",
+      "dateLabel": "Tue, Oct 20 · 9:00 AM",
+      "venue": "406 Justice Dr, Lebanon",
+      "category": "Government",
+      "source": "https://commissioners.warrencountyohio.gov/News/AgendaMinutes/Index",
+      "note": "Weekly commissioners session; agendas and minutes posted online"
     }
   ]
 }

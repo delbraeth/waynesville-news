@@ -1,7 +1,14 @@
 {
   "_note": "Recent Wayne Local Schools Facebook posts via rss.app bridge. Title + link + short excerpt; the district's own words. Fail-safe: kept from last run if the bridge is down.",
-  "updated": "2026-10-09T10:41:27.578Z",
+  "updated": "2026-10-10T10:41:30.068Z",
   "items": [
+    {
+      "title": "🍎Today’s WLS Fiscal Focus: What Happens on a Teacher Professional Day? 📅Students have the day off today, but our…",
+      "link": "https://www.facebook.com/waynelocalschools/posts/pfbid0JsbkFFnJLPaadyvyVd3zdx4yd1t6FABYwYTKhtNpNDywdEMt5kR6Cd4TFDZLykB9l",
+      "date": "Fri, 09 Oct 2026 18:39:02 GMT",
+      "dateLabel": "Fri, Oct 9",
+      "excerpt": "teachers are hard at work. Teacher professional days are built into the school calendar to give educators dedicated time to train, collaborate, plan curriculum, and improve instructional practices. 🏦So, how does this connect to school finances? ▶Professional days are part of teachers'…"
+    },
     {
       "title": "🎉WES is just $400 away from reaching its fundraising goal! Donations can be made until Friday, October 9 at 11:59 p.m.W...",
       "link": "https://www.facebook.com/waynelocalschools/posts/pfbid022SxXhh3s48Fh9YKg4sMA4XfrtHjcVN9meBwoBQBp2WWvY6wevZ3DYZZrVXPRbdfhl",
@@ -50,13 +57,6 @@
       "date": "Tue, 06 Oct 2026 12:02:03 GMT",
       "dateLabel": "Tue, Oct 6",
       "excerpt": "concepts to work with a hands-on investigation of one-dimensional motion. Students chose objects to test, collected position and time data, graphed the results, and used their findings to calculate speed, velocity, and acceleration.📝 They also examined how human error can affect experimental…"
-    },
-    {
-      "title": "🔸October is National Bullying Prevention Month. Throughout this month, Wayne Local Schools is joining schools across…",
-      "link": "https://www.facebook.com/waynelocalschools/posts/pfbid0GUuBUTRvGXSJVUn4qHH138h33nmqnyAM8mjTfD2CCpGvAMctH5KZ2ahgZRNgtbRTl",
-      "date": "Mon, 05 Oct 2026 19:38:40 GMT",
-      "dateLabel": "Mon, Oct 5",
-      "excerpt": "the country in raising awareness about bullying and promoting kindness, acceptance, inclusion, and belonging among our students. ⭐We encourage every student to be an upstander - someone who speaks up, supports others, includes those who may feel left out, and reports bullying or unkind behavior…"
     }
   ]
 }

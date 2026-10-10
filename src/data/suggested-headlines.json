@@ -1,13 +1,7 @@
 {
   "_note": "Candidate local headlines (Google News RSS). Published as a quoted headline (or, when available, a short publisher-written excerpt) + source + link; never reproduce article body text.",
-  "updated": "2026-10-09T10:43:56.990Z",
+  "updated": "2026-10-10T10:41:30.970Z",
   "items": [
-    {
-      "title": "Court Celebrates Sibling Success in Recovery",
-      "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTE5mcFhBWVhsdmI0YVFRMkI4eEpVdW9xWVhBaU5XOUVxR1cwalFkYTlHeUdRVDJrUEJzZTRkWHNHQXVXT2ZnRUcxTjQwRGVoOVZ0cmJEdDZxSEhjZ19qYUxHY2RySTUtQUEzY2tmTmxVYVBLVG1CYWtsdk1CMA?oc=5",
-      "source": "Court News Ohio (.gov)",
-      "date": "Thu, 08 Oct 2026 14:41:54 GMT"
-    },
     {
       "title": "Soybean Harvest Cab Cam – Mike Lutmer, Warren County",
       "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBQcWFEUjlzTTNzYjBJdldfWFFQZk02MlRTbFVyT2tyQlRjOFA0ZUpTeFQ1Q21pdzBHeUJRUkFmcC1reDM1b3JCSTNXOUxQY3piWkJVOGZIN2g2bHZYZHFaNGlBNnh3a1EzOWJ4MVVEYWtTUDFmR1F2ZVNXTWtVYlE?oc=5",
@@ -15,16 +9,22 @@
       "date": "Tue, 06 Oct 2026 22:02:20 GMT"
     },
     {
-      "title": "The 56th Waynesville Sauerkraut Fetival Is Happening This Weekend",
-      "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOSnI3b3BXZ3RvY1paLUdqVzhnSkZ0ZHBMa19TMS1FUkgtWFBKMlVvVlNBQWtNa0lUSE1zZVlIcDIteldGWG5SVWZWd214VThCQmd6VnZiTHVybVQ3b01uajA4ekxrSE9xT29rQ1lON1QwRnRod1k0dGFua3ExQnRlby0xbGZSQU9wSFMzbm90SFE2M1BSNlR1U1cwSC1taEQ4aWNTNTdadWVSSjRa?oc=5",
-      "source": "Warren County Post",
-      "date": "Wed, 07 Oct 2026 21:42:59 GMT"
+      "title": "Court Celebrates Sibling Success in Recovery",
+      "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTE5mcFhBWVhsdmI0YVFRMkI4eEpVdW9xWVhBaU5XOUVxR1cwalFkYTlHeUdRVDJrUEJzZTRkWHNHQXVXT2ZnRUcxTjQwRGVoOVZ0cmJEdDZxSEhjZ19qYUxHY2RySTUtQUEzY2tmTmxVYVBLVG1CYWtsdk1CMA?oc=5",
+      "source": "Court News Ohio (.gov)",
+      "date": "Thu, 08 Oct 2026 14:41:54 GMT"
     },
     {
-      "title": "Warren County sheriff searching for suspects after multiple people report shattered car windshields",
-      "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOYmV2WDlaWkNNTVRXVzA4MDktWVB6THRva1FOeENHNVNDZUtlMk42Uk9GSDJDVl9jMUhNV2k5cHB0d2tvUGNTRHZ5d01DZTFpdmY3VndFTk9EQTdQY29IRkJQRmFMNW1OeXJSOVRfdDFKYWVQV0tPZGVyZGJjd3VPU2REcU5JbnhRekNtSi12Z3E0dGpNYU5yQjN1Vm4xUGNU?oc=5",
-      "source": "WLWT",
-      "date": "Mon, 05 Oct 2026 17:41:00 GMT"
+      "title": "Joyce Leifheit Obituary (2026) - Waynesville, OH - News Journal",
+      "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNX3IxT1lWWEpRN0ltMEN4S1RvY29oOUpBUUJCSF9xRzdOX19UanVreUxSN3d0Z0ltTjhOa05ZdDNRR1dhN05ZUnNvUDQ4VFNkeUlPVmlnOERGZ2N6V0VCV1hWV0J1WmtsTkRybzZvclh1dFVVS2x0d19FcWdZa2JPWmNUa0lJcGlYaEh5dg?oc=5",
+      "source": "Legacy | Obituary",
+      "date": "Sat, 10 Oct 2026 01:44:02 GMT"
+    },
+    {
+      "title": "56th OHIO SAUERKRAUT FESTIVAL",
+      "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNWGF3OEYzWWtpSnJUdE9ubjYzbW5hdkRIQ25VTWVnZ2JhRFNTTWFxQzVUZlBBZ1IzUVJEMXpnbllUNkk4LU1YRi1zZG5kTExsV3ZZb2twejQ2ZzB5QnBRQUdFek5HVkRxRFNXZEVfYWtnM1Q2UHlmY2M3RGpmdEdrQVJiNXZHdllk?oc=5",
+      "source": "Warren County Post",
+      "date": "Fri, 09 Oct 2026 13:06:16 GMT"
     },
     {
       "title": "Murder investigation underway at state prison in Warren County",
@@ -33,22 +33,22 @@
       "date": "Tue, 06 Oct 2026 11:45:00 GMT"
     },
     {
+      "title": "Warren County sheriff searching for suspects after multiple people report shattered car windshields",
+      "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOYmV2WDlaWkNNTVRXVzA4MDktWVB6THRva1FOeENHNVNDZUtlMk42Uk9GSDJDVl9jMUhNV2k5cHB0d2tvUGNTRHZ5d01DZTFpdmY3VndFTk9EQTdQY29IRkJQRmFMNW1OeXJSOVRfdDFKYWVQV0tPZGVyZGJjd3VPU2REcU5JbnhRekNtSi12Z3E0dGpNYU5yQjN1Vm4xUGNU?oc=5",
+      "source": "WLWT",
+      "date": "Mon, 05 Oct 2026 17:41:00 GMT"
+    },
+    {
+      "title": "The 56th Waynesville Sauerkraut Fetival Is Happening This Weekend",
+      "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOSnI3b3BXZ3RvY1paLUdqVzhnSkZ0ZHBMa19TMS1FUkgtWFBKMlVvVlNBQWtNa0lUSE1zZVlIcDIteldGWG5SVWZWd214VThCQmd6VnZiTHVybVQ3b01uajA4ekxrSE9xT29rQ1lON1QwRnRod1k0dGFua3ExQnRlby0xbGZSQU9wSFMzbm90SFE2M1BSNlR1U1cwSC1taEQ4aWNTNTdadWVSSjRa?oc=5",
+      "source": "Warren County Post",
+      "date": "Wed, 07 Oct 2026 21:42:59 GMT"
+    },
+    {
       "title": "Dr. Joyce M. Leifheit Obituary (2026) - Waynesville, OH - Stubbs-Conner Funeral Home & Cremation Services",
       "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQaDZHeFB5UHJFb2p1aXBEUGhkajBYM0R5QWtEc3ZnNVFPRnVaMW5odjlLaFpWMzNjX3E3U1puTnNiaWpUZ0tINk0xNHZqQWY0TkVaaGZrdmZBSmtmaWhna05LUURSZ1dOTkRkMEk0RHF0cFpJbmhIckVPd3lNWkV6MFhnRQ?oc=5",
       "source": "Legacy | Obituary",
       "date": "Thu, 08 Oct 2026 12:30:04 GMT"
-    },
-    {
-      "title": "Guided Fossil Collecting at Caesar Creek Highlights Ohio Earth Science Week",
-      "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOeGhjSGtEQjRSQVpHT1pIMTgweGhMQzZKaEJuQzZIX21PaGpUM3lHYVB0Rl84enFSelE4OExIR3laQnFEeUh3TWt2ZVdlUHNUbHFKUFJxMWRlZkRNcl9mdjY3bndZaU9MWkF0Z1hZa2ZNdWY2SjBXVzlsWTRpcGJiNFYzSmFSM1RnSEI4TXZmcm0xRkFJdEhkdHRlUHB6VXRRclB0RDdxcWcwajdsRnVKaHJPY2EwdkdhejFpdjNQVWZxLWs4Z3c?oc=5",
-      "source": "Warren County Post",
-      "date": "Wed, 07 Oct 2026 02:29:46 GMT"
-    },
-    {
-      "title": "56th OHIO SAUERKRAUT FESTIVAL",
-      "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNWGF3OEYzWWtpSnJUdE9ubjYzbW5hdkRIQ25VTWVnZ2JhRFNTTWFxQzVUZlBBZ1IzUVJEMXpnbllUNkk4LU1YRi1zZG5kTExsV3ZZb2twejQ2ZzB5QnBRQUdFek5HVkRxRFNXZEVfYWtnM1Q2UHlmY2M3RGpmdEdrQVJiNXZHdllk?oc=5",
-      "source": "Warren County Post",
-      "date": "Wed, 07 Oct 2026 22:20:33 GMT"
     }
   ]
 }

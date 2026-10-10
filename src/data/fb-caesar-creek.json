@@ -1,7 +1,14 @@
 {
   "_note": "Recent Caesar Creek State Park Facebook posts via rss.app bridge. Title + link + short excerpt; the park's own words. Fail-safe: kept from last run if the bridge is down.",
-  "updated": "2026-10-09T10:41:27.655Z",
+  "updated": "2026-10-10T10:41:30.139Z",
   "items": [
+    {
+      "title": "A very special day at Caesar Creek State Park! 💙🐾 After years of planning, hard work, and wonderful partnerships, we…",
+      "link": "https://www.facebook.com/CaesarCreekStatePark/posts/pfbid0mSt7mWMcQtgsmhSwRpKACMKjw1nScx5csNUwGwVSaofYdwHJMHWUWk8oycxka17zl",
+      "date": "Fri, 09 Oct 2026 22:10:40 GMT",
+      "dateLabel": "Fri, Oct 9",
+      "excerpt": "are proud to officially welcome visitors to the Jason Lagore Memorial Dog Park. We are honored to have this special place at Caesar Creek, celebrating Officer Lagore’s legacy for generations to come. Thank you to everyone who helped make this vision a reality! Today, we proudly opened the Jason…"
+    },
     {
       "title": "Our America 250 event was eye opening. We will do this event again.Our Celestial Stories of the Underground Railroad eve...",
       "link": "https://www.facebook.com/CaesarCreekStatePark/posts/pfbid0QQTWczGrNFTQYbbMsRkxPF7ugkgvq9DUgGMeLLRB9BYVEXq5hMBDAQ3rXxAFR6Xjl",
@@ -22,20 +29,6 @@
       "date": "Thu, 01 Oct 2026 14:02:50 GMT",
       "dateLabel": "Thu, Oct 1",
       "excerpt": "Officer Jason Lagore at the Jason Lagore Memorial Dog Park in Caesar Creek State Park. This special dedication will bring together Jason’s family, friends, fellow officers, ODNR representatives, Friends of Ohio K9 supporters, project partners, and community members who helped make this memorial…"
-    },
-    {
-      "title": "Join us this weekend! Pre-register with the links provided. Hope to see you there!✨ Mark Your Calendar! ✨ Celestial Stor...",
-      "link": "https://www.facebook.com/CaesarCreekStatePark/posts/pfbid02zZ675wQioj38MEQXYML8Q4MfBupSVs6dmdtHh5iQCiyMjNRhSm4WFcEG2cQg5Nxgl",
-      "date": "Tue, 29 Sep 2026 18:38:12 GMT",
-      "dateLabel": "Tue, Sep 29",
-      "excerpt": "Join us this weekend! Pre-register with the links provided. Hope to see you there! ✨ Mark Your Calendar! ✨ Celestial Stories of the Underground Railroad will take place on October 2 and 3 — a powerful, two‑day experience connecting history, nature, and the night sky. 🌙 October 2 Join us at…"
-    },
-    {
-      "title": "Ohio State Park Dock Lotteries opening soon! You can apply for a dock slip from October 1 - 31, 2026. Drawings are held…",
-      "link": "https://www.facebook.com/CaesarCreekStatePark/posts/pfbid022wMFBjoZZARu55J7VuakwnwnY92yESNqdSkbdcWi78LhC1GS6cNqhA5vbvj959YXl",
-      "date": "Tue, 29 Sep 2026 15:12:43 GMT",
-      "dateLabel": "Tue, Sep 29",
-      "excerpt": "in November. Click the link below for more information and how to apply: https://ohiodnr.gov/docklottery"
     }
   ]
 }
