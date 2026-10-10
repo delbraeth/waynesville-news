@@ -168,7 +168,10 @@
       "venue": "Participating shops on Main, High and Miami streets and Scioto Square, Waynesville",
       "category": "Family",
       "source": "https://waynesvilleshops.com/event/waynesville-trick-or-treat-in-historic-downtown/",
-      "note": "Merchant Association trick-or-treat stroll through the downtown shops. Separate from the Village-wide trick-or-treat hours on Sat, Oct 31."
+      "note": "Merchant Association trick-or-treat stroll through the downtown shops. Separate from the Village-wide trick-or-treat hours on Sat, Oct 31.",
+      "tags": [
+        "trick-or-treat"
+      ]
     },
     {
       "title": "Business to Business Networking Mixer — October",
@@ -196,7 +199,10 @@
       "venue": "Village of Waynesville (residential streets)",
       "category": "Family",
       "source": "https://www.villageofwaynesville.org/events/event/trick-or-treat/2026-10-31/",
-      "note": "Official village-wide trick-or-treat hours, per the Village's events calendar. Separate from the downtown shops' Trick or Treat stroll on Sun, Oct 25."
+      "note": "Official village-wide trick-or-treat hours, per the Village's events calendar. Separate from the downtown shops' Trick or Treat stroll on Sun, Oct 25.",
+      "tags": [
+        "trick-or-treat"
+      ]
     },
     {
       "title": "Business to Business Networking Lunch — November",
@@ -272,7 +278,10 @@
       "venue": "Waynesville Elementary School",
       "category": "Schools",
       "source": "https://www.wayne-local.com/",
-      "note": "Per the district Community Events & Activities newsletter (October 2026): carnival games, bingo, treat walk; costumes encouraged; food available"
+      "note": "Per the district Community Events & Activities newsletter (October 2026): carnival games, bingo, treat walk; costumes encouraged; food available",
+      "tags": [
+        "trick-or-treat"
+      ]
     },
     {
       "title": "Devil's Staircase Pro Hillclimb Weekend (77th annual)",
@@ -339,7 +348,36 @@
       "venue": "Ohio Living Quaker Heights, 514 High St, Waynesville",
       "category": "Family",
       "source": "https://ohioliving.org/communities/ohio-living-quaker-heights",
-      "note": "Open to the community: kids walk through the building while residents pass out candy."
+      "note": "Open to the community: kids walk through the building while residents pass out candy.",
+      "tags": [
+        "trick-or-treat"
+      ]
+    },
+    {
+      "title": "Trunk-Or-Treat in the Park — Springboro",
+      "dateISO": "2026-10-18T15:00:00-04:00",
+      "endISO": "2026-10-18T18:00:00-04:00",
+      "dateLabel": "Sun, Oct 18 · 3:00–6:00 PM",
+      "venue": "North Park, 195 Tamarack Trl, Springboro",
+      "category": "Family",
+      "source": "https://business.springboroohio.org/events/Details/trunk-or-treat-in-the-park-1935639?sourceTypeId=Website",
+      "note": "Second annual, put on by local businesses: decorated trunks, best costume and best decorated trunk contests, a haunted trailer, police and fire visits, food trucks, vendors and live music. Set up on the paved area next to the restrooms.",
+      "tags": [
+        "trick-or-treat"
+      ]
+    },
+    {
+      "title": "Kirby’s Community Connect Trunk-or-Treat — Lebanon",
+      "dateISO": "2026-10-22T18:00:00-04:00",
+      "endISO": "2026-10-22T19:30:00-04:00",
+      "dateLabel": "Thu, Oct 22 · 6:00–7:30 PM",
+      "venue": "Warren County Career Center, 3525 N SR 48, Lebanon",
+      "category": "Family",
+      "source": "https://business.lebanonchamber.org/main-calendar/Details/kirby-s-community-connect-trunk-or-treat-1852368?sourceTypeId=Website",
+      "note": "Family-friendly trunk-or-treat with decorated trunks, booths and treats, hosted by Kirby’s Auto and Truck Repair. Check the event page for details.",
+      "tags": [
+        "trick-or-treat"
+      ]
     }
   ]
 }
