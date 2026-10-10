@@ -330,6 +330,16 @@
       "category": "Government",
       "source": "https://commissioners.warrencountyohio.gov/News/AgendaMinutes/Index",
       "note": "Weekly commissioners session; agendas and minutes posted online"
+    },
+    {
+      "title": "Trick or Treat at Ohio Living Quaker Heights",
+      "dateISO": "2026-10-28T18:00:00-04:00",
+      "endISO": "2026-10-28T19:00:00-04:00",
+      "dateLabel": "Wed, Oct 28 · 6:00–7:00 PM",
+      "venue": "Ohio Living Quaker Heights, 514 High St, Waynesville",
+      "category": "Family",
+      "source": "https://ohioliving.org/communities/ohio-living-quaker-heights/about",
+      "note": "Open to the community: kids walk through the building while residents pass out candy."
     }
   ]
 }
