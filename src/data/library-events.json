@@ -1,13 +1,7 @@
 {
   "_note": "Mary L. Cook Public Library — upcoming programs from the library's WhoFi event calendar (https://marylcook-main-oh.whofi.com/calendar/full), next 14 days. Canceled events excluded.",
-  "updated": "2026-10-10T10:41:37.807Z",
+  "updated": "2026-10-11T10:40:55.830Z",
   "items": [
-    {
-      "title": "Sauerkraut Festival",
-      "dateISO": "2026-10-10T10:00:00Z",
-      "dateLabel": "Sat · Oct 10, 10:00 AM",
-      "link": "https://marylcook-main-oh.whofi.com/calendar/event/8283/"
-    },
     {
       "title": "Monsters University Interactive Movie Kits",
       "dateISO": "2026-10-12T09:00:00Z",
@@ -49,6 +43,12 @@
       "dateISO": "2026-10-14T10:30:00Z",
       "dateLabel": "Wed · Oct 14, 10:30 AM",
       "link": "https://marylcook-main-oh.whofi.com/calendar/event/352434/"
+    },
+    {
+      "title": "Teen Dungeons and Dragons (6th-12th grade)",
+      "dateISO": "2026-10-14T15:00:00Z",
+      "dateLabel": "Wed · Oct 14, 3:00 PM",
+      "link": "https://marylcook-main-oh.whofi.com/calendar/event/352463/"
     }
   ]
 }
