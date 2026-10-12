@@ -1,31 +1,46 @@
 {
   "_note": "Auto-refreshed from the NWS API (api.weather.gov, ILN/Wilmington office).",
   "location": "Waynesville, OH",
-  "tempF": 69,
-  "condition": "Showers And Thunderstorms Likely",
-  "periodName": "Today",
-  "highF": 69,
-  "lowF": 55,
+  "tempF": 81,
+  "condition": "Areas Of Fog then Mostly Sunny",
+  "periodName": "Columbus Day",
+  "highF": 81,
+  "lowF": 63,
   "outlook": [
     {
-      "dayLabel": "Columbus Day",
-      "highF": 81,
-      "lowF": 63,
-      "condition": "Patchy Fog then Partly Sunny"
-    },
-    {
       "dayLabel": "Tuesday",
-      "highF": 85,
-      "lowF": 64,
+      "highF": 86,
+      "lowF": 66,
       "condition": "Sunny"
     },
     {
       "dayLabel": "Wednesday",
-      "highF": 79,
-      "lowF": 58,
+      "highF": 81,
+      "lowF": 62,
+      "condition": "Showers And Thunderstorms"
+    },
+    {
+      "dayLabel": "Thursday",
+      "highF": 72,
+      "lowF": 57,
       "condition": "Showers And Thunderstorms Likely"
     }
   ],
-  "alerts": [],
-  "updated": "2026-10-11T10:40:46.694Z"
+  "alerts": [
+    {
+      "event": "Dense Fog Advisory",
+      "headline": "Dense Fog Advisory issued October 12 at 5:05AM EDT until October 12 at 11:00AM EDT by NWS Wilmington OH",
+      "severity": "Moderate",
+      "expires": "2026-10-12T11:00:00-04:00",
+      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.3a751f2099faa8b6447e1f6346acfd63cb2fff7f.001.1"
+    },
+    {
+      "event": "Special Weather Statement",
+      "headline": "Special Weather Statement issued October 12 at 4:43AM EDT by NWS Wilmington OH",
+      "severity": "Moderate",
+      "expires": "2026-10-12T09:00:00-04:00",
+      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.052401ac83da1ddb63de1ce56d485e480acd3731.001.1"
+    }
+  ],
+  "updated": "2026-10-12T10:40:54.858Z"
 }

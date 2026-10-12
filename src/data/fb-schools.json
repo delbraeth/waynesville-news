@@ -1,7 +1,21 @@
 {
   "_note": "Recent Wayne Local Schools Facebook posts via rss.app bridge. Title + link + short excerpt; the district's own words. Fail-safe: kept from last run if the bridge is down.",
-  "updated": "2026-10-11T10:40:47.319Z",
+  "updated": "2026-10-12T10:40:55.527Z",
   "items": [
+    {
+      "title": "Reminder, Spartan families! There is no school tomorrow, Monday, October 12, for fall break. Enjoy the long weekend, and…",
+      "link": "https://www.facebook.com/waynelocalschools/posts/pfbid01DkoKiRNYjoPSeqZJJdrXuxvm4Af6poMA9uts6EaVt9y4iGJDQ6cBzjn4oA1f8bml",
+      "date": "Sun, 11 Oct 2026 23:43:05 GMT",
+      "dateLabel": "Sun, Oct 11",
+      "excerpt": "we'll see everyone back on Tuesday, October 13, refreshed and ready to go!"
+    },
+    {
+      "title": "The impact of a Wayne Local Schools education can be felt for generations! On Friday morning, Christina Hunt visited the…",
+      "link": "https://www.facebook.com/waynelocalschools/posts/pfbid0bfKNmUdyX2KtJCjidnY79opzhvn8nnUqs5x2JJFncjNy2swzewJ9jZgqkMP9MwV2l",
+      "date": "Sun, 11 Oct 2026 13:34:05 GMT",
+      "dateLabel": "Sun, Oct 11",
+      "excerpt": "district to meet with members of the WHS Athletic Council, WHS Leo Club and the Waynesville Schools Foundation and share the inspiring story of her mother, Carol Ludington Hunt, Waynesville High School Class of 1940 Valedictorian. Although Christina did not attend WHS, Waynesville High School…"
+    },
     {
       "title": "Waynesville Elementary kindergarten and young fives students are learning all about fire safety and firefighters.…",
       "link": "https://www.facebook.com/reel/2078372326143005/",
@@ -43,20 +57,6 @@
       "date": "Thu, 08 Oct 2026 19:25:21 GMT",
       "dateLabel": "Thu, Oct 8",
       "excerpt": "district. Here's our latest Board Meeting Recap:"
-    },
-    {
-      "title": "Community member Keith Goldsberry has been a big supporter of Waynesville Spartans Athletics for years, and this…",
-      "link": "https://www.facebook.com/waynelocalschools/posts/pfbid025s4ig6VwHBzir4gf6dvqd6nZHuC3aW8KNSzqRt8jb6z24LpuvfvnrfBRiy3rE7aal",
-      "date": "Thu, 08 Oct 2026 14:01:40 GMT",
-      "dateLabel": "Thu, Oct 8",
-      "excerpt": "volleyball season has been no exception! Keith has attended every single home game this year, along with several away games, cheering on the Spartans every step of the way. His dedication and support haven't gone unnoticed! Last week, the WHS volleyball seniors surprised Keith with a custom…"
-    },
-    {
-      "title": "💗PINK OUT this FRIDAY NIGHT at HOME vs Madison, BE THERE! #SPARTANPRIDE",
-      "link": "https://www.facebook.com/waynelocalschools/posts/pfbid04qSGGC2x9FmTyTrC8FRjbxuPYWB5jcACSxQhZfyLMJRWndt8zfPRnoXBEY8Lh8Xrl",
-      "date": "Wed, 07 Oct 2026 11:24:13 GMT",
-      "dateLabel": "Wed, Oct 7",
-      "excerpt": "💗 PINK OUT this FRIDAY NIGHT at HOME vs Madison, BE THERE! #SPARTANPRIDE"
     }
   ]
 }

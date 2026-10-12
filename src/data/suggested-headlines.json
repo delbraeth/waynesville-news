@@ -1,30 +1,12 @@
 {
   "_note": "Candidate local headlines (Google News RSS). Published as a quoted headline (or, when available, a short publisher-written excerpt) + source + link; never reproduce article body text.",
-  "updated": "2026-10-11T10:40:48.322Z",
+  "updated": "2026-10-12T10:40:56.739Z",
   "items": [
-    {
-      "title": "Jason Lagore Memorial Dog Park Opens at Caesar Creek State Park",
-      "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQWEpHejZwdHVxajl1SHYyRDVMb2JuME9qalZnVGNrN0l0M3RVMGJRSXNuN3YtT1VqZEZCWVpjVW9VdV9lel91cE10NDFScmhtbGwxeGRkWjB5blVpWjB4ZW40X0JSNG55R3c5QWk4N1JETVdpNVBNYUhsbnlqWThhcXMybW9oUnc1VFFQN1BXTy01QWpaNDhLYVJqQ1Zrc3RHclJYYm9uY05SZGRqa2JnNG1POG9Xdw?oc=5",
-      "source": "Warren County Post",
-      "date": "Sun, 11 Oct 2026 00:45:16 GMT"
-    },
     {
       "title": "Waynesville Sauerkraut Festival brings food, fundraising and community pride",
       "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNMnBuUWdKSTVzTlR1MVFoTjcwRFRoYmRtZGpELXoyUE8tUTVTV2dpTlRmOGlMLVFYWTJyVEhjaHNhZGpYLXVTRFlIckpNb1puSzNRRS1iVWJQYkQtbzhEYXQ1Qmd6aDFuTGRTLUVDMWlGM21CNUdhcTdsai1OU3BkSHFycHhjZlpnb2hoLW00LWN0MXZKQy1GWEhpa05YN005N3BsWU9YRVVfTmNoUzU1VA?oc=5",
       "source": "WKEF",
       "date": "Sun, 11 Oct 2026 01:48:47 GMT"
-    },
-    {
-      "title": "First responders recover body of missing 10-year-old boy from pond in Warren County",
-      "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNcHVQT09EWXpjYzJwempkWlpOOENpTGFjOHo3UzF4c0cwVi1pNjZkdUVjRHNVMHJsdTJsNVQ2VnBfbk54WUNPQ2dEcXd3QzhSMnY0blV1UEVoODRwdnozV2ROdGhRZjZpb0RKQTFBdW52SzU4N0lpRGdrZEM3Mmo1dk1RYzJST2szTHMxdFlaeGZxdjVkczdVZzA2RHZ2dkRxNi0xYVA1U2lEZw?oc=5",
-      "source": "WLWT",
-      "date": "Sun, 11 Oct 2026 04:59:00 GMT"
-    },
-    {
-      "title": "James Engle Obituary (2026) - Waynesville, OH - Dayton Daily News",
-      "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPWkNQa0c5NmNMQkppOXpRdEUxOUdQNGxSWlNTY2oySWU2WG90MHFTelVtRm52UGY2SnlodTNPQzZFem9hOVg4VDVURG1pSkItaThuVHFoSWF0aUJGWXBYQ3FFNlV3ZEpnQVFrYXM1YWExYXFOcVpXMmtqQW1RRWY1ZTRXb1lUaEdR?oc=5",
-      "source": "Legacy | Obituary",
-      "date": "Sun, 11 Oct 2026 05:54:14 GMT"
     },
     {
       "title": "Soybean Harvest Cab Cam – Mike Lutmer, Warren County",
@@ -33,22 +15,40 @@
       "date": "Tue, 06 Oct 2026 22:02:20 GMT"
     },
     {
-      "title": "The Eastern Chipmunk",
-      "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBMQjNCWERURjk1Z0FuNmV6bnN5Y21tNGhBUGZVb1JPQjB4RmQyQXlkVklncXZJQmVSSlFpcElsb3VMYm95OFRIaGRyNjNJenBmSTJQV3pQc3RzR1Z1QUNRRkx0NjJFVENsbG1uVlBJSGFXcFFESkE?oc=5",
+      "title": "Jason Lagore Memorial Dog Park Opens at Caesar Creek State Park",
+      "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQWEpHejZwdHVxajl1SHYyRDVMb2JuME9qalZnVGNrN0l0M3RVMGJRSXNuN3YtT1VqZEZCWVpjVW9VdV9lel91cE10NDFScmhtbGwxeGRkWjB5blVpWjB4ZW40X0JSNG55R3c5QWk4N1JETVdpNVBNYUhsbnlqWThhcXMybW9oUnc1VFFQN1BXTy01QWpaNDhLYVJqQ1Zrc3RHclJYYm9uY05SZGRqa2JnNG1POG9Xdw?oc=5",
       "source": "Warren County Post",
-      "date": "Sun, 11 Oct 2026 00:25:36 GMT"
+      "date": "Sun, 11 Oct 2026 00:45:16 GMT"
     },
     {
       "title": "Joyce Leifheit Obituary (2026) - Waynesville, OH - Dayton Daily News",
       "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNQnBmMmFkVjgxczdrQm1QTzctT1MyMHhKcE9OZHFCRXd5QnFmRmpXMEd5YlIwbmtqV0FCSFAwVGpTMm0zVlB3QnZvMjZmNFZ3QUFoek9FMWNtSFhMb0ZhR2RucHNQTmEzSXdzWTRTR3RkM2NsdVdJV3hHQ2F2Nk5OcXZzNHpaQnlYMFdUeg?oc=5",
       "source": "Legacy | Obituary",
-      "date": "Sun, 11 Oct 2026 05:43:05 GMT"
+      "date": "Sun, 11 Oct 2026 05:54:14 GMT"
+    },
+    {
+      "title": "First responders recover body of missing 10-year-old boy from pond in Warren County",
+      "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNcHVQT09EWXpjYzJwempkWlpOOENpTGFjOHo3UzF4c0cwVi1pNjZkdUVjRHNVMHJsdTJsNVQ2VnBfbk54WUNPQ2dEcXd3QzhSMnY0blV1UEVoODRwdnozV2ROdGhRZjZpb0RKQTFBdW52SzU4N0lpRGdrZEM3Mmo1dk1RYzJST2szTHMxdFlaeGZxdjVkczdVZzA2RHZ2dkRxNi0xYVA1U2lEZw?oc=5",
+      "source": "WLWT",
+      "date": "Sun, 11 Oct 2026 04:59:00 GMT"
+    },
+    {
+      "title": "Missing child found dead in a pond in Warren County",
+      "link": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxQUmZTXzd3UlN3RXJVTFc3MThQYXBLV1BTcVlmejVMM2Z1Y2Q4akJjOExfTUhaYXVmSHctR1Nnd2Z1RzdZczJ3eFRYWWdCZEk5Vm9tVVd6dFRya0JSMDBqRWRZTTd6aGtDbExNdGx3ellGSVJGWjJJRFlEam1VbFhmRXFiejY0b2ZsNy1icXJkNnNEbEdNUzNvcjBDOEZIbVFhWjFVeURDOFpOYkl3TnR3X1huLWFFd2dTWk5LakVSaHZWSEduQmcyTUVmUVR0TXhzaWRZb1NWTDFUdw?oc=5",
+      "source": "WKRC",
+      "date": "Sat, 10 Oct 2026 21:56:23 GMT"
     },
     {
       "title": "Murder investigation underway at state prison in Warren County",
       "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNVUZySzhkYjFfVmpCQU9SSXg1QV8wWlJGVkVobW9CMVdZOU5IZzd6SWtGWXRpMTU5azZqU1FjcUo3Q2xFTFZKX1kzTEVtaVZyWDJWdzk0WW5xU3Z2TGhyaGFONHNjYUtoYVZXOEp1dUxFWkRYd2gzR2k4aUR1dkM0bXVIcjFpUmh2UnFKaGhraVp1czlvd1ZoVDdqMks3djdGOTRLQTRNQdIBuwFBVV95cUxPN1ZYOE1pTHdoZEJmU1RKWnZTazJ4dXJfYnRBTVpqWDJKTnVfTGpheDlabWtmM3JDLWI4dmsxMEx5OGxfNUU2d3d4OW9IcUtHTlFCSG0wdG9ScUN6SjVWS2FGNXlTeVJ3WWNBRW1CTkJ3ZGR4anBnaUo3c0pxWUF5SkFlUDNuZ1diemVIRzlqRV83dXNTTmZESktkeGJFdFlMc2wxOHJ4azFmSXhwMzVlVjJRSTVNVmhyQ01v?oc=5",
       "source": "FOX19 | Cincinnati",
       "date": "Tue, 06 Oct 2026 11:45:00 GMT"
+    },
+    {
+      "title": "The Eastern Chipmunk",
+      "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBMQjNCWERURjk1Z0FuNmV6bnN5Y21tNGhBUGZVb1JPQjB4RmQyQXlkVklncXZJQmVSSlFpcElsb3VMYm95OFRIaGRyNjNJenBmSTJQV3pQc3RzR1Z1QUNRRkx0NjJFVENsbG1uVlBJSGFXcFFESkE?oc=5",
+      "source": "Warren County Post",
+      "date": "Sun, 11 Oct 2026 00:25:36 GMT"
     }
   ]
 }

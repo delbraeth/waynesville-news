@@ -1,5 +1,5 @@
 {
-  "_note": "Real venues and sources, verified against each listed source on 2026-10-11 (daily automated refresh). Wayne Local school dates per The Spartan (September and October 2026) and the district Community Events & Activities newsletter (October 2026) and Board Meeting Recap (October 2026). Recurring items (rodeo, commissioners, ghost walk) show the next occurrence. Warren County Park District events page SUSPENDED as a source per Cap'n (2026-10-03): it sits behind a Cloudflare bot challenge (403 since 2026-09-24). Do not fetch it or report it as failing; its items from the 2026-09-23 check are kept until they expire. Resume only when Cap'n provides a working source. Event notes and dateLabels are shown to readers: write them for readers (what, when, where, and a helpful pointer like \"check the event website for times\" when a detail is missing). Never put editorial or process notes in them (\"not published\", \"confirm before printing\", \"corrected from\", \"checked on\"); record corrections in the commit message instead.",
+  "_note": "Real venues and sources, verified against each listed source on 2026-10-12 (daily automated refresh). Wayne Local school dates per The Spartan (September and October 2026) and the district Community Events & Activities newsletter (October 2026) and Board Meeting Recap (October 2026). Recurring items (rodeo, commissioners, ghost walk) show the next occurrence. Warren County Park District events page SUSPENDED as a source per Cap'n (2026-10-03): it sits behind a Cloudflare bot challenge (403 since 2026-09-24). Do not fetch it or report it as failing; its items from the 2026-09-23 check are kept until they expire. Resume only when Cap'n provides a working source. Event notes and dateLabels are shown to readers: write them for readers (what, when, where, and a helpful pointer like \"check the event website for times\" when a detail is missing). Never put editorial or process notes in them (\"not published\", \"confirm before printing\", \"corrected from\", \"checked on\"); record corrections in the commit message instead.",
   "items": [
     {
       "title": "Historical Haunts — ghost walk of downtown Waynesville",
@@ -30,15 +30,6 @@
       "category": "Festival",
       "source": "https://waynesvillefallfest.com/",
       "note": "Corn maze, mini golf, petting farm, and other fall activities; $16 adult / $14 ages 10 & under daily admission. Not affiliated with Hisey Fall Fest."
-    },
-    {
-      "title": "Toddler Trek: Spider Kid at Landen-Deerfield Park",
-      "dateISO": "2026-10-07T10:30:00-04:00",
-      "dateLabel": "Wed, Oct 7 · 10:30–11:30 AM",
-      "venue": "Landen-Deerfield Park, 2258 US-22/3, Maineville",
-      "category": "Outdoors",
-      "source": "https://www.warrencountyparks.com/events/",
-      "note": "Warren County Park District toddler nature program"
     },
     {
       "title": "Parent-Teacher Conferences — Wayne Local Schools",
@@ -232,16 +223,6 @@
       "category": "Government",
       "source": "https://commissioners.warrencountyohio.gov/News/AgendaMinutes/Index",
       "note": "Weekly commissioners session; agendas and minutes posted online"
-    },
-    {
-      "title": "CareSource Invitational — outdoor college basketball doubleheader",
-      "dateISO": "2026-10-07T15:00:00-04:00",
-      "endISO": "2026-10-07T20:00:00-04:00",
-      "dateLabel": "Wed, Oct 7 · Cincinnati vs. Ohio State 3:00 PM; Dayton vs. Xavier 5:30 PM (gates 1 PM)",
-      "venue": "Lindner Family Tennis Center, Mason",
-      "category": "Sports",
-      "source": "https://cincycaresourceinvitational.carrd.co/",
-      "note": "Outdoor preseason exhibitions benefiting mental-health and suicide-prevention nonprofits. Tickets via Ticketmaster. Organizers say game times are subject to change; per WCPO, inclement weather moves the games to UD Arena in Dayton."
     },
     {
       "title": "Unity Day — Wear Orange (National Bullying Prevention Month)",
