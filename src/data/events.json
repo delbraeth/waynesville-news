@@ -341,6 +341,19 @@
       "tags": [
         "trick-or-treat"
       ]
+    },
+    {
+      "title": "Crossview Church Trunk-or-Treat",
+      "dateISO": "2026-10-25T17:00:00-04:00",
+      "endISO": "2026-10-25T19:00:00-04:00",
+      "dateLabel": "Sun, Oct 25 · 5:00–7:00 PM",
+      "venue": "Crossview Church, 4237 E. Social Row Rd, Waynesville",
+      "category": "Family",
+      "source": "https://www.google.com/maps/search/?api=1&query=4237+E+Social+Row+Rd+Waynesville+OH+45068",
+      "note": "Decorated car trunks, games, costumes and free candy for families.",
+      "tags": [
+        "trick-or-treat"
+      ]
     }
   ]
 }
