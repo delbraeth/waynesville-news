@@ -1,7 +1,13 @@
 {
   "_note": "Candidate local headlines (Google News RSS). Published as a quoted headline (or, when available, a short publisher-written excerpt) + source + link; never reproduce article body text.",
-  "updated": "2026-10-12T10:40:56.739Z",
+  "updated": "2026-10-13T10:41:17.597Z",
   "items": [
+    {
+      "title": "Court Celebrates Sibling Success in Recovery",
+      "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTE5mcFhBWVhsdmI0YVFRMkI4eEpVdW9xWVhBaU5XOUVxR1cwalFkYTlHeUdRVDJrUEJzZTRkWHNHQXVXT2ZnRUcxTjQwRGVoOVZ0cmJEdDZxSEhjZ19qYUxHY2RySTUtQUEzY2tmTmxVYVBLVG1CYWtsdk1CMA?oc=5",
+      "source": "Court News Ohio (.gov)",
+      "date": "Thu, 08 Oct 2026 14:41:54 GMT"
+    },
     {
       "title": "Waynesville Sauerkraut Festival brings food, fundraising and community pride",
       "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNMnBuUWdKSTVzTlR1MVFoTjcwRFRoYmRtZGpELXoyUE8tUTVTV2dpTlRmOGlMLVFYWTJyVEhjaHNhZGpYLXVTRFlIckpNb1puSzNRRS1iVWJQYkQtbzhEYXQ1Qmd6aDFuTGRTLUVDMWlGM21CNUdhcTdsai1OU3BkSHFycHhjZlpnb2hoLW00LWN0MXZKQy1GWEhpa05YN005N3BsWU9YRVVfTmNoUzU1VA?oc=5",
@@ -9,10 +15,10 @@
       "date": "Sun, 11 Oct 2026 01:48:47 GMT"
     },
     {
-      "title": "Soybean Harvest Cab Cam – Mike Lutmer, Warren County",
-      "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBQcWFEUjlzTTNzYjBJdldfWFFQZk02MlRTbFVyT2tyQlRjOFA0ZUpTeFQ1Q21pdzBHeUJRUkFmcC1reDM1b3JCSTNXOUxQY3piWkJVOGZIN2g2bHZYZHFaNGlBNnh3a1EzOWJ4MVVEYWtTUDFmR1F2ZVNXTWtVYlE?oc=5",
-      "source": "Ohio's Country Journal",
-      "date": "Tue, 06 Oct 2026 22:02:20 GMT"
+      "title": "The Ohio Renaissance Festival is in full swing. Look back through the years",
+      "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQLURjYlVVdmpreV96MkxVcWRpTGdFN3ZoNTl0SUZUNERDNWpCLS1ERTQzNUI2QlhuektTWmpCbzVIS0plZjhSMzlidV9DWmRjR25WYktBMzlMSjJFaGlBc1NVMDYwWHQ2UGsxWkh2bEN6ZWwxVTBiM0NRbGJJLXo3bnM1WkRfMjhla1ZSbnQ3dWdSQU8wcnJSeEtkazZRWnVfVTFSWklCdGxsOGRZ?oc=5",
+      "source": "The Columbus Dispatch",
+      "date": "Mon, 12 Oct 2026 13:39:00 GMT"
     },
     {
       "title": "Jason Lagore Memorial Dog Park Opens at Caesar Creek State Park",
@@ -21,10 +27,10 @@
       "date": "Sun, 11 Oct 2026 00:45:16 GMT"
     },
     {
-      "title": "Joyce Leifheit Obituary (2026) - Waynesville, OH - Dayton Daily News",
-      "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNQnBmMmFkVjgxczdrQm1QTzctT1MyMHhKcE9OZHFCRXd5QnFmRmpXMEd5YlIwbmtqV0FCSFAwVGpTMm0zVlB3QnZvMjZmNFZ3QUFoek9FMWNtSFhMb0ZhR2RucHNQTmEzSXdzWTRTR3RkM2NsdVdJV3hHQ2F2Nk5OcXZzNHpaQnlYMFdUeg?oc=5",
-      "source": "Legacy | Obituary",
-      "date": "Sun, 11 Oct 2026 05:54:14 GMT"
+      "title": "Soybean Harvest Cab Cam – Mike Lutmer, Warren County",
+      "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBQcWFEUjlzTTNzYjBJdldfWFFQZk02MlRTbFVyT2tyQlRjOFA0ZUpTeFQ1Q21pdzBHeUJRUkFmcC1reDM1b3JCSTNXOUxQY3piWkJVOGZIN2g2bHZYZHFaNGlBNnh3a1EzOWJ4MVVEYWtTUDFmR1F2ZVNXTWtVYlE?oc=5",
+      "source": "Ohio's Country Journal",
+      "date": "Tue, 06 Oct 2026 22:02:20 GMT"
     },
     {
       "title": "First responders recover body of missing 10-year-old boy from pond in Warren County",
@@ -39,16 +45,10 @@
       "date": "Sat, 10 Oct 2026 21:56:23 GMT"
     },
     {
-      "title": "Murder investigation underway at state prison in Warren County",
-      "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNVUZySzhkYjFfVmpCQU9SSXg1QV8wWlJGVkVobW9CMVdZOU5IZzd6SWtGWXRpMTU5azZqU1FjcUo3Q2xFTFZKX1kzTEVtaVZyWDJWdzk0WW5xU3Z2TGhyaGFONHNjYUtoYVZXOEp1dUxFWkRYd2gzR2k4aUR1dkM0bXVIcjFpUmh2UnFKaGhraVp1czlvd1ZoVDdqMks3djdGOTRLQTRNQdIBuwFBVV95cUxPN1ZYOE1pTHdoZEJmU1RKWnZTazJ4dXJfYnRBTVpqWDJKTnVfTGpheDlabWtmM3JDLWI4dmsxMEx5OGxfNUU2d3d4OW9IcUtHTlFCSG0wdG9ScUN6SjVWS2FGNXlTeVJ3WWNBRW1CTkJ3ZGR4anBnaUo3c0pxWUF5SkFlUDNuZ1diemVIRzlqRV83dXNTTmZESktkeGJFdFlMc2wxOHJ4azFmSXhwMzVlVjJRSTVNVmhyQ01v?oc=5",
-      "source": "FOX19 | Cincinnati",
-      "date": "Tue, 06 Oct 2026 11:45:00 GMT"
-    },
-    {
-      "title": "The Eastern Chipmunk",
-      "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBMQjNCWERURjk1Z0FuNmV6bnN5Y21tNGhBUGZVb1JPQjB4RmQyQXlkVklncXZJQmVSSlFpcElsb3VMYm95OFRIaGRyNjNJenBmSTJQV3pQc3RzR1Z1QUNRRkx0NjJFVENsbG1uVlBJSGFXcFFESkE?oc=5",
-      "source": "Warren County Post",
-      "date": "Sun, 11 Oct 2026 00:25:36 GMT"
+      "title": "Rev. Dennis P. Purvis Sr. Obituary (2026) - Waynesville, OH - Stubbs-Conner Funeral Home & Cremation Services",
+      "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNU2VuRFdkOUx3QVg4Q0FSTnpVRmp1RHFjc2Z0SjBNSFdGT3VsX2ZoclNmOGg4dUQ4Ty04cEhyZTcyLVZqMkV5Ry1RcWo4R1l2OUNyZ2VVbE82Y016RXFzYnpOT0UwUEJhSWRuaDA3RGZQb0lWTDl3WXJvUGs4c25oY2tR?oc=5",
+      "source": "Legacy | Obituary",
+      "date": "Sat, 10 Oct 2026 17:20:37 GMT"
     }
   ]
 }

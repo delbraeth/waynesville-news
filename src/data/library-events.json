@@ -1,19 +1,7 @@
 {
   "_note": "Mary L. Cook Public Library — upcoming programs from the library's WhoFi event calendar (https://marylcook-main-oh.whofi.com/calendar/full), next 14 days. Canceled events excluded.",
-  "updated": "2026-10-12T10:41:03.877Z",
+  "updated": "2026-10-13T10:41:24.916Z",
   "items": [
-    {
-      "title": "Monsters University Interactive Movie Kits",
-      "dateISO": "2026-10-12T09:00:00Z",
-      "dateLabel": "Mon · Oct 12, 9:00 AM",
-      "link": "https://marylcook-main-oh.whofi.com/calendar/event/352447/"
-    },
-    {
-      "title": "Getting Reel Film Club",
-      "dateISO": "2026-10-12T17:30:00Z",
-      "dateLabel": "Mon · Oct 12, 5:30 PM",
-      "link": "https://marylcook-main-oh.whofi.com/calendar/event/334489/"
-    },
     {
       "title": "Toddler Time",
       "dateISO": "2026-10-13T10:30:00Z",
@@ -49,6 +37,18 @@
       "dateISO": "2026-10-14T15:00:00Z",
       "dateLabel": "Wed · Oct 14, 3:00 PM",
       "link": "https://marylcook-main-oh.whofi.com/calendar/event/352463/"
+    },
+    {
+      "title": "Fire Safety Storytime (Special Preschool Storytime)",
+      "dateISO": "2026-10-15T10:30:00Z",
+      "dateLabel": "Thu · Oct 15, 10:30 AM",
+      "link": "https://marylcook-main-oh.whofi.com/calendar/event/352427/"
+    },
+    {
+      "title": "Early Readers Kindergarten Book Club",
+      "dateISO": "2026-10-15T16:00:00Z",
+      "dateLabel": "Thu · Oct 15, 4:00 PM",
+      "link": "https://marylcook-main-oh.whofi.com/calendar/event/352448/"
     }
   ]
 }

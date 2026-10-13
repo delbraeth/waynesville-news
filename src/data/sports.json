@@ -1,51 +1,7 @@
 {
   "_note": "Waynesville Spartans schedule + results (MaxPreps), past 7 days / next 7 days. Scraped directly from each sport's own schedule page (football, volleyball, soccer -- varsity + JV), not the school hub page, which has been observed to silently omit some contests. Scores and matchups reproduced verbatim from MaxPreps' own markup; each links to their game page.",
-  "updated": "2026-10-12T10:41:02.642Z",
+  "updated": "2026-10-13T10:41:23.563Z",
   "results": [
-    {
-      "dateISO": "2026-10-05T17:30:00",
-      "sport": "Boys Soccer",
-      "level": "JV",
-      "opponent": "Legacy Christian Academy",
-      "wayneScore": 1,
-      "opponentScore": 0,
-      "result": "W",
-      "isHome": true,
-      "link": "https://www.maxpreps.com/oh/soccer/match/legacy-christian-academy-xenia-vs-waynesville/jv/10-5-2026/?c=d2a5716b-2779-4f76-830d-d198205244d0"
-    },
-    {
-      "dateISO": "2026-10-05T18:30:00",
-      "sport": "Volleyball",
-      "level": "Varsity",
-      "opponent": "Fairmont",
-      "wayneScore": 0,
-      "opponentScore": 3,
-      "result": "L",
-      "isHome": true,
-      "link": "https://www.maxpreps.com/oh/volleyball/match/fairmont-kettering-vs-waynesville/10-5-2026/?c=66afc101-4866-44e7-94e1-4fb95f0d893d"
-    },
-    {
-      "dateISO": "2026-10-05T19:15:00",
-      "sport": "Boys Soccer",
-      "level": "Varsity",
-      "opponent": "Legacy Christian Academy",
-      "wayneScore": 1,
-      "opponentScore": 1,
-      "result": "T",
-      "isHome": true,
-      "link": "https://www.maxpreps.com/oh/soccer/match/legacy-christian-academy-xenia-vs-waynesville/10-5-2026/?c=b4621e82-a93a-4826-848b-6cecc7d04ccc"
-    },
-    {
-      "dateISO": "2026-10-05T19:15:00",
-      "sport": "Girls Soccer",
-      "level": "Varsity",
-      "opponent": "Tippecanoe",
-      "wayneScore": 1,
-      "opponentScore": 4,
-      "result": "L",
-      "isHome": false,
-      "link": "https://www.maxpreps.com/oh/soccer/girls/match/tippecanoe-tipp-city-vs-waynesville/10-5-2026/?c=523bb5e8-b07c-4123-bcf2-2f9f156e1d41"
-    },
     {
       "dateISO": "2026-10-08T17:30:00",
       "sport": "Boys Soccer",
@@ -155,7 +111,7 @@
       "wayneScore": null,
       "opponentScore": null,
       "result": null,
-      "isHome": true,
+      "isHome": false,
       "link": "https://www.maxpreps.com/oh/soccer/match/badin-hamilton-vs-waynesville/jv/10-15-2026/?c=b62f716b-899f-43eb-bd41-d7063b67fb13"
     },
     {
