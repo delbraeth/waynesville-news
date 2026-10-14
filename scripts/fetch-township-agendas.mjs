@@ -22,13 +22,27 @@ const write = (data, note) =>
 const MONTHS = ["january","february","march","april","may","june","july","august","september","october","november","december"];
 
 function parseDateFromFilename(filename) {
-  // e.g. "September-15-2026.pdf", "January-6-2026.pdf", "September-01-2026.pdf"
-  const m = /([A-Za-z]+)-(\d{1,2})-(\d{4})\.pdf$/i.exec(decodeURIComponent(filename));
-  if (!m) return null;
-  const monthIdx = MONTHS.indexOf(m[1].toLowerCase());
-  if (monthIdx === -1) return null;
+  const name = decodeURIComponent(filename);
+  let year, monthIdx, day;
+  // e.g. "September-15-2026.pdf", "January-6-2026.pdf", "September-01-2026.pdf",
+  // and stray typos like "December16-2025.pdf" / "March-18-2025-.pdf"
+  const named = /([A-Za-z]+)-?(\d{1,2})-(\d{4})-?\.pdf$/i.exec(name);
+  // e.g. "Trustees-Meeting-Agenda-20261006.pdf"
+  const compact = /(?:^|[^\d])(20\d{2})(\d{2})(\d{2})\.pdf$/i.exec(name);
+  if (named) {
+    monthIdx = MONTHS.indexOf(named[1].toLowerCase());
+    year = Number(named[3]);
+    day = Number(named[2]);
+  } else if (compact) {
+    year = Number(compact[1]);
+    monthIdx = Number(compact[2]) - 1;
+    day = Number(compact[3]);
+  } else {
+    return null;
+  }
+  if (monthIdx < 0 || monthIdx > 11 || day < 1 || day > 31) return null;
   // Plain date (no reliable time on the source) at noon Eastern.
-  return new Date(Date.UTC(Number(m[3]), monthIdx, Number(m[2]), 16, 0, 0));
+  return new Date(Date.UTC(year, monthIdx, day, 16, 0, 0));
 }
 
 async function main() {
@@ -38,7 +52,7 @@ async function main() {
 
   // One meeting per <br />-separated line. Match the agenda anchor by its
   // filename shape, then look for a minutes anchor on the same line.
-  const agendaRe = /<a\s+href="([^"]+\/([A-Za-z]+-\d{1,2}-\d{4}\.pdf))"[^>]*>\s*Agenda\s*<\/a>/i;
+  const agendaRe = /<a\s+href="([^"]+\/([^"/]+\.pdf))"[^>]*>\s*Agenda\s*<\/a>/i;
   const minutesRe = /<a\s+href="([^"]+\.pdf)"[^>]*>\s*Minutes\s*<\/a>/i;
   const lines = html.split(/<br\s*\/?>/i);
   const items = [];
@@ -46,7 +60,11 @@ async function main() {
     const a = agendaRe.exec(line);
     if (!a) continue;
     const date = parseDateFromFilename(a[2]);
-    if (!date) continue;
+    if (!date) {
+      // Say so: a silently skipped agenda looks exactly like "nothing new posted".
+      console.warn(`township agendas: skipped agenda with unrecognized filename: ${a[2]}`);
+      continue;
+    }
     // Minutes precede Agenda on each line; only look BEFORE the agenda anchor so
     // a trailing line that runs into the next year's block can't borrow its
     // first Minutes link.
