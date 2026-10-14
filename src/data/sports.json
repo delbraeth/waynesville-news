@@ -1,6 +1,6 @@
 {
   "_note": "Waynesville Spartans schedule + results (MaxPreps), past 7 days / next 7 days. Scraped directly from each sport's own schedule page (football, volleyball, soccer -- varsity + JV), not the school hub page, which has been observed to silently omit some contests. Scores and matchups reproduced verbatim from MaxPreps' own markup; each links to their game page.",
-  "updated": "2026-10-13T10:41:23.563Z",
+  "updated": "2026-10-14T10:41:52.769Z",
   "results": [
     {
       "dateISO": "2026-10-08T17:30:00",
@@ -48,50 +48,6 @@
     }
   ],
   "upcoming": [
-    {
-      "dateISO": "2026-10-13T17:30:00",
-      "sport": "Volleyball",
-      "level": "JV",
-      "opponent": "Valley View",
-      "wayneScore": null,
-      "opponentScore": null,
-      "result": null,
-      "isHome": false,
-      "link": "https://www.maxpreps.com/oh/volleyball/match/valley-view-germantown-vs-waynesville/jv/10-13-2026/?c=ddbc2ce4-b3c8-45d5-9c89-7e1c1d450441"
-    },
-    {
-      "dateISO": "2026-10-13T17:30:00",
-      "sport": "Girls Soccer",
-      "level": "JV",
-      "opponent": "Bellbrook",
-      "wayneScore": null,
-      "opponentScore": null,
-      "result": null,
-      "isHome": false,
-      "link": "https://www.maxpreps.com/oh/soccer/girls/match/bellbrook-vs-waynesville/jv/10-13-2026/?c=a51c6e05-86d2-498a-bb64-7dbe48cd051f"
-    },
-    {
-      "dateISO": "2026-10-13T18:45:00",
-      "sport": "Volleyball",
-      "level": "Varsity",
-      "opponent": "Valley View",
-      "wayneScore": null,
-      "opponentScore": null,
-      "result": null,
-      "isHome": false,
-      "link": "https://www.maxpreps.com/oh/volleyball/match/valley-view-germantown-vs-waynesville/10-13-2026/?c=18c8aaeb-6a9b-4290-9ee6-99c799d7c212"
-    },
-    {
-      "dateISO": "2026-10-13T19:15:00",
-      "sport": "Girls Soccer",
-      "level": "Varsity",
-      "opponent": "Bellbrook",
-      "wayneScore": null,
-      "opponentScore": null,
-      "result": null,
-      "isHome": true,
-      "link": "https://www.maxpreps.com/oh/soccer/girls/match/bellbrook-vs-waynesville/10-13-2026/?c=0f4d077d-f881-4c0a-a348-82211ea7a47c"
-    },
     {
       "dateISO": "2026-10-15T17:30:00",
       "sport": "Volleyball",
@@ -157,6 +113,17 @@
       "result": null,
       "isHome": false,
       "link": "https://www.maxpreps.com/oh/football/game/eaton-vs-waynesville/jv/10-17-2026/?c=89fbf0c5-e0fd-4e1b-bf90-d4398047326b"
+    },
+    {
+      "dateISO": "2026-10-20T19:00:00",
+      "sport": "Boys Soccer",
+      "level": "Varsity",
+      "opponent": "Northwestern",
+      "wayneScore": null,
+      "opponentScore": null,
+      "result": null,
+      "isHome": true,
+      "link": "https://www.maxpreps.com/oh/soccer/match/northwestern-springfield-vs-waynesville/10-20-2026/?c=69d47d3d-c5f9-4504-879b-82edefec5491"
     }
   ]
 }

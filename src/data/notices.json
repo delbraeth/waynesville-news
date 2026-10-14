@@ -1,7 +1,16 @@
 {
   "_note": "Village of Waynesville and Wayne Township notices posted in the past 14 days. Titles and synopses verbatim from each government's own site.",
-  "updated": "2026-10-13T10:43:45.876Z",
-  "items": [],
+  "updated": "2026-10-14T10:43:57.721Z",
+  "items": [
+    {
+      "source": "township",
+      "issuer": "Wayne Township",
+      "title": "WAYNE TOWNSHIP BOARD OF TRUSTEES NOTICE OF SPECIAL MEETING",
+      "dateISO": "2026-10-13",
+      "summary": "View Notice",
+      "link": "https://waynetwpwarrencooh.gov/wayne-township-board-of-trustees-notice-of-special-meeting/"
+    }
+  ],
   "sources": {
     "village": "https://www.villageofwaynesville.org/news/",
     "township": "https://waynetwpwarrencooh.gov/"

@@ -1,7 +1,21 @@
 {
   "_note": "Recent Wayne Local Schools Facebook posts via rss.app bridge. Title + link + short excerpt; the district's own words. Fail-safe: kept from last run if the bridge is down.",
-  "updated": "2026-10-13T10:41:16.601Z",
+  "updated": "2026-10-14T10:41:46.253Z",
   "items": [
+    {
+      "title": "🚒Waynesville Elementary students had a lot of great questions for our professionals today at WES's Touch-a-Truck event…",
+      "link": "https://www.facebook.com/waynelocalschools/posts/pfbid02ZtsvXriWo41uxApH9qMHpFQyyQa3MKvifomek7WwLZtjs9hsxAdyaam6asNDSxfjl",
+      "date": "Tue, 13 Oct 2026 18:45:04 GMT",
+      "dateLabel": "Tue, Oct 13",
+      "excerpt": "today! The wheels were definitely turning!🚑💡"
+    },
+    {
+      "title": "☀️Today, WES students are exploring a variety of careers through hands-on experiences, up-close demonstrations, and…",
+      "link": "https://www.facebook.com/reel/1095088173294952/",
+      "date": "Tue, 13 Oct 2026 16:39:39 GMT",
+      "dateLabel": "Tue, Oct 13",
+      "excerpt": "conversations with the pros who do these jobs every day! A BIG thank you to Goehring Farms, Waynesville Police Department, Waynesville Fire and EMT, Ohio Army National Guard, Van Dyke Family Farms, and Deaton Plumbing for sharing their time, expertise, and enthusiasm with our students!🧡 Events…"
+    },
     {
       "title": "Reminder, Spartan families! There is no school tomorrow, Monday, October 12, for fall break. Enjoy the long weekend, and…",
       "link": "https://www.facebook.com/waynelocalschools/posts/pfbid01DkoKiRNYjoPSeqZJJdrXuxvm4Af6poMA9uts6EaVt9y4iGJDQ6cBzjn4oA1f8bml",
@@ -43,20 +57,6 @@
       "date": "Fri, 09 Oct 2026 18:39:02 GMT",
       "dateLabel": "Fri, Oct 9",
       "excerpt": "teachers are hard at work. Teacher professional days are built into the school calendar to give educators dedicated time to train, collaborate, plan curriculum, and improve instructional practices. 🏦So, how does this connect to school finances? ▶Professional days are part of teachers'…"
-    },
-    {
-      "title": "🎉WES is just $400 away from reaching its fundraising goal! Donations can be made until Friday, October 9 at 11:59 p.m.W...",
-      "link": "https://www.facebook.com/waynelocalschools/posts/pfbid022SxXhh3s48Fh9YKg4sMA4XfrtHjcVN9meBwoBQBp2WWvY6wevZ3DYZZrVXPRbdfhl",
-      "date": "Fri, 09 Oct 2026 01:49:11 GMT",
-      "dateLabel": "Thu, Oct 8",
-      "excerpt": "🎉WES is just $400 away from reaching its fundraising goal! Donations can be made until Friday, October 9 at 11:59 p.m. WHAT A DAY ☀️ 1st-5th graders finally got their turn for Fun Run and it was worth the wait! We played games, did yoga and RAN through the stations…and who could forget watching…"
-    },
-    {
-      "title": "Every Thursday following a WLS Board meeting, we share a recap to help you stay informed on the business of the…",
-      "link": "https://www.facebook.com/waynelocalschools/posts/pfbid037Nm32rHuAiHAyZoXD5FwGvRhLBs2XZ2g7sdeRzNzwevwQ2vbRJhRaNs8Kbt21TDNl",
-      "date": "Thu, 08 Oct 2026 19:25:21 GMT",
-      "dateLabel": "Thu, Oct 8",
-      "excerpt": "district. Here's our latest Board Meeting Recap:"
     }
   ]
 }

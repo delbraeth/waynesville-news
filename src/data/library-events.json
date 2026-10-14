@@ -1,31 +1,7 @@
 {
   "_note": "Mary L. Cook Public Library — upcoming programs from the library's WhoFi event calendar (https://marylcook-main-oh.whofi.com/calendar/full), next 14 days. Canceled events excluded.",
-  "updated": "2026-10-13T10:41:24.916Z",
+  "updated": "2026-10-14T10:41:54.013Z",
   "items": [
-    {
-      "title": "Toddler Time",
-      "dateISO": "2026-10-13T10:30:00Z",
-      "dateLabel": "Tue · Oct 13, 10:30 AM",
-      "link": "https://marylcook-main-oh.whofi.com/calendar/event/352438/"
-    },
-    {
-      "title": "Teen Tuesday (6th-12th Grade)",
-      "dateISO": "2026-10-13T15:00:00Z",
-      "dateLabel": "Tue · Oct 13, 3:00 PM",
-      "link": "https://marylcook-main-oh.whofi.com/calendar/event/352462/"
-    },
-    {
-      "title": "Chapters Book Club",
-      "dateISO": "2026-10-13T16:00:00Z",
-      "dateLabel": "Tue · Oct 13, 4:00 PM",
-      "link": "https://marylcook-main-oh.whofi.com/calendar/event/352449/"
-    },
-    {
-      "title": "The Loop Group (Fiber Crafts Club)",
-      "dateISO": "2026-10-13T17:30:00Z",
-      "dateLabel": "Tue · Oct 13, 5:30 PM",
-      "link": "https://marylcook-main-oh.whofi.com/calendar/event/306472/"
-    },
     {
       "title": "Baby Bookworms",
       "dateISO": "2026-10-14T10:30:00Z",
@@ -49,6 +25,30 @@
       "dateISO": "2026-10-15T16:00:00Z",
       "dateLabel": "Thu · Oct 15, 4:00 PM",
       "link": "https://marylcook-main-oh.whofi.com/calendar/event/352448/"
+    },
+    {
+      "title": "Crafting Fun Drop-in Program (Adults)",
+      "dateISO": "2026-10-17T10:30:00Z",
+      "dateLabel": "Sat · Oct 17, 10:30 AM",
+      "link": "https://marylcook-main-oh.whofi.com/calendar/event/354222/"
+    },
+    {
+      "title": "Paper Ghost Take and Make (TEENS)",
+      "dateISO": "2026-10-19T13:00:00Z",
+      "dateLabel": "Mon · Oct 19, 1:00 PM",
+      "link": "https://marylcook-main-oh.whofi.com/calendar/event/352466/"
+    },
+    {
+      "title": "Art Class for Kids (Cozy Fall Cat)",
+      "dateISO": "2026-10-19T16:15:00Z",
+      "dateLabel": "Mon · Oct 19, 4:15 PM",
+      "link": "https://marylcook-main-oh.whofi.com/calendar/event/352441/"
+    },
+    {
+      "title": "Toddler Time",
+      "dateISO": "2026-10-20T10:30:00Z",
+      "dateLabel": "Tue · Oct 20, 10:30 AM",
+      "link": "https://marylcook-main-oh.whofi.com/calendar/event/352439/"
     }
   ]
 }
