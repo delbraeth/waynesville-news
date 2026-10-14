@@ -35,6 +35,7 @@ export const CEILINGS = {
   "shops-events": 7,    // dated, forward-looking
   "caesar-creek-events": 7, // dated, forward-looking
   "township-agendas": 10, // agendas post irregularly
+  commissioners: 10,    // weekly agendas; minutes lag a few weeks
   "village-minutes": 21,  // historical record; slow-moving by design
   roads: 2,
   notices: 3,           // water-main breaks and boil advisories are urgent

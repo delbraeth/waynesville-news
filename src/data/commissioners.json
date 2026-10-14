@@ -1,0 +1,136 @@
+{
+  "_note": "Warren County Commissioners — most recently posted agendas, minutes and resolutions, grouped by meeting date (dates/labels/links only, reproduced from the county's index; the documents are scanned PDFs on the county site).",
+  "updated": "2026-10-14T09:12:42.181Z",
+  "source": "https://commissioners.warrencountyohio.gov/News/AgendaMinutes/Index",
+  "items": [
+    {
+      "dateISO": "2026-10-13T16:00:00.000Z",
+      "dateLabel": "Oct 13, 2026",
+      "agendas": [
+        {
+          "link": "https://commissioners.warrencountyohio.gov/doc/AgendaMinutes/Agenda%5C2026%5C101326.pdf"
+        }
+      ],
+      "minutes": [],
+      "resolutions": []
+    },
+    {
+      "dateISO": "2026-10-06T16:00:00.000Z",
+      "dateLabel": "Oct 6, 2026",
+      "agendas": [
+        {
+          "label": "Regular Session 2",
+          "link": "https://commissioners.warrencountyohio.gov/doc/AgendaMinutes/Agenda%5C2026%5C100626%20Regular%20Session%202.pdf"
+        },
+        {
+          "label": "Regular Session 1",
+          "link": "https://commissioners.warrencountyohio.gov/doc/AgendaMinutes/Agenda%5C2026%5C100626%20Regular%20Session%201.pdf"
+        }
+      ],
+      "minutes": [],
+      "resolutions": [
+        {
+          "label": "Regular Session 1",
+          "link": "https://commissioners.warrencountyohio.gov/doc/Resolutions%5C2026%5C100626%20Regular%20Session%201.pdf"
+        }
+      ]
+    },
+    {
+      "dateISO": "2026-09-29T16:00:00.000Z",
+      "dateLabel": "Sep 29, 2026",
+      "agendas": [
+        {
+          "link": "https://commissioners.warrencountyohio.gov/doc/AgendaMinutes/Agenda%5C2026%5C092926.pdf"
+        }
+      ],
+      "minutes": [],
+      "resolutions": [
+        {
+          "link": "https://commissioners.warrencountyohio.gov/doc/Resolutions%5C2026%5C092926.pdf"
+        }
+      ]
+    },
+    {
+      "dateISO": "2026-09-22T16:00:00.000Z",
+      "dateLabel": "Sep 22, 2026",
+      "agendas": [
+        {
+          "link": "https://commissioners.warrencountyohio.gov/doc/AgendaMinutes/Agenda%5C2026%5C092226.pdf"
+        }
+      ],
+      "minutes": [
+        {
+          "link": "https://commissioners.warrencountyohio.gov/doc/AgendaMinutes/Minutes%5C2026%5C092226.pdf"
+        }
+      ],
+      "resolutions": [
+        {
+          "link": "https://commissioners.warrencountyohio.gov/doc/Resolutions%5C2026%5C092226.pdf"
+        }
+      ]
+    },
+    {
+      "dateISO": "2026-09-15T16:00:00.000Z",
+      "dateLabel": "Sep 15, 2026",
+      "agendas": [
+        {
+          "label": "Regular Session 2",
+          "link": "https://commissioners.warrencountyohio.gov/doc/AgendaMinutes/Agenda%5C2026%5C091526%20Regular%20Session%202.pdf"
+        },
+        {
+          "label": "Regular Session 1",
+          "link": "https://commissioners.warrencountyohio.gov/doc/AgendaMinutes/Agenda%5C2026%5C091526%20Regular%20Session%201.pdf"
+        }
+      ],
+      "minutes": [
+        {
+          "label": "Regular Session 2",
+          "link": "https://commissioners.warrencountyohio.gov/doc/AgendaMinutes/Minutes%5C2026%5C091526%20Regular%20Session%202.pdf"
+        },
+        {
+          "label": "Regular Session 1",
+          "link": "https://commissioners.warrencountyohio.gov/doc/AgendaMinutes/Minutes%5C2026%5C091526%20Regular%20Session%201.pdf"
+        }
+      ],
+      "resolutions": [
+        {
+          "link": "https://commissioners.warrencountyohio.gov/doc/Resolutions%5C2026%5C091526.pdf"
+        }
+      ]
+    },
+    {
+      "dateISO": "2026-09-01T16:00:00.000Z",
+      "dateLabel": "Sep 1, 2026",
+      "agendas": [
+        {
+          "label": "Regular Session 2",
+          "link": "https://commissioners.warrencountyohio.gov/doc/AgendaMinutes/Agenda%5C2026%5C090126%20Regular%20Session%202.pdf"
+        },
+        {
+          "label": "Regular Session 1",
+          "link": "https://commissioners.warrencountyohio.gov/doc/AgendaMinutes/Agenda%5C2026%5C090126%20Regular%20Session%201.pdf"
+        }
+      ],
+      "minutes": [
+        {
+          "label": "Regular Session 2",
+          "link": "https://commissioners.warrencountyohio.gov/doc/AgendaMinutes/Minutes%5C2026%5C090126%20Regular%20Session%202.pdf"
+        },
+        {
+          "label": "Regular Session 1",
+          "link": "https://commissioners.warrencountyohio.gov/doc/AgendaMinutes/Minutes%5C2026%5C090126%20Regular%20Session%201.pdf"
+        }
+      ],
+      "resolutions": [
+        {
+          "label": "Regular Session 2",
+          "link": "https://commissioners.warrencountyohio.gov/doc/Resolutions%5C2026%5C090126%20Regular%20Session%202.pdf"
+        },
+        {
+          "label": "Regular Session 1",
+          "link": "https://commissioners.warrencountyohio.gov/doc/Resolutions%5C2026%5C090126%20Regular%20Session%201.pdf"
+        }
+      ]
+    }
+  ]
+}
