@@ -48,6 +48,8 @@ let sports = { results: [], upcoming: [] };
 try { sports = await readJSON("src/data/sports.json"); } catch { /* optional */ }
 let libraryEvents = [];
 try { libraryEvents = (await readJSON("src/data/library-events.json")).items ?? []; } catch { /* optional */ }
+let commissionersDocs = [];
+try { commissionersDocs = (await readJSON("src/data/commissioners.json")).items ?? []; } catch { /* optional */ }
 let townshipAgendas = [];
 try { townshipAgendas = (await readJSON("src/data/township-agendas.json")).items ?? []; } catch { /* optional */ }
 let shopsEvents = [];
@@ -122,6 +124,31 @@ const soon = [
 const meeting = nextCommissionersMeeting(now);
 const townshipMeeting = nextTownshipMeeting(now);
 const latestAgenda = townshipAgendas[0];
+
+// Commissioners: link the next meeting's agenda directly once the county has
+// posted it, and list the latest posted agenda, resolutions and minutes.
+// commissioners.json links are already percent-encoded, so they bypass link().
+const meetingDay = meeting.when.slice(0, 10);
+const docLink = (text, d) => `[${text}${d.label ? ` (${d.label})` : ""}](${d.link})`;
+const nextAgendas = commissionersDocs.find((i) => i.dateISO.slice(0, 10) === meetingDay)?.agendas ?? [];
+const nextAgendaLinks = nextAgendas.length
+  ? nextAgendas.map((d) => docLink("agenda posted", d)).join(" · ")
+  : `[agendas](${meeting.source})`;
+const latestCommissioners = [
+  ["agendas", "agenda"],
+  ["resolutions", "resolutions"],
+  ["minutes", "minutes"],
+]
+  .map(([kind, noun]) => {
+    // The next meeting's agenda is already linked on the "Next up" line.
+    const item = commissionersDocs.find(
+      (i) => i[kind]?.length && !(kind === "agendas" && i.dateISO.slice(0, 10) === meetingDay)
+    );
+    const day = item?.dateLabel.replace(/, \d{4}$/, "");
+    return item ? item[kind].map((d) => docLink(`${noun}, ${day}`, d)).join(" · ") : null;
+  })
+  .filter(Boolean)
+  .join(" · ");
 
 const SOURCES = {
   Schools: [
@@ -500,7 +527,7 @@ ${listSrc("Schools")}
 ${boardRecapSchoolsBlock ? `\n${boardRecapSchoolsBlock}\n` : ""}${fbBlock ? `\n${fbBlock}\n` : ""}${libraryBlock ? `\n**Library programs** (Mary L. Cook Public Library)\n${libraryBlock}\n` : ""}
 ${sportsBlock ? `\n## This week in sports\n${sportsBlock}\n` : ""}
 ## Local government
-Next up: **${meeting.body}**, ${meeting.whenLabel} — [agenda](${meeting.source}).
+Next up: **${meeting.body}**, ${meeting.whenLabel} — ${nextAgendaLinks}.${latestCommissioners ? `\nLatest posted by the commissioners: ${latestCommissioners}.` : ""}
 Also next up: **${townshipMeeting.body}**, ${townshipMeeting.whenLabel}, ${townshipMeeting.location}${latestAgenda ? ` — ${link(`latest posted agenda: ${latestAgenda.title}, ${latestAgenda.dateLabel}`, latestAgenda.link)}` : ` — [agendas](${townshipMeeting.source})`}.
 TODO — village council & county items, each linked to the agenda/minutes. Check:
 ${listSrc("Local Government")}
