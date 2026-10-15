@@ -346,6 +346,16 @@
       "category": "Government",
       "source": "https://commissioners.warrencountyohio.gov/News/AgendaMinutes/Index",
       "note": "Weekly commissioners session; agendas and minutes posted online"
+    },
+    {
+      "title": "Earth Science Week: Guided Fossil Collecting",
+      "dateISO": "2026-10-18T13:00:00-04:00",
+      "endISO": "2026-10-18T16:00:00-04:00",
+      "dateLabel": "Sun, Oct 18 · 1:00–4:00 PM",
+      "venue": "Caesar Creek Lake Visitor Center, Waynesville",
+      "category": "Outdoors",
+      "source": "https://geology.ohiodnr.gov/",
+      "note": "ODNR paleontologist Mark Peter gives a talk, then he and geologist Chris Wright guide participants in fossil collecting at the emergency spillway at Caesar Creek State Park. Part of the Ohio Department of Natural Resources' Earth Science Week."
     }
   ]
 }
