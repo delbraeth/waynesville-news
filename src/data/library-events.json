@@ -1,19 +1,7 @@
 {
   "_note": "Mary L. Cook Public Library — upcoming programs from the library's WhoFi event calendar (https://marylcook-main-oh.whofi.com/calendar/full), next 14 days. Canceled events excluded.",
-  "updated": "2026-10-14T10:41:54.013Z",
+  "updated": "2026-10-15T10:41:26.733Z",
   "items": [
-    {
-      "title": "Baby Bookworms",
-      "dateISO": "2026-10-14T10:30:00Z",
-      "dateLabel": "Wed · Oct 14, 10:30 AM",
-      "link": "https://marylcook-main-oh.whofi.com/calendar/event/352434/"
-    },
-    {
-      "title": "Teen Dungeons and Dragons (6th-12th grade)",
-      "dateISO": "2026-10-14T15:00:00Z",
-      "dateLabel": "Wed · Oct 14, 3:00 PM",
-      "link": "https://marylcook-main-oh.whofi.com/calendar/event/352463/"
-    },
     {
       "title": "Fire Safety Storytime (Special Preschool Storytime)",
       "dateISO": "2026-10-15T10:30:00Z",
@@ -49,6 +37,18 @@
       "dateISO": "2026-10-20T10:30:00Z",
       "dateLabel": "Tue · Oct 20, 10:30 AM",
       "link": "https://marylcook-main-oh.whofi.com/calendar/event/352439/"
+    },
+    {
+      "title": "Rapid Readers Book Club",
+      "dateISO": "2026-10-20T16:00:00Z",
+      "dateLabel": "Tue · Oct 20, 4:00 PM",
+      "link": "https://marylcook-main-oh.whofi.com/calendar/event/352450/"
+    },
+    {
+      "title": "Genre Exploration Book Club Meeting",
+      "dateISO": "2026-10-20T17:30:00Z",
+      "dateLabel": "Tue · Oct 20, 5:30 PM",
+      "link": "https://marylcook-main-oh.whofi.com/calendar/event/307603/"
     }
   ]
 }

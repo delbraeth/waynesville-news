@@ -1,13 +1,7 @@
 {
-  "_note": "Recent Friends of Warren County Park District Facebook posts via rss.app bridge. Title + link + short excerpt; the group's own words. Fail-safe: kept from last run if the bridge is down.",
-  "updated": "2026-10-12T10:40:55.960Z",
-  "items": [
-    {
-      "title": "2027 Membership Drive is now Open! Each membership will automatically include one raffle entry for a chance to win an…",
-      "link": "https://www.facebook.com/FriendsWCPD/posts/pfbid02QfR5z7wD5esgwkqJofvhEGpE8drM31vegPFBMvGdcGmyHDEVUKLooBh2xY3ojXGol",
-      "date": "Fri, 02 Oct 2026 15:26:12 GMT",
-      "dateLabel": "Fri, Oct 2",
-      "excerpt": "Excursion Mountain Bike! Members will also receive one additional raffle ticket for every $10 contributed as an additional donation. Help us to support, improve, protect, and preserve Warren County Parks."
-    }
-  ]
+  "_note": "fb-wcpd-friends source unreachable since 2026-10-12; cached data passed the 3-day staleness ceiling and was dropped rather than republished stale.",
+  "updated": "2026-10-15T10:41:18.179Z",
+  "items": [],
+  "lastGoodUpdated": "2026-10-12T10:40:55.960Z",
+  "sourceDownSince": "2026-10-15T10:41:18.181Z"
 }
