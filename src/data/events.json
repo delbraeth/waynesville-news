@@ -120,13 +120,14 @@
       ]
     },
     {
-      "title": "Business to Business Networking Mixer — October",
+      "title": "Bourbon & Cigars: An Evening in Waynesville (Chamber Mixer)",
       "dateISO": "2026-10-28T17:00:00-04:00",
-      "dateLabel": "Wed, Oct 28 · 5:00 PM",
-      "venue": "Village Family Restaurant / Villager Pub, Waynesville",
+      "dateLabel": "Wed, Oct 28 · 5:00–8:00 PM",
+      "venue": "Villager Pub, 144 S. Main St, Waynesville",
       "category": "Chamber",
       "source": "https://www.waynesvilleohio.com/events",
-      "note": "Waynesville Area Chamber of Commerce networking mixer"
+      "note": "The Waynesville Area Chamber of Commerce's October networking mixer: bourbon, cigars and good company. Open to everyone — Chamber members, non-members and friends welcome.",
+      "endISO": "2026-10-28T20:00:00-04:00"
     },
     {
       "title": "Ohio Renaissance Festival — Heroes and Villains Weekend",
