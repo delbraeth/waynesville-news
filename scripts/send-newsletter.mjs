@@ -17,6 +17,7 @@ const root = new URL("..", import.meta.url);
 const SITE = "https://waynesville.news";
 const API = "https://api.buttondown.com/v1/emails";
 const STATE = new URL("src/data/newsletter-sent.json", root);
+const SITE_CONFIG = new URL("src/data/site.json", root);
 
 const key = process.env.BUTTONDOWN_API_KEY;
 const headers = { Authorization: `Token ${key}`, "Content-Type": "application/json" };
@@ -86,12 +87,15 @@ async function main() {
       .trim(),
     webUrl,
   );
+  let patreonUrl = "";
+  try { patreonUrl = JSON.parse(await readFile(SITE_CONFIG, "utf8")).patreon?.url?.trim() || ""; } catch {}
   const emailBody = [
     dek ? `*${dek}*\n` : "",
     md,
     "",
     "---",
     `[Read this edition on the web](${webUrl}) · [Waynesville Daily Brief](${SITE})`,
+    patreonUrl ? `\nFind the Brief useful? It's free and independent. [Support it on Patreon](${patreonUrl}).` : "",
   ].join("\n");
 
   const res = await fetch(API, {
