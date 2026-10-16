@@ -2,5 +2,9 @@
   "newsletter": {
     "provider": "buttondown",
     "username": "waynesvillenews"
+  },
+  "patreon": {
+    "_note": "Reader support via Patreon. Paste the page URL (e.g. https://www.patreon.com/waynesvillenews) to turn on the support links in the footer, on /supporters/, under each brief, and in the email edition. Leave empty to hide them all. Patrons get no say in coverage.",
+    "url": ""
   }
 }

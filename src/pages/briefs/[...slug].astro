@@ -1,6 +1,7 @@
 ---
 import Base from "../../layouts/Base.astro";
 import { getCollection, render } from "astro:content";
+import site from "../../data/site.json";
 
 export async function getStaticPaths() {
   const briefs = (await getCollection("briefs")).filter((b) => b.data.published);
@@ -9,6 +10,7 @@ export async function getStaticPaths() {
 
 const { entry } = Astro.props;
 const { Content } = await render(entry);
+const patreonUrl = site.patreon?.url?.trim() || "";
 
 const dateFmt = new Intl.DateTimeFormat("en-US", {
   weekday: "long", month: "long", day: "numeric", year: "numeric",
@@ -31,6 +33,12 @@ const dateFmt = new Intl.DateTimeFormat("en-US", {
     <div class="prose">
       <Content />
     </div>
+    {patreonUrl && !entry.data.demo && (
+      <div class="callout">
+        <strong>Find the Brief useful?</strong> It's free and independent.
+        <a href={patreonUrl} target="_blank" rel="noopener">Support it on Patreon</a>.
+      </div>
+    )}
     <p class="small"><a href="/briefs/">← All briefs</a></p>
   </div>
 </Base>

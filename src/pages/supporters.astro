@@ -1,7 +1,9 @@
 ---
 import Base from "../layouts/Base.astro";
 import supporters from "../data/supporters.json";
+import site from "../data/site.json";
 
+const patreonUrl = site.patreon?.url?.trim() || "";
 const items = (supporters.items ?? []).filter((s) => s && s.name);
 const telHref = (p: string) => "tel:" + p.replace(/[^\d+]/g, "");
 const prettyUrl = (u: string) => u.replace(/^https?:\/\/(www\.)?/, "").replace(/\/$/, "");
@@ -42,6 +44,17 @@ const prettyUrl = (u: string) => u.replace(/^https?:\/\/(www\.)?/, "").replace(/
           </li>
         ))}
       </ul>
+    )}
+
+    {patreonUrl && (
+      <div class="sp-join">
+        <h3>Support the Brief as a reader</h3>
+        <p>
+          The Daily Brief is free to read and free by email. If it's useful to you, you can chip in
+          a few dollars a month on <a href={patreonUrl} target="_blank" rel="noopener">Patreon</a>.
+          Patrons don't get a say in coverage either. Every reader gets the same brief.
+        </p>
+      </div>
     )}
 
     <div class="sp-join">
