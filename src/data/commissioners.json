@@ -1,6 +1,6 @@
 {
   "_note": "Warren County Commissioners — most recently posted agendas, minutes and resolutions, grouped by meeting date (dates/labels/links only, reproduced from the county's index; the documents are scanned PDFs on the county site).",
-  "updated": "2026-10-15T10:43:34.089Z",
+  "updated": "2026-10-16T10:43:33.081Z",
   "source": "https://commissioners.warrencountyohio.gov/News/AgendaMinutes/Index",
   "items": [
     {
@@ -12,7 +12,11 @@
         }
       ],
       "minutes": [],
-      "resolutions": []
+      "resolutions": [
+        {
+          "link": "https://commissioners.warrencountyohio.gov/doc/Resolutions%5C2026%5C101326.pdf"
+        }
+      ]
     },
     {
       "dateISO": "2026-10-06T16:00:00.000Z",
@@ -29,6 +33,10 @@
       ],
       "minutes": [],
       "resolutions": [
+        {
+          "label": "Regular Session 2",
+          "link": "https://commissioners.warrencountyohio.gov/doc/Resolutions%5C2026%5C100626%20Regular%20Session%202.pdf"
+        },
         {
           "label": "Regular Session 1",
           "link": "https://commissioners.warrencountyohio.gov/doc/Resolutions%5C2026%5C100626%20Regular%20Session%201.pdf"

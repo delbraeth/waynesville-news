@@ -1,5 +1,5 @@
 {
-  "_note": "Real venues and sources, verified against each listed source on 2026-10-15 (daily automated refresh). Wayne Local school dates per The Spartan (September and October 2026) and the district Community Events & Activities newsletter (October 2026) and Board Meeting Recap (October 2026). Recurring items (rodeo, commissioners, ghost walk) show the next occurrence. Warren County Park District events page SUSPENDED as a source per Cap'n (2026-10-03): it sits behind a Cloudflare bot challenge (403 since 2026-09-24). Do not fetch it or report it as failing; its items from the 2026-09-23 check are kept until they expire. Resume only when Cap'n provides a working source. Event notes and dateLabels are shown to readers: write them for readers (what, when, where, and a helpful pointer like \"check the event website for times\" when a detail is missing). Never put editorial or process notes in them (\"not published\", \"confirm before printing\", \"corrected from\", \"checked on\"); record corrections in the commit message instead.",
+  "_note": "Real venues and sources, verified against each listed source on 2026-10-16 (daily automated refresh). Wayne Local school dates per The Spartan (September and October 2026) and the district Community Events & Activities newsletter (October 2026) and Board Meeting Recap (October 2026). Recurring items (rodeo, commissioners, ghost walk) show the next occurrence. Warren County Park District events page SUSPENDED as a source per Cap'n (2026-10-03): it sits behind a Cloudflare bot challenge (403 since 2026-09-24). Do not fetch it or report it as failing; its items from the 2026-09-23 check are kept until they expire. Resume only when Cap'n provides a working source. Event notes and dateLabels are shown to readers: write them for readers (what, when, where, and a helpful pointer like \"check the event website for times\" when a detail is missing). Never put editorial or process notes in them (\"not published\", \"confirm before printing\", \"corrected from\", \"checked on\"); record corrections in the commit message instead.",
   "items": [
     {
       "title": "Historical Haunts — ghost walk of downtown Waynesville",
@@ -30,26 +30,6 @@
       "category": "Festival",
       "source": "https://waynesvillefallfest.com/",
       "note": "Corn maze, mini golf, petting farm, and other fall activities; $16 adult / $14 ages 10 & under daily admission. Not affiliated with Hisey Fall Fest."
-    },
-    {
-      "title": "Ohio Sauerkraut Festival",
-      "dateISO": "2026-10-10T09:00:00-04:00",
-      "endISO": "2026-10-11T18:00:00-04:00",
-      "dateLabel": "Oct 10–11 · Sat 9 AM–8 PM, Sun 9 AM–6 PM",
-      "venue": "Downtown Waynesville",
-      "category": "Festival",
-      "source": "https://sauerkrautfestival.waynesvilleohio.com/home/",
-      "note": "56th annual; setup begins Oct 9"
-    },
-    {
-      "title": "Ohio Renaissance Festival — Time Travelers Weekend",
-      "dateISO": "2026-10-10T10:30:00-04:00",
-      "endISO": "2026-10-11T19:00:00-04:00",
-      "dateLabel": "Oct 10–11 · 10:30 AM–7:00 PM",
-      "venue": "Renaissance Park, Waynesville",
-      "category": "Festival",
-      "source": "https://renfestival.com/",
-      "note": "Themed weekend during the festival's regular Sep 5–Nov 1, 2026 season; coincides with Sauerkraut Festival weekend"
     },
     {
       "title": "No School — Fall Break",
@@ -220,16 +200,6 @@
       "tags": [
         "trick-or-treat"
       ]
-    },
-    {
-      "title": "Devil's Staircase Pro Hillclimb Weekend (77th annual)",
-      "dateISO": "2026-10-10T09:00:00-04:00",
-      "endISO": "2026-10-11T23:59:00-04:00",
-      "dateLabel": "Sat–Sun, Oct 10–11 · gates 9:00 AM",
-      "venue": "Dayton Motorcycle Club hillclimb grounds, 1086 Corwin Rd, Oregonia",
-      "category": "Sports",
-      "source": "https://www.daytonmc.com/",
-      "note": "Per the Dayton Motorcycle Club: Saturday Dirt Drags (racing 1 PM); Sunday Pro Hillclimb (450s round 1 at 11 AM, opening ceremonies and racing 1 PM). Kids 12 and under free Sunday. Weekend camping $20 per person, opens Friday 8 AM."
     },
     {
       "title": "WinterFest at Kings Island",

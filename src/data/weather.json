@@ -1,31 +1,31 @@
 {
   "_note": "Auto-refreshed from the NWS API (api.weather.gov, ILN/Wilmington office).",
   "location": "Waynesville, OH",
-  "tempF": 75,
-  "condition": "Chance Rain Showers then Mostly Cloudy",
+  "tempF": 65,
+  "condition": "Rain Showers",
   "periodName": "Today",
-  "highF": 75,
-  "lowF": 62,
+  "highF": 65,
+  "lowF": 39,
   "outlook": [
-    {
-      "dayLabel": "Friday",
-      "highF": 64,
-      "lowF": 39,
-      "condition": "Rain Showers Likely"
-    },
     {
       "dayLabel": "Saturday",
       "highF": 54,
-      "lowF": 33,
+      "lowF": 32,
       "condition": "Sunny"
     },
     {
       "dayLabel": "Sunday",
-      "highF": 61,
-      "lowF": 38,
+      "highF": 62,
+      "lowF": 37,
       "condition": "Widespread Frost then Sunny"
+    },
+    {
+      "dayLabel": "Monday",
+      "highF": 68,
+      "lowF": 40,
+      "condition": "Sunny"
     }
   ],
   "alerts": [],
-  "updated": "2026-10-15T10:41:16.971Z"
+  "updated": "2026-10-16T10:41:28.845Z"
 }
