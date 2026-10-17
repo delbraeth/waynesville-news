@@ -1,7 +1,15 @@
 {
   "_note": "Village of Waynesville and Wayne Township notices posted in the past 14 days. Titles and synopses verbatim from each government's own site.",
-  "updated": "2026-10-16T10:43:37.162Z",
+  "updated": "2026-10-17T10:43:12.379Z",
   "items": [
+    {
+      "source": "village",
+      "issuer": "Village of Waynesville",
+      "title": "Finance Committee Meeting Rescheduled",
+      "dateISO": "2026-10-16",
+      "summary": "The Finance Committee Meeting has been rescheduled to 6:00 p.m. on October 26th at 1400 Lytle Road. The public is encouraged to attend.",
+      "link": "https://www.villageofwaynesville.org/news/entry/finance-committee-meeting-rescheduled/"
+    },
     {
       "source": "village",
       "issuer": "Village of Waynesville",

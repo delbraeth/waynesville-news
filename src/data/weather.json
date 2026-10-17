@@ -1,31 +1,39 @@
 {
   "_note": "Auto-refreshed from the NWS API (api.weather.gov, ILN/Wilmington office).",
   "location": "Waynesville, OH",
-  "tempF": 65,
-  "condition": "Rain Showers",
+  "tempF": 55,
+  "condition": "Mostly Sunny",
   "periodName": "Today",
-  "highF": 65,
-  "lowF": 39,
+  "highF": 55,
+  "lowF": 31,
   "outlook": [
     {
-      "dayLabel": "Saturday",
-      "highF": 54,
-      "lowF": 32,
-      "condition": "Sunny"
-    },
-    {
       "dayLabel": "Sunday",
-      "highF": 62,
-      "lowF": 37,
+      "highF": 63,
+      "lowF": 35,
       "condition": "Widespread Frost then Sunny"
     },
     {
       "dayLabel": "Monday",
-      "highF": 68,
+      "highF": 67,
+      "lowF": 37,
+      "condition": "Areas Of Frost then Sunny"
+    },
+    {
+      "dayLabel": "Tuesday",
+      "highF": 71,
       "lowF": 40,
       "condition": "Sunny"
     }
   ],
-  "alerts": [],
-  "updated": "2026-10-16T10:41:28.845Z"
+  "alerts": [
+    {
+      "event": "Freeze Warning",
+      "headline": "Freeze Warning issued October 17 at 12:18AM EDT until October 18 at 9:00AM EDT by NWS Wilmington OH",
+      "severity": "Severe",
+      "expires": "2026-10-17T16:00:00-04:00",
+      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.db18c22708737a87b0f81e4586ff793f66f69eb4.001.2"
+    }
+  ],
+  "updated": "2026-10-17T10:41:07.132Z"
 }

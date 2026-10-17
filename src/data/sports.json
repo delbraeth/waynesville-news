@@ -1,18 +1,7 @@
 {
   "_note": "Waynesville Spartans schedule + results (MaxPreps), past 7 days / next 7 days. Scraped directly from each sport's own schedule page (football, volleyball, soccer -- varsity + JV), not the school hub page, which has been observed to silently omit some contests. Scores and matchups reproduced verbatim from MaxPreps' own markup; each links to their game page.",
-  "updated": "2026-10-16T10:41:35.086Z",
+  "updated": "2026-10-17T10:41:14.418Z",
   "results": [
-    {
-      "dateISO": "2026-10-09T19:00:00",
-      "sport": "Football",
-      "level": "Varsity",
-      "opponent": "Madison",
-      "wayneScore": 45,
-      "opponentScore": 7,
-      "result": "W",
-      "isHome": true,
-      "link": "https://www.maxpreps.com/oh/football/game/madison-middletown-vs-waynesville/10-9-2026/?c=077b01be-2f75-46e9-8dba-5dd51aa90d48"
-    },
     {
       "dateISO": "2026-10-13T18:45:00",
       "sport": "Volleyball",
@@ -43,7 +32,7 @@
       "wayneScore": 0,
       "opponentScore": 2,
       "result": "L",
-      "isHome": false,
+      "isHome": true,
       "link": "https://www.maxpreps.com/oh/soccer/match/badin-hamilton-vs-waynesville/jv/10-15-2026/?c=b62f716b-899f-43eb-bd41-d7063b67fb13"
     },
     {
@@ -56,20 +45,20 @@
       "result": "L",
       "isHome": true,
       "link": "https://www.maxpreps.com/oh/soccer/match/badin-hamilton-vs-waynesville/10-15-2026/?c=3dd2a00e-3a2f-4e39-b297-505029241a4a"
-    }
-  ],
-  "upcoming": [
+    },
     {
       "dateISO": "2026-10-16T19:00:00",
       "sport": "Football",
       "level": "Varsity",
       "opponent": "Eaton",
-      "wayneScore": null,
-      "opponentScore": null,
-      "result": null,
+      "wayneScore": 35,
+      "opponentScore": 7,
+      "result": "W",
       "isHome": true,
       "link": "https://www.maxpreps.com/oh/football/game/eaton-vs-waynesville/10-16-2026/?c=ae4a8cf1-eaf5-4c11-8eeb-35412dd55d0b"
-    },
+    }
+  ],
+  "upcoming": [
     {
       "dateISO": "2026-10-17T10:00:00",
       "sport": "Football",
@@ -113,6 +102,28 @@
       "result": null,
       "isHome": true,
       "link": "https://www.maxpreps.com/oh/soccer/girls/match/indian-lake-lewistown-vs-waynesville/10-22-2026/?c=911e48be-e3a4-4d27-a5f0-e747d0ef7107"
+    },
+    {
+      "dateISO": "2026-10-23T19:00:00",
+      "sport": "Football",
+      "level": "Varsity",
+      "opponent": "Valley View",
+      "wayneScore": null,
+      "opponentScore": null,
+      "result": null,
+      "isHome": false,
+      "link": "https://www.maxpreps.com/oh/football/game/valley-view-germantown-vs-waynesville/10-23-2026/?c=09d38f0b-3343-491c-8a5a-5266caf752f2"
+    },
+    {
+      "dateISO": "2026-10-24T10:00:00",
+      "sport": "Football",
+      "level": "JV",
+      "opponent": "Valley View",
+      "wayneScore": null,
+      "opponentScore": null,
+      "result": null,
+      "isHome": true,
+      "link": "https://www.maxpreps.com/oh/football/game/valley-view-germantown-vs-waynesville/jv/10-24-2026/?c=c9e33dd0-003a-40a7-86c2-f881fcadf8b6"
     }
   ]
 }
