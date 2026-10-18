@@ -1,13 +1,7 @@
 {
   "_note": "Mary L. Cook Public Library — upcoming programs from the library's WhoFi event calendar (https://marylcook-main-oh.whofi.com/calendar/full), next 14 days. Canceled events excluded.",
-  "updated": "2026-10-17T10:41:15.618Z",
+  "updated": "2026-10-18T10:41:26.752Z",
   "items": [
-    {
-      "title": "Crafting Fun Drop-in Program (Adults)",
-      "dateISO": "2026-10-17T10:30:00Z",
-      "dateLabel": "Sat · Oct 17, 10:30 AM",
-      "link": "https://marylcook-main-oh.whofi.com/calendar/event/354222/"
-    },
     {
       "title": "Paper Ghost Take and Make (TEENS)",
       "dateISO": "2026-10-19T13:00:00Z",
@@ -49,6 +43,12 @@
       "dateISO": "2026-10-21T10:30:00Z",
       "dateLabel": "Wed · Oct 21, 10:30 AM",
       "link": "https://marylcook-main-oh.whofi.com/calendar/event/352435/"
+    },
+    {
+      "title": "Preschool Storytime",
+      "dateISO": "2026-10-22T10:30:00Z",
+      "dateLabel": "Thu · Oct 22, 10:30 AM",
+      "link": "https://marylcook-main-oh.whofi.com/calendar/event/352431/"
     }
   ]
 }

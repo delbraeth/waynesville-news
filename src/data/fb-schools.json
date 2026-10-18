@@ -1,7 +1,21 @@
 {
   "_note": "Recent Wayne Local Schools Facebook posts via rss.app bridge. Title + link + short excerpt; the district's own words. Fail-safe: kept from last run if the bridge is down.",
-  "updated": "2026-10-17T10:41:07.821Z",
+  "updated": "2026-10-18T10:41:17.455Z",
   "items": [
+    {
+      "title": "🎪Coming up a week from today, the Waynesville Leo Club will host a Halloween Carnival complete with games, Bingo, a…",
+      "link": "https://www.facebook.com/waynelocalschools/posts/pfbid02tj6Ga9fATL1DSRZirG8df5EJ7cjXDoL6vjKKyxxPGh6tyNsWeHQU1ELT2ZMvDgLyl",
+      "date": "Sat, 17 Oct 2026 17:11:01 GMT",
+      "dateLabel": "Sat, Oct 17",
+      "excerpt": "Sweet Treat Walk, food, and a whole bunch of candy! Join us at Waynesville Elementary from 2-5 p.m. on Saturday, October 24! 🦁The proceeds will go to cover important Waynesville Leo Club causes!🦁"
+    },
+    {
+      "title": "Robotics, welding, biotechnology, robotics, chemistry, and even a guitar lab! WHS students got a firsthand look at some…",
+      "link": "https://www.facebook.com/waynelocalschools/posts/pfbid02Makpz2LqDnu5mUELYFLSahL9TbTFjviRi17qKpQ3Wv4QWXpgrU7YYFwTGud1RC2Yl",
+      "date": "Sat, 17 Oct 2026 12:00:04 GMT",
+      "dateLabel": "Sat, Oct 17",
+      "excerpt": "exciting career possibilities during Manufacturing Day at Sinclair Community College! 🔭From exploring cutting-edge technology to connecting with industry professionals, students discovered how the skills they're learning in school translate into real-world careers in manufacturing, science, and…"
+    },
     {
       "title": "🚌WLS Fiscal Focus: More Than Fuel 💻Safe school transportation takes buses, trained staff, fuel, insurance, and regular…",
       "link": "https://www.facebook.com/waynelocalschools/posts/pfbid02ZW4BGSY282esA9ifLhrWxxq85TEe8T1qd86LSn1V2WkYCS54fnWnjc6q6RW8Kd93l",
@@ -43,20 +57,6 @@
       "date": "Fri, 16 Oct 2026 10:55:32 GMT",
       "dateLabel": "Fri, Oct 16",
       "excerpt": "Tonight! Come celebrate our Seniors! Tonight we celebrate our Seniors! Their dedication to this team is unmatched! Thanks to this week’s sponsor, Morningstar Baptist Church!"
-    },
-    {
-      "title": "If you haven't already checked it out, here's the October issue of the Waynesville Events & Activities Newsletter:…",
-      "link": "https://www.facebook.com/waynelocalschools/posts/pfbid0215nU5sdAYNmZbie5quVmngFwnrnAjX9CyFZP4xgi4VZkHx4qtxc5zcK2QfGgemovl",
-      "date": "Thu, 15 Oct 2026 20:03:12 GMT",
-      "dateLabel": "Thu, Oct 15",
-      "excerpt": ""
-    },
-    {
-      "title": "👻In the spirit of the season, WES kindergartners recently dreamed up their own unique monsters; WHS students brought…",
-      "link": "https://www.facebook.com/waynelocalschools/posts/pfbid02Bn6cynswqq7icd272G1UPZRbcJcqdSj8k9jyKQNkVWVteMMj9UnDPwrZzHF7xnw3l",
-      "date": "Thu, 15 Oct 2026 14:05:53 GMT",
-      "dateLabel": "Thu, Oct 15",
-      "excerpt": "their designs to life by hand-sewing them out of felt, and this week the kindergartners got to meet and hold their one-of-a-kind creations! What a fun example of creativity, collaboration, and building Relationships across grade levels!🧡 #WeAreWayneLocal"
     }
   ]
 }
