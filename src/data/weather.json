@@ -1,39 +1,39 @@
 {
   "_note": "Auto-refreshed from the NWS API (api.weather.gov, ILN/Wilmington office).",
   "location": "Waynesville, OH",
-  "tempF": 64,
-  "condition": "Widespread Frost then Sunny",
+  "tempF": 69,
+  "condition": "Areas Of Frost then Sunny",
   "periodName": "Today",
-  "highF": 64,
-  "lowF": 37,
+  "highF": 69,
+  "lowF": 40,
   "outlook": [
-    {
-      "dayLabel": "Monday",
-      "highF": 68,
-      "lowF": 37,
-      "condition": "Areas Of Frost then Sunny"
-    },
     {
       "dayLabel": "Tuesday",
       "highF": 69,
-      "lowF": 39,
+      "lowF": 42,
       "condition": "Sunny"
     },
     {
       "dayLabel": "Wednesday",
-      "highF": 70,
+      "highF": 69,
       "lowF": 41,
+      "condition": "Sunny"
+    },
+    {
+      "dayLabel": "Thursday",
+      "highF": 69,
+      "lowF": 44,
       "condition": "Sunny"
     }
   ],
   "alerts": [
     {
-      "event": "Freeze Warning",
-      "headline": "Freeze Warning issued October 18 at 2:57AM EDT until October 18 at 9:00AM EDT by NWS Wilmington OH",
-      "severity": "Severe",
-      "expires": "2026-10-18T09:00:00-04:00",
-      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.11f595b0f9d2d563144d642aa8b8ed03947faf3f.001.1"
+      "event": "Frost Advisory",
+      "headline": "Frost Advisory issued October 19 at 2:40AM EDT until October 19 at 9:00AM EDT by NWS Wilmington OH",
+      "severity": "Minor",
+      "expires": "2026-10-19T09:00:00-04:00",
+      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.4007570611e7bb50e68c4414f8050c3f0470d76d.001.1"
     }
   ],
-  "updated": "2026-10-18T10:41:16.959Z"
+  "updated": "2026-10-19T10:41:20.958Z"
 }

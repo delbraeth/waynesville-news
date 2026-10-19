@@ -1,6 +1,6 @@
 {
   "_note": "Waynesville Spartans schedule + results (MaxPreps), past 7 days / next 7 days. Scraped directly from each sport's own schedule page (football, volleyball, soccer -- varsity + JV), not the school hub page, which has been observed to silently omit some contests. Scores and matchups reproduced verbatim from MaxPreps' own markup; each links to their game page.",
-  "updated": "2026-10-18T10:41:25.524Z",
+  "updated": "2026-10-19T10:41:27.251Z",
   "results": [
     {
       "dateISO": "2026-10-13T18:45:00",
@@ -34,6 +34,17 @@
       "result": "L",
       "isHome": true,
       "link": "https://www.maxpreps.com/oh/soccer/match/badin-hamilton-vs-waynesville/jv/10-15-2026/?c=b62f716b-899f-43eb-bd41-d7063b67fb13"
+    },
+    {
+      "dateISO": "2026-10-15T18:30:00",
+      "sport": "Volleyball",
+      "level": "Varsity",
+      "opponent": "Archbishop Alter",
+      "wayneScore": 0,
+      "opponentScore": 3,
+      "result": "L",
+      "isHome": false,
+      "link": "https://www.maxpreps.com/oh/volleyball/match/archbishop-alter-knights-dayton-vs-waynesville/10-15-2026/?c=f6bb0d5c-3364-4b94-b5b6-5e07dd4d8e9c"
     },
     {
       "dateISO": "2026-10-15T19:15:00",
