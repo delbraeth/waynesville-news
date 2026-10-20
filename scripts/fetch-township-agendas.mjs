@@ -3,7 +3,8 @@
 // The Board of Trustees page lists each meeting on its own line:
 //   "September 15 — <a>Minutes</a> | <a>Agenda</a><br />"
 // Minutes may be absent for recent meetings. The agenda PDF filename encodes
-// the full date ("September-15-2026.pdf", "January-6-2026.pdf") and is the
+// the full date ("September-15-2026.pdf", "Trustees-Meeting-Agenda-20261006.pdf",
+// "10.20.26-agenda.pdf") and is the
 // reliable date source; minutes filenames are inconsistent, so a minutes link
 // is only attached when it sits on the same line as its agenda.
 // No agenda text is scraped, only title/date/links — each item links straight
@@ -29,6 +30,8 @@ function parseDateFromFilename(filename) {
   const named = /([A-Za-z]+)-?(\d{1,2})-(\d{4})-?\.pdf$/i.exec(name);
   // e.g. "Trustees-Meeting-Agenda-20261006.pdf"
   const compact = /(?:^|[^\d])(20\d{2})(\d{2})(\d{2})\.pdf$/i.exec(name);
+  // e.g. "10.20.26-agenda.pdf", "10-20-2026-agenda.pdf" (month, day, year)
+  const numeric = /(?:^|[^\d])(\d{1,2})[.\-_](\d{1,2})[.\-_](\d{4}|\d{2})(?!\d)/.exec(name);
   if (named) {
     monthIdx = MONTHS.indexOf(named[1].toLowerCase());
     year = Number(named[3]);
@@ -37,6 +40,11 @@ function parseDateFromFilename(filename) {
     year = Number(compact[1]);
     monthIdx = Number(compact[2]) - 1;
     day = Number(compact[3]);
+  } else if (numeric) {
+    monthIdx = Number(numeric[1]) - 1;
+    day = Number(numeric[2]);
+    year = Number(numeric[3]);
+    if (year < 100) year += 2000;
   } else {
     return null;
   }
