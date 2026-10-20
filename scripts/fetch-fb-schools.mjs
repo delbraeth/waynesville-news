@@ -124,7 +124,15 @@ async function refresh(feed) {
   // Dedupe before trimming, so repeats don't eat slots meant for other posts.
   const items = dedupePosts(posts).slice(0, LIMIT);
 
-  if (items.length === 0) throw new Error("no items in feed window");
+  // An empty feed may mean the bridge broke, so fall back to the cache. But a
+  // feed that loaded with posts, none usable (all photo-only or older than the
+  // window), is a quiet page, not a broken source: record it as fresh and empty.
+  if (items.length === 0) {
+    if (!/<item>/.test(xml)) throw new Error("no items in feed");
+    await write(feed, []);
+    console.log(`${feed.label}.json: 0 ${feed.what} (feed OK; no text posts in the last ${LOOKBACK_DAYS} days)`);
+    return;
+  }
 
   await write(feed, items);
   console.log(`${feed.label}.json: ${items.length} ${feed.what}`);
