@@ -1,6 +1,6 @@
 {
   "_note": "Waynesville Spartans schedule + results (MaxPreps), past 7 days / next 7 days. Scraped directly from each sport's own schedule page (football, volleyball, soccer -- varsity + JV), not the school hub page, which has been observed to silently omit some contests. Scores and matchups reproduced verbatim from MaxPreps' own markup; each links to their game page.",
-  "updated": "2026-10-19T10:41:27.251Z",
+  "updated": "2026-10-20T10:41:35.683Z",
   "results": [
     {
       "dateISO": "2026-10-13T18:45:00",
@@ -122,7 +122,7 @@
       "wayneScore": null,
       "opponentScore": null,
       "result": null,
-      "isHome": true,
+      "isHome": false,
       "link": "https://www.maxpreps.com/oh/football/game/valley-view-germantown-vs-waynesville/jv/10-24-2026/?c=c9e33dd0-003a-40a7-86c2-f881fcadf8b6"
     },
     {
@@ -135,6 +135,17 @@
       "result": null,
       "isHome": true,
       "link": "https://www.maxpreps.com/oh/soccer/match/madison-middletown-vs-waynesville/10-24-2026/?c=1ca09b86-c650-4b34-9535-5fb14400e406"
+    },
+    {
+      "dateISO": "2026-10-26T19:00:00",
+      "sport": "Girls Soccer",
+      "level": "Varsity",
+      "opponent": "Valley View",
+      "wayneScore": null,
+      "opponentScore": null,
+      "result": null,
+      "isHome": true,
+      "link": "https://www.maxpreps.com/oh/soccer/girls/match/valley-view-germantown-vs-waynesville/10-26-2026/?c=6eeaae15-dad8-4f99-a7a2-2518443c9ded"
     }
   ]
 }

@@ -1,19 +1,7 @@
 {
   "_note": "Mary L. Cook Public Library — upcoming programs from the library's WhoFi event calendar (https://marylcook-main-oh.whofi.com/calendar/full), next 14 days. Canceled events excluded.",
-  "updated": "2026-10-19T10:41:28.421Z",
+  "updated": "2026-10-20T10:41:37.559Z",
   "items": [
-    {
-      "title": "Paper Ghost Take and Make (TEENS)",
-      "dateISO": "2026-10-19T13:00:00Z",
-      "dateLabel": "Mon · Oct 19, 1:00 PM",
-      "link": "https://marylcook-main-oh.whofi.com/calendar/event/352466/"
-    },
-    {
-      "title": "Art Class for Kids (Cozy Fall Cat)",
-      "dateISO": "2026-10-19T16:15:00Z",
-      "dateLabel": "Mon · Oct 19, 4:15 PM",
-      "link": "https://marylcook-main-oh.whofi.com/calendar/event/352441/"
-    },
     {
       "title": "Toddler Time",
       "dateISO": "2026-10-20T10:30:00Z",
@@ -49,6 +37,18 @@
       "dateISO": "2026-10-22T10:30:00Z",
       "dateLabel": "Thu · Oct 22, 10:30 AM",
       "link": "https://marylcook-main-oh.whofi.com/calendar/event/352431/"
+    },
+    {
+      "title": "Paint Party (Little Pumpkins)",
+      "dateISO": "2026-10-24T11:00:00Z",
+      "dateLabel": "Sat · Oct 24, 11:00 AM",
+      "link": "https://marylcook-main-oh.whofi.com/calendar/event/343024/"
+    },
+    {
+      "title": "Toddler Time",
+      "dateISO": "2026-10-27T10:30:00Z",
+      "dateLabel": "Tue · Oct 27, 10:30 AM",
+      "link": "https://marylcook-main-oh.whofi.com/calendar/event/352440/"
     }
   ]
 }
