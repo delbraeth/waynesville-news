@@ -2,6 +2,7 @@
 import Base from "../../layouts/Base.astro";
 import { getCollection, render } from "astro:content";
 import site from "../../data/site.json";
+import SubscribeBox from "../../components/SubscribeBox.astro";
 
 export async function getStaticPaths() {
   const briefs = (await getCollection("briefs")).filter((b) => b.data.published);
@@ -30,6 +31,7 @@ const dateFmt = new Intl.DateTimeFormat("en-US", {
         <strong>Sample edition.</strong> Layout only — no real names, quotes, or claims are invented.
       </div>
     )}
+    {!entry.data.demo && <SubscribeBox />}
     <div class="prose">
       <Content />
     </div>

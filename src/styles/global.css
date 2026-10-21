@@ -140,6 +140,7 @@ main { display: block; padding: 1.5rem 0 3rem; }
   color: var(--ink);
 }
 .mainnav a:hover { color: var(--accent); text-decoration: none; }
+.mainnav a.nav-subscribe { color: var(--accent); }
 
 /* ---------- info bar (weather + next meeting) ---------- */
 .infobar {
@@ -267,6 +268,17 @@ main { display: block; padding: 1.5rem 0 3rem; }
   width: 100%; max-width: 15rem; background: #fff; margin-bottom: 0.4rem;
 }
 .signup .btn { padding: 0.5rem 0.9rem; margin-top: 0; }
+
+/* ---------- subscribe box (top of home page and briefs) ---------- */
+.subscribe-box {
+  background: var(--paper-2); border: 1px solid var(--rule); border-top: 3px solid var(--accent);
+  padding: 0.9rem 1.1rem; margin: 1.2rem 0; font-family: var(--font-sans); font-size: 0.92rem;
+  display: flex; flex-wrap: wrap; align-items: center; gap: 0.6rem 1rem;
+}
+.subscribe-box .sb-text { margin: 0; flex: 1 1 16rem; color: var(--ink-soft); }
+.subscribe-box .sb-text strong { color: var(--ink); }
+.subscribe-box .sb-form { display: flex; gap: 0.4rem; flex: 1 1 18rem; margin: 0; }
+.subscribe-box .sb-form input { margin-bottom: 0; max-width: none; flex: 1; min-width: 0; }
 
 /* ---------- section feed (schools, government, around town, public safety) ---------- */
 .sectionfeed { margin-top: 1.5rem; }
