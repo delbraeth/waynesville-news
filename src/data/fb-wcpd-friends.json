@@ -1,7 +1,5 @@
 {
-  "_note": "fb-wcpd-friends source unreachable since 2026-10-12; cached data passed the 3-day staleness ceiling and was dropped rather than republished stale.",
-  "updated": "2026-10-20T10:41:29.366Z",
-  "items": [],
-  "lastGoodUpdated": "2026-10-12T10:40:55.960Z",
-  "sourceDownSince": "2026-10-20T10:41:29.367Z"
+  "_note": "Recent Friends of Warren County Park District Facebook posts via rss.app bridge. Title + link + short excerpt; the group's own words. Fail-safe: kept from last run if the bridge is down.",
+  "updated": "2026-10-21T10:41:26.683Z",
+  "items": []
 }

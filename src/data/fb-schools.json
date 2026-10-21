@@ -1,7 +1,21 @@
 {
   "_note": "Recent Wayne Local Schools Facebook posts via rss.app bridge. Title + link + short excerpt; the district's own words. Fail-safe: kept from last run if the bridge is down.",
-  "updated": "2026-10-20T10:41:29.211Z",
+  "updated": "2026-10-21T10:41:26.302Z",
   "items": [
+    {
+      "title": "Congratulations to our 2026 Sauerkraut Festival Scholarship Recipients and WHS Seniors! 🎓 Aislin Turkelson – $2,800…",
+      "link": "https://www.facebook.com/waynelocalschools/posts/pfbid0DtJorSoczup2a2n9yKske5whV58mLMWyn7DY2D2UJGmBATaMwpEksC7WaPJwjunQl",
+      "date": "Tue, 20 Oct 2026 15:00:06 GMT",
+      "dateLabel": "Tue, Oct 20",
+      "excerpt": "Sauerkraut Festival Scholarship 🎓 Macy Todd – $3,000 Founder's Scholarship, awarded for the 11th year in honor of festival founder Albert \"Cap\" Stubbs 🎓 Autumn Atkins – $3,200 Joe Coons Community Service Scholarship Thank you to our community and Sauerkraut Festival organizers for your…"
+    },
+    {
+      "title": "Wayne Local Schools is hiring Substitute Bus Drivers! Pay is $22.34 per hour. If you or someone you know has a CDL and…",
+      "link": "https://www.facebook.com/waynelocalschools/posts/pfbid02sYqW4RWRaooYjvTWFo9Jv1JNmfgwykQcGP6PGGb2S6xWyLb3V5fR77Tuk9RvM78gl",
+      "date": "Tue, 20 Oct 2026 11:40:08 GMT",
+      "dateLabel": "Tue, Oct 20",
+      "excerpt": "enjoys working with kids, this could be a great opportunity to join our team! 🚌Whether you can pick up an extra trip, cover a bus route, or drive for a school event, we'd like to hear from you! 📱Contact Ryan Fullenkamp at rfullenkamp@waynelocal.net with questions or interest!"
+    },
     {
       "title": "🧡Join us on October 21 for Unity Day. WLS students and staff will wear orange as we come together to show that no…",
       "link": "https://www.facebook.com/waynelocalschools/posts/pfbid022qnkEaPGgLCBee4YUBgQuQrmAXX5K8ty2xePY7VWwZ2F32esJEtfyFw8QME7mbHdl",
@@ -43,20 +57,6 @@
       "date": "Sat, 17 Oct 2026 17:11:01 GMT",
       "dateLabel": "Sat, Oct 17",
       "excerpt": "Sweet Treat Walk, food, and a whole bunch of candy! Join us at Waynesville Elementary from 2-5 p.m. on Saturday, October 24! 🦁The proceeds will go to cover important Waynesville Leo Club causes!🦁"
-    },
-    {
-      "title": "Robotics, welding, biotechnology, robotics, chemistry, and even a guitar lab! WHS students got a firsthand look at some…",
-      "link": "https://www.facebook.com/waynelocalschools/posts/pfbid02Makpz2LqDnu5mUELYFLSahL9TbTFjviRi17qKpQ3Wv4QWXpgrU7YYFwTGud1RC2Yl",
-      "date": "Sat, 17 Oct 2026 12:00:04 GMT",
-      "dateLabel": "Sat, Oct 17",
-      "excerpt": "exciting career possibilities during Manufacturing Day at Sinclair Community College! 🔭From exploring cutting-edge technology to connecting with industry professionals, students discovered how the skills they're learning in school translate into real-world careers in manufacturing, science, and…"
-    },
-    {
-      "title": "🚌WLS Fiscal Focus: More Than Fuel 💻Safe school transportation takes buses, trained staff, fuel, insurance, and regular…",
-      "link": "https://www.facebook.com/waynelocalschools/posts/pfbid02ZW4BGSY282esA9ifLhrWxxq85TEe8T1qd86LSn1V2WkYCS54fnWnjc6q6RW8Kd93l",
-      "date": "Fri, 16 Oct 2026 20:25:57 GMT",
-      "dateLabel": "Fri, Oct 16",
-      "excerpt": "maintenance. This past year, we also invested in routing software and cameras to improve efficiency and safety. 💰Next week, October 19–23, our drivers will count student riders each morning and afternoon. These counts, along with daily mileage, are reported to the Ohio Department of Education…"
     }
   ]
 }

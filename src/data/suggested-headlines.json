@@ -1,19 +1,7 @@
 {
   "_note": "Candidate local headlines (Google News RSS). Published as a quoted headline (or, when available, a short publisher-written excerpt) + source + link; never reproduce article body text.",
-  "updated": "2026-10-20T10:41:30.201Z",
+  "updated": "2026-10-21T10:44:05.949Z",
   "items": [
-    {
-      "title": "School funding, housing top issues for Warren County Ohio House candidates",
-      "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOclhURlVhRExEQWRYdFJfQ0hkRXV6UVhnY3JyZGkwMzZhQVU1a3Z2ZUp1VVNVYnVLczZkMjZjQ1hGMTlRQ3ZYaFpaeXQyMzQ0T1VDYnZlNkJCZUpySGtsSWF2VUFCaWVjdDJDWk9yS0ptZnJ2S2llWjQzRW41UFhqSjdUVnlLYkZtdHdkVUtKci1lUTJa?oc=5",
-      "source": "Dayton Daily News",
-      "date": "Wed, 14 Oct 2026 13:53:21 GMT"
-    },
-    {
-      "title": "Pheasant Releases Coming to Caesar Creek Wildlife Area as Ohio Prepares for Fall Hunting Season",
-      "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOYm1jc3lpV0xUUzJRY1RKUUNaNXdGaEJPRVZlcUw1X0p0emd3RWJzdl9ZVXhjX1NxU25TSW1TN0ZkXy03am1HRkxjN1R5VzdBSG1XSmp0dmVvbFBZMHJXMEthVC1PSWR4SndYYXAySVdEY2pDaVIyZXFSdXlXbjNrUlJxS3FNSTZVQ1YxTFNBNWxya3pzNlY0VGV1MHUzTnFnbXlwOHoxUzF3Y2Z2MC1QckZqQTF4amtJS1k1LUdjRmtiU3M?oc=5",
-      "source": "Warren County Post",
-      "date": "Sun, 18 Oct 2026 04:44:51 GMT"
-    },
     {
       "title": "Police: 5 people hospitalized after 3 vehicles involved in crash in Warren County",
       "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNRVMwTTdxY3J6YVpDUklPc3B1U09TMHhTNU1Wb0JKSkJvalNSdmFnUFVGaWh2RHpVR2FrVGRHRkdhMmZNN3dTWGNCblZfeWR4RE9iaWtqLUstR2toOHNaX0xuNl9WTnBCZkg0ZmNVMDhnbXFaZ0lYMk02bExZT3NFUS1zc3JGLUZRNlA3TmRGLWVXUGY0ajVwTnFn?oc=5",
@@ -21,22 +9,38 @@
       "date": "Mon, 19 Oct 2026 06:30:00 GMT"
     },
     {
-      "title": "Haines, Jacob vie to represent Warren County in Ohio Senate: Election 2026",
-      "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNcjRUakYtbEw3N3B2UndEbmtzRllTOGhEWk1uSWpMVTg1bVhGaWxoZ01SX1ZxRkVEZDFILTBwa0VSRlZpY0ZTU0dpRUtZcmVvZFFMaUN1bDRjamljcDJNT3B2eGt5Vm10R0Fvbmd2enVvS05RMUp6VExRS1gtcjZveXpQVy1uNzlPSld4R19hQUZ2WGtH?oc=5",
-      "source": "Dayton Daily News",
-      "date": "Wed, 14 Oct 2026 08:00:00 GMT"
+      "title": "Spectrum Delivers On Promise With Completed Broadband Expansion in Butler and Warren Counties, Ohio",
+      "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOeFRCek1sTkxraFk5UTdJS1dxVktseFhQcEY1WUphbDRfdXE3R0YzVG1xeGprQjA3b3hYQmpjc00zYi01TktwQ0x6WUs2bnRmU2toa01ZdlNZTGp0V2hqSlBmY3dNQ2JkUzR1d3BJRHAxbzlYbkd3SGdTYWRVUTRDcUZDMXJSUzQycDVsS29lNUtqdDhQSTkxUlBvWG9UNm81M1BnUlRYS3FIX1NSZklV?oc=5",
+      "source": "Charter Communications",
+      "date": "Fri, 16 Oct 2026 21:15:30 GMT"
     },
     {
-      "title": "Two Countywide Renewal Levies Will Appear on Warren County Ballots Nov. 3",
-      "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPRUFGcFpzbmUtUlRlY08xcFFha0FYWnZWSTBmQzRwRjZnRFc1Zi13aEN2empDa2dqMlJncVplTDNtREd3QWNmWEJrSTF0U3lXUTNBSG9XcWg5MVRKVHBBRXk2RXJkN09Xd0t2TEtMUVZhUHJsNFNfS19odVZ2SGpucGl5TVcxTFFXdFRpbnZhX1NzOW9NT0hTV1F0RXZUSGhOUkNEaW1sZnVqRnduUGRYekZTNUY0cVI4MGhjUQ?oc=5",
+      "title": "Vivid Fall Colors Now on Display in Northern Ohio",
+      "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPYS1oSUVoUWdmUzE3TVEzQl9HeDJIQWV6RVJUQUFsdDU1elRUYms5QjktY0FxR1Fkdkk2U3pXZ2R3aDlCQm1SLUt3QS01NE5SWlFGcEpId05hOGk0TGNXbjd6eUI3TWJoUk1kWW56Mkw3SVo0RmxaNjk3LVdZcnhmRWs3czVud1NYSjh2bmNJTmp0NUZfbzNsdnRR?oc=5",
       "source": "Warren County Post",
-      "date": "Wed, 14 Oct 2026 01:08:07 GMT"
+      "date": "Sat, 17 Oct 2026 02:18:09 GMT",
+      "sourceUrl": "https://warrencountypost.com/g/lebanon-oh/n/393568/vivid-fall-colors-now-display-northern-ohio",
+      "excerpt": "Fall colors are here!"
     },
     {
-      "title": "Janet Spencer Obituary (2026) - Wilmington, OH - Greene County Dailies",
-      "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPZEhadkZDa0lwZlp1cGMwQ1Q0bG1BRnVsal90SXo3bVV0c3ZKN0F1MFRaZzRCTk82MjJRbXFRd3Z0Mm5IUml0X091emVJMkYyclNGaHBMVzRoQVJMMWk3VmZTSWlGdmhQVTExMnhXTjFwdVBxb3lmOXRnakY3TGUyZFJQaXB2Q1o4N1FwVVc5ekUxWHVkc3RN?oc=5",
+      "title": "Public Open House North Warren County Transportation Plan",
+      "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPVzFMM0c5YThUY1BwNXE0SXFQcFhSalpDcFpsc1cyX3pPSDJ6cUFOSjdaeFppNk9MTG1kTVFqNTE1MEEwTUEyVmpKc3ZJNE1QSEM4OUJheVZ6SUlpUFV4Nk1SZWdGckZEMHh5ZWF2U2gtblI5QzVMUEZ4bHlwTEpudlhnazR2MUJXRHk4OUIwSTg2UHNfeENtNlUtUXlrMmNQQ2hGR2otckZJSXBC?oc=5",
+      "source": "Warren County Post",
+      "date": "Mon, 19 Oct 2026 16:56:34 GMT",
+      "sourceUrl": "https://warrencountypost.com/g/lebanon-oh/e/393768/public-open-house-north-warren-county-transportation-plan",
+      "excerpt": "The community is invited to an open house on to learn about potential new roadway connections between I-75 and I-71 a"
+    },
+    {
+      "title": "Crash hospitalizes 11-year-old on e-scooter in Warren County",
+      "link": "https://news.google.com/rss/articles/CBMingJBVV95cUxOMFZSWXlya2d2ZUhKblIyX2hzZlJlWG9mZjdxWEtBWUJCdXR0S2pmb3V5VnBuWUhpSmMtTHlVVmRXV1ZER2NWMVRBQkNmb3REbDljdkxVejZnaTBRMS1OaUozTXVHYVNaYXF5d0VVMTZMRTlHeWhZc2NVZ092VWd2MGpJaUdQZVlYbUV6eTZjU2lFMExQSklZekNib0ZLR1ZWT3lXXzVNUzlUX190R3lxQXlvYk9IOFRtMFB1YUJ0WTNKaXFpaFBkank1b0tHVHlhTTUwZjRjd3BvZmNTSzJ6UGlZSlZmNENkVXRHVVNXdVhQcDFqVUE2MFpQZ0NFZ2JidjJIWldLUFlPckt3cXZ4RjZxQ1FaZkJBa1JPN0pn?oc=5",
+      "source": "WKRC",
+      "date": "Wed, 21 Oct 2026 01:02:26 GMT"
+    },
+    {
+      "title": "Michael Henderson Day Obituary (2026) - Waynesville, OH - Stubbs-Conner Funeral Home & Cremation Services",
+      "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5ocTNDOGoxTG5vV3pVYUxqYlVodklyaEgtc3FkbGtoZUlKZEVVNEZISUFIQUFGdGR0NEdoOGt6czlwSzFnSzJTb0R4NWpKMnFGeHhGQ1dLb0J6Vkd5R0pKMjJrTVN5bC1YN2tXSnlsaEpNV3RyNjBuQ2RNbkhRb2M?oc=5",
       "source": "Legacy | Obituary",
-      "date": "Thu, 15 Oct 2026 07:00:00 GMT"
+      "date": "Tue, 20 Oct 2026 18:06:17 GMT"
     }
   ]
 }

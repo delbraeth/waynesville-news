@@ -1,31 +1,7 @@
 {
   "_note": "Mary L. Cook Public Library — upcoming programs from the library's WhoFi event calendar (https://marylcook-main-oh.whofi.com/calendar/full), next 14 days. Canceled events excluded.",
-  "updated": "2026-10-20T10:41:37.559Z",
+  "updated": "2026-10-21T10:41:33.339Z",
   "items": [
-    {
-      "title": "Toddler Time",
-      "dateISO": "2026-10-20T10:30:00Z",
-      "dateLabel": "Tue · Oct 20, 10:30 AM",
-      "link": "https://marylcook-main-oh.whofi.com/calendar/event/352439/"
-    },
-    {
-      "title": "Rapid Readers Book Club",
-      "dateISO": "2026-10-20T16:00:00Z",
-      "dateLabel": "Tue · Oct 20, 4:00 PM",
-      "link": "https://marylcook-main-oh.whofi.com/calendar/event/352450/"
-    },
-    {
-      "title": "Genre Exploration Book Club Meeting",
-      "dateISO": "2026-10-20T17:30:00Z",
-      "dateLabel": "Tue · Oct 20, 5:30 PM",
-      "link": "https://marylcook-main-oh.whofi.com/calendar/event/307603/"
-    },
-    {
-      "title": "Library Regular Board Meeting",
-      "dateISO": "2026-10-20T18:30:00Z",
-      "dateLabel": "Tue · Oct 20, 6:30 PM",
-      "link": "https://marylcook-main-oh.whofi.com/calendar/event/352442/"
-    },
     {
       "title": "Baby Bookworms",
       "dateISO": "2026-10-21T10:30:00Z",
@@ -49,6 +25,30 @@
       "dateISO": "2026-10-27T10:30:00Z",
       "dateLabel": "Tue · Oct 27, 10:30 AM",
       "link": "https://marylcook-main-oh.whofi.com/calendar/event/352440/"
+    },
+    {
+      "title": "The Loop Group (Fiber Crafts Club)",
+      "dateISO": "2026-10-27T17:30:00Z",
+      "dateLabel": "Tue · Oct 27, 5:30 PM",
+      "link": "https://marylcook-main-oh.whofi.com/calendar/event/306478/"
+    },
+    {
+      "title": "Baby Bookworms",
+      "dateISO": "2026-10-28T10:30:00Z",
+      "dateLabel": "Wed · Oct 28, 10:30 AM",
+      "link": "https://marylcook-main-oh.whofi.com/calendar/event/352436/"
+    },
+    {
+      "title": "Preschool Storytime",
+      "dateISO": "2026-10-29T10:30:00Z",
+      "dateLabel": "Thu · Oct 29, 10:30 AM",
+      "link": "https://marylcook-main-oh.whofi.com/calendar/event/352432/"
+    },
+    {
+      "title": "Winnie the Pooh's Heffalump Movie Event",
+      "dateISO": "2026-10-29T16:00:00Z",
+      "dateLabel": "Thu · Oct 29, 4:00 PM",
+      "link": "https://marylcook-main-oh.whofi.com/calendar/event/352445/"
     }
   ]
 }
