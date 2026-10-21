@@ -237,6 +237,8 @@ main { display: block; padding: 1.5rem 0 3rem; }
 
 /* ---------- prose (brief body) ---------- */
 .prose { font-size: 1.12rem; }
+/* Bare URLs (e.g. the "Check:" source lists) would otherwise push the page wider than a phone. */
+.prose a, .sf-body a { overflow-wrap: anywhere; }
 .prose h2 { margin-top: 2rem; border-bottom: 1px solid var(--rule); padding-bottom: 0.3rem; }
 .prose h3 { margin-top: 1.5rem; }
 .prose ol, .prose ul { padding-left: 1.3rem; }
