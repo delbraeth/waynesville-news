@@ -1,0 +1,23 @@
+---
+// Compact email signup shown near the top of the home page and each brief,
+// so readers see it without scrolling to the footer. Renders nothing until
+// the Buttondown username in site.json is set.
+import site from "../data/site.json";
+const nl = site.newsletter;
+const nlReady = nl && nl.username && nl.username !== "REPLACE_ME";
+---
+{nlReady && (
+  <aside class="subscribe-box" aria-label="Email signup">
+    <p class="sb-text"><strong>Get the Brief by email.</strong> Free — a note in your inbox when each edition goes up.</p>
+    <form
+      class="signup sb-form"
+      action={`https://buttondown.com/api/emails/embed-subscribe/${nl.username}`}
+      method="post"
+      target="popupwindow"
+      onsubmit={`window.open('https://buttondown.com/${nl.username}','popupwindow')`}
+    >
+      <input type="email" name="email" placeholder="you@example.com" aria-label="Email address" required />
+      <button class="btn" type="submit">Subscribe</button>
+    </form>
+  </aside>
+)}

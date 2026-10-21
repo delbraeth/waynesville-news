@@ -5,6 +5,7 @@ import HeadlineList from "../components/HeadlineList.astro";
 import SectionBlock from "../components/SectionBlock.astro";
 import EventsThisWeek from "../components/EventsThisWeek.astro";
 import BriefCard from "../components/BriefCard.astro";
+import SubscribeBox from "../components/SubscribeBox.astro";
 import headlines from "../data/headlines.json";
 import { getPublicBriefs } from "../lib/briefs.js";
 
@@ -27,6 +28,7 @@ const dateLine = latest ? dateFmt.format(latest.data.date) : undefined;
           dateLabel={shortFmt.format(latest.data.date)}
           href={`/briefs/${latest.id}/`}
         />
+        <SubscribeBox />
       </div>
     </section>
   ) : (
@@ -35,6 +37,7 @@ const dateLine = latest ? dateFmt.format(latest.data.date) : undefined;
         <p class="kicker">First edition coming soon</p>
         <h2>We’re almost live.</h2>
         <p class="dek">The first Waynesville Daily Brief is being written. Meanwhile, here’s what’s happening this week.</p>
+        <SubscribeBox />
       </div>
     </section>
   )}
