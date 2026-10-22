@@ -1,13 +1,7 @@
 {
   "_note": "Mary L. Cook Public Library — upcoming programs from the library's WhoFi event calendar (https://marylcook-main-oh.whofi.com/calendar/full), next 14 days. Canceled events excluded.",
-  "updated": "2026-10-21T10:41:33.339Z",
+  "updated": "2026-10-22T10:41:08.437Z",
   "items": [
-    {
-      "title": "Baby Bookworms",
-      "dateISO": "2026-10-21T10:30:00Z",
-      "dateLabel": "Wed · Oct 21, 10:30 AM",
-      "link": "https://marylcook-main-oh.whofi.com/calendar/event/352435/"
-    },
     {
       "title": "Preschool Storytime",
       "dateISO": "2026-10-22T10:30:00Z",
@@ -49,6 +43,12 @@
       "dateISO": "2026-10-29T16:00:00Z",
       "dateLabel": "Thu · Oct 29, 4:00 PM",
       "link": "https://marylcook-main-oh.whofi.com/calendar/event/352445/"
+    },
+    {
+      "title": "All Things Goosebumps Event",
+      "dateISO": "2026-10-29T16:00:00Z",
+      "dateLabel": "Thu · Oct 29, 4:00 PM",
+      "link": "https://marylcook-main-oh.whofi.com/calendar/event/352443/"
     }
   ]
 }
