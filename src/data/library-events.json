@@ -1,13 +1,7 @@
 {
   "_note": "Mary L. Cook Public Library — upcoming programs from the library's WhoFi event calendar (https://marylcook-main-oh.whofi.com/calendar/full), next 14 days. Canceled events excluded.",
-  "updated": "2026-10-22T10:41:08.437Z",
+  "updated": "2026-10-23T10:41:05.719Z",
   "items": [
-    {
-      "title": "Preschool Storytime",
-      "dateISO": "2026-10-22T10:30:00Z",
-      "dateLabel": "Thu · Oct 22, 10:30 AM",
-      "link": "https://marylcook-main-oh.whofi.com/calendar/event/352431/"
-    },
     {
       "title": "Paint Party (Little Pumpkins)",
       "dateISO": "2026-10-24T11:00:00Z",
@@ -49,6 +43,12 @@
       "dateISO": "2026-10-29T16:00:00Z",
       "dateLabel": "Thu · Oct 29, 4:00 PM",
       "link": "https://marylcook-main-oh.whofi.com/calendar/event/352443/"
+    },
+    {
+      "title": "Super Snackers",
+      "dateISO": "2026-11-02T16:00:00Z",
+      "dateLabel": "Mon · Nov 2, 4:00 PM",
+      "link": "https://marylcook-main-oh.whofi.com/calendar/event/354832/"
     }
   ]
 }

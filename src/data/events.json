@@ -1,5 +1,5 @@
 {
-  "_note": "Real venues and sources, verified against each listed source on 2026-10-21; Warren County tourism calendar re-checked 2026-10-22 (daily automated refresh). Wayne Local school dates per The Spartan (September and October 2026) and the district Community Events & Activities newsletter (October 2026) and Board Meeting Recap (October 2026). Recurring items (rodeo, commissioners, ghost walk) show the next occurrence. Warren County Park District events page SUSPENDED as a source per Cap'n (2026-10-03): it sits behind a Cloudflare bot challenge (403 since 2026-09-24). Do not fetch it or report it as failing; its items from the 2026-09-23 check are kept until they expire. Resume only when Cap'n provides a working source. Event notes and dateLabels are shown to readers: write them for readers (what, when, where, and a helpful pointer like \"check the event website for times\" when a detail is missing). Never put editorial or process notes in them (\"not published\", \"confirm before printing\", \"corrected from\", \"checked on\"); record corrections in the commit message instead.",
+  "_note": "Real venues and sources, verified against each listed source on 2026-10-23; Warren County tourism calendar re-checked 2026-10-23 (daily automated refresh). Wayne Local school dates per The Spartan (September and October 2026) and the district Community Events & Activities newsletter (October 2026) and Board Meeting Recap (October 2026). Recurring items (rodeo, commissioners, ghost walk) show the next occurrence. Warren County Park District events page SUSPENDED as a source per Cap'n (2026-10-03): it sits behind a Cloudflare bot challenge (403 since 2026-09-24). Do not fetch it or report it as failing; its items from the 2026-09-23 check are kept until they expire. Resume only when Cap'n provides a working source. Event notes and dateLabels are shown to readers: write them for readers (what, when, where, and a helpful pointer like \"check the event website for times\" when a detail is missing). Never put editorial or process notes in them (\"not published\", \"confirm before printing\", \"corrected from\", \"checked on\"); record corrections in the commit message instead.",
   "items": [
     {
       "title": "Historical Haunts — ghost walk of downtown Waynesville",
@@ -30,16 +30,6 @@
       "category": "Festival",
       "source": "https://waynesvillefallfest.com/",
       "note": "Corn maze, mini golf, petting farm, and other fall activities; $16 adult / $14 ages 10 & under daily admission. Not affiliated with Hisey Fall Fest."
-    },
-    {
-      "title": "Ohio Renaissance Festival — Romance Weekend",
-      "dateISO": "2026-10-17T10:30:00-04:00",
-      "endISO": "2026-10-18T19:00:00-04:00",
-      "dateLabel": "Oct 17–18 · 10:30 AM–7:00 PM",
-      "venue": "Renaissance Park, Waynesville",
-      "category": "Festival",
-      "source": "https://renfestival.com/",
-      "note": "Themed weekend in the 2026 season, which runs weekends through Nov 1."
     },
     {
       "title": "Ohio Renaissance Festival — Myths & Monsters Weekend",
@@ -208,19 +198,6 @@
       ]
     },
     {
-      "title": "Trunk-Or-Treat in the Park — Springboro",
-      "dateISO": "2026-10-18T15:00:00-04:00",
-      "endISO": "2026-10-18T18:00:00-04:00",
-      "dateLabel": "Sun, Oct 18 · 3:00–6:00 PM",
-      "venue": "North Park, 195 Tamarack Trl, Springboro",
-      "category": "Family",
-      "source": "https://business.springboroohio.org/events/Details/trunk-or-treat-in-the-park-1935639?sourceTypeId=Website",
-      "note": "Second annual, put on by local businesses: decorated trunks, best costume and best decorated trunk contests, a haunted trailer, police and fire visits, food trucks, vendors and live music. Set up on the paved area next to the restrooms.",
-      "tags": [
-        "trick-or-treat"
-      ]
-    },
-    {
       "title": "Kirby’s Community Connect Trunk-or-Treat — Lebanon",
       "dateISO": "2026-10-22T18:00:00-04:00",
       "endISO": "2026-10-22T19:30:00-04:00",
@@ -263,16 +240,6 @@
       "category": "Government",
       "source": "https://commissioners.warrencountyohio.gov/News/AgendaMinutes/Index",
       "note": "Weekly commissioners session; agendas and minutes posted online"
-    },
-    {
-      "title": "Earth Science Week: Guided Fossil Collecting",
-      "dateISO": "2026-10-18T13:00:00-04:00",
-      "endISO": "2026-10-18T16:00:00-04:00",
-      "dateLabel": "Sun, Oct 18 · 1:00–4:00 PM",
-      "venue": "Caesar Creek Lake Visitor Center, Waynesville",
-      "category": "Outdoors",
-      "source": "https://geology.ohiodnr.gov/",
-      "note": "ODNR paleontologist Mark Peter gives a talk, then he and geologist Chris Wright guide participants in fossil collecting at the emergency spillway at Caesar Creek State Park. Part of the Ohio Department of Natural Resources' Earth Science Week."
     },
     {
       "title": "Gingerbread 101 Workshop",

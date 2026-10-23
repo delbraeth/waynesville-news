@@ -1,6 +1,6 @@
 {
   "_note": "State-route work within 8 miles of Waynesville (ODOT OHGO; Restricted/Closed only, ODOT's own descriptions) plus Warren County Engineer closure releases starting within 21 days back / 14 ahead (countywide; title and start date only).",
-  "updated": "2026-10-22T10:41:08.211Z",
+  "updated": "2026-10-23T10:43:03.058Z",
   "items": [
     {
       "source": "ohgo",
@@ -21,6 +21,12 @@
       "endISO": "2026-11-01",
       "description": "Resurfacing on S.R. 73, between its junction with S.R. 741 in the city of Springboro to Red Lion Five Points Road. Traffic will be maintained in a minimum of one lane in either direction with the use of flaggers and traffic control devices.",
       "miles": 7.5
+    },
+    {
+      "source": "engineer",
+      "title": "Wilkens Blvd Closure",
+      "startISO": "2026-10-26",
+      "link": "https://engineer.warrencountyohio.gov/doc/Information/NewsReleases/2026/20261026_Wilkens_Blvd_Closure.pdf"
     },
     {
       "source": "engineer",
