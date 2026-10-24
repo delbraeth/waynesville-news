@@ -1,8 +1,19 @@
 {
   "_note": "Warren County Commissioners — most recently posted agendas, minutes and resolutions, grouped by meeting date (dates/labels/links only, reproduced from the county's index; the documents are scanned PDFs on the county site).",
-  "updated": "2026-10-23T10:43:01.606Z",
+  "updated": "2026-10-24T10:43:24.353Z",
   "source": "https://commissioners.warrencountyohio.gov/News/AgendaMinutes/Index",
   "items": [
+    {
+      "dateISO": "2026-10-27T16:00:00.000Z",
+      "dateLabel": "Oct 27, 2026",
+      "agendas": [
+        {
+          "link": "https://commissioners.warrencountyohio.gov/doc/AgendaMinutes/Agenda%5C2026%5C102726.pdf"
+        }
+      ],
+      "minutes": [],
+      "resolutions": []
+    },
     {
       "dateISO": "2026-10-20T16:00:00.000Z",
       "dateLabel": "Oct 20, 2026",
@@ -112,35 +123,6 @@
       "resolutions": [
         {
           "link": "https://commissioners.warrencountyohio.gov/doc/Resolutions%5C2026%5C092226.pdf"
-        }
-      ]
-    },
-    {
-      "dateISO": "2026-09-15T16:00:00.000Z",
-      "dateLabel": "Sep 15, 2026",
-      "agendas": [
-        {
-          "label": "Regular Session 2",
-          "link": "https://commissioners.warrencountyohio.gov/doc/AgendaMinutes/Agenda%5C2026%5C091526%20Regular%20Session%202.pdf"
-        },
-        {
-          "label": "Regular Session 1",
-          "link": "https://commissioners.warrencountyohio.gov/doc/AgendaMinutes/Agenda%5C2026%5C091526%20Regular%20Session%201.pdf"
-        }
-      ],
-      "minutes": [
-        {
-          "label": "Regular Session 2",
-          "link": "https://commissioners.warrencountyohio.gov/doc/AgendaMinutes/Minutes%5C2026%5C091526%20Regular%20Session%202.pdf"
-        },
-        {
-          "label": "Regular Session 1",
-          "link": "https://commissioners.warrencountyohio.gov/doc/AgendaMinutes/Minutes%5C2026%5C091526%20Regular%20Session%201.pdf"
-        }
-      ],
-      "resolutions": [
-        {
-          "link": "https://commissioners.warrencountyohio.gov/doc/Resolutions%5C2026%5C091526.pdf"
         }
       ]
     }

@@ -1,7 +1,21 @@
 {
   "_note": "Recent Wayne Local Schools Facebook posts via rss.app bridge. Title + link + short excerpt; the district's own words. Fail-safe: kept from last run if the bridge is down.",
-  "updated": "2026-10-23T10:40:56.761Z",
+  "updated": "2026-10-24T10:41:20.883Z",
   "items": [
+    {
+      "title": "Today’s WLS Fiscal Focus is about the growing challenge of school funding. Did you know: Between 1997 and 2002, the Ohio…",
+      "link": "https://www.facebook.com/waynelocalschools/posts/pfbid02ndugdNKiz6eR6uhU6wUncTVe57ZhGiRrVLgs1q48FTBV4kEpVkD3jyijfmNUjyaql",
+      "date": "Fri, 23 Oct 2026 20:03:22 GMT",
+      "dateLabel": "Fri, Oct 23",
+      "excerpt": "Supreme Court ruled four times that Ohio's school funding system was unconstitutional because it relied too heavily on local property taxes. That challenge continues today. Here's what Ohio schools are facing: ▶️92% of Ohio school districts (605 of 660) are projected to face deficits by FY2029.…"
+    },
+    {
+      "title": "What does it take to turn innovative ideas into medical technology that helps people? WHS students got a…",
+      "link": "https://www.facebook.com/waynelocalschools/posts/pfbid0TCyJNVkcQijLzsDUjLArWATmfAVDEfGGemmBoma8bmZNv26U1N6xwtgokoHLPP4ql",
+      "date": "Fri, 23 Oct 2026 13:47:01 GMT",
+      "dateLabel": "Fri, Oct 23",
+      "excerpt": "behind-the-scenes look during a visit to Globus Medical! Our students toured the manufacturing floor, explored careers in medical technology, and even put their problem-solving and teamwork skills to the test with a hands-on manufacturing challenge. 🎓We're always looking for ways to connect…"
+    },
     {
       "title": "WES students celebrated White Cane Day this week! With help from the district's Teacher of the Visually Impaired and…",
       "link": "https://www.facebook.com/waynelocalschools/posts/pfbid0BEegYzp2JQTgZoWht7qp6wg7g69yMN2Lu1VnfLdR7qQE8Co6NnoBEq3rYFe3mcGSl",
@@ -43,20 +57,6 @@
       "date": "Wed, 21 Oct 2026 20:40:49 GMT",
       "dateLabel": "Wed, Oct 21",
       "excerpt": "Chromebook if you registered to take the PSAT on Thursday, October 22. Good luck! Please email Testing Coordinator Karen Boggs at kboggs@waynelocal.net with questions."
-    },
-    {
-      "title": "Well done, Spartans! And, good luck to our runners who are competing this weekend!Our MS Cross Country Teams finished up...",
-      "link": "https://www.facebook.com/waynelocalschools/posts/pfbid02k36871kmECzjHCwcTfwWeaDGTKa8DwAuVkqNTqWmx5iGVmUzh7LxmUY1TeNT3zQgl",
-      "date": "Wed, 21 Oct 2026 19:17:21 GMT",
-      "dateLabel": "Wed, Oct 21",
-      "excerpt": "Well done, Spartans! And, good luck to our runners who are competing this weekend! Our MS Cross Country Teams finished up a great regular season at the SWBL meet this past weekend. Audrey Behymer- League Champion Lydia Wolf- Runner-Up Girls Team 3rd Overall SWBL Boys Team 8th Overall SWBL Good…"
-    },
-    {
-      "title": "WLS Community Members: We're looking for adults who are interested in participating in Waynesville High School's Supper…",
-      "link": "https://www.facebook.com/waynelocalschools/posts/pfbid034X6UHAbQGGLAeQW7nJiMATgjhHv3EMnoc54vGw1yhsLTHjpxvx9CLgmi5HNXKiChl",
-      "date": "Wed, 21 Oct 2026 15:15:48 GMT",
-      "dateLabel": "Wed, Oct 21",
-      "excerpt": "Club on Thursday, November 5, from 6:00 to 7:30 p.m. You can look forward to great conversations, meaningful connections, and good food! This event connects students in grades 9–12 with adults in our community to share experiences, explore careers, and build relationships while practicing…"
     }
   ]
 }
