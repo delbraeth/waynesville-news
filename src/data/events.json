@@ -1,5 +1,5 @@
 {
-  "_note": "Real venues and sources, verified against each listed source on 2026-10-24; Warren County tourism calendar re-checked 2026-10-24 (daily automated refresh). Wayne Local school dates per The Spartan (September and October 2026) and the district Community Events & Activities newsletter (October 2026) and Board Meeting Recap (October 2026). Recurring items (rodeo, commissioners, ghost walk) show the next occurrence. Warren County Park District events page SUSPENDED as a source per Cap'n (2026-10-03): it sits behind a Cloudflare bot challenge (403 since 2026-09-24). Do not fetch it or report it as failing; its items from the 2026-09-23 check are kept until they expire. Resume only when Cap'n provides a working source. Event notes and dateLabels are shown to readers: write them for readers (what, when, where, and a helpful pointer like \"check the event website for times\" when a detail is missing). Never put editorial or process notes in them (\"not published\", \"confirm before printing\", \"corrected from\", \"checked on\"); record corrections in the commit message instead.",
+  "_note": "Real venues and sources, verified against each listed source on 2026-10-25; Warren County tourism calendar re-checked 2026-10-25 (daily automated refresh). Wayne Local school dates per The Spartan (September and October 2026) and the district Community Events & Activities newsletter (October 2026) and Board Meeting Recap (October 2026). Recurring items (rodeo, commissioners, ghost walk) show the next occurrence. Warren County Park District events page SUSPENDED as a source per Cap'n (2026-10-03): it sits behind a Cloudflare bot challenge (403 since 2026-09-24). Do not fetch it or report it as failing; its items from the 2026-09-23 check are kept until they expire. Resume only when Cap'n provides a working source. Event notes and dateLabels are shown to readers: write them for readers (what, when, where, and a helpful pointer like \"check the event website for times\" when a detail is missing). Never put editorial or process notes in them (\"not published\", \"confirm before printing\", \"corrected from\", \"checked on\"); record corrections in the commit message instead.",
   "items": [
     {
       "title": "Historical Haunts — ghost walk of downtown Waynesville",
@@ -176,15 +176,6 @@
       "note": "Select nights Thursday through Sunday. Per Kings Island, not recommended for children under 13, and every guest needs paid admission. Check the park calendar for nightly hours."
     },
     {
-      "title": "Warren County Commissioners — Weekly Session",
-      "dateISO": "2026-10-20T09:00:00-04:00",
-      "dateLabel": "Tue, Oct 20 · 9:00 AM",
-      "venue": "406 Justice Dr, Lebanon",
-      "category": "Government",
-      "source": "https://commissioners.warrencountyohio.gov/News/AgendaMinutes/Index",
-      "note": "Weekly commissioners session; agendas and minutes posted online"
-    },
-    {
       "title": "Trick or Treat at Ohio Living Quaker Heights",
       "dateISO": "2026-10-28T18:00:00-04:00",
       "endISO": "2026-10-28T19:00:00-04:00",
@@ -287,6 +278,15 @@
       "category": "Schools",
       "source": "https://www.wayne-local.com/",
       "note": "For Waynesville High School swimmers and their parents, per the team's flyer. Contact the high school with questions."
+    },
+    {
+      "title": "Warren County Career Center Information Night (grades 9–10)",
+      "dateISO": "2026-10-29T18:00:00-04:00",
+      "dateLabel": "Thu, Oct 29 · 6:00 PM",
+      "venue": "Spartan Room, Waynesville High School",
+      "category": "Schools",
+      "source": "https://www.facebook.com/waynelocalschools/posts/pfbid0LfgftdZLBXfpwprvHZEB54ojAeE2SEBzTsqFvkp2AR9PiWhQNAstHZHWymAZNK1Hl",
+      "note": "For WHS students in grades 9 and 10 and their parents: meet the Warren County Career Center team and learn about career-tech programs."
     }
   ]
 }

@@ -1,12 +1,24 @@
 {
   "_note": "Candidate local headlines (Google News RSS). Published as a quoted headline (or, when available, a short publisher-written excerpt) + source + link; never reproduce article body text.",
-  "updated": "2026-10-24T10:41:21.713Z",
+  "updated": "2026-10-25T10:41:26.222Z",
   "items": [
     {
-      "title": "‘Not for sale’ | Warren County farm becomes massive protest against data centers. Check out this aerial view",
-      "link": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxOcWU4NWhRVTA3c1lBWFh0WmFiVF93c3ZSWEduaGo4dkYzUGd1OGFyNlZWdXdFeVg3ZWs2cHIzckZhRXNYSmtjSkl1YXRMS2hBdE1tMjJ1OThyZTBzVlh6eXRoRzRqREhfX3Y2ZlFIVEprbDdKdlNTeUZmYVd5dDlhekVCdjRpenYwaXVEeks3SFpfU2pGdEI5eXV6RlRZelI5YXR4QXA0RVdrVDJFbWhkMmpIaWdjT2xXdFdTQmtxalhVUmJVY2pkcUJyWFRPT0lxTmlHX0loZHRmX1hKM1dKSmphMnNXUmxDeTdN?oc=5",
-      "source": "WCPO 9 Cincinnati",
-      "date": "Fri, 23 Oct 2026 20:31:41 GMT"
+      "title": "Bull rider dies after incident at Fox Hollow Rodeo",
+      "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNVVZMU01MbVpwdVJMWGpGN1dMdTdMdmt6bGltaFJqOEJWMHVwQjhLcnRDdEQ3c2wzeERfZEQwRWhtX1poT2lJUFUweUFCUXF4ZHVYLUZ3cE15Nl9FLVlTSE1tY0lCcDI1Q2ZoYXp2ZHNFRTlpU0tZV3d6bEd2REJuVVI3TlA5amNFdDlMX1FrY0V5UQ?oc=5",
+      "source": "WLWT",
+      "date": "Sun, 25 Oct 2026 04:13:00 GMT"
+    },
+    {
+      "title": "School funding, housing top issues for Warren County Ohio House candidates",
+      "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOclhURlVhRExEQWRYdFJfQ0hkRXV6UVhnY3JyZGkwMzZhQVU1a3Z2ZUp1VVNVYnVLczZkMjZjQ1hGMTlRQ3ZYaFpaeXQyMzQ0T1VDYnZlNkJCZUpySGtsSWF2VUFCaWVjdDJDWk9yS0ptZnJ2S2llWjQzRW41UFhqSjdUVnlLYkZtdHdkVUtKci1lUTJa?oc=5",
+      "source": "Dayton Daily News",
+      "date": "Fri, 23 Oct 2026 17:28:03 GMT"
+    },
+    {
+      "title": "Spartans edge Valley View 31-28; a sunny Halloween weekend in Waynesville",
+      "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxOeVBtU25tQmE3eG5KeldLWkhic20yMkgzdTc5QUVQYURGTlMwWW5CTllpT21OS3NvY01OdHl3SzRWMkhnNDNYcDAyWGFnUHNZOG9yTkhqUmF3cVJrTUxGd3lnY19XQzkxMkF2TE83bThfOXFJYkV5OWliQktNaGx1VVZ0RGdmQ0ZkOF9WS2NnbFF3dWhzaTFDYnRaaVRMUQ?oc=5",
+      "source": "Buttondown",
+      "date": "Sat, 24 Oct 2026 19:56:25 GMT"
     },
     {
       "title": "Warren County Sheriff Barry Riley Endorses Zac Haines for Ohio Senate",
@@ -21,10 +33,22 @@
       "date": "Wed, 21 Oct 2026 10:34:51 GMT"
     },
     {
+      "title": "Warren County candidates weigh in on taxes, data centers: Election 2026",
+      "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPbDV1UFA3LUtqdVVWYWhtUVRmcmRucThrdF81X2ZtRU5IU1I1U1l5UmsyZUpRWkVXUnR4VnVIUEJrUlA1WUZTSHNvTllKTHJaaThxX01sTlk0WG5JeC1UZmVWQ0lLVlhydjBNUzRMTTFRR09tOWFqNjg2RkNad1g3dnFNeTQ4ZE8td05UWVVtekloWENo?oc=5",
+      "source": "Dayton Daily News",
+      "date": "Tue, 20 Oct 2026 13:05:59 GMT"
+    },
+    {
       "title": "Dig in with ODNR at Ohio Geology Discovery Day",
       "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOckhjSUg3TWhwbjhjRG1qdXdud0JUc3NpVE1nTmRlMFZIT3JqdUtGUDl6NUhNa0UyMWdrNTlMQ0hoLXBILVRkaEZ5QTR3MTkySmhyWFUzbHNFYWJweU51ZF9BSEczYVVWdGhqRC1KOWVZbE1rS2RpR2pPNEh2Ynl4TEZNWVMzcVkxamhWbldJNA?oc=5",
       "source": "Warren County Post",
       "date": "Fri, 23 Oct 2026 01:22:51 GMT"
+    },
+    {
+      "title": "Haines, Jacob vie to represent Warren County in Ohio Senate: Election 2026",
+      "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNcjRUakYtbEw3N3B2UndEbmtzRllTOGhEWk1uSWpMVTg1bVhGaWxoZ01SX1ZxRkVEZDFILTBwa0VSRlZpY0ZTU0dpRUtZcmVvZFFMaUN1bDRjamljcDJNT3B2eGt5Vm10R0Fvbmd2enVvS05RMUp6VExRS1gtcjZveXpQVy1uNzlPSld4R19hQUZ2WGtH?oc=5",
+      "source": "Dayton Daily News",
+      "date": "Tue, 20 Oct 2026 15:40:35 GMT"
     }
   ]
 }
