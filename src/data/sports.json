@@ -1,6 +1,6 @@
 {
   "_note": "Waynesville Spartans schedule + results (MaxPreps), past 7 days / next 7 days. Scraped directly from each sport's own schedule page (football, volleyball, soccer -- varsity + JV), not the school hub page, which has been observed to silently omit some contests. Scores and matchups reproduced verbatim from MaxPreps' own markup; each links to their game page.",
-  "updated": "2026-10-25T10:41:31.087Z",
+  "updated": "2026-10-26T10:41:03.974Z",
   "results": [
     {
       "dateISO": "2026-10-20T19:00:00",
@@ -34,6 +34,17 @@
       "result": "W",
       "isHome": false,
       "link": "https://www.maxpreps.com/oh/football/game/valley-view-germantown-vs-waynesville/10-23-2026/?c=09d38f0b-3343-491c-8a5a-5266caf752f2"
+    },
+    {
+      "dateISO": "2026-10-24T19:00:00",
+      "sport": "Boys Soccer",
+      "level": "Varsity",
+      "opponent": "Madison",
+      "wayneScore": 8,
+      "opponentScore": 0,
+      "result": "W",
+      "isHome": true,
+      "link": "https://www.maxpreps.com/oh/soccer/match/madison-middletown-vs-waynesville/10-24-2026/?c=1ca09b86-c650-4b34-9535-5fb14400e406"
     }
   ],
   "upcoming": [
@@ -49,7 +60,7 @@
       "link": "https://www.maxpreps.com/oh/soccer/girls/match/valley-view-germantown-vs-waynesville/10-26-2026/?c=6eeaae15-dad8-4f99-a7a2-2518443c9ded"
     },
     {
-      "dateISO": "2026-10-27T19:00:00",
+      "dateISO": "2026-10-27T17:00:00",
       "sport": "Boys Soccer",
       "level": "Varsity",
       "opponent": "Archbishop Alter",

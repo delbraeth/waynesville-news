@@ -1,12 +1,24 @@
 {
   "_note": "Candidate local headlines (Google News RSS). Published as a quoted headline (or, when available, a short publisher-written excerpt) + source + link; never reproduce article body text.",
-  "updated": "2026-10-25T10:41:26.222Z",
+  "updated": "2026-10-26T10:41:00.399Z",
   "items": [
     {
-      "title": "Bull rider dies after incident at Fox Hollow Rodeo",
+      "title": "Bull rider identified after fatal accident occurs at rodeo in Warren County",
       "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNVVZMU01MbVpwdVJMWGpGN1dMdTdMdmt6bGltaFJqOEJWMHVwQjhLcnRDdEQ3c2wzeERfZEQwRWhtX1poT2lJUFUweUFCUXF4ZHVYLUZ3cE15Nl9FLVlTSE1tY0lCcDI1Q2ZoYXp2ZHNFRTlpU0tZV3d6bEd2REJuVVI3TlA5amNFdDlMX1FrY0V5UQ?oc=5",
       "source": "WLWT",
-      "date": "Sun, 25 Oct 2026 04:13:00 GMT"
+      "date": "Sun, 25 Oct 2026 21:14:00 GMT"
+    },
+    {
+      "title": "Bull rider dies after accident at Warren County rodeo",
+      "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPcGh4TTVIM1dVVmJyRnRxdmpmVEZnNEhSMlI4MlhIRzhOaE9hbEVyUkZDTzFUYk1tVFN4LVpqazlRczU2VDFiYXRMdXZXRG1ZZUdLVl9ob1pQQmFUOW5aY2NieDFIS2JQMHRHdTZ6LVljQ001SV9BcVoySTIwUVRoZTBXUHl5cXhOMTNFag?oc=5",
+      "source": "WKRC",
+      "date": "Sun, 25 Oct 2026 21:53:56 GMT"
+    },
+    {
+      "title": "Congressman Greg Landsman Accepting Applications for Spring 2027 Internships",
+      "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQenNNRXhPMU1kOWtaRUJSay1jbVF4RlY3bFFnRWxtZmtpVF9oUjlOWklzM2lSaHY4Zl8wOTZib0tYcWhOV1k4a3Q0UGEzdTZkQUt6b0xydHVydXFjLVVoVHllclFXa0gwSlJHTXhRRFc2bjZ3MHU1Vmh5Z0tObWVaOXVkNTluUVh4S0E3VHlWd3NWX25pR1NMQ214bkZSRE5waE9wZGg0ODJDMDBEejFPdWRyVDZIUGdsOUh1MWM3a0g?oc=5",
+      "source": "Warren County Post",
+      "date": "Mon, 26 Oct 2026 02:46:00 GMT"
     },
     {
       "title": "School funding, housing top issues for Warren County Ohio House candidates",
@@ -15,40 +27,28 @@
       "date": "Fri, 23 Oct 2026 17:28:03 GMT"
     },
     {
-      "title": "Spartans edge Valley View 31-28; a sunny Halloween weekend in Waynesville",
-      "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxOeVBtU25tQmE3eG5KeldLWkhic20yMkgzdTc5QUVQYURGTlMwWW5CTllpT21OS3NvY01OdHl3SzRWMkhnNDNYcDAyWGFnUHNZOG9yTkhqUmF3cVJrTUxGd3lnY19XQzkxMkF2TE83bThfOXFJYkV5OWliQktNaGx1VVZ0RGdmQ0ZkOF9WS2NnbFF3dWhzaTFDYnRaaVRMUQ?oc=5",
-      "source": "Buttondown",
-      "date": "Sat, 24 Oct 2026 19:56:25 GMT"
+      "title": "Bull Riding Community Mourning Death of Blake Saylor",
+      "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPY3RCYmgyaUt1Z0lFdWN6bWNRbnNqYkFBbndyZG9YbWl1U0YzR2p3WkZ1Tms4SndnUW5tTmQ4U0ljVmlleEtOMlZNM2xCbWtTOHJYMEs0RFVpVFBlUDNvTEx0cWhOT0U5NVM4eFlNcmVqOFk3blpXOU9lbDM0WUh2X0FwTW9OUTFzNWZsQnN3?oc=5",
+      "source": "Yahoo Sports",
+      "date": "Sun, 25 Oct 2026 19:38:03 GMT"
     },
     {
-      "title": "Warren County Sheriff Barry Riley Endorses Zac Haines for Ohio Senate",
-      "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOblZHRVRhRmFKVUhEVUtIU0FmUUxNUl9Wd2NHb0NrYjhBY0FsSV9VWXp0aFlLNmZOdU9EbGJrUURqOGVzckZSLUVqRXZ6TFRVWHNCbF9rSUVhV2hmNGxINU5SWk5LNGRRWi1HR3QyYzhSMVZGLTNUekQ3anUtaXBwN2pfWGNwSVpOZ0hWMjZmNEhlSkdYd053c3VUeU9zUy1jVlN4VzVlS3RMUWdFNktLdUl1V1h4RkE?oc=5",
-      "source": "Warren County Post",
-      "date": "Fri, 23 Oct 2026 02:13:01 GMT"
+      "title": "Bull rider dies after suffering chest injury at Warren County stables, police say",
+      "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPYnBOSFpSdFJTSlN2eHdJZ0x6dlQ5NjBtckJod1lTSkN4OThsS29YRjN0SldTMFltWV9kS0o4WXhCbFZZLVp4RExKdkVGZDVXNWRaQmI5MjZVNjJBY05lbk1fMDZvU0k2aHhnX09uX3hjYnZsWDdITVkzZVVmajFIWnpTRlliQVJTd3ZvdjRvOVBGVk1IWm5XOXhZcGtNbzIzZFFGNGZ4NXB2Zk9kWEd5LQ?oc=5",
+      "source": "FOX19 | Cincinnati",
+      "date": "Sun, 25 Oct 2026 16:18:00 GMT"
     },
     {
-      "title": "Crash hospitalizes 11-year-old on e-scooter in Warren County",
-      "link": "https://news.google.com/rss/articles/CBMingJBVV95cUxOMFZSWXlya2d2ZUhKblIyX2hzZlJlWG9mZjdxWEtBWUJCdXR0S2pmb3V5VnBuWUhpSmMtTHlVVmRXV1ZER2NWMVRBQkNmb3REbDljdkxVejZnaTBRMS1OaUozTXVHYVNaYXF5d0VVMTZMRTlHeWhZc2NVZ092VWd2MGpJaUdQZVlYbUV6eTZjU2lFMExQSklZekNib0ZLR1ZWT3lXXzVNUzlUX190R3lxQXlvYk9IOFRtMFB1YUJ0WTNKaXFpaFBkank1b0tHVHlhTTUwZjRjd3BvZmNTSzJ6UGlZSlZmNENkVXRHVVNXdVhQcDFqVUE2MFpQZ0NFZ2JidjJIWldLUFlPckt3cXZ4RjZxQ1FaZkJBa1JPN0pn?oc=5",
-      "source": "WKRC",
-      "date": "Wed, 21 Oct 2026 10:34:51 GMT"
+      "title": "Deborah M. \"Debbie\" Mullins Obituary (2026) - Waynesville, OH - Stubbs-Conner Funeral Home & Cremation Services",
+      "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPb21OVzE2d09uVnFEWEs3SV9DTzBVaDBtSnRwV0JWQi03dldiMU5TeXViaHpRbE9FaFMxN3VnTE43VjhvTWQyX0VSVXl1SlA4cmFYVk4xWElycFE5ZTZzNTZrWnpNajZGODhDWlZoR2drRzVncTkxT1k1TEtYWklKQnNmU3E?oc=5",
+      "source": "Legacy | Obituary",
+      "date": "Sun, 25 Oct 2026 23:13:49 GMT"
     },
     {
-      "title": "Warren County candidates weigh in on taxes, data centers: Election 2026",
-      "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPbDV1UFA3LUtqdVVWYWhtUVRmcmRucThrdF81X2ZtRU5IU1I1U1l5UmsyZUpRWkVXUnR4VnVIUEJrUlA1WUZTSHNvTllKTHJaaThxX01sTlk0WG5JeC1UZmVWQ0lLVlhydjBNUzRMTTFRR09tOWFqNjg2RkNad1g3dnFNeTQ4ZE8td05UWVVtekloWENo?oc=5",
-      "source": "Dayton Daily News",
-      "date": "Tue, 20 Oct 2026 13:05:59 GMT"
-    },
-    {
-      "title": "Dig in with ODNR at Ohio Geology Discovery Day",
-      "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOckhjSUg3TWhwbjhjRG1qdXdud0JUc3NpVE1nTmRlMFZIT3JqdUtGUDl6NUhNa0UyMWdrNTlMQ0hoLXBILVRkaEZ5QTR3MTkySmhyWFUzbHNFYWJweU51ZF9BSEczYVVWdGhqRC1KOWVZbE1rS2RpR2pPNEh2Ynl4TEZNWVMzcVkxamhWbldJNA?oc=5",
-      "source": "Warren County Post",
-      "date": "Fri, 23 Oct 2026 01:22:51 GMT"
-    },
-    {
-      "title": "Haines, Jacob vie to represent Warren County in Ohio Senate: Election 2026",
-      "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNcjRUakYtbEw3N3B2UndEbmtzRllTOGhEWk1uSWpMVTg1bVhGaWxoZ01SX1ZxRkVEZDFILTBwa0VSRlZpY0ZTU0dpRUtZcmVvZFFMaUN1bDRjamljcDJNT3B2eGt5Vm10R0Fvbmd2enVvS05RMUp6VExRS1gtcjZveXpQVy1uNzlPSld4R19hQUZ2WGtH?oc=5",
-      "source": "Dayton Daily News",
-      "date": "Tue, 20 Oct 2026 15:40:35 GMT"
+      "title": "Bull rider killed as animal tosses him from back, then stomps him in middle of rodeo",
+      "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxObWM5RXpSSXBEcEg2Qk51T0lNX2R1WVhVeWNtTmItR1FqSGp4N2xKQ0FCR3cyTTNzU3kzdWhTemlDRDh2b0Q5Rjk0czBEc29JZlFjVzlUR0hxeE9HLTBUOWhsWXM1VEtDNlVoU09yQWlDbnQwRmp1S0o2VGViVmt0VW5lQnY2NFpnV2ZsMUJLUFFXWWF0MjZ4RTNnM3BiUzgwSEtLY1lUc2VmaTBadVhwU3BCbHpmSzA4aXdkYTNfYw?oc=5",
+      "source": "New York Post",
+      "date": "Sun, 25 Oct 2026 21:19:00 GMT"
     }
   ]
 }
