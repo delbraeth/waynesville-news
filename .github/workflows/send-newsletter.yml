@@ -1,0 +1,102 @@
+name: Send newsletter
+
+# Emails today's brief to Buttondown subscribers once it is confirmed live.
+#
+# This used to be the last step of the daily Claude run, but Claude Code's
+# auto-mode permission check blocks sending email from a scheduled session, so
+# the send now happens here, after "Promote claude/daily to main" succeeds.
+# Every promotion triggers it; send-newsletter.mjs refuses drafts, demos,
+# scaffolds and repeat sends, so later same-day promotions are no-ops.
+#
+# Email can't be unsent, so the order is fixed: confirm the page is live with
+# today's headline -> send -> record the send. If the page never goes live,
+# nothing is sent. A missing secret or a failed send turns the run red so
+# GitHub notifies the repo owner.
+#
+# Requires the repository secret BUTTONDOWN_API_KEY.
+on:
+  workflow_run:
+    workflows: ["Promote claude/daily to main"]
+    types: [completed]
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: send-newsletter
+  cancel-in-progress: false
+
+jobs:
+  send:
+    if: github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-node@v5
+        with:
+          node-version: "24"
+      - name: Install dependencies
+        run: npm ci
+      - name: Check whether there is an edition to send
+        id: pre
+        run: node scripts/newsletter-preflight.mjs
+      - name: Require the Buttondown key
+        if: steps.pre.outputs.send == 'true'
+        env:
+          BUTTONDOWN_API_KEY: ${{ secrets.BUTTONDOWN_API_KEY }}
+        run: |
+          if [ -z "$BUTTONDOWN_API_KEY" ]; then
+            echo "::error::BUTTONDOWN_API_KEY repository secret is not set — newsletter not sent."
+            exit 1
+          fi
+      - name: Wait until the edition is live
+        if: steps.pre.outputs.send == 'true'
+        env:
+          URL: ${{ steps.pre.outputs.url }}
+          MARKER: ${{ steps.pre.outputs.marker }}
+        run: npm run verify:live -- "$URL" 600 15 "$MARKER"
+      - name: Send to subscribers
+        if: steps.pre.outputs.send == 'true'
+        env:
+          BUTTONDOWN_API_KEY: ${{ secrets.BUTTONDOWN_API_KEY }}
+          TODAY: ${{ steps.pre.outputs.date }}
+        run: |
+          npm run newsletter:send
+          # The script exits 0 on every error so it never breaks a build; its
+          # record of the send is the only proof the email went out.
+          if [ "$(node -p "require('./src/data/newsletter-sent.json').lastSent")" != "$TODAY" ]; then
+            echo "::error::Newsletter for $TODAY was not sent — see the log above."
+            exit 1
+          fi
+      - name: Record the send on claude/daily and main
+        if: steps.pre.outputs.send == 'true'
+        env:
+          TODAY: ${{ steps.pre.outputs.date }}
+        run: |
+          set -euo pipefail
+          cp src/data/newsletter-sent.json "$RUNNER_TEMP/newsletter-sent.json"
+          git config user.name "waynesville-news-bot"
+          git config user.email "actions@users.noreply.github.com"
+          # Commit on top of claude/daily so the daily run's fast-forward
+          # promotion keeps working, then fast-forward main to it. Pushes made
+          # with GITHUB_TOKEN don't trigger workflows, so this can't loop.
+          ok=0
+          for attempt in 1 2 3; do
+            git fetch origin claude/daily main
+            git checkout -q -B record origin/claude/daily
+            cp "$RUNNER_TEMP/newsletter-sent.json" src/data/newsletter-sent.json
+            git add src/data/newsletter-sent.json
+            git diff --cached --quiet || git commit -m "newsletter: record $TODAY send"
+            if git push origin HEAD:claude/daily; then ok=1; break; fi
+            echo "push attempt $attempt failed, retrying..." && sleep 5
+          done
+          if [ "$ok" != "1" ]; then echo "::error::Email was sent but recording it on claude/daily failed."; exit 1; fi
+          if git merge-base --is-ancestor origin/main HEAD; then
+            git push origin HEAD:main
+          else
+            echo "::warning::main has commits not in claude/daily; the record will reach main with the next promotion."
+          fi

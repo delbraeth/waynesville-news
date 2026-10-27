@@ -1,12 +1,12 @@
 // Send today's published brief to subscribers via the Buttondown API.
 //
-// Runs as the LAST step of the daily workflow, after the brief is published
-// and pushed (so links in the email resolve to a live page). The brief is
+// Run by .github/workflows/send-newsletter.yml after the brief is promoted to
+// main and confirmed live (so links in the email resolve to a live page). The brief is
 // already Markdown; Buttondown renders it. Never sends a draft, a demo, or an
 // unfilled scaffold, and never sends the same edition twice.
 //
-// Requires BUTTONDOWN_API_KEY in the environment — set it in the daily task
-// alongside the GitHub token. It is never read from, or written to, the repo.
+// Requires BUTTONDOWN_API_KEY in the environment — a repository secret for the
+// workflow. It is never read from, or written to, the repo.
 // Fail-safe: any error logs and exits 0 so the workflow never fails on email.
 import { readFile, writeFile } from "node:fs/promises";
 import { existsSync } from "node:fs";
@@ -23,6 +23,13 @@ const key = process.env.BUTTONDOWN_API_KEY;
 const headers = { Authorization: `Token ${key}`, "Content-Type": "application/json" };
 
 async function main() {
+  // The "Send newsletter" GitHub Action owns the send. A second sender (the
+  // daily Claude run's old STEP 7) racing it could mail subscribers twice, so
+  // anywhere else this needs an explicit opt-in.
+  if (!process.env.GITHUB_ACTIONS && process.env.NEWSLETTER_SEND_LOCAL !== "1") {
+    console.log("newsletter: sent by the 'Send newsletter' GitHub Action — skipping (set NEWSLETTER_SEND_LOCAL=1 to send from here)");
+    return;
+  }
   if (!key) { console.log("newsletter: BUTTONDOWN_API_KEY not set — skipping send"); return; }
 
   // Today's brief, dated in Eastern time (same rule as draft-brief.mjs).
