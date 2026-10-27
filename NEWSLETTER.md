@@ -17,13 +17,18 @@ Edit `src/data/site.json` → `"username": "REPLACE_ME"` → your Buttondown use
 commit, push. The live site's subscribe box switches from "coming soon" to live.
 
 ## 3. Wire the daily send
-In Buttondown → **Settings → API**, copy your API key. Then in the daily task:
-- provide it as the environment variable `BUTTONDOWN_API_KEY` (exactly like the
-  GitHub token — it lives in the task, never in the repo), and
-- add `npm run newsletter:send` as the **last** step, after the push, so links in
-  the email point at a live page.
+In Buttondown → **Settings → API**, copy your API key and add it as the GitHub
+repository secret `BUTTONDOWN_API_KEY` (Settings → Secrets and variables →
+Actions). It never lives in the repo.
 
-That's it. Each morning: brief publishes → pushes → emails subscribers.
+The **Send newsletter** workflow (`.github/workflows/send-newsletter.yml`) runs
+after every successful promotion of `claude/daily` to `main`: it waits until
+today's page is live with today's headline, sends, and commits the send record
+to both branches. Run it by hand from the Actions tab to resend a missed day.
+The script skips outside GitHub Actions unless `NEWSLETTER_SEND_LOCAL=1` is set.
+
+That's it. Each morning: brief publishes → promotes to main → goes live →
+emails subscribers.
 
 ## Safety rails (built into `scripts/send-newsletter.mjs`)
 - Sends **only** a brief that is `published: true`, not `demo`, and has no
