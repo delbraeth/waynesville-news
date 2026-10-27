@@ -82,12 +82,17 @@ jobs:
           git config user.name "waynesville-news-bot"
           git config user.email "actions@users.noreply.github.com"
           # Commit on top of claude/daily so the daily run's fast-forward
-          # promotion keeps working, then fast-forward main to it. Pushes made
-          # with GITHUB_TOKEN don't trigger workflows, so this can't loop.
+          # promotion keeps working, then fast-forward main to it. If main has
+          # commits claude/daily lacks (a PR merged straight to main), merge
+          # main in first so both branches end up on the same commit. Pushes
+          # made with GITHUB_TOKEN don't trigger workflows, so this can't loop.
           ok=0
           for attempt in 1 2 3; do
             git fetch origin claude/daily main
-            git checkout -q -B record origin/claude/daily
+            git checkout -q -f -B record origin/claude/daily
+            if ! git merge-base --is-ancestor origin/main HEAD; then
+              git merge --no-edit -m "Merge main into claude/daily" origin/main
+            fi
             cp "$RUNNER_TEMP/newsletter-sent.json" src/data/newsletter-sent.json
             git add src/data/newsletter-sent.json
             git diff --cached --quiet || git commit -m "newsletter: record $TODAY send"
@@ -95,8 +100,4 @@ jobs:
             echo "push attempt $attempt failed, retrying..." && sleep 5
           done
           if [ "$ok" != "1" ]; then echo "::error::Email was sent but recording it on claude/daily failed."; exit 1; fi
-          if git merge-base --is-ancestor origin/main HEAD; then
-            git push origin HEAD:main
-          else
-            echo "::warning::main has commits not in claude/daily; the record will reach main with the next promotion."
-          fi
+          git push origin HEAD:main
