@@ -5,27 +5,27 @@
   "condition": "Mostly Sunny",
   "periodName": "Today",
   "highF": 74,
-  "lowF": 48,
+  "lowF": 51,
   "outlook": [
-    {
-      "dayLabel": "Tuesday",
-      "highF": 74,
-      "lowF": 50,
-      "condition": "Mostly Sunny"
-    },
     {
       "dayLabel": "Wednesday",
       "highF": 75,
-      "lowF": 47,
-      "condition": "Partly Sunny"
+      "lowF": 48,
+      "condition": "Mostly Sunny"
     },
     {
       "dayLabel": "Thursday",
-      "highF": 76,
-      "lowF": 51,
+      "highF": 77,
+      "lowF": 53,
       "condition": "Sunny"
+    },
+    {
+      "dayLabel": "Friday",
+      "highF": 76,
+      "lowF": 52,
+      "condition": "Mostly Sunny"
     }
   ],
   "alerts": [],
-  "updated": "2026-10-26T10:41:00.484Z"
+  "updated": "2026-10-27T10:41:33.302Z"
 }

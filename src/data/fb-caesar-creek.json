@@ -1,7 +1,14 @@
 {
   "_note": "Recent Caesar Creek State Park Facebook posts via rss.app bridge. Title + link + short excerpt; the park's own words. Fail-safe: kept from last run if the bridge is down.",
-  "updated": "2026-10-26T10:41:00.229Z",
+  "updated": "2026-10-27T10:41:32.399Z",
   "items": [
+    {
+      "title": "Save the Date! Mark your calendars for a great fun filled event 🦉 Owl Fest returns November 13th & 14th at Caesar Creek…",
+      "link": "https://www.facebook.com/CaesarCreekStatePark/posts/pfbid0kCbQVH9vTxuTkD5WA4VKVJX68KBd6Pb25MY4w6LgGZEgcNmYZA1DNWgLQMDostFkl",
+      "date": "Mon, 26 Oct 2026 17:57:55 GMT",
+      "dateLabel": "Mon, Oct 26",
+      "excerpt": "! Join us for owl hikes, banding demos, live raptors, hands‑on workshops, and family fun."
+    },
     {
       "title": "🎃🍂 And the winners are…!!! 🏆🏕️ Our Caesar Creek Fall Fest campers really outdid themselves this year with their…",
       "link": "https://www.facebook.com/CaesarCreekStatePark/posts/pfbid02RKsSMH9oDV1pevqaPaHfWkAc1px2zDN9ux9otdGCPj1F7GGRyMCTVJrmLNAvvk8Fl",
@@ -50,13 +57,6 @@
       "date": "Tue, 20 Oct 2026 20:52:49 GMT",
       "dateLabel": "Tue, Oct 20",
       "excerpt": "Caesar Creek State Park"
-    },
-    {
-      "title": "Join us today for a Honeysuckle Blitz - Give Back Day! Meet us at the Nature Center on Pioneer Village Road. Thank you…",
-      "link": "https://www.facebook.com/CaesarCreekStatePark/posts/pfbid0MVdA2V8VBUXRXboyPrxp6sDCNcm7pGPnx4pMSK4uZVhQVtL2jesXedRT5xWX1RSwl",
-      "date": "Sat, 17 Oct 2026 12:50:17 GMT",
-      "dateLabel": "Sat, Oct 17",
-      "excerpt": "Cincinnati Wildflower Society and Land Stewardship Volunteers! 🌺🌿"
     }
   ]
 }
