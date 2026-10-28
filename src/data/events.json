@@ -1,5 +1,5 @@
 {
-  "_note": "Real venues and sources, verified against each listed source on 2026-10-27; Warren County tourism calendar re-checked 2026-10-27 (daily automated refresh). Wayne Local school dates per The Spartan (September and October 2026) and the district Community Events & Activities newsletter (October 2026) and Board Meeting Recap (October 2026). Recurring items (rodeo, commissioners, ghost walk) show the next occurrence. Warren County Park District events page SUSPENDED as a source per Cap'n (2026-10-03): it sits behind a Cloudflare bot challenge (403 since 2026-09-24). Do not fetch it or report it as failing; its items from the 2026-09-23 check are kept until they expire. Resume only when Cap'n provides a working source. Event notes and dateLabels are shown to readers: write them for readers (what, when, where, and a helpful pointer like \"check the event website for times\" when a detail is missing). Never put editorial or process notes in them (\"not published\", \"confirm before printing\", \"corrected from\", \"checked on\"); record corrections in the commit message instead.",
+  "_note": "Real venues and sources, verified against each listed source on 2026-10-27; Warren County tourism calendar re-checked 2026-10-27 (daily automated refresh). Wayne Local school dates per The Spartan (September and October 2026) and the district Community Events & Activities newsletter (October 2026) and Board Meeting Recap (October 2026). Mary L. Cook Public Library programs per the library's monthly newsletter (November 2026). Recurring items (rodeo, commissioners, ghost walk) show the next occurrence. Warren County Park District events page SUSPENDED as a source per Cap'n (2026-10-03): it sits behind a Cloudflare bot challenge (403 since 2026-09-24). Do not fetch it or report it as failing; its items from the 2026-09-23 check are kept until they expire. Resume only when Cap'n provides a working source. Event notes and dateLabels are shown to readers: write them for readers (what, when, where, and a helpful pointer like \"check the event website for times\" when a detail is missing). Never put editorial or process notes in them (\"not published\", \"confirm before printing\", \"corrected from\", \"checked on\"); record corrections in the commit message instead.",
   "items": [
     {
       "title": "Historical Haunts — ghost walk of downtown Waynesville",
@@ -218,7 +218,7 @@
       "venue": "Mary L. Cook Public Library, 381 Old Stage Rd, Waynesville",
       "category": "Family",
       "source": "https://www.mlcook.lib.oh.us/",
-      "note": "The Waynesville Area Arts Council hosts a gingerbread-making workshop at the library. In-person registration begins Oct 26 at the library; a cash deposit is collected at sign-up and refunded at the workshop. Questions: contact the library."
+      "note": "The Waynesville Area Arts Council hosts a gingerbread-making workshop at the library. Register in person at the library; a cash deposit ($10 per person, or $20 for a group of 2–4) is collected at sign-up and refunded at the workshop. Children must be accompanied by an adult."
     },
     {
       "title": "Warren County Commissioners — Weekly Session",
@@ -275,6 +275,56 @@
       "category": "Government",
       "source": "https://northwarrencountytransportationplan-burgessniple.hub.arcgis.com/",
       "note": "Drop in anytime to see options for a possible new connection between I-75 and I-71 and 10 priority road improvement locations across northern Warren County, including Waynesville and Wayne Township. Hosted by the Warren County Engineer's Office and Transportation Improvement District. Can't make it? The same materials and a comment survey are on the project website through Nov 17."
+    },
+    {
+      "title": "Christmas Book Flood PJ Storytime",
+      "dateISO": "2026-11-12T18:00:00-05:00",
+      "endISO": "2026-11-12T18:30:00-05:00",
+      "dateLabel": "Thu, Nov 12 · 6:00–6:30 PM",
+      "venue": "Mary L. Cook Public Library, 381 Old Stage Rd, Waynesville",
+      "category": "Family",
+      "source": "https://www.mlcook.lib.oh.us/",
+      "note": "An evening storytime for all ages, in pajamas, celebrating Iceland's \"Jolabokaflod\" (Christmas Book Flood) tradition. Children take home a book and a hot cocoa packet. No registration required."
+    },
+    {
+      "title": "Service Dog Storytime",
+      "dateISO": "2026-11-19T10:30:00-05:00",
+      "endISO": "2026-11-19T11:00:00-05:00",
+      "dateLabel": "Thu, Nov 19 · 10:30–11:00 AM",
+      "venue": "Mary L. Cook Public Library, 381 Old Stage Rd, Waynesville",
+      "category": "Family",
+      "source": "https://www.mlcook.lib.oh.us/",
+      "note": "Stories about service dogs, plus a chance to meet a working service dog and its handler."
+    },
+    {
+      "title": "Friends of the Library Holiday Auction",
+      "dateISO": "2026-11-20T12:00:00-05:00",
+      "endISO": "2026-12-10T19:00:00-05:00",
+      "dateLabel": "Nov 20 (noon) – Dec 10 (7:00 PM)",
+      "venue": "Mary L. Cook Public Library, 381 Old Stage Rd, Waynesville",
+      "category": "Family",
+      "source": "https://www.mlcook.lib.oh.us/",
+      "note": "Bid in person on holiday decorations and gift baskets donated by area businesses and community groups. Bidding opens Friday, Nov 20 at noon and closes Thursday, Dec 10 at 7:00 PM. To donate an item, contact the library."
+    },
+    {
+      "title": "Letters to Santa mailbox at the library",
+      "dateISO": "2026-11-20T09:00:00-05:00",
+      "endISO": "2026-12-15T19:00:00-05:00",
+      "dateLabel": "Nov 20 – Dec 15 · during library hours",
+      "venue": "Mary L. Cook Public Library, 381 Old Stage Rd, Waynesville",
+      "category": "Family",
+      "source": "https://www.mlcook.lib.oh.us/",
+      "note": "Drop letters to Santa in the library's special mailbox. Letters mailed by Dec 15 get a reply from Santa's elves, who try to answer before Dec 25."
+    },
+    {
+      "title": "Santa Holiday Open House at the Library",
+      "dateISO": "2026-12-05T10:30:00-05:00",
+      "endISO": "2026-12-05T12:30:00-05:00",
+      "dateLabel": "Sat, Dec 5 · 10:30 AM–12:30 PM",
+      "venue": "Mary L. Cook Public Library, 381 Old Stage Rd, Waynesville",
+      "category": "Family",
+      "source": "https://www.mlcook.lib.oh.us/",
+      "note": "Photos with Santa, letter writing, a holiday craft, the library's new Elf Academy, and refreshments from the Friends of the Library. Registration required, beginning Monday, Nov 9: call the library at 513-897-4826 or sign up at the front desk."
     }
   ]
 }
