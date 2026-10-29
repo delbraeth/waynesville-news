@@ -1,7 +1,14 @@
 {
   "_note": "Recent Wayne Local Schools Facebook posts via rss.app bridge. Title + link + short excerpt; the district's own words. Fail-safe: kept from last run if the bridge is down.",
-  "updated": "2026-10-28T10:47:27.412Z",
+  "updated": "2026-10-29T10:40:56.133Z",
   "items": [
+    {
+      "title": "#SPARTANPRIDEThe HS Athletic Council attended the Anthony Munoz Youth Leadership Seminar at Crossroads Church in Mason a...",
+      "link": "https://www.facebook.com/waynelocalschools/posts/pfbid02uwKVokuf9dWg3RuotZobHMSzT4k7rAWgZWMY4jo5Y5ANyaWGYbyUoVQkoFiWvcpGl",
+      "date": "Wed, 28 Oct 2026 19:46:47 GMT",
+      "dateLabel": "Wed, Oct 28",
+      "excerpt": "#SPARTANPRIDE The HS Athletic Council attended the Anthony Munoz Youth Leadership Seminar at Crossroads Church in Mason along with 80 other local high schools. It was an awesome event that encouraged leadership and serving in our community. #SPARTANPRIDE @MUNOZYLS"
+    },
     {
       "title": "💻Our kindergartners got the chance to use \"real computers\" during a math diagnostic earlier this fall, and it was…",
       "link": "https://www.facebook.com/waynelocalschools/posts/pfbid0VTooahmDdpHXk3ZXZfEDAQ2rNGmMfHHVpDp7Z3viSCa6hPd7BVHCx7gWaXtky389l",
@@ -50,13 +57,6 @@
       "date": "Sat, 24 Oct 2026 12:00:29 GMT",
       "dateLabel": "Sat, Oct 24",
       "excerpt": "Card for being Respectful, Responsible, and Kind, they can choose a pretty pawsome reward — “Chill with Welkin!\" During ET/EH time at the end of the day, students can earn quality time with Welkin, our trained facility dog. Welkin is a highly valued member of our school community. His primary…"
-    },
-    {
-      "title": "Today’s WLS Fiscal Focus is about the growing challenge of school funding. Did you know: Between 1997 and 2002, the Ohio…",
-      "link": "https://www.facebook.com/waynelocalschools/posts/pfbid02ndugdNKiz6eR6uhU6wUncTVe57ZhGiRrVLgs1q48FTBV4kEpVkD3jyijfmNUjyaql",
-      "date": "Fri, 23 Oct 2026 20:03:22 GMT",
-      "dateLabel": "Fri, Oct 23",
-      "excerpt": "Supreme Court ruled four times that Ohio's school funding system was unconstitutional because it relied too heavily on local property taxes. That challenge continues today. Here's what Ohio schools are facing: ▶️92% of Ohio school districts (605 of 660) are projected to face deficits by FY2029.…"
     }
   ]
 }

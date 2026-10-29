@@ -1,18 +1,7 @@
 {
   "_note": "Waynesville Spartans schedule + results (MaxPreps), past 7 days / next 7 days. Scraped directly from each sport's own schedule page (football, volleyball, soccer -- varsity + JV), not the school hub page, which has been observed to silently omit some contests. Scores and matchups reproduced verbatim from MaxPreps' own markup; each links to their game page.",
-  "updated": "2026-10-28T10:47:35.447Z",
+  "updated": "2026-10-29T10:41:02.917Z",
   "results": [
-    {
-      "dateISO": "2026-10-21T17:00:00",
-      "sport": "Volleyball",
-      "level": "Varsity",
-      "opponent": "West Liberty-Salem",
-      "wayneScore": 0,
-      "opponentScore": 3,
-      "result": "L",
-      "isHome": false,
-      "link": "https://www.maxpreps.com/oh/volleyball/match/waynesville-vs-west-liberty-salem/10-21-2026/?c=2ad5ef21-6b31-4ffb-92c0-3fac584c2f07"
-    },
     {
       "dateISO": "2026-10-22T19:00:00",
       "sport": "Girls Soccer",
