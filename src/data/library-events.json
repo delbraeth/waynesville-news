@@ -1,25 +1,7 @@
 {
   "_note": "Mary L. Cook Public Library — upcoming programs from the library's WhoFi event calendar (https://marylcook-main-oh.whofi.com/calendar/full), next 14 days. Canceled events excluded.",
-  "updated": "2026-10-29T10:41:04.184Z",
+  "updated": "2026-10-30T10:41:51.535Z",
   "items": [
-    {
-      "title": "Preschool Storytime",
-      "dateISO": "2026-10-29T10:30:00Z",
-      "dateLabel": "Thu · Oct 29, 10:30 AM",
-      "link": "https://marylcook-main-oh.whofi.com/calendar/event/352432/"
-    },
-    {
-      "title": "Winnie the Pooh's Heffalump Movie Event",
-      "dateISO": "2026-10-29T16:00:00Z",
-      "dateLabel": "Thu · Oct 29, 4:00 PM",
-      "link": "https://marylcook-main-oh.whofi.com/calendar/event/352445/"
-    },
-    {
-      "title": "All Things Goosebumps Event",
-      "dateISO": "2026-10-29T16:00:00Z",
-      "dateLabel": "Thu · Oct 29, 4:00 PM",
-      "link": "https://marylcook-main-oh.whofi.com/calendar/event/352443/"
-    },
     {
       "title": "Super Snackers",
       "dateISO": "2026-11-02T16:00:00Z",
@@ -49,6 +31,24 @@
       "dateISO": "2026-11-04T10:30:00Z",
       "dateLabel": "Wed · Nov 4, 10:30 AM",
       "link": "https://marylcook-main-oh.whofi.com/calendar/event/354858/"
+    },
+    {
+      "title": "Preschool Storytime",
+      "dateISO": "2026-11-05T10:30:00Z",
+      "dateLabel": "Thu · Nov 5, 10:30 AM",
+      "link": "https://marylcook-main-oh.whofi.com/calendar/event/354861/"
+    },
+    {
+      "title": "Teen Anime and Manga Club",
+      "dateISO": "2026-11-05T15:00:00Z",
+      "dateLabel": "Thu · Nov 5, 3:00 PM",
+      "link": "https://marylcook-main-oh.whofi.com/calendar/event/354836/"
+    },
+    {
+      "title": "Paint Party at the Library",
+      "dateISO": "2026-11-07T10:00:00Z",
+      "dateLabel": "Sat · Nov 7, 10:00 AM",
+      "link": "https://marylcook-main-oh.whofi.com/calendar/event/355955/"
     }
   ]
 }

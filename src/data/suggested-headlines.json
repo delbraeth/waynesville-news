@@ -1,7 +1,19 @@
 {
   "_note": "Candidate local headlines (Google News RSS). Published as a quoted headline (or, when available, a short publisher-written excerpt) + source + link; never reproduce article body text.",
-  "updated": "2026-10-29T10:40:57.627Z",
+  "updated": "2026-10-30T10:41:49.971Z",
   "items": [
+    {
+      "title": "OSP identifies man who died after single-vehicle crash in Warren County",
+      "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQcWJrc2dYRlhvclVZZEF1UGJKMDE1N3lHLXVXWDZiTjVnbEYxeW5QRVk2Ymt0clpOblFfdl96TVBmcEViM042NXJrRmlqdW9pS2Nwc2NCc2ZvQXJPUWozYXZFczRVb2VkWFFiVnYwbl9RMVRUd3pvOFJfeWlrTFUzTzZTbnBxNTdQbFdFdmktci0?oc=5",
+      "source": "WLWT",
+      "date": "Thu, 29 Oct 2026 17:48:00 GMT"
+    },
+    {
+      "title": "1 killed in Warren County crash identified",
+      "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE5vR0JKeGYzeVBRcXRLZHhJU2JxSlh4X0tTM0NYaldtaEktYXRiSWZYZFA0RWJXanJaenJ0WE9xVTZNWXJKYU9FVklPNzVjNHBvQlVLNHh0MkxDeGJaS29sblZyeFJMZ1NYaWt1UnYyUElrWDlwRkI3RnpvM0hodw?oc=5",
+      "source": "WKRC",
+      "date": "Thu, 29 Oct 2026 23:42:09 GMT"
+    },
     {
       "title": "Rider killed at Warren County rodeo died doing what he loved, friend says",
       "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQOEoyUm5US243TXI0UDJzTExUR1lYNG9lR3pnd3dTNm51anBGMDhUUWgyMUpJUEdvamN6UW9UNGlUR3FnbUE3NnhwNGZ5ektMTnY2RF9SWDE3SGJJYm4temlhSlZSZm51STBFZmwzMmxjQXlXd3hmbHVJQjZPM2hhaWF3djFENzFDcWNFaVIzM2lTekZnNXhNSVluRV9HcklDUDdId1N30gG6AUFVX3lxTFA4bjF3a0JUWHFHMzVYaGszY2RWZ3dhMk9NWEJSTnRiaTRieTVuM1EzNXRuc212VDNBeVFjSDI3NnZRWndnNkltVm1Gb3I1aUc2bFczdnc0b3RWcDF6Y1V1bmJPYkFjcHhfeWt6SEFsVjAwa1Q2MVZfZ0dIaVpMMk1YWDFlQzNfQ0o1SC01NndaVkpZY0RDU0l0NU1hRXpieFB3MWlzVDhleVJKQm5wMEU2UDljMFpsbS1CZw?oc=5",
@@ -9,46 +21,34 @@
       "date": "Wed, 28 Oct 2026 20:54:00 GMT"
     },
     {
-      "title": "Bull rider dies after accident at Warren County rodeo",
-      "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPcGh4TTVIM1dVVmJyRnRxdmpmVEZnNEhSMlI4MlhIRzhOaE9hbEVyUkZDTzFUYk1tVFN4LVpqazlRczU2VDFiYXRMdXZXRG1ZZUdLVl9ob1pQQmFUOW5aY2NieDFIS2JQMHRHdTZ6LVljQ001SV9BcVoySTIwUVRoZTBXUHl5cXhOMTNFag?oc=5",
-      "source": "WKRC",
-      "date": "Sun, 25 Oct 2026 21:53:56 GMT"
+      "title": "1 killed in Warren County crash identified",
+      "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPY1Y0TU9KS1ZaMmNBYWF3azlWNHNlWV9YQktFaGtRUUZ3cEdNdWdfZHM2VXphQXc5OHd2YWFBZTQxQlp5NkZCa1dWa3dhMGFhZFRGS2g4NEM1ZGpKMjk1aDRpVW15VW9oN0Z1enBpb1Y0Y19QbmhRZ1ZjVldZRzV5ZkZCdGw?oc=5",
+      "source": "WKEF",
+      "date": "Thu, 29 Oct 2026 17:52:53 GMT"
     },
     {
-      "title": "ADOPT A SHELTER DOG MONTH IS ALMOST OVER",
-      "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPcHc4cUdHTm1GU1NRb2dQOERtcXFrcWVEQzZJRHF5amRjaWp6SEl3ZnFHWl9qNm4yVmJsb3E5RjktZUxKVUQzTi05T1c0T3RsWUVDX2lNOW13LXkwYlFCLTRDczlreHlvYTZQZ09Ud1prYTRFUHFnZWY3QkxyT2RYcXJjcnRIbkY1Mm9Ma095Yw?oc=5",
+      "title": "Driver Killed in Early-Morning Crash on U.S. 42 in Waynesville, Troopers Say",
+      "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOR3RTNExlaENFbTNvTEJfMXA0Y1VNUkVjTUNWODl0WG1OZGViMjQ2QWNWMlhJUkdJR0hndnNfNHV5c1QwLXZwZkhpOE45QVF1ZWlBcEJpSDYxRklUcXczdXN3YmZBd3RsTk51eURwTUQwbmVaNG1nSktWeWxFX0lrR3JxX0FsZVpGT1NDQVotTkZnc3NXZmhsbm4zYUd5cV9relBmd0I0cw?oc=5",
+      "source": "Hoodline",
+      "date": "Thu, 29 Oct 2026 18:16:27 GMT"
+    },
+    {
+      "title": "Could Northern Warren County See a New Connection Between I-75 and I-71? Residents Invited to Weigh In",
+      "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQc1FHcmJYY0tJZ2hqa01zOGhnbkhFNnZTSG5VUnpNcXpnQW5JNUpCeVpTYkx6NTFWbUlhSU5iaXRyY2dDczhHUlVJYTZYUHdsb0MtdWk2XzA5MXVtYURCemxLR1ZVVWZDdHM5dzdPYmlNd0hOUmYyWnlER0lUbWlISUpYekFNLUxfNm5MdVNKY0N1dV8yVl9iMGFOaUdrR2wtVzhWUmxvM0dBNnV4VW5kNFdiMDNfV3RyUUkwQQ?oc=5",
       "source": "Warren County Post",
-      "date": "Thu, 29 Oct 2026 00:20:07 GMT"
+      "date": "Mon, 26 Oct 2026 20:25:52 GMT"
     },
     {
-      "title": "Bull Riding Community Mourning Death of Blake Saylor",
-      "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPY3RCYmgyaUt1Z0lFdWN6bWNRbnNqYkFBbndyZG9YbWl1U0YzR2p3WkZ1Tms4SndnUW5tTmQ4U0ljVmlleEtOMlZNM2xCbWtTOHJYMEs0RFVpVFBlUDNvTEx0cWhOT0U5NVM4eFlNcmVqOFk3blpXOU9lbDM0WUh2X0FwTW9OUTFzNWZsQnN3?oc=5",
-      "source": "Yahoo Sports",
-      "date": "Sun, 25 Oct 2026 19:38:03 GMT"
+      "title": "School funding, housing top issues for Warren County Ohio House candidates",
+      "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOclhURlVhRExEQWRYdFJfQ0hkRXV6UVhnY3JyZGkwMzZhQVU1a3Z2ZUp1VVNVYnVLczZkMjZjQ1hGMTlRQ3ZYaFpaeXQyMzQ0T1VDYnZlNkJCZUpySGtsSWF2VUFCaWVjdDJDWk9yS0ptZnJ2S2llWjQzRW41UFhqSjdUVnlLYkZtdHdkVUtKci1lUTJa?oc=5",
+      "source": "Dayton Daily News",
+      "date": "Fri, 23 Oct 2026 17:28:03 GMT"
     },
     {
-      "title": "Bull rider's final ride turns deadly when beast throws him off and stomps on his chest",
-      "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNbWQxaWJSU3NSbURxZXd5WW1uOUJ4MGFpZ2NXck5PaUMxZ3pKc042OVZ1MnIyYlRjNHNOU3cyWmViWnBuT2VXcGVjM3B2RjUzNGJMVkxJdDl3aHJZeHRZa3ROWXlEUGJoY3pXOXdERjBoZFlXRDlnNDdWVEVnelp1Rl85Y2piQ3o3U1Frb2hhNGTSAZYBQVVfeXFMTVkxZGc4dU8wSDhYMHA2NGVvVDBlNXBnblB4R3pabVJtelpOc0tLUHNCZHlzMVRYVFNUYlk5UDhacndvN1A1UEtKZDhqVFg0TG5hSHY5S0lNRVhEdWtfaDhYWGFlTm5VNmszaVU2bVRwVTV6SElEMmRqZU9SZEV2OUI3b1RZUDc1UDM1eXRiREJYLW94LWx3?oc=5",
-      "source": "Fox News",
-      "date": "Mon, 26 Oct 2026 15:18:45 GMT"
-    },
-    {
-      "title": "Ohio bull rider dies after injury sustained at rodeo",
-      "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNQXN2VEdwNHVoRG1HbVN5a29VUl9BS2xuYXJEVzVWU1RmMXk0YzFSOExjN2NRZzFPWGJUNTRaZWJBVXN4YlRpSHBVVTRBeVZRQy1HVWZfb21wTVNPZkJFVzdDVEVXV3BvZnZzNU5NcGxXYUNtS1dlZkxFckRxbVFKLURKdm9ITE5jcDJQenZfanp1TW9IQndrMWctVm1aNm8?oc=5",
-      "source": "Farm and Dairy",
-      "date": "Mon, 26 Oct 2026 23:56:46 GMT"
-    },
-    {
-      "title": "Bull rider killed as animal tosses him from back, then stomps him in middle of rodeo",
-      "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxObWM5RXpSSXBEcEg2Qk51T0lNX2R1WVhVeWNtTmItR1FqSGp4N2xKQ0FCR3cyTTNzU3kzdWhTemlDRDh2b0Q5Rjk0czBEc29JZlFjVzlUR0hxeE9HLTBUOWhsWXM1VEtDNlVoU09yQWlDbnQwRmp1S0o2VGViVmt0VW5lQnY2NFpnV2ZsMUJLUFFXWWF0MjZ4RTNnM3BiUzgwSEtLY1lUc2VmaTBadVhwU3BCbHpmSzA4aXdkYTNfYw?oc=5",
-      "source": "New York Post",
-      "date": "Sun, 25 Oct 2026 21:19:00 GMT"
-    },
-    {
-      "title": "‘Not for sale’ | Warren County farm becomes massive protest against data centers. Check out this aerial view",
-      "link": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxOcWU4NWhRVTA3c1lBWFh0WmFiVF93c3ZSWEduaGo4dkYzUGd1OGFyNlZWdXdFeVg3ZWs2cHIzckZhRXNYSmtjSkl1YXRMS2hBdE1tMjJ1OThyZTBzVlh6eXRoRzRqREhfX3Y2ZlFIVEprbDdKdlNTeUZmYVd5dDlhekVCdjRpenYwaXVEeks3SFpfU2pGdEI5eXV6RlRZelI5YXR4QXA0RVdrVDJFbWhkMmpIaWdjT2xXdFdTQmtxalhVUmJVY2pkcUJyWFRPT0lxTmlHX0loZHRmX1hKM1dKSmphMnNXUmxDeTdN?oc=5",
-      "source": "WCPO 9 Cincinnati",
-      "date": "Fri, 23 Oct 2026 20:33:24 GMT"
+      "title": "Man sentenced in Warren County on child pornography charges, assault of woman",
+      "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxOVDFoNUUxTUZ6M0J0WUhMRHB5MkN5NUVqQm5kWS1UdGh2SG1yOTVPME4xZndVVHJYTU5wYTNHZE9VekNkZ3poMzRWb3FSRmJHeFF0SzlmMFBZajhqTVNvel94Wk1fdjdqQnROb05UNGprQmVWcmJub0lwcFVQWl9TR0owOTBHaVFzcVduYjlJWl9MQ0Y0R0FTRldlb09sdw?oc=5",
+      "source": "WLWT",
+      "date": "Thu, 29 Oct 2026 20:20:00 GMT"
     }
   ]
 }

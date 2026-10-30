@@ -1,18 +1,7 @@
 {
   "_note": "Waynesville Spartans schedule + results (MaxPreps), past 7 days / next 7 days. Scraped directly from each sport's own schedule page (football, volleyball, soccer -- varsity + JV), not the school hub page, which has been observed to silently omit some contests. Scores and matchups reproduced verbatim from MaxPreps' own markup; each links to their game page.",
-  "updated": "2026-10-29T10:41:02.917Z",
+  "updated": "2026-10-30T10:41:53.439Z",
   "results": [
-    {
-      "dateISO": "2026-10-22T19:00:00",
-      "sport": "Girls Soccer",
-      "level": "Varsity",
-      "opponent": "Indian Lake",
-      "wayneScore": 12,
-      "opponentScore": 0,
-      "result": "W",
-      "isHome": true,
-      "link": "https://www.maxpreps.com/oh/soccer/girls/match/indian-lake-lewistown-vs-waynesville/10-22-2026/?c=911e48be-e3a4-4d27-a5f0-e747d0ef7107"
-    },
     {
       "dateISO": "2026-10-23T19:00:00",
       "sport": "Football",
@@ -69,17 +58,5 @@
       "link": "https://www.maxpreps.com/oh/soccer/match/archbishop-alter-knights-dayton-vs-waynesville/10-27-2026/?c=344cc8d0-ef2d-4042-ba77-56082664dded"
     }
   ],
-  "upcoming": [
-    {
-      "dateISO": "2026-10-29T19:00:00",
-      "sport": "Girls Soccer",
-      "level": "Varsity",
-      "opponent": "Madeira",
-      "wayneScore": null,
-      "opponentScore": null,
-      "result": null,
-      "isHome": false,
-      "link": "https://www.maxpreps.com/oh/soccer/girls/match/madeira-mustangs-cincinnati-vs-waynesville/10-29-2026/?c=a2c42cbb-a475-4976-8e72-81ffc4d13bdc"
-    }
-  ]
+  "upcoming": []
 }
