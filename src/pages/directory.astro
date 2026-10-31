@@ -1,0 +1,143 @@
+---
+import Base from "../layouts/Base.astro";
+import directory from "../data/directory.json";
+
+type Item = {
+  id: string; name: string; location?: string; phone?: string; website?: string;
+  about?: string; sections: string[]; kinds?: string[]; local?: boolean; source?: string; from?: string;
+};
+
+const items = (directory.items ?? []) as Item[];
+const sections = (directory.sections ?? []) as { id: string; label: string }[];
+
+// Waynesville-area businesses first, then alphabetical.
+const byLocalThenName = (a: Item, b: Item) =>
+  Number(!!b.local) - Number(!!a.local) || a.name.localeCompare(b.name);
+
+const groups = sections
+  .map((s) => ({ ...s, items: items.filter((i) => i.sections.includes(s.id)).sort(byLocalThenName) }))
+  .filter((g) => g.items.length);
+
+// Chamber sub-categories like "Construction" or "Services" add nothing on a card.
+const GENERIC = new Set(["construction", "services", "other services/misc", "retail/wholesale", "custom", "restaurant"]);
+const tags = (i: Item) => (i.kinds ?? []).filter((k) => !GENERIC.has(k.toLowerCase())).slice(0, 4);
+
+const telHref = (p: string) => "tel:" + p.replace(/[^\d+]/g, "");
+const prettyUrl = (u: string) => u.replace(/^https?:\/\/(www\.)?/, "").replace(/\/.*$/, "");
+const searchText = (i: Item) =>
+  [i.name, i.about, i.location, ...(i.kinds ?? [])].join(" ").toLowerCase();
+
+const updated = directory.updated
+  ? new Date(directory.updated).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric", timeZone: "America/New_York" })
+  : "";
+const localCount = items.filter((i) => i.local).length;
+const listMail = "mailto:editor@waynesville.news?subject=" + encodeURIComponent("Business directory listing");
+---
+<Base
+  title="Local Business Directory · Waynesville Daily Brief"
+  description="Plumbers, electricians, landscapers, accountants, salons, shops and restaurants serving Waynesville, Ohio — a free local business directory."
+  showInfoBar={false}
+>
+  <div class="reading">
+    <p class="kicker">Local business</p>
+    <h1>Business Directory</h1>
+    <p class="dek">
+      Who to call in and around Waynesville — trades and home services first, then health, professional
+      services, shops and places to eat. {items.length} businesses, {localCount} of them in the Waynesville area.
+    </p>
+
+    <div class="callout">
+      <strong>Free to be listed, and not an endorsement.</strong> Listings come from the
+      <a href="https://www.waynesvilleohio.com/directory/" target="_blank" rel="noopener">Waynesville Area Chamber of Commerce member directory</a>
+      plus businesses that ask to be added. Nobody pays for placement, and a listing says nothing about
+      quality — always check licensing, insurance and reviews before hiring.
+      Missing, moved or out of business? <a href={listMail}>Email the editor</a>.
+    </div>
+
+    <form class="dir-tools" role="search" onsubmit="return false">
+      <label class="dir-search">
+        <span class="visually-hidden">Search the directory</span>
+        <input id="dir-q" type="search" placeholder="Search: plumber, tax, salon, pizza…" autocomplete="off" />
+      </label>
+      <label class="dir-local">
+        <input id="dir-local" type="checkbox" /> Waynesville area only
+      </label>
+    </form>
+
+    <nav class="dir-jump" aria-label="Directory sections">
+      {groups.map((g) => <a href={`#${g.id}`} data-jump={g.id}>{g.label} <span class="muted">{g.items.length}</span></a>)}
+    </nav>
+
+    <p id="dir-none" class="muted" hidden>No listings match. Try a shorter search, or <a href={listMail}>tell us who's missing</a>.</p>
+
+    {groups.map((g) => (
+      <section class="dir-group" id={g.id} data-group={g.id}>
+        <h2>{g.label}</h2>
+        <ul class="directory">
+          {g.items.map((i) => (
+            <li data-search={searchText(i)} data-local={i.local ? "1" : "0"}>
+              <div class="dir-name">
+                {i.website ? <a href={i.website} target="_blank" rel="noopener">{i.name}</a> : i.name}
+                {i.local && <span class="dir-badge">Waynesville area</span>}
+              </div>
+              {tags(i).length > 0 && <div class="dir-kinds">{tags(i).join(" · ")}</div>}
+              {i.about && <p class="dir-about">{i.about}</p>}
+              <div class="dir-contact">
+                {i.location && <span>{i.location}</span>}
+                {i.phone && <a href={telHref(i.phone)}>{i.phone}</a>}
+                {i.website && <a href={i.website} target="_blank" rel="noopener">{prettyUrl(i.website)}</a>}
+              </div>
+            </li>
+          ))}
+        </ul>
+      </section>
+    ))}
+
+    <div class="sp-join">
+      <h3>Add or fix a listing</h3>
+      <p>
+        Run a business that serves Waynesville, Corwin, Harveysburg or the rest of Wayne Township? Listings are free.
+        <a href={listMail}>Email the editor</a> with your business name, what you do, your town, phone and website.
+        Chamber members are included automatically.
+      </p>
+      <p class="small muted">
+        Looking for the businesses that help fund the Brief? They're on the <a href="/supporters/">Supporters</a> page.
+        {updated && <> Directory last refreshed {updated}.</>}
+      </p>
+    </div>
+  </div>
+</Base>
+
+<script is:inline>
+(() => {
+  const q = document.getElementById("dir-q");
+  const local = document.getElementById("dir-local");
+  const none = document.getElementById("dir-none");
+  const groups = [...document.querySelectorAll(".dir-group")];
+  const apply = () => {
+    const terms = q.value.toLowerCase().split(/\s+/).filter(Boolean);
+    const onlyLocal = local.checked;
+    let total = 0;
+    for (const g of groups) {
+      let shown = 0;
+      for (const li of g.querySelectorAll("li")) {
+        const hay = li.dataset.search || "";
+        const ok = (!onlyLocal || li.dataset.local === "1") && terms.every((t) => hay.includes(t));
+        li.hidden = !ok;
+        if (ok) shown++;
+      }
+      g.hidden = shown === 0;
+      const jump = document.querySelector(`[data-jump="${g.id}"]`);
+      if (jump) {
+        jump.hidden = shown === 0;
+        const n = jump.querySelector("span");
+        if (n) n.textContent = String(shown);
+      }
+      total += shown;
+    }
+    none.hidden = total !== 0;
+  };
+  q.addEventListener("input", apply);
+  local.addEventListener("change", apply);
+})();
+</script>

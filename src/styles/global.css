@@ -333,3 +333,33 @@ main { display: block; padding: 1.5rem 0 3rem; }
   .events li { grid-template-columns: 4.6rem 1fr; }
   h1 { font-size: 1.7rem; }
 }
+
+/* ---------- business directory (/directory/) ---------- */
+.dir-tools { display: flex; flex-wrap: wrap; gap: 0.6rem 1.2rem; align-items: center; margin: 1.5rem 0 0.8rem; font-family: var(--font-sans); }
+.dir-search { flex: 1 1 16rem; }
+.dir-search input {
+  width: 100%; box-sizing: border-box; font: inherit; font-size: 1rem; padding: 0.55rem 0.75rem;
+  border: 1px solid var(--rule); border-radius: 4px; background: #fff; color: var(--ink);
+}
+.dir-search input:focus { outline: 2px solid var(--link); outline-offset: 1px; }
+.dir-local { font-size: 0.9rem; white-space: nowrap; }
+.dir-jump { display: flex; flex-wrap: wrap; gap: 0.4rem; margin: 0 0 1.5rem; font-family: var(--font-sans); font-size: 0.8rem; }
+.dir-jump a { background: var(--chip); color: var(--ink-soft); padding: 0.25rem 0.6rem; border-radius: 999px; }
+.dir-jump a:hover { color: var(--accent); text-decoration: none; }
+.dir-jump a[hidden] { display: none; }
+.dir-group h2 { margin-top: 2rem; padding-bottom: 0.3rem; border-bottom: 2px solid var(--ink); font-size: 1.3rem; }
+.directory { list-style: none; margin: 0; padding: 0; }
+.directory li { padding: 0.9rem 0; border-bottom: 1px solid var(--rule); }
+.directory li:last-child { border-bottom: 0; }
+.directory li[hidden], .dir-group[hidden] { display: none; }
+.dir-name { font-family: var(--font-serif); font-size: 1.15rem; }
+.dir-name a { color: var(--ink); }
+.dir-name a:hover { color: var(--accent); text-decoration: none; }
+.dir-badge {
+  font-family: var(--font-sans); font-size: 0.62rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em;
+  color: var(--accent); border: 1px solid currentColor; border-radius: 3px; padding: 0.05rem 0.35rem; margin-left: 0.5rem; vertical-align: 0.15em;
+}
+.dir-kinds { font-family: var(--font-sans); font-size: 0.78rem; color: var(--muted); margin-top: 0.15rem; }
+.dir-about { font-size: 0.93rem; color: var(--ink-soft); margin: 0.35rem 0 0; }
+.dir-contact { display: flex; flex-wrap: wrap; gap: 0.2rem 1rem; font-family: var(--font-sans); font-size: 0.84rem; margin-top: 0.35rem; color: var(--muted); }
+.visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
