@@ -189,26 +189,58 @@ async function main() {
     }
   }
 
-  let manual = [];
-  try {
-    manual = JSON.parse(await readFile(MANUAL, "utf8")).items ?? [];
-  } catch {
-    /* no manual file */
-  }
-
   const chamber = [...byId.values()].map((r) => ({ ...r, local: isLocal(r.location), from: "chamber" }));
-  const names = new Set(manual.map((m) => m.name?.toLowerCase().trim()));
-  const items = [
-    ...manual.filter((m) => m && m.name).map((m) => ({ ...m, local: m.local ?? isLocal(m.location), from: "manual" })),
-    ...chamber.filter((c) => !names.has(c.name.toLowerCase().trim())),
-  ].sort((a, b) => a.name.localeCompare(b.name));
-
   if (chamber.length < 20) throw new Error(`only ${chamber.length} Chamber listings parsed — refusing to overwrite`);
+  await writeMerged(chamber);
+  if (unmapped.size) console.log(`directory: unmapped Chamber categories skipped: ${[...unmapped].join(", ")}`);
+}
 
+// "Smith's Plumbing, LLC" and "Smiths Plumbing" are the same business.
+const nameKey = (n = "") =>
+  n.toLowerCase().replace(/&/g, "and").replace(/\b(llc|inc|co|corp|ltd|the)\b\.?/g, "").replace(/[^a-z0-9]/g, "");
+const SECTION_IDS = new Set(SECTIONS.map((s) => s.id));
+
+async function loadManual() {
+  let raw = [];
+  try {
+    raw = JSON.parse(await readFile(MANUAL, "utf8")).items ?? [];
+  } catch {
+    return [];
+  }
+  const out = [];
+  for (const m of raw) {
+    if (!m?.name) continue;
+    const sections = (m.sections ?? []).filter((id) => SECTION_IDS.has(id));
+    if (!sections.length) {
+      console.log(`directory: manual listing "${m.name}" has no valid section — skipped`);
+      continue;
+    }
+    out.push({
+      id: m.id || `manual-${nameKey(m.name)}`,
+      name: clean(m.name),
+      location: clean(m.location ?? ""),
+      phone: clean(m.phone ?? ""),
+      sections,
+      kinds: (m.kinds ?? []).map(clean).filter(Boolean),
+      source: m.source ?? "",
+      website: normalizeUrl(m.website ?? ""),
+      about: clean(m.about ?? ""),
+      local: m.local ?? isLocal(m.location),
+      from: "manual",
+    });
+  }
+  return out;
+}
+
+async function writeMerged(chamber) {
+  const manual = await loadManual();
+  const keys = new Set(manual.map((m) => nameKey(m.name)));
+  const items = [...manual, ...chamber.filter((c) => !keys.has(nameKey(c.name)))]
+    .sort((a, b) => a.name.localeCompare(b.name));
   await writeFile(
     OUT,
     JSON.stringify({
-      _note: "Local business directory. Built by scripts/fetch-directory.mjs from the Waynesville Area Chamber of Commerce's public member directory (name, location, phone, website, and the Chamber's description, as published) plus hand-added listings in directory-manual.json. Contact names, emails and hours are deliberately not copied. Do not edit by hand — edit directory-manual.json and re-run `npm run refresh:directory`.",
+      _note: "Local business directory. Built by scripts/fetch-directory.mjs from the Waynesville Area Chamber of Commerce's public member directory (name, location, phone, website, and the Chamber's description, as published) plus hand-added listings in directory-manual.json. Contact names, emails and hours are deliberately not copied. Do not edit by hand — edit directory-manual.json and re-run `npm run refresh:directory` (or `npm run refresh:directory -- --manual-only` to merge manual edits without re-reading the Chamber site).",
       updated: new Date().toISOString(),
       sections: SECTIONS,
       items,
@@ -216,10 +248,18 @@ async function main() {
   );
   const local = items.filter((i) => i.local).length;
   console.log(`directory.json: ${items.length} listing(s) (${local} in the Waynesville area; ${manual.length} manual)`);
-  if (unmapped.size) console.log(`directory: unmapped Chamber categories skipped: ${[...unmapped].join(", ")}`);
 }
 
-main().catch((e) => {
+// --manual-only: re-merge directory-manual.json into the existing file,
+// reusing the Chamber listings already there. Seconds instead of minutes.
+async function manualOnly() {
+  const current = JSON.parse(await readFile(OUT, "utf8"));
+  const chamber = (current.items ?? []).filter((i) => i.from === "chamber");
+  if (chamber.length < 20) throw new Error("existing directory.json has too few Chamber listings — run a full refresh");
+  await writeMerged(chamber);
+}
+
+(process.argv.includes("--manual-only") ? manualOnly() : main()).catch((e) => {
   console.error(`directory refresh failed, keeping existing directory.json: ${e.message}`);
   process.exit(0);
 });
