@@ -1,6 +1,6 @@
 {
   "_note": "Local business directory. Built by scripts/fetch-directory.mjs from the Waynesville Area Chamber of Commerce's public member directory (name, location, phone, website, and the Chamber's description, as published) plus hand-added listings in directory-manual.json. Contact names, emails and hours are deliberately not copied. Do not edit by hand — edit directory-manual.json and re-run `npm run refresh:directory` (or `npm run refresh:directory -- --manual-only` to merge manual edits without re-reading the Chamber site).",
-  "updated": "2026-10-31T22:43:06.446Z",
+  "updated": "2026-10-31T22:54:43.096Z",
   "sections": [
     {
       "id": "home",
@@ -49,6 +49,10 @@
     {
       "id": "pets",
       "label": "Pets & veterinary"
+    },
+    {
+      "id": "faith",
+      "label": "Churches & places of worship"
     },
     {
       "id": "other",
@@ -1000,6 +1004,23 @@
       "from": "chamber"
     },
     {
+      "id": "chamber-583",
+      "name": "Crossview Christian Church",
+      "location": "4237 E. Social Row Rd., Waynesville, OH 45068",
+      "phone": "937-885-7402",
+      "sections": [
+        "faith"
+      ],
+      "kinds": [
+        "Churches/Worship"
+      ],
+      "source": "https://www.waynesvilleohio.com/directory/listing/583",
+      "website": "http://www.crossview.cc/",
+      "about": "",
+      "local": true,
+      "from": "chamber"
+    },
+    {
       "id": "chamber-688",
       "name": "Culpepper Law, LLC",
       "location": "2955 Exchange Place Blvd, Suite 104, Miamisburg, OH 45342",
@@ -1751,6 +1772,23 @@
       "website": "http://lewiscommunitymercantile.myshopify.com/",
       "about": "We are a small town mercantile offering a variety of goods for your home, fresh bread, baked goods, nostalgic candy, apparel, jewelry, fresh flowers, and even an Old Fashioned Soda Shop with a modern twist, including smoothies!",
       "local": true,
+      "from": "chamber"
+    },
+    {
+      "id": "chamber-296",
+      "name": "Lifehouse Church",
+      "location": "2234 Utica Rd., Lebanon, OH 45036",
+      "phone": "513-934-4446",
+      "sections": [
+        "faith"
+      ],
+      "kinds": [
+        "Churches/Worship"
+      ],
+      "source": "https://www.waynesvilleohio.com/directory/listing/296",
+      "website": "",
+      "about": "",
+      "local": false,
       "from": "chamber"
     },
     {
@@ -2533,15 +2571,34 @@
       "from": "chamber"
     },
     {
+      "id": "chamber-579",
+      "name": "St. Augustine Parish",
+      "location": "5715 Lytle Rd., Waynesville, OH 45068",
+      "phone": "513-897-0545",
+      "sections": [
+        "faith"
+      ],
+      "kinds": [
+        "Churches/Worship"
+      ],
+      "source": "https://www.waynesvilleohio.com/directory/listing/579",
+      "website": "",
+      "about": "",
+      "local": true,
+      "from": "chamber"
+    },
+    {
       "id": "chamber-300",
       "name": "St. Mary's Episcopal Church",
       "location": "107 S. 3rd St. Waynesville, OH 45068",
       "phone": "283-221-7970",
       "sections": [
-        "stay"
+        "stay",
+        "faith"
       ],
       "kinds": [
-        "Venue Rental"
+        "Venue Rental",
+        "Churches/Worship"
       ],
       "source": "https://www.waynesvilleohio.com/directory/listing/300",
       "website": "http://www.stmaryswaynesville.org/",
@@ -3290,6 +3347,40 @@
       "source": "https://provmedgroup.com/waynesville.html",
       "website": "https://provmedgroup.com/waynesville.html",
       "about": "Family medicine practice (part of Providence Medical Group) offering check-ups, illness and injury care, well-child visits, diabetes care, geriatric care and flu shots.",
+      "local": true,
+      "from": "manual"
+    },
+    {
+      "id": "manual-waynesvillemasoniclodge163",
+      "name": "Waynesville Masonic Lodge 163",
+      "location": "1351 Lytle Road, Waynesville, Ohio 45068",
+      "phone": "513-313-0154",
+      "sections": [
+        "other"
+      ],
+      "kinds": [
+        "Fraternal Organization"
+      ],
+      "source": "https://www.waynesvilleohio.com/directory/listing/784 (moved out of the worship section)",
+      "website": "https://www.waynesvillelodge163.com/",
+      "about": "The Waynesville Masonic Lodge 163 is a non-profit organization based in Waynesville for 178 years. We look forward to doing the Sauerkraut Festival every year, so we can give back to the community we have been a part of for so long.",
+      "local": true,
+      "from": "manual"
+    },
+    {
+      "id": "manual-waynesvilleunitedmethodistchurch",
+      "name": "Waynesville United Methodist Church",
+      "location": "297 North Street, Waynesville, OH 45068",
+      "phone": "513-897-5771",
+      "sections": [
+        "faith"
+      ],
+      "kinds": [
+        "United Methodist"
+      ],
+      "source": "https://www.friendshomemuseum.org/copy-of-65-south-third-seth-silver (address, history); phone per church directories",
+      "website": "",
+      "about": "United Methodist congregation on North Street. Its current building dates to 1914, on the site of the original 1840 brick church.",
       "local": true,
       "from": "manual"
     },
