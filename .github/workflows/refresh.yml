@@ -74,6 +74,8 @@ jobs:
         run: npm run refresh:museum || echo "museum refresh skipped/failed"
       - name: Pull county building permits (monthly)
         run: npm run refresh:permits || echo "permits refresh skipped/failed"
+      - name: Rebuild business directory from the Chamber directory
+        run: npm run refresh:directory || echo "directory refresh skipped/failed"
       - name: Report source freshness
         run: npm run check:staleness || true
       - name: Commit if changed

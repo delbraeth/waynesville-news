@@ -1,0 +1,4 @@
+{
+  "_note": "Hand-added directory listings for businesses that are not Chamber members (or to override a Chamber listing with the same name). Facts only, as the business publishes them; no private individuals' names. Fields: name (required), sections (array of section ids from directory.json, e.g. [\"home\"]), kinds (e.g. [\"Plumbing\"]), location, phone, website, about, source (where you verified it). After editing, run `npm run refresh:directory`.",
+  "items": []
+}
