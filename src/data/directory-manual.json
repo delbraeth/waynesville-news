@@ -168,13 +168,15 @@
         "stay"
       ],
       "kinds": [
-        "Travel Planning"
+        "Travel Planning",
+        "Accessible Travel",
+        "Cruises"
       ],
       "location": "Waynesville, OH",
       "phone": "",
       "website": "https://cassidytravel.org/",
-      "about": "Travel planning from Waynesville: beach weekends, cruises, all-inclusive resorts, theme park trips, group travel for teams and clubs, and help finding accessible resorts.",
-      "source": "https://cassidytravel.org/"
+      "about": "Plans cruises, theme park vacations, all-inclusive resorts and group trips from Waynesville. Patrick Cassidy, an independent travel advisor with Fora Travel, specializes in multi-generational trips and travel for people with disabilities, autism and sensory needs. A power wheelchair user, Patrick checks accessible rooms, ride access, parking and quiet spaces before clients book. Credentials include Certified Autism Travel Professional, Certified Accessible Travel Advocate, College of Disney Knowledge graduate, and top-tier certification with Holland America, Princess, Norwegian and Virgin Voyages. No planning fee for vacations.",
+      "source": "Description supplied by the business, 2026-10-31; https://cassidytravel.org/"
     },
     {
       "name": "Clear Creek Amish Furniture",
