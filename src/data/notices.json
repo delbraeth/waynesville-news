@@ -1,6 +1,6 @@
 {
   "_note": "Village of Waynesville and Wayne Township notices posted in the past 14 days. Titles and synopses verbatim from each government's own site.",
-  "updated": "2026-10-30T10:41:53.156Z",
+  "updated": "2026-10-31T10:44:05.890Z",
   "items": [
     {
       "source": "township",
@@ -9,14 +9,6 @@
       "dateISO": "2026-10-21",
       "summary": "View Application",
       "link": "https://waynetwpwarrencooh.gov/wcta-scholarship-application-2027/"
-    },
-    {
-      "source": "village",
-      "issuer": "Village of Waynesville",
-      "title": "Finance Committee Meeting Rescheduled",
-      "dateISO": "2026-10-16",
-      "summary": "The Finance Committee Meeting has been rescheduled to 6:00 p.m. on October 26th at 1400 Lytle Road. The public is encouraged to attend.",
-      "link": "https://www.villageofwaynesville.org/news/entry/finance-committee-meeting-rescheduled/"
     }
   ],
   "sources": {

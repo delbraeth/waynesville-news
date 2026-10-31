@@ -1,7 +1,28 @@
 {
   "_note": "Recent Wayne Local Schools Facebook posts via rss.app bridge. Title + link + short excerpt; the district's own words. Fail-safe: kept from last run if the bridge is down.",
-  "updated": "2026-10-30T10:41:50.425Z",
+  "updated": "2026-10-31T10:41:18.169Z",
   "items": [
+    {
+      "title": "👻When we said we went all in on Halloween fun this year, we meant everyone! WMS and WHS students and staff brought…",
+      "link": "https://www.facebook.com/waynelocalschools/posts/pfbid02g2awLMbnoWb3b5ZsvDLM5rf8LP5SZkm27UoQpw2R86HMzYkFyf8BDXYmxZhqenUul",
+      "date": "Fri, 30 Oct 2026 19:09:02 GMT",
+      "dateLabel": "Fri, Oct 30",
+      "excerpt": "their creativity to a WHOLE NEW LEVEL!⭐️"
+    },
+    {
+      "title": "👻Happy Halloween, Spartans! Have fun tomorrow! Be safe.🎃…",
+      "link": "https://www.facebook.com/waynelocalschools/posts/pfbid0yKgURr6oUA6tf3u4SLnceLpi4vtTrYFSFCeH6cg7wfDFNnUKuKtBdhfDQTcbzfu8l",
+      "date": "Fri, 30 Oct 2026 18:28:30 GMT",
+      "dateLabel": "Fri, Oct 30",
+      "excerpt": ""
+    },
+    {
+      "title": "We had a BLAST today at Waynesville Elementary celebrating Halloween! Staff and students went all in!🎃👻…",
+      "link": "https://www.facebook.com/reel/1770131804104261/",
+      "date": "Fri, 30 Oct 2026 18:05:32 GMT",
+      "dateLabel": "Fri, Oct 30",
+      "excerpt": ""
+    },
     {
       "title": "In September, the Waynesville Leo Club was recognized by the Warren County Foundation as an Emerging Community Service…",
       "link": "https://www.facebook.com/waynelocalschools/posts/pfbid02ScnqZijo7aHmS6kKHQvVScVdig18ZmeLgi1riCiU1nf7DX5ntHhrND1tCyNkRw6bl",
@@ -36,27 +57,6 @@
       "date": "Wed, 28 Oct 2026 19:46:47 GMT",
       "dateLabel": "Wed, Oct 28",
       "excerpt": "#SPARTANPRIDE The HS Athletic Council attended the Anthony Munoz Youth Leadership Seminar at Crossroads Church in Mason along with 80 other local high schools. It was an awesome event that encouraged leadership and serving in our community. #SPARTANPRIDE @MUNOZYLS"
-    },
-    {
-      "title": "💻Our kindergartners got the chance to use \"real computers\" during a math diagnostic earlier this fall, and it was…",
-      "link": "https://www.facebook.com/waynelocalschools/posts/pfbid0VTooahmDdpHXk3ZXZfEDAQ2rNGmMfHHVpDp7Z3viSCa6hPd7BVHCx7gWaXtky389l",
-      "date": "Tue, 27 Oct 2026 20:44:19 GMT",
-      "dateLabel": "Tue, Oct 27",
-      "excerpt": "interesting to see these digital natives impress themselves in real time. Even though they've grown up with touchscreens and tablets, learning to navigate a keyboard and mouse is an important step in building their digital skills. Students in grades K–4 completed the mCLASS Math Diagnostic,…"
-    },
-    {
-      "title": "🧡🖤🧡The Progressive Women’s Club and Dr. Ison took time this week to write inspirational messages on hot chocolate cup...",
-      "link": "https://www.facebook.com/waynelocalschools/posts/pfbid02QvcCwe7bnxiRDvd8kCC3Vi4yuKUuFRGSFvrub4Zn3TPtzVqm8hGDzZdy229KTtTsl",
-      "date": "Sat, 24 Oct 2026 21:11:36 GMT",
-      "dateLabel": "Sat, Oct 24",
-      "excerpt": "🧡🖤🧡 The Progressive Women’s Club and Dr. Ison took time this week to write inspirational messages on hot chocolate cups for our band students. The delicious hot chocolate and the kind messages were loved by the band and shared with the cheerleaders at Friday’s football game. We love our…"
-    },
-    {
-      "title": "#SPARTANPRIDEOur Boys Cross Country team finished as District Runner Up! CONGRATULATIONS to both our Boys and Girls Cros...",
-      "link": "https://www.facebook.com/waynelocalschools/posts/pfbid0ZFePzVr3FDeTosUxWpsaXNoPmFnFsDwLeCSa8sanNPakHjUdeuhXyjcGaJMHmMAfl",
-      "date": "Sat, 24 Oct 2026 18:47:42 GMT",
-      "dateLabel": "Sat, Oct 24",
-      "excerpt": "#SPARTANPRIDE Our Boys Cross Country team finished as District Runner Up! CONGRATULATIONS to both our Boys and Girls Cross Country Teams for advancing to Regionals next weekend! #SPARTANPRIDE"
     }
   ]
 }

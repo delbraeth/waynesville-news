@@ -1,29 +1,7 @@
 {
   "_note": "Waynesville Spartans schedule + results (MaxPreps), past 7 days / next 7 days. Scraped directly from each sport's own schedule page (football, volleyball, soccer -- varsity + JV), not the school hub page, which has been observed to silently omit some contests. Scores and matchups reproduced verbatim from MaxPreps' own markup; each links to their game page.",
-  "updated": "2026-10-30T10:41:53.439Z",
+  "updated": "2026-10-31T10:42:19.806Z",
   "results": [
-    {
-      "dateISO": "2026-10-23T19:00:00",
-      "sport": "Football",
-      "level": "Varsity",
-      "opponent": "Valley View",
-      "wayneScore": 31,
-      "opponentScore": 28,
-      "result": "W",
-      "isHome": false,
-      "link": "https://www.maxpreps.com/oh/football/game/valley-view-germantown-vs-waynesville/10-23-2026/?c=09d38f0b-3343-491c-8a5a-5266caf752f2"
-    },
-    {
-      "dateISO": "2026-10-24T10:00:00",
-      "sport": "Football",
-      "level": "JV",
-      "opponent": "Valley View",
-      "wayneScore": 22,
-      "opponentScore": 54,
-      "result": "L",
-      "isHome": true,
-      "link": "https://www.maxpreps.com/oh/football/game/valley-view-germantown-vs-waynesville/jv/10-24-2026/?c=c9e33dd0-003a-40a7-86c2-f881fcadf8b6"
-    },
     {
       "dateISO": "2026-10-24T19:00:00",
       "sport": "Boys Soccer",
@@ -56,6 +34,17 @@
       "result": "L",
       "isHome": false,
       "link": "https://www.maxpreps.com/oh/soccer/match/archbishop-alter-knights-dayton-vs-waynesville/10-27-2026/?c=344cc8d0-ef2d-4042-ba77-56082664dded"
+    },
+    {
+      "dateISO": "2026-10-29T19:00:00",
+      "sport": "Girls Soccer",
+      "level": "Varsity",
+      "opponent": "Madeira",
+      "wayneScore": 0,
+      "opponentScore": 3,
+      "result": "L",
+      "isHome": true,
+      "link": "https://www.maxpreps.com/oh/soccer/girls/match/madeira-mustangs-cincinnati-vs-waynesville/10-29-2026/?c=a2c42cbb-a475-4976-8e72-81ffc4d13bdc"
     }
   ],
   "upcoming": []

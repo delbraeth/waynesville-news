@@ -1,33 +1,14 @@
 {
   "_note": "Village of Waynesville Council — draft minutes of the meeting prior to the most recently posted agenda, OCR'd from that agenda packet's own embedded scan (the site's dedicated Minutes postings run months behind, but each agenda includes the previous meeting's minutes for approval). OCR output may contain occasional character errors; each vote's context text is extracted verbatim, not generated or paraphrased. Links to the full agenda PDF.",
-  "updated": "2026-10-30T10:42:19.280Z",
+  "updated": "2026-10-31T10:44:00.990Z",
   "item": {
-    "agendaDateLabel": "October 19, 2026",
-    "meetingDateLabel": null,
-    "calledToOrder": "7:00 p.m.",
+    "agendaDateLabel": "November 2, 2026",
+    "meetingDateLabel": "October 19, 2026",
+    "calledToOrder": null,
     "adjourned": null,
-    "link": "https://www.villageofwaynesville.org/media/site/meetings/Council Agenda 10.19.2026.pdf",
-    "votes": [
-      {
-        "context": "Mrs. Miller moved to approve the minutes for the Council meeting on September 21, 2026, as written, and Mr. Nation seconded.",
-        "motion": "Miller",
-        "second": "Nation",
-        "rollCall": "7 yeas"
-      },
-      {
-        "context": "Ordinance No. 2026-043 Authorizing the Village Manager and Finance Director to Establish a Village Credit Card Account with Peoples Bank and to Enroll the Village in the Insured Cash Sweep (ICS) Service Through Peoples Bank and Declaring an Emergency . Mrs. Miller moved to waive the two-reading rule for Ordinance 2026-043, and Mr. Gallagher seconded the motion.",
-        "motion": "Miller",
-        "second": "Gallagher",
-        "rollCall": "7 yeas"
-      },
-      {
-        "context": "Mr. Nation moved to adopt Ordinance 2026-043 as an emergency, and Mr. Colvin seconded the motion.",
-        "motion": "Nation",
-        "second": "Colvin",
-        "rollCall": "7 yeas"
-      }
-    ],
-    "voteCountTotal": 3,
-    "pagesScanned": 5
+    "link": "https://www.villageofwaynesville.org/media/site/meetings/Council Agenda 11.02.2026.pdf",
+    "votes": [],
+    "voteCountTotal": 0,
+    "pagesScanned": 1
   }
 }
