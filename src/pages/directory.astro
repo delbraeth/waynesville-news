@@ -1,6 +1,7 @@
 ---
 import Base from "../layouts/Base.astro";
 import directory from "../data/directory.json";
+import supporters from "../data/supporters.json";
 
 type Item = {
   id: string; name: string; location?: string; phone?: string; website?: string;
@@ -31,6 +32,20 @@ const updated = directory.updated
   ? new Date(directory.updated).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric", timeZone: "America/New_York" })
   : "";
 const localCount = items.filter((i) => i.local).length;
+
+// Businesses that help fund the Brief (src/data/supporters.json) get a labeled
+// "Supporter" badge. Matched by name, ignoring LLC/Inc/punctuation; a supporter
+// entry can set `directoryName` when its listing uses a different name. The
+// badge never changes a listing's position — placement isn't for sale.
+const nameKey = (n = "") =>
+  n.toLowerCase().replace(/&/g, "and").replace(/\b(llc|inc|co|corp|ltd|the)\b\.?/g, "").replace(/[^a-z0-9]/g, "");
+const supporterKeys = new Set(
+  ((supporters.items ?? []) as { name?: string; directoryName?: string }[])
+    .filter((s) => s && s.name)
+    .map((s) => nameKey(s.directoryName || s.name))
+);
+const isSupporter = (i: Item) => supporterKeys.has(nameKey(i.name));
+const supporterCount = items.filter(isSupporter).length;
 const listMail = "mailto:editor@waynesville.news?subject=" + encodeURIComponent("Business directory listing");
 ---
 <Base
@@ -51,6 +66,10 @@ const listMail = "mailto:editor@waynesville.news?subject=" + encodeURIComponent(
       <a href="https://www.waynesvilleohio.com/directory/" target="_blank" rel="noopener">Waynesville Area Chamber of Commerce member directory</a>
       plus local businesses we've confirmed on their own websites and ones that ask to be added. Nobody pays for placement, and a listing says nothing about
       quality — always check licensing, insurance and reviews before hiring.
+      {supporterCount > 0 && (
+        <>Businesses marked <span class="dir-supporter">★ Supporter</span> help fund the Brief; that
+        doesn't change where they appear or what we cover. <a href="/supporters/">About supporters</a>.</>
+      )}
       Missing, moved or out of business? <a href={listMail}>Email the editor</a>.
     </div>
 
@@ -62,6 +81,11 @@ const listMail = "mailto:editor@waynesville.news?subject=" + encodeURIComponent(
       <label class="dir-local">
         <input id="dir-local" type="checkbox" /> Waynesville area only
       </label>
+      {supporterCount > 0 && (
+        <label class="dir-local">
+          <input id="dir-supp" type="checkbox" /> Supporters only
+        </label>
+      )}
     </form>
 
     <nav class="dir-jump" aria-label="Directory sections">
@@ -75,9 +99,10 @@ const listMail = "mailto:editor@waynesville.news?subject=" + encodeURIComponent(
         <h2>{g.label}</h2>
         <ul class="directory">
           {g.items.map((i) => (
-            <li data-search={searchText(i)} data-local={i.local ? "1" : "0"}>
+            <li data-search={searchText(i)} data-local={i.local ? "1" : "0"} data-supporter={isSupporter(i) ? "1" : "0"}>
               <div class="dir-name">
                 {i.website ? <a href={i.website} target="_blank" rel="noopener">{i.name}</a> : i.name}
+                {isSupporter(i) && <a class="dir-supporter" href="/supporters/" title="This business helps fund the Waynesville Daily Brief">★ Supporter</a>}
                 {i.local && <span class="dir-badge">Waynesville area</span>}
               </div>
               {tags(i).length > 0 && <div class="dir-kinds">{tags(i).join(" · ")}</div>}
@@ -112,17 +137,19 @@ const listMail = "mailto:editor@waynesville.news?subject=" + encodeURIComponent(
 (() => {
   const q = document.getElementById("dir-q");
   const local = document.getElementById("dir-local");
+  const supp = document.getElementById("dir-supp");
   const none = document.getElementById("dir-none");
   const groups = [...document.querySelectorAll(".dir-group")];
   const apply = () => {
     const terms = q.value.toLowerCase().split(/\s+/).filter(Boolean);
     const onlyLocal = local.checked;
+    const onlySupp = !!(supp && supp.checked);
     let total = 0;
     for (const g of groups) {
       let shown = 0;
       for (const li of g.querySelectorAll("li")) {
         const hay = li.dataset.search || "";
-        const ok = (!onlyLocal || li.dataset.local === "1") && terms.every((t) => hay.includes(t));
+        const ok = (!onlyLocal || li.dataset.local === "1") && (!onlySupp || li.dataset.supporter === "1") && terms.every((t) => hay.includes(t));
         li.hidden = !ok;
         if (ok) shown++;
       }
@@ -139,5 +166,6 @@ const listMail = "mailto:editor@waynesville.news?subject=" + encodeURIComponent(
   };
   q.addEventListener("input", apply);
   local.addEventListener("change", apply);
+  if (supp) supp.addEventListener("change", apply);
 })();
 </script>
