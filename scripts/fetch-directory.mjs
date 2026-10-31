@@ -34,7 +34,7 @@ export const SECTIONS = [
   { id: "tech", label: "Technology, media & printing" },
   { id: "food", label: "Restaurants, food & drink" },
   { id: "shop", label: "Shopping & specialty retail" },
-  { id: "stay", label: "Lodging & event venues" },
+  { id: "stay", label: "Travel, lodging & event venues" },
   { id: "fun", label: "Arts, recreation & experiences" },
   { id: "farm", label: "Farms & agriculture" },
   { id: "pets", label: "Pets & veterinary" },

@@ -1,6 +1,6 @@
 {
   "_note": "Local business directory. Built by scripts/fetch-directory.mjs from the Waynesville Area Chamber of Commerce's public member directory (name, location, phone, website, and the Chamber's description, as published) plus hand-added listings in directory-manual.json. Contact names, emails and hours are deliberately not copied. Do not edit by hand — edit directory-manual.json and re-run `npm run refresh:directory` (or `npm run refresh:directory -- --manual-only` to merge manual edits without re-reading the Chamber site).",
-  "updated": "2026-10-31T22:13:42.470Z",
+  "updated": "2026-10-31T22:15:07.050Z",
   "sections": [
     {
       "id": "home",
@@ -36,7 +36,7 @@
     },
     {
       "id": "stay",
-      "label": "Lodging & event venues"
+      "label": "Travel, lodging & event venues"
     },
     {
       "id": "fun",
@@ -617,6 +617,23 @@
       "about": "As a licensed Realtor with Coldwell Banker Heritage in Springboro, I provide Real Estate services to both buyers and sellers. I'm a member of NAR, OAR, DABR, and both the Dayton and Cincinnati MLS. I have a Military Markets Specialist designation, and am a Notary Public for…",
       "local": false,
       "from": "chamber"
+    },
+    {
+      "id": "manual-cassidytravel",
+      "name": "Cassidy Travel",
+      "location": "Waynesville, OH",
+      "phone": "",
+      "sections": [
+        "stay"
+      ],
+      "kinds": [
+        "Travel Planning"
+      ],
+      "source": "https://cassidytravel.org/",
+      "website": "https://cassidytravel.org/",
+      "about": "Travel planning from Waynesville: beach weekends, cruises, all-inclusive resorts, theme park trips, group travel for teams and clubs, and help finding accessible resorts.",
+      "local": true,
+      "from": "manual"
     },
     {
       "id": "chamber-771",
