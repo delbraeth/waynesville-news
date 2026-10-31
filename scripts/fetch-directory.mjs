@@ -237,6 +237,7 @@ async function loadManual() {
       source: m.source ?? "",
       website: normalizeUrl(m.website ?? ""),
       about: clean(m.about ?? ""),
+      disclosure: clean(m.disclosure ?? ""),
       local: m.local ?? isLocal(m.location),
       from: "manual",
     });

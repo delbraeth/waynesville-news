@@ -4,7 +4,7 @@ import directory from "../data/directory.json";
 
 type Item = {
   id: string; name: string; location?: string; phone?: string; website?: string;
-  about?: string; sections: string[]; kinds?: string[]; local?: boolean; source?: string; from?: string;
+  about?: string; disclosure?: string; sections: string[]; kinds?: string[]; local?: boolean; source?: string; from?: string;
 };
 
 const items = (directory.items ?? []) as Item[];
@@ -82,6 +82,7 @@ const listMail = "mailto:editor@waynesville.news?subject=" + encodeURIComponent(
               </div>
               {tags(i).length > 0 && <div class="dir-kinds">{tags(i).join(" · ")}</div>}
               {i.about && <p class="dir-about">{i.about}</p>}
+              {i.disclosure && <p class="dir-disclosure">{i.disclosure}</p>}
               <div class="dir-contact">
                 {i.location && <span>{i.location}</span>}
                 {i.phone && <a href={telHref(i.phone)}>{i.phone}</a>}

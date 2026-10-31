@@ -360,6 +360,7 @@ main { display: block; padding: 1.5rem 0 3rem; }
   color: var(--accent); border: 1px solid currentColor; border-radius: 3px; padding: 0.05rem 0.35rem; margin-left: 0.5rem; vertical-align: 0.15em;
 }
 .dir-kinds { font-family: var(--font-sans); font-size: 0.78rem; color: var(--muted); margin-top: 0.15rem; }
+.dir-disclosure { font-family: var(--font-sans); font-size: 0.78rem; font-style: italic; color: var(--muted); margin: 0.3rem 0 0; }
 .dir-about { font-size: 0.93rem; color: var(--ink-soft); margin: 0.35rem 0 0; }
 .dir-contact { display: flex; flex-wrap: wrap; gap: 0.2rem 1rem; font-family: var(--font-sans); font-size: 0.84rem; margin-top: 0.35rem; color: var(--muted); }
 .visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }

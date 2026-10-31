@@ -1,6 +1,6 @@
 {
   "_note": "Local business directory. Built by scripts/fetch-directory.mjs from the Waynesville Area Chamber of Commerce's public member directory (name, location, phone, website, and the Chamber's description, as published) plus hand-added listings in directory-manual.json. Contact names, emails and hours are deliberately not copied. Do not edit by hand — edit directory-manual.json and re-run `npm run refresh:directory` (or `npm run refresh:directory -- --manual-only` to merge manual edits without re-reading the Chamber site).",
-  "updated": "2026-10-31T22:43:06.446Z",
+  "updated": "2026-10-31T22:44:10.844Z",
   "sections": [
     {
       "id": "home",
@@ -71,6 +71,7 @@
       "source": "https://1572roadhousebarbq.com/",
       "website": "https://1572roadhousebarbq.com/",
       "about": "Seasonal barbecue restaurant at Renaissance Park serving slow-smoked meats with house-made sauces, with covered patios and the adjoining 3 Fools Pub. Closed in the off-season; check its website for current hours.",
+      "disclosure": "",
       "local": true,
       "from": "manual"
     },
@@ -128,6 +129,7 @@
       "source": "https://adamsgarageservices.com/contact-us/",
       "website": "https://adamsgarageservices.com/",
       "about": "Garage door repair and installation, opener service and maintenance, including emergency service.",
+      "disclosure": "",
       "local": true,
       "from": "manual"
     },
@@ -294,6 +296,7 @@
       "source": "https://waynesvilleshops.com/specialty-shops-and-galleries/name/art-expressions/",
       "website": "",
       "about": "Art business on High Street with a tea room inside where visitors can sit and have tea.",
+      "disclosure": "",
       "local": true,
       "from": "manual"
     },
@@ -352,6 +355,7 @@
       "source": "https://baldwinorthodontics.com/",
       "website": "https://baldwinorthodontics.com/",
       "about": "Orthodontic practice offering braces, Invisalign clear aligners, palatal expanders, early orthodontic treatment and retainers.",
+      "disclosure": "",
       "local": true,
       "from": "manual"
     },
@@ -386,6 +390,7 @@
       "source": "https://bartleighjanessalon.com",
       "website": "https://bartleighjanessalon.com/",
       "about": "Hair salon in downtown Waynesville offering cuts for women, men and children, color and balayage, treatments, extensions and bridal styling.",
+      "disclosure": "",
       "local": true,
       "from": "manual"
     },
@@ -496,6 +501,7 @@
       "source": "https://bentleyspawsomeresort.com",
       "website": "https://bentleyspawsomeresort.com/",
       "about": "Pet resort offering dog daycare, dog and cat boarding, dog grooming and an indoor dog park.",
+      "disclosure": "",
       "local": true,
       "from": "manual"
     },
@@ -530,6 +536,7 @@
       "source": "https://www.bjsgarageohio.com/contact.html",
       "website": "https://www.bjsgarageohio.com/",
       "about": "Full-service garage repairing domestic and foreign vehicles, from tire plugs to engine replacement.",
+      "disclosure": "",
       "local": true,
       "from": "manual"
     },
@@ -568,6 +575,7 @@
       "source": "https://waynesvilleshops.com/antique-shops-and-malls/name/brass-lantern-antiques/",
       "website": "",
       "about": "Antiques from before 1920, such as furniture, cupboards, oil lamps and advertising pieces. A country store next door sells candles, soaps, gourmet foods and gifts.",
+      "disclosure": "",
       "local": true,
       "from": "manual"
     },
@@ -663,6 +671,7 @@
       "source": "https://www.facebook.com/BuckeyeSelect/ (open per the editor, 2026-10-31)",
       "website": "https://www.facebook.com/BuckeyeSelect/",
       "about": "Dog boarding facility on a six-acre property.",
+      "disclosure": "",
       "local": true,
       "from": "manual"
     },
@@ -773,6 +782,7 @@
       "source": "https://canadagoosegallery.com/",
       "website": "https://canadagoosegallery.com/",
       "about": "Gallery dedicated to P. Buckley Moss artwork, with prints, etchings, originals, ornaments and gifts. Offers custom framing.",
+      "disclosure": "",
       "local": true,
       "from": "manual"
     },
@@ -809,6 +819,7 @@
       "source": "https://www.facebook.com/tcassidypainting/ (open per the editor, 2026-10-31)",
       "website": "https://www.facebook.com/tcassidypainting/",
       "about": "Small local painting business based in Waynesville.",
+      "disclosure": "",
       "local": true,
       "from": "manual"
     },
@@ -828,6 +839,7 @@
       "source": "Description supplied by the business, 2026-10-31; https://cassidytravel.org/",
       "website": "https://cassidytravel.org/",
       "about": "Plans cruises, theme park vacations, all-inclusive resorts and group trips from Waynesville. Patrick Cassidy, an independent travel advisor with Fora Travel, specializes in multi-generational trips and travel for people with disabilities, autism and sensory needs. A power wheelchair user, Patrick checks accessible rooms, ride access, parking and quiet spaces before clients book. Credentials include Certified Autism Travel Professional, Certified Accessible Travel Advocate, College of Disney Knowledge graduate, and top-tier certification with Holland America, Princess, Norwegian and Virgin Voyages. No planning fee for vacations.",
+      "disclosure": "Disclosure: Cassidy Travel is owned by the Waynesville Daily Brief's editor. Its listing follows the same rules as every other: free, and not an endorsement.",
       "local": true,
       "from": "manual"
     },
@@ -901,6 +913,7 @@
       "source": "https://www.clearcreekfurniture.com/",
       "website": "https://www.clearcreekfurniture.com/",
       "about": "Showroom for Amish-built hardwood furniture, including Shaker and Mission styles, plus outdoor pieces.",
+      "disclosure": "",
       "local": true,
       "from": "manual"
     },
@@ -1085,6 +1098,7 @@
       "source": "https://dearingercleaning.com",
       "website": "https://dearingercleaning.com/",
       "about": "Residential house cleaning, including deep cleans, recurring weekly to monthly service, move-out cleaning and carpet cleaning.",
+      "disclosure": "",
       "local": true,
       "from": "manual"
     },
@@ -1307,6 +1321,7 @@
       "source": "https://waynesvilleshops.com/specialty-shops-and-galleries/name/farmhouse-style/",
       "website": "",
       "about": "Sells vintage-style pieces, fashion items and modern farmhouse decor. It is also a local Annie Sloan Chalk Paint dealer.",
+      "disclosure": "",
       "local": true,
       "from": "manual"
     },
@@ -1360,6 +1375,7 @@
       "source": "https://frontiercamping.com",
       "website": "https://frontiercamping.com/",
       "about": "Year-round RV campground with 79 full-hookup sites on 11 wooded acres. Monthly stays only, with no tent camping or cabins.",
+      "disclosure": "",
       "local": true,
       "from": "manual"
     },
@@ -1448,6 +1464,7 @@
       "source": "https://hailstormvintage.com",
       "website": "https://hailstormvintage.com/",
       "about": "Buys, sells and trades comic books, vintage toys and action figures, retro clothing, records and pop-culture collectibles.",
+      "disclosure": "",
       "local": true,
       "from": "manual"
     },
@@ -1465,6 +1482,7 @@
       "source": "https://waynesvilleshops.com/lodging-food-and-entertainment/name/hammel-house-inn (rooms open, restaurant under restoration, per the editor, 2026-10-31)",
       "website": "",
       "about": "Historic inn on Main Street in a building dating to 1822, open for overnight stays. Its restaurant is closed while it undergoes restoration.",
+      "disclosure": "",
       "local": true,
       "from": "manual"
     },
@@ -1537,6 +1555,7 @@
       "source": "https://idealcuttrim.com",
       "website": "https://idealcuttrim.com/",
       "about": "Tree removal and trimming, stump grinding, tree cabling, lot and row clearing and mulching.",
+      "disclosure": "",
       "local": true,
       "from": "manual"
     },
@@ -1660,6 +1679,7 @@
       "source": "https://www.facebook.com/p/La-Bella-Vida-Pet-Salon-LLC-100084022669688/ (open per the editor, 2026-10-31)",
       "website": "https://www.facebook.com/p/La-Bella-Vida-Pet-Salon-LLC-100084022669688/",
       "about": "Pet grooming salon taking appointments by call or text, with curbside pickup.",
+      "disclosure": "",
       "local": true,
       "from": "manual"
     },
@@ -1728,6 +1748,7 @@
       "source": "https://www.lemonwoodsoap.com",
       "website": "https://www.lemonwoodsoap.com/",
       "about": "Handmade bath and body shop, open since 2016, selling soaps, lotions, bath bombs, scrubs and lip balm. Visitors can see its soap-making studio.",
+      "disclosure": "",
       "local": true,
       "from": "manual"
     },
@@ -1784,6 +1805,7 @@
       "source": "https://www.lillyscornermall.com",
       "website": "https://www.lillyscornermall.com/",
       "about": "7,000-square-foot antique mall with about 30 vendors. It also rents vendor booth space.",
+      "disclosure": "",
       "local": true,
       "from": "manual"
     },
@@ -1823,6 +1845,7 @@
       "source": "https://waynesvilleshops.com/specialty-shops-and-galleries/name/loveless-edge-1/",
       "website": "",
       "about": "Women's clothing boutique downtown, opened in 2022, selling clothing, accessories and gifts.",
+      "disclosure": "",
       "local": true,
       "from": "manual"
     },
@@ -2072,6 +2095,7 @@
       "source": "https://mrelectric.com/locations/ohio/waynesville/",
       "website": "https://mrelectric.com/locations/ohio/waynesville/",
       "about": "Residential and commercial electrical repair and installation, including panels, lighting, EV chargers and fans; lists Waynesville as a service area.",
+      "disclosure": "",
       "local": false,
       "from": "manual"
     },
@@ -2128,6 +2152,7 @@
       "source": "https://ohgratefulacres.com",
       "website": "https://ohgratefulacres.com/",
       "about": "Spa offering massage therapy, integrative bodywork, private and couples spa experiences, and yoga and sound events.",
+      "disclosure": "",
       "local": true,
       "from": "manual"
     },
@@ -2145,6 +2170,7 @@
       "source": "https://waynesvilleshops.com/antique-shops-and-malls/name/922-mercantile/",
       "website": "",
       "about": "Downtown shop selling vintage goods, clothing and furniture.",
+      "disclosure": "",
       "local": true,
       "from": "manual"
     },
@@ -2216,6 +2242,7 @@
       "source": "https://www.renfestival.com/",
       "website": "https://www.renfestival.com/",
       "about": "Seasonal Renaissance-themed festival with jousting, stage shows, food and artisan shops, held on fall weekends at Renaissance Park.",
+      "disclosure": "",
       "local": true,
       "from": "manual"
     },
@@ -2233,6 +2260,7 @@
       "source": "https://ontargetheatingandcooling.com/contact-us",
       "website": "https://ontargetheatingandcooling.com/",
       "about": "Residential and commercial heating and air conditioning installation, repair, maintenance and indoor air quality service.",
+      "disclosure": "",
       "local": true,
       "from": "manual"
     },
@@ -2418,6 +2446,7 @@
       "source": "https://rockcreekrenovation.com/",
       "website": "https://rockcreekrenovation.com/",
       "about": "House painting, cabinet painting and custom carpentry for residential and commercial customers.",
+      "disclosure": "",
       "local": true,
       "from": "manual"
     },
@@ -2435,6 +2464,7 @@
       "source": "https://waynesvilleshops.com/lodging-food-and-entertainment/name/roscoes-coletranes-pizza-1 (open per the editor, 2026-10-31)",
       "website": "",
       "about": "Pizza restaurant in the Village of Corwin, just north of S.R. 73, known for its specialty pizzas.",
+      "disclosure": "",
       "local": true,
       "from": "manual"
     },
@@ -2453,6 +2483,7 @@
       "source": "https://rtmcustomconstruction.com",
       "website": "https://rtmcustomconstruction.com/",
       "about": "Roof repair and replacement, siding and gutter replacement.",
+      "disclosure": "",
       "local": true,
       "from": "manual"
     },
@@ -2617,6 +2648,7 @@
       "source": "https://www.stubbsconner.com/locations/",
       "website": "https://www.stubbsconner.com/",
       "about": "Funeral home offering funeral and memorial services, cremation services, pre-need planning, obituary publishing and live streaming of services, with an on-site chapel.",
+      "disclosure": "",
       "local": true,
       "from": "manual"
     },
@@ -2668,6 +2700,7 @@
       "source": "https://www.buckeyecharm.com/",
       "website": "https://www.buckeyecharm.com/",
       "about": "Clothing and accessories shop in a former church building, selling denim, boots, jewelry, men's and kids' lines, and vintage and upcycled items.",
+      "disclosure": "",
       "local": true,
       "from": "manual"
     },
@@ -2823,6 +2856,7 @@
       "source": "https://www.secretgardenwaynesville.com",
       "website": "https://www.secretgardenwaynesville.com/",
       "about": "Sells made-in-America garden art such as concrete statuary, wrought iron, gazing globes and birdhouses, plus home gifts, a seasonal Halloween shop and year-round Christmas items. Does not sell live plants.",
+      "disclosure": "",
       "local": true,
       "from": "manual"
     },
@@ -2899,6 +2933,7 @@
       "source": "https://www.facebook.com/TherapeuticMassageofWaynesville/ (open per the editor, 2026-10-31)",
       "website": "https://www.facebook.com/TherapeuticMassageofWaynesville/",
       "about": "Massage therapy practice in downtown Waynesville with online booking.",
+      "disclosure": "",
       "local": true,
       "from": "manual"
     },
@@ -2956,6 +2991,7 @@
       "source": "https://www.travellersboarding.com",
       "website": "https://www.travellersboarding.com/",
       "about": "Dog daycare on weekdays and dog boarding year-round, with temperament evaluations, optional baths and medication administration.",
+      "disclosure": "",
       "local": true,
       "from": "manual"
     },
@@ -3015,6 +3051,7 @@
       "source": "https://www.facebook.com/people/Ultimate-Finish-Hair-Studio/100086200613937/ (open per the editor, 2026-10-31)",
       "website": "https://www.facebook.com/people/Ultimate-Finish-Hair-Studio/100086200613937/",
       "about": "Hair salon offering color, extensions, and brow and lash services by appointment.",
+      "disclosure": "",
       "local": true,
       "from": "manual"
     },
@@ -3070,6 +3107,7 @@
       "source": "https://waynesvilleshops.com/antique-shops-and-malls/name/village-antiques/",
       "website": "",
       "about": "Antique shop selling original and restored furniture and accessories.",
+      "disclosure": "",
       "local": true,
       "from": "manual"
     },
@@ -3087,6 +3125,7 @@
       "source": "https://www.facebook.com/p/Village-Barber-Shop-and-Shave-Parlor-100046607783657/ (open per the editor, 2026-10-31)",
       "website": "https://www.facebook.com/p/Village-Barber-Shop-and-Shave-Parlor-100046607783657/",
       "about": "Barbershop offering men's haircuts, hot towel shaves and beard trims, by appointment.",
+      "disclosure": "",
       "local": true,
       "from": "manual"
     },
@@ -3106,6 +3145,7 @@
       "source": "https://www.villageamishfurniture.com/",
       "website": "https://www.villageamishfurniture.com/",
       "about": "Sells vintage architectural salvage and antique hardware, plus Amish-built and custom furniture for the home, office and outdoors. Also repairs and refinishes antique pieces.",
+      "disclosure": "",
       "local": true,
       "from": "manual"
     },
@@ -3238,6 +3278,7 @@
       "source": "https://waynesvilleshops.com/specialty-shops-and-galleries/name/village-clock-shop/",
       "website": "",
       "about": "Clock shop on Miami Street.",
+      "disclosure": "",
       "local": true,
       "from": "manual"
     },
@@ -3290,6 +3331,7 @@
       "source": "https://provmedgroup.com/waynesville.html",
       "website": "https://provmedgroup.com/waynesville.html",
       "about": "Family medicine practice (part of Providence Medical Group) offering check-ups, illness and injury care, well-child visits, diabetes care, geriatric care and flu shots.",
+      "disclosure": "",
       "local": true,
       "from": "manual"
     },
@@ -3307,6 +3349,7 @@
       "source": "https://waynesvilleuc.com",
       "website": "https://waynesvilleuc.com/",
       "about": "Walk-in urgent care clinic in the Waynesville Medical Arts Building providing non-emergency medical care for adults and children.",
+      "disclosure": "",
       "local": true,
       "from": "manual"
     },
