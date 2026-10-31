@@ -1,6 +1,6 @@
 {
-  "_note": "Local business directory. Built by scripts/fetch-directory.mjs from the Waynesville Area Chamber of Commerce's public member directory (name, location, phone, website, and the Chamber's description, as published) plus hand-added listings in directory-manual.json. Contact names, emails and hours are deliberately not copied. Do not edit by hand — edit directory-manual.json and re-run `npm run refresh:directory`.",
-  "updated": "2026-10-31T22:10:05.282Z",
+  "_note": "Local business directory. Built by scripts/fetch-directory.mjs from the Waynesville Area Chamber of Commerce's public member directory (name, location, phone, website, and the Chamber's description, as published) plus hand-added listings in directory-manual.json. Contact names, emails and hours are deliberately not copied. Do not edit by hand — edit directory-manual.json and re-run `npm run refresh:directory` (or `npm run refresh:directory -- --manual-only` to merge manual edits without re-reading the Chamber site).",
+  "updated": "2026-10-31T22:28:06.182Z",
   "sections": [
     {
       "id": "home",
@@ -36,7 +36,7 @@
     },
     {
       "id": "stay",
-      "label": "Lodging & event venues"
+      "label": "Travel, lodging & event venues"
     },
     {
       "id": "fun",
@@ -56,6 +56,24 @@
     }
   ],
   "items": [
+    {
+      "id": "manual-1572roadhousebarbq",
+      "name": "1572 Roadhouse Bar-B-Q",
+      "location": "10612 East State Route 73, Waynesville, OH 45068",
+      "phone": "513-897-1572",
+      "sections": [
+        "food"
+      ],
+      "kinds": [
+        "Barbecue",
+        "Seasonal"
+      ],
+      "source": "https://1572roadhousebarbq.com/",
+      "website": "https://1572roadhousebarbq.com/",
+      "about": "Seasonal barbecue restaurant at Renaissance Park serving slow-smoked meats with house-made sauces, with covered patios and the adjoining 3 Fools Pub. Closed in the off-season; check its website for current hours.",
+      "local": true,
+      "from": "manual"
+    },
     {
       "id": "chamber-773",
       "name": "360 Restoration LLC",
@@ -95,6 +113,23 @@
       "about": "A & S Party Rental is Ohio's premiere rental company. We offer tent rentals, table rentals, inflatable rentals, wedding rentals, pipe, drape rentals & more.",
       "local": false,
       "from": "chamber"
+    },
+    {
+      "id": "manual-adamsgaragedoorservices",
+      "name": "Adams Garage Door Services LLC",
+      "location": "Waynesville, OH",
+      "phone": "513-224-9973",
+      "sections": [
+        "home"
+      ],
+      "kinds": [
+        "Garage Doors"
+      ],
+      "source": "https://adamsgarageservices.com/contact-us/",
+      "website": "https://adamsgarageservices.com/",
+      "about": "Garage door repair and installation, opener service and maintenance, including emergency service.",
+      "local": true,
+      "from": "manual"
     },
     {
       "id": "chamber-624",
@@ -244,6 +279,25 @@
       "from": "chamber"
     },
     {
+      "id": "manual-artexpressionsandinfinitetearoom",
+      "name": "Art Expressions & Infinite Tea Room",
+      "location": "243 High Street, Waynesville, OH 45068",
+      "phone": "",
+      "sections": [
+        "shop",
+        "food"
+      ],
+      "kinds": [
+        "Art Shop",
+        "Tea Room"
+      ],
+      "source": "https://waynesvilleshops.com/specialty-shops-and-galleries/name/art-expressions/",
+      "website": "",
+      "about": "Art business on High Street with a tea room inside where visitors can sit and have tea.",
+      "local": true,
+      "from": "manual"
+    },
+    {
       "id": "chamber-360",
       "name": "ATAC Services, LLC",
       "location": "137 N. US 42, Waynesville, OH 45068",
@@ -285,6 +339,23 @@
       "from": "chamber"
     },
     {
+      "id": "manual-baldwinorthodontics",
+      "name": "Baldwin Orthodontics, LLC",
+      "location": "160 North St, Waynesville, OH 45068",
+      "phone": "513-897-3991",
+      "sections": [
+        "health"
+      ],
+      "kinds": [
+        "Orthodontics"
+      ],
+      "source": "https://baldwinorthodontics.com/",
+      "website": "https://baldwinorthodontics.com/",
+      "about": "Orthodontic practice offering braces, Invisalign clear aligners, palatal expanders, early orthodontic treatment and retainers.",
+      "local": true,
+      "from": "manual"
+    },
+    {
       "id": "chamber-602",
       "name": "Barker, Beck, Collins and Kronauge Insurance",
       "location": "312 Regency Ridge Dr., Centerville, OH 45459",
@@ -300,6 +371,23 @@
       "about": "Insurance - personal & commercial",
       "local": false,
       "from": "chamber"
+    },
+    {
+      "id": "manual-bartleighjanessalon",
+      "name": "Bartleigh Janes Salon",
+      "location": "273 S. Main St., Waynesville, OH 45068",
+      "phone": "513-855-4527",
+      "sections": [
+        "health"
+      ],
+      "kinds": [
+        "Hair Salon"
+      ],
+      "source": "https://bartleighjanessalon.com",
+      "website": "https://bartleighjanessalon.com/",
+      "about": "Hair salon in downtown Waynesville offering cuts for women, men and children, color and balayage, treatments, extensions and bridal styling.",
+      "local": true,
+      "from": "manual"
     },
     {
       "id": "chamber-769",
@@ -393,6 +481,25 @@
       "from": "chamber"
     },
     {
+      "id": "manual-bentleyspawsomeresort",
+      "name": "Bentley's Pawsome Resort",
+      "location": "4488 E State Rt 73, Waynesville, OH 45068",
+      "phone": "",
+      "sections": [
+        "pets"
+      ],
+      "kinds": [
+        "Pet Boarding",
+        "Dog Daycare",
+        "Pet Grooming"
+      ],
+      "source": "https://bentleyspawsomeresort.com",
+      "website": "https://bentleyspawsomeresort.com/",
+      "about": "Pet resort offering dog daycare, dog and cat boarding, dog grooming and an indoor dog park.",
+      "local": true,
+      "from": "manual"
+    },
+    {
       "id": "chamber-774",
       "name": "Beyer Law LLC",
       "location": "204 South Ludlow Street, Suite 204, Dayton, Ohio 45402",
@@ -408,6 +515,23 @@
       "about": "Family law and civil litigation",
       "local": false,
       "from": "chamber"
+    },
+    {
+      "id": "manual-bjsgarage",
+      "name": "BJ's Garage",
+      "location": "1557 East State Route 73, Waynesville, OH 45068",
+      "phone": "513-855-4312",
+      "sections": [
+        "auto"
+      ],
+      "kinds": [
+        "Auto Repair"
+      ],
+      "source": "https://www.bjsgarageohio.com/contact.html",
+      "website": "https://www.bjsgarageohio.com/",
+      "about": "Full-service garage repairing domestic and foreign vehicles, from tire plugs to engine replacement.",
+      "local": true,
+      "from": "manual"
     },
     {
       "id": "chamber-712",
@@ -428,6 +552,24 @@
       "about": "It all humbly started in a small garage. But that garage had one dog-gone good roof. Thirty years later, building up one customer at a time, Bone Dry has emerged as one of the largest residential, family-owned, roofing companies in the area.",
       "local": false,
       "from": "chamber"
+    },
+    {
+      "id": "manual-brasslanternantiquesandcheapjohnscountrystore",
+      "name": "Brass Lantern Antiques & Cheap John's Country Store",
+      "location": "100 South Main Street, Waynesville, OH 45068",
+      "phone": "",
+      "sections": [
+        "shop"
+      ],
+      "kinds": [
+        "Antiques",
+        "Country Store"
+      ],
+      "source": "https://waynesvilleshops.com/antique-shops-and-malls/name/brass-lantern-antiques/",
+      "website": "",
+      "about": "Antiques from before 1920, such as furniture, cupboards, oil lamps and advertising pieces. A country store next door sells candles, soaps, gourmet foods and gifts.",
+      "local": true,
+      "from": "manual"
     },
     {
       "id": "chamber-780",
@@ -506,6 +648,23 @@
       "about": "Independent Insurance Agency - our focus is to review your current program, ask your expectations, and provide a value-based solution. We'd be honored to assist! AUTO - HOME - BUSINESS - LIFE",
       "local": false,
       "from": "chamber"
+    },
+    {
+      "id": "manual-buckeyeselectkennels",
+      "name": "Buckeye Select Kennels",
+      "location": "9635 Old Stage Rd, Waynesville, OH 45068",
+      "phone": "937-862-4364",
+      "sections": [
+        "pets"
+      ],
+      "kinds": [
+        "Pet Boarding"
+      ],
+      "source": "https://www.facebook.com/BuckeyeSelect/ (open per the editor, 2026-10-31)",
+      "website": "https://www.facebook.com/BuckeyeSelect/",
+      "about": "Dog boarding facility on a six-acre property.",
+      "local": true,
+      "from": "manual"
     },
     {
       "id": "chamber-652",
@@ -600,6 +759,24 @@
       "from": "chamber"
     },
     {
+      "id": "manual-canadagoosegallery",
+      "name": "Canada Goose Gallery",
+      "location": "97 South Main Street, Waynesville, OH 45068",
+      "phone": "513-897-4348",
+      "sections": [
+        "shop"
+      ],
+      "kinds": [
+        "Art Gallery",
+        "Gifts"
+      ],
+      "source": "https://canadagoosegallery.com/",
+      "website": "https://canadagoosegallery.com/",
+      "about": "Gallery dedicated to P. Buckley Moss artwork, with prints, etchings, originals, ornaments and gifts. Offers custom framing.",
+      "local": true,
+      "from": "manual"
+    },
+    {
       "id": "chamber-695",
       "name": "Candace Wieland, Realtor-Coldwell Banker Heritage",
       "location": "535 N. Main St., Springboro, Ohio 45066",
@@ -617,6 +794,23 @@
       "about": "As a licensed Realtor with Coldwell Banker Heritage in Springboro, I provide Real Estate services to both buyers and sellers. I'm a member of NAR, OAR, DABR, and both the Dayton and Cincinnati MLS. I have a Military Markets Specialist designation, and am a Notary Public for…",
       "local": false,
       "from": "chamber"
+    },
+    {
+      "id": "manual-cassidytravel",
+      "name": "Cassidy Travel",
+      "location": "Waynesville, OH",
+      "phone": "",
+      "sections": [
+        "stay"
+      ],
+      "kinds": [
+        "Travel Planning"
+      ],
+      "source": "https://cassidytravel.org/",
+      "website": "https://cassidytravel.org/",
+      "about": "Travel planning from Waynesville: beach weekends, cruises, all-inclusive resorts, theme park trips, group travel for teams and clubs, and help finding accessible resorts.",
+      "local": true,
+      "from": "manual"
     },
     {
       "id": "chamber-771",
@@ -672,6 +866,24 @@
       "about": "Dr. Chris Coleman, DDS Giving patients of all ages the highest quality care while treating them in the way we would want to be treated in an honest and caring manner. Dr. Richard Cronley, DDS Hours: Tuesday 9-5; Thursday 1-6",
       "local": true,
       "from": "chamber"
+    },
+    {
+      "id": "manual-clearcreekamishfurniture",
+      "name": "Clear Creek Amish Furniture",
+      "location": "1558 State Route 73 E., Waynesville, OH 45068",
+      "phone": "513-897-9669",
+      "sections": [
+        "shop",
+        "home"
+      ],
+      "kinds": [
+        "Furniture Store"
+      ],
+      "source": "https://www.clearcreekfurniture.com/",
+      "website": "https://www.clearcreekfurniture.com/",
+      "about": "Showroom for Amish-built hardwood furniture, including Shaker and Mission styles, plus outdoor pieces.",
+      "local": true,
+      "from": "manual"
     },
     {
       "id": "chamber-362",
@@ -839,6 +1051,23 @@
       "about": "The Dayton Dragons are the Single-A affiliate of the Cincinnati Reds and play in beautiful Day Air Ballpark located in downtown Dayton. The 7,000+ seat stadium hosts 66 home Dragons games from April to September. There are several ticket opportunities: season ticket packages…",
       "local": false,
       "from": "chamber"
+    },
+    {
+      "id": "manual-dearingercleaning",
+      "name": "Dearinger Cleaning LLC",
+      "location": "Waynesville, OH",
+      "phone": "513-498-2825",
+      "sections": [
+        "home"
+      ],
+      "kinds": [
+        "House Cleaning"
+      ],
+      "source": "https://dearingercleaning.com",
+      "website": "https://dearingercleaning.com/",
+      "about": "Residential house cleaning, including deep cleans, recurring weekly to monthly service, move-out cleaning and carpet cleaning.",
+      "local": true,
+      "from": "manual"
     },
     {
       "id": "chamber-772",
@@ -1045,6 +1274,24 @@
       "from": "chamber"
     },
     {
+      "id": "manual-farmhousestyle",
+      "name": "Farmhouse Style",
+      "location": "93 South Main Street, Waynesville, OH 45068",
+      "phone": "",
+      "sections": [
+        "shop"
+      ],
+      "kinds": [
+        "Home Decor",
+        "Boutique"
+      ],
+      "source": "https://waynesvilleshops.com/specialty-shops-and-galleries/name/farmhouse-style/",
+      "website": "",
+      "about": "Sells vintage-style pieces, fashion items and modern farmhouse decor. It is also a local Annie Sloan Chalk Paint dealer.",
+      "local": true,
+      "from": "manual"
+    },
+    {
       "id": "chamber-371",
       "name": "FastSigns",
       "location": "978 Miamisburg-Centerville Rd., Dayton, OH 45459",
@@ -1079,6 +1326,23 @@
       "about": "Food manufacturer since 1905. Produces Frank's Kraut, SnowFloss Kraut, Paisley Farm, Mississippi BBQ Sauce, and Private Brand Ketchup.",
       "local": false,
       "from": "chamber"
+    },
+    {
+      "id": "manual-frontiercampground",
+      "name": "Frontier Campground",
+      "location": "9580 Collett Road, Waynesville, OH 45068",
+      "phone": "513-596-0764",
+      "sections": [
+        "stay"
+      ],
+      "kinds": [
+        "RV Park"
+      ],
+      "source": "https://frontiercamping.com",
+      "website": "https://frontiercamping.com/",
+      "about": "Year-round RV campground with 79 full-hookup sites on 11 wooded acres. Monthly stays only, with no tent camping or cabins.",
+      "local": true,
+      "from": "manual"
     },
     {
       "id": "chamber-779",
@@ -1152,6 +1416,40 @@
       "from": "chamber"
     },
     {
+      "id": "manual-hailstormvintage",
+      "name": "Hailstorm Vintage",
+      "location": "98 South Main Street, Waynesville, OH 45068",
+      "phone": "937-481-8318",
+      "sections": [
+        "shop"
+      ],
+      "kinds": [
+        "Vintage & Collectibles"
+      ],
+      "source": "https://hailstormvintage.com",
+      "website": "https://hailstormvintage.com/",
+      "about": "Buys, sells and trades comic books, vintage toys and action figures, retro clothing, records and pop-culture collectibles.",
+      "local": true,
+      "from": "manual"
+    },
+    {
+      "id": "manual-hammelhouseinn",
+      "name": "Hammel House Inn",
+      "location": "121 S. Main St., Waynesville, OH 45068",
+      "phone": "",
+      "sections": [
+        "stay"
+      ],
+      "kinds": [
+        "Inn"
+      ],
+      "source": "https://waynesvilleshops.com/lodging-food-and-entertainment/name/hammel-house-inn (rooms open, restaurant under restoration, per the editor, 2026-10-31)",
+      "website": "",
+      "about": "Historic inn on Main Street in a building dating to 1822, open for overnight stays. Its restaurant is closed while it undergoes restoration.",
+      "local": true,
+      "from": "manual"
+    },
+    {
       "id": "chamber-616",
       "name": "Harveysburg Community Historical Society",
       "location": "23 North St., Harveysburg, OH 45032",
@@ -1205,6 +1503,23 @@
       "about": "Additional Contact: 513-228-1223 Huntington is more than branch locations, we are partners to the individuals, families, businesses, and organizations that live, work, and play in the neighborhoods we serve. Whether you're interested in our comprehensive community plan, the…",
       "local": false,
       "from": "chamber"
+    },
+    {
+      "id": "manual-idealcutandtrim",
+      "name": "Ideal Cut & Trim LLC",
+      "location": "Waynesville, OH",
+      "phone": "937-776-8735",
+      "sections": [
+        "home"
+      ],
+      "kinds": [
+        "Tree Service"
+      ],
+      "source": "https://idealcuttrim.com",
+      "website": "https://idealcuttrim.com/",
+      "about": "Tree removal and trimming, stump grinding, tree cabling, lot and row clearing and mulching.",
+      "local": true,
+      "from": "manual"
     },
     {
       "id": "chamber-754",
@@ -1313,6 +1628,23 @@
       "from": "chamber"
     },
     {
+      "id": "manual-labellavidapetsalon",
+      "name": "La Bella Vida Pet Salon",
+      "location": "108 N. Marvin Ln, Waynesville, OH 45068",
+      "phone": "",
+      "sections": [
+        "pets"
+      ],
+      "kinds": [
+        "Pet Grooming"
+      ],
+      "source": "https://www.facebook.com/p/La-Bella-Vida-Pet-Salon-LLC-100084022669688/ (open per the editor, 2026-10-31)",
+      "website": "https://www.facebook.com/p/La-Bella-Vida-Pet-Salon-LLC-100084022669688/",
+      "about": "Pet grooming salon taking appointments by call or text, with curbside pickup.",
+      "local": true,
+      "from": "manual"
+    },
+    {
       "id": "chamber-287",
       "name": "LCNB National Bank",
       "location": "9 North Main St Waynesville, OH P.O. Box 495",
@@ -1364,6 +1696,23 @@
       "from": "chamber"
     },
     {
+      "id": "manual-lemonwoodsoapcompany",
+      "name": "Lemonwood Soap Company",
+      "location": "46 S. Main Street, Waynesville, OH 45068",
+      "phone": "",
+      "sections": [
+        "shop"
+      ],
+      "kinds": [
+        "Bath & Body"
+      ],
+      "source": "https://www.lemonwoodsoap.com",
+      "website": "https://www.lemonwoodsoap.com/",
+      "about": "Handmade bath and body shop, open since 2016, selling soaps, lotions, bath bombs, scrubs and lip balm. Visitors can see its soap-making studio.",
+      "local": true,
+      "from": "manual"
+    },
+    {
       "id": "chamber-730",
       "name": "Lewis Community Mercantile",
       "location": "144 S. Main St, Waynesville, OH 45068 (inside The Village Family Restaurant)",
@@ -1403,6 +1752,23 @@
       "from": "chamber"
     },
     {
+      "id": "manual-lillyscornermall",
+      "name": "Lilly's Corner Mall",
+      "location": "105 South Main Street, Waynesville, OH 45068",
+      "phone": "513-897-0388",
+      "sections": [
+        "shop"
+      ],
+      "kinds": [
+        "Antique Mall"
+      ],
+      "source": "https://www.lillyscornermall.com",
+      "website": "https://www.lillyscornermall.com/",
+      "about": "7,000-square-foot antique mall with about 30 vendors. It also rents vendor booth space.",
+      "local": true,
+      "from": "manual"
+    },
+    {
       "id": "chamber-706",
       "name": "Lottie Mae's Cottage",
       "location": "62 South Main Street, Waynesville, Ohio 45068",
@@ -1423,6 +1789,23 @@
       "about": "Lottie Maes Cottage ... \"a cozy home shop\" featuring vintage and new furniture, and home decor.",
       "local": true,
       "from": "chamber"
+    },
+    {
+      "id": "manual-lovelessedgeboutique",
+      "name": "Loveless Edge Boutique",
+      "location": "60 S Main Street, Waynesville, OH 45068",
+      "phone": "",
+      "sections": [
+        "shop"
+      ],
+      "kinds": [
+        "Women's Boutique"
+      ],
+      "source": "https://waynesvilleshops.com/specialty-shops-and-galleries/name/loveless-edge-1/",
+      "website": "",
+      "about": "Women's clothing boutique downtown, opened in 2022, selling clothing, accessories and gifts.",
+      "local": true,
+      "from": "manual"
     },
     {
       "id": "chamber-764",
@@ -1657,6 +2040,23 @@
       "from": "chamber"
     },
     {
+      "id": "manual-mrelectricofwarrencounty",
+      "name": "Mr. Electric of Warren County",
+      "location": "1054 Monroe Rd #201, Lebanon, OH 45036",
+      "phone": "513-282-3586",
+      "sections": [
+        "home"
+      ],
+      "kinds": [
+        "Electrical"
+      ],
+      "source": "https://mrelectric.com/locations/ohio/waynesville/",
+      "website": "https://mrelectric.com/locations/ohio/waynesville/",
+      "about": "Residential and commercial electrical repair and installation, including panels, lighting, EV chargers and fans; lists Waynesville as a service area.",
+      "local": false,
+      "from": "manual"
+    },
+    {
       "id": "chamber-299",
       "name": "Museum at the Friends Home",
       "location": "115 S. Fourth St Waynesville, OH 45068",
@@ -1693,6 +2093,41 @@
       "about": "Bathroom Remodeling As the leading bathroom remodeling company in Southwest Ohio and Atlanta, GA, our experts at MVP Walk-In Tub & Shower are dedicated to providing comprehensive services for your family.",
       "local": false,
       "from": "chamber"
+    },
+    {
+      "id": "manual-naturesedgewellnessandspa",
+      "name": "Nature's Edge Wellness and Spa",
+      "location": "Waynesville, OH",
+      "phone": "513-480-6762",
+      "sections": [
+        "health"
+      ],
+      "kinds": [
+        "Massage",
+        "Spa"
+      ],
+      "source": "https://ohgratefulacres.com",
+      "website": "https://ohgratefulacres.com/",
+      "about": "Spa offering massage therapy, integrative bodywork, private and couples spa experiences, and yoga and sound events.",
+      "local": true,
+      "from": "manual"
+    },
+    {
+      "id": "manual-nine22mercantile",
+      "name": "Nine 22 Mercantile",
+      "location": "185 South Main Street, Waynesville, OH 45068",
+      "phone": "",
+      "sections": [
+        "shop"
+      ],
+      "kinds": [
+        "Vintage Shop"
+      ],
+      "source": "https://waynesvilleshops.com/antique-shops-and-malls/name/922-mercantile/",
+      "website": "",
+      "about": "Downtown shop selling vintage goods, clothing and furniture.",
+      "local": true,
+      "from": "manual"
     },
     {
       "id": "chamber-647",
@@ -1746,6 +2181,41 @@
       "about": "A PLACE TO CALL HOME As a faith-based, not-for-profit, our mission is to provide adults with caring and quality services toward the enhancement of physical, mental, and spiritual well-being consistent with the Christian Gospel. At Ohio Living Quaker Heights, our mission is…",
       "local": true,
       "from": "chamber"
+    },
+    {
+      "id": "manual-ohiorenaissancefestival",
+      "name": "Ohio Renaissance Festival",
+      "location": "10542 East State Route 73, Waynesville, OH 45068",
+      "phone": "513-897-7000",
+      "sections": [
+        "fun"
+      ],
+      "kinds": [
+        "Attraction",
+        "Festival"
+      ],
+      "source": "https://www.renfestival.com/",
+      "website": "https://www.renfestival.com/",
+      "about": "Seasonal Renaissance-themed festival with jousting, stage shows, food and artisan shops, held on fall weekends at Renaissance Park.",
+      "local": true,
+      "from": "manual"
+    },
+    {
+      "id": "manual-ontargetheatingandcooling",
+      "name": "On Target Heating and Cooling",
+      "location": "196 South 3rd Street, Waynesville, OH 45068",
+      "phone": "937-272-4712",
+      "sections": [
+        "home"
+      ],
+      "kinds": [
+        "HVAC"
+      ],
+      "source": "https://ontargetheatingandcooling.com/contact-us",
+      "website": "https://ontargetheatingandcooling.com/",
+      "about": "Residential and commercial heating and air conditioning installation, repair, maintenance and indoor air quality service.",
+      "local": true,
+      "from": "manual"
     },
     {
       "id": "chamber-289",
@@ -1815,23 +2285,6 @@
       "website": "http://www.purkeylandscaping.com/",
       "about": "We offer a full range of hardscaping, landscaping, lighting, and maintenance services for residential and commercial properties. We work closely with you to ensure each project creates the outdoor living experience and yard beautification you want so it looks it's best in…",
       "local": true,
-      "from": "chamber"
-    },
-    {
-      "id": "chamber-753",
-      "name": "R5 Travel Leaders",
-      "location": "",
-      "phone": "(740) 262-6539",
-      "sections": [
-        "stay"
-      ],
-      "kinds": [
-        "Travel/Tourism"
-      ],
-      "source": "https://www.waynesvilleohio.com/directory/listing/753",
-      "website": "https://www.travelleaders.com/agent/476316",
-      "about": "Luxury Travel. Expertly Planned. Cruises &bull; Disney &bull; Family Vacations From Caribbean sailings to unforgettable family adventures, I design seamless, stress-free vacations tailored just for you.",
-      "local": false,
       "from": "chamber"
     },
     {
@@ -1930,6 +2383,59 @@
       "about": "",
       "local": true,
       "from": "chamber"
+    },
+    {
+      "id": "manual-rockcreekrenovation",
+      "name": "Rock Creek Renovation",
+      "location": "1555 E St Rt 73, Waynesville, OH 45068",
+      "phone": "937-941-8110",
+      "sections": [
+        "home"
+      ],
+      "kinds": [
+        "Painting",
+        "Remodeling"
+      ],
+      "source": "https://rockcreekrenovation.com/",
+      "website": "https://rockcreekrenovation.com/",
+      "about": "House painting, cabinet painting and custom carpentry for residential and commercial customers.",
+      "local": true,
+      "from": "manual"
+    },
+    {
+      "id": "manual-roscoescoletranespizza",
+      "name": "Roscoe's (Coletranes) Pizza",
+      "location": "6782 Corwin Ave, Corwin, OH 45068",
+      "phone": "",
+      "sections": [
+        "food"
+      ],
+      "kinds": [
+        "Pizza"
+      ],
+      "source": "https://waynesvilleshops.com/lodging-food-and-entertainment/name/roscoes-coletranes-pizza-1 (open per the editor, 2026-10-31)",
+      "website": "",
+      "about": "Pizza restaurant in the Village of Corwin, just north of S.R. 73, known for its specialty pizzas.",
+      "local": true,
+      "from": "manual"
+    },
+    {
+      "id": "manual-rtmroofs",
+      "name": "RTM Roofs",
+      "location": "Waynesville, OH 45068",
+      "phone": "937-689-4754",
+      "sections": [
+        "home"
+      ],
+      "kinds": [
+        "Roofing",
+        "Gutters"
+      ],
+      "source": "https://rtmcustomconstruction.com",
+      "website": "https://rtmcustomconstruction.com/",
+      "about": "Roof repair and replacement, siding and gutter replacement.",
+      "local": true,
+      "from": "manual"
     },
     {
       "id": "chamber-264",
@@ -2079,6 +2585,23 @@
       "from": "chamber"
     },
     {
+      "id": "manual-stubbsconnerfuneralhome",
+      "name": "Stubbs-Conner Funeral Home",
+      "location": "185 North Main Street, Waynesville, OH 45068",
+      "phone": "513-897-5966",
+      "sections": [
+        "other"
+      ],
+      "kinds": [
+        "Funeral Home"
+      ],
+      "source": "https://www.stubbsconner.com/locations/",
+      "website": "https://www.stubbsconner.com/",
+      "about": "Funeral home offering funeral and memorial services, cremation services, pre-need planning, obituary publishing and live streaming of services, with an on-site chapel.",
+      "local": true,
+      "from": "manual"
+    },
+    {
       "id": "chamber-720",
       "name": "Taylor's Coffee & Creamery",
       "location": "195 S. Main St, Waynesville, OH 45068",
@@ -2111,6 +2634,23 @@
       "about": "Taylor's South Shore Marina offers full service marine dealership, specializing in new and used boat sales and repair. Taylor's South Shore Marina is a retailer also offering service, parts, and an accessories center.",
       "local": true,
       "from": "chamber"
+    },
+    {
+      "id": "manual-buckeyecharm",
+      "name": "The Buckeye Charm",
+      "location": "260 High St., Waynesville, OH 45068",
+      "phone": "513-827-5662",
+      "sections": [
+        "shop"
+      ],
+      "kinds": [
+        "Clothing Boutique"
+      ],
+      "source": "https://www.buckeyecharm.com/",
+      "website": "https://www.buckeyecharm.com/",
+      "about": "Clothing and accessories shop in a former church building, selling denim, boots, jewelry, men's and kids' lines, and vintage and upcycled items.",
+      "local": true,
+      "from": "manual"
     },
     {
       "id": "chamber-743",
@@ -2251,6 +2791,23 @@
       "from": "chamber"
     },
     {
+      "id": "manual-secretgarden",
+      "name": "The Secret Garden",
+      "location": "4107 E. St. Rt. 73, Waynesville, OH 45068",
+      "phone": "513-897-5505",
+      "sections": [
+        "shop"
+      ],
+      "kinds": [
+        "Garden Art & Gift Shop"
+      ],
+      "source": "https://www.secretgardenwaynesville.com",
+      "website": "https://www.secretgardenwaynesville.com/",
+      "about": "Sells made-in-America garden art such as concrete statuary, wrought iron, gazing globes and birdhouses, plus home gifts, a seasonal Halloween shop and year-round Christmas items. Does not sell live plants.",
+      "local": true,
+      "from": "manual"
+    },
+    {
       "id": "chamber-757",
       "name": "The Tartan Turtle Ltd.",
       "location": "69 S. Main St, Waynesville, OH 45068",
@@ -2310,6 +2867,23 @@
       "from": "chamber"
     },
     {
+      "id": "manual-therapeuticmassageofwaynesville",
+      "name": "Therapeutic Massage of Waynesville",
+      "location": "184 South Main St., Waynesville, OH 45068",
+      "phone": "513-403-8731",
+      "sections": [
+        "health"
+      ],
+      "kinds": [
+        "Massage"
+      ],
+      "source": "https://www.facebook.com/TherapeuticMassageofWaynesville/ (open per the editor, 2026-10-31)",
+      "website": "https://www.facebook.com/TherapeuticMassageofWaynesville/",
+      "about": "Massage therapy practice in downtown Waynesville with online booking.",
+      "local": true,
+      "from": "manual"
+    },
+    {
       "id": "chamber-283",
       "name": "Tony Sisson, Bison Financial Group powered by Ameriprise Financial Services, LLC",
       "location": "10801 Yankee St, Washington Township",
@@ -2347,6 +2921,24 @@
       "about": "Everything for your game room, plus on-site service of all electronics.",
       "local": true,
       "from": "chamber"
+    },
+    {
+      "id": "manual-travellersstayandplay",
+      "name": "Traveller's Stay & Play",
+      "location": "4520 East Lower Springboro Road, Waynesville, OH 45068",
+      "phone": "937-474-8511",
+      "sections": [
+        "pets"
+      ],
+      "kinds": [
+        "Pet Boarding",
+        "Dog Daycare"
+      ],
+      "source": "https://www.travellersboarding.com",
+      "website": "https://www.travellersboarding.com/",
+      "about": "Dog daycare on weekdays and dog boarding year-round, with temperament evaluations, optional baths and medication administration.",
+      "local": true,
+      "from": "manual"
     },
     {
       "id": "chamber-726",
@@ -2391,6 +2983,23 @@
       "from": "chamber"
     },
     {
+      "id": "manual-ultimatefinishhairstudio",
+      "name": "Ultimate Finish Hair Studio",
+      "location": "185 High St, Waynesville, OH 45068",
+      "phone": "513-897-0504",
+      "sections": [
+        "health"
+      ],
+      "kinds": [
+        "Hair Salon"
+      ],
+      "source": "https://www.facebook.com/people/Ultimate-Finish-Hair-Studio/100086200613937/ (open per the editor, 2026-10-31)",
+      "website": "https://www.facebook.com/people/Ultimate-Finish-Hair-Studio/100086200613937/",
+      "about": "Hair salon offering color, extensions, and brow and lash services by appointment.",
+      "local": true,
+      "from": "manual"
+    },
+    {
       "id": "chamber-725",
       "name": "Valentino Design",
       "location": "Waynesville, OH 45068",
@@ -2427,6 +3036,59 @@
       "about": "Welcome to Venue at THE Historic Lockup, your unique and intimate event venue in Waynesville, OH, centrally located between three major cities: Dayton, Cincinnati, and Columbus! Whether planning a wedding, corporate event, or special celebration, our elegant and versatile…",
       "local": true,
       "from": "chamber"
+    },
+    {
+      "id": "manual-villageantiques",
+      "name": "Village Antiques",
+      "location": "185 High Street, Waynesville, OH 45068",
+      "phone": "",
+      "sections": [
+        "shop"
+      ],
+      "kinds": [
+        "Antiques"
+      ],
+      "source": "https://waynesvilleshops.com/antique-shops-and-malls/name/village-antiques/",
+      "website": "",
+      "about": "Antique shop selling original and restored furniture and accessories.",
+      "local": true,
+      "from": "manual"
+    },
+    {
+      "id": "manual-villagebarbershopandshaveparlor",
+      "name": "Village Barbershop and Shave Parlor",
+      "location": "330 South Main Street, Waynesville, OH 45068",
+      "phone": "937-313-7147",
+      "sections": [
+        "health"
+      ],
+      "kinds": [
+        "Barber"
+      ],
+      "source": "https://www.facebook.com/p/Village-Barber-Shop-and-Shave-Parlor-100046607783657/ (open per the editor, 2026-10-31)",
+      "website": "https://www.facebook.com/p/Village-Barber-Shop-and-Shave-Parlor-100046607783657/",
+      "about": "Barbershop offering men's haircuts, hot towel shaves and beard trims, by appointment.",
+      "local": true,
+      "from": "manual"
+    },
+    {
+      "id": "manual-villagesalvagevillageamishfurniture",
+      "name": "Village Salvage / Village Amish Furniture",
+      "location": "85 S Main Street, Waynesville, OH 45068",
+      "phone": "513-914-4177",
+      "sections": [
+        "shop",
+        "home"
+      ],
+      "kinds": [
+        "Architectural Salvage",
+        "Furniture"
+      ],
+      "source": "https://www.villageamishfurniture.com/",
+      "website": "https://www.villageamishfurniture.com/",
+      "about": "Sells vintage architectural salvage and antique hardware, plus Amish-built and custom furniture for the home, office and outdoors. Also repairs and refinishes antique pieces.",
+      "local": true,
+      "from": "manual"
     },
     {
       "id": "chamber-609",
@@ -2544,6 +3206,23 @@
       "from": "chamber"
     },
     {
+      "id": "manual-waynesvilleclockshop",
+      "name": "Waynesville Clock Shop",
+      "location": "228 Miami St, Waynesville, OH 45068",
+      "phone": "",
+      "sections": [
+        "shop"
+      ],
+      "kinds": [
+        "Clock Shop"
+      ],
+      "source": "https://waynesvilleshops.com/specialty-shops-and-galleries/name/village-clock-shop/",
+      "website": "",
+      "about": "Clock shop on Miami Street.",
+      "local": true,
+      "from": "manual"
+    },
+    {
       "id": "chamber-768",
       "name": "Waynesville Family Dentistry",
       "location": "Waynesville, Ohio",
@@ -2577,6 +3256,40 @@
       "about": "Personal Training, Group Fitness, and 24/7 membership",
       "local": true,
       "from": "chamber"
+    },
+    {
+      "id": "manual-waynesvillehealthcare",
+      "name": "Waynesville Health Care",
+      "location": "4353 State Route 73, Suite 120, Waynesville, OH",
+      "phone": "513-897-0085",
+      "sections": [
+        "health"
+      ],
+      "kinds": [
+        "Family Practice"
+      ],
+      "source": "https://provmedgroup.com/waynesville.html",
+      "website": "https://provmedgroup.com/waynesville.html",
+      "about": "Family medicine practice (part of Providence Medical Group) offering check-ups, illness and injury care, well-child visits, diabetes care, geriatric care and flu shots.",
+      "local": true,
+      "from": "manual"
+    },
+    {
+      "id": "manual-waynesvilleurgentcare",
+      "name": "Waynesville Urgent Care",
+      "location": "4353 E. St. Rt. 73, Suite 150, Waynesville, OH 45068",
+      "phone": "513-855-4336",
+      "sections": [
+        "health"
+      ],
+      "kinds": [
+        "Urgent Care"
+      ],
+      "source": "https://waynesvilleuc.com",
+      "website": "https://waynesvilleuc.com/",
+      "about": "Walk-in urgent care clinic in the Waynesville Medical Arts Building providing non-emergency medical care for adults and children.",
+      "local": true,
+      "from": "manual"
     },
     {
       "id": "chamber-356",
