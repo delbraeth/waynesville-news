@@ -359,6 +359,12 @@ main { display: block; padding: 1.5rem 0 3rem; }
   font-family: var(--font-sans); font-size: 0.62rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em;
   color: var(--accent); border: 1px solid currentColor; border-radius: 3px; padding: 0.05rem 0.35rem; margin-left: 0.5rem; vertical-align: 0.15em;
 }
+.dir-supporter {
+  font-family: var(--font-sans); font-size: 0.66rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em;
+  color: #fff; background: var(--accent); border-radius: 3px; padding: 0.1rem 0.4rem; margin-left: 0.5rem; vertical-align: 0.15em; white-space: nowrap;
+}
+a.dir-supporter, a.dir-supporter:hover { color: #fff; text-decoration: none; }
+.callout .dir-supporter { margin-left: 0; }
 .dir-kinds { font-family: var(--font-sans); font-size: 0.78rem; color: var(--muted); margin-top: 0.15rem; }
 .dir-about { font-size: 0.93rem; color: var(--ink-soft); margin: 0.35rem 0 0; }
 .dir-contact { display: flex; flex-wrap: wrap; gap: 0.2rem 1rem; font-family: var(--font-sans); font-size: 0.84rem; margin-top: 0.35rem; color: var(--muted); }
