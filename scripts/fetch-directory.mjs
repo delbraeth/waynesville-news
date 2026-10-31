@@ -9,8 +9,8 @@
 // email addresses, hours (go stale fast), logos and images.
 //
 // Chamber categories are regrouped into the directory's own sections, with
-// service businesses first. Government offices, schools, churches and
-// individual memberships are left out: this is a business directory.
+// service businesses first, with churches in their own section. Government
+// offices, schools and individual memberships are left out.
 //
 // The directory changes slowly, so this runs on demand / monthly, not daily.
 // On any failure the existing directory.json is kept untouched.
@@ -38,6 +38,7 @@ export const SECTIONS = [
   { id: "fun", label: "Arts, recreation & experiences" },
   { id: "farm", label: "Farms & agriculture" },
   { id: "pets", label: "Pets & veterinary" },
+  { id: "faith", label: "Churches & places of worship" },
   { id: "other", label: "Other services" },
 ];
 const CATEGORY_MAP = [
@@ -64,13 +65,14 @@ const CATEGORY_MAP = [
   [/^attractions/, "fun"],
   [/^agriculture/, "farm"],
   [/^pets/, "pets"],
+  [/^religious/, "faith"],
   [/^public-utilities/, "other"],
   [/^personal/, "other"],
   [/^manufacturing/, "other"],
   [/^industrial/, "other"],
 ];
 // Not businesses, or not a useful grouping.
-const SKIP = [/^a-to-z/, /^government/, /^religious/, /^family/, /^non-?profit/, /^education/];
+const SKIP = [/^a-to-z/, /^government/, /^family/, /^non-?profit/, /^education/];
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const decode = (s) =>
