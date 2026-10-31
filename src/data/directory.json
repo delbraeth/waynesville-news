@@ -1,6 +1,6 @@
 {
   "_note": "Local business directory. Built by scripts/fetch-directory.mjs from the Waynesville Area Chamber of Commerce's public member directory (name, location, phone, website, and the Chamber's description, as published) plus hand-added listings in directory-manual.json. Contact names, emails and hours are deliberately not copied. Do not edit by hand — edit directory-manual.json and re-run `npm run refresh:directory` (or `npm run refresh:directory -- --manual-only` to merge manual edits without re-reading the Chamber site).",
-  "updated": "2026-10-31T22:15:07.050Z",
+  "updated": "2026-10-31T22:15:41.426Z",
   "sections": [
     {
       "id": "home",
@@ -1832,23 +1832,6 @@
       "website": "http://www.purkeylandscaping.com/",
       "about": "We offer a full range of hardscaping, landscaping, lighting, and maintenance services for residential and commercial properties. We work closely with you to ensure each project creates the outdoor living experience and yard beautification you want so it looks it's best in…",
       "local": true,
-      "from": "chamber"
-    },
-    {
-      "id": "chamber-753",
-      "name": "R5 Travel Leaders",
-      "location": "",
-      "phone": "(740) 262-6539",
-      "sections": [
-        "stay"
-      ],
-      "kinds": [
-        "Travel/Tourism"
-      ],
-      "source": "https://www.waynesvilleohio.com/directory/listing/753",
-      "website": "https://www.travelleaders.com/agent/476316",
-      "about": "Luxury Travel. Expertly Planned. Cruises &bull; Disney &bull; Family Vacations From Caribbean sailings to unforgettable family adventures, I design seamless, stress-free vacations tailored just for you.",
-      "local": false,
       "from": "chamber"
     },
     {

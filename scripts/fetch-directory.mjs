@@ -200,6 +200,18 @@ const nameKey = (n = "") =>
   n.toLowerCase().replace(/&/g, "and").replace(/\b(llc|inc|co|corp|ltd|the)\b\.?/g, "").replace(/[^a-z0-9]/g, "");
 const SECTION_IDS = new Set(SECTIONS.map((s) => s.id));
 
+// Names in directory-manual.json "exclude" (closed, moved away, or asked to be
+// removed) are dropped from the Chamber data too, so a full refresh can't
+// bring them back.
+async function loadExcludes() {
+  try {
+    const ex = JSON.parse(await readFile(MANUAL, "utf8")).exclude ?? [];
+    return new Set(ex.map((e) => nameKey(typeof e === "string" ? e : e.name)).filter(Boolean));
+  } catch {
+    return new Set();
+  }
+}
+
 async function loadManual() {
   let raw = [];
   try {
@@ -234,8 +246,10 @@ async function loadManual() {
 
 async function writeMerged(chamber) {
   const manual = await loadManual();
+  const excluded = await loadExcludes();
   const keys = new Set(manual.map((m) => nameKey(m.name)));
   const items = [...manual, ...chamber.filter((c) => !keys.has(nameKey(c.name)))]
+    .filter((i) => !excluded.has(nameKey(i.name)))
     .sort((a, b) => a.name.localeCompare(b.name));
   await writeFile(
     OUT,

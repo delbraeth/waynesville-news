@@ -1,15 +1,26 @@
 {
-  "_note": "Hand-added directory listings for businesses that are not Chamber members (or to override a Chamber listing with the same name). Facts only, as the business publishes them; no private individuals' names. Fields: name (required), sections (array of section ids from directory.json, e.g. [\"home\"]), kinds (e.g. [\"Plumbing\"]), location, phone, website, about, source (where you verified it). After editing, run `npm run refresh:directory -- --manual-only`.",
+  "_note": "Hand-added directory listings for businesses that are not Chamber members (or to override a Chamber listing with the same name). Facts only, as the business publishes them; no private individuals' names. Fields: name (required), sections (array of section ids from directory.json, e.g. [\"home\"]), kinds (e.g. [\"Plumbing\"]), location, phone, website, about, source (where you verified it). After editing, run `npm run refresh:directory -- --manual-only`. To remove a listing for good (closed, moved, or asked to be removed), add it to \"exclude\" as {\"name\": \"...\", \"reason\": \"...\", \"date\": \"YYYY-MM-DD\"}; this also blocks it from the Chamber data.",
   "items": [
     {
       "name": "Cassidy Travel",
-      "sections": ["stay"],
-      "kinds": ["Travel Planning"],
+      "sections": [
+        "stay"
+      ],
+      "kinds": [
+        "Travel Planning"
+      ],
       "location": "Waynesville, OH",
       "phone": "",
       "website": "https://cassidytravel.org/",
       "about": "Travel planning from Waynesville: beach weekends, cruises, all-inclusive resorts, theme park trips, group travel for teams and clubs, and help finding accessible resorts.",
       "source": "https://cassidytravel.org/"
+    }
+  ],
+  "exclude": [
+    {
+      "name": "R5 Travel Leaders",
+      "reason": "No longer in business, per the editor",
+      "date": "2026-10-31"
     }
   ]
 }
