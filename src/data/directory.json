@@ -1,6 +1,6 @@
 {
   "_note": "Local business directory. Built by scripts/fetch-directory.mjs from the Waynesville Area Chamber of Commerce's public member directory (name, location, phone, website, and the Chamber's description, as published) plus hand-added listings in directory-manual.json. Contact names, emails and hours are deliberately not copied. Do not edit by hand — edit directory-manual.json and re-run `npm run refresh:directory` (or `npm run refresh:directory -- --manual-only` to merge manual edits without re-reading the Chamber site).",
-  "updated": "2026-10-31T22:34:04.862Z",
+  "updated": "2026-10-31T22:43:06.446Z",
   "sections": [
     {
       "id": "home",
@@ -821,11 +821,13 @@
         "stay"
       ],
       "kinds": [
-        "Travel Planning"
+        "Travel Planning",
+        "Accessible Travel",
+        "Cruises"
       ],
-      "source": "https://cassidytravel.org/",
+      "source": "Description supplied by the business, 2026-10-31; https://cassidytravel.org/",
       "website": "https://cassidytravel.org/",
-      "about": "Travel planning from Waynesville: beach weekends, cruises, all-inclusive resorts, theme park trips, group travel for teams and clubs, and help finding accessible resorts.",
+      "about": "Plans cruises, theme park vacations, all-inclusive resorts and group trips from Waynesville. Patrick Cassidy, an independent travel advisor with Fora Travel, specializes in multi-generational trips and travel for people with disabilities, autism and sensory needs. A power wheelchair user, Patrick checks accessible rooms, ride access, parking and quiet spaces before clients book. Credentials include Certified Autism Travel Professional, Certified Accessible Travel Advocate, College of Disney Knowledge graduate, and top-tier certification with Holland America, Princess, Norwegian and Virgin Voyages. No planning fee for vacations.",
       "local": true,
       "from": "manual"
     },
