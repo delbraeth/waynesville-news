@@ -1,5 +1,5 @@
 {
-  "_note": "Real venues and sources, verified against each listed source on 2026-10-31; Warren County tourism calendar re-checked 2026-10-31 (daily automated refresh). Wayne Local school dates per The Spartan (September and October 2026) and the district Community Events & Activities newsletter (October 2026) and Board Meeting Recap (October 2026). Mary L. Cook Public Library programs per the library's monthly newsletter (November 2026). Recurring items (rodeo, commissioners, ghost walk) show the next occurrence. Warren County Park District events page SUSPENDED as a source per Cap'n (2026-10-03): it sits behind a Cloudflare bot challenge (403 since 2026-09-24). Do not fetch it or report it as failing; its items from the 2026-09-23 check are kept until they expire. Resume only when Cap'n provides a working source. Event notes and dateLabels are shown to readers: write them for readers (what, when, where, and a helpful pointer like \"check the event website for times\" when a detail is missing). Never put editorial or process notes in them (\"not published\", \"confirm before printing\", \"corrected from\", \"checked on\"); record corrections in the commit message instead.",
+  "_note": "Real venues and sources, verified against each listed source on 2026-10-31; Warren County tourism calendar re-checked 2026-10-31 (daily automated refresh). Wayne Local school dates per The Spartan (September and October 2026) and the district Community Events & Activities newsletter (October 2026) and Board Meeting Recap (October 2026). Mary L. Cook Public Library programs per the library's monthly newsletter (November 2026). Recurring items (rodeo, commissioners, ghost walk) show the next occurrence. Warren County Park District events page SUSPENDED as a source per Cap'n (2026-10-03): it sits behind a Cloudflare bot challenge (403 since 2026-09-24). Do not fetch it or report it as failing; its items from the 2026-09-23 check are kept until they expire. Resume only when Cap'n provides a working source. Event notes and dateLabels are shown to readers: write them for readers (what, when, where, and a helpful pointer like \"check the event website for times\" when a detail is missing). Never put editorial or process notes in them (\"not published\", \"confirm before printing\", \"corrected from\", \"checked on\"); record corrections in the commit message instead. Tag Christmas-season community events (tree lightings, Santa visits, holiday markets, single-date light shows) with \"holiday\" so they also appear on the Holiday Lights guide.",
   "items": [
     {
       "title": "Historical Haunts — ghost walk of downtown Waynesville",
@@ -110,7 +110,10 @@
       "venue": "Kings Island, Mason",
       "category": "Festival",
       "source": "https://www.sixflags.com/kingsisland/events/winterfest",
-      "note": "Per Kings Island: holiday event on select nights. Opening weekend hours Nov 27 & 29 5–10 PM, Nov 28 4–10 PM. December open dates on the park calendar: Dec 4–6, 11–23 and 26–31; check the calendar for each night's hours."
+      "note": "Per Kings Island: holiday event on select nights. Opening weekend hours Nov 27 & 29 5–10 PM, Nov 28 4–10 PM. December open dates on the park calendar: Dec 4–6, 11–23 and 26–31; check the calendar for each night's hours.",
+      "tags": [
+        "holiday"
+      ]
     },
     {
       "title": "Wayne Local Schools Board of Education — Regular Meeting & Spartan Recognition Awards",
@@ -198,7 +201,10 @@
       "venue": "Historic downtown Waynesville (Main Street)",
       "category": "Festival",
       "source": "https://www.waynesvilleohio.com/events",
-      "note": "Fri 1–9 PM (shops open 11 AM), Sat noon–8 PM, Sun 11 AM–4 PM. Santa arrives by fire truck at the Gazebo on Main Street (Fri 6 PM, Sat 1 PM); heated entertainment tent and strolling characters; Sunday Holiday Christmas Market Street Faire with the Parade of Santas at 1 PM."
+      "note": "Fri 1–9 PM (shops open 11 AM), Sat noon–8 PM, Sun 11 AM–4 PM. Santa arrives by fire truck at the Gazebo on Main Street (Fri 6 PM, Sat 1 PM); heated entertainment tent and strolling characters; Sunday Holiday Christmas Market Street Faire with the Parade of Santas at 1 PM.",
+      "tags": [
+        "holiday"
+      ]
     },
     {
       "title": "Waynesville High School Swim Team — Athlete/Parent Meeting",
@@ -266,7 +272,10 @@
       "venue": "Mary L. Cook Public Library, 381 Old Stage Rd, Waynesville",
       "category": "Family",
       "source": "https://www.mlcook.lib.oh.us/",
-      "note": "Drop letters to Santa in the library's special mailbox. Letters mailed by Dec 15 get a reply from Santa's elves, who try to answer before Dec 25."
+      "note": "Drop letters to Santa in the library's special mailbox. Letters mailed by Dec 15 get a reply from Santa's elves, who try to answer before Dec 25.",
+      "tags": [
+        "holiday"
+      ]
     },
     {
       "title": "Santa Holiday Open House at the Library",
@@ -276,7 +285,10 @@
       "venue": "Mary L. Cook Public Library, 381 Old Stage Rd, Waynesville",
       "category": "Family",
       "source": "https://www.mlcook.lib.oh.us/",
-      "note": "Photos with Santa, letter writing, a holiday craft, the library's new Elf Academy, and refreshments from the Friends of the Library. Registration required, beginning Monday, Nov 9: call the library at 513-897-4826 or sign up at the front desk."
+      "note": "Photos with Santa, letter writing, a holiday craft, the library's new Elf Academy, and refreshments from the Friends of the Library. Registration required, beginning Monday, Nov 9: call the library at 513-897-4826 or sign up at the front desk.",
+      "tags": [
+        "holiday"
+      ]
     },
     {
       "title": "Warren County Commissioners — Weekly Session",

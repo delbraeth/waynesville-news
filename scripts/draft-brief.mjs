@@ -7,7 +7,7 @@
 // in and flips `published: true` (easiest on github.com — no terminal).
 // Nothing here invents news.
 import { writeFile, readFile } from "node:fs/promises";
-import { existsSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
 import { nextCommissionersMeeting } from "../src/lib/nextMeeting.js";
 import { nextTownshipMeeting } from "../src/lib/nextTownshipMeeting.js";
 import { dropPastEventPosts } from "./lib/fb-past-events.mjs";
@@ -195,9 +195,24 @@ const eventsBlock = soon.length
 const trickOrTreatCount = events.items
   .filter((e) => (e.tags ?? []).includes("trick-or-treat") && e.dateISO)
   .filter((e) => new Date(e.endISO ?? e.dateISO) >= todayStart).length;
-const seasonalLine = trickOrTreatCount
+// Holiday Lights guide: promoted inside its season window when it has anything in it.
+let holidayLine = "";
+try {
+  const hl = JSON.parse(readFileSync(new URL("../src/data/holiday-lights.json", import.meta.url), "utf8"));
+  const todayStr = todayStart.toLocaleDateString("sv-SE", { timeZone: "America/New_York" });
+  const s = hl.season ?? {};
+  const inSeason = s.showFrom && s.showUntil && todayStr >= s.showFrom && todayStr <= s.showUntil;
+  const displays = (hl.items ?? []).filter((d) => d?.name && (!d.endDate || d.endDate >= todayStr)).length;
+  const holidayEvents = events.items
+    .filter((e) => (e.tags ?? []).includes("holiday") && e.dateISO)
+    .filter((e) => new Date(e.endISO ?? e.dateISO) >= todayStart).length;
+  if (inSeason && displays + holidayEvents > 0) {
+    holidayLine = `\n**Holiday Lights Guide:** Christmas light displays and holiday events in and around Waynesville — [see the guide](/holiday-lights/).\n`;
+  }
+} catch { /* guide data missing: no pointer */ }
+const seasonalLine = (trickOrTreatCount
   ? `\n**Trick-or-Treat Guide:** ${trickOrTreatCount} trick-or-treat ${trickOrTreatCount === 1 ? "event" : "events"} in and around Waynesville, night by night — [see the guide](/trick-or-treat/).\n`
-  : "";
+  : "") + holidayLine;
 
 // NWS active alerts, fetched by refresh:weather. null = the alerts check itself
 // failed (unknown), [] = checked and clear. Never claim "no alerts" on null.

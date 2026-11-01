@@ -1,0 +1,6 @@
+{
+  "_note": "Holiday Lights guide (/holiday-lights/). Hand-maintained: each display verified on its own official page; record the URL in `source`. Never guess dates: if the organizer hasn't posted this year's dates, set dates2026Confirmed false, leave startDate/endDate empty and describe the usual pattern in `when`. Private home displays only when the display has its own public page and invites visitors; never name homeowners. tier: local (Waynesville/Corwin/Harveysburg/Oregonia/Caesar Creek), county (Warren County and adjacent towns), drive (worth a drive, ~1 hour). The guide is promoted on the home and events pages between season.showFrom and season.showUntil.",
+  "updated": "2026-11-01",
+  "season": { "label": "2026", "showFrom": "2026-11-01", "showUntil": "2027-01-06" },
+  "items": []
+}
