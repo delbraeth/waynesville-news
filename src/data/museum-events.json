@@ -1,39 +1,5 @@
 {
   "_note": "Museum at the Friends Home bookable sessions in the next 45 days, from its Wix Bookings calendar. Names and times are the museum's own; sold-out sessions are kept and flagged.",
-  "updated": "2026-10-27T10:43:07.321Z",
-  "items": [
-    {
-      "title": "Historical Haunts - Downtown Waynesville",
-      "startISO": "2026-10-29T19:00:00.000-04:00",
-      "endISO": "2026-10-29T20:30:00.000-04:00",
-      "dateLabel": "Thu, Oct 29 · 7:00 PM",
-      "location": "Meet at the Gazebo across from the Hammel House 121 S Main St Waynesville, OH",
-      "soldOut": false,
-      "openSpots": 24,
-      "totalSpots": 30,
-      "link": "https://www.friendshomemuseum.org/service-page/historical-haunts-downtown-waynesville-1"
-    },
-    {
-      "title": "Historical Haunts - Downtown Waynesville",
-      "startISO": "2026-10-30T19:00:00.000-04:00",
-      "endISO": "2026-10-30T20:30:00.000-04:00",
-      "dateLabel": "Fri, Oct 30 · 7:00 PM",
-      "location": "Meet at the Gazebo across from the Hammel House 121 S Main St Waynesville, OH",
-      "soldOut": false,
-      "openSpots": 8,
-      "totalSpots": 30,
-      "link": "https://www.friendshomemuseum.org/service-page/historical-haunts-downtown-waynesville-1"
-    },
-    {
-      "title": "Historical Haunts - Downtown Waynesville",
-      "startISO": "2026-10-31T19:00:00.000-04:00",
-      "endISO": "2026-10-31T20:30:00.000-04:00",
-      "dateLabel": "Sat, Oct 31 · 7:00 PM",
-      "location": "Meet at the Gazebo across from the Hammel House 121 S Main St Waynesville, OH",
-      "soldOut": false,
-      "openSpots": 30,
-      "totalSpots": 30,
-      "link": "https://www.friendshomemuseum.org/service-page/historical-haunts-downtown-waynesville-1"
-    }
-  ]
+  "updated": "2026-11-01T11:44:55.356Z",
+  "items": []
 }

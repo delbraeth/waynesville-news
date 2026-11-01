@@ -1,6 +1,6 @@
 {
   "_note": "North Warren County Transportation Plan project site, tracked via ArcGIS Online's public REST API (items published by the project account, with page text). `changes` lists items first seen as new/updated/removed, newest first, dated by the Eastern date of the run that noticed them. Titles and text are as published. Built by scripts/fetch-nwctp.mjs.",
-  "updated": "2026-11-01T03:36:18.017Z",
+  "updated": "2026-11-01T11:44:57.023Z",
   "hub": "https://northwarrencountytransportationplan-burgessniple.hub.arcgis.com",
   "items": [
     {

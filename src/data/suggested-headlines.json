@@ -1,6 +1,6 @@
 {
   "_note": "Candidate local headlines (Google News RSS). Published as a quoted headline (or, when available, a short publisher-written excerpt) + source + link; never reproduce article body text.",
-  "updated": "2026-10-31T10:42:14.775Z",
+  "updated": "2026-11-01T11:43:05.700Z",
   "items": [
     {
       "title": "OSP identifies man who died after single-vehicle crash in Warren County",
@@ -9,10 +9,10 @@
       "date": "Thu, 29 Oct 2026 17:48:00 GMT"
     },
     {
-      "title": "Carillon Historical Park's New Restaurant Has Ties To Waynesville",
-      "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNb3JVaE9La2FFUnVGZEtCdWtBZEFScXFyVXhGODBMczBpRlVmWVJZM0Ixb2RPeURFYlJUTzlDSEJ1RkRYYUVkMzFvMGZoaWQxbHprVjF1ZVRQbkJMYXpaUHVCSzlHejBpSnF0clJ6bDhSYWhLNERWU2lOR3NUbTY5ME1JLTFKbkVtZnBjNEZmYnRyZV9FUmkyN3VSbGJPZ0tDYnFRYTRRdk9iMHMzZHNxNHdzQXFKZFU?oc=5",
+      "title": "Sunday, Nov. 1, Is Last Day to Vote Early in Warren County",
+      "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxNemgyaUd6eXZZQkhMUUxXOFR1NUg3ci1fOTIza3RNYjM2MzRVR3U5dElSNGNjU3FJRUJhNzY0LTRJU0VSMjNoNUlWQmU2NDgybnlEZ0ZCOEN3OVBNVU4zVnFrMXRjcG5rS2haMjF4NnBHS2VSZ2s5SmhQN1RGZzFvUWVkQXZ3aUw1STZJMWVPTFU3Y01icERMN0psbEtIZw?oc=5",
       "source": "Warren County Post",
-      "date": "Sat, 31 Oct 2026 04:26:43 GMT"
+      "date": "Sun, 01 Nov 2026 02:06:07 GMT"
     },
     {
       "title": "Rider killed at Warren County rodeo died doing what he loved, friend says",
@@ -21,28 +21,32 @@
       "date": "Wed, 28 Oct 2026 20:54:00 GMT"
     },
     {
+      "title": "Between Dayton And Cincinnati Is Ohio's Scenic Lake Park With Fishing, Trails, And Sporty Appeal",
+      "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQaTB5blhHOF92a0h6NlJ0UjdKbEpuektFUnVrU3lTeWtXZlFBcWpUY3Z2Q1V1ZWdMRlpsc1FocWZZNHdGbm9mN0dreHNBQV9uZjgxYjIxT0lLc1gzSGhkRzA1OWxoa1ZybTljd3JSYm5ZU3JNNGYtWno2OUh6ZzZoOE9HeUNIclBHMTRTaWpNeE1YNWhCRnVfQzNMM2dJQ2ZVazZ0eHE0RVA0Zy1ZNzh1U0c3R1JZT3VlTzFWMGI4QUdFS1R2OUZRZ2owcGl0U2c?oc=5",
+      "source": "https://www.islands.com/",
+      "date": "Sat, 31 Oct 2026 19:00:00 GMT",
+      "sourceUrl": "https://www.islands.com/2299664/warren-county-armco-park-ohio-between-dayton-cincinnati-scenic-lake-park-fishing-trails-sporty-appeal/",
+      "excerpt": "Complete with a 110-acre lake, woodland hiking, and facilities for practically every sport imaginable, Warren County Armco Park has something for everyone."
+    },
+    {
       "title": "Bull rider dies after accident at Warren County rodeo",
       "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPcGh4TTVIM1dVVmJyRnRxdmpmVEZnNEhSMlI4MlhIRzhOaE9hbEVyUkZDTzFUYk1tVFN4LVpqazlRczU2VDFiYXRMdXZXRG1ZZUdLVl9ob1pQQmFUOW5aY2NieDFIS2JQMHRHdTZ6LVljQ001SV9BcVoySTIwUVRoZTBXUHl5cXhOMTNFag?oc=5",
       "source": "WKRC",
       "date": "Sun, 25 Oct 2026 21:53:56 GMT"
     },
     {
+      "title": "If Butler and Warren county levies fail, some warn of cuts to important services",
+      "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOcGc4X3BxdmF2aVM2b1NFTUwxZ0tmb1NGcjFqaGJPX0c4MTNRVkR1UTNycTlzeXhycUpDRmRaZ1V2Z3lVU3k4WWlHX1dxNGtlVERrYVhxcGxjdG1ocHVoX3UyeGUwNTJVeHhoV0o5R0VMRWRXZTZ1Mm1tZFNyTE10RTNtVnI1ZnF3bGx6MkQyN1BET0J4M3dqSUhkSlZpdUU?oc=5",
+      "source": "WVXU",
+      "date": "Wed, 28 Oct 2026 09:21:00 GMT",
+      "sourceUrl": "https://www.wvxu.org/local-news/2026-10-28/butler-warren-county-levy-mental-health-senior-services",
+      "excerpt": "Proponents of the levies that support seniors and mental health say they will not raise taxes."
+    },
+    {
       "title": "1 killed in Warren County crash identified",
       "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPY1Y0TU9KS1ZaMmNBYWF3azlWNHNlWV9YQktFaGtRUUZ3cEdNdWdfZHM2VXphQXc5OHd2YWFBZTQxQlp5NkZCa1dWa3dhMGFhZFRGS2g4NEM1ZGpKMjk1aDRpVW15VW9oN0Z1enBpb1Y0Y19QbmhRZ1ZjVldZRzV5ZkZCdGw?oc=5",
       "source": "WKEF",
       "date": "Thu, 29 Oct 2026 12:59:35 GMT"
-    },
-    {
-      "title": "Bull rider's final ride turns deadly when beast throws him off and stomps on his chest",
-      "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNbWQxaWJSU3NSbURxZXd5WW1uOUJ4MGFpZ2NXck5PaUMxZ3pKc042OVZ1MnIyYlRjNHNOU3cyWmViWnBuT2VXcGVjM3B2RjUzNGJMVkxJdDl3aHJZeHRZa3ROWXlEUGJoY3pXOXdERjBoZFlXRDlnNDdWVEVnelp1Rl85Y2piQ3o3U1Frb2hhNGTSAZYBQVVfeXFMTVkxZGc4dU8wSDhYMHA2NGVvVDBlNXBnblB4R3pabVJtelpOc0tLUHNCZHlzMVRYVFNUYlk5UDhacndvN1A1UEtKZDhqVFg0TG5hSHY5S0lNRVhEdWtfaDhYWGFlTm5VNmszaVU2bVRwVTV6SElEMmRqZU9SZEV2OUI3b1RZUDc1UDM1eXRiREJYLW94LWx3?oc=5",
-      "source": "Fox News",
-      "date": "Mon, 26 Oct 2026 15:18:45 GMT"
-    },
-    {
-      "title": "Bull Riding Community Mourning Death of Blake Saylor",
-      "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPY3RCYmgyaUt1Z0lFdWN6bWNRbnNqYkFBbndyZG9YbWl1U0YzR2p3WkZ1Tms4SndnUW5tTmQ4U0ljVmlleEtOMlZNM2xCbWtTOHJYMEs0RFVpVFBlUDNvTEx0cWhOT0U5NVM4eFlNcmVqOFk3blpXOU9lbDM0WUh2X0FwTW9OUTFzNWZsQnN3?oc=5",
-      "source": "Yahoo Sports",
-      "date": "Sun, 25 Oct 2026 19:38:03 GMT"
     },
     {
       "title": "Driver Killed in Early-Morning Crash on U.S. 42 in Waynesville, Troopers Say",
