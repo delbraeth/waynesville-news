@@ -99,7 +99,7 @@ export function buildWeekendPlanner({ iso, link, events = [], caesar = [], libra
 
   const sortT = (a, b) => a.time.localeCompare(b.time);
   const sections = [];
-  if (ongoing.length) sections.push(`**All weekend**\n` + ongoing.sort(sortT).map((x) => `- ${x.line}`).join("\n"));
+  if (ongoing.length) sections.push(`**All weekend**\n` + ongoing.sort(sortT).slice(0, 5).map((x) => `- ${x.line}`).join("\n"));
   for (const d of days) {
     if (byDay[d].length) sections.push(`**${dayName(d)}**\n` + byDay[d].sort(sortT).map((x) => `- ${x.line}`).join("\n"));
   }
