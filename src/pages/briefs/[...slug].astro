@@ -19,6 +19,9 @@ const dateFmt = new Intl.DateTimeFormat("en-US", {
 ---
 <Base
   title={`${entry.data.title} · Waynesville Daily Brief`}
+  description={entry.data.dek}
+  ogType="article"
+  published={entry.data.date}
   dateLine={dateFmt.format(entry.data.date)}
   showInfoBar={false}
 >

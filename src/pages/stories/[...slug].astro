@@ -16,6 +16,10 @@ const dateFmt = new Intl.DateTimeFormat("en-US", { month: "long", day: "numeric"
 <Base
   title={`${d.title} · Waynesville Daily Brief`}
   description={d.dek}
+  image={d.image}
+  imageAlt={d.imageAlt}
+  ogType="article"
+  published={d.date}
   dateLine={dateFmt.format(d.date)}
   showInfoBar={false}
 >
