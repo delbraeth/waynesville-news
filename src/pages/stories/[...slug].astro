@@ -37,7 +37,10 @@ const dateFmt = new Intl.DateTimeFormat("en-US", { month: "long", day: "numeric"
         {d.imageCredit && <figcaption>{d.imageCredit}</figcaption>}
       </figure>
     )}
-    <div class="prose">
+    <div class="prose" data-pagefind-body>
+      <span data-pagefind-meta="date" hidden>{dateFmt.format(d.date)}</span>
+      <span data-pagefind-sort="date" hidden>{d.date.toISOString().slice(0, 10)}</span>
+      <span data-pagefind-filter="type" hidden>Story</span>
       <Content />
     </div>
     <SubscribeBox />

@@ -1,0 +1,44 @@
+---
+import Base from "../../../layouts/Base.astro";
+import { getPublicBriefs } from "../../../lib/briefs.js";
+
+// Every published edition, grouped by month. /briefs/ shows the recent two
+// weeks; this is the full record.
+const { briefs } = await getPublicBriefs();
+const monthFmt = new Intl.DateTimeFormat("en-US", { month: "long", year: "numeric", timeZone: "UTC" });
+const dayFmt = new Intl.DateTimeFormat("en-US", { weekday: "short", month: "short", day: "numeric", timeZone: "UTC" });
+const months = [];
+for (const b of briefs) {
+  const label = monthFmt.format(b.data.date);
+  const last = months[months.length - 1];
+  if (last && last.label === label) last.items.push(b);
+  else months.push({ label, items: [b] });
+}
+---
+<Base
+  title="Brief Archive · Waynesville Daily Brief"
+  description="Every edition of the Waynesville Daily Brief, by month."
+  showInfoBar={false}
+>
+  <div class="reading">
+    <p class="kicker">Archive</p>
+    <h1>Every edition</h1>
+    <p class="dek">{briefs.length} daily briefs, newest first. Looking for something specific? <a href="/search/">Search them</a>.</p>
+    <nav class="dir-jump" aria-label="Months">
+      {months.map((m) => <a href={`#${m.label.toLowerCase().replace(/\s+/g, "-")}`}>{m.label} <span class="muted">{m.items.length}</span></a>)}
+    </nav>
+    {months.map((m) => (
+      <section class="dir-group" id={m.label.toLowerCase().replace(/\s+/g, "-")}>
+        <h2>{m.label}</h2>
+        <ul class="archive-list">
+          {m.items.map((b) => (
+            <li>
+              <span class="archive-date">{dayFmt.format(b.data.date)}</span>
+              <a href={`/briefs/${b.id}/`}>{b.data.title}</a>
+            </li>
+          ))}
+        </ul>
+      </section>
+    ))}
+  </div>
+</Base>

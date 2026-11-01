@@ -6,7 +6,7 @@
   "description": "Waynesville Daily Brief \u2014 hyperlocal news for Waynesville, OH & Warren County (waynesville.news)",
   "scripts": {
     "dev": "astro dev",
-    "build": "node scripts/check-briefs.mjs && astro build",
+    "build": "node scripts/check-briefs.mjs && astro build && pagefind --site dist",
     "preview": "astro preview",
     "astro": "astro",
     "refresh:weather": "node scripts/fetch-weather.mjs",
@@ -44,5 +44,8 @@
     "pdf-parse": "^2.4.5",
     "puppeteer-core": "^25.8.0",
     "tesseract.js": "^6.0.0"
+  },
+  "devDependencies": {
+    "pagefind": "^1.5.2"
   }
 }

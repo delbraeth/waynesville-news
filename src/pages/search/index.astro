@@ -1,0 +1,28 @@
+---
+import Base from "../../layouts/Base.astro";
+// Pagefind builds its index at deploy time (npm run build → pagefind --site dist)
+// from every brief and story body (data-pagefind-body). No outside service.
+---
+<Base
+  title="Search · Waynesville Daily Brief"
+  description="Search every Waynesville Daily Brief edition and story."
+  showInfoBar={false}
+>
+  <div class="reading">
+    <p class="kicker">Search</p>
+    <h1>Search the Brief</h1>
+    <p class="dek">Every daily brief and story. Try a street, a team, a business or a meeting.</p>
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet" />
+    <div id="search" class="site-search"></div>
+    <noscript><p class="muted">Search needs JavaScript. The <a href="/briefs/archive/">full archive</a> lists every edition by month.</p></noscript>
+    <p class="small muted" style="margin-top:2rem;">Prefer browsing? See the <a href="/briefs/archive/">full archive by month</a>.</p>
+  </div>
+  <script is:inline src="/pagefind/pagefind-ui.js"></script>
+  <script is:inline>
+    window.addEventListener("DOMContentLoaded", () => {
+      const q = new URLSearchParams(location.search).get("q") || "";
+      const ui = new PagefindUI({ element: "#search", showSubResults: true, showImages: false, resetStyles: false });
+      if (q) ui.triggerSearch(q);
+    });
+  </script>
+</Base>
