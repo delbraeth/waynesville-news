@@ -1,6 +1,6 @@
 {
   "_note": "Local business directory. Built by scripts/fetch-directory.mjs from the Waynesville Area Chamber of Commerce's public member directory (name, location, phone, website, and the Chamber's description, as published) plus hand-added listings in directory-manual.json. Contact names, emails and hours are deliberately not copied. Do not edit by hand — edit directory-manual.json and re-run `npm run refresh:directory` (or `npm run refresh:directory -- --manual-only` to merge manual edits without re-reading the Chamber site).",
-  "updated": "2026-10-31T22:54:43.096Z",
+  "updated": "2026-11-01T06:58:21.202Z",
   "sections": [
     {
       "id": "home",
@@ -222,7 +222,7 @@
         "Home Decor"
       ],
       "source": "https://www.waynesvilleohio.com/directory/listing/237",
-      "website": "http://www.americanhomecomforts.net/",
+      "website": "",
       "about": "We have taken our love of American artisan and imported treasures and designed our store with you in mind. We carry everything from country living decor to the popular farmhouse look. We have pottery, textiles, iron, metal, candles, fairy garden, floral, seasonal, wood smalls…",
       "local": true,
       "from": "chamber"
@@ -323,7 +323,7 @@
       "from": "chamber"
     },
     {
-      "id": "chamber-361",
+      "id": "manual-bandbcarryout",
       "name": "B&B CarryOut",
       "location": "2028 East St. Rt. 73 Waynesville, OH",
       "phone": "(513) 897-3685",
@@ -336,11 +336,11 @@
         "Restaurant",
         "Other Food Services"
       ],
-      "source": "https://www.waynesvilleohio.com/directory/listing/361",
-      "website": "http://bandbcarryout.com/wp/",
-      "about": "Cuisine: Multi-Cuisine",
+      "source": "https://www.waynesvilleohio.com/directory/listing/361 (new website per the editor, 2026-11-01; the Chamber still lists the old one)",
+      "website": "https://www.bandbcarryout.com/",
+      "about": "Carryout on S.R. 73 with breakfast and sandwiches, groceries, bait and firewood.",
       "local": true,
-      "from": "chamber"
+      "from": "manual"
     },
     {
       "id": "manual-baldwinorthodontics",
@@ -1769,7 +1769,7 @@
         "Workshops"
       ],
       "source": "https://www.waynesvilleohio.com/directory/listing/730",
-      "website": "http://lewiscommunitymercantile.myshopify.com/",
+      "website": "",
       "about": "We are a small town mercantile offering a variety of goods for your home, fresh bread, baked goods, nostalgic candy, apparel, jewelry, fresh flowers, and even an Old Fashioned Soda Shop with a modern twist, including smoothies!",
       "local": true,
       "from": "chamber"
@@ -2527,7 +2527,7 @@
         "Insurance"
       ],
       "source": "https://www.waynesvilleohio.com/directory/listing/293",
-      "website": "http://www.simpkinsfoleyinsurance.com/",
+      "website": "",
       "about": "Our Story",
       "local": false,
       "from": "chamber"
@@ -2824,7 +2824,7 @@
         "Home Decor"
       ],
       "source": "https://www.waynesvilleohio.com/directory/listing/260",
-      "website": "http://waynesvilleshops.com/place/the-peddler-housechristmas-peddler/",
+      "website": "",
       "about": "The Peddler House is an 'eclectic' gift/home decor shop that features items to celebrate each season. Our inventory changes constantly. We feature Candleberry Candles from Frankfort, Kentucky, Old World Christmas hand-blown ornaments, Mud Pie gifts and home decor, Fontanini…",
       "local": true,
       "from": "chamber"
@@ -2861,7 +2861,7 @@
         "Home Decor"
       ],
       "source": "https://www.waynesvilleohio.com/directory/listing/590",
-      "website": "http://www.scarletbarnantiques.com/",
+      "website": "",
       "about": "The Scarlet Barn is on Waynesville's historic walking tour and is listed as the David Brown House. The main house was built in 1807 and the Scarlet Barn located behind the house was built in 1901. The property was renovated in 2018 and the barn is now a retail shop. You can…",
       "local": true,
       "from": "chamber"
@@ -3097,7 +3097,7 @@
       "from": "chamber"
     },
     {
-      "id": "chamber-741",
+      "id": "manual-venueathistoriclockup",
       "name": "Venue at The Historic Lockup",
       "location": "260 Chapman St, Waynesville, OH 45068",
       "phone": "513-897-1607",
@@ -3107,11 +3107,11 @@
       "kinds": [
         "Venue Rental"
       ],
-      "source": "https://www.waynesvilleohio.com/directory/listing/741",
-      "website": "http://www.friendshomemuseuem.org/lockup",
+      "source": "https://www.waynesvilleohio.com/directory/listing/741 (website corrected: the Chamber listing has a typo, friendshomemuseuem.org)",
+      "website": "https://www.friendshomemuseum.org/lockup",
       "about": "Welcome to Venue at THE Historic Lockup, your unique and intimate event venue in Waynesville, OH, centrally located between three major cities: Dayton, Cincinnati, and Columbus! Whether planning a wedding, corporate event, or special celebration, our elegant and versatile…",
       "local": true,
-      "from": "chamber"
+      "from": "manual"
     },
     {
       "id": "manual-villageantiques",

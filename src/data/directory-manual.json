@@ -47,6 +47,23 @@
       "source": "https://waynesvilleshops.com/specialty-shops-and-galleries/name/art-expressions/"
     },
     {
+      "name": "B&B CarryOut",
+      "sections": [
+        "other",
+        "food"
+      ],
+      "kinds": [
+        "Fuel Stations",
+        "Restaurant",
+        "Other Food Services"
+      ],
+      "location": "2028 East St. Rt. 73 Waynesville, OH",
+      "phone": "(513) 897-3685",
+      "website": "https://www.bandbcarryout.com/",
+      "about": "Carryout on S.R. 73 with breakfast and sandwiches, groceries, bait and firewood.",
+      "source": "https://www.waynesvilleohio.com/directory/listing/361 (new website per the editor, 2026-11-01; the Chamber still lists the old one)"
+    },
+    {
       "name": "Baldwin Orthodontics, LLC",
       "sections": [
         "health"
@@ -534,6 +551,20 @@
       "website": "https://www.facebook.com/people/Ultimate-Finish-Hair-Studio/100086200613937/",
       "about": "Hair salon offering color, extensions, and brow and lash services by appointment.",
       "source": "https://www.facebook.com/people/Ultimate-Finish-Hair-Studio/100086200613937/ (open per the editor, 2026-10-31)"
+    },
+    {
+      "name": "Venue at The Historic Lockup",
+      "sections": [
+        "stay"
+      ],
+      "kinds": [
+        "Venue Rental"
+      ],
+      "location": "260 Chapman St, Waynesville, OH 45068",
+      "phone": "513-897-1607",
+      "website": "https://www.friendshomemuseum.org/lockup",
+      "about": "Welcome to Venue at THE Historic Lockup, your unique and intimate event venue in Waynesville, OH, centrally located between three major cities: Dayton, Cincinnati, and Columbus! Whether planning a wedding, corporate event, or special celebration, our elegant and versatile…",
+      "source": "https://www.waynesvilleohio.com/directory/listing/741 (website corrected: the Chamber listing has a typo, friendshomemuseuem.org)"
     },
     {
       "name": "Village Antiques",
