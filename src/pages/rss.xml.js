@@ -1,18 +1,29 @@
 import rss from '@astrojs/rss';
 import { getPublicBriefs, recentBriefs } from '../lib/briefs.js';
+import { getPublishedStories, storyHref } from '../lib/stories.js';
 
 export async function GET(context) {
   const { briefs } = await getPublicBriefs();
-  return rss({
-    title: 'Waynesville Daily Brief',
-    description: "Waynesville, two square miles, surrounded by reality since 1797.",
-    site: context.site,
-    items: recentBriefs(briefs).map((b) => ({
+  const stories = await getPublishedStories();
+  const items = [
+    ...recentBriefs(briefs).map((b) => ({
       title: b.data.title,
       description: b.data.dek ?? '',
       pubDate: b.data.date,
       link: `/briefs/${b.id}/`,
     })),
+    ...stories.slice(0, 20).map((s) => ({
+      title: s.data.title,
+      description: s.data.dek ?? '',
+      pubDate: s.data.date,
+      link: storyHref(s),
+    })),
+  ].sort((a, b) => b.pubDate.getTime() - a.pubDate.getTime());
+  return rss({
+    title: 'Waynesville Daily Brief',
+    description: "Waynesville, two square miles, surrounded by reality since 1797.",
+    site: context.site,
+    items,
     customData: `<language>en-us</language>`,
   });
 }

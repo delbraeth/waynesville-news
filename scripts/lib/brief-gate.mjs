@@ -51,7 +51,7 @@ export function briefProblems(raw, filename) {
   // One mistyped date pins a future-dated brief to the top of the homepage,
   // the archive and the RSS feed indefinitely.
   // Filenames are the edition date, optionally suffixed (e.g. "-demo").
-  const stem = (/^(\d{4}-\d{2}-\d{2})/.exec(filename) ?? [])[1] ?? "";
+  const stem = (/^(\d{4}-\d{2}-\d{2})/.exec(filename.split("/").pop()) ?? [])[1] ?? "";
   const date = field("date");
   if (date && stem && date !== stem) {
     problems.push(`${filename}: frontmatter date (${date}) does not match the filename`);
