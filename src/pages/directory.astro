@@ -139,7 +139,19 @@ const listMail = "mailto:editor@waynesville.news?subject=" + encodeURIComponent(
   const local = document.getElementById("dir-local");
   const supp = document.getElementById("dir-supp");
   const none = document.getElementById("dir-none");
-  const groups = [...document.querySelectorAll(".dir-group")];
+  // Read every listing once up front, so filtering is plain array work and the
+  // page only touches the DOM for listings whose visibility actually changes.
+  const groups = [...document.querySelectorAll(".dir-group")].map((g) => {
+    const jump = document.querySelector(`[data-jump="${g.id}"]`);
+    return {
+      el: g,
+      jump,
+      count: jump ? jump.querySelector("span") : null,
+      items: [...g.querySelectorAll("li")].map((li) => ({
+        li, hay: li.dataset.search || "", local: li.dataset.local === "1", supp: li.dataset.supporter === "1", shown: true,
+      })),
+    };
+  });
   const apply = () => {
     const terms = q.value.toLowerCase().split(/\s+/).filter(Boolean);
     const onlyLocal = local.checked;
@@ -147,24 +159,23 @@ const listMail = "mailto:editor@waynesville.news?subject=" + encodeURIComponent(
     let total = 0;
     for (const g of groups) {
       let shown = 0;
-      for (const li of g.querySelectorAll("li")) {
-        const hay = li.dataset.search || "";
-        const ok = (!onlyLocal || li.dataset.local === "1") && (!onlySupp || li.dataset.supporter === "1") && terms.every((t) => hay.includes(t));
-        li.hidden = !ok;
+      for (const it of g.items) {
+        const ok = (!onlyLocal || it.local) && (!onlySupp || it.supp) && terms.every((t) => it.hay.includes(t));
+        if (ok !== it.shown) { it.li.hidden = !ok; it.shown = ok; }
         if (ok) shown++;
       }
-      g.hidden = shown === 0;
-      const jump = document.querySelector(`[data-jump="${g.id}"]`);
-      if (jump) {
-        jump.hidden = shown === 0;
-        const n = jump.querySelector("span");
-        if (n) n.textContent = String(shown);
+      g.el.hidden = shown === 0;
+      if (g.jump) {
+        g.jump.hidden = shown === 0;
+        if (g.count) g.count.textContent = String(shown);
       }
       total += shown;
     }
     none.hidden = total !== 0;
   };
-  q.addEventListener("input", apply);
+  // Typing waits for a short pause before filtering, so each keystroke stays instant.
+  let timer;
+  q.addEventListener("input", () => { clearTimeout(timer); timer = setTimeout(apply, 150); });
   local.addEventListener("change", apply);
   if (supp) supp.addEventListener("change", apply);
 })();
