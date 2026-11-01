@@ -345,6 +345,19 @@
       "category": "Festival",
       "source": "https://waynesvilleshops.com/2026-calendar-of-events-in-waynesville/",
       "note": "A downtown weekend on the Waynesville Merchant Association calendar. Check the event page for hours and details."
+    },
+    {
+      "title": "Waynesville Christmas Rewind",
+      "dateISO": "2026-12-12T00:00:00-05:00",
+      "endISO": "2026-12-12T23:59:00-05:00",
+      "dateLabel": "Sat, Dec 12 · evening",
+      "venue": "Downtown Waynesville",
+      "category": "Festival",
+      "source": "https://www.facebook.com/events/1659555119293827",
+      "note": "A nostalgic Christmas evening downtown: shop local for last-minute gifts, hot cocoa, Christmas music and classic-Christmas-movie fun. Free, no tickets needed. Check the event page for times.",
+      "tags": [
+        "holiday"
+      ]
     }
   ]
 }
