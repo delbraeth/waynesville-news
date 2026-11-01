@@ -4,6 +4,10 @@ import supporters from "../data/supporters.json";
 import site from "../data/site.json";
 
 const patreonUrl = site.patreon?.url?.trim() || "";
+const tier = site.businessSupport ?? {};
+const tierPrice = tier.price?.trim() || "";
+const tierUrl = tier.url?.trim() || patreonUrl;
+const joinMail = "mailto:editor@waynesville.news?subject=" + encodeURIComponent("Business supporter listing");
 const items = (supporters.items ?? []).filter((s) => s && s.name);
 const telHref = (p: string) => "tel:" + p.replace(/[^\d+]/g, "");
 const prettyUrl = (u: string) => u.replace(/^https?:\/\/(www\.)?/, "").replace(/\/$/, "");
@@ -25,7 +29,7 @@ const prettyUrl = (u: string) => u.replace(/^https?:\/\/(www\.)?/, "").replace(/
     </div>
 
     {items.length === 0 ? (
-      <p class="muted" style="margin-top:1.5rem;">Our founding supporters will be listed here soon.</p>
+      <p class="muted" style="margin-top:1.5rem;">Our first business supporters will be listed here soon.</p>
     ) : (
       <ul class="supporters">
         {items.map((s) => (
@@ -46,6 +50,31 @@ const prettyUrl = (u: string) => u.replace(/^https?:\/\/(www\.)?/, "").replace(/
       </ul>
     )}
 
+    <div class="sp-join" id="business">
+      <h3>Become a business supporter{tierPrice && <> — {tierPrice}</>}</h3>
+      <p>
+        Help keep independent local news going in Waynesville. Business supporters get:
+      </p>
+      <ul>
+        <li>A listing on this page: your business name, what you do, phone and website.</li>
+        <li>A <span class="dir-supporter">★ Supporter</span> badge on your listing in the <a href="/directory/">Business Directory</a>.</li>
+        <li>Your name in the "Supported by" line at the bottom of every page, if you'd like.</li>
+      </ul>
+      <p>
+        What it doesn't buy: coverage, placement or influence. Supporters appear in the directory in the same
+        order as everyone else, and the editor alone decides what the Brief covers.
+      </p>
+      <p>
+        {tierUrl
+          ? <><a class="sp-cta" href={tierUrl} target="_blank" rel="noopener">Become a business supporter →</a><br /></>
+          : null}
+        <span class="small">
+          {tierUrl ? "After you join, " : "To join, "}<a href={joinMail}>email the editor</a> your business name,
+          a one-line description, phone and website, and whether you'd like to be in the footer.
+        </span>
+      </p>
+    </div>
+
     {patreonUrl && (
       <div class="sp-join">
         <h3>Support the Brief as a reader</h3>
@@ -57,13 +86,5 @@ const prettyUrl = (u: string) => u.replace(/^https?:\/\/(www\.)?/, "").replace(/
       </div>
     )}
 
-    <div class="sp-join">
-      <h3>Become a founding supporter</h3>
-      <p>
-        We're starting with a small group of local businesses. If you'd like to help keep
-        independent local news going in Waynesville,
-        <a href="mailto:editor@waynesville.news?subject=Supporting%20the%20Waynesville%20Daily%20Brief">email the editor</a>.
-      </p>
-    </div>
   </div>
 </Base>

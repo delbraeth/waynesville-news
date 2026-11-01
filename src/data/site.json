@@ -5,6 +5,11 @@
   },
   "patreon": {
     "_note": "Reader support via Patreon. Paste the page URL (e.g. https://www.patreon.com/waynesvillenews) to turn on the support links in the footer, on /supporters/, under each brief, and in the email edition. Leave empty to hide them all. Patrons get no say in coverage.",
-    "url": "https://www.patreon.com/cw/waynesvillenews"
+    "url": "https://patreon.com/waynesvillenews"
+  },
+  "businessSupport": {
+    "_note": "Business supporter tier, advertised on /supporters/ and the directory. price is shown as written. url: the join link for the tier (e.g. the Patreon tier checkout link); if empty, the Patreon page URL above is used. Joining doesn't add a business automatically: add it to src/data/supporters.json.",
+    "price": "$10 a month",
+    "url": ""
   }
 }
