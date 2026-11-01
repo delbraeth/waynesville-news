@@ -31,6 +31,8 @@ export const CEILINGS = {
   "fb-schools": 3,      // recent district posts
   "fb-caesar-creek": 3, // recent park posts
   "fb-wcpd-friends": 3, // recent Friends of WCPD posts
+  "fb-township": 3,     // recent Wayne Township posts (incl. fire/EMS)
+  closings: 1,          // a delay notice is only true for one morning
   "library-events": 7,  // dated, forward-looking
   "shops-events": 7,    // dated, forward-looking
   "caesar-creek-events": 7, // dated, forward-looking

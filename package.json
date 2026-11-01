@@ -34,7 +34,8 @@
     "check:staleness": "node scripts/check-staleness.mjs",
     "verify:live": "node scripts/verify-live.mjs",
     "refresh:directory": "node scripts/fetch-directory.mjs",
-    "refresh:nwctp": "node scripts/fetch-nwctp.mjs"
+    "refresh:nwctp": "node scripts/fetch-nwctp.mjs",
+    "refresh:closings": "node scripts/fetch-closings.mjs"
   },
   "dependencies": {
     "@astrojs/rss": "^4.0.11",
