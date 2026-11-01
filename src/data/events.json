@@ -322,6 +322,29 @@
       "category": "Government",
       "source": "https://northwarrencountytransportationplan-burgessniple.hub.arcgis.com/pages/f27bc61005b842439ceb569b82c0b9cf",
       "note": "Last day to comment online on the plan, including options for a new I-75 to I-71 connection (one would follow US 42 and S.R. 73 through Waynesville and Corwin) and priority intersections such as S.R. 73 and US 42 in Waynesville. The survey opened Oct. 28."
+    },
+    {
+      "title": "Hearthwarming Holidays",
+      "dateISO": "2026-11-06T11:00:00-05:00",
+      "endISO": "2026-11-08T17:00:00-05:00",
+      "dateLabel": "Fri–Sun, Nov 6–8 · Fri & Sat 11 AM–8 PM, Sun noon–5 PM",
+      "venue": "Historic downtown Waynesville",
+      "category": "Festival",
+      "source": "https://waynesvilleshops.com/?p=17396",
+      "note": "Holiday open house weekend in the downtown shops; collect recipe cards as you stroll from shop to shop. Free admission.",
+      "tags": [
+        "holiday"
+      ]
+    },
+    {
+      "title": "Waynesville Town Square Days",
+      "dateISO": "2026-11-21T00:00:00-05:00",
+      "endISO": "2026-11-22T23:59:00-05:00",
+      "dateLabel": "Sat–Sun, Nov 21–22",
+      "venue": "Downtown Waynesville",
+      "category": "Festival",
+      "source": "https://waynesvilleshops.com/2026-calendar-of-events-in-waynesville/",
+      "note": "A downtown weekend on the Waynesville Merchant Association calendar. Check the event page for hours and details."
     }
   ]
 }
