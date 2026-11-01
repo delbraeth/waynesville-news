@@ -1,12 +1,20 @@
 ---
-// Pull-out link to a seasonal guide; renders nothing once the season's events are past.
+// Pull-out links to seasonal guides; each renders nothing outside its season.
 import { upcomingEvents, TRICK_OR_TREAT } from "../lib/events.js";
+import { inHolidaySeason, holidayGuideCount } from "../lib/holiday.js";
 
 const count = upcomingEvents(TRICK_OR_TREAT).length;
+const holidayCount = inHolidaySeason() ? holidayGuideCount() : 0;
 ---
 {count > 0 && (
   <p class="callout">
     <strong>Trick-or-Treat Guide:</strong>{" "}{count} trick-or-treat {count === 1 ? "event" : "events"} in and around Waynesville, night by night.{" "}
     <a href="/trick-or-treat/">See the guide →</a>
+  </p>
+)}
+{holidayCount > 0 && (
+  <p class="callout">
+    <strong>Holiday Lights Guide:</strong>{" "}Christmas light displays and holiday events in and around Waynesville.{" "}
+    <a href="/holiday-lights/">See the guide →</a>
   </p>
 )}

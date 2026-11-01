@@ -1,0 +1,116 @@
+---
+import Base from "../layouts/Base.astro";
+import lights from "../data/holiday-lights.json";
+import { currentDisplays, holidayEvents } from "../lib/holiday.js";
+
+type Display = {
+  name: string; tier: "local" | "county" | "drive"; kind?: string; location?: string; town?: string;
+  startDate?: string; endDate?: string; dates2026Confirmed?: boolean; when?: string; price?: string;
+  about?: string; website?: string; source?: string;
+};
+
+const displays = currentDisplays() as Display[];
+const events = holidayEvents();
+
+const TIERS = [
+  { id: "local", label: "In and around Waynesville" },
+  { id: "county", label: "Around Warren County" },
+  { id: "drive", label: "Worth the drive" },
+];
+
+// Dated displays first, soonest opening first; then ones still waiting on dates.
+const order = (a: Display, b: Display) =>
+  Number(!a.startDate) - Number(!b.startDate) ||
+  (a.startDate ?? "").localeCompare(b.startDate ?? "") ||
+  a.name.localeCompare(b.name);
+
+const groups = TIERS
+  .map((t) => ({ ...t, items: displays.filter((d) => d.tier === t.id).sort(order) }))
+  .filter((g) => g.items.length);
+
+const dayFmt = new Intl.DateTimeFormat("en-US", { month: "short", day: "numeric", timeZone: "UTC" });
+const fmt = (iso: string) => dayFmt.format(new Date(iso + "T12:00:00Z"));
+const dateRange = (d: Display) =>
+  d.startDate && d.endDate ? `${fmt(d.startDate)} – ${fmt(d.endDate)}`
+  : d.startDate ? `Opens ${fmt(d.startDate)}`
+  : "";
+
+const year = lights.season?.label ?? "";
+const submitMail = "mailto:editor@waynesville.news?subject=" + encodeURIComponent("Holiday lights listing");
+---
+<Base
+  title="Holiday Lights Guide · Waynesville Daily Brief"
+  description="Christmas light displays in and around Waynesville, Ohio: drive-through shows, park light festivals and village displays, with dates, hours and prices."
+  showInfoBar={false}
+>
+  <div class="reading">
+    <p class="kicker">Holidays {year}</p>
+    <h1>Holiday Lights Guide</h1>
+    <p class="dek">
+      Christmas light displays in and around Waynesville — close to home first, then around Warren County,
+      then the big shows worth a drive.
+    </p>
+
+    <p class="callout">
+      Dates, hours and prices are as each organizer posts them. Many haven't announced {year} details yet; those
+      are marked, and we'll update them as they're posted. Check the display's own site before you go — weather
+      can close outdoor shows.
+    </p>
+
+    {groups.length === 0 && (
+      <p class="muted">We're gathering this year's displays now. Check back soon, or <a href={submitMail}>tell us about one</a>.</p>
+    )}
+
+    {groups.map((g) => (
+      <section class="dir-group">
+        <h2>{g.label}</h2>
+        <ul class="directory">
+          {g.items.map((d) => (
+            <li>
+              <div class="dir-name">
+                {d.website ? <a href={d.website} target="_blank" rel="noopener">{d.name}</a> : d.name}
+                {d.kind && <span class="dir-badge">{d.kind}</span>}
+              </div>
+              <div class="dir-kinds">
+                {[d.town, dateRange(d)].filter(Boolean).join(" · ")}
+                {d.dates2026Confirmed === false && <span class="hl-pending"> · {year} dates not yet announced</span>}
+              </div>
+              {d.about && <p class="dir-about">{d.about}</p>}
+              <div class="dir-contact">
+                {d.when && <span>{d.when}</span>}
+                {d.price && <span>{d.price}</span>}
+              </div>
+              {d.location && <div class="dir-contact"><span>{d.location}</span></div>}
+            </li>
+          ))}
+        </ul>
+      </section>
+    ))}
+
+    {events.length > 0 && (
+      <section class="dir-group">
+        <h2>Holiday events</h2>
+        <ul class="events">
+          {events.map((e) => (
+            <li>
+              <div class="date">{e.dateLabel}</div>
+              <div>
+                <a class="ev-title" href={e.source} target="_blank" rel="noopener">{e.title}</a>
+                <div class="ev-meta">{e.venue}{e.note ? ` · ${e.note}` : ""}</div>
+              </div>
+            </li>
+          ))}
+        </ul>
+      </section>
+    )}
+
+    <div class="sp-join">
+      <h3>Know a display we're missing?</h3>
+      <p>
+        <a href={submitMail}>Email the editor</a> with the name, place, dates and a link. Decorating your own house?
+        We list a home display only with the owner's permission, and we never publish a homeowner's name.
+      </p>
+      <p><a class="more" href="/events/">Full events calendar →</a></p>
+    </div>
+  </div>
+</Base>
