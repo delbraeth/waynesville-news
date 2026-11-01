@@ -1,6 +1,6 @@
 {
   "_note": "Local business directory. Built by scripts/fetch-directory.mjs from the Waynesville Area Chamber of Commerce's public member directory (name, location, phone, website, and the Chamber's description, as published) plus hand-added listings in directory-manual.json. Contact names, emails and hours are deliberately not copied. Do not edit by hand — edit directory-manual.json and re-run `npm run refresh:directory` (or `npm run refresh:directory -- --manual-only` to merge manual edits without re-reading the Chamber site).",
-  "updated": "2026-11-01T06:54:47.906Z",
+  "updated": "2026-11-01T06:57:34.193Z",
   "sections": [
     {
       "id": "home",
@@ -323,7 +323,7 @@
       "from": "chamber"
     },
     {
-      "id": "chamber-361",
+      "id": "manual-bandbcarryout",
       "name": "B&B CarryOut",
       "location": "2028 East St. Rt. 73 Waynesville, OH",
       "phone": "(513) 897-3685",
@@ -336,11 +336,11 @@
         "Restaurant",
         "Other Food Services"
       ],
-      "source": "https://www.waynesvilleohio.com/directory/listing/361",
-      "website": "",
-      "about": "Cuisine: Multi-Cuisine",
+      "source": "https://www.waynesvilleohio.com/directory/listing/361 (new website per the editor, 2026-11-01; the Chamber still lists the old one)",
+      "website": "https://www.bandbcarryout.com/",
+      "about": "Carryout on S.R. 73 with breakfast and sandwiches, groceries, bait and firewood.",
       "local": true,
-      "from": "chamber"
+      "from": "manual"
     },
     {
       "id": "manual-baldwinorthodontics",
