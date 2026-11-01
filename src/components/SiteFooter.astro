@@ -7,7 +7,8 @@ const { isDemoMode } = await getPublicBriefs();
 const nl = site.newsletter;
 const nlReady = nl && nl.username && nl.username !== "REPLACE_ME";
 const patreonUrl = site.patreon?.url?.trim() || "";
-const supporterItems = (supporters.items ?? []).filter((s) => s && s.name);
+// `footer: false` keeps a supporter off the site-wide footer line (still on /supporters/ and badged in the directory).
+const supporterItems = (supporters.items ?? []).filter((s) => s && s.name && s.footer !== false);
 ---
 <footer class="site-footer">
   <div class="inner">

@@ -1,11 +1,12 @@
 {
-  "_note": "Local businesses that support the Daily Brief. A lean directory — name, what they do, website, phone. Supporters have NO input into coverage. Free 'founding supporter' listings for now; pricing can be added later without changing this file's shape. Fields: name (required), what, website, phone. Supporters that also appear in the business directory get a '★ Supporter' badge there automatically (matched by name); add directoryName if the directory lists them under a different name. The badge never changes their position in the directory.",
+  "_note": "Local businesses that support the Daily Brief. A lean directory — name, what they do, website, phone. Supporters have NO input into coverage. Free 'founding supporter' listings for now; pricing can be added later without changing this file's shape. Fields: name (required), what, website, phone. Supporters that also appear in the business directory get a '★ Supporter' badge there automatically (matched by name); add directoryName if the directory lists them under a different name. The badge never changes their position in the directory. Set footer: false to keep a supporter off the site-wide 'Supported by' footer line.",
   "items": [
     {
       "name": "Cassidy Travel",
       "what": "Travel planning from Waynesville: cruises, theme parks, all-inclusive resorts, group and accessible travel",
       "website": "https://cassidytravel.org/",
-      "phone": ""
+      "phone": "",
+      "footer": false
     }
   ]
 }
