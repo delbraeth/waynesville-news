@@ -35,7 +35,10 @@ const dateFmt = new Intl.DateTimeFormat("en-US", {
       </div>
     )}
     {!entry.data.demo && <SubscribeBox />}
-    <div class="prose">
+    <div class="prose" data-pagefind-body>
+      <span data-pagefind-meta="date" hidden>{dateFmt.format(entry.data.date)}</span>
+      <span data-pagefind-sort="date" hidden>{entry.data.date.toISOString().slice(0, 10)}</span>
+      <span data-pagefind-filter="type" hidden>Daily brief</span>
       <Content />
     </div>
     {patreonUrl && !entry.data.demo && (

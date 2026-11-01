@@ -17,6 +17,7 @@ const nav = [
   { label: "Directory", href: "/directory/" },
   { label: "Supporters", href: "/supporters/" },
   { label: "About", href: "/about/" },
+  { label: "Search", href: "/search/" },
   { label: "Subscribe", href: "#subscribe", cls: "nav-subscribe" },
 ];
 ---
@@ -26,7 +27,20 @@ const nav = [
   <p class="dateline">{dateLine} &nbsp;·&nbsp; waynesville.news</p>
 </header>
 <nav class="mainnav" aria-label="Sections">
-  <ul>
+  <ul class="nav-full">
     {nav.map((n) => <li><a href={n.href} class={n.cls}>{n.label}</a></li>)}
   </ul>
+  {/* Phones: three most-used links plus a "More" menu with everything. Pure
+      HTML <details>, so it works without JavaScript and with screen readers. */}
+  <div class="nav-compact">
+    <a href="/briefs/">Briefs</a>
+    <a href="/events/">Events</a>
+    <a href="/directory/">Directory</a>
+    <details class="nav-more">
+      <summary><span aria-hidden="true">☰</span> More</summary>
+      <ul>
+        {nav.map((n) => <li><a href={n.href} class={n.cls}>{n.label}</a></li>)}
+      </ul>
+    </details>
+  </div>
 </nav>

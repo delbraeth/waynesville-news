@@ -121,7 +121,7 @@ const soon = [
 ]
   .filter((e) => (e._end ?? e._d) >= todayStart)
   .sort((a, b) => a._d - b._d)
-  .slice(0, 6);
+  .slice(0, 5);
 
 const meeting = nextCommissionersMeeting(now);
 const townshipMeeting = nextTownshipMeeting(now);
@@ -233,21 +233,29 @@ const alertsSafety = Array.isArray(alerts)
 // Road work: ODOT's own text for state routes near the village, and the
 // county engineer's closure-release titles (countywide) with their PDFs.
 const fmtShort = (d) => new Date(`${d}T12:00:00Z`).toLocaleDateString("en-US", { month: "short", day: "numeric", timeZone: "UTC" });
+
+// Length budget: the whole brief should stay under ~1,500 words. The prose is
+// written fresh each day; the auto-filled lists below are what used to push
+// editions past 2,500, so each list is capped and long source text clipped.
+const clip = (text = "", words = 25) => {
+  const w = String(text).replace(/\s+/g, " ").trim().split(" ").filter(Boolean);
+  return w.length <= words ? w.join(" ") : w.slice(0, words).join(" ").replace(/[,;:.…\s]+$/, "") + "…";
+};
 const roadsOhgo = roads.filter((r) => r.source === "ohgo");
 const roadsCounty = roads.filter((r) => r.source === "engineer");
 const roadsBlock = roads.length
   ? [
       roadsOhgo.length ? `**Road work near Waynesville** (ODOT, within about 8 miles):\n` +
-        roadsOhgo.map((r) => `- **${r.route}** — ${r.status === "Closed" ? "closed" : "lane restrictions"}${r.endISO ? ` through ${fmtShort(r.endISO)}` : ""}. ${r.description}`).join("\n") : "",
+        roadsOhgo.map((r) => `- **${r.route}** — ${r.status === "Closed" ? "closed" : "lane restrictions"}${r.endISO ? ` through ${fmtShort(r.endISO)}` : ""}. ${clip(r.description, 22)}`).join("\n") : "",
       roadsCounty.length ? `**County road closures** (Warren County Engineer, countywide):\n` +
-        roadsCounty.map((r) => `- ${r.startISO > iso ? "Starting" : "Began"} ${fmtShort(r.startISO)}: ${link(r.title, r.link)}${r.startISO > iso ? "" : " (see release for duration)"}`).join("\n") : "",
+        roadsCounty.slice(0, 3).map((r) => `- ${r.startISO > iso ? "Starting" : "Began"} ${fmtShort(r.startISO)}: ${link(r.title, r.link)}${r.startISO > iso ? "" : " (see release for duration)"}`).join("\n") : "",
     ].filter(Boolean).join("\n\n") + `\n\nSource: ${link("OHGO", "https://www.ohgo.com/")} · ${link("County Engineer releases", "https://engineer.warrencountyohio.gov/Information/NewsReleases/Index")}`
   : null;
 
 // Village and township notices, verbatim titles and synopses.
 const noticesBlock = notices.length
   ? `**Official notices** (past two weeks):\n` +
-    notices.map((n) => `- **${fmtShort(n.dateISO)}, ${n.issuer}** — ${link(n.title, n.link)}${n.summary ? `: ${n.summary}` : ""}`).join("\n")
+    notices.slice(0, 4).map((n) => `- **${fmtShort(n.dateISO)}, ${n.issuer}** — ${link(n.title, n.link)}${n.summary ? `: ${clip(n.summary, 20)}` : ""}`).join("\n")
   : null;
 
 // North Warren County Transportation Plan: new or updated items on the
@@ -343,7 +351,8 @@ const sportsBlock = (sportsResultsBlock || sportsUpcomingBlock)
 // so compare the calendar-date part only.
 const libraryUpcoming = libraryEvents.filter((e) => !e.dateISO || e.dateISO.slice(0, 10) >= iso);
 const libraryBlock = libraryUpcoming.length
-  ? libraryUpcoming.map((e) => `- **${e.dateLabel}** — ${link(e.title, e.link)}`).join("\n")
+  ? libraryUpcoming.slice(0, 5).map((e) => `- **${e.dateLabel}** — ${link(e.title, e.link)}`).join("\n") +
+    (libraryUpcoming.length > 5 ? `\n- ${link(`${libraryUpcoming.length - 5} more programs on the library calendar`, "https://marylcook-main-oh.whofi.com/calendar/full")}` : "")
   : null;
 
 // Facebook is robots-blocked, so the writer can't open the posts — the excerpt
@@ -351,17 +360,17 @@ const libraryBlock = libraryUpcoming.length
 // attributed to it, with a link back.
 const fbBlock = fbSchools.length
   ? "**From Wayne Local Schools on Facebook**\n" +
-    fbSchools.slice(0, 6).map((p) => `- **${p.dateLabel}** — ${p.title} ${p.excerpt} (${link("post", p.link)})`).join("\n")
+    fbSchools.slice(0, 3).map((p) => `- **${p.dateLabel}** — ${clip(`${p.title} ${p.excerpt}`, 30)} (${link("post", p.link)})`).join("\n")
   : null;
 
 const fbCaesarBlock = fbCaesarCreek.length
   ? "**From Caesar Creek State Park on Facebook**\n" +
-    fbCaesarCreek.slice(0, 4).map((p) => `- **${p.dateLabel}** — ${p.title} ${p.excerpt} (${link("post", p.link)})`).join("\n")
+    fbCaesarCreek.slice(0, 2).map((p) => `- **${p.dateLabel}** — ${clip(`${p.title} ${p.excerpt}`, 30)} (${link("post", p.link)})`).join("\n")
   : null;
 
 const fbWcpdBlock = fbWcpdFriends.length
   ? "**From Friends of Warren County Park District on Facebook**\n" +
-    fbWcpdFriends.slice(0, 3).map((p) => `- **${p.dateLabel}** — ${p.title} ${p.excerpt} (${link("post", p.link)})`).join("\n")
+    fbWcpdFriends.slice(0, 2).map((p) => `- **${p.dateLabel}** — ${clip(`${p.title} ${p.excerpt}`, 30)} (${link("post", p.link)})`).join("\n")
   : null;
 
 const shopsBlock = shopsEvents.length
@@ -500,19 +509,18 @@ const weekendBlock = isFridayET(now)
 // Standing reader call-out at the foot of every brief. Questions go to the
 // editor's inbox; answers run in later editions once the editor has checked them.
 const ASK_SUBJECT = "Ask the Brief";
-const askBlock = `Have a question about Waynesville? A road project, a building going up, something you heard and want checked? ` +
-  `[Email the editor](mailto:editor@waynesville.news?subject=${encodeURIComponent(ASK_SUBJECT)}) at editor@waynesville.news with "${ASK_SUBJECT}" in the subject line. ` +
-  `We'll answer reader questions in upcoming editions.`;
+const askBlock = `Wondering about a road project, a new building or something you heard? ` +
+  `[Email the editor](mailto:editor@waynesville.news?subject=${encodeURIComponent(ASK_SUBJECT)}) with "${ASK_SUBJECT}" in the subject line.`;
 
 const candidateBlock = suggested.length
-  ? suggested.map((h) => {
+  ? suggested.slice(0, 4).map((h) => {
       // Always quote the publisher's headline. The excerpt is extra context,
       // appended unquoted — never a substitute for the title, which is how
       // lede sentences ("The 32-year-old was pronounced dead at the scene")
       // and "send flowers and sign the guestbook" reached Local headlines.
       const url = h.sourceUrl || h.link;
       const extra = h.excerpt && h.excerpt.trim() && h.excerpt.trim() !== h.title.trim()
-        ? ` ${h.excerpt.trim().replace(/\s+/g, " ")}`
+        ? ` ${clip(h.excerpt, 25)}`
         : "";
       return `- "${h.title}"${h.source ? ` — ${h.source}` : ""}, ${link("full story", url)}.${extra}`;
     }).join("\n")
@@ -536,6 +544,9 @@ published: false
     3) delete this comment,
     4) change published: false  ->  published: true, and commit.
   QA: names/dates verified, links resolve.
+  LENGTH: keep the whole brief under 1,500 words. Lead items 2–3 sentences
+  each; each section narrative 2–4 sentences. Don't repeat in prose what a
+  list below already says.
   Write for readers, not editors: no notes about how data was gathered or
   checked. Where a time or detail is missing, say "check the event's website
   for times" (or similar), not "not published" or "confirm before printing".
@@ -587,3 +598,5 @@ ${askBlock}
 
 await writeFile(targetPath, draft);
 console.log(`Unpublished brief written: src/content/briefs/${iso}.md  (${soon.length} events, ${caesarSoon.length} Caesar Creek, next meeting ${meeting.whenLabel})`);
+const scaffoldWords = draft.split(/^---$/m).slice(2).join("---").replace(/<!--[\s\S]*?-->/g, "").replace(/\(https?:\/\/[^)]*\)/g, "").split(/\s+/).filter(Boolean).length;
+console.log(`Draft length before writing: ~${scaffoldWords} words of the 1,500-word budget (leaves ~${Math.max(0, 1500 - scaffoldWords)} for the written items).`);
