@@ -1,0 +1,36 @@
+---
+import Base from "../../layouts/Base.astro";
+import BriefCard from "../../components/BriefCard.astro";
+import { getPublishedStories, storyHref } from "../../lib/stories.js";
+
+const stories = await getPublishedStories();
+const dateFmt = new Intl.DateTimeFormat("en-US", { month: "long", day: "numeric", year: "numeric", timeZone: "UTC" });
+---
+<Base
+  title="Stories · Waynesville Daily Brief"
+  description="In-depth local stories and explainers from the Waynesville Daily Brief."
+  showInfoBar={false}
+>
+  <div class="reading">
+    <p class="kicker">Stories</p>
+    <h1>Stories</h1>
+    <p class="dek">The bigger local stories — explainers, follow-ups and features that need more room than a daily brief.</p>
+
+    {stories.length === 0 ? (
+      <p class="muted">The first stories are on the way. Meanwhile, see the <a href="/briefs/">daily briefs</a>.</p>
+    ) : (
+      stories.map((s) => (
+        <BriefCard
+          dateLabel={[s.data.section, dateFmt.format(s.data.date)].filter(Boolean).join(" · ")}
+          title={s.data.title}
+          dek={s.data.dek}
+          href={storyHref(s)}
+        />
+      ))
+    )}
+
+    <p class="callout">
+      Have a story we should be looking into? <a href="mailto:editor@waynesville.news?subject=Story%20tip">Email the editor</a>.
+    </p>
+  </div>
+</Base>

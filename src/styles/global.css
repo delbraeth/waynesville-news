@@ -370,3 +370,9 @@ a.dir-supporter, a.dir-supporter:hover { color: #fff; text-decoration: none; }
 .dir-contact { display: flex; flex-wrap: wrap; gap: 0.2rem 1rem; font-family: var(--font-sans); font-size: 0.84rem; margin-top: 0.35rem; color: var(--muted); }
 .visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 .hl-pending { color: var(--accent); font-weight: 600; }
+
+/* ---------- stories ---------- */
+.story-meta { font-family: var(--font-sans); font-size: 0.85rem; color: var(--muted); margin: 0.4rem 0 1.4rem; }
+.story-figure, .prose figure { margin: 1.4rem 0; }
+.story-figure img, .prose img { display: block; width: 100%; border: 1px solid var(--rule); }
+.story-figure figcaption, .prose figcaption, .prose img + em { display: block; font-family: var(--font-sans); font-size: 0.78rem; color: var(--muted); margin-top: 0.35rem; }

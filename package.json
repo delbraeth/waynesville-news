@@ -3,7 +3,7 @@
   "type": "module",
   "version": "0.1.0",
   "private": true,
-  "description": "Waynesville Daily Brief — hyperlocal news for Waynesville, OH & Warren County (waynesville.news)",
+  "description": "Waynesville Daily Brief \u2014 hyperlocal news for Waynesville, OH & Warren County (waynesville.news)",
   "scripts": {
     "dev": "astro dev",
     "build": "node scripts/check-briefs.mjs && astro build",
@@ -33,7 +33,8 @@
     "check:briefs": "node scripts/check-briefs.mjs",
     "check:staleness": "node scripts/check-staleness.mjs",
     "verify:live": "node scripts/verify-live.mjs",
-    "refresh:directory": "node scripts/fetch-directory.mjs"
+    "refresh:directory": "node scripts/fetch-directory.mjs",
+    "refresh:nwctp": "node scripts/fetch-nwctp.mjs"
   },
   "dependencies": {
     "@astrojs/rss": "^4.0.11",

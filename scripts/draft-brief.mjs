@@ -62,6 +62,8 @@ let boardRecap = null;
 try { boardRecap = (await readJSON("src/data/board-recap.json")).item ?? null; } catch { /* optional */ }
 let notices = [];
 try { notices = (await readJSON("src/data/notices.json")).items ?? []; } catch { /* optional */ }
+let nwctp = null;
+try { nwctp = await readJSON("src/data/nwctp.json"); } catch { /* optional */ }
 let museumEvents = [];
 try { museumEvents = (await readJSON("src/data/museum-events.json")).items ?? []; } catch { /* optional */ }
 let permits = null;
@@ -247,6 +249,18 @@ const noticesBlock = notices.length
   ? `**Official notices** (past two weeks):\n` +
     notices.map((n) => `- **${fmtShort(n.dateISO)}, ${n.issuer}** — ${link(n.title, n.link)}${n.summary ? `: ${n.summary}` : ""}`).join("\n")
   : null;
+
+// North Warren County Transportation Plan: new or updated items on the
+// project site in the past 7 days (titles verbatim). The plan is weighing an
+// I-75-to-I-71 connection along US 42/S.R. 73 through Waynesville, so any new
+// material is worth a line in Local government.
+const nwctpBlock = (() => {
+  const since = new Date(todayStart.getTime() - 7 * 86400000).toLocaleDateString("sv-SE", { timeZone: "America/New_York" });
+  const recent = (nwctp?.changes ?? []).filter((c) => c.date >= since && c.kind !== "removed");
+  if (!recent.length) return null;
+  return `**North Warren County Transportation Plan** — new or updated on the ${link("project site", nwctp.hub)} this week:\n` +
+    recent.map((c) => `- ${fmtShort(c.date)}: ${c.link ? link(c.title, c.link) : c.title}${c.kind === "updated" ? " (updated)" : ""}`).join("\n");
+})();
 
 // Museum at the Friends Home sessions in the coming week, times from its
 // booking calendar. Sold-out sessions are listed as sold out, not hidden.
@@ -546,7 +560,7 @@ Next up: **${meeting.body}**, ${meeting.whenLabel} — ${nextAgendaLinks}.${late
 Also next up: **${townshipMeeting.body}**, ${townshipMeeting.whenLabel}, ${townshipMeeting.location}${latestAgenda ? ` — ${link(`latest posted agenda: ${latestAgenda.title}, ${latestAgenda.dateLabel}`, latestAgenda.link)}` : ` — [agendas](${townshipMeeting.source})`}.
 TODO — village council & county items, each linked to the agenda/minutes. Check:
 ${listSrc("Local Government")}
-${noticesBlock ? `\n${noticesBlock}\n` : ""}${electionBlock ? `\n${electionBlock}\n` : ""}${villageMinutesBlock ? `\n${villageMinutesBlock}\n` : ""}${boardRecapBlock ? `\n${boardRecapBlock}\n` : ""}
+${noticesBlock ? `\n${noticesBlock}\n` : ""}${nwctpBlock ? `\n${nwctpBlock}\n` : ""}${electionBlock ? `\n${electionBlock}\n` : ""}${villageMinutesBlock ? `\n${villageMinutesBlock}\n` : ""}${boardRecapBlock ? `\n${boardRecapBlock}\n` : ""}
 
 ## Around town
 TODO — new businesses, the antiques district. Check:

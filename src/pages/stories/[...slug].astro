@@ -1,0 +1,42 @@
+---
+import Base from "../../layouts/Base.astro";
+import SubscribeBox from "../../components/SubscribeBox.astro";
+import { getCollection, render } from "astro:content";
+
+export async function getStaticPaths() {
+  const stories = (await getCollection("stories")).filter((s) => s.data.published);
+  return stories.map((entry) => ({ params: { slug: entry.id }, props: { entry } }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const d = entry.data;
+const dateFmt = new Intl.DateTimeFormat("en-US", { month: "long", day: "numeric", year: "numeric", timeZone: "UTC" });
+---
+<Base
+  title={`${d.title} · Waynesville Daily Brief`}
+  description={d.dek}
+  dateLine={dateFmt.format(d.date)}
+  showInfoBar={false}
+>
+  <article class="reading story">
+    <p class="kicker">{d.section ?? "Story"}</p>
+    <h1>{d.title}</h1>
+    {d.dek && <p class="dek">{d.dek}</p>}
+    <p class="story-meta">
+      {d.byline} · {dateFmt.format(d.date)}
+      {d.updated && <> · Updated {dateFmt.format(d.updated)}</>}
+    </p>
+    {d.image && (
+      <figure class="story-figure">
+        <img src={d.image} alt={d.imageAlt ?? ""} loading="eager" />
+        {d.imageCredit && <figcaption>{d.imageCredit}</figcaption>}
+      </figure>
+    )}
+    <div class="prose">
+      <Content />
+    </div>
+    <SubscribeBox />
+    <p class="small"><a href="/stories/">← All stories</a></p>
+  </article>
+</Base>
