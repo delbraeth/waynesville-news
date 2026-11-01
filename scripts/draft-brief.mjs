@@ -538,7 +538,8 @@ const weekendBlock = isFridayET(now)
 // editor's inbox; answers run in later editions once the editor has checked them.
 const ASK_SUBJECT = "Ask the Brief";
 const askBlock = `Wondering about a road project, a new building or something you heard? ` +
-  `[Email the editor](mailto:editor@waynesville.news?subject=${encodeURIComponent(ASK_SUBJECT)}) with "${ASK_SUBJECT}" in the subject line.`;
+  `[Email the editor](mailto:editor@waynesville.news?subject=${encodeURIComponent(ASK_SUBJECT)}) with "${ASK_SUBJECT}" in the subject line. ` +
+  `We answer the best ones in the Brief, and we never print your name without asking.`;
 
 const candidateBlock = suggested.length
   ? suggested.slice(0, 4).map((h) => {
