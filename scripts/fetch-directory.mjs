@@ -250,6 +250,8 @@ async function loadManual() {
 // link: readers shouldn't be sent to a dead domain. Only clear-cut failures
 // count — the domain doesn't resolve, or the site answers 404/410. Bot blocks
 // (403, 429, timeouts) are left alone, since the site is there for a browser.
+const FAKE_404_HOSTS = ["ohiodnr.gov"];
+
 async function dropDeadWebsites(items) {
   const { lookup } = await import("node:dns/promises");
   const dead = [];
@@ -258,6 +260,9 @@ async function dropDeadWebsites(items) {
     if (!it.website) return;
     let host;
     try { host = new URL(it.website).hostname; } catch { return; }
+    // ohiodnr.gov answers servers with a fake 404 (verified 2026-11-01: the same
+    // pages load fine in a browser), so never judge it by status code.
+    if (FAKE_404_HOSTS.some((h) => host === h || host.endsWith("." + h))) return;
     try { await lookup(host); } catch (e) {
       if (e.code === "ENOTFOUND") { dead.push(`${it.name} (${it.website}: domain gone)`); it.website = ""; }
       return;
