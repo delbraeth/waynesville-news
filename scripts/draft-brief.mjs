@@ -12,6 +12,7 @@ import { nextCommissionersMeeting } from "../src/lib/nextMeeting.js";
 import { nextTownshipMeeting } from "../src/lib/nextTownshipMeeting.js";
 import { dropPastEventPosts } from "./lib/fb-past-events.mjs";
 import { isFridayET, buildWeekendPlanner } from "./lib/weekend-planner.mjs";
+import { isScheduleChange, CLOSING_WINDOW_HOURS } from "./lib/closings.mjs";
 
 const root = new URL("..", import.meta.url);
 const readJSON = async (p) => JSON.parse(await readFile(new URL(p, root), "utf8"));
@@ -76,6 +77,10 @@ let fbSchools = [];
 try { fbSchools = dropPastEventPosts((await readJSON("src/data/fb-schools.json")).items ?? []); } catch { /* optional */ }
 let fbCaesarCreek = [];
 try { fbCaesarCreek = dropPastEventPosts((await readJSON("src/data/fb-caesar-creek.json")).items ?? []); } catch { /* optional */ }
+let fbTownship = [];
+try { fbTownship = dropPastEventPosts((await readJSON("src/data/fb-township.json")).items ?? []); } catch { /* optional */ }
+let closings = [];
+try { closings = (await readJSON("src/data/closings.json")).items ?? []; } catch { /* optional */ }
 let fbWcpdFriends = [];
 try { fbWcpdFriends = dropPastEventPosts((await readJSON("src/data/fb-wcpd-friends.json")).items ?? []); } catch { /* optional */ }
 
@@ -173,6 +178,7 @@ const SOURCES = {
     "Caesar Creek State Park — https://ohiodnr.gov/go-and-do/plan-a-visit/find-a-property/caesar-creek-state-park",
   ],
   "Public Safety": [
+    "Wayne Township Fire Department (Waynesville, Corwin, Wayne Twp., Oregonia) — https://waynetwpwarrencooh.gov/fire-department/ · Facebook: https://www.facebook.com/waynetownshipus",
     "Sheriff — https://sheriff.warrencountyohio.gov/",
     "Prosecutor press — https://prosecutor.warrencountyohio.gov/Public/Press/Index",
   ],
@@ -373,6 +379,28 @@ const fbWcpdBlock = fbWcpdFriends.length
     fbWcpdFriends.slice(0, 2).map((p) => `- **${p.dateLabel}** — ${clip(`${p.title} ${p.excerpt}`, 30)} (${link("post", p.link)})`).join("\n")
   : null;
 
+// Wayne Township's page carries fire department posts (burn rules, safety,
+// events) along with roads, zoning and trustees, so it sits in Local government.
+const fbTownshipBlock = fbTownship.length
+  ? "**From Wayne Township on Facebook**\n" +
+    fbTownship.slice(0, 2).map((p) => `- **${p.dateLabel}** — ${clip(`${p.title} ${p.excerpt}`, 30)} (${link("post", p.link)})`).join("\n")
+  : null;
+
+// Delays and closings go first, above everything else. From the district news
+// page (closings.json) and the district's Facebook posts, last 36 hours only.
+const closingCutoff = Date.now() - CLOSING_WINDOW_HOURS * 3600_000;
+const closingItems = [
+  ...closings.map((c) => ({ label: `posted ${c.posted.replace(/^(\w)(\w+)/, (_, a, b) => a + b.toLowerCase())}`, text: c.title, link: c.link, src: "district news" })),
+  ...fbSchools
+    .filter((p) => Date.parse(p.date) >= closingCutoff && isScheduleChange(`${p.title} ${p.excerpt}`))
+    .map((p) => ({ label: `posted ${p.dateLabel}`, text: clip(`${p.title} ${p.excerpt}`, 30), link: p.link, src: "Facebook" })),
+];
+const closingsBlock = closingItems.length
+  ? "<!-- Editor note (stripped before publication): make this the lead item. Confirm the day in the district's post first; a post can be about a later date. -->\n" +
+    "**Wayne Local Schools schedule change**\n" +
+    closingItems.map((c) => `- ${c.text} (${c.label}; ${link(c.src, c.link)})`).join("\n")
+  : null;
+
 const shopsBlock = shopsEvents.length
   ? shopsEvents.map((e) => `- **${e.dateLabel}** — ${link(e.title, e.link)}`).join("\n")
   : null;
@@ -556,7 +584,7 @@ published: false
 ${weatherBlock ?? "TODO — weather unavailable this morning; check https://forecast.weather.gov/MapClick.php?lat=39.5287&lon=-84.0891"}
 
 ## This morning in Waynesville
-
+${closingsBlock ? `\n${closingsBlock}\n` : ""}
 1. TODO — lead item (schools first). *(link the source)*
 2. TODO — second item. *(link the source)*
 3. TODO — third item. *(link the source)*
@@ -571,7 +599,7 @@ Next up: **${meeting.body}**, ${meeting.whenLabel} — ${nextAgendaLinks}.${late
 Also next up: **${townshipMeeting.body}**, ${townshipMeeting.whenLabel}, ${townshipMeeting.location}${latestAgenda ? ` — ${link(`latest posted agenda: ${latestAgenda.title}, ${latestAgenda.dateLabel}`, latestAgenda.link)}` : ` — [agendas](${townshipMeeting.source})`}.
 TODO — village council & county items, each linked to the agenda/minutes. Check:
 ${listSrc("Local Government")}
-${noticesBlock ? `\n${noticesBlock}\n` : ""}${nwctpBlock ? `\n${nwctpBlock}\n` : ""}${electionBlock ? `\n${electionBlock}\n` : ""}${villageMinutesBlock ? `\n${villageMinutesBlock}\n` : ""}${boardRecapBlock ? `\n${boardRecapBlock}\n` : ""}
+${noticesBlock ? `\n${noticesBlock}\n` : ""}${fbTownshipBlock ? `\n${fbTownshipBlock}\n` : ""}${nwctpBlock ? `\n${nwctpBlock}\n` : ""}${electionBlock ? `\n${electionBlock}\n` : ""}${villageMinutesBlock ? `\n${villageMinutesBlock}\n` : ""}${boardRecapBlock ? `\n${boardRecapBlock}\n` : ""}
 
 ## Around town
 TODO — new businesses, the antiques district. Check:

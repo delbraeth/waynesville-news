@@ -2,7 +2,8 @@
 // is robots-blocked and cannot be fetched directly. One data file per page:
 // Wayne Local Schools -> src/data/fb-schools.json, Caesar Creek State Park ->
 // src/data/fb-caesar-creek.json, Friends of Warren County Park District ->
-// src/data/fb-wcpd-friends.json. Published as a short quoted post title + link
+// src/data/fb-wcpd-friends.json, Wayne Township (trustees, fire/EMS, roads,
+// zoning) -> src/data/fb-township.json. Published as a short quoted post title + link
 // + a plain-text excerpt; the page's own words, linked back to the post. Never
 // invents anything.
 //
@@ -42,6 +43,16 @@ const FEEDS = [
     out: new URL("../src/data/fb-wcpd-friends.json", import.meta.url),
     what: "recent Friends of Warren County Park District posts",
     note: "Recent Friends of Warren County Park District Facebook posts via rss.app bridge. Title + link + short excerpt; the group's own words. Fail-safe: kept from last run if the bridge is down.",
+  },
+  {
+    // The township page carries Wayne Township Fire Department news (burn
+    // rules, safety notices, events) along with roads, zoning and trustees —
+    // the fire department has no feed of its own.
+    label: "fb-township", // facebook.com/waynetownshipus
+    url: "https://rss.app/feeds/7WeXbMIpfivHy05e.xml",
+    out: new URL("../src/data/fb-township.json", import.meta.url),
+    what: "recent Wayne Township posts",
+    note: "Recent Wayne Township (Warren Co.) Facebook posts via rss.app bridge. Title + link + short excerpt; the township's own words. Fail-safe: kept from last run if the bridge is down.",
   },
 ];
 const LOOKBACK_DAYS = 10;

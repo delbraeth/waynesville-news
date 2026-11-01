@@ -97,6 +97,9 @@ const listMail = "mailto:editor@waynesville.news?subject=" + encodeURIComponent(
     {groups.map((g) => (
       <section class="dir-group" id={g.id} data-group={g.id}>
         <h2>{g.label}</h2>
+        {g.id === "faith" && (
+          <p class="small muted">Holding a supper, concert, bazaar or service open to everyone? <a href="/events/#add-event">Send it for the events calendar</a>.</p>
+        )}
         <ul class="directory">
           {g.items.map((i) => (
             <li data-search={searchText(i)} data-local={i.local ? "1" : "0"} data-supporter={isSupporter(i) ? "1" : "0"}>

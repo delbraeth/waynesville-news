@@ -7,6 +7,7 @@ import { upcomingEvents } from "../lib/events.js";
 const upcoming = upcomingEvents();
 
 const evergreen = eventsData.items.filter((e) => e.evergreen);
+const submitMail = "mailto:editor@waynesville.news?subject=" + encodeURIComponent("Event for the calendar");
 ---
 <Base title="Events & Things to Do · Waynesville Daily Brief" showInfoBar={false}>
   <div class="reading">
@@ -48,5 +49,14 @@ const evergreen = eventsData.items.filter((e) => e.evergreen);
         </li>
       ))}
     </ul>
+
+    <div class="sp-join" id="add-event">
+      <h3>Add your event</h3>
+      <p>
+        Church supper, club meeting, fundraiser, school or scout event? <a href={submitMail}>Email the editor</a> with
+        the name, date and time, place, cost and a link or flyer. Events open to the public in and around Waynesville
+        are listed free.
+      </p>
+    </div>
   </div>
 </Base>
