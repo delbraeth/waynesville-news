@@ -348,13 +348,13 @@
     },
     {
       "title": "Waynesville Christmas Rewind",
-      "dateISO": "2026-12-12T00:00:00-05:00",
-      "endISO": "2026-12-12T23:59:00-05:00",
-      "dateLabel": "Sat, Dec 12 · evening",
+      "dateISO": "2026-12-12T16:00:00-05:00",
+      "endISO": "2026-12-12T21:00:00-05:00",
+      "dateLabel": "Sat, Dec 12 · 4:00–9:00 PM",
       "venue": "Downtown Waynesville",
       "category": "Festival",
       "source": "https://www.facebook.com/events/1659555119293827",
-      "note": "A nostalgic Christmas evening downtown: shop local for last-minute gifts, hot cocoa, Christmas music and classic-Christmas-movie fun. Free, no tickets needed. Check the event page for times.",
+      "note": "A nostalgic Christmas evening downtown: shop local for last-minute gifts, hot cocoa, Christmas music and classic-Christmas-movie fun. Free, no tickets needed.",
       "tags": [
         "holiday"
       ]
