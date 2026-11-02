@@ -1,5 +1,13 @@
 {
   "_note": "Recent Wayne Township (Warren Co.) Facebook posts via rss.app bridge. Title + link + short excerpt; the township's own words. Fail-safe: kept from last run if the bridge is down.",
-  "updated": "2026-11-01T11:41:45.526Z",
-  "items": []
+  "updated": "2026-11-02T11:41:01.980Z",
+  "items": [
+    {
+      "title": "1. Call to order: 7:00 pm A. Welcome- Please sign in on our guest sheet for the township’s records B. Roll call C.…",
+      "link": "https://www.facebook.com/waynetownshipus/posts/pfbid034W7ro733LpNywgHUgTumbsGC6ArnwueemSk7FxKcpQ9xk2mZCVmfyRMn8Piyeh4Yl",
+      "date": "Mon, 02 Nov 2026 03:00:24 GMT",
+      "dateLabel": "Sun, Nov 1",
+      "excerpt": "Pledge of Allegiance D. Approval of the minutes of the previous meeting (October 20) E. Any additions, removals, or disclosures from the posted agenda 2. Citizen’s Comments: (Statements only, please!) Note: No more than thirty minutes will be allocated at the beginning of the meeting for…"
+    }
+  ]
 }

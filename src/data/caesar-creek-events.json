@@ -1,6 +1,6 @@
 {
   "_note": "Caesar Creek State Park programs from the ODNR events calendar, next 60 days. Titles, times and meeting points reproduced from ODNR's own listing.",
-  "updated": "2026-11-01T11:44:40.894Z",
+  "updated": "2026-11-02T11:43:26.804Z",
   "source": "https://ohiodnr.gov/go-and-do/plan-a-visit/events-calendar/events-calendar?keyword=Caesar%20Creek",
   "items": [
     {
@@ -18,6 +18,22 @@
       "meetAt": "Nature Center",
       "summary": "Join us for a free cast iron cooking demonstration. Pre-register with the NCACC for the meal.",
       "link": "https://ohiodnr.gov/home/news-and-events/all-events/parks-wc-events/SW-Ohio/CastIronCookingCaesarCreek-11-21-26."
+    },
+    {
+      "title": "Winter Solstice Forest Bathing",
+      "dateISO": "2026-12-20T15:00:00.000Z",
+      "dateLabel": "Sun, Dec 20 · 10:00 AM–11:00 AM",
+      "meetAt": "Nature Center",
+      "summary": "Meet at the Nature Center",
+      "link": "https://ohiodnr.gov/home/news-and-events/all-events/parks-wc-events/SW-Ohio/WinterSolsticeForestBathingCaesarCreek-12-20-26."
+    },
+    {
+      "title": "Winter Solstice Walk and Talk",
+      "dateISO": "2026-12-21T18:00:00.000Z",
+      "dateLabel": "Mon, Dec 21 · 1:00 PM–3:00 PM",
+      "meetAt": "Nature Center",
+      "summary": "Meet at the Nature Center",
+      "link": "https://ohiodnr.gov/home/news-and-events/all-events/parks-wc-events/SW-Ohio/WinterSolsticeWalkandTalkCaesarCreek-12-21-26."
     }
   ]
 }

@@ -1,5 +1,5 @@
 {
-  "_note": "Real venues and sources, verified against each listed source on 2026-11-01; Warren County tourism calendar re-checked 2026-11-01 (daily automated refresh). Wayne Local school dates per The Spartan (September and October 2026) and the district Community Events & Activities newsletter (October 2026) and Board Meeting Recap (October 2026). Mary L. Cook Public Library programs per the library's monthly newsletter (November 2026). Recurring items (rodeo, commissioners, ghost walk) show the next occurrence. Warren County Park District events page SUSPENDED as a source per Cap'n (2026-10-03): it sits behind a Cloudflare bot challenge (403 since 2026-09-24). Do not fetch it or report it as failing; its items from the 2026-09-23 check are kept until they expire. Resume only when Cap'n provides a working source. Event notes and dateLabels are shown to readers: write them for readers (what, when, where, and a helpful pointer like \"check the event website for times\" when a detail is missing). Never put editorial or process notes in them (\"not published\", \"confirm before printing\", \"corrected from\", \"checked on\"); record corrections in the commit message instead. Tag Christmas-season community events (tree lightings, Santa visits, holiday markets, single-date light shows) with \"holiday\" so they also appear on the Holiday Lights guide.",
+  "_note": "Real venues and sources, verified against each listed source on 2026-11-02; Warren County tourism calendar re-checked 2026-11-02 (daily automated refresh). Wayne Local school dates per The Spartan (September and October 2026) and the district Community Events & Activities newsletter (October 2026) and Board Meeting Recap (October 2026). Mary L. Cook Public Library programs per the library's monthly newsletter (November 2026). Recurring items (rodeo, commissioners, ghost walk) show the next occurrence. Warren County Park District events page SUSPENDED as a source per Cap'n (2026-10-03): it sits behind a Cloudflare bot challenge (403 since 2026-09-24). Do not fetch it or report it as failing; its items from the 2026-09-23 check are kept until they expire. Resume only when Cap'n provides a working source. Event notes and dateLabels are shown to readers: write them for readers (what, when, where, and a helpful pointer like \"check the event website for times\" when a detail is missing). Never put editorial or process notes in them (\"not published\", \"confirm before printing\", \"corrected from\", \"checked on\"); record corrections in the commit message instead. Tag Christmas-season community events (tree lightings, Santa visits, holiday markets, single-date light shows) with \"holiday\" so they also appear on the Holiday Lights guide.",
   "items": [
     {
       "title": "Historical Haunts — ghost walk of downtown Waynesville",
@@ -30,16 +30,6 @@
       "category": "Festival",
       "source": "https://waynesvillefallfest.com/",
       "note": "Corn maze, mini golf, petting farm, and other fall activities; $16 adult / $14 ages 10 & under daily admission. Not affiliated with Hisey Fall Fest."
-    },
-    {
-      "title": "Bourbon & Cigars: An Evening in Waynesville (Chamber Mixer)",
-      "dateISO": "2026-10-28T17:00:00-04:00",
-      "dateLabel": "Wed, Oct 28 · 5:00–8:00 PM",
-      "venue": "Villager Pub, 144 S. Main St, Waynesville",
-      "category": "Chamber",
-      "source": "https://www.waynesvilleohio.com/events",
-      "note": "The Waynesville Area Chamber of Commerce's October networking mixer: bourbon, cigars and good company. Open to everyone — Chamber members, non-members and friends welcome.",
-      "endISO": "2026-10-28T20:00:00-04:00"
     },
     {
       "title": "Ohio Renaissance Festival — Heroes and Villains Weekend",
@@ -132,19 +122,6 @@
       "note": "Select nights Thursday through Sunday. Per Kings Island, not recommended for children under 13, and every guest needs paid admission. Check the park calendar for nightly hours."
     },
     {
-      "title": "Trick or Treat at Ohio Living Quaker Heights",
-      "dateISO": "2026-10-28T18:00:00-04:00",
-      "endISO": "2026-10-28T19:00:00-04:00",
-      "dateLabel": "Wed, Oct 28 · 6:00–7:00 PM",
-      "venue": "Ohio Living Quaker Heights, 514 High St, Waynesville",
-      "category": "Family",
-      "source": "https://ohioliving.org/communities/ohio-living-quaker-heights",
-      "note": "Open to the community: kids walk through the building while residents pass out candy.",
-      "tags": [
-        "trick-or-treat"
-      ]
-    },
-    {
       "title": "Warren County Commissioners — Weekly Session",
       "dateISO": "2026-11-03T09:00:00-05:00",
       "dateLabel": "Tue, Nov 3 · 9:00 AM",
@@ -195,15 +172,6 @@
       ]
     },
     {
-      "title": "Waynesville High School Swim Team — Athlete/Parent Meeting",
-      "dateISO": "2026-10-28T18:00:00-04:00",
-      "dateLabel": "Wed, Oct 28 · 6:00 PM",
-      "venue": "Waynesville Middle/High School cafeteria",
-      "category": "Schools",
-      "source": "https://www.wayne-local.com/",
-      "note": "For Waynesville High School swimmers and their parents, per the team's flyer. Contact the high school with questions."
-    },
-    {
       "title": "Warren County Career Center Information Night (grades 9–10)",
       "dateISO": "2026-10-29T18:00:00-04:00",
       "dateLabel": "Thu, Oct 29 · 6:00 PM",
@@ -211,16 +179,6 @@
       "category": "Schools",
       "source": "https://www.facebook.com/waynelocalschools/posts/pfbid0LfgftdZLBXfpwprvHZEB54ojAeE2SEBzTsqFvkp2AR9PiWhQNAstHZHWymAZNK1Hl",
       "note": "For WHS students in grades 9 and 10 and their parents: meet the Warren County Career Center team and learn about career-tech programs."
-    },
-    {
-      "title": "North Warren County Transportation Plan — Public Open House",
-      "dateISO": "2026-10-28T16:00:00-04:00",
-      "endISO": "2026-10-28T18:00:00-04:00",
-      "dateLabel": "Wed, Oct 28 · 4:00–6:00 PM",
-      "venue": "Warren County Career Center, 3525 S.R. 48, Lebanon",
-      "category": "Government",
-      "source": "https://northwarrencountytransportationplan-burgessniple.hub.arcgis.com/",
-      "note": "Drop in anytime to see options for a possible new connection between I-75 and I-71 and 10 priority road improvement locations across northern Warren County, including Waynesville and Wayne Township. Hosted by the Warren County Engineer's Office and Transportation Improvement District. Can't make it? The same materials and a comment survey are on the project website through Nov 17."
     },
     {
       "title": "Christmas Book Flood PJ Storytime",
@@ -368,6 +326,15 @@
       "category": "Government",
       "source": "https://commissioners.warrencountyohio.gov/News/AgendaMinutes/Index",
       "note": "Weekly commissioners session; agendas and minutes posted online"
+    },
+    {
+      "title": "Holiday Jingle Mingle — Chamber Business to Business Networking",
+      "dateISO": "2026-12-17T17:00:00-05:00",
+      "dateLabel": "Thu, Dec 17 · 5:00 PM",
+      "venue": "Stonehouse Tavern, Waynesville",
+      "category": "Chamber",
+      "source": "https://www.waynesvilleohio.com/events",
+      "note": "The Waynesville Area Chamber of Commerce holiday networking mixer. Check the Chamber events page for details."
     }
   ]
 }
