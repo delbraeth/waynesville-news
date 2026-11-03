@@ -34,13 +34,14 @@ async function latestPublishedBrief() {
 // Markdown -> plain sentences a voice can read.
 export function forTheEar(s) {
   return s
-    .replace(/\*\(\[[^\]]*\]\([^)]*\)\)\*/g, "")       // *([source](url))*
-    .replace(/\(\[[^\]]*\]\([^)]*\)\)/g, "")             // ([post](url))
+    // *([source](url) · [other](url))* and ([post](url)) — source credits, not speech
+    .replace(/\*?\(\s*\[[^\]]*\]\([^)]*\)(?:\s*[·,]\s*\[[^\]]*\]\([^)]*\))*\s*\)\*?/g, "")
     .replace(/\[([^\]]+)\]\([^)]*\)/g, "$1")             // [text](url) -> text
     .replace(/[*_`#>]/g, "")
     .replace(/\bS\.R\.\s*/g, "State Route ")
     .replace(/\bU\.S\.\s*(\d)/g, "U.S. Route $1")
     .replace(/\bN\.\s/g, "North ").replace(/\bS\.\s(?=[A-Z])/g, "South ")
+    .replace(/\b(St|Rd|Ave)\.(?=\s+[A-Z])/g, (_, w) => ({ St: "Street", Rd: "Road", Ave: "Avenue" })[w] + ".")
     .replace(/\bSt\.(?=\s|,|$)/g, "Street").replace(/\bRd\.(?=\s|,|$)/g, "Road").replace(/\bAve\.(?=\s|,|$)/g, "Avenue")
     .replace(/(\d)–(\d)/g, "$1 to $2")
     .replace(/\s&\s/g, " and ")
