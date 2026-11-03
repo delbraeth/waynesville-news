@@ -445,6 +445,22 @@
       "source": "https://www.ohioslargestplayground.com/directory/grandmas-gardens/"
     },
     {
+      "name": "Green Feather Apothecary",
+      "sections": [
+        "shop"
+      ],
+      "kinds": [
+        "Tea",
+        "Coffee",
+        "Gifts",
+        "Herbalist"
+      ],
+      "location": "234 High St., Waynesville, OH 45068",
+      "phone": "513-507-7342",
+      "about": "Herbalist owned. Hand-blended and rare teas, gourmet coffees, pantry items, and whimsical and handmade gifts.",
+      "source": "Business owner, via the editor (2026-11-03)"
+    },
+    {
       "name": "Hailstorm Vintage",
       "sections": [
         "shop"
@@ -1055,6 +1071,11 @@
     {
       "name": "Waynesville Family Dentistry",
       "reason": "Duplicate of the Ann A Bockrath, DDS listing (same practice and phone)",
+      "date": "2026-11-03"
+    },
+    {
+      "name": "Green Feather Homestead and Apothecary",
+      "reason": "Renamed: now listed as Green Feather Apothecary, per the owner",
       "date": "2026-11-03"
     }
   ]
