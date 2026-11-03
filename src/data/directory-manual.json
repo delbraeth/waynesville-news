@@ -1,5 +1,5 @@
 {
-  "_note": "Hand-added directory listings for businesses that are not Chamber members (or to override a Chamber listing with the same name). Facts only, as the business publishes them; no private individuals' names. Fields: name (required), sections (array of section ids from directory.json, e.g. [\"home\"]), kinds (e.g. [\"Plumbing\"]), location, phone, website, about, source (where you verified it). After editing, run `npm run refresh:directory -- --manual-only`. To remove a listing for good (closed, moved, or asked to be removed), add it to \"exclude\" as {\"name\": \"...\", \"reason\": \"...\", \"date\": \"YYYY-MM-DD\"}; this also blocks it from the Chamber data.",
+  "_note": "Hand-added directory listings for businesses that are not Chamber members (or to override a Chamber listing with the same name). Facts only, as the business publishes them; no private individuals' names. Fields: name (required), sections (array of section ids from directory.json, e.g. [\"home\"]), kinds (e.g. [\"Plumbing\"]), location, phone, website, social, about, source (where you verified it). After editing, run `npm run refresh:directory -- --manual-only`. To remove a listing for good (closed, moved, or asked to be removed), add it to \"exclude\" as {\"name\": \"...\", \"reason\": \"...\", \"date\": \"YYYY-MM-DD\"}; this also blocks it from the Chamber data.",
   "items": [
     {
       "name": "1572 Roadhouse Bar-B-Q",
@@ -204,9 +204,11 @@
       ],
       "location": "9635 Old Stage Rd, Waynesville, OH 45068",
       "phone": "937-862-4364",
-      "website": "https://www.facebook.com/BuckeyeSelect/",
       "about": "Dog boarding facility on a six-acre property.",
-      "source": "https://www.facebook.com/BuckeyeSelect/ (open per the editor, 2026-10-31)"
+      "source": "https://www.facebook.com/BuckeyeSelect/ (open per the editor, 2026-10-31)",
+      "social": {
+        "facebook": "https://www.facebook.com/BuckeyeSelect/"
+      }
     },
     {
       "name": "Caesar Creek Lake Visitor Center",
@@ -291,9 +293,11 @@
       ],
       "location": "Waynesville, OH",
       "phone": "",
-      "website": "https://www.facebook.com/tcassidypainting/",
       "about": "Small local painting business based in Waynesville.",
-      "source": "https://www.facebook.com/tcassidypainting/ (open per the editor, 2026-10-31)"
+      "source": "https://www.facebook.com/tcassidypainting/ (open per the editor, 2026-10-31)",
+      "social": {
+        "facebook": "https://www.facebook.com/tcassidypainting/"
+      }
     },
     {
       "name": "Cassidy Travel",
@@ -457,9 +461,12 @@
       ],
       "location": "234 High St., Waynesville, OH 45068",
       "phone": "513-507-7342",
-      "about": "Herbalist owned. Hand-blended and rare teas, gourmet coffees, pantry items, and whimsical and handmade gifts. Also on TikTok: @greenfeatherapothecary.",
+      "about": "Herbalist owned. Hand-blended and rare teas, gourmet coffees, pantry items, and whimsical and handmade gifts.",
       "source": "Business owner, via the editor (2026-11-03)",
-      "website": "https://www.instagram.com/greenfeatherapothecary/"
+      "social": {
+        "instagram": "https://www.instagram.com/greenfeatherapothecary/",
+        "tiktok": "https://www.tiktok.com/@greenfeatherapothecary"
+      }
     },
     {
       "name": "Hailstorm Vintage",
@@ -541,9 +548,11 @@
       ],
       "location": "108 N. Marvin Ln, Waynesville, OH 45068",
       "phone": "",
-      "website": "https://www.facebook.com/p/La-Bella-Vida-Pet-Salon-LLC-100084022669688/",
       "about": "Pet grooming salon taking appointments by call or text, with curbside pickup.",
-      "source": "https://www.facebook.com/p/La-Bella-Vida-Pet-Salon-LLC-100084022669688/ (open per the editor, 2026-10-31)"
+      "source": "https://www.facebook.com/p/La-Bella-Vida-Pet-Salon-LLC-100084022669688/ (open per the editor, 2026-10-31)",
+      "social": {
+        "facebook": "https://www.facebook.com/p/La-Bella-Vida-Pet-Salon-LLC-100084022669688/"
+      }
     },
     {
       "name": "Lemonwood Soap Company",
@@ -697,9 +706,11 @@
         "Seasonal"
       ],
       "location": "Waynesville, OH",
-      "website": "https://www.facebook.com/onceinabluemoonfarm/",
       "about": "Seasonal pick-your-own farm. Closed for the season; check its Facebook page for picking dates.",
-      "source": "https://www.facebook.com/onceinabluemoonfarm/"
+      "source": "https://www.facebook.com/onceinabluemoonfarm/",
+      "social": {
+        "facebook": "https://www.facebook.com/onceinabluemoonfarm/"
+      }
     },
     {
       "name": "Ozone Zipline Adventures at YMCA Camp Kern",
@@ -854,9 +865,11 @@
       ],
       "location": "184 South Main St., Waynesville, OH 45068",
       "phone": "513-403-8731",
-      "website": "https://www.facebook.com/TherapeuticMassageofWaynesville/",
       "about": "Massage therapy practice in downtown Waynesville with online booking.",
-      "source": "https://www.facebook.com/TherapeuticMassageofWaynesville/ (open per the editor, 2026-10-31)"
+      "source": "https://www.facebook.com/TherapeuticMassageofWaynesville/ (open per the editor, 2026-10-31)",
+      "social": {
+        "facebook": "https://www.facebook.com/TherapeuticMassageofWaynesville/"
+      }
     },
     {
       "name": "Thrive Upper Cervical Care Chiropractic",
@@ -897,9 +910,11 @@
       ],
       "location": "185 High St, Waynesville, OH 45068",
       "phone": "513-897-0504",
-      "website": "https://www.facebook.com/people/Ultimate-Finish-Hair-Studio/100086200613937/",
       "about": "Hair salon offering color, extensions, and brow and lash services by appointment.",
-      "source": "https://www.facebook.com/people/Ultimate-Finish-Hair-Studio/100086200613937/ (open per the editor, 2026-10-31)"
+      "source": "https://www.facebook.com/people/Ultimate-Finish-Hair-Studio/100086200613937/ (open per the editor, 2026-10-31)",
+      "social": {
+        "facebook": "https://www.facebook.com/people/Ultimate-Finish-Hair-Studio/100086200613937/"
+      }
     },
     {
       "name": "Venue at The Historic Lockup",
@@ -939,9 +954,11 @@
       ],
       "location": "330 South Main Street, Waynesville, OH 45068",
       "phone": "937-313-7147",
-      "website": "https://www.facebook.com/p/Village-Barber-Shop-and-Shave-Parlor-100046607783657/",
       "about": "Barbershop offering men's haircuts, hot towel shaves and beard trims, by appointment.",
-      "source": "https://www.facebook.com/p/Village-Barber-Shop-and-Shave-Parlor-100046607783657/ (open per the editor, 2026-10-31)"
+      "source": "https://www.facebook.com/p/Village-Barber-Shop-and-Shave-Parlor-100046607783657/ (open per the editor, 2026-10-31)",
+      "social": {
+        "facebook": "https://www.facebook.com/p/Village-Barber-Shop-and-Shave-Parlor-100046607783657/"
+      }
     },
     {
       "name": "Village Salvage / Village Amish Furniture",

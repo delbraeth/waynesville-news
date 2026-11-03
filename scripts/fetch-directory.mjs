@@ -120,6 +120,31 @@ function normalizeUrl(u) {
   }
 }
 
+// Social links on hand-added listings: { facebook, instagram, tiktok }.
+// Accepts a full URL or an @handle; anything else is dropped. Only the
+// platforms listed here render on the directory page.
+const SOCIAL_BASE = {
+  facebook: "https://www.facebook.com/",
+  instagram: "https://www.instagram.com/",
+  tiktok: "https://www.tiktok.com/@",
+};
+function normalizeSocial(social) {
+  if (!social || typeof social !== "object") return undefined;
+  const out = {};
+  for (const [k, base] of Object.entries(SOCIAL_BASE)) {
+    let v = (social[k] ?? "").trim();
+    if (!v) continue;
+    if (/^@?[A-Za-z0-9._-]+$/.test(v)) v = base + v.replace(/^@/, "");
+    // Not normalizeUrl(): its email guard would reject TikTok's /@handle URLs.
+    if (!/^https?:\/\//i.test(v)) v = "https://" + v.replace(/^\/+/, "");
+    try {
+      const u = new URL(v);
+      if (/^https?:$/.test(u.protocol) && !u.username) out[k] = u.toString();
+    } catch { /* not a URL — drop it */ }
+  }
+  return Object.keys(out).length ? out : undefined;
+}
+
 async function main() {
   const started = Date.now();
   const home = await get(BASE);
@@ -239,6 +264,7 @@ async function loadManual() {
       kinds: (m.kinds ?? []).map(clean).filter(Boolean),
       source: m.source ?? "",
       website: normalizeUrl(m.website ?? ""),
+      social: normalizeSocial(m.social),
       about: clean(m.about ?? ""),
       local: m.local ?? isLocal(m.location),
       from: "manual",
