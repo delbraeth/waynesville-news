@@ -1,6 +1,6 @@
 {
   "_note": "Local business directory. Built by scripts/fetch-directory.mjs from the Waynesville Area Chamber of Commerce's public member directory (name, location, phone, website, and the Chamber's description, as published) plus hand-added listings in directory-manual.json. Contact names, emails and hours are deliberately not copied. Do not edit by hand — edit directory-manual.json and re-run `npm run refresh:directory` (or `npm run refresh:directory -- --manual-only` to merge manual edits without re-reading the Chamber site).",
-  "updated": "2026-11-03T08:44:10.080Z",
+  "updated": "2026-11-03T08:56:39.313Z",
   "sections": [
     {
       "id": "home",
@@ -2274,22 +2274,22 @@
       "from": "chamber"
     },
     {
-      "id": "chamber-606",
+      "id": "manual-midwestpaylink",
       "name": "Midwest Pay Link, Inc.",
-      "location": "50 East River Center Blvd, Suite 615, Covington, KY 41011",
+      "location": "50 East River Center Blvd., Suite 615, Covington, KY 41011",
       "phone": "859-581-2326",
       "sections": [
         "pro"
       ],
       "kinds": [
-        "Accounting Services",
-        "Payroll"
+        "Payroll",
+        "Payroll Tax"
       ],
       "source": "https://www.waynesvilleohio.com/directory/listing/606",
       "website": "http://www.midwestpaylink.com/",
-      "about": "About Midwest Pay Link, Inc. is an independently owned company with knowledgeable payroll and tax personnel. Our commitment to our clients needs drives the products and services we provide. The &ldquo;M&rdquo; in Midwest Pay Link represents our clients' connection to a…",
+      "about": "Independently owned payroll and payroll-tax service company for businesses, based in Covington, Ky.",
       "local": false,
-      "from": "chamber"
+      "from": "manual"
     },
     {
       "id": "chamber-620",

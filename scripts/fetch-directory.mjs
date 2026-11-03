@@ -78,6 +78,7 @@ const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const decode = (s) =>
   s.replace(/&amp;/g, "&").replace(/&#0?39;|&apos;|&rsquo;/g, "'").replace(/&quot;/g, '"')
     .replace(/&nbsp;/g, " ").replace(/&ndash;/g, "–").replace(/&mdash;/g, "—")
+    .replace(/&[lr]dquo;/g, '"').replace(/&lsquo;/g, "'").replace(/&hellip;/g, "…")
     .replace(/&#(\d+);/g, (_, n) => String.fromCharCode(Number(n)));
 const text = (s) => decode(s.replace(/<[^>]+>/g, " ")).replace(/\s+/g, " ").trim();
 // Everything here ends up in rendered HTML via Astro (escaped), but keep it clean anyway.
