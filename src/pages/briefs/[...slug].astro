@@ -13,7 +13,7 @@ export async function getStaticPaths() {
 const { entry } = Astro.props;
 const { Content } = await render(entry);
 const patreonUrl = site.patreon?.url?.trim() || "";
-const audio = (audioIndex.items as Record<string, { url: string; seconds?: number }>)[entry.id];
+const audio = (audioIndex.items as Record<string, { url: string; seconds?: number; sponsor?: string }>)[entry.id];
 const audioLen = audio?.seconds ? `${Math.floor(audio.seconds / 60)}:${String(audio.seconds % 60).padStart(2, "0")}` : "";
 
 const dateFmt = new Intl.DateTimeFormat("en-US", {
@@ -41,6 +41,7 @@ const dateFmt = new Intl.DateTimeFormat("en-US", {
       <div class="brief-audio" id="listen">
         <p class="brief-audio-label">🎧 Listen to this brief{audioLen && <> <span class="muted">({audioLen})</span></>}</p>
         <audio controls preload="none" src={audio.url}></audio>
+        {audio.sponsor && <p class="small brief-audio-sub">Today's audio brief is supported by <a href="/supporters/">{audio.sponsor}</a>.</p>}
         <p class="small muted brief-audio-sub">Get it every morning as a podcast: <a href="/podcast.xml">podcast feed</a></p>
       </div>
     )}

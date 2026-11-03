@@ -99,7 +99,33 @@ export function cap(text, max) {
 }
 
 const date = arg("--date") || (await latestPublishedBrief());
-const script = cap(await buildScript(date), cfg.maxChars);
+// Audio sponsor tag: supporters.json items with an "audio" object
+// ({ line, start?, end? }) take turns by day. The tag goes right before the
+// sign-off, always phrased "supported by", and room for it is reserved under
+// maxChars. No eligible sponsor = no tag.
+export function pickSponsor(supporters, date) {
+  const ok = (supporters.items ?? []).filter((s) => {
+    const a = s?.audio;
+    if (!s?.name || !a?.line) return false;
+    if (a.start && date < a.start) return false;
+    if (a.end && date > a.end) return false;
+    if (a.line.length > 220) { console.log(`sponsor ${s.name}: audio line over 220 characters, skipped`); return false; }
+    return true;
+  });
+  if (!ok.length) return null;
+  const day = Math.floor(Date.parse(`${date}T12:00:00Z`) / 86400000);
+  return ok[day % ok.length];
+}
+const supporters = JSON.parse(await readFile(new URL("src/data/supporters.json", ROOT), "utf8"));
+const sponsor = pickSponsor(supporters, date);
+const sponsorText = sponsor
+  ? forTheEar(`Today's Daily Brief is supported by ${sponsor.name}, ${sponsor.audio.line.replace(/\.?\s*$/, ".")} Learn more at waynesville dot news slash supporters.`)
+  : "";
+let script = cap(await buildScript(date), cfg.maxChars - (sponsorText ? sponsorText.length + 2 : 0));
+if (sponsorText) {
+  const i = script.lastIndexOf("\n\n");
+  script = script.slice(0, i) + "\n\n" + sponsorText + script.slice(i);
+}
 if (/\bTODO\b/.test(script)) { console.error("script still contains TODO — refusing to record"); process.exit(1); }
 
 if (args.includes("--script-only")) {
@@ -170,6 +196,6 @@ await writeFile(out, buf);
 await writeFile(out.replace(/\.mp3$/, ".txt"), script + "\n");
 const kbps = Number(/_(\d+)$/.exec(cfg.outputFormat || "mp3_44100_128")?.[1] || 128);
 const seconds = Math.round((buf.length * 8) / (kbps * 1000));
-const meta = { date, chars: script.length, bytes: buf.length, seconds, model: process.env.ELEVENLABS_MODEL || cfg.modelId };
+const meta = { date, chars: script.length, bytes: buf.length, seconds, model: process.env.ELEVENLABS_MODEL || cfg.modelId, ...(sponsor ? { sponsor: sponsor.name } : {}) };
 await writeFile(out.replace(/\.mp3$/, ".json"), JSON.stringify(meta, null, 2) + "\n");
 console.log(`wrote ${out} (${(buf.length / 1024).toFixed(0)} KB, ~${seconds}s, ${script.length} characters, date ${date})`);
