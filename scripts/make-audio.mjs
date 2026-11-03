@@ -100,9 +100,12 @@ export function cap(text, max) {
 
 const date = arg("--date") || (await latestPublishedBrief());
 // Audio sponsor tag: supporters.json items with an "audio" object
-// ({ line, start?, end? }) take turns by day. The tag goes right before the
-// sign-off, always phrased "supported by", and room for it is reserved under
-// maxChars. No eligible sponsor = the house promo from audio.json (if set).
+// ({ line, start?, end? }). Each sponsor gets at most one spot a week; with
+// fewer than seven sponsors their spots are spread across the week (and the
+// weekday each gets moves week to week), and the house promo from audio.json
+// fills the other days. Seven or more sponsors simply take turns daily. The tag
+// goes right before the sign-off, always phrased "supported by", and room for
+// it is reserved under maxChars.
 export function pickSponsor(supporters, date) {
   const ok = (supporters.items ?? []).filter((s) => {
     const a = s?.audio;
@@ -112,9 +115,17 @@ export function pickSponsor(supporters, date) {
     if (a.line.length > 220) { console.log(`sponsor ${s.name}: audio line over 220 characters, skipped`); return false; }
     return true;
   });
-  if (!ok.length) return null;
-  const day = Math.floor(Date.parse(`${date}T12:00:00Z`) / 86400000);
-  return ok[day % ok.length];
+  const n = ok.length;
+  if (!n) return null;
+  // Day 0 = Monday 1970-01-05, so weeks run Monday-Sunday.
+  const day = Math.floor((Date.parse(`${date}T12:00:00Z`) - Date.parse("1970-01-05T12:00:00Z")) / 86400000);
+  if (n >= 7) return ok[((day % n) + n) % n];
+  const week = Math.floor(day / 7), dow = ((day % 7) + 7) % 7;
+  const shift = ((week % 7) + 7) % 7;            // move each week's spots by a day
+  for (let k = 0; k < n; k++) {
+    if ((Math.floor((k * 7) / n) + shift) % 7 === dow) return ok[(k + week) % n];
+  }
+  return null;
 }
 const supporters = JSON.parse(await readFile(new URL("src/data/supporters.json", ROOT), "utf8"));
 const sponsor = pickSponsor(supporters, date);
