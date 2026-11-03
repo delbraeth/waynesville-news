@@ -239,6 +239,20 @@
       "source": "https://dearingercleaning.com"
     },
     {
+      "name": "Dollar General",
+      "sections": [
+        "shop"
+      ],
+      "kinds": [
+        "Discount Store"
+      ],
+      "location": "6800 Corwin Ave., Waynesville, OH 45068",
+      "phone": "513-855-3290",
+      "website": "https://www.dollargeneral.com/store-directory/oh/waynesville/7346",
+      "about": "Discount store with household basics, groceries, snacks, cleaning and personal-care items.",
+      "source": "https://www.dollargeneral.com/store-directory/oh/waynesville"
+    },
+    {
       "name": "Farmhouse Style",
       "sections": [
         "shop"
@@ -309,6 +323,20 @@
       "website": "",
       "about": "Historic inn on Main Street in a building dating to 1822, open for overnight stays. Its restaurant is closed while it undergoes restoration.",
       "source": "https://waynesvilleshops.com/lodging-food-and-entertainment/name/hammel-house-inn (rooms open, restaurant under restoration, per the editor, 2026-10-31)"
+    },
+    {
+      "name": "Hometown Marketplace",
+      "sections": [
+        "food",
+        "shop"
+      ],
+      "kinds": [
+        "Grocery"
+      ],
+      "location": "60 N. Marvin Ln., Waynesville, OH 45068",
+      "phone": "513-897-5001",
+      "about": "Hometown grocery store just off Main Street, open since 1962, with a deli and hot foods alongside groceries.",
+      "source": "https://www.yellowpages.com/waynesville-oh/mip/hometown-marketplace-473345180"
     },
     {
       "name": "Ideal Cut & Trim LLC",
@@ -453,6 +481,35 @@
       "source": "https://ontargetheatingandcooling.com/contact-us"
     },
     {
+      "name": "Once in a Blue Moon Farm",
+      "sections": [
+        "food"
+      ],
+      "kinds": [
+        "Farm",
+        "U-Pick",
+        "Seasonal"
+      ],
+      "location": "Waynesville, OH",
+      "website": "https://www.facebook.com/onceinabluemoonfarm/",
+      "about": "Seasonal pick-your-own farm. Closed for the season; check its Facebook page for picking dates.",
+      "source": "https://www.facebook.com/onceinabluemoonfarm/"
+    },
+    {
+      "name": "Pat's Place",
+      "sections": [
+        "shop",
+        "auto"
+      ],
+      "kinds": [
+        "Gas Station",
+        "Convenience Store"
+      ],
+      "location": "223 N. Main St., Waynesville, OH 45068",
+      "about": "Gas station and convenience store on North Main Street selling lottery tickets, candy and ice cream.",
+      "source": "Editor-confirmed (2026-11-03)"
+    },
+    {
       "name": "Rock Creek Renovation",
       "sections": [
         "home"
@@ -551,6 +608,20 @@
       "website": "https://www.facebook.com/TherapeuticMassageofWaynesville/",
       "about": "Massage therapy practice in downtown Waynesville with online booking.",
       "source": "https://www.facebook.com/TherapeuticMassageofWaynesville/ (open per the editor, 2026-10-31)"
+    },
+    {
+      "name": "Thrive Upper Cervical Care Chiropractic",
+      "sections": [
+        "health"
+      ],
+      "kinds": [
+        "Chiropractic"
+      ],
+      "location": "243 S. Main St., Waynesville, OH 45068",
+      "phone": "513-897-0117",
+      "website": "https://thrivechirodr.com/",
+      "about": "Downtown chiropractic office focused on upper cervical (neck) care, also offering SoftWave therapy. Free consultations by appointment. Open Monday through Thursday; see the website for hours.",
+      "source": "https://thrivechirodr.com/"
     },
     {
       "name": "Traveller's Stay & Play",
@@ -652,6 +723,21 @@
       "website": "",
       "about": "Clock shop on Miami Street.",
       "source": "https://waynesvilleshops.com/specialty-shops-and-galleries/name/village-clock-shop/"
+    },
+    {
+      "name": "Waynesville Fitness",
+      "sections": [
+        "health"
+      ],
+      "kinds": [
+        "Fitness",
+        "Personal Training"
+      ],
+      "location": "6794 Corwin Ave., Waynesville, OH 45068",
+      "phone": "513-262-3343",
+      "website": "https://waynesvillefitness.com/",
+      "about": "Gym open 24/7, with month-to-month memberships and no contracts, plus personal training, group fitness classes and basic nutrition guidance. Free trial offered; text the gym to get started.",
+      "source": "https://waynesvillefitness.com/"
     },
     {
       "name": "Waynesville Health Care",
