@@ -1,6 +1,6 @@
 {
   "_note": "Local business directory. Built by scripts/fetch-directory.mjs from the Waynesville Area Chamber of Commerce's public member directory (name, location, phone, website, and the Chamber's description, as published) plus hand-added listings in directory-manual.json. Contact names, emails and hours are deliberately not copied. Do not edit by hand — edit directory-manual.json and re-run `npm run refresh:directory` (or `npm run refresh:directory -- --manual-only` to merge manual edits without re-reading the Chamber site).",
-  "updated": "2026-11-03T12:58:31.548Z",
+  "updated": "2026-11-03T13:02:49.911Z",
   "sections": [
     {
       "id": "home",
@@ -736,7 +736,10 @@
         "Pet Boarding"
       ],
       "source": "https://www.facebook.com/BuckeyeSelect/ (open per the editor, 2026-10-31)",
-      "website": "https://www.facebook.com/BuckeyeSelect/",
+      "website": "",
+      "social": {
+        "facebook": "https://www.facebook.com/BuckeyeSelect/"
+      },
       "about": "Dog boarding facility on a six-acre property.",
       "local": true,
       "from": "manual"
@@ -954,7 +957,10 @@
         "Painting"
       ],
       "source": "https://www.facebook.com/tcassidypainting/ (open per the editor, 2026-10-31)",
-      "website": "https://www.facebook.com/tcassidypainting/",
+      "website": "",
+      "social": {
+        "facebook": "https://www.facebook.com/tcassidypainting/"
+      },
       "about": "Small local painting business based in Waynesville.",
       "local": true,
       "from": "manual"
@@ -1649,8 +1655,12 @@
         "Herbalist"
       ],
       "source": "Business owner, via the editor (2026-11-03)",
-      "website": "https://www.instagram.com/greenfeatherapothecary/",
-      "about": "Herbalist owned. Hand-blended and rare teas, gourmet coffees, pantry items, and whimsical and handmade gifts. Also on TikTok: @greenfeatherapothecary.",
+      "website": "",
+      "social": {
+        "instagram": "https://www.instagram.com/greenfeatherapothecary/",
+        "tiktok": "https://www.tiktok.com/@greenfeatherapothecary"
+      },
+      "about": "Herbalist owned. Hand-blended and rare teas, gourmet coffees, pantry items, and whimsical and handmade gifts.",
       "local": true,
       "from": "manual"
     },
@@ -1931,7 +1941,10 @@
         "Pet Grooming"
       ],
       "source": "https://www.facebook.com/p/La-Bella-Vida-Pet-Salon-LLC-100084022669688/ (open per the editor, 2026-10-31)",
-      "website": "https://www.facebook.com/p/La-Bella-Vida-Pet-Salon-LLC-100084022669688/",
+      "website": "",
+      "social": {
+        "facebook": "https://www.facebook.com/p/La-Bella-Vida-Pet-Salon-LLC-100084022669688/"
+      },
       "about": "Pet grooming salon taking appointments by call or text, with curbside pickup.",
       "local": true,
       "from": "manual"
@@ -2557,7 +2570,10 @@
         "Seasonal"
       ],
       "source": "https://www.facebook.com/onceinabluemoonfarm/",
-      "website": "https://www.facebook.com/onceinabluemoonfarm/",
+      "website": "",
+      "social": {
+        "facebook": "https://www.facebook.com/onceinabluemoonfarm/"
+      },
       "about": "Seasonal pick-your-own farm. Closed for the season; check its Facebook page for picking dates.",
       "local": true,
       "from": "manual"
@@ -3313,7 +3329,10 @@
         "Massage"
       ],
       "source": "https://www.facebook.com/TherapeuticMassageofWaynesville/ (open per the editor, 2026-10-31)",
-      "website": "https://www.facebook.com/TherapeuticMassageofWaynesville/",
+      "website": "",
+      "social": {
+        "facebook": "https://www.facebook.com/TherapeuticMassageofWaynesville/"
+      },
       "about": "Massage therapy practice in downtown Waynesville with online booking.",
       "local": true,
       "from": "manual"
@@ -3446,7 +3465,10 @@
         "Hair Salon"
       ],
       "source": "https://www.facebook.com/people/Ultimate-Finish-Hair-Studio/100086200613937/ (open per the editor, 2026-10-31)",
-      "website": "https://www.facebook.com/people/Ultimate-Finish-Hair-Studio/100086200613937/",
+      "website": "",
+      "social": {
+        "facebook": "https://www.facebook.com/people/Ultimate-Finish-Hair-Studio/100086200613937/"
+      },
       "about": "Hair salon offering color, extensions, and brow and lash services by appointment.",
       "local": true,
       "from": "manual"
@@ -3518,7 +3540,10 @@
         "Barber"
       ],
       "source": "https://www.facebook.com/p/Village-Barber-Shop-and-Shave-Parlor-100046607783657/ (open per the editor, 2026-10-31)",
-      "website": "https://www.facebook.com/p/Village-Barber-Shop-and-Shave-Parlor-100046607783657/",
+      "website": "",
+      "social": {
+        "facebook": "https://www.facebook.com/p/Village-Barber-Shop-and-Shave-Parlor-100046607783657/"
+      },
       "about": "Barbershop offering men's haircuts, hot towel shaves and beard trims, by appointment.",
       "local": true,
       "from": "manual"
