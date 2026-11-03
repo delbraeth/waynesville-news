@@ -3,10 +3,10 @@
   "items": {
     "2026-11-03": {
       "url": "/audio/2026-11-03.mp3",
-      "seconds": 117,
+      "seconds": 131,
       "chars": 1712,
       "model": "eleven_v4_turbo",
-      "recorded": "2026-11-03T14:45:43.312Z"
+      "recorded": "2026-11-03T15:21:59.753Z"
     }
   }
 }
