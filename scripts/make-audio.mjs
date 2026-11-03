@@ -102,7 +102,7 @@ const date = arg("--date") || (await latestPublishedBrief());
 // Audio sponsor tag: supporters.json items with an "audio" object
 // ({ line, start?, end? }) take turns by day. The tag goes right before the
 // sign-off, always phrased "supported by", and room for it is reserved under
-// maxChars. No eligible sponsor = no tag.
+// maxChars. No eligible sponsor = the house promo from audio.json (if set).
 export function pickSponsor(supporters, date) {
   const ok = (supporters.items ?? []).filter((s) => {
     const a = s?.audio;
@@ -120,7 +120,7 @@ const supporters = JSON.parse(await readFile(new URL("src/data/supporters.json",
 const sponsor = pickSponsor(supporters, date);
 const sponsorText = sponsor
   ? forTheEar(`Today's Daily Brief is supported by ${sponsor.name}, ${sponsor.audio.line.replace(/\.?\s*$/, ".")} Learn more at waynesville dot news slash supporters.`)
-  : "";
+  : forTheEar(cfg.housePromo || "");
 let script = cap(await buildScript(date), cfg.maxChars - (sponsorText ? sponsorText.length + 2 : 0));
 if (sponsorText) {
   const i = script.lastIndexOf("\n\n");
