@@ -14,6 +14,12 @@ on:
         description: "Brief date (YYYY-MM-DD). Leave blank for the latest published brief."
         required: false
         default: ""
+      model:
+        description: "ElevenLabs model to try (blank = the one in src/data/audio.json)"
+        required: false
+        default: ""
+        type: choice
+        options: ["", "eleven_multilingual_v2", "eleven_v3", "eleven_flash_v2_5"]
 
 permissions:
   contents: read
@@ -38,6 +44,7 @@ jobs:
         env:
           ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
           DATE: ${{ inputs.date }}
+          ELEVENLABS_MODEL: ${{ inputs.model }}
         run: |
           mkdir -p out
           if [ -n "$DATE" ]; then

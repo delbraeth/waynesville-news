@@ -34,13 +34,14 @@ async function latestPublishedBrief() {
 // Markdown -> plain sentences a voice can read.
 export function forTheEar(s) {
   return s
-    .replace(/\*\(\[[^\]]*\]\([^)]*\)\)\*/g, "")       // *([source](url))*
-    .replace(/\(\[[^\]]*\]\([^)]*\)\)/g, "")             // ([post](url))
+    // *([source](url) · [other](url))* and ([post](url)) — source credits, not speech
+    .replace(/\*?\(\s*\[[^\]]*\]\([^)]*\)(?:\s*[·,]\s*\[[^\]]*\]\([^)]*\))*\s*\)\*?/g, "")
     .replace(/\[([^\]]+)\]\([^)]*\)/g, "$1")             // [text](url) -> text
     .replace(/[*_`#>]/g, "")
     .replace(/\bS\.R\.\s*/g, "State Route ")
     .replace(/\bU\.S\.\s*(\d)/g, "U.S. Route $1")
     .replace(/\bN\.\s/g, "North ").replace(/\bS\.\s(?=[A-Z])/g, "South ")
+    .replace(/\b(St|Rd|Ave)\.(?=\s+[A-Z])/g, (_, w) => ({ St: "Street", Rd: "Road", Ave: "Avenue" })[w] + ".")
     .replace(/\bSt\.(?=\s|,|$)/g, "Street").replace(/\bRd\.(?=\s|,|$)/g, "Road").replace(/\bAve\.(?=\s|,|$)/g, "Avenue")
     .replace(/(\d)–(\d)/g, "$1 to $2")
     .replace(/\s&\s/g, " and ")
@@ -65,7 +66,7 @@ async function buildScript(date) {
   const today = /\*\*Today:\*\*\s*([^\n]+)/.exec(section(md, "Weather"))?.[1];
   if (today) {
     const m = /(\d+)°F,\s*([^(]+)\(high (\d+)° \/ low (\d+)°\)/.exec(today);
-    parts.push(m ? `The weather: ${m[2].trim().toLowerCase()}, with a high of ${m[3]} and a low of ${m[4]}.` : forTheEar(`The weather: ${today}.`));
+    parts.push(m ? `Today's forecast: ${m[2].trim().toLowerCase().replace(/^chance /, "a chance of ")}, with a high of ${m[3]} and a low tonight of ${m[4]}.` : forTheEar(`The weather: ${today}.`));
   }
 
   const leads = section(md, "This morning in Waynesville")
@@ -98,6 +99,7 @@ if (args.includes("--script-only")) {
 const key = process.env.ELEVENLABS_API_KEY;
 if (!key) { console.error("ELEVENLABS_API_KEY is not set"); process.exit(1); }
 const out = arg("--out") || `audio-${date}.mp3`;
+console.log(`model: ${process.env.ELEVENLABS_MODEL || cfg.modelId}`);
 const API = "https://api.elevenlabs.io/v1";
 
 // Credit check. Needs the key's "user read" permission; if the key can't read
@@ -117,7 +119,7 @@ try {
 const res = await fetch(`${API}/text-to-speech/${cfg.voiceId}?output_format=mp3_44100_128`, {
   method: "POST",
   headers: { "xi-api-key": key, "Content-Type": "application/json", Accept: "audio/mpeg" },
-  body: JSON.stringify({ text: script, model_id: cfg.modelId }),
+  body: JSON.stringify({ text: script, model_id: process.env.ELEVENLABS_MODEL || cfg.modelId, ...(cfg.voiceSettings ? { voice_settings: cfg.voiceSettings } : {}) }),
 });
 if (!res.ok) { console.error(`ElevenLabs HTTP ${res.status}: ${(await res.text()).slice(0, 300)}`); process.exit(1); }
 const buf = Buffer.from(await res.arrayBuffer());
