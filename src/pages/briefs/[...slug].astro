@@ -41,7 +41,6 @@ const dateFmt = new Intl.DateTimeFormat("en-US", {
       <div class="brief-audio" id="listen">
         <p class="brief-audio-label">🎧 Listen to this brief{audioLen && <> <span class="muted">({audioLen})</span></>}</p>
         <audio controls preload="none" src={audio.url}></audio>
-        <p class="small muted">Read by an AI voice from the written brief. The text below, with links to every source, is the full edition.</p>
       </div>
     )}
     {!entry.data.demo && <SubscribeBox />}
