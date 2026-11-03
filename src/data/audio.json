@@ -1,5 +1,5 @@
 {
-  "_note": "Daily audio brief (ElevenLabs text-to-speech). voiceId is the custom 'Waynesville News' voice. modelId eleven_v4_turbo (chosen by the editor after side-by-side samples): on the 121k-credit plan that is about 550,000 characters a month, so a ~3-minute (3,000-character) daily script uses about a sixth. eleven_v4 is the non-Turbo option at about half the characters. maxChars hard-caps each script. minCreditsLeft: skip the day (don't fail) if fewer credits remain. outputFormat mp3_44100_64 keeps a 3-minute file near 1.4 MB. voiceSettings are passed to ElevenLabs. enabled: the daily-audio workflow records only when true. The script comes from src/content/audio/<date>.txt when the daily run writes one, otherwise it is built from the brief. Recordings are listed in audio-index.json. The API key lives only in the ELEVENLABS_API_KEY repository secret. intro/outro: style A music (warm acoustic guitar and light piano) generated with ElevenLabs music and chosen by the editor; make-audio wraps each recording in them with ffmpeg (skipped if ffmpeg or the files are missing).",
+  "_note": "Daily audio brief (ElevenLabs text-to-speech). voiceId is the custom 'Waynesville News' voice. modelId eleven_v4_turbo (chosen by the editor after side-by-side samples): on the 121k-credit plan that is about 550,000 characters a month, so a ~3-minute (3,000-character) daily script uses about a sixth. eleven_v4 is the non-Turbo option at about half the characters. maxChars hard-caps each script. minCreditsLeft: skip the day (don't fail) if fewer credits remain. outputFormat mp3_44100_64 keeps a 3-minute file near 1.4 MB. voiceSettings are passed to ElevenLabs. enabled: the daily-audio workflow records only when true. The script comes from src/content/audio/<date>.txt when the daily run writes one, otherwise it is built from the brief. Recordings are listed in audio-index.json. The API key lives only in the ELEVENLABS_API_KEY repository secret. intro/outro: style A music (warm acoustic guitar and light piano) generated with ElevenLabs music and chosen by the editor; make-audio wraps each recording in them with ffmpeg (skipped if ffmpeg or the files are missing). housePromo: read in the sponsor slot (before the sign-off) on days no supporter has an audio line; set it to \"\" to drop it.",
   "enabled": true,
   "voiceId": "l12ajs4YORCBWJk3zF1J",
   "modelId": "eleven_v4_turbo",
@@ -13,5 +13,11 @@
   },
   "outputFormat": "mp3_44100_64",
   "intro": "assets/audio/intro.mp3",
-  "outro": "assets/audio/outro.mp3"
+  "outro": "assets/audio/outro.mp3",
+  "podcast": {
+    "_note": "Show pages in podcast apps. Each link appears in the brief Listen box and the site footer once filled in; leave blank to hide.",
+    "apple": "https://podcasts.apple.com/us/podcast/waynesville-news-daily-brief/id6830245739",
+    "spotify": "https://open.spotify.com/show/6U0OBBxTqiczD7wYToSDCl"
+  },
+  "housePromo": "Waynesville News is free, independent and made right here in town. Want your business to support it, and be mentioned right here? Find out how at waynesville dot news slash supporters."
 }

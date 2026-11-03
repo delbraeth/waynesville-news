@@ -131,7 +131,7 @@ jobs:
               const ix = JSON.parse(fs.readFileSync(p, "utf8"));
               const m = JSON.parse(fs.readFileSync(process.env.RUNNER_TEMP + "/audio/" + process.env.DATE + ".json", "utf8"));
               ix.items = ix.items || {};
-              ix.items[process.env.DATE] = { url: process.env.URL, seconds: m.seconds, bytes: m.bytes, chars: m.chars, model: m.model, recorded: new Date().toISOString() };
+              ix.items[process.env.DATE] = { url: process.env.URL, seconds: m.seconds, bytes: m.bytes, chars: m.chars, model: m.model, ...(m.sponsor ? { sponsor: m.sponsor } : {}), recorded: new Date().toISOString() };
               fs.writeFileSync(p, JSON.stringify(ix, null, 2) + "\n");'
             git add src/data/audio-index.json ${ADD:+"$ADD"}
             git diff --cached --quiet || git commit -m "audio: record $DATE brief"

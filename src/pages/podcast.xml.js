@@ -21,7 +21,7 @@ export async function GET(context) {
   const episodes = briefs.map((b) => {
     const a = items[b.id];
     const page = `${site}/briefs/${b.id}/`;
-    const desc = `${b.data.dek ?? ""} Read the full edition, with links to every source: ${page}`.trim();
+    const desc = `${b.data.dek ?? ""}${a.sponsor ? ` Supported by ${a.sponsor}.` : ""} Read the full edition, with links to every source: ${page}`.trim();
     const pub = new Date(a.recorded || b.data.date).toUTCString();
     return `    <item>
       <title>${esc(b.data.title)}</title>

@@ -2,11 +2,17 @@
 import { getPublicBriefs } from "../lib/briefs.js";
 import site from "../data/site.json";
 import supporters from "../data/supporters.json";
+import audioCfg from "../data/audio.json";
 const year = 2026;
 const { isDemoMode } = await getPublicBriefs();
 const nl = site.newsletter;
 const nlReady = nl && nl.username && nl.username !== "REPLACE_ME";
 const patreonUrl = site.patreon?.url?.trim() || "";
+const pod = audioCfg.podcast ?? {};
+const podLinks = [
+  pod.apple && { href: pod.apple, label: "Apple Podcasts" },
+  pod.spotify && { href: pod.spotify, label: "Spotify" },
+].filter(Boolean) as { href: string; label: string }[];
 // `footer: false` keeps a supporter off the site-wide footer line (still on /supporters/ and badged in the directory).
 const supporterItems = (supporters.items ?? []).filter((s) => s && s.name && s.footer !== false);
 ---
@@ -65,6 +71,7 @@ const supporterItems = (supporters.items ?? []).filter((s) => s && s.name && s.f
         {patreonUrl && (
           <p class="small"><strong>Keep it free:</strong> <a href={patreonUrl} target="_blank" rel="noopener">support the Brief on Patreon</a>.</p>
         )}
+        <p class="small"><strong>Listen:</strong> the Daily Brief podcast on{podLinks.map((l) => <> <a href={l.href} target="_blank" rel="noopener">{l.label}</a> ·</>)} <a href="/podcast.xml">RSS feed</a></p>
         <p class="small"><a href="/about/">About &amp; contact</a> · <a href="mailto:editor@waynesville.news?subject=Ask%20the%20Brief">Ask the Brief</a> · editor@waynesville.news</p>
       </div>
     </div>
