@@ -13,5 +13,10 @@
   },
   "outputFormat": "mp3_44100_64",
   "intro": "assets/audio/intro.mp3",
-  "outro": "assets/audio/outro.mp3"
+  "outro": "assets/audio/outro.mp3",
+  "podcast": {
+    "_note": "Show pages in podcast apps. Each link appears in the brief Listen box and the site footer once filled in; leave blank to hide.",
+    "apple": "https://podcasts.apple.com/us/podcast/waynesville-news-daily-brief/id6830245739",
+    "spotify": ""
+  }
 }

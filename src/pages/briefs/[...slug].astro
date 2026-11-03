@@ -4,6 +4,7 @@ import { getCollection, render } from "astro:content";
 import site from "../../data/site.json";
 import SubscribeBox from "../../components/SubscribeBox.astro";
 import audioIndex from "../../data/audio-index.json";
+import audioCfg from "../../data/audio.json";
 
 export async function getStaticPaths() {
   const briefs = (await getCollection("briefs")).filter((b) => b.data.published);
@@ -15,6 +16,12 @@ const { Content } = await render(entry);
 const patreonUrl = site.patreon?.url?.trim() || "";
 const audio = (audioIndex.items as Record<string, { url: string; seconds?: number; sponsor?: string }>)[entry.id];
 const audioLen = audio?.seconds ? `${Math.floor(audio.seconds / 60)}:${String(audio.seconds % 60).padStart(2, "0")}` : "";
+
+const pod = audioCfg.podcast ?? {};
+const podLinks = [
+  pod.apple && { href: pod.apple, label: "Apple Podcasts" },
+  pod.spotify && { href: pod.spotify, label: "Spotify" },
+].filter(Boolean) as { href: string; label: string }[];
 
 const dateFmt = new Intl.DateTimeFormat("en-US", {
   weekday: "long", month: "long", day: "numeric", year: "numeric",
@@ -42,7 +49,7 @@ const dateFmt = new Intl.DateTimeFormat("en-US", {
         <p class="brief-audio-label">🎧 Listen to this brief{audioLen && <> <span class="muted">({audioLen})</span></>}</p>
         <audio controls preload="none" src={audio.url}></audio>
         {audio.sponsor && <p class="small brief-audio-sub">Today's audio brief is supported by <a href="/supporters/">{audio.sponsor}</a>.</p>}
-        <p class="small muted brief-audio-sub">Get it every morning as a podcast: <a href="/podcast.xml">podcast feed</a></p>
+        <p class="small muted brief-audio-sub">Get it every morning as a podcast:{podLinks.map((l) => <> <a href={l.href} target="_blank" rel="noopener">{l.label}</a> ·</>)} <a href="/podcast.xml">podcast feed</a></p>
       </div>
     )}
     {!entry.data.demo && <SubscribeBox />}
