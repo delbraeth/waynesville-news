@@ -22,6 +22,7 @@ const nav = [
 ];
 ---
 <header class="masthead">
+  <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Switch to dark mode" title="Light or dark">☾</button>
   <p class="wordmark"><a href="/">Waynesville News</a></p>
   <p class="tagline">Waynesville, two square miles, surrounded by reality since 1797.</p>
   <p class="dateline">{dateLine} &nbsp;·&nbsp; waynesville.news</p>
@@ -44,3 +45,25 @@ const nav = [
     </details>
   </div>
 </nav>
+<script is:inline>
+(function () {
+  var b = document.getElementById("theme-toggle");
+  if (!b) return;
+  var root = document.documentElement;
+  var mq = window.matchMedia ? window.matchMedia("(prefers-color-scheme: dark)") : null;
+  function isDark() { return root.dataset.theme ? root.dataset.theme === "dark" : !!(mq && mq.matches); }
+  function paint() {
+    var d = isDark();
+    b.textContent = d ? "\u2600" : "\u263E";
+    b.setAttribute("aria-label", d ? "Switch to light mode" : "Switch to dark mode");
+  }
+  b.addEventListener("click", function () {
+    var next = isDark() ? "light" : "dark";
+    root.dataset.theme = next;
+    try { localStorage.setItem("theme", next); } catch (e) {}
+    paint();
+  });
+  if (mq && mq.addEventListener) mq.addEventListener("change", paint);
+  paint();
+})();
+</script>

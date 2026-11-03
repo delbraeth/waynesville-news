@@ -16,6 +16,12 @@
   --link: #1c4f74;        /* readable slate-blue */
   --link-hover: #123f60;
   --chip: #efe9dd;
+  --fill: #9e2b25;        /* solid red behind white text (buttons, badges) */
+  --fill-hover: #7c201b;
+  --field: #fff;          /* form fields */
+  --demo-bg: #f6e6b8;
+  --demo-ink: #6b551a;
+  color-scheme: light;
 
   /* type */
   --font-serif: "Newsreader", Georgia, "Times New Roman", serif;
@@ -25,6 +31,49 @@
   --measure: 44rem;   /* reading column */
   --wide: 54rem;      /* homepage sections */
   --space: 1.5rem;
+}
+
+/* Dark mode: follows the reader's device setting unless they pick light or
+   dark with the header switch (stored in localStorage, set on <html data-theme>). */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #17140f;
+    --paper-2: #211d17;
+    --ink: #ece5d8;
+    --ink-soft: #cfc6b6;
+    --muted: #a39886;
+    --rule: #3a332a;
+    --accent: #e0675c;
+    --accent-deep: #ec8a80;
+    --link: #8cbbe3;
+    --link-hover: #b8d5ee;
+    --chip: #2a251e;
+    --fill: #b23a31;
+    --fill-hover: #9a2f27;
+    --field: #1f1b16;
+    --demo-bg: #4a3d14;
+    --demo-ink: #f3dc93;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #17140f;
+  --paper-2: #211d17;
+  --ink: #ece5d8;
+  --ink-soft: #cfc6b6;
+  --muted: #a39886;
+  --rule: #3a332a;
+  --accent: #e0675c;
+  --accent-deep: #ec8a80;
+  --link: #8cbbe3;
+  --link-hover: #b8d5ee;
+  --chip: #2a251e;
+  --fill: #b23a31;
+  --fill-hover: #9a2f27;
+  --field: #1f1b16;
+  --demo-bg: #4a3d14;
+  --demo-ink: #f3dc93;
+  color-scheme: dark;
 }
 
 * { box-sizing: border-box; }
@@ -95,7 +144,15 @@ main { display: block; padding: 1.5rem 0 3rem; }
 .demo-banner a { color: #f6efe0; text-decoration: underline; }
 
 /* ---------- masthead ---------- */
-.masthead { text-align: center; padding: 1.6rem 1.25rem 0.8rem; }
+.masthead { position: relative; text-align: center; padding: 1.6rem 1.25rem 0.8rem; }
+.theme-toggle {
+  position: absolute; top: 0.6rem; right: 0.75rem;
+  width: 2.2rem; height: 2.2rem; border-radius: 50%;
+  border: 1px solid var(--rule); background: transparent; color: var(--ink-soft);
+  font-size: 1.05rem; line-height: 1; cursor: pointer; padding: 0;
+}
+.theme-toggle:hover { color: var(--accent); border-color: var(--accent); }
+.theme-toggle:focus-visible { outline: 2px solid var(--link); outline-offset: 2px; }
 .masthead .wordmark {
   font-family: var(--font-serif);
   font-weight: 600;
@@ -171,12 +228,12 @@ main { display: block; padding: 1.5rem 0 3rem; }
   display: inline-block; margin-top: 0.9rem;
   font-family: var(--font-sans); font-weight: 600; font-size: 0.82rem;
   text-transform: uppercase; letter-spacing: 0.06em;
-  color: #fff; background: var(--accent);
+  color: #fff; background: var(--fill);
   padding: 0.6rem 1.1rem; border-radius: 2px;
 }
-.btn:hover { background: var(--accent-deep); color: #fff; text-decoration: none; }
+.btn:hover { background: var(--fill-hover); color: #fff; text-decoration: none; }
 .btn-outline { color: var(--accent); background: transparent; box-shadow: inset 0 0 0 1.5px var(--accent); }
-.btn-outline:hover { color: #fff; background: var(--accent); }
+.btn-outline:hover { color: #fff; background: var(--fill); }
 .featured-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 0 0.6rem; }
 .featured .submit-note { margin: 0.5rem 0 0; }
 
@@ -203,7 +260,7 @@ main { display: block; padding: 1.5rem 0 3rem; }
   padding: 0.1rem 0.45rem; border-radius: 2px; margin-right: 0.4rem;
   vertical-align: 0.08em;
 }
-.tag.demo { background: #f6e6b8; color: #6b551a; }
+.tag.demo { background: var(--demo-bg); color: var(--demo-ink); }
 
 /* ---------- section grid (latest across) ---------- */
 .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem 2.4rem; }
@@ -269,7 +326,7 @@ main { display: block; padding: 1.5rem 0 3rem; }
 .site-footer .fine { color: var(--muted); font-size: 0.78rem; margin-top: 1.5rem; border-top: 1px solid var(--rule); padding-top: 1rem; }
 .signup input {
   font: inherit; padding: 0.45rem 0.6rem; border: 1px solid var(--rule); border-radius: 2px;
-  width: 100%; max-width: 15rem; background: #fff; margin-bottom: 0.4rem;
+  width: 100%; max-width: 15rem; background: var(--field); color: var(--ink); margin-bottom: 0.4rem;
 }
 .signup .btn { padding: 0.5rem 0.9rem; margin-top: 0; }
 
@@ -339,7 +396,7 @@ main { display: block; padding: 1.5rem 0 3rem; }
 .dir-search { flex: 1 1 16rem; }
 .dir-search input {
   width: 100%; box-sizing: border-box; font: inherit; font-size: 1rem; padding: 0.55rem 0.75rem;
-  border: 1px solid var(--rule); border-radius: 4px; background: #fff; color: var(--ink);
+  border: 1px solid var(--rule); border-radius: 4px; background: var(--field); color: var(--ink);
 }
 .dir-search input:focus { outline: 2px solid var(--link); outline-offset: 1px; }
 .dir-local { font-size: 0.9rem; white-space: nowrap; }
@@ -361,7 +418,7 @@ main { display: block; padding: 1.5rem 0 3rem; }
 }
 .dir-supporter {
   font-family: var(--font-sans); font-size: 0.66rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em;
-  color: #fff; background: var(--accent); border-radius: 3px; padding: 0.1rem 0.4rem; margin-left: 0.5rem; vertical-align: 0.15em; white-space: nowrap;
+  color: #fff; background: var(--fill); border-radius: 3px; padding: 0.1rem 0.4rem; margin-left: 0.5rem; vertical-align: 0.15em; white-space: nowrap;
 }
 a.dir-supporter, a.dir-supporter:hover { color: #fff; text-decoration: none; }
 .callout .dir-supporter { margin-left: 0; }
@@ -378,8 +435,8 @@ a.dir-supporter, a.dir-supporter:hover { color: #fff; text-decoration: none; }
 .story-figure figcaption, .prose figcaption, .prose img + em { display: block; font-family: var(--font-sans); font-size: 0.78rem; color: var(--muted); margin-top: 0.35rem; }
 .sp-join ul { margin: 0.4rem 0 0.8rem 1.1rem; padding: 0; }
 .sp-join li { margin-bottom: 0.3rem; }
-.sp-cta { display: inline-block; font-family: var(--font-sans); font-weight: 700; background: var(--accent); color: #fff; padding: 0.5rem 0.9rem; border-radius: 4px; margin-bottom: 0.4rem; }
-.sp-cta:hover { background: var(--accent-deep); color: #fff; text-decoration: none; }
+.sp-cta { display: inline-block; font-family: var(--font-sans); font-weight: 700; background: var(--fill); color: #fff; padding: 0.5rem 0.9rem; border-radius: 4px; margin-bottom: 0.4rem; }
+.sp-cta:hover { background: var(--fill-hover); color: #fff; text-decoration: none; }
 
 /* ---------- compact nav on phones ---------- */
 .nav-compact { display: none; }
