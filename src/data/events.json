@@ -335,6 +335,16 @@
       "category": "Chamber",
       "source": "https://www.waynesvilleohio.com/events",
       "note": "The Waynesville Area Chamber of Commerce holiday networking mixer. Check the Chamber events page for details."
+    },
+    {
+      "title": "Town Square Days Dance Marathon",
+      "dateISO": "2026-11-21T11:30:00-05:00",
+      "endISO": "2026-11-21T12:30:00-05:00",
+      "dateLabel": "Sat, Nov 21 · 11:30 AM–12:30 PM",
+      "venue": "Turn Out Dance Academy, 274 S. Main St., Waynesville",
+      "category": "Family",
+      "source": "https://turnoutdanceacademy.com/",
+      "note": "A public dance marathon with a 1940s theme (plus some 2000s music) during Town Square Days. No dance experience needed; prizes for one couple and one single winner. Entry is two canned goods or a $5 donation for the Waynesville Food Pantry. Arrive by 11:15 AM; no shoes in the studio, and a short waiver is required."
     }
   ]
 }
