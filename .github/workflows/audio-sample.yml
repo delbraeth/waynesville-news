@@ -1,0 +1,52 @@
+name: Make audio sample
+
+# Run by hand (Actions tab -> "Make audio sample" -> Run workflow) to hear the
+# ElevenLabs voice read a brief before the daily audio is switched on.
+# Produces a downloadable MP3 + its script as a workflow artifact. It does not
+# commit anything or touch the site. Uses about half a credit per character
+# (roughly 500-1,000 credits per run).
+#
+# Requires the repository secret ELEVENLABS_API_KEY.
+on:
+  workflow_dispatch:
+    inputs:
+      date:
+        description: "Brief date (YYYY-MM-DD). Leave blank for the latest published brief."
+        required: false
+        default: ""
+
+permissions:
+  contents: read
+
+jobs:
+  sample:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: "24"
+      - name: Require the ElevenLabs key
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+        run: |
+          if [ -z "$ELEVENLABS_API_KEY" ]; then
+            echo "::error::ELEVENLABS_API_KEY repository secret is not set."
+            exit 1
+          fi
+      - name: Generate the sample
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+          DATE: ${{ inputs.date }}
+        run: |
+          mkdir -p out
+          if [ -n "$DATE" ]; then
+            node scripts/make-audio.mjs --date "$DATE" --out out/sample.mp3
+          else
+            node scripts/make-audio.mjs --out out/sample.mp3
+          fi
+      - uses: actions/upload-artifact@v4
+        with:
+          name: audio-sample
+          path: out/
+          if-no-files-found: error

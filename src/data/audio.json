@@ -1,0 +1,8 @@
+{
+  "_note": "Daily audio brief (ElevenLabs text-to-speech). voiceId is the custom 'Waynesville News' voice. modelId: Flash costs about half a credit per character, which keeps a ~2-minute daily read inside a 30,000-credit monthly plan. maxChars hard-caps each script so a long news day can't overrun the plan. minCreditsLeft: skip the day (don't fail) if fewer credits remain. enabled: false until the daily pipeline is switched on; the sample workflow works either way. The API key lives only in the ELEVENLABS_API_KEY repository secret.",
+  "enabled": false,
+  "voiceId": "l12ajs4YORCBWJk3zF1J",
+  "modelId": "eleven_flash_v2_5",
+  "maxChars": 2000,
+  "minCreditsLeft": 1500
+}
