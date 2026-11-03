@@ -1,6 +1,6 @@
 {
   "_note": "Local business directory. Built by scripts/fetch-directory.mjs from the Waynesville Area Chamber of Commerce's public member directory (name, location, phone, website, and the Chamber's description, as published) plus hand-added listings in directory-manual.json. Contact names, emails and hours are deliberately not copied. Do not edit by hand — edit directory-manual.json and re-run `npm run refresh:directory` (or `npm run refresh:directory -- --manual-only` to merge manual edits without re-reading the Chamber site).",
-  "updated": "2026-11-03T00:53:11.662Z",
+  "updated": "2026-11-03T07:50:39.524Z",
   "sections": [
     {
       "id": "home",
@@ -226,6 +226,23 @@
       "about": "We have taken our love of American artisan and imported treasures and designed our store with you in mind. We carry everything from country living decor to the popular farmhouse look. We have pottery, textiles, iron, metal, candles, fairy garden, floral, seasonal, wood smalls…",
       "local": true,
       "from": "chamber"
+    },
+    {
+      "id": "manual-annabockrathdds",
+      "name": "Ann A Bockrath, DDS",
+      "location": "4353 E. State Route 73, Waynesville, OH 45068",
+      "phone": "513-897-0248",
+      "sections": [
+        "health"
+      ],
+      "kinds": [
+        "Dental"
+      ],
+      "source": "https://www.annbockrathdds.org/",
+      "website": "https://www.annbockrathdds.org/",
+      "about": "Family, general and cosmetic dentistry, including cleanings and checkups, children's dentistry, fillings, crowns, root canals, implants, Invisalign, whitening and emergency care. Open Monday 8 a.m.–5 p.m. and Tuesday–Thursday 7 a.m.–3 p.m.",
+      "local": true,
+      "from": "manual"
     },
     {
       "id": "chamber-724",
