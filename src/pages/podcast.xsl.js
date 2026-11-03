@@ -10,6 +10,7 @@ export async function GET() {
   const apps = [
     pod.apple && { href: pod.apple, label: "Apple Podcasts" },
     pod.spotify && { href: pod.spotify, label: "Spotify" },
+  pod.youtube && { href: pod.youtube, label: "YouTube" },
   ].filter(Boolean);
   const buttons = apps.map((a) => `<a class="btn" href="${esc(a.href)}">Listen on ${esc(a.label)}</a>`).join("\n          ");
 
