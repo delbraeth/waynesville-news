@@ -1,4 +1,4 @@
-# Waynesville Daily Brief — `waynesville.news`
+# Waynesville News — `waynesville.news`
 
 Hyperlocal daily news for **Waynesville, OH, Corwin & Warren County**. Static site built with
 [Astro](https://astro.build), deployed free on **Cloudflare Pages**. Domain & email at Spaceship.

@@ -20,7 +20,7 @@ export async function GET(context) {
     })),
   ].sort((a, b) => b.pubDate.getTime() - a.pubDate.getTime());
   return rss({
-    title: 'Waynesville Daily Brief',
+    title: 'Waynesville News',
     description: "Waynesville, two square miles, surrounded by reality since 1797.",
     site: context.site,
     items,

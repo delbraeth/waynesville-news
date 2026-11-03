@@ -101,7 +101,7 @@ async function main() {
     md,
     "",
     "---",
-    `[Read this edition on the web](${webUrl}) · [Waynesville Daily Brief](${SITE})`,
+    `[Read this edition on the web](${webUrl}) · [Waynesville News](${SITE})`,
     patreonUrl ? `\nFind the Brief useful? It's free and independent. [Support it on Patreon](${patreonUrl}).` : "",
   ].join("\n");
 

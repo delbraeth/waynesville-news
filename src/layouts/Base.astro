@@ -19,7 +19,7 @@ interface Props {
   published?: Date;    // article publish date, for share cards
 }
 const {
-  title = "Waynesville Daily Brief",
+  title = "Waynesville News",
   description = "Hyperlocal daily news for Waynesville, OH, Corwin & Warren County — schools, government, and the events that make this place worth living in.",
   dateLine,
   showInfoBar = true,
@@ -49,11 +49,11 @@ const ogImage = new URL(image || "/og.png", Astro.site);
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-    <link rel="alternate" type="application/rss+xml" title="Waynesville Daily Brief" href="/rss.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Waynesville News" href="/rss.xml" />
 
     <!-- Open Graph -->
     <meta property="og:type" content={ogType} />
-    <meta property="og:site_name" content="Waynesville Daily Brief" />
+    <meta property="og:site_name" content="Waynesville News" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />

@@ -1,4 +1,4 @@
-# Deploying Waynesville Daily Brief
+# Deploying Waynesville News
 
 **Architecture:** domain + email stay at **Spaceship** → DNS at **Cloudflare** → the static site
 auto-deploys on **Cloudflare Pages**. Everything is free except the domain (already owned).
@@ -12,7 +12,7 @@ From the unzipped project folder:
 ```bash
 git init
 git add -A
-git commit -m "Waynesville Daily Brief — Phase 1"
+git commit -m "Waynesville News — Phase 1"
 # Create an empty repo at github.com/<you>/waynesville-news, then:
 git remote add origin https://github.com/<you>/waynesville-news.git
 git branch -M main

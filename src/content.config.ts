@@ -25,7 +25,7 @@ const stories = defineCollection({
     updated: z.coerce.date().optional(),
     dek: z.string().optional(),
     section: z.string().optional(),          // e.g. "Local government" — shown as the kicker
-    byline: z.string().default("Waynesville Daily Brief"),
+    byline: z.string().default("Waynesville News"),
     image: z.string().optional(),            // path under /public, e.g. /images/stories/x.png
     imageAlt: z.string().optional(),
     imageCredit: z.string().optional(),
