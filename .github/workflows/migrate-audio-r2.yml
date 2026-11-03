@@ -1,0 +1,88 @@
+name: Migrate committed audio to R2
+
+# One-off helper for moving the daily audio briefs off the repo. Uploads every
+# public/audio/<date>.mp3 on main to the R2 bucket at audio/<date>.mp3 (the same
+# key the "Daily audio brief" workflow uses), then checks each public URL
+# serves audio/mpeg with HTTP 200 and answers a Range request with 206.
+#
+# It does NOT edit src/data/audio-index.json or delete anything: once this run
+# is green, a PR repoints the index entries at R2 and removes public/audio/.
+# Safe to re-run; objects already in R2 with the same size are skipped.
+#
+# Requires all five secrets: R2_ACCOUNT_ID, R2_ACCESS_KEY_ID,
+# R2_SECRET_ACCESS_KEY, R2_BUCKET, R2_PUBLIC_URL.
+on:
+  workflow_dispatch:
+    inputs:
+      overwrite:
+        description: "Re-upload even if the object already exists in R2"
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+concurrency:
+  group: daily-audio
+  cancel-in-progress: false
+
+jobs:
+  migrate:
+    runs-on: ubuntu-latest
+    env:
+      R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
+      AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+      R2_BUCKET: ${{ secrets.R2_BUCKET }}
+      R2_PUBLIC_URL: ${{ secrets.R2_PUBLIC_URL }}
+      AWS_DEFAULT_REGION: auto
+      # R2 doesn't need the newer AWS CLI default checksums; only send them
+      # when an operation requires it.
+      AWS_REQUEST_CHECKSUM_CALCULATION: when_required
+      AWS_RESPONSE_CHECKSUM_VALIDATION: when_required
+      OVERWRITE: ${{ inputs.overwrite && '1' || '' }}
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+      - name: Require the R2 secrets
+        run: |
+          missing=""
+          for v in R2_ACCOUNT_ID AWS_ACCESS_KEY_ID AWS_SECRET_ACCESS_KEY R2_BUCKET R2_PUBLIC_URL; do
+            [ -n "${!v}" ] || missing="$missing $v"
+          done
+          if [ -n "$missing" ]; then
+            echo "::error::Missing R2 secret(s):$missing (AWS_* map to R2_ACCESS_KEY_ID / R2_SECRET_ACCESS_KEY)."
+            exit 1
+          fi
+      - name: Upload and verify
+        run: |
+          set -euo pipefail
+          EP="https://$R2_ACCOUNT_ID.r2.cloudflarestorage.com"
+          BASE="${R2_PUBLIC_URL%/}"
+          shopt -s nullglob
+          files=(public/audio/*.mp3)
+          if [ ${#files[@]} -eq 0 ]; then echo "Nothing in public/audio/ — nothing to migrate."; exit 0; fi
+          fail=0
+          for f in "${files[@]}"; do
+            name="$(basename "$f")"
+            key="audio/$name"
+            size="$(stat -c %s "$f")"
+            remote="$(aws s3api head-object --endpoint-url "$EP" --bucket "$R2_BUCKET" --key "$key" \
+                       --query ContentLength --output text 2>/dev/null || true)"
+            if [ -z "$OVERWRITE" ] && [ "$remote" = "$size" ]; then
+              echo "skip   $key (already in R2, $size bytes)"
+            else
+              aws s3 cp "$f" "s3://$R2_BUCKET/$key" --endpoint-url "$EP" --content-type audio/mpeg --only-show-errors
+              echo "upload $key ($size bytes)"
+            fi
+            url="$BASE/$key"
+            read -r code ctype len < <(curl -sS -o /dev/null -I -w '%{http_code} %{content_type} %header{content-length}\n' "$url")
+            rcode="$(curl -sS -o /dev/null -r 0-1023 -w '%{http_code}' "$url")"
+            echo "check  $url -> $code $ctype len=$len range=$rcode"
+            if [ "$code" != "200" ] || [[ "$ctype" != audio/mpeg* ]] || { [ -n "$len" ] && [ "$len" != "$size" ]; } || [ "$rcode" != "206" ]; then
+              echo "::error::$url does not serve correctly (want 200, audio/mpeg, $size bytes, Range 206)."
+              fail=1
+            fi
+          done
+          exit $fail
