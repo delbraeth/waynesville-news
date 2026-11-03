@@ -49,7 +49,7 @@ const supporterCount = items.filter(isSupporter).length;
 const listMail = "mailto:editor@waynesville.news?subject=" + encodeURIComponent("Business directory listing");
 ---
 <Base
-  title="Local Business Directory · Waynesville Daily Brief"
+  title="Local Business Directory · Waynesville News"
   description="Plumbers, electricians, landscapers, accountants, salons, shops and restaurants serving Waynesville, Ohio — a free local business directory."
   showInfoBar={false}
 >
@@ -105,7 +105,7 @@ const listMail = "mailto:editor@waynesville.news?subject=" + encodeURIComponent(
             <li data-search={searchText(i)} data-local={i.local ? "1" : "0"} data-supporter={isSupporter(i) ? "1" : "0"}>
               <div class="dir-name">
                 {i.website ? <a href={i.website} target="_blank" rel="noopener">{i.name}</a> : i.name}
-                {isSupporter(i) && <a class="dir-supporter" href="/supporters/" title="This business helps fund the Waynesville Daily Brief">★ Supporter</a>}
+                {isSupporter(i) && <a class="dir-supporter" href="/supporters/" title="This business helps fund the Waynesville News">★ Supporter</a>}
                 {i.local && <span class="dir-badge">Waynesville area</span>}
               </div>
               {tags(i).length > 0 && <div class="dir-kinds">{tags(i).join(" · ")}</div>}
