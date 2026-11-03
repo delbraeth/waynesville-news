@@ -41,7 +41,7 @@
       "location": "4353 E. State Route 73, Waynesville, OH 45068",
       "phone": "513-897-0248",
       "website": "https://www.annbockrathdds.org/",
-      "about": "Family, general and cosmetic dentistry, including cleanings and checkups, children's dentistry, fillings, crowns, root canals, implants, Invisalign, whitening and emergency care. Open Monday 8 a.m.–5 p.m. and Tuesday–Thursday 7 a.m.–3 p.m.",
+      "about": "Also known as Waynesville Family Dentistry. Family, general and cosmetic dentistry, including cleanings and checkups, children's dentistry, fillings, crowns, root canals, implants, Invisalign, whitening and emergency care. Open Monday 8 a.m.–5 p.m. and Tuesday–Thursday 7 a.m.–3 p.m.",
       "source": "https://www.annbockrathdds.org/"
     },
     {
@@ -806,6 +806,11 @@
       "name": "Waynesville Pharmacy",
       "reason": "Closed, per the editor",
       "date": "2026-10-31"
+    },
+    {
+      "name": "Waynesville Family Dentistry",
+      "reason": "Duplicate of the Ann A Bockrath, DDS listing (same practice and phone)",
+      "date": "2026-11-03"
     }
   ]
 }

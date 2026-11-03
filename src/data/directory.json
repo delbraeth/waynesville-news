@@ -1,6 +1,6 @@
 {
   "_note": "Local business directory. Built by scripts/fetch-directory.mjs from the Waynesville Area Chamber of Commerce's public member directory (name, location, phone, website, and the Chamber's description, as published) plus hand-added listings in directory-manual.json. Contact names, emails and hours are deliberately not copied. Do not edit by hand — edit directory-manual.json and re-run `npm run refresh:directory` (or `npm run refresh:directory -- --manual-only` to merge manual edits without re-reading the Chamber site).",
-  "updated": "2026-11-03T08:14:13.234Z",
+  "updated": "2026-11-03T08:23:00.161Z",
   "sections": [
     {
       "id": "home",
@@ -240,7 +240,7 @@
       ],
       "source": "https://www.annbockrathdds.org/",
       "website": "https://www.annbockrathdds.org/",
-      "about": "Family, general and cosmetic dentistry, including cleanings and checkups, children's dentistry, fillings, crowns, root canals, implants, Invisalign, whitening and emergency care. Open Monday 8 a.m.–5 p.m. and Tuesday–Thursday 7 a.m.–3 p.m.",
+      "about": "Also known as Waynesville Family Dentistry. Family, general and cosmetic dentistry, including cleanings and checkups, children's dentistry, fillings, crowns, root canals, implants, Invisalign, whitening and emergency care. Open Monday 8 a.m.–5 p.m. and Tuesday–Thursday 7 a.m.–3 p.m.",
       "local": true,
       "from": "manual"
     },
@@ -3404,23 +3404,6 @@
       "about": "Clock shop on Miami Street.",
       "local": true,
       "from": "manual"
-    },
-    {
-      "id": "chamber-768",
-      "name": "Waynesville Family Dentistry",
-      "location": "Waynesville, Ohio",
-      "phone": "513-897-0248",
-      "sections": [
-        "health"
-      ],
-      "kinds": [
-        "Dental"
-      ],
-      "source": "https://www.waynesvilleohio.com/directory/listing/768",
-      "website": "",
-      "about": "",
-      "local": true,
-      "from": "chamber"
     },
     {
       "id": "manual-waynesvillefitness",
