@@ -1,0 +1,31 @@
+<!doctype html>
+<!--
+  Source for public/podcast-cover.png (3000x3000, the podcast cover art).
+  Render with Playwright/Chromium at a 3000x3000 viewport, deviceScaleFactor 1,
+  then screenshot the full page. Colors are the site palette (src/styles/global.css).
+-->
+<html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,600;1,6..72,400&display=block" rel="stylesheet">
+<style>
+  html,body{margin:0;width:3000px;height:3000px;overflow:hidden}
+  body{background:#fbf9f5;color:#1a1712;font-family:"Newsreader","Liberation Serif",Georgia,serif;position:relative}
+  .top{position:absolute;left:0;right:0;top:0;height:120px;background:#9e2b25}
+  .kicker{position:absolute;left:240px;top:420px;font-family:"Liberation Sans",Helvetica,Arial,sans-serif;
+    font-weight:700;font-size:96px;letter-spacing:.22em;color:#9e2b25}
+  .name{position:absolute;left:225px;top:620px;font-weight:600;font-size:470px;line-height:.9;letter-spacing:-.025em}
+  .band{position:absolute;left:0;right:0;bottom:0;height:1020px;background:#9e2b25;color:#fbf9f5}
+  .brief{position:absolute;left:240px;top:150px;font-weight:600;font-size:400px;line-height:1;letter-spacing:-.01em}
+  .wave{position:absolute;right:240px;bottom:120px;display:flex;align-items:center;gap:40px;height:220px}
+  .wave i{display:block;width:40px;background:#fbf9f5;border-radius:23px}
+  .tag{position:absolute;left:240px;bottom:150px;font-family:"Liberation Sans",Helvetica,Arial,sans-serif;
+    font-size:92px;letter-spacing:.06em;font-weight:700;opacity:.92}
+</style></head><body>
+  <div class="top"></div>
+  <div class="kicker">WAYNESVILLE, OHIO</div>
+  <div class="name">Waynesville<br>News</div>
+  <div class="band">
+    <div class="brief">Daily Brief</div>
+    <div class="wave"><i style="height:80px"></i><i style="height:170px"></i><i style="height:220px"></i><i style="height:125px"></i><i style="height:185px"></i><i style="height:90px"></i></div>
+    <div class="tag">waynesville.news</div>
+  </div>
+</body></html>
