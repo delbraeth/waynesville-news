@@ -31,8 +31,9 @@
    curl -sS -D - -o /dev/null -H "Range: bytes=0-1" https://waynesville.news/audio/2026-11-03.mp3 | grep -i -E "^HTTP|content-range"
    ```
 
-   On 2026-11-03 the site returned `200` with the whole file instead: Cloudflare served the
-   MP3 from cache without honoring the range. Fix that before submitting to Apple. The
+   On 2026-11-03 the site returned `200` with the whole file instead, and so did the
+   workers.dev preview URL. So the cause is how the Worker serves static assets, not a
+   cache rule on the waynesville.news zone. Fix that before submitting to Apple. The
    simplest fix is to set the `R2_*` secrets so the daily-audio workflow puts MP3s in R2
    behind a custom domain (for example audio.waynesville.news), which serves ranges. Then
    move the existing MP3s there and update their `url`s.
