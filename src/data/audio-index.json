@@ -2,11 +2,11 @@
   "_note": "One entry per recorded daily brief, written by the daily-audio workflow. url is the MP3; seconds is approximate. The brief page shows a Listen player when its date is here. Do not edit by hand except to remove a bad recording.",
   "items": {
     "2026-11-03": {
-      "url": "/audio/2026-11-03.mp3",
-      "seconds": 131,
+      "url": "https://audio.waynesville.news/audio/2026-11-03.mp3",
+      "seconds": 129,
       "chars": 1712,
       "model": "eleven_v4_turbo",
-      "recorded": "2026-11-03T15:21:59.753Z"
+      "recorded": "2026-11-03T15:43:54.175Z"
     }
   }
 }
