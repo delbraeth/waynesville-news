@@ -7,7 +7,8 @@ name: Migrate committed audio to R2
 #
 # It does NOT edit src/data/audio-index.json or delete anything: once this run
 # is green, a PR repoints the index entries at R2 and removes public/audio/.
-# Safe to re-run; objects already in R2 with the same size are skipped.
+# Safe to re-run; anything already in R2 (e.g. a newer re-recording by the
+# daily workflow) is left alone unless overwrite is ticked.
 #
 # Requires all five secrets: R2_ACCOUNT_ID, R2_ACCESS_KEY_ID,
 # R2_SECRET_ACCESS_KEY, R2_BUCKET, R2_PUBLIC_URL.
@@ -15,7 +16,7 @@ on:
   workflow_dispatch:
     inputs:
       overwrite:
-        description: "Re-upload even if the object already exists in R2"
+        description: "Replace objects that already exist in R2 with the repo copy"
         type: boolean
         default: false
 
@@ -70,8 +71,9 @@ jobs:
             size="$(stat -c %s "$f")"
             remote="$(aws s3api head-object --endpoint-url "$EP" --bucket "$R2_BUCKET" --key "$key" \
                        --query ContentLength --output text 2>/dev/null || true)"
-            if [ -z "$OVERWRITE" ] && [ "$remote" = "$size" ]; then
-              echo "skip   $key (already in R2, $size bytes)"
+            if [ -z "$OVERWRITE" ] && [ -n "$remote" ] && [ "$remote" != "None" ]; then
+              echo "skip   $key (already in R2, $remote bytes; repo copy $size)"
+              size="$remote"
             else
               aws s3 cp "$f" "s3://$R2_BUCKET/$key" --endpoint-url "$EP" --content-type audio/mpeg --only-show-errors
               echo "upload $key ($size bytes)"
