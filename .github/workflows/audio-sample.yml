@@ -32,6 +32,8 @@ jobs:
       - uses: actions/setup-node@v5
         with:
           node-version: "24"
+      - name: Make sure ffmpeg is available (for the intro/outro music)
+        run: command -v ffmpeg || (sudo apt-get update -q && sudo apt-get install -y -q ffmpeg)
       - name: Require the ElevenLabs key
         env:
           ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}

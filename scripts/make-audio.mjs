@@ -134,7 +134,38 @@ const res = await fetch(`${API}/text-to-speech/${cfg.voiceId}?output_format=${cf
   body: JSON.stringify({ text: script, model_id: process.env.ELEVENLABS_MODEL || cfg.modelId, ...(cfg.voiceSettings ? { voice_settings: cfg.voiceSettings } : {}) }),
 });
 if (!res.ok) { console.error(`ElevenLabs HTTP ${res.status}: ${(await res.text()).slice(0, 300)}`); process.exit(1); }
-const buf = Buffer.from(await res.arrayBuffer());
+let buf = Buffer.from(await res.arrayBuffer());
+
+// Wrap the voice in the show's intro and outro music: intro (last second faded),
+// a short pause, the voice, a pause, then the outro. Re-encoded mono at the
+// configured bitrate. If ffmpeg or either file is missing, keep the bare voice.
+const introPath = cfg.intro && new URL(cfg.intro, ROOT);
+const outroPath = cfg.outro && new URL(cfg.outro, ROOT);
+if (introPath && outroPath && existsSync(introPath) && existsSync(outroPath)) {
+  const { execFileSync } = await import("node:child_process");
+  const { mkdtemp } = await import("node:fs/promises");
+  const { tmpdir } = await import("node:os");
+  const { join } = await import("node:path");
+  const dir = await mkdtemp(join(tmpdir(), "brief-"));
+  const vPath = join(dir, "voice.mp3"), mixPath = join(dir, "mix.mp3");
+  await writeFile(vPath, buf);
+  const kbpsOut = /_(\d+)$/.exec(cfg.outputFormat || "mp3_44100_128")?.[1] || "64";
+  try {
+    const introSecs = Number(execFileSync("ffprobe", ["-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", introPath.pathname]).toString().trim()) || 6;
+    execFileSync("ffmpeg", ["-y", "-loglevel", "error",
+      "-i", introPath.pathname, "-i", vPath, "-i", outroPath.pathname,
+      "-filter_complex",
+      `[0:a]aformat=sample_rates=44100:channel_layouts=stereo,afade=t=out:st=${Math.max(0, introSecs - 1).toFixed(2)}:d=1[i];` +
+      "[1:a]aformat=sample_rates=44100:channel_layouts=stereo,adelay=400|400[v];" +
+      "[2:a]aformat=sample_rates=44100:channel_layouts=stereo,adelay=400|400[o];" +
+      "[i][v][o]concat=n=3:v=0:a=1[a]",
+      "-map", "[a]", "-ac", "1", "-b:a", `${kbpsOut}k`, mixPath]);
+    buf = await readFile(mixPath);
+    console.log("mixed with intro and outro");
+  } catch (e) {
+    console.log(`intro/outro mix failed (${e.message.split("\n")[0]}); keeping the voice only`);
+  }
+}
 await writeFile(out, buf);
 await writeFile(out.replace(/\.mp3$/, ".txt"), script + "\n");
 const kbps = Number(/_(\d+)$/.exec(cfg.outputFormat || "mp3_44100_128")?.[1] || 128);
