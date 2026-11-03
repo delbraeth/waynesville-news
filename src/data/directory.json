@@ -1,6 +1,6 @@
 {
   "_note": "Local business directory. Built by scripts/fetch-directory.mjs from the Waynesville Area Chamber of Commerce's public member directory (name, location, phone, website, and the Chamber's description, as published) plus hand-added listings in directory-manual.json. Contact names, emails and hours are deliberately not copied. Do not edit by hand — edit directory-manual.json and re-run `npm run refresh:directory` (or `npm run refresh:directory -- --manual-only` to merge manual edits without re-reading the Chamber site).",
-  "updated": "2026-11-03T08:23:00.161Z",
+  "updated": "2026-11-03T08:44:10.080Z",
   "sections": [
     {
       "id": "home",
@@ -226,6 +226,43 @@
       "about": "We have taken our love of American artisan and imported treasures and designed our store with you in mind. We carry everything from country living decor to the popular farmhouse look. We have pottery, textiles, iron, metal, candles, fairy garden, floral, seasonal, wood smalls…",
       "local": true,
       "from": "chamber"
+    },
+    {
+      "id": "manual-americanlegionpost615",
+      "name": "American Legion Post 615",
+      "location": "174 S. Fourth St., Waynesville, OH 45068",
+      "phone": "513-897-9401",
+      "sections": [
+        "other"
+      ],
+      "kinds": [
+        "Veterans"
+      ],
+      "source": "https://www.waynesvilleohio.com/directory/listing/734",
+      "website": "https://legion615.substack.com/",
+      "about": "Veterans' post with an Auxiliary, Sons of the American Legion and Legion Riders; hosts community and social events.",
+      "local": true,
+      "from": "manual"
+    },
+    {
+      "id": "manual-ameristopwaynesville",
+      "name": "Ameristop Waynesville",
+      "location": "7550 N. State Route 48, Waynesville, OH 45068",
+      "phone": "513-897-0442",
+      "sections": [
+        "shop",
+        "auto"
+      ],
+      "kinds": [
+        "Gas Station",
+        "Convenience Store",
+        "U-Haul"
+      ],
+      "source": "https://www.uhaul.com/Locations/Customer-reviews-for-Ameristop-Waynesville/003701/",
+      "website": "",
+      "about": "Gas station and convenience store, and a U-Haul rental dealer.",
+      "local": true,
+      "from": "manual"
     },
     {
       "id": "manual-annabockrathdds",
@@ -741,6 +778,60 @@
       "from": "chamber"
     },
     {
+      "id": "manual-caesarcreeklakevisitorcenter",
+      "name": "Caesar Creek Lake Visitor Center",
+      "location": "4020 N. Clarksville Rd., Waynesville, OH 45068",
+      "phone": "513-897-1050",
+      "sections": [
+        "fun"
+      ],
+      "kinds": [
+        "Visitor Center",
+        "Nature"
+      ],
+      "source": "https://www.geocaching.com/geocache/GC325R9",
+      "website": "",
+      "about": "U.S. Army Corps of Engineers visitor center near the Caesar Creek dam, with wildlife, fossil and dam-history exhibits. Fossil-collecting permits are issued here.",
+      "local": true,
+      "from": "manual"
+    },
+    {
+      "id": "manual-caesarcreeksoaringclub",
+      "name": "Caesar Creek Soaring Club",
+      "location": "5375 Elbon Rd., Waynesville, OH 45068",
+      "phone": "513-932-7627",
+      "sections": [
+        "fun"
+      ],
+      "kinds": [
+        "Gliding",
+        "Flight Instruction"
+      ],
+      "source": "https://www.soarccsc.com/",
+      "website": "https://www.soarccsc.com/",
+      "about": "Glider club flying from its own gliderport south of Waynesville, offering flight instruction and introductory glider rides.",
+      "local": true,
+      "from": "manual"
+    },
+    {
+      "id": "manual-caesarscreekpioneervillage",
+      "name": "Caesar's Creek Pioneer Village",
+      "location": "3999 Pioneer Village Rd., Waynesville, OH 45068",
+      "phone": "",
+      "sections": [
+        "fun"
+      ],
+      "kinds": [
+        "History",
+        "Museum"
+      ],
+      "source": "https://www.ccpv.us/",
+      "website": "https://www.ccpv.us/",
+      "about": "Volunteer-run village of restored pioneer-era log buildings inside Caesar Creek State Park. Grounds are open dawn to dusk; buildings open during scheduled events.",
+      "local": true,
+      "from": "manual"
+    },
+    {
       "id": "chamber-634",
       "name": "Caleb's Meadow Antiques",
       "location": "21 South Main St., Waynesville, Ohio 45068",
@@ -761,6 +852,24 @@
       "about": "",
       "local": true,
       "from": "chamber"
+    },
+    {
+      "id": "manual-campstonybrook",
+      "name": "Camp Stonybrook",
+      "location": "4491 E. State Route 73, Waynesville, OH 45068",
+      "phone": "888-350-5090",
+      "sections": [
+        "other"
+      ],
+      "kinds": [
+        "Camp",
+        "Girl Scouts"
+      ],
+      "source": "https://camp.gswo.org/properties/camp-stonybrook/",
+      "website": "https://camp.gswo.org/properties/camp-stonybrook/",
+      "about": "Girl Scouts of Western Ohio camp with lodges, tent sites, trails and a creek. Reserved by Girl Scout troops and groups; not open to the public.",
+      "local": true,
+      "from": "manual"
     },
     {
       "id": "chamber-703",
@@ -1385,6 +1494,23 @@
       "from": "chamber"
     },
     {
+      "id": "manual-foxhollowrodeo",
+      "name": "Fox Hollow Rodeo",
+      "location": "1909 E. State Route 73, Waynesville, OH 45068",
+      "phone": "513-668-4081",
+      "sections": [
+        "fun"
+      ],
+      "kinds": [
+        "Rodeo"
+      ],
+      "source": "https://foxhollowrodeo.simpletix.com/",
+      "website": "https://foxhollowrodeo.simpletix.com/",
+      "about": "Saturday-night rodeo with bull riding, barrel racing and youth events, with an indoor arena for winter. Check the website for the schedule and tickets.",
+      "local": true,
+      "from": "manual"
+    },
+    {
       "id": "chamber-604",
       "name": "Frank's Kraut - The Fremont Company",
       "location": "802 N. Front St., Fremont, OH 43420",
@@ -1415,6 +1541,24 @@
       "source": "https://frontiercamping.com",
       "website": "https://frontiercamping.com/",
       "about": "Year-round RV campground with 79 full-hookup sites on 11 wooded acres. Monthly stays only, with no tent camping or cabins.",
+      "local": true,
+      "from": "manual"
+    },
+    {
+      "id": "manual-gamedaygrilleandpatio",
+      "name": "Gameday Grille and Patio",
+      "location": "7576 State Route 48, Waynesville, OH 45068",
+      "phone": "937-886-3572",
+      "sections": [
+        "food"
+      ],
+      "kinds": [
+        "Sports Bar",
+        "Restaurant"
+      ],
+      "source": "http://gamedaygrilleandpatio.com/",
+      "website": "http://gamedaygrilleandpatio.com/",
+      "about": "Sports bar and grill with a large patio, full menu, carryout and weekend brunch.",
       "local": true,
       "from": "manual"
     },
@@ -1452,6 +1596,26 @@
       "about": "Offering private & group yoga sessions (multiple lineages), guided meditation, breath coaching, sound healing, and more in the beautiful Village of Waynesville, Ohio & worldwide online via Zoom. YACEP (Yoga Alliance Continuing Education Provider)",
       "local": true,
       "from": "chamber"
+    },
+    {
+      "id": "manual-grandmasgardens",
+      "name": "Grandma's Gardens",
+      "location": "8107 State Route 48, Waynesville, OH 45068",
+      "phone": "937-885-2740",
+      "sections": [
+        "shop",
+        "home"
+      ],
+      "kinds": [
+        "Garden Center",
+        "Gifts",
+        "Landscape Design"
+      ],
+      "source": "https://www.ohioslargestplayground.com/directory/grandmas-gardens/",
+      "website": "http://grandmasgardens.net/",
+      "about": "Family-run garden center, gift shop and landscape design business on 14 acres.",
+      "local": true,
+      "from": "manual"
     },
     {
       "id": "chamber-718",
@@ -1683,6 +1847,24 @@
       "from": "chamber"
     },
     {
+      "id": "manual-keepinitcountryfarm",
+      "name": "Keepin' It Country Farm",
+      "location": "Waynesville, OH",
+      "phone": "",
+      "sections": [
+        "fun"
+      ],
+      "kinds": [
+        "Live Music",
+        "Venue"
+      ],
+      "source": "https://keepinitcountryfarm.com/",
+      "website": "https://keepinitcountryfarm.com/",
+      "about": "Farm and barn music venue hosting country concerts; home of the Ohio Country Music Hall of Fame. Check the website for the concert schedule.",
+      "local": true,
+      "from": "manual"
+    },
+    {
       "id": "chamber-717",
       "name": "Kennel Des Les Anges",
       "location": "7678 Old Stage Rd, Waynesville, OH 45068",
@@ -1874,6 +2056,23 @@
       "source": "https://www.lillyscornermall.com",
       "website": "https://www.lillyscornermall.com/",
       "about": "7,000-square-foot antique mall with about 30 vendors. It also rents vendor booth space.",
+      "local": true,
+      "from": "manual"
+    },
+    {
+      "id": "manual-littleriverbarandgrill",
+      "name": "Little River Bar & Grill",
+      "location": "5527 Oregonia Rd., Oregonia, OH 45054",
+      "phone": "",
+      "sections": [
+        "food"
+      ],
+      "kinds": [
+        "Bar & Grill"
+      ],
+      "source": "https://www.mapquest.com/us/ohio/little-river-cafe-482580473",
+      "website": "",
+      "about": "Riverside bar and restaurant by the Little Miami bike trail, with live music and events. Formerly the Little River Cafe.",
       "local": true,
       "from": "manual"
     },
@@ -2346,6 +2545,23 @@
       "from": "manual"
     },
     {
+      "id": "manual-ozoneziplineadventuresatymcacampkern",
+      "name": "Ozone Zipline Adventures at YMCA Camp Kern",
+      "location": "5291 State Route 350, Oregonia, OH 45054",
+      "phone": "513-932-3756",
+      "sections": [
+        "fun"
+      ],
+      "kinds": [
+        "Zipline"
+      ],
+      "source": "https://www.campkern.org/groups-and-families/ozone-zipline-adventures",
+      "website": "https://www.campkern.org/groups-and-families/ozone-zipline-adventures",
+      "about": "Guided zipline canopy tour (nine ziplines) over the Little Miami River valley. Reservations required.",
+      "local": true,
+      "from": "manual"
+    },
+    {
       "id": "manual-patsplace",
       "name": "Pat's Place",
       "location": "223 N. Main St., Waynesville, OH 45068",
@@ -2606,6 +2822,24 @@
       "from": "chamber"
     },
     {
+      "id": "manual-silverspurwesternstore",
+      "name": "Silver Spur Western Store",
+      "location": "1629 E. State Route 73, Waynesville, OH 45068",
+      "phone": "513-897-9745",
+      "sections": [
+        "shop"
+      ],
+      "kinds": [
+        "Western Wear",
+        "Boots"
+      ],
+      "source": "https://silverspurwesternstore.com/",
+      "website": "https://silverspurwesternstore.com/",
+      "about": "Western-wear store, open since 1981, selling boots, work boots and western clothing.",
+      "local": true,
+      "from": "manual"
+    },
+    {
       "id": "chamber-293",
       "name": "Simpkins Foley Insurance Agency",
       "location": "1135 E. Second St. Franklin, OH 45005",
@@ -2638,6 +2872,23 @@
       "about": "A specialty grocer focused on helping create simple moments around the table through authentic, amish meats, cheeses, and more.",
       "local": true,
       "from": "chamber"
+    },
+    {
+      "id": "manual-skydivecincinnati",
+      "name": "Skydive Cincinnati",
+      "location": "4925 U.S. 42, Waynesville, OH 45068",
+      "phone": "513-282-3725",
+      "sections": [
+        "fun"
+      ],
+      "kinds": [
+        "Skydiving"
+      ],
+      "source": "https://www.skydivecincinnati.com/",
+      "website": "https://www.skydivecincinnati.com/",
+      "about": "Skydiving center at Red Stewart Airfield offering tandem jumps and skydiving training.",
+      "local": true,
+      "from": "manual"
     },
     {
       "id": "chamber-685",
@@ -3437,6 +3688,23 @@
       "source": "https://provmedgroup.com/waynesville.html",
       "website": "https://provmedgroup.com/waynesville.html",
       "about": "Family medicine practice (part of Providence Medical Group) offering check-ups, illness and injury care, well-child visits, diabetes care, geriatric care and flu shots.",
+      "local": true,
+      "from": "manual"
+    },
+    {
+      "id": "manual-waynesvillelionsclub",
+      "name": "Waynesville Lions Club",
+      "location": "Meets at the Wayne Township Administration Building, 6050 N. Clarksville Rd., Waynesville, OH 45068",
+      "phone": "",
+      "sections": [
+        "other"
+      ],
+      "kinds": [
+        "Service Club"
+      ],
+      "source": "https://e-clubhouse.org/sites/waynesvilleoh/",
+      "website": "https://e-clubhouse.org/sites/waynesvilleoh/",
+      "about": "Lions service club supporting eye-health causes, the Waynesville Food Pantry and local schools. Meets the second and fourth Tuesdays at 6:30 p.m.",
       "local": true,
       "from": "manual"
     },
