@@ -1,0 +1,39 @@
+name: Make audio jingles
+
+# Run by hand to generate intro/outro options for the audio brief (three
+# styles) with ElevenLabs music (falls back to sound effects), plus a demo of
+# each style wrapped around a recorded brief. Uploads everything as a
+# downloadable artifact; commits nothing.
+#
+# Requires the repository secret ELEVENLABS_API_KEY with music/sound-effects access.
+on:
+  workflow_dispatch:
+    inputs:
+      voice:
+        description: "Recorded brief to wrap in the demos"
+        required: false
+        default: "public/audio/2026-11-03.mp3"
+
+permissions:
+  contents: read
+
+jobs:
+  jingles:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: "24"
+      - name: Make sure ffmpeg is available
+        run: command -v ffmpeg || (sudo apt-get update -q && sudo apt-get install -y -q ffmpeg)
+      - name: Generate
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+          VOICE: ${{ inputs.voice }}
+        run: node scripts/make-jingles.mjs --out out --voice "$VOICE"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: audio-jingles
+          path: out/
+          if-no-files-found: error
