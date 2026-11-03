@@ -1,6 +1,6 @@
 {
   "_note": "Local business directory. Built by scripts/fetch-directory.mjs from the Waynesville Area Chamber of Commerce's public member directory (name, location, phone, website, and the Chamber's description, as published) plus hand-added listings in directory-manual.json. Contact names, emails and hours are deliberately not copied. Do not edit by hand — edit directory-manual.json and re-run `npm run refresh:directory` (or `npm run refresh:directory -- --manual-only` to merge manual edits without re-reading the Chamber site).",
-  "updated": "2026-11-03T08:56:39.313Z",
+  "updated": "2026-11-03T10:41:12.945Z",
   "sections": [
     {
       "id": "home",
@@ -117,6 +117,23 @@
       "about": "A & S Party Rental is Ohio's premiere rental company. We offer tent rentals, table rentals, inflatable rentals, wedding rentals, pipe, drape rentals & more.",
       "local": false,
       "from": "chamber"
+    },
+    {
+      "id": "manual-atimetodance",
+      "name": "A Time To Dance",
+      "location": "6776 Corwin Ave., Corwin (Waynesville, OH 45068)",
+      "phone": "513-629-0655",
+      "sections": [
+        "fun"
+      ],
+      "kinds": [
+        "Dance"
+      ],
+      "source": "https://www.atimetodance2015.com/",
+      "website": "https://www.atimetodance2015.com/",
+      "about": "Non-competitive dance studio in Corwin with weekly classes for ages 3 through adult, plus summer dance camps. The 2026–27 season runs September through Memorial Day weekend. Entrance is on the left side of the building.",
+      "local": true,
+      "from": "manual"
     },
     {
       "id": "manual-adamsgaragedoorservices",
