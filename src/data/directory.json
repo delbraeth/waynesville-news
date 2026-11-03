@@ -1,6 +1,6 @@
 {
   "_note": "Local business directory. Built by scripts/fetch-directory.mjs from the Waynesville Area Chamber of Commerce's public member directory (name, location, phone, website, and the Chamber's description, as published) plus hand-added listings in directory-manual.json. Contact names, emails and hours are deliberately not copied. Do not edit by hand — edit directory-manual.json and re-run `npm run refresh:directory` (or `npm run refresh:directory -- --manual-only` to merge manual edits without re-reading the Chamber site).",
-  "updated": "2026-11-03T07:50:39.524Z",
+  "updated": "2026-11-03T08:14:13.234Z",
   "sections": [
     {
       "id": "home",
@@ -1178,6 +1178,23 @@
       "from": "chamber"
     },
     {
+      "id": "manual-dollargeneral",
+      "name": "Dollar General",
+      "location": "6800 Corwin Ave., Waynesville, OH 45068",
+      "phone": "513-855-3290",
+      "sections": [
+        "shop"
+      ],
+      "kinds": [
+        "Discount Store"
+      ],
+      "source": "https://www.dollargeneral.com/store-directory/oh/waynesville",
+      "website": "https://www.dollargeneral.com/store-directory/oh/waynesville/7346",
+      "about": "Discount store with household basics, groceries, snacks, cleaning and personal-care items.",
+      "local": true,
+      "from": "manual"
+    },
+    {
       "id": "chamber-607",
       "name": "Domino's Pizza - Southern Ohio Pizza",
       "location": "368 South Main St. Waynesville, OH 45068",
@@ -1541,6 +1558,24 @@
       "about": "",
       "local": false,
       "from": "chamber"
+    },
+    {
+      "id": "manual-hometownmarketplace",
+      "name": "Hometown Marketplace",
+      "location": "60 N. Marvin Ln., Waynesville, OH 45068",
+      "phone": "513-897-5001",
+      "sections": [
+        "food",
+        "shop"
+      ],
+      "kinds": [
+        "Grocery"
+      ],
+      "source": "https://www.yellowpages.com/waynesville-oh/mip/hometown-marketplace-473345180",
+      "website": "",
+      "about": "Hometown grocery store just off Main Street, open since 1962, with a deli and hot foods alongside groceries.",
+      "local": true,
+      "from": "manual"
     },
     {
       "id": "chamber-735",
@@ -2292,6 +2327,44 @@
       "from": "manual"
     },
     {
+      "id": "manual-onceinabluemoonfarm",
+      "name": "Once in a Blue Moon Farm",
+      "location": "Waynesville, OH",
+      "phone": "",
+      "sections": [
+        "food"
+      ],
+      "kinds": [
+        "Farm",
+        "U-Pick",
+        "Seasonal"
+      ],
+      "source": "https://www.facebook.com/onceinabluemoonfarm/",
+      "website": "https://www.facebook.com/onceinabluemoonfarm/",
+      "about": "Seasonal pick-your-own farm. Closed for the season; check its Facebook page for picking dates.",
+      "local": true,
+      "from": "manual"
+    },
+    {
+      "id": "manual-patsplace",
+      "name": "Pat's Place",
+      "location": "223 N. Main St., Waynesville, OH 45068",
+      "phone": "",
+      "sections": [
+        "shop",
+        "auto"
+      ],
+      "kinds": [
+        "Gas Station",
+        "Convenience Store"
+      ],
+      "source": "Editor-confirmed (2026-11-03)",
+      "website": "",
+      "about": "Gas station and convenience store on North Main Street selling lottery tickets, candy and ice cream.",
+      "local": true,
+      "from": "manual"
+    },
+    {
       "id": "chamber-289",
       "name": "Patton Insurance Group",
       "location": "10 Royal Dr Springboro, OH 45066",
@@ -2977,6 +3050,23 @@
       "from": "manual"
     },
     {
+      "id": "manual-thriveuppercervicalcarechiropractic",
+      "name": "Thrive Upper Cervical Care Chiropractic",
+      "location": "243 S. Main St., Waynesville, OH 45068",
+      "phone": "513-897-0117",
+      "sections": [
+        "health"
+      ],
+      "kinds": [
+        "Chiropractic"
+      ],
+      "source": "https://thrivechirodr.com/",
+      "website": "https://thrivechirodr.com/",
+      "about": "Downtown chiropractic office focused on upper cervical (neck) care, also offering SoftWave therapy. Free consultations by appointment. Open Monday through Thursday; see the website for hours.",
+      "local": true,
+      "from": "manual"
+    },
+    {
       "id": "chamber-283",
       "name": "Tony Sisson, Bison Financial Group powered by Ameriprise Financial Services, LLC",
       "location": "10801 Yankee St, Washington Township",
@@ -3333,22 +3423,22 @@
       "from": "chamber"
     },
     {
-      "id": "chamber-749",
+      "id": "manual-waynesvillefitness",
       "name": "Waynesville Fitness",
-      "location": "6794 Corwin Ave, Waynesville, OH 45068",
+      "location": "6794 Corwin Ave., Waynesville, OH 45068",
       "phone": "513-262-3343",
       "sections": [
-        "health",
-        "other"
+        "health"
       ],
       "kinds": [
-        "Fitness"
+        "Fitness",
+        "Personal Training"
       ],
-      "source": "https://www.waynesvilleohio.com/directory/listing/749",
-      "website": "http://www.waynesvillefitness.com/",
-      "about": "Personal Training, Group Fitness, and 24/7 membership",
+      "source": "https://waynesvillefitness.com/",
+      "website": "https://waynesvillefitness.com/",
+      "about": "Gym open 24/7, with month-to-month memberships and no contracts, plus personal training, group fitness classes and basic nutrition guidance. Free trial offered; text the gym to get started.",
       "local": true,
-      "from": "chamber"
+      "from": "manual"
     },
     {
       "id": "manual-waynesvillehealthcare",
