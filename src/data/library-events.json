@@ -1,19 +1,7 @@
 {
   "_note": "Mary L. Cook Public Library — upcoming programs from the library's WhoFi event calendar (https://marylcook-main-oh.whofi.com/calendar/full), next 14 days. Canceled events excluded.",
-  "updated": "2026-11-02T11:41:57.288Z",
+  "updated": "2026-11-03T11:42:42.004Z",
   "items": [
-    {
-      "title": "Super Snackers",
-      "dateISO": "2026-11-02T16:00:00Z",
-      "dateLabel": "Mon · Nov 2, 4:00 PM",
-      "link": "https://marylcook-main-oh.whofi.com/calendar/event/354832/"
-    },
-    {
-      "title": "Trivia Night",
-      "dateISO": "2026-11-02T18:00:00Z",
-      "dateLabel": "Mon · Nov 2, 6:00 PM",
-      "link": "https://marylcook-main-oh.whofi.com/calendar/event/354863/"
-    },
     {
       "title": "Toddler Time",
       "dateISO": "2026-11-03T10:30:00Z",
@@ -49,6 +37,18 @@
       "dateISO": "2026-11-07T10:00:00Z",
       "dateLabel": "Sat · Nov 7, 10:00 AM",
       "link": "https://marylcook-main-oh.whofi.com/calendar/event/355955/"
+    },
+    {
+      "title": "Toddler Time",
+      "dateISO": "2026-11-10T10:30:00Z",
+      "dateLabel": "Tue · Nov 10, 10:30 AM",
+      "link": "https://marylcook-main-oh.whofi.com/calendar/event/354851/"
+    },
+    {
+      "title": "Teen Tuesday (6th-12th Grade)",
+      "dateISO": "2026-11-10T15:00:00Z",
+      "dateLabel": "Tue · Nov 10, 3:00 PM",
+      "link": "https://marylcook-main-oh.whofi.com/calendar/event/356793/"
     }
   ]
 }

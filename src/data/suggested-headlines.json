@@ -1,12 +1,26 @@
 {
   "_note": "Candidate local headlines (Google News RSS). Published as a quoted headline (or, when available, a short publisher-written excerpt) + source + link; never reproduce article body text.",
-  "updated": "2026-11-02T11:41:49.214Z",
+  "updated": "2026-11-03T11:42:35.689Z",
   "items": [
     {
-      "title": "OSP identifies man who died after single-vehicle crash in Warren County",
-      "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQcWJrc2dYRlhvclVZZEF1UGJKMDE1N3lHLXVXWDZiTjVnbEYxeW5QRVk2Ymt0clpOblFfdl96TVBmcEViM042NXJrRmlqdW9pS2Nwc2NCc2ZvQXJPUWozYXZFczRVb2VkWFFiVnYwbl9RMVRUd3pvOFJfeWlrTFUzTzZTbnBxNTdQbFdFdmktci0?oc=5",
+      "title": "Warren County, Ohio election results, Nov. 3, 2026",
+      "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPMjAwTy1sNHFXV0dTZGNJcEdJVjBfTzhUa1hESkY1M1F3TmhaU0VPYzhPZWlNMVhCZ1VjMmdHN2VKMXVNMGN6YUxUU0hsVlFXU3QyeXNtWHdXelFHczZoUzJWRExCOG5rREExdkw0Q3k2cGZyZ2x1TnNCV001UDNxVHFVQ09DNGVPQTI3Y01CNERaSE1Gb244QUdHMHlzRmg0NnY5U2JQZUlZai12WW1IRFFsNHdZdU1ZZUpnb3JB?oc=5",
+      "source": "Cincinnati Enquirer",
+      "date": "Tue, 03 Nov 2026 11:22:00 GMT"
+    },
+    {
+      "title": "ELECTION RESULTS | Warren County races",
+      "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQRFN1WXcxY21pZGpNSFlnZ0tfdkM1UGhGV3d3a2Z5bzVyZk52WG50SUtOZTJIdGVHQU1UZWxaN01Xc0NRR2tFamk4YldteHFTcWNhZTV3WHFTcHNsTzVsXzhGQV9HMTI1Yzl1Tzd5RjZUQ3BDNnpkNm9RanByZkU3YjdVZGd2Zw?oc=5",
       "source": "WLWT",
-      "date": "Thu, 29 Oct 2026 17:48:00 GMT"
+      "date": "Tue, 03 Nov 2026 10:35:57 GMT"
+    },
+    {
+      "title": "Nearly 50,000 Warren County Voters Have Already Cast Ballots Ahead of Tuesday’s Election",
+      "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNWEpHUW5Zb202dmJHYnExVm04enRILVpYQWtCLUZMN05qbzJvcVlxY3ljNXh3Z1NsSVQ0SlhBSmZvRllVeE1nTG5NbjlQT2ZiN2hDb2Q0Q05QcmdsSnhielBLQk5ldE5CeXBrZ0VrMjQyTkVtVlN4Uy1MYklKWEYydVpNeUt1eDhtamVlaGtqWm90NGdpTnN3UjVjQTBZTGp2R1J0THpJemxVR1pIUnEtdS15cnFydG1iR3J4aWhyRXJhdVk?oc=5",
+      "source": "Warren County Post",
+      "date": "Tue, 03 Nov 2026 00:58:58 GMT",
+      "sourceUrl": "https://warrencountypost.com/g/lebanon-oh/n/395074/nearly-50000-warren-county-voters-have-already-cast-ballots-ahead-tuesdays",
+      "excerpt": "Election Day Is today... Tuesday, Nov. 3!"
     },
     {
       "title": "Rider killed at Warren County rodeo died doing what he loved, friend says",
@@ -15,40 +29,30 @@
       "date": "Wed, 28 Oct 2026 20:54:00 GMT"
     },
     {
-      "title": "Sunday, Nov. 1, Is Last Day to Vote Early in Warren County",
-      "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxNemgyaUd6eXZZQkhMUUxXOFR1NUg3ci1fOTIza3RNYjM2MzRVR3U5dElSNGNjU3FJRUJhNzY0LTRJU0VSMjNoNUlWQmU2NDgybnlEZ0ZCOEN3OVBNVU4zVnFrMXRjcG5rS2haMjF4NnBHS2VSZ2s5SmhQN1RGZzFvUWVkQXZ3aUw1STZJMWVPTFU3Y01icERMN0psbEtIZw?oc=5",
-      "source": "Warren County Post",
-      "date": "Sun, 01 Nov 2026 02:06:07 GMT"
+      "title": "Motorcyclist Killed in Warren County Crash Shuts Down I-75 North for Hours",
+      "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPYnJaWl9UR1JsVk9ubGRTZUZZSzg1dE1vOFdZb1hRNEZfQkdsRS1MYTJCcFhHbVJ1Q09YbWl2OHpiVDMxNXo4UnFMdHhrblI4blVIT1hnUzlndzE1NjlMRUtiekpMTC1CUnVHWU9VeHdzbkZHMy1kOHRtOU9QOEpuYWlYVzlqSm9mNjFIdXFBQVpvSjB5cEdSQVFTWTQ4T3hQQVRzNmdaYw?oc=5",
+      "source": "Hoodline",
+      "date": "Mon, 02 Nov 2026 20:38:34 GMT",
+      "sourceUrl": "https://hoodline.com/2026/11/motorcyclist-killed-in-warren-county-crash-shuts-down-i-75-north-for-hours/",
+      "excerpt": "One person is dead after a motorcycle crash shut down I-75 North in Warren County for hours Sunday night."
     },
     {
-      "title": "Warren County candidates weigh in on taxes, data centers: Election 2026",
-      "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPbDV1UFA3LUtqdVVWYWhtUVRmcmRucThrdF81X2ZtRU5IU1I1U1l5UmsyZUpRWkVXUnR4VnVIUEJrUlA1WUZTSHNvTllKTHJaaThxX01sTlk0WG5JeC1UZmVWQ0lLVlhydjBNUzRMTTFRR09tOWFqNjg2RkNad1g3dnFNeTQ4ZE8td05UWVVtekloWENo?oc=5",
-      "source": "Dayton Daily News",
-      "date": "Tue, 27 Oct 2026 14:10:10 GMT"
+      "title": "OSP identifies man who died after single-vehicle crash in Warren County",
+      "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQcWJrc2dYRlhvclVZZEF1UGJKMDE1N3lHLXVXWDZiTjVnbEYxeW5QRVk2Ymt0clpOblFfdl96TVBmcEViM042NXJrRmlqdW9pS2Nwc2NCc2ZvQXJPUWozYXZFczRVb2VkWFFiVnYwbl9RMVRUd3pvOFJfeWlrTFUzTzZTbnBxNTdQbFdFdmktci0?oc=5",
+      "source": "WLWT",
+      "date": "Thu, 29 Oct 2026 17:48:00 GMT"
+    },
+    {
+      "title": "1 killed in Warren County crash identified",
+      "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE5vR0JKeGYzeVBRcXRLZHhJU2JxSlh4X0tTM0NYaldtaEktYXRiSWZYZFA0RWJXanJaenJ0WE9xVTZNWXJKYU9FVklPNzVjNHBvQlVLNHh0MkxDeGJaS29sblZyeFJMZ1NYaWt1UnYyUElrWDlwRkI3RnpvM0hodw?oc=5",
+      "source": "WKRC",
+      "date": "Thu, 29 Oct 2026 12:03:47 GMT"
     },
     {
       "title": "Between Dayton And Cincinnati Is Ohio's Scenic Lake Park With Fishing, Trails, And Sporty Appeal",
       "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQaTB5blhHOF92a0h6NlJ0UjdKbEpuektFUnVrU3lTeWtXZlFBcWpUY3Z2Q1V1ZWdMRlpsc1FocWZZNHdGbm9mN0dreHNBQV9uZjgxYjIxT0lLc1gzSGhkRzA1OWxoa1ZybTljd3JSYm5ZU3JNNGYtWno2OUh6ZzZoOE9HeUNIclBHMTRTaWpNeE1YNWhCRnVfQzNMM2dJQ2ZVazZ0eHE0RVA0Zy1ZNzh1U0c3R1JZT3VlTzFWMGI4QUdFS1R2OUZRZ2owcGl0U2c?oc=5",
       "source": "https://www.islands.com/",
       "date": "Sat, 31 Oct 2026 19:00:00 GMT"
-    },
-    {
-      "title": "If Butler and Warren county levies fail, some warn of cuts to important services",
-      "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOcGc4X3BxdmF2aVM2b1NFTUwxZ0tmb1NGcjFqaGJPX0c4MTNRVkR1UTNycTlzeXhycUpDRmRaZ1V2Z3lVU3k4WWlHX1dxNGtlVERrYVhxcGxjdG1ocHVoX3UyeGUwNTJVeHhoV0o5R0VMRWRXZTZ1Mm1tZFNyTE10RTNtVnI1ZnF3bGx6MkQyN1BET0J4M3dqSUhkSlZpdUU?oc=5",
-      "source": "WVXU",
-      "date": "Wed, 28 Oct 2026 09:21:00 GMT"
-    },
-    {
-      "title": "Patrons play a role in creative magic at the Ohio Renaissance Festival",
-      "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNVWwyTHc1Qy16UGRZamRtcy1TNC04bEZQSGlMLVo2MUtDeThNcGExYXVWcV9FUk02b1BtVWZ4OGFBNFB0VjhTT2I0elRkUjhvOVNMNUkwTXlpeW1HU2laR3ZLcGg4OTJDLVNpVmhnb3k3c3ZTX2VQZ3hWS0tuc29yTHkzbw?oc=5",
-      "source": "WOUB Public Media -",
-      "date": "Tue, 27 Oct 2026 22:49:32 GMT"
-    },
-    {
-      "title": "Driver Killed in Early-Morning Crash on U.S. 42 in Waynesville, Troopers Say",
-      "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOR3RTNExlaENFbTNvTEJfMXA0Y1VNUkVjTUNWODl0WG1OZGViMjQ2QWNWMlhJUkdJR0hndnNfNHV5c1QwLXZwZkhpOE45QVF1ZWlBcEJpSDYxRklUcXczdXN3YmZBd3RsTk51eURwTUQwbmVaNG1nSktWeWxFX0lrR3JxX0FsZVpGT1NDQVotTkZnc3NXZmhsbm4zYUd5cV9relBmd0I0cw?oc=5",
-      "source": "Hoodline",
-      "date": "Thu, 29 Oct 2026 18:16:27 GMT"
     }
   ]
 }
