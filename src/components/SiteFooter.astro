@@ -12,6 +12,7 @@ const pod = audioCfg.podcast ?? {};
 const podLinks = [
   pod.apple && { href: pod.apple, label: "Apple Podcasts" },
   pod.spotify && { href: pod.spotify, label: "Spotify" },
+  pod.youtube && { href: pod.youtube, label: "YouTube" },
 ].filter(Boolean) as { href: string; label: string }[];
 // `footer: false` keeps a supporter off the site-wide footer line (still on /supporters/ and badged in the directory).
 const supporterItems = (supporters.items ?? []).filter((s) => s && s.name && s.footer !== false);

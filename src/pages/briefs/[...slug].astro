@@ -21,6 +21,7 @@ const pod = audioCfg.podcast ?? {};
 const podLinks = [
   pod.apple && { href: pod.apple, label: "Apple Podcasts" },
   pod.spotify && { href: pod.spotify, label: "Spotify" },
+  pod.youtube && { href: pod.youtube, label: "YouTube" },
 ].filter(Boolean) as { href: string; label: string }[];
 
 const dateFmt = new Intl.DateTimeFormat("en-US", {
