@@ -1,12 +1,13 @@
 {
-  "_note": "One entry per recorded daily brief, written by the daily-audio workflow. url is the MP3; seconds is approximate. The brief page shows a Listen player when its date is here. Do not edit by hand except to remove a bad recording.",
+  "_note": "One entry per recorded daily brief, written by the daily-audio workflow. url is the MP3; seconds is approximate; bytes is the file size (needed by the podcast feed). The brief page shows a Listen player and the podcast feed lists an episode when its date is here. Do not edit by hand except to remove a bad recording.",
   "items": {
     "2026-11-03": {
       "url": "https://audio.waynesville.news/audio/2026-11-03.mp3",
       "seconds": 129,
       "chars": 1712,
       "model": "eleven_v4_turbo",
-      "recorded": "2026-11-03T15:43:54.175Z"
+      "recorded": "2026-11-03T15:43:54.175Z",
+      "bytes": 1030103
     }
   }
 }
