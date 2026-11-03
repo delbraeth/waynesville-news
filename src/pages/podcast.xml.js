@@ -41,6 +41,7 @@ export async function GET(context) {
     "Waynesville, Ohio's Daily Brief in about three minutes: schools, local government, events and what's happening around town in Waynesville, Corwin and Wayne Township. Every edition, with links to every source, is at waynesville.news.";
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/podcast.xsl"?>
 <rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:podcast="https://podcastindex.org/namespace/1.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Waynesville News Daily Brief</title>
