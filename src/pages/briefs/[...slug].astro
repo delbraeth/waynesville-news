@@ -3,6 +3,7 @@ import Base from "../../layouts/Base.astro";
 import { getCollection, render } from "astro:content";
 import site from "../../data/site.json";
 import SubscribeBox from "../../components/SubscribeBox.astro";
+import audioIndex from "../../data/audio-index.json";
 
 export async function getStaticPaths() {
   const briefs = (await getCollection("briefs")).filter((b) => b.data.published);
@@ -12,6 +13,8 @@ export async function getStaticPaths() {
 const { entry } = Astro.props;
 const { Content } = await render(entry);
 const patreonUrl = site.patreon?.url?.trim() || "";
+const audio = (audioIndex.items as Record<string, { url: string; seconds?: number }>)[entry.id];
+const audioLen = audio?.seconds ? `${Math.floor(audio.seconds / 60)}:${String(audio.seconds % 60).padStart(2, "0")}` : "";
 
 const dateFmt = new Intl.DateTimeFormat("en-US", {
   weekday: "long", month: "long", day: "numeric", year: "numeric",
@@ -32,6 +35,13 @@ const dateFmt = new Intl.DateTimeFormat("en-US", {
     {entry.data.demo && (
       <div class="callout">
         <strong>Sample edition.</strong> Layout only — no real names, quotes, or claims are invented.
+      </div>
+    )}
+    {audio && !entry.data.demo && (
+      <div class="brief-audio" id="listen">
+        <p class="brief-audio-label">🎧 Listen to this brief{audioLen && <> <span class="muted">({audioLen})</span></>}</p>
+        <audio controls preload="none" src={audio.url}></audio>
+        <p class="small muted">Read by an AI voice from the written brief. The text below, with links to every source, is the full edition.</p>
       </div>
     )}
     {!entry.data.demo && <SubscribeBox />}

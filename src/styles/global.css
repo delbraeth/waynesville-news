@@ -424,3 +424,9 @@ a.dir-supporter, a.dir-supporter:hover { color: #fff; text-decoration: none; }
   --pagefind-ui-font: var(--font-sans);
   margin-top: 1.2rem;
 }
+
+/* ---------- daily audio player ---------- */
+.brief-audio { margin: 1rem 0 1.4rem; padding: 0.8rem 1rem; border: 1px solid var(--rule, #ddd); border-radius: 8px; font-family: var(--font-sans); }
+.brief-audio-label { margin: 0 0 0.5rem; font-weight: 600; font-size: 0.95rem; }
+.brief-audio audio { width: 100%; }
+.brief-audio .small { margin: 0.5rem 0 0; }

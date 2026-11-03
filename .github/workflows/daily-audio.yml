@@ -1,0 +1,140 @@
+name: Daily audio brief
+
+# Records today's Daily Brief with the ElevenLabs "Waynesville News" voice
+# after the edition is promoted to main, then publishes the MP3 and lists it in
+# src/data/audio-index.json so the brief page shows a Listen player.
+#
+# Fail-safe: the written brief and the email never wait on this. Nothing to do
+# (audio disabled, no published brief, already recorded) and low credits are
+# quiet skips; a missing key or an API error turns the run red so GitHub
+# notifies the repo owner.
+#
+# Storage: if the R2_* secrets are set, the MP3 goes to Cloudflare R2;
+# otherwise it is committed to public/audio/ (about 1.4 MB a day).
+#
+# Requires ELEVENLABS_API_KEY. Optional: R2_ACCOUNT_ID, R2_ACCESS_KEY_ID,
+# R2_SECRET_ACCESS_KEY, R2_BUCKET, R2_PUBLIC_URL (e.g. https://audio.waynesville.news).
+on:
+  workflow_run:
+    workflows: ["Promote claude/daily to main"]
+    types: [completed]
+  workflow_dispatch:
+    inputs:
+      date:
+        description: "Brief date to record (YYYY-MM-DD). Blank = today (Eastern)."
+        required: false
+        default: ""
+      force:
+        description: "Re-record even if this date already has audio"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-audio
+  cancel-in-progress: false
+
+jobs:
+  record:
+    if: github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-node@v5
+        with:
+          node-version: "24"
+      - name: Check whether there is a brief to record
+        id: pre
+        env:
+          DATE: ${{ inputs.date }}
+          FORCE: ${{ inputs.force && '1' || '' }}
+        run: node scripts/audio-preflight.mjs
+      - name: Require the ElevenLabs key
+        if: steps.pre.outputs.go == 'true'
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+        run: |
+          if [ -z "$ELEVENLABS_API_KEY" ]; then
+            echo "::error::ELEVENLABS_API_KEY repository secret is not set — no audio recorded."
+            exit 1
+          fi
+      - name: Record
+        id: rec
+        if: steps.pre.outputs.go == 'true'
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+          DATE: ${{ steps.pre.outputs.date }}
+        run: |
+          mkdir -p "$RUNNER_TEMP/audio"
+          node scripts/make-audio.mjs --date "$DATE" --out "$RUNNER_TEMP/audio/$DATE.mp3"
+          if [ -f "$RUNNER_TEMP/audio/$DATE.mp3" ]; then echo "made=true" >> "$GITHUB_OUTPUT"; else echo "made=false" >> "$GITHUB_OUTPUT"; fi
+      - name: Keep the recording as a run artifact
+        if: steps.rec.outputs.made == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: audio-${{ steps.pre.outputs.date }}
+          path: ${{ runner.temp }}/audio/
+      - name: Publish and list it
+        if: steps.rec.outputs.made == 'true'
+        env:
+          DATE: ${{ steps.pre.outputs.date }}
+          R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+          R2_BUCKET: ${{ secrets.R2_BUCKET }}
+          R2_PUBLIC_URL: ${{ secrets.R2_PUBLIC_URL }}
+        run: |
+          set -euo pipefail
+          SRC="$RUNNER_TEMP/audio/$DATE.mp3"
+          if [ -n "$R2_ACCOUNT_ID" ] && [ -n "$AWS_ACCESS_KEY_ID" ] && [ -n "$R2_BUCKET" ] && [ -n "$R2_PUBLIC_URL" ]; then
+            aws s3 cp "$SRC" "s3://$R2_BUCKET/audio/$DATE.mp3" \
+              --endpoint-url "https://$R2_ACCOUNT_ID.r2.cloudflarestorage.com" \
+              --content-type audio/mpeg --region auto
+            URL="${R2_PUBLIC_URL%/}/audio/$DATE.mp3"
+            ADD=""
+          else
+            URL="/audio/$DATE.mp3"
+            ADD="public/audio/$DATE.mp3"
+          fi
+          echo "URL=$URL" >> "$GITHUB_ENV"
+          echo "ADD=$ADD" >> "$GITHUB_ENV"
+          echo "audio url: $URL"
+      - name: Commit on claude/daily and main
+        if: steps.rec.outputs.made == 'true'
+        env:
+          DATE: ${{ steps.pre.outputs.date }}
+        run: |
+          set -euo pipefail
+          git config user.name "waynesville-news-bot"
+          git config user.email "actions@users.noreply.github.com"
+          # Same pattern as the newsletter record: commit on top of
+          # claude/daily so the daily fast-forward promotion keeps working,
+          # then fast-forward main. GITHUB_TOKEN pushes don't trigger
+          # workflows, so this can't loop.
+          ok=0
+          for attempt in 1 2 3; do
+            git fetch origin claude/daily main
+            git checkout -q -f -B record origin/claude/daily
+            if ! git merge-base --is-ancestor origin/main HEAD; then
+              git merge --no-edit -m "Merge main into claude/daily" origin/main
+            fi
+            if [ -n "$ADD" ]; then mkdir -p public/audio && cp "$RUNNER_TEMP/audio/$DATE.mp3" "$ADD"; fi
+            node -e '
+              const fs = require("fs"); const p = "src/data/audio-index.json";
+              const ix = JSON.parse(fs.readFileSync(p, "utf8"));
+              const m = JSON.parse(fs.readFileSync(process.env.RUNNER_TEMP + "/audio/" + process.env.DATE + ".json", "utf8"));
+              ix.items = ix.items || {};
+              ix.items[process.env.DATE] = { url: process.env.URL, seconds: m.seconds, chars: m.chars, model: m.model, recorded: new Date().toISOString() };
+              fs.writeFileSync(p, JSON.stringify(ix, null, 2) + "\n");'
+            git add src/data/audio-index.json ${ADD:+"$ADD"}
+            git diff --cached --quiet || git commit -m "audio: record $DATE brief"
+            if git push origin HEAD:claude/daily; then ok=1; break; fi
+            echo "push attempt $attempt failed, retrying..." && sleep 5
+          done
+          if [ "$ok" != "1" ]; then echo "::error::Audio was recorded but committing it failed."; exit 1; fi
+          git push origin HEAD:main
