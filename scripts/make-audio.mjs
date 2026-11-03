@@ -47,6 +47,7 @@ export function forTheEar(s) {
     .replace(/\s&\s/g, " and ")
     .replace(/°F?/g, " degrees")
     .replace(/\s{2,}/g, " ")
+    .replace(/\s+([.,;:])/g, "$1")
     .trim();
 }
 
@@ -73,6 +74,16 @@ async function buildScript(date) {
     .split(/\n(?=\d+\.\s)/).map((l) => l.replace(/^\d+\.\s*/, "").trim()).filter(Boolean);
   for (const l of leads) parts.push(forTheEar(l));
 
+  // The editor-written narrative paragraph of a section (skips the auto-built
+  // lists, sub-headings and source lines that follow it).
+  const narrative = (name) => (section(md, name).split(/\n\s*\n/)
+    .map((p) => p.trim())
+    .find((p) => p && !/^(\*\*|-|\d+\.|Source:|Next up:|Latest posted|Also next up:|<!--)/.test(p)) || "");
+  const schools = narrative("Schools");
+  if (schools) parts.push("In the schools: " + forTheEar(schools));
+  const town = narrative("Around town");
+  if (town) parts.push("Around town: " + forTheEar(town));
+
   parts.push("That's your brief. Read the full edition, with links to every source, at waynesville dot news.");
   return parts.join("\n\n");
 }
@@ -89,6 +100,7 @@ export function cap(text, max) {
 
 const date = arg("--date") || (await latestPublishedBrief());
 const script = cap(await buildScript(date), cfg.maxChars);
+if (/\bTODO\b/.test(script)) { console.error("script still contains TODO — refusing to record"); process.exit(1); }
 
 if (args.includes("--script-only")) {
   console.log(script);
@@ -116,7 +128,7 @@ try {
   }
 } catch (e) { console.log(`credits: check failed (${e.message}); continuing`); }
 
-const res = await fetch(`${API}/text-to-speech/${cfg.voiceId}?output_format=mp3_44100_128`, {
+const res = await fetch(`${API}/text-to-speech/${cfg.voiceId}?output_format=${cfg.outputFormat || "mp3_44100_128"}`, {
   method: "POST",
   headers: { "xi-api-key": key, "Content-Type": "application/json", Accept: "audio/mpeg" },
   body: JSON.stringify({ text: script, model_id: process.env.ELEVENLABS_MODEL || cfg.modelId, ...(cfg.voiceSettings ? { voice_settings: cfg.voiceSettings } : {}) }),
@@ -125,4 +137,8 @@ if (!res.ok) { console.error(`ElevenLabs HTTP ${res.status}: ${(await res.text()
 const buf = Buffer.from(await res.arrayBuffer());
 await writeFile(out, buf);
 await writeFile(out.replace(/\.mp3$/, ".txt"), script + "\n");
-console.log(`wrote ${out} (${(buf.length / 1024).toFixed(0)} KB, ${script.length} characters, date ${date})`);
+const kbps = Number(/_(\d+)$/.exec(cfg.outputFormat || "mp3_44100_128")?.[1] || 128);
+const seconds = Math.round((buf.length * 8) / (kbps * 1000));
+const meta = { date, chars: script.length, bytes: buf.length, seconds, model: process.env.ELEVENLABS_MODEL || cfg.modelId };
+await writeFile(out.replace(/\.mp3$/, ".json"), JSON.stringify(meta, null, 2) + "\n");
+console.log(`wrote ${out} (${(buf.length / 1024).toFixed(0)} KB, ~${seconds}s, ${script.length} characters, date ${date})`);

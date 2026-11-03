@@ -1,14 +1,15 @@
 {
-  "_note": "Daily audio brief (ElevenLabs text-to-speech). voiceId is the custom 'Waynesville News' voice. modelId: eleven_multilingual_v2 (more natural; about 1 credit per character) \u2014 with a 30,000-credit monthly plan that allows roughly 1,000 characters (about a minute) a day. eleven_flash_v2_5 costs about half as much but sounds flatter. maxChars hard-caps each script so a long day can't overrun the plan. voiceSettings are passed to ElevenLabs: lower stability = more expressive, style adds delivery. minCreditsLeft: skip the day (don't fail) if fewer credits remain (needs the key's User: Read permission). enabled: false until the daily pipeline is switched on. The API key lives only in the ELEVENLABS_API_KEY repository secret.",
-  "enabled": false,
+  "_note": "Daily audio brief (ElevenLabs text-to-speech). voiceId is the custom 'Waynesville News' voice. modelId eleven_v4: on the 121k-credit plan that is about 275,000 characters a month, so a ~3-minute (3,000-character) daily script uses about a third. maxChars hard-caps each script. minCreditsLeft: skip the day (don't fail) if fewer credits remain. outputFormat mp3_44100_64 keeps a 3-minute file near 1.4 MB. voiceSettings are passed to ElevenLabs. enabled: the daily-audio workflow records only when true. The script comes from src/content/audio/<date>.txt when the daily run writes one, otherwise it is built from the brief. Recordings are listed in audio-index.json. The API key lives only in the ELEVENLABS_API_KEY repository secret.",
+  "enabled": true,
   "voiceId": "l12ajs4YORCBWJk3zF1J",
-  "modelId": "eleven_multilingual_v2",
-  "maxChars": 1000,
-  "minCreditsLeft": 1500,
+  "modelId": "eleven_v4",
+  "maxChars": 3000,
+  "minCreditsLeft": 4000,
   "voiceSettings": {
     "stability": 0.45,
     "similarity_boost": 0.8,
     "style": 0.15,
     "use_speaker_boost": true
-  }
+  },
+  "outputFormat": "mp3_44100_64"
 }
