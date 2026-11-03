@@ -120,13 +120,14 @@ function normalizeUrl(u) {
   }
 }
 
-// Social links on hand-added listings: { facebook, instagram, tiktok }.
+// Social links on hand-added listings: { facebook, instagram, tiktok, airbnb }.
 // Accepts a full URL or an @handle; anything else is dropped. Only the
 // platforms listed here render on the directory page.
 const SOCIAL_BASE = {
   facebook: "https://www.facebook.com/",
   instagram: "https://www.instagram.com/",
   tiktok: "https://www.tiktok.com/@",
+  airbnb: "https://www.airbnb.com/rooms/",
 };
 function normalizeSocial(social) {
   if (!social || typeof social !== "object") return undefined;
@@ -264,6 +265,7 @@ async function loadManual() {
       kinds: (m.kinds ?? []).map(clean).filter(Boolean),
       source: m.source ?? "",
       website: normalizeUrl(m.website ?? ""),
+      ...(/^[^\s@]+@[^\s@]+\.[a-z]{2,}$/i.test((m.email ?? "").trim()) ? { email: m.email.trim() } : {}),
       social: normalizeSocial(m.social),
       about: clean(m.about ?? ""),
       local: m.local ?? isLocal(m.location),
