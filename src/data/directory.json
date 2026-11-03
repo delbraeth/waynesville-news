@@ -1,6 +1,6 @@
 {
   "_note": "Local business directory. Built by scripts/fetch-directory.mjs from the Waynesville Area Chamber of Commerce's public member directory (name, location, phone, website, and the Chamber's description, as published) plus hand-added listings in directory-manual.json. Contact names, emails and hours are deliberately not copied. Do not edit by hand — edit directory-manual.json and re-run `npm run refresh:directory` (or `npm run refresh:directory -- --manual-only` to merge manual edits without re-reading the Chamber site).",
-  "updated": "2026-11-03T10:41:12.945Z",
+  "updated": "2026-11-03T12:52:16.614Z",
   "sections": [
     {
       "id": "home",
@@ -1635,23 +1635,24 @@
       "from": "manual"
     },
     {
-      "id": "chamber-718",
-      "name": "Green Feather Homestead and Apothecary",
-      "location": "234 High St, Waynesville, OH 45068",
+      "id": "manual-greenfeatherapothecary",
+      "name": "Green Feather Apothecary",
+      "location": "234 High St., Waynesville, OH 45068",
       "phone": "513-507-7342",
       "sections": [
-        "health",
         "shop"
       ],
       "kinds": [
-        "Pharmaceutical",
-        "Antique/Novelty"
+        "Tea",
+        "Coffee",
+        "Gifts",
+        "Herbalist"
       ],
-      "source": "https://www.waynesvilleohio.com/directory/listing/718",
+      "source": "Business owner, via the editor (2026-11-03)",
       "website": "",
-      "about": "Apothecary, herbal remedies, local honey, maple syrup, handmade gifts, teas, coffee, merino wool products.",
+      "about": "Herbalist owned. Hand-blended and rare teas, gourmet coffees, pantry items, and whimsical and handmade gifts.",
       "local": true,
-      "from": "chamber"
+      "from": "manual"
     },
     {
       "id": "chamber-665",
