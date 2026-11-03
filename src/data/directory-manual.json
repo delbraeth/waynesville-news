@@ -254,6 +254,21 @@
       "source": "https://frontiercamping.com"
     },
     {
+      "name": "Gem City Digital",
+      "sections": [
+        "shop"
+      ],
+      "kinds": [
+        "Electronics Repair",
+        "Pinball & Arcade"
+      ],
+      "location": "258 S. Main St., Waynesville, OH 45068",
+      "phone": "937-306-8840",
+      "website": "https://www.gemcitydigital.com/",
+      "about": "Downtown electronics repair shop for phones, tablets, laptops, desktops, gaming systems and drones, including circuit-board repair, microsoldering and data recovery. Also sells, services and moves pinball and arcade machines, and takes electronics for recycling. Open weekdays 9 a.m.–5 p.m. and Saturdays 10 a.m.–2 p.m.",
+      "source": "https://www.gemcitydigital.com/"
+    },
+    {
       "name": "Hailstorm Vintage",
       "sections": [
         "shop"

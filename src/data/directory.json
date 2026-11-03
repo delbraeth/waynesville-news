@@ -1,6 +1,6 @@
 {
   "_note": "Local business directory. Built by scripts/fetch-directory.mjs from the Waynesville Area Chamber of Commerce's public member directory (name, location, phone, website, and the Chamber's description, as published) plus hand-added listings in directory-manual.json. Contact names, emails and hours are deliberately not copied. Do not edit by hand — edit directory-manual.json and re-run `npm run refresh:directory` (or `npm run refresh:directory -- --manual-only` to merge manual edits without re-reading the Chamber site).",
-  "updated": "2026-11-01T06:58:21.202Z",
+  "updated": "2026-11-03T00:53:11.662Z",
   "sections": [
     {
       "id": "home",
@@ -1385,22 +1385,22 @@
       "from": "manual"
     },
     {
-      "id": "chamber-779",
+      "id": "manual-gemcitydigital",
       "name": "Gem City Digital",
-      "location": "258 South Main Street, Waynesville, Ohio 45068",
+      "location": "258 S. Main St., Waynesville, OH 45068",
       "phone": "937-306-8840",
       "sections": [
         "shop"
       ],
       "kinds": [
-        "Custom",
-        "Services"
+        "Electronics Repair",
+        "Pinball & Arcade"
       ],
-      "source": "https://www.waynesvilleohio.com/directory/listing/779",
-      "website": "http://www.gemcitydigital.com/",
-      "about": "Gem City Digital is a family-owned electronics repair and amusement machine service company proudly serving Southwest Ohio since 2013. With more than a decade in business - and over 20 years of hands-on experience in pinball and arcade repair - we specialize in electronics…",
+      "source": "https://www.gemcitydigital.com/",
+      "website": "https://www.gemcitydigital.com/",
+      "about": "Downtown electronics repair shop for phones, tablets, laptops, desktops, gaming systems and drones, including circuit-board repair, microsoldering and data recovery. Also sells, services and moves pinball and arcade machines, and takes electronics for recycling. Open weekdays 9 a.m.–5 p.m. and Saturdays 10 a.m.–2 p.m.",
       "local": true,
-      "from": "chamber"
+      "from": "manual"
     },
     {
       "id": "chamber-752",
