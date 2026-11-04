@@ -1,6 +1,6 @@
 {
   "_note": "Local business directory. Built by scripts/fetch-directory.mjs from the Waynesville Area Chamber of Commerce's public member directory (name, location, phone, website, and the Chamber's description, as published) plus hand-added listings in directory-manual.json. Contact names, emails and hours are deliberately not copied. Do not edit by hand — edit directory-manual.json and re-run `npm run refresh:directory` (or `npm run refresh:directory -- --manual-only` to merge manual edits without re-reading the Chamber site).",
-  "updated": "2026-11-04T01:06:11.663Z",
+  "updated": "2026-11-04T04:55:38.593Z",
   "sections": [
     {
       "id": "food",
@@ -769,7 +769,6 @@
       "location": "57 S. Main St., Waynesville, OH 45068",
       "phone": "513-855-1059",
       "sections": [
-        "stay",
         "food"
       ],
       "kinds": [
@@ -2462,8 +2461,7 @@
       "location": "115 S. Fourth St Waynesville, OH 45068",
       "phone": "(513) 897-1607",
       "sections": [
-        "fun",
-        "stay"
+        "fun"
       ],
       "kinds": [
         "Arts/Culture",
@@ -3030,7 +3028,6 @@
       "location": "107 S. 3rd St. Waynesville, OH 45068",
       "phone": "283-221-7970",
       "sections": [
-        "stay",
         "faith"
       ],
       "kinds": [
@@ -3343,7 +3340,6 @@
       "location": "144 S. Main Street Waynesville, OH",
       "phone": "513-897-8835",
       "sections": [
-        "stay",
         "food"
       ],
       "kinds": [
