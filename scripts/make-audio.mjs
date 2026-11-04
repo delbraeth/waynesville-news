@@ -99,6 +99,51 @@ export function cap(text, max) {
 }
 
 const date = arg("--date") || (await latestPublishedBrief());
+
+// Stories flagged for the podcast (frontmatter `podcast:` in
+// src/content/stories/*.md). `podcast: true` = the next episode recorded on or
+// within 7 days after the story's date, once; `podcast: "YYYY-MM-DD"` = that
+// day's episode. Read as podcastText if set, otherwise "title. dek". Room is
+// reserved for them under maxChars, like the sponsor tag, so the cap trims
+// the rest of the script instead.
+const fm = (t) => {
+  const m = /^---\n([\s\S]*?)\n---/.exec(t); if (!m) return {};
+  const o = {};
+  for (const line of m[1].split("\n")) {
+    const kv = /^([A-Za-z]+):\s*(.*)$/.exec(line); if (!kv) continue;
+    let v = kv[2].trim();
+    if (/^".*"$/.test(v)) { try { v = JSON.parse(v); } catch { v = v.slice(1, -1); } }
+    else if (v === "true" || v === "false") v = v === "true";
+    o[kv[1]] = v;
+  }
+  return o;
+};
+export async function flaggedStories(date, index) {
+  const dir = new URL("src/content/stories/", ROOT);
+  if (!existsSync(dir)) return [];
+  const usedElsewhere = new Set(Object.entries(index.items ?? {})
+    .filter(([d]) => d !== date).flatMap(([, v]) => v.stories ?? []));
+  const days = (a, b) => (Date.parse(`${b}T12:00:00Z`) - Date.parse(`${a}T12:00:00Z`)) / 86400000;
+  const out = [];
+  for (const f of (await readdir(dir)).filter((f) => f.endsWith(".md")).sort()) {
+    const slug = f.replace(/\.md$/, "");
+    const d = fm(await readFile(new URL(f, dir), "utf8"));
+    if (d.published !== true || !d.podcast) continue;
+    const sdate = String(d.date ?? slug.slice(0, 10)).slice(0, 10);
+    const ok = typeof d.podcast === "string"
+      ? d.podcast === date
+      : days(sdate, date) >= 0 && days(sdate, date) <= 7 && !usedElsewhere.has(slug);
+    if (!ok) continue;
+    const text = d.podcastText || [d.title, d.dek].filter(Boolean).map((x) => String(x).replace(/\.?\s*$/, ".")).join(" ");
+    out.push({ slug, text: forTheEar(text) });
+  }
+  return out;
+}
+const audioIndex = JSON.parse(await readFile(new URL("src/data/audio-index.json", ROOT), "utf8"));
+const stories = await flaggedStories(date, audioIndex);
+const storiesText = stories.length
+  ? (stories.length === 1 ? "Also from Waynesville News: " : "Also from Waynesville News today. ") + stories.map((s) => s.text).join(" ") + " The full stor" + (stories.length === 1 ? "y is" : "ies are") + " at waynesville dot news."
+  : "";
 // Audio sponsor tag: supporters.json items with an "audio" object
 // ({ line, start?, end? }). Each sponsor gets at most one spot a week; with
 // fewer than seven sponsors their spots are spread across the week (and the
@@ -132,7 +177,14 @@ const sponsor = pickSponsor(supporters, date);
 const sponsorText = sponsor
   ? forTheEar(`Today's Daily Brief is supported by ${sponsor.name}, ${sponsor.audio.line.replace(/\.?\s*$/, ".")} Learn more at waynesville dot news slash supporters.`)
   : forTheEar(cfg.housePromo || "");
-let script = cap(await buildScript(date), cfg.maxChars - (sponsorText ? sponsorText.length + 2 : 0));
+const reserved = (sponsorText ? sponsorText.length + 2 : 0) + (storiesText ? storiesText.length + 2 : 0);
+if (reserved > cfg.maxChars - 600) console.log(`warning: flagged stories and sponsor take ${reserved} of ${cfg.maxChars} characters`);
+let script = cap(await buildScript(date), cfg.maxChars - reserved);
+if (storiesText) {
+  const i = script.lastIndexOf("\n\n");
+  script = script.slice(0, i) + "\n\n" + storiesText + script.slice(i);
+  console.log(`podcast: flagged stories included: ${stories.map((s) => s.slug).join(", ")}`);
+}
 if (sponsorText) {
   const i = script.lastIndexOf("\n\n");
   script = script.slice(0, i) + "\n\n" + sponsorText + script.slice(i);
@@ -207,6 +259,6 @@ await writeFile(out, buf);
 await writeFile(out.replace(/\.mp3$/, ".txt"), script + "\n");
 const kbps = Number(/_(\d+)$/.exec(cfg.outputFormat || "mp3_44100_128")?.[1] || 128);
 const seconds = Math.round((buf.length * 8) / (kbps * 1000));
-const meta = { date, chars: script.length, bytes: buf.length, seconds, model: process.env.ELEVENLABS_MODEL || cfg.modelId, ...(sponsor ? { sponsor: sponsor.name } : {}) };
+const meta = { date, chars: script.length, bytes: buf.length, seconds, model: process.env.ELEVENLABS_MODEL || cfg.modelId, ...(sponsor ? { sponsor: sponsor.name } : {}), ...(stories.length ? { stories: stories.map((s) => s.slug) } : {}) };
 await writeFile(out.replace(/\.mp3$/, ".json"), JSON.stringify(meta, null, 2) + "\n");
 console.log(`wrote ${out} (${(buf.length / 1024).toFixed(0)} KB, ~${seconds}s, ${script.length} characters, date ${date})`);

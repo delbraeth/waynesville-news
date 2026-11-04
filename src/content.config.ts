@@ -30,6 +30,11 @@ const stories = defineCollection({
     imageAlt: z.string().optional(),
     imageCredit: z.string().optional(),
     published: z.boolean().default(false),
+    // Podcast flag: true = read this story in the next daily episode (within a
+    // week of its date); "YYYY-MM-DD" = read it in that day's episode. The
+    // episode reads podcastText if given, otherwise the title and dek.
+    podcast: z.union([z.boolean(), z.string().regex(/^\d{4}-\d{2}-\d{2}$/)]).optional(),
+    podcastText: z.string().optional(),
   }),
 });
 
