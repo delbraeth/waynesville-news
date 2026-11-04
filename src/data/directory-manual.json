@@ -51,6 +51,20 @@
         "food"
       ],
       "reason": "u-pick farm"
+    },
+    {
+      "name": "Butter Churn Cafe",
+      "sections": [
+        "food"
+      ],
+      "reason": "restaurant; Chamber also files it under venue rental"
+    },
+    {
+      "name": "The Village Family Restaurant",
+      "sections": [
+        "food"
+      ],
+      "reason": "restaurant; Chamber also files it under venue rental"
     }
   ],
   "items": [
