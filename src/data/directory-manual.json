@@ -1092,6 +1092,38 @@
         "facebook": "https://www.facebook.com/hicklehomes",
         "airbnb": "https://www.airbnb.com/rooms/1739487370735012330"
       }
+    },
+    {
+      "name": "Angie Layne / NavX Realty",
+      "sections": [
+        "realestate"
+      ],
+      "kinds": [
+        "Real Estate",
+        "Land & Farms",
+        "Luxury Homes"
+      ],
+      "location": "5233 Thomas Dr, Waynesville, OH 45068",
+      "phone": "937-403-7067",
+      "email": "angie@countrylayne.com",
+      "website": "http://countrylayne.com",
+      "about": "Realtor with NavX Realty. Southwest Ohio specialist in properties from 1 to 100+ acres, luxury homes, farms and estates. Ramsey Trusted local agent.",
+      "source": "Sent by the business to the editor, 2026-11-04"
+    },
+    {
+      "name": "Country Layne Travel",
+      "sections": [
+        "stay"
+      ],
+      "kinds": [
+        "Travel Agency"
+      ],
+      "location": "Waynesville, OH",
+      "phone": "937-403-7067",
+      "email": "travel@countrylayne.com",
+      "website": "https://countrylayne.com",
+      "about": "Travel advisors planning beach getaways, family vacations, cruises and once-in-a-lifetime adventures, with personalized service and attention to every detail.",
+      "source": "Sent by the business to the editor, 2026-11-04"
     }
   ],
   "exclude": [

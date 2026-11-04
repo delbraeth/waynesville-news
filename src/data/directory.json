@@ -1,6 +1,6 @@
 {
   "_note": "Local business directory. Built by scripts/fetch-directory.mjs from the Waynesville Area Chamber of Commerce's public member directory (name, location, phone, website, and the Chamber's description, as published) plus hand-added listings in directory-manual.json. Contact names, emails and hours are deliberately not copied. Do not edit by hand — edit directory-manual.json and re-run `npm run refresh:directory` (or `npm run refresh:directory -- --manual-only` to merge manual edits without re-reading the Chamber site).",
-  "updated": "2026-11-03T18:41:01.111Z",
+  "updated": "2026-11-04T00:51:23.263Z",
   "sections": [
     {
       "id": "home",
@@ -278,6 +278,26 @@
       "source": "https://www.uhaul.com/Locations/Customer-reviews-for-Ameristop-Waynesville/003701/",
       "website": "",
       "about": "Gas station and convenience store, and a U-Haul rental dealer.",
+      "local": true,
+      "from": "manual"
+    },
+    {
+      "id": "manual-angielaynenavxrealty",
+      "name": "Angie Layne / NavX Realty",
+      "location": "5233 Thomas Dr, Waynesville, OH 45068",
+      "phone": "937-403-7067",
+      "sections": [
+        "realestate"
+      ],
+      "kinds": [
+        "Real Estate",
+        "Land & Farms",
+        "Luxury Homes"
+      ],
+      "source": "Sent by the business to the editor, 2026-11-04",
+      "website": "http://countrylayne.com/",
+      "email": "angie@countrylayne.com",
+      "about": "Realtor with NavX Realty. Southwest Ohio specialist in properties from 1 to 100+ acres, luxury homes, farms and estates. Ramsey Trusted local agent.",
       "local": true,
       "from": "manual"
     },
@@ -1110,6 +1130,24 @@
       "about": "As the Area Agency on Aging for southwest Ohio - Butler, Clermont, Clinton, Hamilton and Warren counties, our mission is to enhance lives by assisting people to remain independent through a range of quality services.",
       "local": false,
       "from": "chamber"
+    },
+    {
+      "id": "manual-countrylaynetravel",
+      "name": "Country Layne Travel",
+      "location": "Waynesville, OH",
+      "phone": "937-403-7067",
+      "sections": [
+        "stay"
+      ],
+      "kinds": [
+        "Travel Agency"
+      ],
+      "source": "Sent by the business to the editor, 2026-11-04",
+      "website": "https://countrylayne.com/",
+      "email": "travel@countrylayne.com",
+      "about": "Travel advisors planning beach getaways, family vacations, cruises and once-in-a-lifetime adventures, with personalized service and attention to every detail.",
+      "local": true,
+      "from": "manual"
     },
     {
       "id": "chamber-750",
