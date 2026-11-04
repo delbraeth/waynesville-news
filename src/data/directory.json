@@ -1,7 +1,11 @@
 {
   "_note": "Local business directory. Built by scripts/fetch-directory.mjs from the Waynesville Area Chamber of Commerce's public member directory (name, location, phone, website, and the Chamber's description, as published) plus hand-added listings in directory-manual.json. Contact names, emails and hours are deliberately not copied. Do not edit by hand — edit directory-manual.json and re-run `npm run refresh:directory` (or `npm run refresh:directory -- --manual-only` to merge manual edits without re-reading the Chamber site).",
-  "updated": "2026-11-04T00:57:26.044Z",
+  "updated": "2026-11-04T01:03:34.729Z",
   "sections": [
+    {
+      "id": "food",
+      "label": "Restaurants, food & drink"
+    },
     {
       "id": "home",
       "label": "Home, construction & trades"
@@ -25,10 +29,6 @@
     {
       "id": "tech",
       "label": "Technology, media & printing"
-    },
-    {
-      "id": "food",
-      "label": "Restaurants, food & drink"
     },
     {
       "id": "shop",
@@ -359,8 +359,7 @@
       "location": "4753 E. Lower Springboro Rd. Waynesville, OH 45068",
       "phone": "513-897-3608",
       "sections": [
-        "other",
-        "food"
+        "other"
       ],
       "kinds": [
         "Manufacturing/Production",
@@ -924,7 +923,7 @@
       ],
       "source": "https://www.waynesvilleohio.com/directory/listing/703",
       "website": "http://www.glcbusinesslaw.com/",
-      "about": "Additional Contact: Gina Campanella, Esq. Fache, Partner, The foundation of Campanella Law Office, LLC is based upon a lifetime of experience in a small business/health care family. It was established with the single purpose of assisting both health care professionals, small…",
+      "about": "The foundation of Campanella Law Office, LLC is based upon a lifetime of experience in a small business/health care family. It was established with the single purpose of assisting both health care professionals, small…",
       "local": true,
       "from": "chamber"
     },
@@ -1166,7 +1165,7 @@
       ],
       "source": "https://www.waynesvilleohio.com/directory/listing/750",
       "website": "http://www.mycountrysideclinic.com/",
-      "about": "Additional Contact: Amanda Kratzer - 513-836-8844 At Countryside Integrative Health, we believe in treating the root cause of pain, not just the symptoms, so you can move better, feel better, and live without limitations.",
+      "about": "At Countryside Integrative Health, we believe in treating the root cause of pain, not just the symptoms, so you can move better, feel better, and live without limitations.",
       "local": false,
       "from": "chamber"
     },
@@ -1223,7 +1222,7 @@
       ],
       "source": "https://www.waynesvilleohio.com/directory/listing/688",
       "website": "http://www.culpepperlawllc.com/",
-      "about": "Additional Contact: Jesse Kufeldt, Comprehensive Estate Planning, Probate, and Medicaid Planning. Our firm was built with you in mind! We believe everyone needs some level of estate planning, so we pride ourselves on educating our clients and answering their questions and…",
+      "about": "Comprehensive Estate Planning, Probate, and Medicaid Planning. Our firm was built with you in mind! We believe everyone needs some level of estate planning, so we pride ourselves on educating our clients and answering their questions and…",
       "local": false,
       "from": "chamber"
     },
@@ -1846,7 +1845,7 @@
       ],
       "source": "https://www.waynesvilleohio.com/directory/listing/735",
       "website": "http://www.huntington.com/",
-      "about": "Additional Contact: 513-228-1223 Huntington is more than branch locations, we are partners to the individuals, families, businesses, and organizations that live, work, and play in the neighborhoods we serve. Whether you're interested in our comprehensive community plan, the…",
+      "about": "Huntington is more than branch locations, we are partners to the individuals, families, businesses, and organizations that live, work, and play in the neighborhoods we serve. Whether you're interested in our comprehensive community plan, the…",
       "local": false,
       "from": "chamber"
     },
@@ -2058,7 +2057,7 @@
       ],
       "source": "https://www.waynesvilleohio.com/directory/listing/756",
       "website": "http://lebanonpediatricdentist.com/",
-      "about": "Additional contact: Tracy Hazlett, Marketing Coordinator At Lebanon Pediatric Dentistry, we combine exceptional dental care with an environment that's full of warmth, color, and fun. Every visit is designed to make children feel comfortable, confident, and excited about…",
+      "about": "At Lebanon Pediatric Dentistry, we combine exceptional dental care with an environment that's full of warmth, color, and fun. Every visit is designed to make children feel comfortable, confident, and excited about…",
       "local": false,
       "from": "chamber"
     },
@@ -2295,7 +2294,7 @@
       ],
       "source": "https://www.waynesvilleohio.com/directory/listing/596",
       "website": "",
-      "about": "Additional Contact: Mark Reese",
+      "about": "",
       "local": true,
       "from": "chamber"
     },
@@ -2624,6 +2623,7 @@
       "location": "Waynesville, OH",
       "phone": "",
       "sections": [
+        "farm",
         "food"
       ],
       "kinds": [
@@ -2716,7 +2716,7 @@
       "location": "2580 Bobmeyer Rd. Hamilton, OH 45015",
       "phone": "(937) 461-4664",
       "sections": [
-        "food"
+        "other"
       ],
       "kinds": [
         "Other Food Services"
@@ -3003,7 +3003,7 @@
       ],
       "source": "https://www.waynesvilleohio.com/directory/listing/685",
       "website": "http://www.spiveyspremierpainting.com/",
-      "about": "Additional Contact: Donna Sue Spivey 937-474-0445 We are a Warren County interior/exterior painting & pressure washing business with over 300 A+ reviews with Angie's List and have an A+ rating with the BBB. Our pressure washing services include: sidewalks, driveways, vinyl,…",
+      "about": "We are a Warren County interior/exterior painting & pressure washing business with over 300 A+ reviews with Angie's List and have an A+ rating with the BBB. Our pressure washing services include: sidewalks, driveways, vinyl,…",
       "local": false,
       "from": "chamber"
     },
@@ -3218,7 +3218,7 @@
       ],
       "source": "https://www.waynesvilleohio.com/directory/listing/257",
       "website": "http://thelookingglass.mobi/",
-      "about": "Additional Contact: EMAIL The Looking Glass is a small home and garden boutique tucked into the historic village of Waynesville, Ohio. What you might find: Garden arbors and benches Flowers and plants in season Maidenhair ferns Homegrown vegetables in season Pottery 4 Ocean…",
+      "about": "The Looking Glass is a small home and garden boutique tucked into the historic village of Waynesville, Ohio. What you might find: Garden arbors and benches Flowers and plants in season Maidenhair ferns Homegrown vegetables in season Pottery 4 Ocean…",
       "local": true,
       "from": "chamber"
     },
@@ -3479,8 +3479,7 @@
       "location": "3677 Anthony Lane, Franklin, OH 45005",
       "phone": "937-746-6361",
       "sections": [
-        "home",
-        "food"
+        "home"
       ],
       "kinds": [
         "Construction",

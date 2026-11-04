@@ -1,5 +1,58 @@
 {
-  "_note": "Hand-added directory listings for businesses that are not Chamber members (or to override a Chamber listing with the same name). Facts only, as the business publishes them; no private individuals' names. Fields: name (required), sections (array of section ids from directory.json, e.g. [\"home\"]), kinds (e.g. [\"Plumbing\"]), location, phone, website, email, social (facebook, instagram, tiktok, airbnb), about, source (where you verified it). After editing, run `npm run refresh:directory -- --manual-only`. To remove a listing for good (closed, moved, or asked to be removed), add it to \"exclude\" as {\"name\": \"...\", \"reason\": \"...\", \"date\": \"YYYY-MM-DD\"}; this also blocks it from the Chamber data.",
+  "_note": "Hand-added directory listings for businesses that are not Chamber members (or to override a Chamber listing with the same name). Facts only, as the business publishes them; no private individuals' names. Fields: name (required), sections (array of section ids from directory.json, e.g. [\"home\"]), kinds (e.g. [\"Plumbing\"]), location, phone, website, email, social (facebook, instagram, tiktok, airbnb), about, source (where you verified it). After editing, run `npm run refresh:directory -- --manual-only`. To remove a listing for good (closed, moved, or asked to be removed), add it to \"exclude\" as {\"name\": \"...\", \"reason\": \"...\", \"date\": \"YYYY-MM-DD\"}; this also blocks it from the Chamber data. To move a listing to different sections without retyping it (e.g. a Chamber listing filed under the wrong category), add it to \"recategorize\" as {\"name\": \"...\", \"sections\": [\"...\"], \"reason\": \"...\"}.",
+  "exclude": [
+    {
+      "name": "R5 Travel Leaders",
+      "reason": "No longer in business, per the editor",
+      "date": "2026-10-31"
+    },
+    {
+      "name": "Waynesville Pharmacy",
+      "reason": "Closed, per the editor",
+      "date": "2026-10-31"
+    },
+    {
+      "name": "Waynesville Family Dentistry",
+      "reason": "Duplicate of the Ann A Bockrath, DDS listing (same practice and phone)",
+      "date": "2026-11-03"
+    },
+    {
+      "name": "Green Feather Homestead and Apothecary",
+      "reason": "Renamed: now listed as Green Feather Apothecary, per the owner",
+      "date": "2026-11-03"
+    }
+  ],
+  "recategorize": [
+    {
+      "name": "Area Wide Inc.",
+      "sections": [
+        "other"
+      ],
+      "reason": "vending distribution, not a place to eat"
+    },
+    {
+      "name": "Pepsi-Cola, G&J Pepsi-Cola of Hamilton",
+      "sections": [
+        "other"
+      ],
+      "reason": "bottler/distributor, not a place to eat"
+    },
+    {
+      "name": "Triple A Pro Services",
+      "sections": [
+        "home"
+      ],
+      "reason": "septic and grease-trap service"
+    },
+    {
+      "name": "Once in a Blue Moon Farm",
+      "sections": [
+        "farm",
+        "food"
+      ],
+      "reason": "u-pick farm"
+    }
+  ],
   "items": [
     {
       "name": "1572 Roadhouse Bar-B-Q",
@@ -1125,28 +1178,6 @@
       "website": "https://countrylayne.com",
       "about": "Travel advisors planning beach getaways, family vacations, cruises and once-in-a-lifetime adventures, with personalized service and attention to every detail.",
       "source": "Sent by the business to the editor, 2026-11-04"
-    }
-  ],
-  "exclude": [
-    {
-      "name": "R5 Travel Leaders",
-      "reason": "No longer in business, per the editor",
-      "date": "2026-10-31"
-    },
-    {
-      "name": "Waynesville Pharmacy",
-      "reason": "Closed, per the editor",
-      "date": "2026-10-31"
-    },
-    {
-      "name": "Waynesville Family Dentistry",
-      "reason": "Duplicate of the Ann A Bockrath, DDS listing (same practice and phone)",
-      "date": "2026-11-03"
-    },
-    {
-      "name": "Green Feather Homestead and Apothecary",
-      "reason": "Renamed: now listed as Green Feather Apothecary, per the owner",
-      "date": "2026-11-03"
     }
   ]
 }

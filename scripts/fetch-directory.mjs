@@ -24,15 +24,15 @@ const DELAY_MS = 1_000; // be polite: one request a second
 const TOTAL_BUDGET_MS = 12 * 60_000;
 
 // Chamber category slug prefix -> our section. Order of SECTIONS is the order
-// on the page (services first). Anything unmapped is skipped.
+// on the page (places to eat first, then services). Anything unmapped is skipped.
 export const SECTIONS = [
+  { id: "food", label: "Restaurants, food & drink" },
   { id: "home", label: "Home, construction & trades" },
   { id: "auto", label: "Automotive" },
   { id: "health", label: "Health, wellness & beauty" },
   { id: "pro", label: "Professional & financial services" },
   { id: "realestate", label: "Real estate & moving" },
   { id: "tech", label: "Technology, media & printing" },
-  { id: "food", label: "Restaurants, food & drink" },
   { id: "shop", label: "Shopping & specialty retail" },
   { id: "stay", label: "Travel, lodging & event venues" },
   { id: "fun", label: "Arts, recreation & experiences" },
@@ -305,13 +305,40 @@ async function dropDeadWebsites(items) {
   if (dead.length) console.log(`directory: removed ${dead.length} dead website link(s): ${dead.join("; ")}`);
 }
 
+// Some Chamber descriptions open with "Additional Contact: <person> <phone>".
+// We don't publish contact people, so cut that lead-in back to where the
+// business description starts; if no clear start is found, drop the text.
+export function stripContactNames(about = "", name = "") {
+  if (!/^\s*additional contacts?:/i.test(about)) return about;
+  const first = (name.match(/[A-Za-z']+/) || [""])[0];
+  const starts = [" The ", " At ", " Our ", " We ", " Comprehensive "];
+  if (first.length > 2) starts.push(` ${first} `);
+  const idx = starts.map((w) => about.indexOf(w)).filter((n) => n >= 0);
+  return idx.length ? about.slice(Math.min(...idx) + 1).trim() : "";
+}
+
+// directory-manual.json "recategorize": [{ name, sections }] moves a listing
+// (usually a Chamber one) to different sections without retyping the listing.
+async function loadRecategorize() {
+  try {
+    const m = JSON.parse(await readFile(MANUAL, "utf8"));
+    return new Map((m.recategorize ?? []).filter((r) => r?.name && Array.isArray(r.sections)).map((r) => [nameKey(r.name), r.sections]));
+  } catch { return new Map(); }
+}
+
 async function writeMerged(chamber) {
   const manual = await loadManual();
   const excluded = await loadExcludes();
   const keys = new Set(manual.map((m) => nameKey(m.name)));
+  const recat = await loadRecategorize();
   const items = [...manual, ...chamber.filter((c) => !keys.has(nameKey(c.name)))]
     .filter((i) => !excluded.has(nameKey(i.name)))
     .sort((a, b) => a.name.localeCompare(b.name));
+  for (const it of items) {
+    it.about = stripContactNames(it.about, it.name);
+    const fix = recat.get(nameKey(it.name));
+    if (fix) it.sections = fix.filter((id) => SECTIONS.some((s) => s.id === id));
+  }
   await dropDeadWebsites(items);
   await writeFile(
     OUT,
