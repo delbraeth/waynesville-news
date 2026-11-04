@@ -7,6 +7,7 @@ image: "/images/stories/2026-11-03-supreme-homes-concept-plan.jpg"
 imageAlt: "Draft concept plan map showing a proposed subdivision off Old Stage Road north of Victoria Place and Somerset Lane, with three colored blocks of lots along two new streets ending in cul-de-sacs, an existing creek along the eastern edge, and a legend listing 40 homesites in three lot sizes."
 imageCredit: "Draft concept plan dated Sept. 1, 2026, credited to Grand Communities, LLC, as included in the Oct. 19 Village Council packet."
 published: true
+podcast: true
 ---
 
 A Brookville-based builder has pitched a housing development on land off Old Stage Road that would connect to the Victoria Place subdivision, according to reports in the last two Waynesville Village Council packets. No application has been filed and Council has taken no action.
