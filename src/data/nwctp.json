@@ -1,8 +1,32 @@
 {
   "_note": "North Warren County Transportation Plan project site, tracked via ArcGIS Online's public REST API (items published by the project account, with page text). `changes` lists items first seen as new/updated/removed, newest first, dated by the Eastern date of the run that noticed them. Titles and text are as published. Built by scripts/fetch-nwctp.mjs.",
-  "updated": "2026-11-03T11:44:25.216Z",
+  "updated": "2026-11-04T11:41:33.836Z",
   "hub": "https://northwarrencountytransportationplan-burgessniple.hub.arcgis.com",
   "items": [
+    {
+      "id": "2156fd5cba494a4788d296ac591ce0c4",
+      "type": "Hub Page",
+      "title": "Public Open House",
+      "modified": "2026-11-03T21:41:33.000Z",
+      "link": "https://northwarrencountytransportationplan-burgessniple.hub.arcgis.com/pages/2156fd5cba494a4788d296ac591ce0c4",
+      "text": [
+        "Public Open House",
+        "Public Input is Important! We need your help to shape this plan. The feedback you provide will directly inform the decisions that we make moving forward. Attend the public meeting or provide feedback online on potential improvements to the transportation system in northern Warren County.",
+        "Public Open House 1 When: Wednesday, October 28, 4-6 p.m. Where: Warren County Career Center, 3525 OH-48, Lebanon, OH 45036",
+        "Below are the materials that were utilized during the in-person open house.",
+        "Documents for Download (Click the link next to image) Public Meeting Exhibit Boards — Download High Priority Locations Activity — Download I75 to I71 Connection Options — Download High Priority Locations Map — Download I75 to I71 Connection Options Handout — Download Additional High Priority Locations Handout — Download"
+      ]
+    },
+    {
+      "id": "f27bc61005b842439ceb569b82c0b9cf",
+      "type": "Hub Page",
+      "title": "Online Survey",
+      "modified": "2026-11-03T21:38:24.000Z",
+      "link": "https://northwarrencountytransportationplan-burgessniple.hub.arcgis.com/pages/f27bc61005b842439ceb569b82c0b9cf",
+      "text": [
+        "Open for response October 28th - November 17th Click here to take the survey"
+      ]
+    },
     {
       "id": "ef1881134f464a43bcd072d6ab490aa5",
       "type": "Hub Site Application",
@@ -15,19 +39,6 @@
         "This project is designed to provide a clear picture of today’s transportation conditions and help plan for the future. By studying current conditions and planning for future needs, this project aims to create transportation solutions that make travel safer, easier, and more reliable for the entire community. We will examine how people currently travel through the area, how safe the roadways are, and how the transportation system supports homes, businesses, and daily activities. The study will also consider traffic patterns, public transit options, land use, population and employment trends, and environmental factors. Using this information, we will identify areas that may need improvement and develop potential solutions. These ideas will be shared with the public during two rounds of community engagement, giving residents and stakeholders opportunities to provide feedback. Community input will play a key role in refining the proposed options, so they align with local needs and priorities. Each option will also be reviewed to understand its benefits and potential environmental impacts before any decisions are made. The North Warren County Transportation plan focuses on the northern half of Warren County, Ohio. This includes the following communities mapped and listed below:",
         "Cities Carlisle Franklin Lebanon Middletown Monroe Springboro Villages Waynesville Harveysburg Townships Clearcreek Franklin Massie Turtlecreek Washington Wayne",
         "Project Consultant Team BurgessNiple.com Headquarters 330 Rush Alley Ste 700 Columbus, Ohio 43215"
-      ]
-    },
-    {
-      "id": "2156fd5cba494a4788d296ac591ce0c4",
-      "type": "Hub Page",
-      "title": "Public Open House",
-      "modified": "2026-10-30T18:28:24.000Z",
-      "link": "https://northwarrencountytransportationplan-burgessniple.hub.arcgis.com/pages/2156fd5cba494a4788d296ac591ce0c4",
-      "text": [
-        "Public Open House",
-        "Public Input is Important! We need your help to shape this plan. The feedback you provide will directly inform the decisions that we make moving forward. Attend the public meeting or provide feedback online on potential improvements to the transportation system in northern Warren County.",
-        "Public Open House 1 When: Wednesday, October 28, 4-6 p.m. Where: Warren County Career Center, 3525 OH-48, Lebanon, OH 45036",
-        "Below are the materials that were utilized during the in-person open house."
       ]
     },
     {
@@ -87,16 +98,6 @@
       "link": "https://survey123.arcgis.com/share/8dae095ab7eb47b1a235a0a20577e5e8"
     },
     {
-      "id": "f27bc61005b842439ceb569b82c0b9cf",
-      "type": "Hub Page",
-      "title": "Online Survey",
-      "modified": "2026-10-28T14:00:12.000Z",
-      "link": "https://northwarrencountytransportationplan-burgessniple.hub.arcgis.com/pages/f27bc61005b842439ceb569b82c0b9cf",
-      "text": [
-        "Open for response October 28th - November 17th Click the link below to take the survey! https://arcg.is/1D5f5O1"
-      ]
-    },
-    {
       "id": "b92186d216474dddaba0538945984336",
       "type": "Hub Page",
       "title": "How to Participate",
@@ -137,5 +138,22 @@
       "link": "https://www.arcgis.com/home/item.html?id=f3c5e8b6fb8f4fccafb9d85e2bda681b"
     }
   ],
-  "changes": []
+  "changes": [
+    {
+      "date": "2026-11-04",
+      "kind": "updated",
+      "id": "f27bc61005b842439ceb569b82c0b9cf",
+      "type": "Hub Page",
+      "title": "Online Survey",
+      "link": "https://northwarrencountytransportationplan-burgessniple.hub.arcgis.com/pages/f27bc61005b842439ceb569b82c0b9cf"
+    },
+    {
+      "date": "2026-11-04",
+      "kind": "updated",
+      "id": "2156fd5cba494a4788d296ac591ce0c4",
+      "type": "Hub Page",
+      "title": "Public Open House",
+      "link": "https://northwarrencountytransportationplan-burgessniple.hub.arcgis.com/pages/2156fd5cba494a4788d296ac591ce0c4"
+    }
+  ]
 }

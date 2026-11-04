@@ -1,5 +1,5 @@
 {
-  "_note": "Real venues and sources, verified against each listed source on 2026-11-03; Warren County tourism calendar re-checked 2026-11-03 (daily automated refresh). Wayne Local school dates per The Spartan (September and October 2026) and the district Community Events & Activities newsletter (October 2026) and Board Meeting Recap (October 2026). Mary L. Cook Public Library programs per the library's monthly newsletter (November 2026). Recurring items (rodeo, commissioners, ghost walk) show the next occurrence. Warren County Park District events page SUSPENDED as a source per Cap'n (2026-10-03): it sits behind a Cloudflare bot challenge (403 since 2026-09-24). Do not fetch it or report it as failing; its items from the 2026-09-23 check are kept until they expire. Resume only when Cap'n provides a working source. Event notes and dateLabels are shown to readers: write them for readers (what, when, where, and a helpful pointer like \"check the event website for times\" when a detail is missing). Never put editorial or process notes in them (\"not published\", \"confirm before printing\", \"corrected from\", \"checked on\"); record corrections in the commit message instead. Tag Christmas-season community events (tree lightings, Santa visits, holiday markets, single-date light shows) with \"holiday\" so they also appear on the Holiday Lights guide.",
+  "_note": "Real venues and sources, verified against each listed source on 2026-11-04; Warren County tourism calendar re-checked 2026-11-04 (daily automated refresh). Wayne Local school dates per The Spartan (September and October 2026) and the district Community Events & Activities newsletter (October 2026) and Board Meeting Recap (October 2026). Mary L. Cook Public Library programs per the library's monthly newsletter (November 2026). Recurring items (rodeo, commissioners, ghost walk) show the next occurrence. Warren County Park District events page SUSPENDED as a source per Cap'n (2026-10-03): it sits behind a Cloudflare bot challenge (403 since 2026-09-24). Do not fetch it or report it as failing; its items from the 2026-09-23 check are kept until they expire. Resume only when Cap'n provides a working source. Event notes and dateLabels are shown to readers: write them for readers (what, when, where, and a helpful pointer like \"check the event website for times\" when a detail is missing). Never put editorial or process notes in them (\"not published\", \"confirm before printing\", \"corrected from\", \"checked on\"); record corrections in the commit message instead. Tag Christmas-season community events (tree lightings, Santa visits, holiday markets, single-date light shows) with \"holiday\" so they also appear on the Holiday Lights guide.",
   "items": [
     {
       "title": "Historical Haunts — ghost walk of downtown Waynesville",
@@ -336,6 +336,19 @@
       "category": "Family",
       "source": "https://turnoutdanceacademy.com/",
       "note": "A public dance marathon with a 1940s theme (plus some 2000s music) during Town Square Days. No dance experience needed; prizes for one couple and one single winner. Entry is two canned goods or a $5 donation for the Waynesville Food Pantry. Arrive by 11:15 AM; no shoes in the studio, and a short waiver is required."
+    },
+    {
+      "title": "The City Mercantile Christmas Market",
+      "dateISO": "2026-11-13T10:00:00-05:00",
+      "endISO": "2026-11-15T15:00:00-05:00",
+      "dateLabel": "Fri–Sun, Nov 13–15 · Fri 10 AM–3 PM, Sat 10 AM–4 PM, Sun 10 AM–3 PM",
+      "venue": "Warren County Fairgrounds, 665 N. Broadway, Lebanon",
+      "category": "Festival",
+      "tags": [
+        "holiday"
+      ],
+      "source": "http://thecitymercantile.com/lebanon",
+      "note": "Per the organizer: holiday vintage, handmade and boutique market. Admission $12 Friday, $10 Saturday, $5 Sunday; children 12 and under free. Discounted tickets online in advance."
     }
   ]
 }

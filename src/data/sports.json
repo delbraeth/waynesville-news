@@ -1,18 +1,7 @@
 {
   "_note": "Waynesville Spartans schedule + results (MaxPreps), past 7 days / next 7 days. Scraped directly from each sport's own schedule page (football, volleyball, soccer -- varsity + JV), not the school hub page, which has been observed to silently omit some contests. Scores and matchups reproduced verbatim from MaxPreps' own markup; each links to their game page.",
-  "updated": "2026-11-03T11:42:40.513Z",
+  "updated": "2026-11-04T11:41:35.042Z",
   "results": [
-    {
-      "dateISO": "2026-10-27T19:00:00",
-      "sport": "Boys Soccer",
-      "level": "Varsity",
-      "opponent": "Archbishop Alter",
-      "wayneScore": 0,
-      "opponentScore": 4,
-      "result": "L",
-      "isHome": false,
-      "link": "https://www.maxpreps.com/oh/soccer/match/archbishop-alter-knights-dayton-vs-waynesville/10-27-2026/?c=344cc8d0-ef2d-4042-ba77-56082664dded"
-    },
     {
       "dateISO": "2026-10-29T19:00:00",
       "sport": "Girls Soccer",

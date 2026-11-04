@@ -1,7 +1,21 @@
 {
   "_note": "Recent Wayne Local Schools Facebook posts via rss.app bridge. Title + link + short excerpt; the district's own words. Fail-safe: kept from last run if the bridge is down.",
-  "updated": "2026-11-03T11:41:04.176Z",
+  "updated": "2026-11-04T11:41:32.677Z",
   "items": [
+    {
+      "title": "Pumpkin spice and everything nice! Our Young Fives students celebrated fall with hands-on learning and tasty treats!…",
+      "link": "https://www.facebook.com/reel/1105173872277384/",
+      "date": "Tue, 03 Nov 2026 20:41:23 GMT",
+      "dateLabel": "Tue, Nov 3",
+      "excerpt": "From painting and carving pumpkins to exploring their size, seeds, and insides, our students had plenty to discover. They also created pumpkin handprint crafts and sampled some fall favorites, including pumpkin donuts, cookies, pie, and pumpkin roll! They're covering it all to celebrate the…"
+    },
+    {
+      "title": "It's Election Day! Polls are open today, Tuesday, November 3, from 6:30 a.m. to 7:30 p.m. For voting locations and other…",
+      "link": "https://www.facebook.com/waynelocalschools/posts/pfbid02y696ffp67pi7t4CEaBonbHwntnA7TC4791p22GkaQHViihmBT3JbGgRpfWtvJCdel",
+      "date": "Tue, 03 Nov 2026 11:00:05 GMT",
+      "dateLabel": "Tue, Nov 3",
+      "excerpt": "election information, visit the Warren County Board of Elections website: https://vote.warrencountyohio.gov/"
+    },
     {
       "title": "Last night was spectacular. The Waynesville Leo Club - 🦁Welcomed 50 New Members 🦁Inducted 6 new officers 🦁Added 8…",
       "link": "https://www.facebook.com/waynelocalschools/posts/pfbid0L6pQKghUf9SaymsehyBZHmucXMfhYEfYHq1ttoFwT5q2Bdy3HRkzPUV8zNw2zTfMl",
@@ -43,20 +57,6 @@
       "date": "Fri, 30 Oct 2026 18:28:30 GMT",
       "dateLabel": "Fri, Oct 30",
       "excerpt": ""
-    },
-    {
-      "title": "We had a BLAST today at Waynesville Elementary celebrating Halloween! Staff and students went all in!🎃👻…",
-      "link": "https://www.facebook.com/reel/1770131804104261/",
-      "date": "Fri, 30 Oct 2026 18:05:32 GMT",
-      "dateLabel": "Fri, Oct 30",
-      "excerpt": ""
-    },
-    {
-      "title": "In September, the Waynesville Leo Club was recognized by the Warren County Foundation as an Emerging Community Service…",
-      "link": "https://www.facebook.com/waynelocalschools/posts/pfbid02ScnqZijo7aHmS6kKHQvVScVdig18ZmeLgi1riCiU1nf7DX5ntHhrND1tCyNkRw6bl",
-      "date": "Thu, 29 Oct 2026 20:15:02 GMT",
-      "dateLabel": "Thu, Oct 29",
-      "excerpt": "Organization, and we couldn’t be prouder! We shared the exciting news when it happened, and recently, the Warren County Foundation shared updates from the celebration with details and photos from the event. To check out our Leos getting some well-deserved recognition, visit:…"
     }
   ]
 }

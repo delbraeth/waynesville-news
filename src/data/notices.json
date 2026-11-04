@@ -1,9 +1,18 @@
 {
   "_note": "Village of Waynesville and Wayne Township notices posted in the past 14 days. Titles and synopses verbatim from each government's own site.",
-  "updated": "2026-11-03T11:44:21.300Z",
-  "items": [],
+  "updated": "2026-11-04T11:41:34.690Z",
+  "items": [
+    {
+      "source": "township",
+      "issuer": "Wayne Township",
+      "title": "WCTA Scholarship Application 2027",
+      "dateISO": "2026-10-21",
+      "summary": "View Application",
+      "link": "https://waynetwpwarrencooh.gov/wcta-scholarship-application-2027/"
+    }
+  ],
   "sources": {
     "village": "https://www.villageofwaynesville.org/news/",
-    "township": "FAILED"
+    "township": "https://waynetwpwarrencooh.gov/"
   }
 }

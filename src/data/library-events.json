@@ -1,19 +1,7 @@
 {
   "_note": "Mary L. Cook Public Library — upcoming programs from the library's WhoFi event calendar (https://marylcook-main-oh.whofi.com/calendar/full), next 14 days. Canceled events excluded.",
-  "updated": "2026-11-03T11:42:42.004Z",
+  "updated": "2026-11-04T11:41:33.321Z",
   "items": [
-    {
-      "title": "Toddler Time",
-      "dateISO": "2026-11-03T10:30:00Z",
-      "dateLabel": "Tue · Nov 3, 10:30 AM",
-      "link": "https://marylcook-main-oh.whofi.com/calendar/event/354850/"
-    },
-    {
-      "title": "Teen Tuesday (6th-12th Grade)",
-      "dateISO": "2026-11-03T15:00:00Z",
-      "dateLabel": "Tue · Nov 3, 3:00 PM",
-      "link": "https://marylcook-main-oh.whofi.com/calendar/event/356792/"
-    },
     {
       "title": "Baby Bookworms",
       "dateISO": "2026-11-04T10:30:00Z",
@@ -49,6 +37,18 @@
       "dateISO": "2026-11-10T15:00:00Z",
       "dateLabel": "Tue · Nov 10, 3:00 PM",
       "link": "https://marylcook-main-oh.whofi.com/calendar/event/356793/"
+    },
+    {
+      "title": "Chapters Book Club",
+      "dateISO": "2026-11-10T16:00:00Z",
+      "dateLabel": "Tue · Nov 10, 4:00 PM",
+      "link": "https://marylcook-main-oh.whofi.com/calendar/event/354847/"
+    },
+    {
+      "title": "Baby Bookworms",
+      "dateISO": "2026-11-11T10:30:00Z",
+      "dateLabel": "Wed · Nov 11, 10:30 AM",
+      "link": "https://marylcook-main-oh.whofi.com/calendar/event/354859/"
     }
   ]
 }
