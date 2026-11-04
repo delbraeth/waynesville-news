@@ -1,6 +1,6 @@
 {
   "_note": "Local business directory. Built by scripts/fetch-directory.mjs from the Waynesville Area Chamber of Commerce's public member directory (name, location, phone, website, and the Chamber's description, as published) plus hand-added listings in directory-manual.json. Contact names, emails and hours are deliberately not copied. Do not edit by hand — edit directory-manual.json and re-run `npm run refresh:directory` (or `npm run refresh:directory -- --manual-only` to merge manual edits without re-reading the Chamber site).",
-  "updated": "2026-11-04T01:03:34.729Z",
+  "updated": "2026-11-04T01:06:11.663Z",
   "sections": [
     {
       "id": "food",
@@ -1403,23 +1403,23 @@
       "from": "chamber"
     },
     {
-      "id": "chamber-770",
+      "id": "manual-eandlroofing",
       "name": "E & L Roofing",
-      "location": "Centerville, Ohio",
-      "phone": "937-974-0839",
+      "location": "Centerville, OH",
+      "phone": "513-967-1982",
       "sections": [
         "home"
       ],
       "kinds": [
-        "Facilities Maintenance",
-        "Home Improvement",
-        "Repair/Maintenance"
+        "Roofing",
+        "Siding",
+        "Gutters"
       ],
-      "source": "https://www.waynesvilleohio.com/directory/listing/770",
-      "website": "http://www.elroofing.com/",
-      "about": "Established in 2009, E & L Roofing is a veteran-owned and operated company serving the Dayton area with exceptional roofing, siding, and gutter services. This full-service contractor is a locally owned business based in Centerville, specializing in both residential and…",
+      "source": "Phone and website sent by the business to the editor, 2026-11-04; details from https://elroofing.com and the Chamber listing",
+      "website": "https://elroofing.com/",
+      "about": "Veteran-owned roofing, siding and gutter contractor, in business since 2009, serving the Dayton and Cincinnati areas, including storm-damage repair.",
       "local": false,
-      "from": "chamber"
+      "from": "manual"
     },
     {
       "id": "chamber-716",
