@@ -65,6 +65,20 @@
         "food"
       ],
       "reason": "restaurant; Chamber also files it under venue rental"
+    },
+    {
+      "name": "St. Mary's Episcopal Church",
+      "sections": [
+        "faith"
+      ],
+      "reason": "church; Chamber also files it under venue rental"
+    },
+    {
+      "name": "Museum at the Friends Home",
+      "sections": [
+        "fun"
+      ],
+      "reason": "museum; Chamber also files it under travel/tourism"
     }
   ],
   "items": [
