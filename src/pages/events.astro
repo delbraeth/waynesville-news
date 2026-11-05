@@ -3,6 +3,7 @@ import Base from "../layouts/Base.astro";
 import SeasonalGuide from "../components/SeasonalGuide.astro";
 import eventsData from "../data/events.json";
 import { upcomingEvents, isLocalEvent } from "../lib/events.js";
+import { icsHref, googleCalendarUrl } from "../lib/ical.js";
 
 const upcoming = upcomingEvents();
 
@@ -21,15 +22,24 @@ const submitMail = "mailto:editor@waynesville.news?subject=" + encodeURIComponen
     <SeasonalGuide />
 
     <h3>Upcoming</h3>
-    {regionalCount > 0 && (
-      <p class="ev-filter">
+    <div class="ev-filter">
+      <fieldset class="ev-when">
+        <legend class="visually-hidden">Show</legend>
+        <label><input type="radio" name="ev-when" value="all" checked /> All upcoming</label>
+        <label><input type="radio" name="ev-when" value="weekend" /> This weekend</label>
+      </fieldset>
+      {regionalCount > 0 && (
         <label class="dir-local"><input id="ev-local" type="checkbox" /> Waynesville area only</label>
-        <span class="small ev-filter-note">Hides {regionalCount} regional {regionalCount === 1 ? "event" : "events"} elsewhere in Warren County.</span>
-      </p>
+      )}
+    </div>
+    {regionalCount > 0 && (
+      <p class="small ev-filter-note">“Waynesville area only” hides {regionalCount} regional {regionalCount === 1 ? "event" : "events"} elsewhere in Warren County.</p>
     )}
+    <p id="ev-weekend-note" class="small ev-filter-note" hidden></p>
+    <p id="ev-empty" class="ev-empty" hidden>Nothing on the calendar for this weekend yet. <a href="/events/submit/">Know of something?</a></p>
     <ul class="events" id="ev-upcoming">
       {upcoming.map((e) => (
-        <li data-local={e._local ? "1" : "0"}>
+        <li data-local={e._local ? "1" : "0"} data-start={e.dateISO} data-end={e.endISO ?? e.dateISO}>
           <div class="date">{e.dateLabel}</div>
           <div>
             <a class="ev-title" href={e.source} target="_blank" rel="noopener">{e.title}</a>
@@ -38,6 +48,11 @@ const submitMail = "mailto:editor@waynesville.news?subject=" + encodeURIComponen
             <div class="ev-meta">
               {e.venue}{e.note ? ` · ${e.note}` : ""}
               {e.registrationUrl && <> · <a href={e.registrationUrl} target="_blank" rel="noopener">Register</a></>}
+            </div>
+            <div class="ev-add">
+              Add to calendar:
+              <a href={icsHref(e)} download>Apple / Outlook</a> ·
+              <a href={googleCalendarUrl(e)} target="_blank" rel="noopener">Google</a>
             </div>
           </div>
         </li>
@@ -73,24 +88,68 @@ const submitMail = "mailto:editor@waynesville.news?subject=" + encodeURIComponen
 
 <script is:inline>
   (function () {
-    var box = document.getElementById("ev-local");
     var list = document.getElementById("ev-upcoming");
-    if (!box || !list) return;
+    if (!list) return;
+    var box = document.getElementById("ev-local");
+    var radios = document.querySelectorAll('input[name="ev-when"]');
+    var empty = document.getElementById("ev-empty");
+    var note = document.getElementById("ev-weekend-note");
     var KEY = "wn-events-local";
-    function apply() {
-      list.querySelectorAll("li").forEach(function (li) {
-        li.hidden = box.checked && li.dataset.local !== "1";
-      });
-      try { localStorage.setItem(KEY, box.checked ? "1" : "0"); } catch (e) {}
+    var items = Array.prototype.map.call(list.querySelectorAll("li"), function (li) {
+      return { li: li, local: li.dataset.local === "1", s: Date.parse(li.dataset.start), e: Date.parse(li.dataset.end) };
+    });
+
+    // "This weekend": Mon–Thu → the coming Fri–Sun; Fri/Sat/Sun → today through Sunday.
+    function weekend() {
+      var now = new Date();
+      var day = now.getDay(); // 0 Sun … 6 Sat
+      var start = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+      if (day >= 1 && day <= 4) start.setDate(start.getDate() + (5 - day));
+      var end = new Date(now.getFullYear(), now.getMonth(), now.getDate() + (day === 0 ? 0 : 7 - day), 23, 59, 59);
+      return { start: start, end: end };
     }
-    try { box.checked = localStorage.getItem(KEY) === "1"; } catch (e) {}
-    box.addEventListener("change", apply);
+    function fmt(d) { return d.toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric" }); }
+
+    function mode() {
+      var m = "all";
+      radios.forEach(function (r) { if (r.checked) m = r.value; });
+      return m;
+    }
+    function apply() {
+      var onlyLocal = box ? box.checked : false;
+      var wk = mode() === "weekend" ? weekend() : null;
+      var shown = 0;
+      items.forEach(function (it) {
+        var ok = (!onlyLocal || it.local) &&
+          (!wk || (it.s <= wk.end.getTime() && (isNaN(it.e) ? it.s : it.e) >= wk.start.getTime()));
+        it.li.hidden = !ok;
+        if (ok) shown++;
+      });
+      if (note) {
+        note.hidden = !wk;
+        if (wk) note.textContent = "Showing " + fmt(wk.start) + (wk.start.toDateString() === wk.end.toDateString() ? "" : " – " + fmt(wk.end)) + ".";
+      }
+      if (empty) empty.hidden = !(wk && shown === 0);
+      try { if (box) localStorage.setItem(KEY, box.checked ? "1" : "0"); } catch (e) {}
+    }
+
+    try { if (box) box.checked = localStorage.getItem(KEY) === "1"; } catch (e) {}
+    if (/[?&]when=weekend\b/.test(location.search) || location.hash === "#weekend") {
+      radios.forEach(function (r) { r.checked = r.value === "weekend"; });
+    }
+    if (box) box.addEventListener("change", apply);
+    radios.forEach(function (r) { r.addEventListener("change", apply); });
     apply();
   })();
 </script>
 
 <style>
-  .ev-filter { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.25rem 0.9rem; margin: 0.25rem 0 0.5rem; }
+  .ev-filter { display: flex; flex-wrap: wrap; align-items: center; gap: 0.4rem 1.25rem; margin: 0.25rem 0 0.35rem; }
+  .ev-when { border: 0; margin: 0; padding: 0; display: flex; gap: 0.9rem; font-size: 0.9rem; }
+  .ev-when label { white-space: nowrap; }
+  .ev-filter-note { margin: 0.1rem 0 0.4rem; }
+  .ev-empty { padding: 0.8rem 0; color: var(--ink-soft); }
+  .events .ev-add { font-size: 0.78rem; color: var(--muted); margin-top: 0.3rem; }
   .ev-filter-note { color: var(--muted); }
   .events li[hidden] { display: none; }
 </style>
