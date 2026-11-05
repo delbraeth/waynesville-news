@@ -40,8 +40,13 @@ reference.
 ### Up next (not started; pick when ready)
 
 1. **Low-cost calendar wins:**
-   - "Add to calendar" (.ics) links on events
-   - a "This weekend" filter on /events/
+   - ~~"Add to calendar" links~~ **Done 2026-11-05.** Each upcoming event
+     has "Apple / Outlook" (a static .ics at `/events/ical/<slug>.ics`, from
+     `src/lib/ical.js`) and "Google" links. Multi-day events are all-day
+     entries with the daily hours in the notes.
+   - ~~"This weekend" filter~~ **Done 2026-11-05.** /events/ has "All
+     upcoming / This weekend" (Mon–Thu shows the coming Fri–Sun; Fri–Sun
+     shows today through Sunday). Shareable as `/events/?when=weekend`.
    - ~~a Waynesville-area vs. regional flag on events~~ **Done 2026-11-05.**
      `isLocalEvent()` in `src/lib/events.js` reads the venue, and an event
      can override it with `local: true|false`. /events/ has a "Waynesville
