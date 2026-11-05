@@ -2,11 +2,12 @@
 import Base from "../layouts/Base.astro";
 import SeasonalGuide from "../components/SeasonalGuide.astro";
 import eventsData from "../data/events.json";
-import { upcomingEvents } from "../lib/events.js";
+import { upcomingEvents, isLocalEvent } from "../lib/events.js";
 
 const upcoming = upcomingEvents();
 
-const evergreen = eventsData.items.filter((e) => e.evergreen);
+const evergreen = eventsData.items.filter((e) => e.evergreen).map((e) => ({ ...e, _local: isLocalEvent(e) }));
+const regionalCount = upcoming.filter((e) => !e._local).length;
 const submitMail = "mailto:editor@waynesville.news?subject=" + encodeURIComponent("Event for the calendar");
 ---
 <Base title="Events & Things to Do · Waynesville News" showInfoBar={false}>
@@ -20,13 +21,20 @@ const submitMail = "mailto:editor@waynesville.news?subject=" + encodeURIComponen
     <SeasonalGuide />
 
     <h3>Upcoming</h3>
-    <ul class="events">
+    {regionalCount > 0 && (
+      <p class="ev-filter">
+        <label class="dir-local"><input id="ev-local" type="checkbox" /> Waynesville area only</label>
+        <span class="small ev-filter-note">Hides {regionalCount} regional {regionalCount === 1 ? "event" : "events"} elsewhere in Warren County.</span>
+      </p>
+    )}
+    <ul class="events" id="ev-upcoming">
       {upcoming.map((e) => (
-        <li>
+        <li data-local={e._local ? "1" : "0"}>
           <div class="date">{e.dateLabel}</div>
           <div>
             <a class="ev-title" href={e.source} target="_blank" rel="noopener">{e.title}</a>
             <span class="ev-cat">{e.category}</span>
+            {!e._local && <span class="dir-badge ev-regional">Regional</span>}
             <div class="ev-meta">
               {e.venue}{e.note ? ` · ${e.note}` : ""}
               {e.registrationUrl && <> · <a href={e.registrationUrl} target="_blank" rel="noopener">Register</a></>}
@@ -44,6 +52,7 @@ const submitMail = "mailto:editor@waynesville.news?subject=" + encodeURIComponen
           <div>
             <a class="ev-title" href={e.source} target="_blank" rel="noopener">{e.title}</a>
             <span class="ev-cat">{e.category}</span>
+            {!e._local && <span class="dir-badge ev-regional">Regional</span>}
             <div class="ev-meta">{e.venue}{e.note ? ` · ${e.note}` : ""}</div>
           </div>
         </li>
@@ -61,3 +70,27 @@ const submitMail = "mailto:editor@waynesville.news?subject=" + encodeURIComponen
     </div>
   </div>
 </Base>
+
+<script is:inline>
+  (function () {
+    var box = document.getElementById("ev-local");
+    var list = document.getElementById("ev-upcoming");
+    if (!box || !list) return;
+    var KEY = "wn-events-local";
+    function apply() {
+      list.querySelectorAll("li").forEach(function (li) {
+        li.hidden = box.checked && li.dataset.local !== "1";
+      });
+      try { localStorage.setItem(KEY, box.checked ? "1" : "0"); } catch (e) {}
+    }
+    try { box.checked = localStorage.getItem(KEY) === "1"; } catch (e) {}
+    box.addEventListener("change", apply);
+    apply();
+  })();
+</script>
+
+<style>
+  .ev-filter { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.25rem 0.9rem; margin: 0.25rem 0 0.5rem; }
+  .ev-filter-note { color: var(--muted); }
+  .events li[hidden] { display: none; }
+</style>
