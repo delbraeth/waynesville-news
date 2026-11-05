@@ -156,6 +156,29 @@ roads, closings, elections. It isn't arranged as a permanent reference page.
   ongoing upkeep. They work best tied to partners who keep them current,
   such as the Chamber, the library and the Lions.
 
+## Editor's notes
+
+**2026-11-05: nonprofit listing.** The editor thinks a nonprofit and community
+organization listing could be a good resource, separate from the business
+directory. Examples:
+
+- athletic boosters
+- the Waynesville Lions Club
+- the food pantry
+- youth sports leagues
+
+A first version could be built like the business directory:
+
+- **Format:** a hand-kept JSON list with name, what the group does, how to
+  reach it (public contact only), and when it meets.
+- **Links:** each group links to its own page and its upcoming events on the
+  calendar.
+- **Volunteering:** an optional "how to help" line. This would make it the
+  seed of the volunteer board without a separate moderation queue.
+- **Sources:** many groups already appear in events.json, for example the
+  Lions breakfast, the Friends of the Library auction and the food pantry
+  beneficiaries.
+
 **Suggested order:**
 
 1. The low-cost wins plus the Taylor's phone fix.
