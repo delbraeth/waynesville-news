@@ -1,9 +1,90 @@
 # Planning note: community hub review (2026-11-05)
 
-**Status:** Parked for future planning. Nothing here has been built or approved.
-Saved at the editor's request so a future session can pick it up. The editor
-said: "Don't act on this, but consider the feedback when developing a future
-plan for site enhancements."
+**Status:** Living roadmap, last updated 2026-11-05. The first build is done
+(see "Roadmap" below). The review that started it is kept further down for
+reference.
+
+## Roadmap
+
+### Done (2026-11-05)
+
+- **Directory data fix.** Taylor's Coffee & Creamery: the `999-999-9999`
+  placeholder phone is gone and the website was added, via an override in
+  `directory-manual.json` (#93).
+- **Event submission form**, live at `/events/submit/` (#94). It builds a
+  pre-filled email to editor@waynesville.news. The editor handles submissions
+  by hand; the daily routine does not read them (editor's decision).
+- **Resource center**, live at `/resources/` as "Living in Waynesville" (#95,
+  #96, #98). Data is in `src/data/resources.json`. It covers:
+  - emergency and non-emergency numbers
+  - village office, utility billing, trash, leaf pickup, streets and the water
+    report
+  - Wayne Township
+  - county offices
+  - Community help: the Waynesville Food Pantry and Wayne Township Community
+    Aid, and the Warren County Community Services senior programs
+  - each Wayne Local building's office line, plus athletics and transportation
+  - the library
+
+  Every entry shows its source and the date it was checked. The page is linked
+  from the masthead ("Resources") and the footer.
+- **Announcement story** for the resource center and event form, flagged for
+  the podcast (#97).
+- **Directory cleanup:** Prairie View Storage added, and marked as outside the
+  Waynesville area (#87, #88). Valentino Design removed because its website is
+  dead (#89, #90).
+- **Events:** the CrossView flyers are hosted under `public/images/events/` as
+  sources, used when the organizer has no web page (#91, #92). Private contact
+  names are cropped out of flyers.
+
+### Up next (not started; pick when ready)
+
+1. **Low-cost calendar wins:**
+   - "Add to calendar" (.ics) links on events
+   - a "This weekend" filter on /events/
+   - a Waynesville-area vs. regional flag on events, like the directory's
+     `local` flag
+2. **Structured data** (schema.org Event and NewsArticle) for search engines.
+3. **Resource center upkeep:**
+   - a monthly link check, reusing `dropDeadWebsites` from
+     `scripts/fetch-directory.mjs`
+   - re-verify entries older than about 90 days
+4. **Homepage refresh:** give events, the directory, resources and "submit an
+   event" clear entry points above the brief archive. Do this after the pieces
+   above exist.
+
+### Ideas (parked)
+
+- **Church directory.** Editor's idea, 2026-11-05. A dedicated page listing
+  Waynesville-area churches with:
+  - address
+  - service times, as each church publishes them
+  - website
+  - ministries open to the community, such as food pantries, community
+    meals, youth groups, VBS and holiday services
+
+  Starting point: the business directory already has a "Churches & places of
+  worship" (`faith`) section with 5 listings, 4 of them in the area:
+  Crossview Christian, Lifehouse, St. Augustine Parish, St. Mary's Episcopal
+  and Waynesville United Methodist. A church page could build on those and
+  add the churches that aren't Chamber members. CrossView's site is
+  crossview.cc.
+
+  Notes:
+  - Service times change, so each entry needs a verified date.
+  - Name only churches, not clergy or members, unless the church's own page
+    names its pastor in that role.
+  - Church events already flow into the events calendar.
+- **Nonprofit and community organization listing.** Editor's idea; see
+  "Editor's notes" below. Could share a format with the church directory.
+- **Volunteer board.** Could grow out of the nonprofit listing's "how to
+  help" lines.
+- **Directory photos as a supporter perk.** Discussed 2026-11-05, not
+  decided.
+- **Human review on sensitive days** (elections, public safety, allegations).
+  This needs an explicit decision from the editor.
+- **Visitor guide and government issue trackers.** From the review's
+  Phase 3.
 
 ## Source
 
@@ -191,7 +272,7 @@ below.
 
 ## Next build: resource center and event submission form
 
-Scoped 2026-11-05. Not started.
+Scoped 2026-11-05. **Built and live 2026-11-05** (see Roadmap above).
 
 ### Resource center (`/resources/`, "Living in Waynesville")
 
