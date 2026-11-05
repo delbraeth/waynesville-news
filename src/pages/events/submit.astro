@@ -1,0 +1,178 @@
+---
+import Base from "../../layouts/Base.astro";
+
+const EDITOR = "editor@waynesville.news";
+const plainMail = `mailto:${EDITOR}?subject=${encodeURIComponent("Event submission")}`;
+---
+<Base title="Submit an Event · Waynesville News" showInfoBar={false}>
+  <div class="reading">
+    <p class="kicker">Events</p>
+    <h1>Submit an event</h1>
+    <p class="dek">
+      Church supper, club meeting, fundraiser, school or scout event? Events open to the public in and around
+      Waynesville are listed free on our <a href="/events/">events calendar</a>.
+    </p>
+
+    <p>
+      Fill in what you know and press <strong>Create email</strong>. Your email app opens with everything filled in;
+      just hit send. The editor reviews every submission before it goes on the calendar, usually within a day or two.
+    </p>
+
+    <form id="event-submit" class="submit-form" novalidate>
+      <label>Event name <span class="req" aria-hidden="true">*</span>
+        <input name="title" required autocomplete="off" placeholder="e.g. Pancake Breakfast &amp; Craft Bazaar" />
+      </label>
+
+      <div class="row">
+        <label>Date <span class="req" aria-hidden="true">*</span>
+          <input name="date" type="date" required />
+        </label>
+        <label>End date <span class="hint">(if more than one day)</span>
+          <input name="endDate" type="date" />
+        </label>
+      </div>
+
+      <div class="row">
+        <label>Start time
+          <input name="start" type="time" />
+        </label>
+        <label>End time
+          <input name="end" type="time" />
+        </label>
+      </div>
+
+      <label>Place and address <span class="req" aria-hidden="true">*</span>
+        <input name="venue" required placeholder="e.g. Waynesville Elementary, 659 Dayton Rd" />
+      </label>
+
+      <label>Who's putting it on <span class="req" aria-hidden="true">*</span>
+        <input name="organizer" required placeholder="Group, church, school or business" />
+      </label>
+
+      <label>Cost
+        <input name="cost" placeholder="Free, $5, $8 adults / $5 kids…" />
+      </label>
+
+      <label>Link to the event <span class="hint">(website or Facebook post, if there is one)</span>
+        <input name="link" type="url" inputmode="url" placeholder="https://" />
+      </label>
+
+      <label>About the event
+        <textarea name="about" rows="5" placeholder="What it is, who it's for, what it benefits, anything people should bring or know."></textarea>
+      </label>
+
+      <label>Public contact <span class="hint">(a phone, email or page readers can use; we'll publish this)</span>
+        <input name="publicContact" />
+      </label>
+
+      <label>Your name and how to reach you <span class="hint">(for the editor only; not published)</span>
+        <input name="submitter" autocomplete="name email" />
+      </label>
+
+      <p class="small">
+        Have a flyer? Attach it to the email before you send. Flyers help us confirm the details.
+      </p>
+
+      <p id="submit-error" class="submit-error" role="alert" hidden></p>
+
+      <button class="btn" type="submit">Create email</button>
+    </form>
+
+    <noscript>
+      <p>
+        This form needs JavaScript. You can also <a href={plainMail}>email the editor</a> at
+        <strong>{EDITOR}</strong> with the event's name, date and time, place, organizer, cost and a link or flyer.
+      </p>
+    </noscript>
+
+    <p class="small">
+      Prefer plain email? Write to <a href={plainMail}>{EDITOR}</a> with the subject “Event submission.”
+      We list events that are open to the public. We don't publish private phone numbers or the names of private
+      individuals without asking, and we may shorten descriptions.
+    </p>
+
+    <p class="small"><a href="/events/">← Events calendar</a></p>
+  </div>
+</Base>
+
+<script is:inline define:vars={{ EDITOR }}>
+  (function () {
+    var form = document.getElementById("event-submit");
+    var err = document.getElementById("submit-error");
+    if (!form) return;
+    function fmtDate(v) {
+      if (!v) return "";
+      var p = v.split("-");
+      var d = new Date(Number(p[0]), Number(p[1]) - 1, Number(p[2]));
+      return d.toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric", year: "numeric" });
+    }
+    function fmtTime(v) {
+      if (!v) return "";
+      var p = v.split(":"), h = Number(p[0]), m = p[1];
+      var ap = h >= 12 ? "PM" : "AM";
+      h = h % 12 || 12;
+      return h + ":" + m + " " + ap;
+    }
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var f = form.elements;
+      var missing = [];
+      [["title", "event name"], ["date", "date"], ["venue", "place"], ["organizer", "organizer"]].forEach(function (r) {
+        if (!f[r[0]].value.trim()) missing.push(r[1]);
+      });
+      if (missing.length) {
+        err.textContent = "Please fill in: " + missing.join(", ") + ".";
+        err.hidden = false;
+        f[missing[0] === "event name" ? "title" : missing[0] === "place" ? "venue" : missing[0]].focus();
+        return;
+      }
+      err.hidden = true;
+      var when = fmtDate(f.date.value);
+      if (f.endDate.value && f.endDate.value !== f.date.value) when += " – " + fmtDate(f.endDate.value);
+      var time = [fmtTime(f.start.value), fmtTime(f.end.value)].filter(Boolean).join(" – ");
+      var lines = [
+        "EVENT SUBMISSION",
+        "",
+        "Event: " + f.title.value.trim(),
+        "Date: " + when,
+        "Time: " + (time || "(not given)"),
+        "Place: " + f.venue.value.trim(),
+        "Organizer: " + f.organizer.value.trim(),
+        "Cost: " + (f.cost.value.trim() || "(not given)"),
+        "Link: " + (f.link.value.trim() || "(none)"),
+        "Public contact: " + (f.publicContact.value.trim() || "(none)"),
+        "",
+        "About:",
+        f.about.value.trim() || "(none)",
+        "",
+        "Submitted by (not for publication): " + (f.submitter.value.trim() || "(not given)"),
+        "",
+        "(Attach a flyer if you have one.)"
+      ];
+      var subject = "Event submission: " + f.title.value.trim() + " (" + fmtDate(f.date.value) + ")";
+      window.location.href = "mailto:" + EDITOR +
+        "?subject=" + encodeURIComponent(subject) +
+        "&body=" + encodeURIComponent(lines.join("\n"));
+    });
+  })();
+</script>
+
+<style>
+  .submit-form { display: grid; gap: 0.9rem; margin: 1.25rem 0; max-width: 36rem; }
+  .submit-form label { display: block; font-weight: 600; font-size: 0.95rem; }
+  .submit-form label > input,
+  .submit-form label > textarea { display: block; margin-top: 0.3rem; }
+  .submit-form .row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.9rem; }
+  .submit-form input,
+  .submit-form textarea {
+    font: inherit; font-weight: 400; padding: 0.55rem 0.65rem; border: 1px solid var(--rule); border-radius: 2px;
+    background: var(--field); color: var(--ink); width: 100%; box-sizing: border-box; min-height: 2.75rem;
+  }
+  .submit-form input:focus-visible,
+  .submit-form textarea:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+  .submit-form .hint { font-weight: 400; color: var(--muted); font-size: 0.85rem; }
+  .submit-form .req { color: var(--accent); }
+  .submit-form .btn { justify-self: start; }
+  .submit-error { color: var(--accent); font-weight: 600; margin: 0; }
+  @media (max-width: 30rem) { .submit-form .row { grid-template-columns: 1fr; } }
+</style>
