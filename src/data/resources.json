@@ -281,6 +281,38 @@
           ],
           "source": "https://www.waynesvilleohiofoodpantry.org/",
           "verified": "2026-11-05"
+        },
+        {
+          "name": "Elderly Services Program (Warren County Community Services)",
+          "what": "Help for Warren County residents 60 and older who need help with daily tasks such as bathing, cooking or transportation and aren’t covered by another payer such as Medicaid, Medicare, insurance or hospice. A care manager visits to build a care plan. Services can include home care, home-delivered meals, medical transportation, emergency pendants, minor home repairs such as ramps and grab bars, and adult day programs. Some seniors pay nothing; others pay part on a sliding scale. To apply, call the intake line.",
+          "phone": "513-695-2271",
+          "address": "645 Oak Street, Lebanon",
+          "link": "https://www.wccsi.org/programs-services/care-management-elderly-services-program-esp/",
+          "source": "https://www.wccsi.org/programs-services/care-management-elderly-services-program-esp/",
+          "verified": "2026-11-05"
+        },
+        {
+          "name": "Warren County Community Services: senior programs",
+          "what": "Senior nutrition, senior transportation, senior housing and other supportive services.",
+          "phone": "513-695-2100",
+          "address": "645 Oak Street, Lebanon",
+          "link": "https://www.wccsi.org/",
+          "links": [
+            {
+              "label": "Senior nutrition",
+              "url": "https://www.wccsi.org/programs-services/senior-nutrition/"
+            },
+            {
+              "label": "Senior transportation",
+              "url": "https://www.wccsi.org/programs-services/senior-transportation/"
+            },
+            {
+              "label": "Senior housing",
+              "url": "https://www.wccsi.org/programs-services/senior-housing/"
+            }
+          ],
+          "source": "https://www.wccsi.org/programs-services/care-management-elderly-services-program-esp/",
+          "verified": "2026-11-05"
         }
       ]
     },
