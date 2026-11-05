@@ -179,8 +179,58 @@ A first version could be built like the business directory:
   Lions breakfast, the Friends of the Library auction and the food pantry
   beneficiaries.
 
+**2026-11-05: next priority decided.** The editor picked the resource center
+plus an event submission form as the next thing to build. See "Next build"
+below.
+
 **Suggested order:**
 
 1. The low-cost wins plus the Taylor's phone fix.
 2. The resource center plus an event submission form.
 3. A homepage redesign once those sections exist to link to.
+
+## Next build: resource center and event submission form
+
+Scoped 2026-11-05. Not started.
+
+### Resource center (`/resources/`, "Living in Waynesville")
+
+- **Format:** a hand-kept data file, `src/data/resources.json`. Each entry
+  has name, what it's for, phone, address or hours where published, a link,
+  a `source` URL and a `verified` date. A page groups the entries by topic.
+- **Topics for a first version:**
+  - **Local government:** Village of Waynesville (village office, council
+    schedule, zoning and permits, utilities), Wayne Township (trustees, fire
+    department, cemetery, road department), Warren County (commissioners,
+    engineer, auditor, Board of Elections).
+  - **Resident services:** trash and recycling, leaf pickup, water and sewer,
+    snow emergencies, as published by the village and township.
+  - **Schools and families:** Wayne Local (district office, calendar, board
+    meetings), the Mary L. Cook Public Library.
+  - **Community help:** the Waynesville Food Pantry, senior services,
+    transportation, mental health and crisis lines.
+  - **Public safety:** 911, the sheriff's non-emergency line, the township
+    fire non-emergency line, links to NWS alerts and OHGO.
+- **Rules:** list only what an official or organization page publishes. No
+  private individuals. Show each entry's verified date.
+- **Upkeep:** a monthly check that every link still loads, using the same
+  approach as `dropDeadWebsites` in `scripts/fetch-directory.mjs`.
+- **Links in:** the masthead or footer, and the homepage.
+- **Facts already confirmed** (2026-11-05):
+  - Village office: 1400 Lytle Rd, 513-897-8015.
+  - Chamber of Commerce: 513-897-8855.
+
+### Event submission form (`/events/submit/`)
+
+- **v1 needs no backend.** The site is static (Cloudflare, assets only), so
+  the form builds a pre-filled email to editor@waynesville.news with the
+  subject "Event submission". It asks for title, date and time, venue and
+  address, organizer, cost, a public link or flyer, and a public contact.
+- **Review:** the daily routine already reads Gmail (read-only). It could
+  pick up "Event submission" emails and stage them for the editor's
+  approval, never auto-publish them. That step needs its own decision before
+  it is added to the routine.
+- **Later option:** a Cloudflare Worker endpoint that opens a GitHub issue or
+  sends an email. This would avoid the mail-client step, but it needs
+  secrets and spam protection.
+- **Links in:** a "Submit an event" button on /events/ and in the footer.
