@@ -199,7 +199,7 @@
       "venue": "Mary L. Cook Public Library, 381 Old Stage Rd, Waynesville",
       "category": "Family",
       "source": "https://www.mlcook.lib.oh.us/",
-      "note": "Bid in person on holiday decorations and gift baskets donated by area businesses and community groups. Bidding opens Friday, Nov 20 at noon and closes Thursday, Dec 10 at 7:00 PM. To donate an item, contact the library."
+      "note": "Bid in person on holiday gift baskets, decorations and other items donated by area businesses and neighbors. Bidding opens Friday, Nov 20 at noon and closes Thursday, Dec 10 at 7:00 PM. Proceeds from the Friends of the Mary L. Cook Library support the library’s free programs for all ages and its new Playscape."
     },
     {
       "title": "Letters to Santa mailbox at the library",
@@ -381,6 +381,16 @@
       "category": "Community",
       "source": "/images/events/2026-11-14-crossview-dessert-auction.jpg",
       "note": "Bid on cakes, pies, cookies and other baked goods. All proceeds go to the Miami Cemetery Association Roads Fund, a nonprofit. See the flyer for details."
+    },
+    {
+      "title": "Donations wanted for the Friends of the Library Holiday Silent Auction",
+      "dateISO": "2026-11-09T09:00:00-05:00",
+      "endISO": "2026-11-14T17:00:00-05:00",
+      "dateLabel": "Mon–Sat, Nov 9–14 · during library hours",
+      "venue": "Mary L. Cook Public Library, 381 Old Stage Rd, Waynesville (front desk)",
+      "category": "Community",
+      "source": "https://www.mlcook.lib.oh.us/",
+      "note": "The Friends of the Mary L. Cook Library are collecting items for their Holiday Silent Auction (Nov 20 – Dec 10): gift baskets, gift certificates, wreaths, quilts, wood crafts, toys, candy, jewelry, Spartan wear, home and bath products, baked goods, bikes, grills, camping gear and more. Drop donations at the library’s front desk Nov 9–14, or ask at the desk about a pickup. Proceeds support the library’s free programs and its new Playscape."
     }
   ]
 }
