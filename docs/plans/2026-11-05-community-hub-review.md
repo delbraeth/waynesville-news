@@ -42,8 +42,10 @@ reference.
 1. **Low-cost calendar wins:**
    - "Add to calendar" (.ics) links on events
    - a "This weekend" filter on /events/
-   - a Waynesville-area vs. regional flag on events, like the directory's
-     `local` flag
+   - ~~a Waynesville-area vs. regional flag on events~~ **Done 2026-11-05.**
+     `isLocalEvent()` in `src/lib/events.js` reads the venue, and an event
+     can override it with `local: true|false`. /events/ has a "Waynesville
+     area only" checkbox and a "Regional" label.
 2. **Structured data** (schema.org Event and NewsArticle) for search engines.
 3. **Resource center upkeep:**
    - a monthly link check, reusing `dropDeadWebsites` from
