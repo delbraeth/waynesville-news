@@ -1,0 +1,86 @@
+---
+import Base from "../layouts/Base.astro";
+import data from "../data/resources.json";
+
+type Link = { label: string; url: string };
+type Item = {
+  name: string; what?: string; phone?: string; address?: string;
+  link?: string; links?: Link[]; source?: string; verified?: string;
+};
+type Section = { id: string; title: string; intro?: string; items: Item[] };
+
+const sections = data.sections as Section[];
+
+const tel = (p: string) => "tel:" + p.replace(/[^0-9]/g, "");
+const fmt = (iso?: string) =>
+  iso ? new Date(iso + "T12:00:00").toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" }) : "";
+const updated = fmt(data.updated);
+---
+<Base
+  title="Living in Waynesville · Waynesville News"
+  description="Phone numbers, offices and how-tos for Waynesville, Ohio: village utilities and trash, township, county offices, schools, library and emergency numbers."
+  showInfoBar={false}
+>
+  <div class="reading">
+    <p class="kicker">Resources</p>
+    <h1>Living in Waynesville</h1>
+    <p class="dek">
+      The numbers and offices you need, in one place: utilities and trash, village and township offices, the county,
+      schools, the library and who to call in an emergency.
+    </p>
+    <p class="small">
+      Every entry comes from the office's own website and shows when we last checked it (updated {updated}).
+      Spot something wrong? <a href="mailto:editor@waynesville.news?subject=Resource%20correction">Tell the editor</a>.
+    </p>
+
+    <nav class="res-toc" aria-label="On this page">
+      {sections.map((s) => <a href={`#${s.id}`}>{s.title}</a>)}
+    </nav>
+
+    {sections.map((s) => (
+      <section id={s.id} class="res-section">
+        <h2>{s.title}</h2>
+        {s.intro && <p class="small">{s.intro}</p>}
+        <ul class="res-list">
+          {s.items.map((it) => (
+            <li>
+              <div class="res-name">
+                {it.link ? <a href={it.link} target="_blank" rel="noopener">{it.name}</a> : it.name}
+              </div>
+              {it.what && <p class="res-what">{it.what}</p>}
+              <div class="res-meta">
+                {it.phone && <a class="res-phone" href={tel(it.phone)}>{it.phone}</a>}
+                {it.address && <span>{it.address}</span>}
+                {it.links && it.links.map((l) => <a href={l.url} target="_blank" rel="noopener">{l.label}</a>)}
+              </div>
+              {it.verified && (
+                <div class="res-src">
+                  Checked {fmt(it.verified)}
+                  {it.source && <> · <a href={it.source} target="_blank" rel="noopener">source</a></>}
+                </div>
+              )}
+            </li>
+          ))}
+        </ul>
+      </section>
+    ))}
+
+    <p class="small">
+      Looking for a business? See the <a href="/directory/">local business directory</a>. Things to do? The
+      <a href="/events/">events calendar</a>.
+    </p>
+  </div>
+</Base>
+
+<style>
+  .res-toc { display: flex; flex-wrap: wrap; gap: 0.4rem 1rem; margin: 1rem 0 0.5rem; font-size: 0.95rem; }
+  .res-section { margin-top: 1.75rem; scroll-margin-top: 1rem; }
+  .res-section h2 { margin-bottom: 0.4rem; }
+  .res-list { list-style: none; margin: 0; padding: 0; }
+  .res-list li { padding: 0.85rem 0; border-bottom: 1px solid var(--rule); }
+  .res-name { font-weight: 600; }
+  .res-what { margin: 0.25rem 0 0; color: var(--ink-soft); }
+  .res-meta { display: flex; flex-wrap: wrap; gap: 0.25rem 1rem; margin-top: 0.35rem; font-size: 0.95rem; }
+  .res-phone { font-weight: 600; white-space: nowrap; }
+  .res-src { margin-top: 0.3rem; font-size: 0.8rem; color: var(--muted); }
+</style>
