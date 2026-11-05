@@ -5,7 +5,7 @@ dek: "The Waynesville News events calendar has three new tools: a This weekend v
 section: "Around town"
 published: true
 podcast: true
-podcastText: "The Waynesville News events calendar has three new tools. Pick This weekend to see just Friday through Sunday. Check Waynesville area only to hide bigger events elsewhere in Warren County. And tap Add to calendar on any event to put it on your phone. This weekend's list includes the Spartans' home playoff game against Preble Shawnee, Friday at 7 p.m. at Spartan Community Field. Ohio High School Athletic Association prices apply: 12 dollars for adults and 5 dollars for students. Waynesville athletic and senior passes don't work for playoff games. Find it all at waynesville dot news slash events."
+podcastText: "The Waynesville News events calendar has three new tools. Pick This weekend to see just Friday through Sunday. Check Waynesville area only to hide bigger events elsewhere in Warren County. And tap Add to calendar on any event to put it on your phone. This weekend's list includes the Spartans' second-round playoff game. Waynesville had a first-round bye and hosts Preble Shawnee Friday at 7 p.m. at Spartan Community Field. Ohio High School Athletic Association prices apply: 12 dollars for adults and 5 dollars for students. Waynesville athletic and senior passes don't work for playoff games. Find it all at waynesville dot news slash events."
 ---
 
 The [Waynesville News events calendar](/events/) has three new tools to help you plan your week.
@@ -18,7 +18,7 @@ The [Waynesville News events calendar](/events/) has three new tools to help you
 
 ## On the calendar this weekend
 
-- **Friday, 7 p.m.: Spartans playoff football.** Waynesville hosts Preble Shawnee in an OHSAA playoff game at Spartan Community Field.
+- **Friday, 7 p.m.: Spartans playoff football, Round 2.** After a first-round bye, Waynesville hosts Preble Shawnee in the second round of the OHSAA playoffs at Spartan Community Field.
   - **Tickets:** The Ohio High School Athletic Association sets the prices: $12 for adults and $5 for students.
   - **Paying:** Cash is taken at the gate. To pay by card, buy online through OHSAA; student tickets go on sale online after 4 p.m. Friday.
   - **Passes:** Waynesville athletic passes and senior passes don't work for playoff games.
