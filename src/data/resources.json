@@ -321,7 +321,7 @@
       "title": "Schools & library",
       "items": [
         {
-          "name": "Wayne Local Schools central office",
+          "name": "Wayne Local Schools central (board) office",
           "what": "Enrollment, calendars and district contacts.",
           "phone": "513-897-6971",
           "address": "625 Dayton Road, Waynesville",
@@ -341,6 +341,54 @@
             }
           ],
           "source": "https://www.wayne-local.com/contact/",
+          "verified": "2026-11-05"
+        },
+        {
+          "name": "Waynesville High School",
+          "what": "Office open Monday–Friday, 7:30 a.m.–3:30 p.m. during the school year.",
+          "phone": "513-897-2776",
+          "address": "723 Dayton Road, Waynesville",
+          "link": "https://www.wayne-local.com/waynesville-high-school/",
+          "source": "https://www.wayne-local.com/waynesville-high-school/",
+          "verified": "2026-11-05"
+        },
+        {
+          "name": "Waynesville Middle School",
+          "what": "Office open Monday–Friday, 7:30 a.m.–2:30 p.m. during the school year.",
+          "phone": "513-897-4706",
+          "address": "723 Dayton Road, Waynesville",
+          "link": "https://www.wayne-local.com/waynesville-middle-school/",
+          "source": "https://www.wayne-local.com/waynesville-middle-school/",
+          "verified": "2026-11-05"
+        },
+        {
+          "name": "Waynesville Elementary School",
+          "what": "Office open Monday–Friday, 8 a.m.–4 p.m. during the school year. To report an absence, call this number and choose option 1.",
+          "phone": "513-897-2761",
+          "address": "659 Dayton Road, Waynesville",
+          "link": "https://www.wayne-local.com/waynesville-elementary-school/",
+          "source": "https://www.wayne-local.com/waynesville-elementary-school/",
+          "verified": "2026-11-05"
+        },
+        {
+          "name": "Wayne Local athletic office",
+          "what": "High school and middle school athletics.",
+          "phone": "513-897-8756",
+          "link": "https://www.wayne-local.com/waynesville-high-school/",
+          "source": "https://www.wayne-local.com/waynesville-high-school/",
+          "verified": "2026-11-05"
+        },
+        {
+          "name": "Wayne Local transportation",
+          "what": "School buses and riders.",
+          "phone": "513-897-8511",
+          "links": [
+            {
+              "label": "transportation@waynelocal.net",
+              "url": "mailto:transportation@waynelocal.net"
+            }
+          ],
+          "source": "https://www.wayne-local.com/waynesville-elementary-school/",
           "verified": "2026-11-05"
         },
         {
