@@ -1,26 +1,14 @@
 {
   "_note": "Candidate local headlines (Google News RSS). Published as a quoted headline (or, when available, a short publisher-written excerpt) + source + link; never reproduce article body text.",
-  "updated": "2026-11-04T11:42:36.716Z",
+  "updated": "2026-11-05T11:42:18.452Z",
   "items": [
     {
-      "title": "Warren County Votes Push Zac Haines to Victory in Ohio Senate District 7 Race",
-      "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOZTRHajhmN1ppaUh0Rks3VTViUDc0cUl3MTZaUVYyWU12WW45VzYtMElsUjhrN001QnFEaTY0ekRGV3VUMzRjUGdiSzBDTGpLNUd2d3lQTTh3WXd0eFpvYWxhZ1lKd2RVY1J6TWU2b0pwU1NnM0xtc29PdlU5REcwRENZTl93MTVSTUw5Rk9CcktjNTBFblhvajd1cm9hWjIzRmQ3TW9XYkJxeDlLQVhzUEJ4QTBGaDRSbUNHSUJVOA?oc=5",
+      "title": "Election Night: A Time to Gather, Watch and Reflect",
+      "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNU2lOc3VYXzgwOTZXUmpTRHp4eTVIRW9yWHRjVkRRV1F5NUl4SFl4bnFBNEU4ajF1eURvYjg0Q243TG9PS01HU2lDMTBDendQMjlyeURwWVM3MW82TURObkdtSFJDcmRSUjhObGRUMF9heGd0MVRFaFpsTVVkT0ctNVh0RG5hb1MxdVRtUHNRWldsQnEyNkxmSXJyYw?oc=5",
       "source": "Warren County Post",
-      "date": "Wed, 04 Nov 2026 04:06:59 GMT",
-      "sourceUrl": "https://warrencountypost.com/g/lebanon-oh/n/397179/warren-county-votes-push-zac-haines-victory-ohio-senate-district-7-race",
-      "excerpt": "Zac Haines to replace incumbent Steve Wilson who was not able to run again due to term limits"
-    },
-    {
-      "title": "2026 NOVEMBER ELECTIONS: Latest Results for Warren County Ohio",
-      "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOLXFJbkNNZ0FaY083SVNLRW85dHVZQWpxNkFQWE9WemFLVWNGYU10TmJFSWNOSVEtWUc0SURiVzlUSVBCemVad2xPbnlaelByNVV3Y25qNDBpOHFRY3NsVjM3c2RRdWtXYXNjb1ZYYTdDQWg2WHdnN2dYM0tSWmVTTU01T3k2RUN3YmxQZTF5bEJlSnZ6dGt0MzNvVENiNF8zWE1MNWZkcThiUVF3OTVZOXpEQldSa0NGVE8zbzYwUGZwQ2JQMTdB?oc=5",
-      "source": "Dayton Daily News",
-      "date": "Wed, 04 Nov 2026 00:20:00 GMT"
-    },
-    {
-      "title": "OSP identifies man who died after single-vehicle crash in Warren County",
-      "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQcWJrc2dYRlhvclVZZEF1UGJKMDE1N3lHLXVXWDZiTjVnbEYxeW5QRVk2Ymt0clpOblFfdl96TVBmcEViM042NXJrRmlqdW9pS2Nwc2NCc2ZvQXJPUWozYXZFczRVb2VkWFFiVnYwbl9RMVRUd3pvOFJfeWlrTFUzTzZTbnBxNTdQbFdFdmktci0?oc=5",
-      "source": "WLWT",
-      "date": "Thu, 29 Oct 2026 17:48:00 GMT"
+      "date": "Thu, 05 Nov 2026 04:52:39 GMT",
+      "sourceUrl": "https://warrencountypost.com/g/lebanon-oh/n/397184/election-night-time-gather-watch-and-reflect",
+      "excerpt": "Election night marked the culmination of months of campaigning,"
     },
     {
       "title": "Warren County, Ohio, election results – Nov. 3, 2026",
@@ -29,28 +17,42 @@
       "date": "Tue, 03 Nov 2026 17:30:32 GMT"
     },
     {
+      "title": "OSP identifies man who died after single-vehicle crash in Warren County",
+      "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQcWJrc2dYRlhvclVZZEF1UGJKMDE1N3lHLXVXWDZiTjVnbEYxeW5QRVk2Ymt0clpOblFfdl96TVBmcEViM042NXJrRmlqdW9pS2Nwc2NCc2ZvQXJPUWozYXZFczRVb2VkWFFiVnYwbl9RMVRUd3pvOFJfeWlrTFUzTzZTbnBxNTdQbFdFdmktci0?oc=5",
+      "source": "WLWT",
+      "date": "Thu, 29 Oct 2026 17:48:00 GMT"
+    },
+    {
+      "title": "2026 NOVEMBER ELECTIONS: Latest Results for Warren County Ohio",
+      "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPQVYwcGlHaGlYdjBDQ0RJaS0zV3FXUkN2M3dUbEpVQzBXdnphUWtSVjg2eXRIM1NFdTVKdTFUN2lrX3NxSWU3anhRNDVldWg4NXdKbkV2WUcwbWNOV09adnFveHNKTUZxRG5CTFFta2FtN2FGX00zQ3g5VDhJYkEyQkM3QmxrRUdFanRWbENlTS1UZUI2aHdDX0RpTkU2SXRhaVRNX2RFa1I4YUdIaW05all3?oc=5",
+      "source": "Dayton Daily News",
+      "date": "Wed, 04 Nov 2026 00:20:00 GMT"
+    },
+    {
       "title": "Warren County, Ohio election results, Nov. 3, 2026",
       "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQRnJlNVFkOERWUTFwQmo2UlhtMjdMd19Qd3dRM0RhSHJjR1JlNG9nLXQ3QTJvNGMtUVlTcHRxR1ZIcDVFOVlxZHpQckl4OVFIcktFb3NVb2ZsTHRSQjM4QlZ3amlhb2ZocUNHWkJTUkpGYmxtWk1ZaWR5ODl5Y0RyajhUT3lyTVlscWgxempFcjljRTd4dFpVc21UZw?oc=5",
       "source": "Yahoo",
       "date": "Tue, 03 Nov 2026 11:22:20 GMT"
     },
     {
-      "title": "Earl Brickley Obituary (2026) - Waynesville, OH - Greene County Dailies",
-      "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNOGFUVDhWVG5GOEg0WS1tZDhGMjhPVHVJRGNMXzZ1dURIUmVoekE1S3VQUVRqaUdycmkwY3dmeVdaWF81SG1nNG44UXNuN0dlc1ZSOExMbmFNcFRVZG56eXRnSHd0M2NtVl91UXhWdnI4cnhLMFB2dE15R0FMaTZnbnVRdmNnclExS3Y0Tzd3SEF1R0c4akFz?oc=5",
-      "source": "Legacy | Obituary",
-      "date": "Tue, 03 Nov 2026 17:39:36 GMT"
-    },
-    {
-      "title": "Election Night: A Time to Gather, Watch and Reflect",
-      "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNU2lOc3VYXzgwOTZXUmpTRHp4eTVIRW9yWHRjVkRRV1F5NUl4SFl4bnFBNEU4ajF1eURvYjg0Q243TG9PS01HU2lDMTBDendQMjlyeURwWVM3MW82TURObkdtSFJDcmRSUjhObGRUMF9heGd0MVRFaFpsTVVkT0ctNVh0RG5hb1MxdVRtUHNRWldsQnEyNkxmSXJyYw?oc=5",
-      "source": "Warren County Post",
-      "date": "Wed, 04 Nov 2026 10:14:28 GMT"
-    },
-    {
       "title": "Between Dayton And Cincinnati Is Ohio's Scenic Lake Park With Fishing, Trails, And Sporty Appeal",
       "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQaTB5blhHOF92a0h6NlJ0UjdKbEpuektFUnVrU3lTeWtXZlFBcWpUY3Z2Q1V1ZWdMRlpsc1FocWZZNHdGbm9mN0dreHNBQV9uZjgxYjIxT0lLc1gzSGhkRzA1OWxoa1ZybTljd3JSYm5ZU3JNNGYtWno2OUh6ZzZoOE9HeUNIclBHMTRTaWpNeE1YNWhCRnVfQzNMM2dJQ2ZVazZ0eHE0RVA0Zy1ZNzh1U0c3R1JZT3VlTzFWMGI4QUdFS1R2OUZRZ2owcGl0U2c?oc=5",
       "source": "https://www.islands.com/",
       "date": "Sat, 31 Oct 2026 19:00:00 GMT"
+    },
+    {
+      "title": "Motorcyclist Killed in Warren County Crash Shuts Down I-75 North for Hours",
+      "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPYnJaWl9UR1JsVk9ubGRTZUZZSzg1dE1vOFdZb1hRNEZfQkdsRS1MYTJCcFhHbVJ1Q09YbWl2OHpiVDMxNXo4UnFMdHhrblI4blVIT1hnUzlndzE1NjlMRUtiekpMTC1CUnVHWU9VeHdzbkZHMy1kOHRtOU9QOEpuYWlYVzlqSm9mNjFIdXFBQVpvSjB5cEdSQVFTWTQ4T3hQQVRzNmdaYw?oc=5",
+      "source": "Hoodline",
+      "date": "Mon, 02 Nov 2026 20:38:34 GMT",
+      "sourceUrl": "https://hoodline.com/2026/11/motorcyclist-killed-in-warren-county-crash-shuts-down-i-75-north-for-hours/",
+      "excerpt": "One person is dead after a motorcycle crash shut down I-75 North in Warren County for hours Sunday night."
+    },
+    {
+      "title": "ELECTION RESULTS | Warren County races",
+      "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQRFN1WXcxY21pZGpNSFlnZ0tfdkM1UGhGV3d3a2Z5bzVyZk52WG50SUtOZTJIdGVHQU1UZWxaN01Xc0NRR2tFamk4YldteHFTcWNhZTV3WHFTcHNsTzVsXzhGQV9HMTI1Yzl1Tzd5RjZUQ3BDNnpkNm9RanByZkU3YjdVZGd2Zw?oc=5",
+      "source": "WLWT",
+      "date": "Wed, 04 Nov 2026 05:18:00 GMT"
     }
   ]
 }

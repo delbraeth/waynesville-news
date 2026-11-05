@@ -1,26 +1,6 @@
 {
-  "_note": "Real venues and sources, verified against each listed source on 2026-11-04; Warren County tourism calendar re-checked 2026-11-04 (daily automated refresh). Wayne Local school dates per The Spartan (September and October 2026) and the district Community Events & Activities newsletter (October 2026) and Board Meeting Recap (October 2026). Mary L. Cook Public Library programs per the library's monthly newsletter (November 2026). Recurring items (rodeo, commissioners, ghost walk) show the next occurrence. Warren County Park District events page SUSPENDED as a source per Cap'n (2026-10-03): it sits behind a Cloudflare bot challenge (403 since 2026-09-24). Do not fetch it or report it as failing; its items from the 2026-09-23 check are kept until they expire. Resume only when Cap'n provides a working source. Event notes and dateLabels are shown to readers: write them for readers (what, when, where, and a helpful pointer like \"check the event website for times\" when a detail is missing). Never put editorial or process notes in them (\"not published\", \"confirm before printing\", \"corrected from\", \"checked on\"); record corrections in the commit message instead. Tag Christmas-season community events (tree lightings, Santa visits, holiday markets, single-date light shows) with \"holiday\" so they also appear on the Holiday Lights guide.",
+  "_note": "Real venues and sources, verified against each listed source on 2026-11-05; Warren County tourism calendar re-checked 2026-11-05 (daily automated refresh). Wayne Local school dates per The Spartan (September and October 2026) and the district Community Events & Activities newsletter (October 2026) and Board Meeting Recap (October 2026). Mary L. Cook Public Library programs per the library's monthly newsletter (November 2026). Recurring items (rodeo, commissioners, ghost walk) show the next occurrence. Warren County Park District events page SUSPENDED as a source per Cap'n (2026-10-03): it sits behind a Cloudflare bot challenge (403 since 2026-09-24). Do not fetch it or report it as failing; its items from the 2026-09-23 check are kept until they expire. Resume only when Cap'n provides a working source. Event notes and dateLabels are shown to readers: write them for readers (what, when, where, and a helpful pointer like \"check the event website for times\" when a detail is missing). Never put editorial or process notes in them (\"not published\", \"confirm before printing\", \"corrected from\", \"checked on\"); record corrections in the commit message instead. Tag Christmas-season community events (tree lightings, Santa visits, holiday markets, single-date light shows) with \"holiday\" so they also appear on the Holiday Lights guide.",
   "items": [
-    {
-      "title": "Historical Haunts — ghost walk of downtown Waynesville",
-      "dateISO": "2026-09-25T00:00:00-04:00",
-      "endISO": "2026-10-31T23:59:00-04:00",
-      "dateLabel": "Wednesdays, Fridays & Saturdays through October · $20",
-      "venue": "Downtown Waynesville (Museum at the Friends Home)",
-      "category": "Tour",
-      "source": "https://www.friendshomemuseum.org/ghost-tours-class-dinners",
-      "note": "Two-hour guided walking tour of the historic district drawing on the village’s 228-year history, run by the Museum at the Friends Home. The museum also runs a $60 Ghost & Goblet dinner and tour at The Venue at the Historic Lockup, and a $50 Ghost Hunting 101 class with ParaVizionz. Check the museum's booking page for tour times."
-    },
-    {
-      "title": "Windmill Farm Market Spooktacular",
-      "dateISO": "2026-09-26T00:00:00-04:00",
-      "endISO": "2026-10-31T23:59:00-04:00",
-      "dateLabel": "Sep 26 – Oct 31",
-      "venue": "Windmill Farm Market, 1454 E State Route 73, Springboro",
-      "category": "Festival",
-      "source": "https://waynesvilleshops.com/2026-calendar-of-events-in-waynesville/",
-      "note": "Fall festival at Windmill Farm Market, on SR 73 a short drive east of the village, promoted on the Waynesville Merchant Association calendar. Check the market's website for daily hours."
-    },
     {
       "title": "Waynesville Fall Fest",
       "dateISO": "2026-09-26T11:00:00-04:00",
@@ -40,18 +20,6 @@
       "category": "Festival",
       "source": "https://renfestival.com/",
       "note": "Closing weekend of the 2026 season."
-    },
-    {
-      "title": "Village Trick or Treat",
-      "dateISO": "2026-10-31T18:00:00-04:00",
-      "dateLabel": "Sat, Oct 31 · 6:00–8:00 PM",
-      "venue": "Village of Waynesville (residential streets)",
-      "category": "Family",
-      "source": "https://www.villageofwaynesville.org/events/event/trick-or-treat/2026-10-31/",
-      "note": "Official village-wide trick-or-treat hours, per the Village's events calendar. Separate from the downtown shops' Trick or Treat stroll on Sun, Oct 25.",
-      "tags": [
-        "trick-or-treat"
-      ]
     },
     {
       "title": "Waynesville Fantasy Festival",
@@ -110,16 +78,6 @@
       "category": "Government",
       "source": "https://www.wayne-local.com/",
       "note": "Per Wayne Local Board Meeting Recap (Oct 2026): the bi-annual Spartan Recognition Awards ceremony opens the meeting, followed by a short break and the regular business meeting. Open to the public."
-    },
-    {
-      "title": "Halloween Haunt at Kings Island",
-      "dateISO": "2026-09-25T00:00:00-04:00",
-      "endISO": "2026-10-31T23:59:00-04:00",
-      "dateLabel": "Thursdays–Sundays through Oct 31",
-      "venue": "Kings Island, 6300 Kings Island Dr, Mason",
-      "category": "Festival",
-      "source": "https://www.sixflags.com/kingsisland/events/halloween-haunt",
-      "note": "Select nights Thursday through Sunday. Per Kings Island, not recommended for children under 13, and every guest needs paid admission. Check the park calendar for nightly hours."
     },
     {
       "title": "Warren County Commissioners — Weekly Session",
