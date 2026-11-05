@@ -228,8 +228,9 @@ Scoped 2026-11-05. Not started.
   address, organizer, cost, a public link or flyer, and a public contact.
 - **Review:** the daily routine already reads Gmail (read-only). It could
   pick up "Event submission" emails and stage them for the editor's
-  approval, never auto-publish them. That step needs its own decision before
-  it is added to the routine.
+  approval, never auto-publish them. **Decided 2026-11-05: not for now.** The
+  editor will handle submissions by hand from the inbox. Don't add Gmail
+  pickup of submissions to the daily routine.
 - **Later option:** a Cloudflare Worker endpoint that opens a GitHub issue or
   sends an email. This would avoid the mail-client step, but it needs
   secrets and spam protection.
