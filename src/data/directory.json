@@ -1,6 +1,6 @@
 {
   "_note": "Local business directory. Built by scripts/fetch-directory.mjs from the Waynesville Area Chamber of Commerce's public member directory (name, location, phone, website, and the Chamber's description, as published) plus hand-added listings in directory-manual.json. Contact names, emails and hours are deliberately not copied. Do not edit by hand — edit directory-manual.json and re-run `npm run refresh:directory` (or `npm run refresh:directory -- --manual-only` to merge manual edits without re-reading the Chamber site).",
-  "updated": "2026-11-05T01:31:12.903Z",
+  "updated": "2026-11-05T01:49:29.398Z",
   "sections": [
     {
       "id": "food",
@@ -2728,7 +2728,7 @@
     {
       "id": "manual-prairieviewstorage",
       "name": "Prairie View Storage",
-      "location": "1016 Prairie Ave, Wilmington, OH 45177 (serves Waynesville and southwest Ohio)",
+      "location": "1016 Prairie Ave, Wilmington, OH 45177",
       "phone": "937-383-1617",
       "sections": [
         "realestate"
@@ -2745,7 +2745,7 @@
         "instagram": "https://www.instagram.com/Prairie_View_Storage/"
       },
       "about": "Veteran-owned portable storage company based in Wilmington. It delivers 8-by-16-foot portable storage units to homes, businesses and job sites across southwest Ohio, including Warren County, and the units can stay on site or be kept at its facility before moving to a final destination. Also offers moving supplies and self-storage units in Wilmington and Hillsboro. Call for an appointment.",
-      "local": true,
+      "local": false,
       "from": "manual"
     },
     {
