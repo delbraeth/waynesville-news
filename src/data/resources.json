@@ -1,0 +1,271 @@
+{
+  "_note": "Living in Waynesville resource center (/resources/). Hand-kept. Facts only as each official or organization page publishes them; every entry has a source URL and the date it was verified. No private individuals' names or direct lines (department staff emails stay off). Phones are written as published. Re-verify entries older than ~90 days. Leave a field out rather than guess.",
+  "updated": "2026-11-05",
+  "sections": [
+    {
+      "id": "emergency",
+      "title": "Emergencies & public safety",
+      "items": [
+        {
+          "name": "Emergency: police, fire, medical",
+          "what": "For any emergency, including an uncontrolled fire.",
+          "phone": "911",
+          "source": "https://waynetwpwarrencooh.gov/fire-department/",
+          "verified": "2026-11-05"
+        },
+        {
+          "name": "Non-emergency dispatch (Warren County)",
+          "what": "Police or fire help that isn't an emergency. This is also the Village of Waynesville's after-hours number for utility emergencies.",
+          "phone": "513-695-2525",
+          "source": "https://www.villageofwaynesville.org/departments/police/",
+          "verified": "2026-11-05"
+        },
+        {
+          "name": "Waynesville Police Department",
+          "what": "Questions, police and accident reports, vacation house checks, solicitor's permits.",
+          "phone": "513-897-8010",
+          "address": "1400 Lytle Road, Waynesville",
+          "link": "https://www.villageofwaynesville.org/departments/police/",
+          "source": "https://www.villageofwaynesville.org/departments/police/",
+          "verified": "2026-11-05"
+        },
+        {
+          "name": "Wayne Township Fire Department",
+          "what": "Fire and EMS for Wayne Township, the villages of Waynesville and Corwin, and the Oregonia area of Washington Township. Burn permits, fire inspections, safety education.",
+          "phone": "513-897-3010",
+          "address": "1100 Franklin Road, Waynesville",
+          "link": "https://waynetwpwarrencooh.gov/fire-department/",
+          "source": "https://waynetwpwarrencooh.gov/fire-department/",
+          "verified": "2026-11-05"
+        },
+        {
+          "name": "Warren County Sheriff's Office",
+          "phone": "513-695-1280",
+          "address": "822 Memorial Drive, Lebanon",
+          "link": "https://sheriff.warrencountyohio.gov/",
+          "source": "https://sheriff.warrencountyohio.gov/",
+          "verified": "2026-11-05"
+        },
+        {
+          "name": "988 Suicide & Crisis Lifeline",
+          "what": "Free, confidential support 24 hours a day. Call or text 988.",
+          "phone": "988",
+          "link": "https://988lifeline.org/",
+          "source": "https://988lifeline.org/",
+          "verified": "2026-11-05"
+        },
+        {
+          "name": "Weather alerts and road conditions",
+          "what": "National Weather Service forecast and alerts for Waynesville, and OHGO for state-route traffic and closures.",
+          "link": "https://forecast.weather.gov/MapClick.php?lat=39.5287&lon=-84.0891",
+          "links": [
+            { "label": "NWS forecast", "url": "https://forecast.weather.gov/MapClick.php?lat=39.5287&lon=-84.0891" },
+            { "label": "OHGO", "url": "https://www.ohgo.com/" },
+            { "label": "County road closures", "url": "https://engineer.warrencountyohio.gov/Information/NewsReleases/Index" }
+          ],
+          "source": "https://www.ohgo.com/",
+          "verified": "2026-11-05"
+        }
+      ]
+    },
+    {
+      "id": "village",
+      "title": "Village of Waynesville",
+      "intro": "For homes and businesses inside village limits.",
+      "items": [
+        {
+          "name": "Village office (Waynesville Government Center)",
+          "what": "General questions, utility billing, zoning, income tax, council. Office hours Monday–Friday, 8 a.m.–noon and 1–4 p.m.",
+          "phone": "513-897-8015",
+          "address": "1400 Lytle Road, Waynesville",
+          "link": "https://www.villageofwaynesville.org/contact/",
+          "source": "https://www.villageofwaynesville.org/departments/utility-billing/",
+          "verified": "2026-11-05"
+        },
+        {
+          "name": "Water, sewer and trash bills",
+          "what": "Pay online through Invoice Cloud ($2.95 fee), at the night drop box in front of 1400 Lytle Road, in person at the Government Center or the Waynesville branch of LCNB, or by mail to Waynesville Utility Department, 1400 Lytle Road, Waynesville, OH 45068.",
+          "phone": "513-897-8015",
+          "links": [
+            { "label": "Pay online", "url": "https://www.invoicecloud.com/Waynesvilleoh" },
+            { "label": "Utility billing", "url": "https://www.villageofwaynesville.org/departments/utility-billing/" }
+          ],
+          "source": "https://www.villageofwaynesville.org/departments/utility-billing/",
+          "verified": "2026-11-05"
+        },
+        {
+          "name": "Trash, recycling and yard waste",
+          "what": "Rumpke, billed with village utilities. Pickup for all services is Monday; set items out Sunday evening.",
+          "link": "https://www.villageofwaynesville.org/departments/utility-billing/",
+          "source": "https://www.villageofwaynesville.org/departments/utility-billing/",
+          "verified": "2026-11-05"
+        },
+        {
+          "name": "Utility emergencies after hours",
+          "phone": "513-695-2525",
+          "source": "https://www.villageofwaynesville.org/departments/utility-billing/",
+          "verified": "2026-11-05"
+        },
+        {
+          "name": "Sewer questions (not billing)",
+          "what": "Sewer service is billed by the village on behalf of the Warren County Water and Sewer Department.",
+          "phone": "513-695-1377",
+          "source": "https://www.villageofwaynesville.org/departments/utility-billing/",
+          "verified": "2026-11-05"
+        },
+        {
+          "name": "Leaf pickup",
+          "what": "Fall leaf pickup started Oct. 19, 2026, on a street-by-street schedule. Rake leaves to the curb, not into the street, so they don't clog storm drains.",
+          "link": "https://www.villageofwaynesville.org/news/entry/leaf-pick-up/",
+          "source": "https://www.villageofwaynesville.org/news/entry/leaf-pick-up/",
+          "verified": "2026-11-05"
+        },
+        {
+          "name": "Streets and snow",
+          "what": "The Streets and Maintenance department plows, salts and repairs village roads and keeps up signs and signals. Call the village office with street problems.",
+          "phone": "513-897-8015",
+          "link": "https://www.villageofwaynesville.org/departments/streets-and-maintenance/",
+          "source": "https://www.villageofwaynesville.org/departments/streets-and-maintenance/",
+          "verified": "2026-11-05"
+        },
+        {
+          "name": "Drinking water quality report",
+          "what": "The village's 2025 Consumer Confidence Report, plus earlier years.",
+          "link": "https://www.villageofwaynesville.org/departments/water-department/",
+          "source": "https://www.villageofwaynesville.org/departments/water-department/",
+          "verified": "2026-11-05"
+        },
+        {
+          "name": "Village Council and meetings",
+          "what": "Meeting dates, agendas and minutes.",
+          "link": "https://www.villageofwaynesville.org/meetings/",
+          "links": [
+            { "label": "Meetings", "url": "https://www.villageofwaynesville.org/meetings/" },
+            { "label": "Codified ordinances", "url": "https://codelibrary.amlegal.com/codes/waynesville/latest/overview" }
+          ],
+          "source": "https://www.villageofwaynesville.org/",
+          "verified": "2026-11-05"
+        },
+        {
+          "name": "Zoning and permits",
+          "link": "https://www.villageofwaynesville.org/departments/zoning/",
+          "source": "https://www.villageofwaynesville.org/departments/zoning/",
+          "verified": "2026-11-05"
+        }
+      ]
+    },
+    {
+      "id": "township",
+      "title": "Wayne Township",
+      "intro": "The township covers Waynesville, Corwin and the surrounding countryside.",
+      "items": [
+        {
+          "name": "Township Hall",
+          "what": "Trustees, fiscal officer, zoning, roads.",
+          "phone": "513-897-3010",
+          "address": "6050 N. Clarksville Road, Waynesville",
+          "link": "https://waynetwpwarrencooh.gov/contact-us-form/",
+          "source": "https://waynetwpwarrencooh.gov/",
+          "verified": "2026-11-05"
+        },
+        {
+          "name": "Board of Trustees",
+          "what": "Meeting dates, agendas and minutes.",
+          "link": "https://waynetwpwarrencooh.gov/board-of-trustees/",
+          "source": "https://waynetwpwarrencooh.gov/",
+          "verified": "2026-11-05"
+        },
+        {
+          "name": "Township zoning",
+          "what": "Zoning Commission and Board of Zoning Appeals.",
+          "link": "https://waynetwpwarrencooh.gov/zoning/",
+          "source": "https://waynetwpwarrencooh.gov/",
+          "verified": "2026-11-05"
+        },
+        {
+          "name": "Township roads",
+          "link": "https://waynetwpwarrencooh.gov/roads-department/",
+          "source": "https://waynetwpwarrencooh.gov/",
+          "verified": "2026-11-05"
+        },
+        {
+          "name": "Energy aggregation",
+          "link": "https://waynetwpwarrencooh.gov/energy-aggregation/",
+          "source": "https://waynetwpwarrencooh.gov/",
+          "verified": "2026-11-05"
+        }
+      ]
+    },
+    {
+      "id": "county",
+      "title": "Warren County",
+      "items": [
+        {
+          "name": "Board of Commissioners",
+          "what": "Weekly sessions, agendas and resolutions.",
+          "phone": "513-695-1250",
+          "address": "406 Justice Drive, Lebanon",
+          "link": "https://commissioners.warrencountyohio.gov/",
+          "source": "https://commissioners.warrencountyohio.gov/",
+          "verified": "2026-11-05"
+        },
+        {
+          "name": "Board of Elections",
+          "what": "Voter registration, absentee ballots, polling places and results.",
+          "phone": "513-695-1358",
+          "address": "520 Justice Drive, Lebanon",
+          "link": "https://vote.warrencountyohio.gov/",
+          "source": "https://vote.warrencountyohio.gov/",
+          "verified": "2026-11-05"
+        },
+        {
+          "name": "County Auditor: real estate",
+          "what": "Property values, tax records and parcel lookups.",
+          "phone": "513-695-1235",
+          "address": "406 Justice Drive, Lebanon",
+          "link": "https://auditor.warrencountyohio.gov/",
+          "source": "https://auditor.warrencountyohio.gov/",
+          "verified": "2026-11-05"
+        },
+        {
+          "name": "County Engineer",
+          "what": "County roads and bridges, road-closure notices.",
+          "phone": "513-695-3301",
+          "address": "210 W. Main Street, Lebanon",
+          "link": "https://engineer.warrencountyohio.gov/",
+          "source": "https://engineer.warrencountyohio.gov/",
+          "verified": "2026-11-05"
+        }
+      ]
+    },
+    {
+      "id": "schools",
+      "title": "Schools & library",
+      "items": [
+        {
+          "name": "Wayne Local Schools central office",
+          "what": "Enrollment, calendars and district contacts.",
+          "phone": "513-897-6971",
+          "address": "625 Dayton Road, Waynesville",
+          "link": "https://www.wayne-local.com/contact/",
+          "links": [
+            { "label": "Contact", "url": "https://www.wayne-local.com/contact/" },
+            { "label": "Calendars", "url": "https://www.wayne-local.com/calendars/" },
+            { "label": "Enrollment", "url": "https://www.wayne-local.com/enrollment/" }
+          ],
+          "source": "https://www.wayne-local.com/contact/",
+          "verified": "2026-11-05"
+        },
+        {
+          "name": "Mary L. Cook Public Library",
+          "what": "Free programs for babies through adults, library cards, meeting space.",
+          "phone": "513-897-4826",
+          "address": "381 Old Stage Road, Waynesville",
+          "link": "https://www.mlcook.lib.oh.us/",
+          "source": "https://www.waynesvilleohio.com/directory/",
+          "verified": "2026-11-05"
+        }
+      ]
+    }
+  ]
+}
