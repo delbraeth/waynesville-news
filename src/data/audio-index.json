@@ -19,6 +19,17 @@
         "2026-11-03-supreme-homes-victoria-place"
       ],
       "recorded": "2026-11-04T11:47:16.541Z"
+    },
+    "2026-11-05": {
+      "url": "https://audio.waynesville.news/audio/2026-11-05.mp3",
+      "seconds": 205,
+      "bytes": 1636771,
+      "chars": 2912,
+      "model": "eleven_v4_turbo",
+      "stories": [
+        "2026-11-05-living-in-waynesville-resource-center"
+      ],
+      "recorded": "2026-11-05T11:46:04.847Z"
     }
   }
 }
