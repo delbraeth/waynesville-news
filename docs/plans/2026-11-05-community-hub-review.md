@@ -30,6 +30,11 @@ reference.
   from the masthead ("Resources") and the footer.
 - **Announcement story** for the resource center and event form, flagged for
   the podcast (#97).
+- **Calendar tools:** Waynesville-area vs. regional filter (#101), add-to-
+  calendar links and a "This weekend" view (#102). An announcement story,
+  flagged for the podcast, and Friday's Round 2 playoff game were added in
+  #103. Cloudflare didn't start a production build for #103's merge, so a
+  small follow-up commit was pushed to trigger one.
 - **Directory cleanup:** Prairie View Storage added, and marked as outside the
   Waynesville area (#87, #88). Valentino Design removed because its website is
   dead (#89, #90).
