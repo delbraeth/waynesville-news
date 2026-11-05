@@ -1,6 +1,6 @@
 {
   "_note": "Local business directory. Built by scripts/fetch-directory.mjs from the Waynesville Area Chamber of Commerce's public member directory (name, location, phone, website, and the Chamber's description, as published) plus hand-added listings in directory-manual.json. Contact names, emails and hours are deliberately not copied. Do not edit by hand — edit directory-manual.json and re-run `npm run refresh:directory` (or `npm run refresh:directory -- --manual-only` to merge manual edits without re-reading the Chamber site).",
-  "updated": "2026-11-05T01:49:29.398Z",
+  "updated": "2026-11-05T02:08:00.739Z",
   "sections": [
     {
       "id": "food",
@@ -3552,27 +3552,6 @@
       "about": "Hair salon offering color, extensions, and brow and lash services by appointment.",
       "local": true,
       "from": "manual"
-    },
-    {
-      "id": "chamber-725",
-      "name": "Valentino Design",
-      "location": "Waynesville, OH 45068",
-      "phone": "937-572-6485",
-      "sections": [
-        "tech",
-        "other",
-        "shop"
-      ],
-      "kinds": [
-        "Signs",
-        "Promotional Items & Logo Apparel",
-        "Custom"
-      ],
-      "source": "https://www.waynesvilleohio.com/directory/listing/725",
-      "website": "https://valentinodesign.com/",
-      "about": "Valentino Design is a one person laser engraving and custom woodworking company. While we have been in business since 2012, we bring to our customers over 40 years of experience in design and woodworking. Our designs are done in Corel Draw and laser projects are cut and/or…",
-      "local": true,
-      "from": "chamber"
     },
     {
       "id": "manual-venueathistoriclockup",
