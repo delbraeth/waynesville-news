@@ -1248,6 +1248,21 @@
       "about": "Veteran-owned portable storage company based in Wilmington. It delivers 8-by-16-foot portable storage units to homes, businesses and job sites across southwest Ohio, including Warren County, and the units can stay on site or be kept at its facility before moving to a final destination. Also offers moving supplies and self-storage units in Wilmington and Hillsboro. Call for an appointment.",
       "source": "https://www.prairieviewstoragellc.com/",
       "local": false
+    },
+    {
+      "name": "Taylor's Coffee & Creamery",
+      "sections": [
+        "food"
+      ],
+      "kinds": [
+        "Coffee",
+        "Ice Cream"
+      ],
+      "location": "195 S. Main St, Waynesville, OH 45068",
+      "phone": "",
+      "website": "https://www.taylorswaynesville.com/",
+      "about": "Coffee shop and creamery in downtown Waynesville with a full espresso bar, pastries, soft-serve ice cream and more.",
+      "source": "https://www.waynesvilleohio.com/directory/listing/720"
     }
   ]
 }

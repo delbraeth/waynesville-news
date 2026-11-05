@@ -1,6 +1,6 @@
 {
   "_note": "Local business directory. Built by scripts/fetch-directory.mjs from the Waynesville Area Chamber of Commerce's public member directory (name, location, phone, website, and the Chamber's description, as published) plus hand-added listings in directory-manual.json. Contact names, emails and hours are deliberately not copied. Do not edit by hand — edit directory-manual.json and re-run `npm run refresh:directory` (or `npm run refresh:directory -- --manual-only` to merge manual edits without re-reading the Chamber site).",
-  "updated": "2026-11-05T02:08:00.739Z",
+  "updated": "2026-11-05T08:03:40.396Z",
   "sections": [
     {
       "id": "food",
@@ -3135,21 +3135,22 @@
       "from": "manual"
     },
     {
-      "id": "chamber-720",
+      "id": "manual-taylorscoffeeandcreamery",
       "name": "Taylor's Coffee & Creamery",
       "location": "195 S. Main St, Waynesville, OH 45068",
-      "phone": "999-999-9999",
+      "phone": "",
       "sections": [
         "food"
       ],
       "kinds": [
-        "Restaurant"
+        "Coffee",
+        "Ice Cream"
       ],
       "source": "https://www.waynesvilleohio.com/directory/listing/720",
-      "website": "",
-      "about": "Taylor's Coffee & Creamery, located at 195 S Main Street in downtown Waynesville, Ohio. Offering a full espresso bar, pastries, soft served ice cream and more!",
+      "website": "https://www.taylorswaynesville.com/",
+      "about": "Coffee shop and creamery in downtown Waynesville with a full espresso bar, pastries, soft-serve ice cream and more.",
       "local": true,
-      "from": "chamber"
+      "from": "manual"
     },
     {
       "id": "chamber-575",
