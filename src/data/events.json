@@ -391,6 +391,19 @@
       "category": "Community",
       "source": "https://www.mlcook.lib.oh.us/",
       "note": "The Friends of the Mary L. Cook Library are collecting items for their Holiday Silent Auction (Nov 20 – Dec 10): gift baskets, gift certificates, wreaths, quilts, wood crafts, toys, candy, jewelry, Spartan wear, home and bath products, baked goods, bikes, grills, camping gear and more. Drop donations at the library’s front desk Nov 9–14, or ask at the desk about a pickup. Proceeds support the library’s free programs and its new Playscape."
+    },
+    {
+      "title": "Waynesville Lions Club Pancake Breakfast & Craft Bazaar",
+      "dateISO": "2026-12-05T08:00:00-05:00",
+      "endISO": "2026-12-05T15:00:00-05:00",
+      "dateLabel": "Sat, Dec 5 · Breakfast & Santa 8–11 AM, bazaar 8 AM–3 PM",
+      "venue": "Waynesville Elementary School, 659 Dayton Rd, Waynesville",
+      "category": "Community",
+      "tags": [
+        "holiday"
+      ],
+      "source": "/images/events/2026-12-05-lions-pancake-breakfast-bazaar.jpg",
+      "note": "The Lions Club’s annual breakfast and bazaar. Pancake breakfast 8–11 AM ($8 adults, $5 children) and visits with Santa 8–11 AM; craft bazaar with 30 vendors 8 AM–3 PM, free admission. New this year: a free children’s crafting table, live performances by local children, and a free raffle for a basket worth over $300 (visit all 30 vendor booths to fill your card). All proceeds benefit the Waynesville Food Pantry."
     }
   ]
 }
