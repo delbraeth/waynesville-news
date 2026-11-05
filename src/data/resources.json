@@ -59,9 +59,18 @@
           "what": "National Weather Service forecast and alerts for Waynesville, and OHGO for state-route traffic and closures.",
           "link": "https://forecast.weather.gov/MapClick.php?lat=39.5287&lon=-84.0891",
           "links": [
-            { "label": "NWS forecast", "url": "https://forecast.weather.gov/MapClick.php?lat=39.5287&lon=-84.0891" },
-            { "label": "OHGO", "url": "https://www.ohgo.com/" },
-            { "label": "County road closures", "url": "https://engineer.warrencountyohio.gov/Information/NewsReleases/Index" }
+            {
+              "label": "NWS forecast",
+              "url": "https://forecast.weather.gov/MapClick.php?lat=39.5287&lon=-84.0891"
+            },
+            {
+              "label": "OHGO",
+              "url": "https://www.ohgo.com/"
+            },
+            {
+              "label": "County road closures",
+              "url": "https://engineer.warrencountyohio.gov/Information/NewsReleases/Index"
+            }
           ],
           "source": "https://www.ohgo.com/",
           "verified": "2026-11-05"
@@ -87,8 +96,14 @@
           "what": "Pay online through Invoice Cloud ($2.95 fee), at the night drop box in front of 1400 Lytle Road, in person at the Government Center or the Waynesville branch of LCNB, or by mail to Waynesville Utility Department, 1400 Lytle Road, Waynesville, OH 45068.",
           "phone": "513-897-8015",
           "links": [
-            { "label": "Pay online", "url": "https://www.invoicecloud.com/Waynesvilleoh" },
-            { "label": "Utility billing", "url": "https://www.villageofwaynesville.org/departments/utility-billing/" }
+            {
+              "label": "Pay online",
+              "url": "https://www.invoicecloud.com/Waynesvilleoh"
+            },
+            {
+              "label": "Utility billing",
+              "url": "https://www.villageofwaynesville.org/departments/utility-billing/"
+            }
           ],
           "source": "https://www.villageofwaynesville.org/departments/utility-billing/",
           "verified": "2026-11-05"
@@ -140,8 +155,14 @@
           "what": "Meeting dates, agendas and minutes.",
           "link": "https://www.villageofwaynesville.org/meetings/",
           "links": [
-            { "label": "Meetings", "url": "https://www.villageofwaynesville.org/meetings/" },
-            { "label": "Codified ordinances", "url": "https://codelibrary.amlegal.com/codes/waynesville/latest/overview" }
+            {
+              "label": "Meetings",
+              "url": "https://www.villageofwaynesville.org/meetings/"
+            },
+            {
+              "label": "Codified ordinances",
+              "url": "https://codelibrary.amlegal.com/codes/waynesville/latest/overview"
+            }
           ],
           "source": "https://www.villageofwaynesville.org/",
           "verified": "2026-11-05"
@@ -239,6 +260,63 @@
       ]
     },
     {
+      "id": "help",
+      "title": "Community help",
+      "items": [
+        {
+          "name": "Waynesville Food Pantry and Wayne Township Community Aid",
+          "what": "Free non-perishable food and some paper, personal and household products, plus Community Aid help with utility bills, for residents of Waynesville, Wayne Township, Corwin, Harveysburg, Lytle and Oregonia. Distribution Monday, Wednesday and Friday, 3–4:30 p.m. Call to ask for help with food or a utility bill. To donate food, drop off non-expired, non-perishable items at the pantry during open hours, at the Mary L. Cook Library, or in the lobby of the Wayne Township Fire Station (open 24/7). The pantry doesn’t take clothing or furniture.",
+          "phone": "283-221-6908",
+          "address": "St. Mary’s Episcopal Church, 107 S. Third St., Waynesville",
+          "link": "https://www.waynesvilleohiofoodpantry.org/",
+          "links": [
+            {
+              "label": "Hours & location",
+              "url": "https://www.waynesvilleohiofoodpantry.org/#location"
+            },
+            {
+              "label": "WaynesvilleFP@gmail.com",
+              "url": "mailto:WaynesvilleFP@gmail.com"
+            }
+          ],
+          "source": "https://www.waynesvilleohiofoodpantry.org/",
+          "verified": "2026-11-05"
+        },
+        {
+          "name": "Elderly Services Program (Warren County Community Services)",
+          "what": "Help for Warren County residents 60 and older who need help with daily tasks such as bathing, cooking or transportation and aren’t covered by another payer such as Medicaid, Medicare, insurance or hospice. A care manager visits to build a care plan. Services can include home care, home-delivered meals, medical transportation, emergency pendants, minor home repairs such as ramps and grab bars, and adult day programs. Some seniors pay nothing; others pay part on a sliding scale. To apply, call the intake line.",
+          "phone": "513-695-2271",
+          "address": "645 Oak Street, Lebanon",
+          "link": "https://www.wccsi.org/programs-services/care-management-elderly-services-program-esp/",
+          "source": "https://www.wccsi.org/programs-services/care-management-elderly-services-program-esp/",
+          "verified": "2026-11-05"
+        },
+        {
+          "name": "Warren County Community Services: senior programs",
+          "what": "Senior nutrition, senior transportation, senior housing and other supportive services.",
+          "phone": "513-695-2100",
+          "address": "645 Oak Street, Lebanon",
+          "link": "https://www.wccsi.org/",
+          "links": [
+            {
+              "label": "Senior nutrition",
+              "url": "https://www.wccsi.org/programs-services/senior-nutrition/"
+            },
+            {
+              "label": "Senior transportation",
+              "url": "https://www.wccsi.org/programs-services/senior-transportation/"
+            },
+            {
+              "label": "Senior housing",
+              "url": "https://www.wccsi.org/programs-services/senior-housing/"
+            }
+          ],
+          "source": "https://www.wccsi.org/programs-services/care-management-elderly-services-program-esp/",
+          "verified": "2026-11-05"
+        }
+      ]
+    },
+    {
       "id": "schools",
       "title": "Schools & library",
       "items": [
@@ -249,9 +327,18 @@
           "address": "625 Dayton Road, Waynesville",
           "link": "https://www.wayne-local.com/contact/",
           "links": [
-            { "label": "Contact", "url": "https://www.wayne-local.com/contact/" },
-            { "label": "Calendars", "url": "https://www.wayne-local.com/calendars/" },
-            { "label": "Enrollment", "url": "https://www.wayne-local.com/enrollment/" }
+            {
+              "label": "Contact",
+              "url": "https://www.wayne-local.com/contact/"
+            },
+            {
+              "label": "Calendars",
+              "url": "https://www.wayne-local.com/calendars/"
+            },
+            {
+              "label": "Enrollment",
+              "url": "https://www.wayne-local.com/enrollment/"
+            }
           ],
           "source": "https://www.wayne-local.com/contact/",
           "verified": "2026-11-05"
