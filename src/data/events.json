@@ -199,7 +199,7 @@
       "venue": "Mary L. Cook Public Library, 381 Old Stage Rd, Waynesville",
       "category": "Family",
       "source": "https://www.mlcook.lib.oh.us/",
-      "note": "Bid in person on holiday decorations and gift baskets donated by area businesses and community groups. Bidding opens Friday, Nov 20 at noon and closes Thursday, Dec 10 at 7:00 PM. To donate an item, contact the library."
+      "note": "Bid in person on holiday gift baskets, decorations and other items donated by area businesses and neighbors. Bidding opens Friday, Nov 20 at noon and closes Thursday, Dec 10 at 7:00 PM. Proceeds from the Friends of the Mary L. Cook Library support the library’s free programs for all ages and its new Playscape."
     },
     {
       "title": "Letters to Santa mailbox at the library",
@@ -349,6 +349,61 @@
       ],
       "source": "http://thecitymercantile.com/lebanon",
       "note": "Per the organizer: holiday vintage, handmade and boutique market. Admission $12 Friday, $10 Saturday, $5 Sunday; children 12 and under free. Discounted tickets online in advance."
+    },
+    {
+      "title": "What’s next for Waynesville’s roads? — County Engineer on the North Warren County Transportation Plan",
+      "dateISO": "2026-11-10T19:00:00-05:00",
+      "dateLabel": "Tue, Nov 10 · 7:00 PM",
+      "venue": "Village of Waynesville Office, 1400 Lytle Rd, Waynesville",
+      "category": "Government",
+      "source": "https://www.waynesvilleohio.com/events",
+      "note": "Free community meeting. Warren County Engineer Kurt Weber will talk about the North Warren County Transportation Plan and the I-75 to I-71 route option through town. RSVP to the Waynesville Area Chamber of Commerce at 513-897-8855. Can’t make it? The county’s online survey is open through Nov. 17."
+    },
+    {
+      "title": "CrossView Christmas Bazaar",
+      "dateISO": "2026-11-06T15:00:00-05:00",
+      "endISO": "2026-11-07T16:00:00-05:00",
+      "dateLabel": "Fri–Sat, Nov 6–7 · Fri 3–7 PM, Sat 9 AM–4 PM",
+      "venue": "CrossView Christian Church, 4237 E. Social Row Rd, Waynesville",
+      "category": "Community",
+      "tags": [
+        "holiday"
+      ],
+      "source": "/images/events/2026-11-06-crossview-christmas-bazaar.jpg",
+      "note": "Christmas gift bazaar with vendor tables at CrossView Christian Church. See the church’s flyer for details."
+    },
+    {
+      "title": "Dessert Auction for the Miami Cemetery Association Roads Fund",
+      "dateISO": "2026-11-14T18:00:00-05:00",
+      "endISO": "2026-11-14T20:00:00-05:00",
+      "dateLabel": "Sat, Nov 14 · 6–8 PM",
+      "venue": "CrossView Christian Church, 4237 Social Row Rd, Waynesville",
+      "category": "Community",
+      "source": "/images/events/2026-11-14-crossview-dessert-auction.jpg",
+      "note": "Bid on cakes, pies, cookies and other baked goods. All proceeds go to the Miami Cemetery Association Roads Fund, a nonprofit. See the flyer for details."
+    },
+    {
+      "title": "Donations wanted for the Friends of the Library Holiday Silent Auction",
+      "dateISO": "2026-11-09T09:00:00-05:00",
+      "endISO": "2026-11-14T17:00:00-05:00",
+      "dateLabel": "Mon–Sat, Nov 9–14 · during library hours",
+      "venue": "Mary L. Cook Public Library, 381 Old Stage Rd, Waynesville (front desk)",
+      "category": "Community",
+      "source": "https://www.mlcook.lib.oh.us/",
+      "note": "The Friends of the Mary L. Cook Library are collecting items for their Holiday Silent Auction (Nov 20 – Dec 10): gift baskets, gift certificates, wreaths, quilts, wood crafts, toys, candy, jewelry, Spartan wear, home and bath products, baked goods, bikes, grills, camping gear and more. Drop donations at the library’s front desk Nov 9–14, or ask at the desk about a pickup. Proceeds support the library’s free programs and its new Playscape."
+    },
+    {
+      "title": "Waynesville Lions Club Pancake Breakfast & Craft Bazaar",
+      "dateISO": "2026-12-05T08:00:00-05:00",
+      "endISO": "2026-12-05T15:00:00-05:00",
+      "dateLabel": "Sat, Dec 5 · Breakfast & Santa 8–11 AM, bazaar 8 AM–3 PM",
+      "venue": "Waynesville Elementary School, 659 Dayton Rd, Waynesville",
+      "category": "Community",
+      "tags": [
+        "holiday"
+      ],
+      "source": "/images/events/2026-12-05-lions-pancake-breakfast-bazaar.jpg",
+      "note": "The Lions Club’s annual breakfast and bazaar. Pancake breakfast 8–11 AM ($8 adults, $5 children) and visits with Santa 8–11 AM; craft bazaar with 30 vendors 8 AM–3 PM, free admission. New this year: a free children’s crafting table, live performances by local children, and a free raffle for a basket worth over $300 (visit all 30 vendor booths to fill your card). All proceeds benefit the Waynesville Food Pantry."
     }
   ]
 }
