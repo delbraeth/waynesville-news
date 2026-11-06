@@ -33,6 +33,12 @@ For each entry: fill in the confirmed fields, set `verified` to the date checked
 - [ ] Typical downtown shop hours
 - [ ] DORA hours and boundaries
 
+**Directory: places to eat and stay** (`src/data/directory-manual.json`)
+- [ ] Possibly missing; found only on listing sites, so not added: Remember When Tea Room (370 Old Stage Rd), Coffee Hub (415 S. Main), Sun Sprouts Cafe and The Corwin Peddler (Corwin, by the trail), Terrapin Village B&B (Oregonia), Miller's Campground (6964 Townshipline Rd; its website now redirects to a for-sale page), Sinclair House B&B
+- [ ] Hammel House Inn: a commercial real-estate listing offers 121 S. Main for sale. Still open as an inn?
+- [ ] Roscoe's (Coletranes) Pizza: one listing site marks it closed. Still open?
+- [ ] McDonald's: no official description found; add one or leave blank
+
 ## 3. Check
 - [ ] The STEP 1 edit to the daily routine took effect (the run report should show a permits refresh)
 - [ ] `main` was force-updated on the morning of 2026-11-06, before the daily run. Confirm that was expected.

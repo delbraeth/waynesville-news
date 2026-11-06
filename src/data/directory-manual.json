@@ -193,6 +193,11 @@
       "name": "Caleb's Meadow Antiques",
       "phone": "513-658-2562",
       "reason": "keep the shop number only; the Chamber listing put people's first names next to the numbers"
+    },
+    {
+      "name": "Bentino's Pizza",
+      "about": "Pizza, calzones and sandwiches in a casual dining setting, serving Waynesville since 1998.",
+      "reason": "Chamber listing had no description; wording from the restaurant's own site and the county visitors bureau"
     }
   ],
   "items": [
@@ -435,6 +440,21 @@
       "source": "https://www.soarccsc.com/"
     },
     {
+      "name": "Caesar Creek State Park Campground",
+      "sections": [
+        "stay"
+      ],
+      "kinds": [
+        "Campground",
+        "State Park"
+      ],
+      "location": "8570 E. State Route 73, Waynesville, OH 45068",
+      "phone": "937-488-4595",
+      "website": "https://caesarcreekstatepark.com/camping/",
+      "about": "State park campground with 252 electric and 35 full-hookup sites for tents, pop-ups and RVs, plus showers, a camp store, a campers' beach and a boat ramp. Open all year, with fewer sites and no water Nov. 1 to Apr. 1.",
+      "source": "https://www.ohioslargestplayground.com/directory/caesar-creek-state-park-campground/"
+    },
+    {
       "name": "Caesar's Creek Pioneer Village",
       "sections": [
         "fun"
@@ -525,6 +545,20 @@
       "website": "https://www.clearcreekfurniture.com/",
       "about": "Showroom for Amish-built hardwood furniture, including Shaker and Mission styles, plus outdoor pieces.",
       "source": "https://www.clearcreekfurniture.com/"
+    },
+    {
+      "name": "Cranberry Cottage",
+      "sections": [
+        "stay"
+      ],
+      "kinds": [
+        "Bed & Breakfast",
+        "Cottage"
+      ],
+      "location": "102 N. Main Street, Waynesville, OH 45068",
+      "phone": "937-307-7022",
+      "about": "A 1,300-square-foot cottage with a full kitchen, two rooms, a private bath and a free continental breakfast, a short walk from the downtown shops.",
+      "source": "https://www.ohioslargestplayground.com/directory/cranberry-cottage/"
     },
     {
       "name": "Dearinger Cleaning LLC",
@@ -643,6 +677,20 @@
       "website": "http://grandmasgardens.net/",
       "about": "Family-run garden center, gift shop and landscape design business on 14 acres.",
       "source": "https://www.ohioslargestplayground.com/directory/grandmas-gardens/"
+    },
+    {
+      "name": "Gray Stone Cottage",
+      "sections": [
+        "stay"
+      ],
+      "kinds": [
+        "Guest Cottage"
+      ],
+      "location": "147 North Main Street, Waynesville, OH 45068",
+      "phone": "513-850-3881",
+      "website": "https://www.airbnb.com/rooms/50299704",
+      "about": "Rental cottage on North Main Street, booked through Airbnb; the phone number is for reservations.",
+      "source": "https://waynesvilleshops.com/lodging-food-and-entertainment/name/gray-stone-cottage/"
     },
     {
       "name": "Green Feather Apothecary",
@@ -822,6 +870,23 @@
       "source": "https://waynesvilleshops.com/specialty-shops-and-galleries/name/loveless-edge-1/"
     },
     {
+      "name": "Mami Fina's",
+      "sections": [
+        "food"
+      ],
+      "kinds": [
+        "Mexican",
+        "Restaurant"
+      ],
+      "location": "10 N. Main St., Waynesville, OH 45068",
+      "phone": "513-855-1210",
+      "about": "Family-owned restaurant serving authentic Mexican dishes.",
+      "source": "https://www.ohioslargestplayground.com/directory/mami-finas/",
+      "social": {
+        "facebook": "https://www.facebook.com/p/Mami-Finas-100091868704594/"
+      }
+    },
+    {
       "name": "Midwest Pay Link, Inc.",
       "sections": [
         "pro"
@@ -893,6 +958,20 @@
       "website": "https://www.renfestival.com/",
       "about": "Seasonal Renaissance-themed festival with jousting, stage shows, food and artisan shops, held on fall weekends at Renaissance Park.",
       "source": "https://www.renfestival.com/"
+    },
+    {
+      "name": "Olive Branch Campground",
+      "sections": [
+        "stay"
+      ],
+      "kinds": [
+        "Campground",
+        "RV Park"
+      ],
+      "location": "6985 Wilmington Rd., Oregonia, OH 45054",
+      "phone": "513-932-4399",
+      "about": "Family RV campground on 25 wooded acres near I-71 Exit 36, with full-hookup sites (daily, monthly and seasonal), a pool, a fishing pond, a camp store and laundry.",
+      "source": "https://www.ohioslargestplayground.com/directory/olive-branch-campground/"
     },
     {
       "name": "On Target Heating and Cooling",
@@ -1085,6 +1164,20 @@
       }
     },
     {
+      "name": "Thomas Swift House",
+      "sections": [
+        "stay"
+      ],
+      "kinds": [
+        "Bed & Breakfast"
+      ],
+      "location": "243 High Street, Waynesville, OH 45068",
+      "phone": "513-292-2092",
+      "website": "https://www.airbnb.com/rooms/646199766982354501",
+      "about": "Bed and breakfast in a restored 1813 Federal-style building above the Art Expressions shop downtown, by reservation (booked through Airbnb).",
+      "source": "https://waynesvilleshops.com/lodging-food-and-entertainment/name/thomas-swift-house-airbnb/"
+    },
+    {
       "name": "Thrive Upper Cervical Care Chiropractic",
       "sections": [
         "health"
@@ -1188,6 +1281,21 @@
       "website": "https://www.villageamishfurniture.com/",
       "about": "Sells vintage architectural salvage and antique hardware, plus Amish-built and custom furniture for the home, office and outdoors. Also repairs and refinishes antique pieces.",
       "source": "https://www.villageamishfurniture.com/"
+    },
+    {
+      "name": "Waynesville Candy Shoppe",
+      "sections": [
+        "food",
+        "shop"
+      ],
+      "kinds": [
+        "Candy",
+        "Chocolates"
+      ],
+      "location": "33 South Main Street, Waynesville, OH 45068",
+      "phone": "513-897-2112",
+      "about": "Candy shop in an 1820s building with house-made chocolates, candies and seasonal treats. Open Thursday to Sunday, 11 a.m. to 5:30 p.m.",
+      "source": "https://www.ohioslargestplayground.com/directory/waynesville-candy-shoppe/"
     },
     {
       "name": "Waynesville Clock Shop",

@@ -1,6 +1,6 @@
 {
   "_note": "Local business directory. Built by scripts/fetch-directory.mjs from the Waynesville Area Chamber of Commerce's public member directory (name, location, phone, website, and the Chamber's description, as published) plus hand-added listings in directory-manual.json. Contact names, emails and hours are deliberately not copied. Do not edit by hand — edit directory-manual.json and re-run `npm run refresh:directory` (or `npm run refresh:directory -- --manual-only` to merge manual edits without re-reading the Chamber site).",
-  "updated": "2026-11-06T20:13:59.480Z",
+  "updated": "2026-11-06T20:18:04.174Z",
   "sections": [
     {
       "id": "food",
@@ -573,7 +573,7 @@
       ],
       "source": "https://www.waynesvilleohio.com/directory/listing/310",
       "website": "",
-      "about": "",
+      "about": "Pizza, calzones and sandwiches in a casual dining setting, serving Waynesville since 1998.",
       "local": true,
       "from": "chamber"
     },
@@ -850,6 +850,24 @@
       "source": "https://www.soarccsc.com/",
       "website": "https://www.soarccsc.com/",
       "about": "Glider club flying from its own gliderport south of Waynesville, offering flight instruction and introductory glider rides.",
+      "local": true,
+      "from": "manual"
+    },
+    {
+      "id": "manual-caesarcreekstateparkcampground",
+      "name": "Caesar Creek State Park Campground",
+      "location": "8570 E. State Route 73, Waynesville, OH 45068",
+      "phone": "937-488-4595",
+      "sections": [
+        "stay"
+      ],
+      "kinds": [
+        "Campground",
+        "State Park"
+      ],
+      "source": "https://www.ohioslargestplayground.com/directory/caesar-creek-state-park-campground/",
+      "website": "https://caesarcreekstatepark.com/camping/",
+      "about": "State park campground with 252 electric and 35 full-hookup sites for tents, pop-ups and RVs, plus showers, a camp store, a campers' beach and a boat ramp. Open all year, with fewer sites and no water Nov. 1 to Apr. 1.",
       "local": true,
       "from": "manual"
     },
@@ -1196,6 +1214,24 @@
       "about": "About",
       "local": false,
       "from": "chamber"
+    },
+    {
+      "id": "manual-cranberrycottage",
+      "name": "Cranberry Cottage",
+      "location": "102 N. Main Street, Waynesville, OH 45068",
+      "phone": "937-307-7022",
+      "sections": [
+        "stay"
+      ],
+      "kinds": [
+        "Bed & Breakfast",
+        "Cottage"
+      ],
+      "source": "https://www.ohioslargestplayground.com/directory/cranberry-cottage/",
+      "website": "",
+      "about": "A 1,300-square-foot cottage with a full kitchen, two rooms, a private bath and a free continental breakfast, a short walk from the downtown shops.",
+      "local": true,
+      "from": "manual"
     },
     {
       "id": "chamber-583",
@@ -1689,6 +1725,23 @@
       "source": "https://www.ohioslargestplayground.com/directory/grandmas-gardens/",
       "website": "http://grandmasgardens.net/",
       "about": "Family-run garden center, gift shop and landscape design business on 14 acres.",
+      "local": true,
+      "from": "manual"
+    },
+    {
+      "id": "manual-graystonecottage",
+      "name": "Gray Stone Cottage",
+      "location": "147 North Main Street, Waynesville, OH 45068",
+      "phone": "513-850-3881",
+      "sections": [
+        "stay"
+      ],
+      "kinds": [
+        "Guest Cottage"
+      ],
+      "source": "https://waynesvilleshops.com/lodging-food-and-entertainment/name/gray-stone-cottage/",
+      "website": "https://www.airbnb.com/rooms/50299704",
+      "about": "Rental cottage on North Main Street, booked through Airbnb; the phone number is for reservations.",
       "local": true,
       "from": "manual"
     },
@@ -2250,6 +2303,27 @@
       }
     },
     {
+      "id": "manual-mamifinas",
+      "name": "Mami Fina's",
+      "location": "10 N. Main St., Waynesville, OH 45068",
+      "phone": "513-855-1210",
+      "sections": [
+        "food"
+      ],
+      "kinds": [
+        "Mexican",
+        "Restaurant"
+      ],
+      "source": "https://www.ohioslargestplayground.com/directory/mami-finas/",
+      "website": "",
+      "social": {
+        "facebook": "https://www.facebook.com/p/Mami-Finas-100091868704594/"
+      },
+      "about": "Family-owned restaurant serving authentic Mexican dishes.",
+      "local": true,
+      "from": "manual"
+    },
+    {
       "id": "chamber-298",
       "name": "Mary L. Cook Public Library",
       "location": "381 Old Stage Rd. Waynesville, OH",
@@ -2617,6 +2691,24 @@
       "source": "https://www.renfestival.com/",
       "website": "https://www.renfestival.com/",
       "about": "Seasonal Renaissance-themed festival with jousting, stage shows, food and artisan shops, held on fall weekends at Renaissance Park.",
+      "local": true,
+      "from": "manual"
+    },
+    {
+      "id": "manual-olivebranchcampground",
+      "name": "Olive Branch Campground",
+      "location": "6985 Wilmington Rd., Oregonia, OH 45054",
+      "phone": "513-932-4399",
+      "sections": [
+        "stay"
+      ],
+      "kinds": [
+        "Campground",
+        "RV Park"
+      ],
+      "source": "https://www.ohioslargestplayground.com/directory/olive-branch-campground/",
+      "website": "",
+      "about": "Family RV campground on 25 wooded acres near I-71 Exit 36, with full-hookup sites (daily, monthly and seasonal), a pool, a fishing pond, a camp store and laundry.",
       "local": true,
       "from": "manual"
     },
@@ -3447,6 +3539,23 @@
       "from": "manual"
     },
     {
+      "id": "manual-thomasswifthouse",
+      "name": "Thomas Swift House",
+      "location": "243 High Street, Waynesville, OH 45068",
+      "phone": "513-292-2092",
+      "sections": [
+        "stay"
+      ],
+      "kinds": [
+        "Bed & Breakfast"
+      ],
+      "source": "https://waynesvilleshops.com/lodging-food-and-entertainment/name/thomas-swift-house-airbnb/",
+      "website": "https://www.airbnb.com/rooms/646199766982354501",
+      "about": "Bed and breakfast in a restored 1813 Federal-style building above the Art Expressions shop downtown, by reservation (booked through Airbnb).",
+      "local": true,
+      "from": "manual"
+    },
+    {
       "id": "manual-thriveuppercervicalcarechiropractic",
       "name": "Thrive Upper Cervical Care Chiropractic",
       "location": "243 S. Main St., Waynesville, OH 45068",
@@ -3764,6 +3873,25 @@
       "about": "Waynesville Antique Mall continues a long tradition of antique shopping in Waynesville.",
       "local": true,
       "from": "chamber"
+    },
+    {
+      "id": "manual-waynesvillecandyshoppe",
+      "name": "Waynesville Candy Shoppe",
+      "location": "33 South Main Street, Waynesville, OH 45068",
+      "phone": "513-897-2112",
+      "sections": [
+        "food",
+        "shop"
+      ],
+      "kinds": [
+        "Candy",
+        "Chocolates"
+      ],
+      "source": "https://www.ohioslargestplayground.com/directory/waynesville-candy-shoppe/",
+      "website": "",
+      "about": "Candy shop in an 1820s building with house-made chocolates, candies and seasonal treats. Open Thursday to Sunday, 11 a.m. to 5:30 p.m.",
+      "local": true,
+      "from": "manual"
     },
     {
       "id": "manual-waynesvilleclockshop",
