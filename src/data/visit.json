@@ -2,12 +2,269 @@
   "_note": "Visiting Waynesville (/visit/). Hand-kept. Facts only from official sources (village, township, county, ODNR, Chamber, Merchants, event organizers), each with a verified date. Organizations and businesses only; no private individuals. Checked monthly by scripts/check-resources.mjs.",
   "updated": "2026-11-06",
   "sections": [
-    { "id": "getting-here", "title": "Getting here & parking", "items": [] },
-    { "id": "downtown", "title": "Downtown Main Street", "items": [] },
-    { "id": "trail", "title": "Little Miami Scenic Trail", "items": [] },
-    { "id": "caesar-creek", "title": "Caesar Creek State Park", "items": [] },
-    { "id": "events", "title": "Festivals worth planning around", "items": [] },
-    { "id": "history", "title": "History & museums", "items": [] },
-    { "id": "info", "title": "Visitor information", "items": [] }
+    {
+      "id": "getting-here",
+      "title": "Getting here, parking & restrooms",
+      "items": [
+        {
+          "name": "Driving to downtown",
+          "what": "Waynesville is tucked between I-71 and I-75, north of Cincinnati and south of Columbus, a short drive off the interstate at the Route 73 exit. Caesar Creek State Park is on State Route 73 east of the village (I-71 exit 45 or I-75 exit 38, per the county visitors bureau).",
+          "source": [
+            "https://waynesvilleshops.com/about-waynesville/",
+            "http://www.ohioslargestplayground.com/directory/caesar-creek-state-park-outdoor-facilities/"
+          ],
+          "verified": "2026-11-06",
+          "address": "97 S. Main St., Waynesville, OH 45068"
+        },
+        {
+          "name": "Parking downtown",
+          "what": "Parallel parking along Main Street, angle parking on Miami and High streets, a public lot at North and Main, and shop lots open to the public. Please don't use the spaces in front of the post office on Miami Street or its side lot; they're for postal customers. Buses and RVs: park at the north or south end of Main Street.",
+          "source": [
+            "https://waynesvilleshops.com/plan-your-visit/"
+          ],
+          "verified": "2026-11-06",
+          "website": "https://waynesvilleshops.com/plan-your-visit/"
+        },
+        {
+          "name": "Public restrooms downtown",
+          "what": "In the center of downtown, between Lottie Mae's Cottage and Wendy's Treasures.",
+          "source": [
+            "https://waynesvilleshops.com/plan-your-visit/"
+          ],
+          "verified": "2026-11-06",
+          "address": "88 S. Main St., Waynesville, OH 45068"
+        },
+        {
+          "name": "Bike racks",
+          "what": "Next to LCNB Bank on North Main Street, at Veterans Park on South Main Street, and at McDonald's on South Main Street.",
+          "source": [
+            "https://waynesvilleshops.com/plan-your-visit/"
+          ],
+          "verified": "2026-11-06"
+        },
+        {
+          "name": "Sauerkraut Festival parking",
+          "what": "During the festival, shuttle-bus parking is run by the Athletic Boosters at Wayne Local High School; follow the shuttle parking signs. The Chamber doesn't run or recommend the private lots around the festival.",
+          "source": [
+            "https://sauerkrautfestival.waynesvilleohio.com/faq/"
+          ],
+          "verified": "2026-11-06",
+          "website": "https://sauerkrautfestival.waynesvilleohio.com/faq/"
+        }
+      ]
+    },
+    {
+      "id": "downtown",
+      "title": "Downtown Main Street",
+      "items": [
+        {
+          "name": "Historic downtown shops",
+          "what": "Known as the \"Antiques Capital of the Midwest,\" with more than 60 independently owned shops and restaurants on Main, High and Miami streets and Scioto Square, and more along Route 73. Hours vary by shop, so check before you go.",
+          "source": [
+            "https://waynesvilleshops.com/about-waynesville/",
+            "https://waynesvilleshops.com/plan-your-visit/"
+          ],
+          "verified": "2026-11-06",
+          "website": "https://waynesvilleshops.com",
+          "links": [
+            {
+              "label": "Shop & dining map (Chamber, PDF)",
+              "url": "https://www.waynesvilleohio.com/media/events-related/2023-24_Brochure-768x497.pdf"
+            },
+            {
+              "label": "Our directory: shops",
+              "url": "/directory/#shop"
+            },
+            {
+              "label": "Our directory: food",
+              "url": "/directory/#food"
+            }
+          ]
+        },
+        {
+          "name": "DORA (outdoor refreshment area)",
+          "what": "Inside the DORA, you can buy a drink from a participating bar or restaurant and carry it outside. Each shop decides whether drinks may come inside; look for a notice at the door.",
+          "source": [
+            "https://waynesvilleshops.com/dora"
+          ],
+          "verified": "2026-11-06",
+          "website": "https://waynesvilleshops.com/dora"
+        }
+      ]
+    },
+    {
+      "id": "trail",
+      "title": "Little Miami Scenic Trail",
+      "items": [
+        {
+          "name": "Little Miami Scenic Trail",
+          "what": "A paved rail-trail that runs through Corwin, next to Waynesville. Miami Valley Trails puts its length at 78 miles; ODNR runs about 50 paved miles of it, from Terrace Park to Hedges Road, as Little Miami State Park.",
+          "source": [
+            "https://www.miamivalleytrails.org/trails/little-miami-scenic-trail",
+            "http://www.ohioslargestplayground.com/directory/little-miami-scenic-trail/"
+          ],
+          "verified": "2026-11-06",
+          "website": "https://www.miamivalleytrails.org/trails/little-miami-scenic-trail"
+        }
+      ]
+    },
+    {
+      "id": "caesar-creek",
+      "title": "Caesar Creek State Park",
+      "items": [
+        {
+          "name": "Caesar Creek State Park",
+          "what": "A state park on State Route 73 east of the village, built around Caesar Creek Lake (about 2,800 acres), with boating, fishing, swimming, hiking and camping. Check the park's website for hours and beach details.",
+          "source": [
+            "http://www.ohioslargestplayground.com/directory/caesar-creek-state-park-outdoor-facilities/"
+          ],
+          "verified": "2026-11-06",
+          "address": "8570 E. State Route 73, Waynesville, OH 45068",
+          "phone": "513-897-3055",
+          "website": "https://ohiodnr.gov/go-and-do/plan-a-visit/find-a-property/caesar-creek-state-park",
+          "links": [
+            {
+              "label": "Naturalist programs (our calendar)",
+              "url": "/events/"
+            }
+          ]
+        },
+        {
+          "name": "Caesar's Creek Pioneer Village",
+          "what": "Volunteer-run living-history village of historic buildings, on land leased in the state park. Grounds open dawn to dusk; the buildings open during events.",
+          "source": [
+            "https://www.ccpv.us/"
+          ],
+          "verified": "2026-11-06",
+          "address": "3999 Pioneer Village Rd., Waynesville",
+          "website": "https://www.ccpv.us/"
+        }
+      ]
+    },
+    {
+      "id": "events",
+      "title": "Festivals worth planning around",
+      "intro": "Dates change each year; each festival's own site has the current schedule. Our events calendar lists them as dates are announced.",
+      "items": [
+        {
+          "name": "Christmas in the Village",
+          "what": "The Chamber's holiday weekend downtown: 40-plus shops, about 1,000 luminaries on Main Street, a heated entertainment tent, Santa at the gazebo and a Parade of Santas. 2026: Fri, Dec. 4, 1–9 p.m. (shopping from 11 a.m.); Sat, Dec. 5, noon–8 p.m.; Sun, Dec. 6, 11 a.m.–4 p.m., with the Parade of Santas at 1 p.m.",
+          "source": [
+            "https://www.waynesvilleohio.com/events/"
+          ],
+          "verified": "2026-11-06",
+          "website": "https://www.waynesvilleohio.com/events/",
+          "phone": "513-897-8855"
+        },
+        {
+          "name": "Ohio Sauerkraut Festival",
+          "what": "Waynesville's signature festival, on Historic Main Street the second full weekend of October. The 56th was held Oct. 10–11, 2026. No pets except service animals.",
+          "source": [
+            "https://sauerkrautfestival.waynesvilleohio.com/",
+            "https://sauerkrautfestival.waynesvilleohio.com/faq/"
+          ],
+          "verified": "2026-11-06",
+          "website": "https://sauerkrautfestival.waynesvilleohio.com/",
+          "phone": "513-897-8855"
+        },
+        {
+          "name": "Ohio Renaissance Festival",
+          "what": "A Renaissance village on State Route 73, open weekends plus Labor Day in late summer and fall, rain or shine. Parking is free; no pets (service animals welcome) and no outside food or drink. The 2026 season ran Sept. 5–Nov. 1.",
+          "source": [
+            "https://www.renfestival.com/",
+            "https://renfestival.com/faq/"
+          ],
+          "verified": "2026-11-06",
+          "address": "10542 E. State Route 73, Waynesville, OH 45068",
+          "phone": "513-897-7000",
+          "website": "https://www.renfestival.com/"
+        },
+        {
+          "name": "Waynesville Street Faire",
+          "what": "Saturday street faires on Main Street, run by the Waynesville Merchants Association, plus a Christmas Market edition on Dec. 6, 2026. See the merchants' calendar for dates.",
+          "source": [
+            "https://waynesvilleshops.com/2026-calendar-of-events-in-waynesville/"
+          ],
+          "verified": "2026-11-06",
+          "website": "https://waynesvilleshops.com/2026-calendar-of-events-in-waynesville/"
+        }
+      ]
+    },
+    {
+      "id": "history",
+      "title": "History & museums",
+      "items": [
+        {
+          "name": "Museum at the Friends Home",
+          "what": "Local history museum in a 1905 Quaker boarding house, preserving the history of Waynesville and the surrounding villages.",
+          "source": [
+            "https://friendshomemuseum.org"
+          ],
+          "verified": "2026-11-06",
+          "address": "115 S. Fourth St., Waynesville, OH 45068",
+          "hours": "Wednesdays and Saturdays, 1–5 p.m., and by appointment",
+          "phone": "513-897-1607",
+          "website": "https://www.friendshomemuseum.org"
+        },
+        {
+          "name": "Underground Railroad walking tour",
+          "what": "A guided walk of about a mile (roughly 90 minutes) through Waynesville's pre-Civil War Underground Railroad history, meeting at the gazebo in Waynesville Memorial Park. Booked online through the museum ($20 listed; non-refundable).",
+          "source": [
+            "https://www.friendshomemuseum.org/waynesvilleundergroundrailroadtour"
+          ],
+          "verified": "2026-11-06",
+          "address": "274 S. Main St., Waynesville, OH 45068",
+          "website": "https://www.friendshomemuseum.org/waynesvilleundergroundrailroadtour"
+        },
+        {
+          "name": "Self-guided historic walking tour",
+          "what": "A walking-tour brochure and map of historic Waynesville, online or in print at the Chamber office and the Museum at the Friends Home.",
+          "source": [
+            "https://waynesvilleshops.com/about-waynesville/history/historic-walking-tour/"
+          ],
+          "verified": "2026-11-06",
+          "website": "https://waynesvilleshops.com/about-waynesville/history/historic-walking-tour/"
+        }
+      ]
+    },
+    {
+      "id": "info",
+      "title": "Visitor information",
+      "items": [
+        {
+          "name": "Waynesville Area Chamber of Commerce",
+          "what": "Answers visitor questions and has the walking-tour brochure; runs the Sauerkraut Festival and Christmas in the Village.",
+          "source": [
+            "https://www.waynesvilleohio.com/contact/",
+            "https://www.waynesvilleohio.com/directions/"
+          ],
+          "verified": "2026-11-06",
+          "address": "174 S. Main St., Waynesville, OH 45068",
+          "hours": "Tuesday–Friday, 10 a.m.–3 p.m.",
+          "phone": "513-897-8855",
+          "website": "https://www.waynesvilleohio.com"
+        },
+        {
+          "name": "Waynesville Merchants Association",
+          "what": "Shop directory, events calendar and visitor guide for downtown.",
+          "source": [
+            "https://waynesvilleshops.com"
+          ],
+          "verified": "2026-11-06",
+          "website": "https://waynesvilleshops.com"
+        },
+        {
+          "name": "Warren County Convention & Visitors Bureau",
+          "what": "The county tourism office (\"Ohio's Largest Playground\"), with countywide attractions, dining and lodging.",
+          "source": [
+            "http://www.ohioslargestplayground.com/"
+          ],
+          "verified": "2026-11-06",
+          "address": "5412 Courseview Dr., Suite 220, Mason, OH 45040",
+          "phone": "513-204-1900",
+          "website": "https://www.ohioslargestplayground.com"
+        }
+      ]
+    }
   ]
 }

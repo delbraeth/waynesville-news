@@ -100,7 +100,7 @@ const soon = upcomingEvents()
               <div class="res-meta">
                 {it.phone && <a class="res-phone" href={tel(it.phone)}>{it.phone}</a>}
                 {it.address && <a href={mapHref(it.address)} target="_blank" rel="noopener">{it.address} (map)</a>}
-                {it.links && it.links.map((l) => <a href={l.url} target="_blank" rel="noopener">{l.label}</a>)}
+                {it.links && it.links.map((l) => l.url.startsWith("/") ? <a href={l.url}>{l.label}</a> : <a href={l.url} target="_blank" rel="noopener">{l.label}</a>)}
               </div>
               {it.verified && (
                 <div class="res-src">

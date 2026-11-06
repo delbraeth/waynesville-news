@@ -13,6 +13,7 @@ type Link = { label: string; href: string; cls?: string };
 // "Community" groups the reference pages; Churches and Clubs appear only once
 // their data files have entries. About and Supporters live in the footer.
 const community: Link[] = [
+  { label: "Visiting Waynesville", href: "/visit/" },
   { label: "Living in Waynesville", href: "/resources/" },
   churchData.items.length > 0 && { label: "Churches", href: "/churches/" },
   orgData.items.length > 0 && { label: "Clubs & Nonprofits", href: "/community/" },
