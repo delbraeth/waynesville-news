@@ -10,8 +10,24 @@ import SubscribeBox from "../components/SubscribeBox.astro";
 import headlines from "../data/headlines.json";
 import { getPublicBriefs } from "../lib/briefs.js";
 import { getPublishedStories, storyHref } from "../lib/stories.js";
+import churchData from "../data/churches.json";
+import orgData from "../data/organizations.json";
+import directoryData from "../data/directory.json";
+import { upcomingEvents } from "../lib/events.js";
+
+// "Find what you need": one tile per community section, each with a live count
+// so the homepage reads as a dashboard, not just an archive.
+const tiles = [
+  { href: "/events/", title: "Events", text: `${upcomingEvents().length} coming up, with a this-weekend view and add-to-calendar links.` },
+  { href: "/resources/", title: "Living in Waynesville", text: "Utilities, trash, village and township offices, schools and emergency numbers." },
+  { href: "/directory/", title: "Business directory", text: `${directoryData.items.length} local businesses, from antiques to auto repair.` },
+  churchData.items.length && { href: "/churches/", title: "Churches", text: `${churchData.items.length} congregations, with service times and community ministries.` },
+  orgData.items.length && { href: "/community/", title: "Clubs, teams & nonprofits", text: `${orgData.items.length} groups: youth sports, boosters, scouts, service clubs and more.` },
+  { href: "/events/submit/", title: "Submit an event", text: "Holding something open to the public? Send it for the calendar." },
+].filter(Boolean) as { href: string; title: string; text: string }[];
 
 const { briefs, isDemoMode } = await getPublicBriefs();
+const RECENT = 5; // the rest live in the /briefs/ archive
 const latest = briefs[0];
 const stories = (await getPublishedStories()).slice(0, 3);
 const storyFmt = new Intl.DateTimeFormat("en-US", { month: "long", day: "numeric", timeZone: "UTC" });
@@ -47,6 +63,16 @@ const dateLine = latest ? dateFmt.format(latest.data.date) : undefined;
   )}
 
   <div class="container">
+    <section class="section" aria-labelledby="find-h">
+      <p class="kicker">Around town</p>
+      <h2 id="find-h">Find what you need</h2>
+      <ul class="home-tiles">
+        {tiles.map((t) => (
+          <li><a href={t.href}><strong>{t.title}</strong><span>{t.text}</span></a></li>
+        ))}
+      </ul>
+    </section>
+
     {isDemoMode && (
       <section class="section">
         <p class="kicker">This morning in Waynesville</p>
@@ -81,10 +107,10 @@ const dateLine = latest ? dateFmt.format(latest.data.date) : undefined;
       </section>
     )}
 
-    {briefs.length > 0 && (
+    {briefs.length > 1 && (
       <section class="section">
-        <p class="kicker">Recent briefs</p>
-        {briefs.map((b) => (
+        <p class="kicker">Earlier briefs</p>
+        {briefs.slice(latest ? 1 : 0, (latest ? 1 : 0) + RECENT).map((b) => (
           <BriefCard
             dateLabel={dateFmt.format(b.data.date)}
             title={b.data.title}
@@ -92,7 +118,16 @@ const dateLine = latest ? dateFmt.format(latest.data.date) : undefined;
             href={`/briefs/${b.id}/`}
           />
         ))}
+        {briefs.length > RECENT + 1 && <p class="small"><a href="/briefs/">All {briefs.length} briefs →</a></p>}
       </section>
     )}
   </div>
 </Base>
+
+<style>
+  .home-tiles { list-style: none; margin: 0.75rem 0 0; padding: 0; display: grid; gap: 0.75rem; grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr)); }
+  .home-tiles a { display: block; height: 100%; padding: 0.9rem 1rem; border: 1px solid var(--rule); border-radius: 6px; background: var(--paper-2); color: inherit; text-decoration: none; }
+  .home-tiles a:hover, .home-tiles a:focus-visible { border-color: var(--accent); }
+  .home-tiles strong { display: block; color: var(--accent-deep); font-size: 1.05rem; margin-bottom: 0.2rem; }
+  .home-tiles span { display: block; font-size: 0.92rem; color: var(--ink-soft); line-height: 1.4; }
+</style>

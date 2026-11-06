@@ -6,21 +6,33 @@ const { dateLine = new Intl.DateTimeFormat("en-US", {
   weekday: "long", month: "long", day: "numeric", year: "numeric", timeZone: "UTC",
 }).format(new Date()) } = Astro.props;
 
-const nav = [
+import churchData from "../data/churches.json";
+import orgData from "../data/organizations.json";
+
+type Link = { label: string; href: string; cls?: string };
+// "Community" groups the reference pages; Churches and Clubs appear only once
+// their data files have entries. About and Supporters live in the footer.
+const community: Link[] = [
+  { label: "Living in Waynesville", href: "/resources/" },
+  churchData.items.length > 0 && { label: "Churches", href: "/churches/" },
+  orgData.items.length > 0 && { label: "Clubs & Nonprofits", href: "/community/" },
+].filter(Boolean) as Link[];
+const before: Link[] = [
   { label: "Daily Briefs", href: "/briefs/" },
   { label: "Stories", href: "/stories/" },
-  { label: "Schools", href: "/schools/" },
   { label: "Events", href: "/events/" },
+  { label: "Schools", href: "/schools/" },
   { label: "Government", href: "/government/" },
-  { label: "Around Town", href: "/around-town/" },
   { label: "Public Safety", href: "/public-safety/" },
+  { label: "Around Town", href: "/around-town/" },
   { label: "Directory", href: "/directory/" },
-  { label: "Resources", href: "/resources/" },
-  { label: "Supporters", href: "/supporters/" },
-  { label: "About", href: "/about/" },
+];
+const after: Link[] = [
   { label: "Search", href: "/search/" },
   { label: "Subscribe", href: "#subscribe", cls: "nav-subscribe" },
 ];
+// Phone "More" menu: everything, Community pages included, plus About.
+const all: Link[] = [...before, ...community, { label: "Supporters", href: "/supporters/" }, { label: "About", href: "/about/" }, ...after];
 ---
 <header class="masthead">
   <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Switch to dark mode" title="Light or dark">☾</button>
@@ -30,7 +42,16 @@ const nav = [
 </header>
 <nav class="mainnav" aria-label="Sections">
   <ul class="nav-full">
-    {nav.map((n) => <li><a href={n.href} class={n.cls}>{n.label}</a></li>)}
+    {before.map((n) => <li><a href={n.href} class={n.cls}>{n.label}</a></li>)}
+    <li>
+      <details class="nav-drop">
+        <summary>Community <span aria-hidden="true">▾</span></summary>
+        <ul>
+          {community.map((n) => <li><a href={n.href}>{n.label}</a></li>)}
+        </ul>
+      </details>
+    </li>
+    {after.map((n) => <li><a href={n.href} class={n.cls}>{n.label}</a></li>)}
   </ul>
   {/* Phones: three most-used links plus a "More" menu with everything. Pure
       HTML <details>, so it works without JavaScript and with screen readers. */}
@@ -41,12 +62,19 @@ const nav = [
     <details class="nav-more">
       <summary><span aria-hidden="true">☰</span> More</summary>
       <ul>
-        {nav.map((n) => <li><a href={n.href} class={n.cls}>{n.label}</a></li>)}
+        {all.map((n) => <li><a href={n.href} class={n.cls}>{n.label}</a></li>)}
       </ul>
     </details>
   </div>
 </nav>
 <script is:inline>
+// Close the Community dropdown on a click outside it or on Escape.
+document.addEventListener("click", function (e) {
+  document.querySelectorAll("details.nav-drop[open]").forEach(function (d) { if (!d.contains(e.target)) d.removeAttribute("open"); });
+});
+document.addEventListener("keydown", function (e) {
+  if (e.key === "Escape") document.querySelectorAll("details.nav-drop[open]").forEach(function (d) { d.removeAttribute("open"); d.querySelector("summary").focus(); });
+});
 (function () {
   var b = document.getElementById("theme-toggle");
   if (!b) return;

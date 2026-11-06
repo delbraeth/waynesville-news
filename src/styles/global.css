@@ -187,8 +187,8 @@ main { display: block; padding: 1.5rem 0 3rem; }
 }
 .mainnav ul {
   list-style: none; margin: 0 auto; padding: 0.55rem 0;
-  display: flex; flex-wrap: wrap; justify-content: center; gap: 0.25rem 1.4rem;
-  max-width: var(--wide);
+  display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 0.25rem 1.15rem;
+  max-width: 72rem; /* wider than --wide so the menu fits on one line on laptops */
 }
 .mainnav a {
   font-family: var(--font-sans);
@@ -200,6 +200,20 @@ main { display: block; padding: 1.5rem 0 3rem; }
 }
 .mainnav a:hover { color: var(--accent); text-decoration: none; }
 .mainnav a.nav-subscribe { color: var(--accent); }
+.nav-drop { position: relative; display: inline-block; line-height: inherit; }
+.nav-drop summary {
+  list-style: none; cursor: pointer;
+  font-family: var(--font-sans); text-transform: uppercase; letter-spacing: 0.06em;
+  font-size: 0.76rem; font-weight: 600; color: var(--ink);
+}
+.nav-drop summary::-webkit-details-marker { display: none; }
+.nav-drop summary:hover, .nav-drop[open] summary { color: var(--accent); }
+.mainnav .nav-drop ul {
+  position: absolute; top: calc(100% + 0.55rem); left: 50%; transform: translateX(-50%); z-index: 20;
+  display: block; min-width: 13rem; padding: 0.35rem 0; margin: 0;
+  background: var(--paper); border: 1px solid var(--ink); box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+}
+.mainnav .nav-drop li a { display: block; padding: 0.5rem 1rem; white-space: nowrap; }
 
 /* ---------- info bar (weather + next meeting) ---------- */
 .infobar {
