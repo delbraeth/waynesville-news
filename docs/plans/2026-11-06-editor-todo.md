@@ -36,7 +36,7 @@ For each entry: fill in the confirmed fields, set `verified` to the date checked
 **Directory: places to eat and stay** (`src/data/directory-manual.json`)
 - [ ] Possibly missing; found only on listing sites, so not added: Remember When Tea Room (370 Old Stage Rd), Sun Sprouts Cafe and The Corwin Peddler (Corwin, by the trail), Terrapin Village B&B (Oregonia), Miller's Campground (6964 Townshipline Rd; its website now redirects to a for-sale page), Sinclair House B&B
 - Coffee Hub (415 S. Main) is closed, per the editor (2026-11-06); not added.
-- [ ] Hammel House Inn: a commercial real-estate listing offers 121 S. Main for sale. Still open as an inn?
+- Hammel House Inn: rooms open; restaurant expected to reopen soon (editor, 2026-11-06). Listing updated.
 - [ ] Roscoe's (Coletranes) Pizza: one listing site marks it closed. Still open?
 - [ ] McDonald's: no official description found; add one or leave blank
 
