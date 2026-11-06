@@ -30,6 +30,17 @@
         "2026-11-05-living-in-waynesville-resource-center"
       ],
       "recorded": "2026-11-05T11:46:04.847Z"
+    },
+    "2026-11-06": {
+      "url": "https://audio.waynesville.news/audio/2026-11-06.mp3",
+      "seconds": 199,
+      "bytes": 1589959,
+      "chars": 2825,
+      "model": "eleven_v4_turbo",
+      "stories": [
+        "2026-11-05-events-calendar-weekend-add-to-calendar"
+      ],
+      "recorded": "2026-11-06T11:45:38.888Z"
     }
   }
 }
