@@ -254,7 +254,7 @@ const roadsBlock = roads.length
       roadsOhgo.length ? `**Road work near Waynesville** (ODOT, within about 8 miles):\n` +
         roadsOhgo.map((r) => `- **${r.route}** — ${r.status === "Closed" ? "closed" : "lane restrictions"}${r.endISO ? ` through ${fmtShort(r.endISO)}` : ""}. ${clip(r.description, 22)}`).join("\n") : "",
       roadsCounty.length ? `**County road closures** (Warren County Engineer, countywide):\n` +
-        roadsCounty.slice(0, 3).map((r) => `- ${r.startISO > iso ? "Starting" : "Began"} ${fmtShort(r.startISO)}: ${link(r.title, r.link)}${r.startISO > iso ? "" : " (see release for duration)"}`).join("\n") : "",
+        roadsCounty.slice(0, 3).map((r) => `- ${r.startISO > iso ? "Starting" : "Began"} ${fmtShort(r.startISO)}: ${link(r.title, r.link)}${r.endISO ? ` (through ${fmtShort(r.endISO)})` : r.startISO > iso ? "" : " (see release for duration)"}`).join("\n") : "",
     ].filter(Boolean).join("\n\n") + `\n\nSource: ${link("OHGO", "https://www.ohgo.com/")} · ${link("County Engineer releases", "https://engineer.warrencountyohio.gov/Information/NewsReleases/Index")}`
   : null;
 
