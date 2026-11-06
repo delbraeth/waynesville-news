@@ -1,6 +1,6 @@
 {
   "_note": "Local business directory. Built by scripts/fetch-directory.mjs from the Waynesville Area Chamber of Commerce's public member directory (name, location, phone, website, and the Chamber's description, as published) plus hand-added listings in directory-manual.json. Contact names, emails and hours are deliberately not copied. Do not edit by hand — edit directory-manual.json and re-run `npm run refresh:directory` (or `npm run refresh:directory -- --manual-only` to merge manual edits without re-reading the Chamber site).",
-  "updated": "2026-11-06T02:31:32.998Z",
+  "updated": "2026-11-06T18:14:24.606Z",
   "sections": [
     {
       "id": "food",
@@ -2117,7 +2117,7 @@
       "from": "chamber"
     },
     {
-      "id": "chamber-732",
+      "id": "manual-lightnupohio",
       "name": "Light'N Up Ohio LLC",
       "location": "8604 Lytle Ferry Rd, Waynesville, OH 45068",
       "phone": "937-800-2852",
@@ -2129,9 +2129,12 @@
       ],
       "source": "https://www.waynesvilleohio.com/directory/listing/732",
       "website": "http://www.lightnupohio.com/",
+      "social": {
+        "facebook": "https://www.facebook.com/lightnupohio/"
+      },
       "about": "",
       "local": true,
-      "from": "chamber"
+      "from": "manual"
     },
     {
       "id": "manual-lillyscornermall",
