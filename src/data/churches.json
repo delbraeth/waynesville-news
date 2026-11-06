@@ -1,5 +1,5 @@
 {
-  "_note": "Church directory (/churches/). Hand-kept. Every fact comes from the church's own website (or its denomination's official locator page) and carries a verified date; service times exactly as published. Name churches only, never clergy, staff or members. Ministries listed only when the church publishes them as open to the community. Checked monthly for dead links and entries older than 90 days by scripts/check-resources.mjs.",
+  "_note": "Church directory (/churches/). Hand-kept. Every fact comes from the church's own website (or its denomination's official locator page) and carries a verified date; service times exactly as published. Name churches only, never clergy, staff or members. Ministries listed only when the church publishes them as open to the community. Checked monthly for dead links and entries older than 90 days by scripts/check-resources.mjs. Entries with an empty `verified` date are not yet confirmed: the page labels them so. `toConfirm` (not shown on the site) lists what the editor still needs to check; fill in the fields, set `verified` to the date checked, add the source (or \"Confirmed by the editor\" plus how), and delete `toConfirm`.",
   "updated": "2026-11-06",
   "items": [
     {
@@ -154,6 +154,110 @@
         "https://www.westohioumc.org/find-church?county=83"
       ],
       "verified": "2026-11-06"
+    },
+    {
+      "name": "Waynesville Church of the Nazarene",
+      "tradition": "",
+      "address": "7272 E. State Route 73, Waynesville",
+      "town": "Waynesville",
+      "phone": "",
+      "website": "",
+      "services": "",
+      "ministries": [],
+      "source": [],
+      "verified": "",
+      "toConfirm": "Address, phone, website and service times (listing sites only; no church website found)."
+    },
+    {
+      "name": "Waynesville Community Church",
+      "tradition": "",
+      "address": "1009 Lytle Rd., Waynesville",
+      "town": "Waynesville",
+      "phone": "",
+      "website": "",
+      "services": "",
+      "ministries": [],
+      "source": [],
+      "verified": "",
+      "toConfirm": "Address, tradition (listing sites say Southern Baptist), phone, service times. Its Facebook page may be facebook.com/Waynesville.us; confirm before adding it as the website."
+    },
+    {
+      "name": "Waynesville Church of Christ",
+      "tradition": "",
+      "address": "Third and Michigan streets, Waynesville",
+      "town": "Waynesville",
+      "phone": "",
+      "website": "",
+      "services": "",
+      "ministries": [],
+      "source": [],
+      "verified": "",
+      "toConfirm": "Street address, phone, website or Facebook page, service times (listing sites only)."
+    },
+    {
+      "name": "Friendship Baptist Church",
+      "tradition": "",
+      "address": "10600 E. State Route 73, Harveysburg",
+      "town": "Harveysburg",
+      "phone": "",
+      "website": "",
+      "services": "",
+      "ministries": [],
+      "source": [],
+      "verified": "",
+      "toConfirm": "Address, phone, service times (listing sites only; no website found)."
+    },
+    {
+      "name": "Harveysburg Full Gospel Church",
+      "tradition": "",
+      "address": "73 E. South St., Harveysburg",
+      "town": "Harveysburg",
+      "phone": "",
+      "website": "",
+      "services": "",
+      "ministries": [],
+      "source": [],
+      "verified": "",
+      "toConfirm": "Name: listing sites show the same address and phone as both Harveysburg Full Gospel Church and Pillar of Fire Worship Center. Confirm the current name, tradition, phone and service times."
+    },
+    {
+      "name": "Corwin Pentecostal Church",
+      "tradition": "",
+      "address": "33 S. New Burlington Rd., Corwin",
+      "town": "Corwin",
+      "phone": "",
+      "website": "",
+      "services": "",
+      "ministries": [],
+      "source": [],
+      "verified": "",
+      "toConfirm": "Address, phone, service times (listing sites only)."
+    },
+    {
+      "name": "Silver Grove Baptist Church",
+      "tradition": "",
+      "address": "7770 State Route 350, Oregonia",
+      "town": "Oregonia",
+      "phone": "",
+      "website": "",
+      "services": "",
+      "ministries": [],
+      "source": [],
+      "verified": "",
+      "toConfirm": "Whether it is still active, address, phone, service times (listing sites only)."
+    },
+    {
+      "name": "Ridgeville Community Church",
+      "tradition": "",
+      "address": "946 E. Lower Springboro Rd., Ridgeville",
+      "town": "Ridgeville",
+      "phone": "",
+      "website": "",
+      "services": "",
+      "ministries": [],
+      "source": [],
+      "verified": "",
+      "toConfirm": "Address, phone (listing sites disagree), service times."
     }
   ]
 }

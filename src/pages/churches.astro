@@ -68,9 +68,10 @@ const listMail = "mailto:editor@waynesville.news?subject=" + encodeURIComponent(
                 {c.website ? <a href={c.website} target="_blank" rel="noopener">{c.name}</a> : c.name}
               </div>
               {c.tradition && <div class="ch-trad">{c.tradition}</div>}
+              {!c.verified && <p class="ch-unconfirmed">Listed from public directories; details not yet confirmed with the church. Check before you go.</p>}
               {c.services
                 ? <p class="res-what"><strong>Services:</strong> {c.services}</p>
-                : <p class="res-what muted">{c.website ? "Check the church's website for service times." : c.phone ? "Service times aren't posted online; call the church." : "Service times aren't posted online."}</p>}
+                : c.verified && <p class="res-what muted">{c.website ? "Check the church's website for service times." : c.phone ? "Service times aren't posted online; call the church." : "Service times aren't posted online."}</p>}
               {c.ministries && c.ministries.length > 0 && (
                 <ul class="ch-min">
                   {c.ministries.map((m) => <li>{m}</li>)}
@@ -125,6 +126,7 @@ const listMail = "mailto:editor@waynesville.news?subject=" + encodeURIComponent(
   .ch-min li { margin: 0.1rem 0; }
   .res-meta { display: flex; flex-wrap: wrap; gap: 0.25rem 1rem; margin-top: 0.35rem; font-size: 0.95rem; }
   .res-phone { font-weight: 600; white-space: nowrap; }
+  .ch-unconfirmed { margin: 0.3rem 0 0; font-size: 0.9rem; font-style: italic; color: var(--muted); }
   .ch-events { margin-top: 0.3rem; font-size: 0.9rem; }
   .res-src { margin-top: 0.3rem; font-size: 0.8rem; color: var(--muted); }
 </style>
