@@ -63,8 +63,14 @@ reference.
    NewsMediaOrganization on the homepage. Built only from fields already on
    the page.
 3. **Resource center upkeep:**
-   - a monthly link check, reusing `dropDeadWebsites` from
-     `scripts/fetch-directory.mjs`
+   - ~~a monthly link check, reusing `dropDeadWebsites` from
+     `scripts/fetch-directory.mjs`~~ **Done 2026-11-06.**
+     `npm run check:resources` (`scripts/check-resources.mjs`) tests every
+     link and source URL in `resources.json` and lists entries not verified
+     in 90 days. The test is shared with the directory refresh in
+     `scripts/lib/link-check.mjs`. `.github/workflows/check-resources.yml`
+     runs it on the 1st of each month, read-only; a red X (and GitHub's
+     failure email) means something needs fixing, listed in the run summary.
    - re-verify entries older than about 90 days
 4. **Homepage refresh:** give events, the directory, resources and "submit an
    event" clear entry points above the brief archive. Do this after the pieces

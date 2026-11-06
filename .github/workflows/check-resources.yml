@@ -1,0 +1,24 @@
+name: Check resource center links
+
+# Monthly upkeep for /resources/ (roadmap item 3a): tests every link in
+# src/data/resources.json and lists entries not verified in 90 days.
+# Read-only — it never commits or pushes. A red X (and GitHub's failure email
+# to the repo owner) means something needs fixing; the run's summary lists it.
+on:
+  schedule:
+    - cron: "0 14 1 * *" # 1st of each month, 10:00 a.m. Eastern (9 a.m. in winter)
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: "24"
+      - name: Check links and verified dates
+        run: node scripts/check-resources.mjs

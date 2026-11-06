@@ -15,6 +15,7 @@
 // The directory changes slowly, so this runs on demand / monthly, not daily.
 // On any failure the existing directory.json is kept untouched.
 import { readFile, writeFile } from "node:fs/promises";
+import { checkUrl } from "./lib/link-check.mjs";
 
 const BASE = "https://www.waynesvilleohio.com/directory/";
 const OUT = new URL("../src/data/directory.json", import.meta.url);
@@ -279,27 +280,13 @@ async function loadManual() {
 // link: readers shouldn't be sent to a dead domain. Only clear-cut failures
 // count — the domain doesn't resolve, or the site answers 404/410. Bot blocks
 // (403, 429, timeouts) are left alone, since the site is there for a browser.
-const FAKE_404_HOSTS = ["ohiodnr.gov"];
-
 async function dropDeadWebsites(items) {
-  const { lookup } = await import("node:dns/promises");
   const dead = [];
   let i = 0;
   const check = async (it) => {
     if (!it.website) return;
-    let host;
-    try { host = new URL(it.website).hostname; } catch { return; }
-    // ohiodnr.gov answers servers with a fake 404 (verified 2026-11-01: the same
-    // pages load fine in a browser), so never judge it by status code.
-    if (FAKE_404_HOSTS.some((h) => host === h || host.endsWith("." + h))) return;
-    try { await lookup(host); } catch (e) {
-      if (e.code === "ENOTFOUND") { dead.push(`${it.name} (${it.website}: domain gone)`); it.website = ""; }
-      return;
-    }
-    try {
-      const r = await fetch(it.website, { headers: UA, redirect: "follow", signal: AbortSignal.timeout(15_000) });
-      if (r.status === 404 || r.status === 410) { dead.push(`${it.name} (${it.website}: ${r.status})`); it.website = ""; }
-    } catch { /* network hiccup or block: keep */ }
+    const { result, detail } = await checkUrl(it.website);
+    if (result === "dead") { dead.push(`${it.name} (${it.website}: ${detail})`); it.website = ""; }
   };
   await Promise.all(Array.from({ length: 8 }, async () => { while (i < items.length) await check(items[i++]); }));
   if (dead.length) console.log(`directory: removed ${dead.length} dead website link(s): ${dead.join("; ")}`);
