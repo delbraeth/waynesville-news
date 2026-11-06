@@ -112,7 +112,19 @@ reference.
   - Name only churches, not clergy or members, unless the church's own page
     names its pastor in that role.
   - Church events already flow into the events calendar.
-- **Nonprofit and community organization listing.** Editor's idea; see
+- **Nonprofit and community organization listing.** **First version built
+  2026-11-06** at `/community/` (data in `src/data/organizations.json`,
+  checked monthly by `scripts/check-resources.mjs`): 26 groups in youth
+  sports, school groups and boosters, scouts and 4-H, civic and service,
+  community help, history and arts, and business associations. 20 verified
+  from each group's own site or its parent organization's official page;
+  6 listed as "not yet confirmed" with a `toConfirm` note for the editor
+  (youth wrestling, band boosters, scouting units, American Legion Post 615,
+  Progressive Women's Club, Friends of the Library). No Rotary club for
+  Waynesville, Ohio was found (Rotary District 6670 lists none; the nearest
+  is Lebanon). Not found at all: a Wayne Local Education Foundation,
+  middle or high school PTOs, youth basketball, Kiwanis, a VFW post, or
+  community theater. Editor's idea; see
   "Editor's notes" below. Could share a format with the church directory.
   **Includes the schools and youth hub** (reviewer's priority 7; editor's
   decision, 2026-11-06): youth and school-connected groups such as athletic

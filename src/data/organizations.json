@@ -1,0 +1,368 @@
+{
+  "_note": "Community organizations (/community/): nonprofits, civic and service clubs, youth sports, school-connected groups (boosters, PTOs), scouts and 4-H, and history, arts and library groups. Hand-kept. Facts only from the group's own website or its parent organization's official page, each with a verified date. Public organizational contacts only (website, general email or phone): never name officers, coaches, volunteers or any child. Churches are in churches.json; businesses in the directory. Entries with an empty `verified` date are shown as not yet confirmed; `toConfirm` (not shown on the site) lists what the editor still needs to check. Checked monthly by scripts/check-resources.mjs.",
+  "updated": "2026-11-06",
+  "categories": [
+    {
+      "id": "youth-sports",
+      "title": "Youth sports"
+    },
+    {
+      "id": "school",
+      "title": "School groups & boosters"
+    },
+    {
+      "id": "scouts",
+      "title": "Scouts & 4-H"
+    },
+    {
+      "id": "civic",
+      "title": "Civic & service clubs"
+    },
+    {
+      "id": "help",
+      "title": "Community help"
+    },
+    {
+      "id": "history-arts",
+      "title": "History, arts & library"
+    },
+    {
+      "id": "business",
+      "title": "Business associations & festivals"
+    }
+  ],
+  "items": [
+    {
+      "name": "Waynesville Youth Football & Cheerleading Association",
+      "category": "youth-sports",
+      "what": "Volunteer-run youth tackle football and cheerleading for 3rd through 6th graders; the feeder program for the junior high and high school teams.",
+      "meets": "Fall season. Registration typically closes in mid-May; practice starts in late July.",
+      "email": "youthspartans@gmail.com",
+      "website": "https://www.youthspartans.com/",
+      "facebook": "https://www.facebook.com/groups/239028913170848",
+      "howToHelp": "Each family works one concession-stand shift at home games (or pays a buyout at registration).",
+      "source": [
+        "https://www.youthspartans.com/"
+      ],
+      "verified": "2026-11-06"
+    },
+    {
+      "name": "Waynesville Baseball Softball Association",
+      "category": "youth-sports",
+      "what": "Recreational and Knothole baseball, softball and T-ball for Waynesville boys and girls.",
+      "meets": "Spring season, at the Waynesville High School fields (659 Dayton Rd.) and Hisey Park (5443 Middletown Rd.). Registration opens in December.",
+      "email": "waynesvillebaseballandsoftball@gmail.com",
+      "website": "https://clubs.bluesombrero.com/waynesvillebandsb",
+      "howToHelp": "Team, field and outfield banner sponsorships; volunteers are welcome, including help with the fields.",
+      "source": [
+        "https://clubs.bluesombrero.com/waynesvillebandsb",
+        "https://clubs.bluesombrero.com/Default.aspx?tabid=1177660",
+        "https://clubs.bluesombrero.com/Default.aspx?tabid=1463529"
+      ],
+      "verified": "2026-11-06"
+    },
+    {
+      "name": "Waynesville Soccer Association",
+      "category": "youth-sports",
+      "what": "All-volunteer nonprofit running Waynesville's youth soccer: a SAY recreational program (SAY Miami Valley South) and the Waynesville Futbol Club competitive program.",
+      "meets": "Fall recreational season; registration runs April to mid-June.",
+      "email": "wsaohio@gmail.com",
+      "website": "https://www.waynesvillesoccer.com/",
+      "source": [
+        "https://www.waynesvillesoccer.com/",
+        "https://www.waynesvillesoccer.com/Default.aspx?tabid=1028647"
+      ],
+      "verified": "2026-11-06"
+    },
+    {
+      "name": "Waynesville Youth Wrestling Club",
+      "category": "youth-sports",
+      "what": "Youth wrestling (a 2018 district post listed ages 5 through 6th grade).",
+      "source": [
+        "https://archive.wayne-local.com/district-news/entry/waynesville-youth-wrestling-sign-ups-788/"
+      ],
+      "verified": "",
+      "toConfirm": "Whether the club is still active (only a 2018 district sign-up post found), current ages, contact and season."
+    },
+    {
+      "name": "Waynesville Athletic Boosters",
+      "category": "school",
+      "what": "Volunteer nonprofit supporting Waynesville high school and junior high athletes, cheerleaders, trainers and coaches.",
+      "meets": "Has met the 4th Monday of each month at 7 p.m. in the high school's Spartan Room; check with the boosters for this year's schedule.",
+      "email": "athleticboosters@waynelocal.net",
+      "website": "https://archive.wayne-local.com/athletics/athletic-boosters-24/",
+      "howToHelp": "Come to a meeting. Fundraisers include the Sauerkraut Festival food booth, the concession stand and field and gym banner sponsorships.",
+      "source": [
+        "https://archive.wayne-local.com/athletics/athletic-boosters-24/",
+        "https://www.wayne-local.com/district-news/entry/athletic-booster-meetings/"
+      ],
+      "verified": "2026-11-06"
+    },
+    {
+      "name": "Waynesville Band Boosters",
+      "category": "school",
+      "what": "Parent group supporting Waynesville's school bands.",
+      "source": [],
+      "verified": "",
+      "toConfirm": "Contact, website or Facebook page, meeting schedule (seen only as a donor in a 2022 district post)."
+    },
+    {
+      "name": "Waynesville Elementary PTO",
+      "category": "school",
+      "what": "Families, teachers and staff raising money for enrichment assemblies, art, computer, music and PE needs, and staff appreciation at Waynesville Elementary.",
+      "email": "wespto@waynelocal.net",
+      "website": "https://wayne-local.com/waynesville-elementary-school/pto",
+      "facebook": "https://www.facebook.com/WESSpartansPTO",
+      "howToHelp": "Volunteer for Book Fair, Field Day and the Holiday Shop by email or through Facebook.",
+      "source": [
+        "https://wayne-local.com/waynesville-elementary-school/pto"
+      ],
+      "verified": "2026-11-06"
+    },
+    {
+      "name": "Legacy 4-H Club",
+      "category": "scouts",
+      "what": "Warren County 4-H club in the Waynesville area.",
+      "meets": "Tuesdays at 6:30 p.m.",
+      "phone": "513-695-1311",
+      "contact": "Warren County OSU Extension",
+      "website": "https://warren.osu.edu/program-areas/4-h-youth-development/club-enrollment",
+      "howToHelp": "Enroll through Warren County 4-H (OSU Extension).",
+      "source": [
+        "https://warren.osu.edu/sites/warren/files/imce/Club%20List%202026%20%282%29_0.pdf",
+        "https://warren.osu.edu/program-areas/4-h-youth-development/club-enrollment"
+      ],
+      "verified": "2026-11-06"
+    },
+    {
+      "name": "Ridgeville Sunny Shamrocks 4-H Club",
+      "category": "scouts",
+      "what": "Warren County 4-H club in the Waynesville area.",
+      "meets": "Mondays at 6 p.m.",
+      "phone": "513-695-1311",
+      "contact": "Warren County OSU Extension",
+      "website": "https://warren.osu.edu/program-areas/4-h-youth-development/club-enrollment",
+      "howToHelp": "Enroll through Warren County 4-H (OSU Extension).",
+      "source": [
+        "https://warren.osu.edu/sites/warren/files/imce/Club%20List%202026%20%282%29_0.pdf"
+      ],
+      "verified": "2026-11-06"
+    },
+    {
+      "name": "Warren County Pioneers 4-H Club",
+      "category": "scouts",
+      "what": "Warren County 4-H club in the Waynesville area.",
+      "meets": "Wednesdays at 5 p.m.",
+      "phone": "513-695-1311",
+      "contact": "Warren County OSU Extension",
+      "website": "https://warren.osu.edu/program-areas/4-h-youth-development/club-enrollment",
+      "howToHelp": "Enroll through Warren County 4-H (OSU Extension).",
+      "source": [
+        "https://warren.osu.edu/sites/warren/files/imce/Club%20List%202026%20%282%29_0.pdf"
+      ],
+      "verified": "2026-11-06"
+    },
+    {
+      "name": "Mid Valley Wranglers 4-H Club",
+      "category": "scouts",
+      "what": "Warren County 4-H club serving the Lebanon and Waynesville areas.",
+      "meets": "Fridays at 6 p.m.",
+      "phone": "513-695-1311",
+      "contact": "Warren County OSU Extension",
+      "website": "https://warren.osu.edu/program-areas/4-h-youth-development/club-enrollment",
+      "howToHelp": "Enroll through Warren County 4-H (OSU Extension).",
+      "source": [
+        "https://warren.osu.edu/sites/warren/files/imce/Club%20List%202026%20%282%29_0.pdf"
+      ],
+      "verified": "2026-11-06"
+    },
+    {
+      "name": "Spurs & Steers 4-H Club",
+      "category": "scouts",
+      "what": "Warren County 4-H club serving the Lebanon and Oregonia areas.",
+      "meets": "Sundays at 1:30 p.m.",
+      "phone": "513-695-1311",
+      "contact": "Warren County OSU Extension",
+      "website": "https://warren.osu.edu/program-areas/4-h-youth-development/club-enrollment",
+      "howToHelp": "Enroll through Warren County 4-H (OSU Extension).",
+      "source": [
+        "https://warren.osu.edu/sites/warren/files/imce/Club%20List%202026%20%282%29_0.pdf"
+      ],
+      "verified": "2026-11-06"
+    },
+    {
+      "name": "Scouting in Waynesville",
+      "category": "scouts",
+      "what": "Cub Scouts, Scouts BSA and Venturing units chartered in Waynesville, several by American Legion Post 615.",
+      "source": [],
+      "verified": "",
+      "toConfirm": "Which units are active (Cub Scout Pack 840; Scouts BSA Troops 51, 1051 and 318; Venturing Crew 6151 were found in older sources), meeting times, and a public contact. Troop 318's Scout Hut was reported at East Street Park, 372 Howell St., in 2024."
+    },
+    {
+      "name": "American Legion Post 615",
+      "category": "civic",
+      "what": "Veterans organization, with an Auxiliary unit, Sons of the American Legion and Legion Riders; charters several Waynesville scouting units.",
+      "phone": "513-897-9401",
+      "email": "americanlegionpost615@gmail.com",
+      "contact": "174 S. Fourth St., Waynesville",
+      "source": [
+        "https://www.waynesvilleohio.com/directory/listing/734"
+      ],
+      "verified": "",
+      "toConfirm": "Confirm it is still the right post name and contact; no website of its own (details are from its Chamber listing)."
+    },
+    {
+      "name": "Waynesville Leo Club",
+      "category": "civic",
+      "what": "Youth service club in the Lions Clubs International family, chartered in 2023; named District 13 OH 6 Leo Club of the Year in 2024.",
+      "source": [
+        "https://www.wayne-local.com/district-news/entry/waynesville-leo-club-award-winning-year-2024/"
+      ],
+      "verified": "2026-11-06"
+    },
+    {
+      "name": "Waynesville Lions Club",
+      "category": "civic",
+      "what": "Lions service club since 1958: sight-related causes, scholarships, Student of the Month and Citizen of the Year, a pancake breakfast for the Waynesville Food Pantry, and a food trailer at the Sauerkraut Festival.",
+      "meets": "2nd and 4th Tuesdays at 6:30 p.m., Wayne Township Admin Building, 6050 N. Clarksville Rd.",
+      "contact": "Contact form on the club website",
+      "website": "https://e-clubhouse.org/sites/waynesvilleoh/",
+      "facebook": "https://www.facebook.com/WaynesvilleLions",
+      "source": [
+        "https://e-clubhouse.org/sites/waynesvilleoh/",
+        "https://e-clubhouse.org/sites/waynesvilleoh/page-6.php"
+      ],
+      "verified": "2026-11-06"
+    },
+    {
+      "name": "Waynesville Masonic Lodge No. 163 F&AM",
+      "category": "civic",
+      "what": "Freemasons lodge (Grand Lodge of Ohio) for men 19 and older.",
+      "meets": "First Tuesday of each month at 7 p.m. (not July or August), 1351 Lytle Rd., Waynesville.",
+      "email": "waynesville163@gmail.com",
+      "website": "https://www.waynesvillelodge163.com/",
+      "howToHelp": "Use the \"Interested in joining?\" form on the lodge's Grand Lodge of Ohio page.",
+      "source": [
+        "https://oh.grandview.systems/public_lodges/lodge/131",
+        "https://www.waynesvillelodge163.com/"
+      ],
+      "verified": "2026-11-06"
+    },
+    {
+      "name": "Order of the Eastern Star, Miami Chapter No. 107",
+      "category": "civic",
+      "what": "Eastern Star chapter affiliated with Waynesville Masonic Lodge No. 163.",
+      "meets": "First Monday of each month at 7:30 p.m. (not July or August).",
+      "website": "https://www.waynesvillelodge163.com/",
+      "source": [
+        "https://www.waynesvillelodge163.com/"
+      ],
+      "verified": "2026-11-06"
+    },
+    {
+      "name": "Progressive Women's Club of Waynesville",
+      "category": "civic",
+      "what": "Women's community service and education club, with a foundation; holds a spring silent auction.",
+      "email": "pwclubandfoundation@gmail.com",
+      "contact": "P.O. Box 1002, Waynesville",
+      "facebook": "https://www.facebook.com/ProgressiveWomenofWaynesville/",
+      "source": [
+        "https://www.waynesvilleohio.com/directory/listing/577/"
+      ],
+      "verified": "",
+      "toConfirm": "Meeting place and schedule (the Chamber listing says monthly at the United Methodist Church; another source says Quaker Heights), whether the email and phone are current, and any website."
+    },
+    {
+      "name": "Waynesville Food Pantry and Wayne Township Community Aid",
+      "category": "help",
+      "what": "Free food and household items, plus help with utility bills, for Waynesville, Wayne Township, Corwin, Harveysburg, Lytle and Oregonia. Distribution Mondays, Wednesdays and Fridays, 3–4:30 p.m., at St. Mary's Episcopal Church, 107 S. Third St.",
+      "phone": "283-221-6908",
+      "email": "WaynesvilleFP@gmail.com",
+      "website": "https://www.waynesvilleohiofoodpantry.org/",
+      "howToHelp": "Drop off non-expired, non-perishable food at the pantry during open hours, at the Mary L. Cook Library, or in the Wayne Township Fire Station lobby (open 24/7). No clothing or furniture.",
+      "source": [
+        "https://www.waynesvilleohiofoodpantry.org/"
+      ],
+      "verified": "2026-11-05"
+    },
+    {
+      "name": "Caesar's Creek Pioneer Village",
+      "category": "history-arts",
+      "what": "Volunteer-run, privately funded living-history village of historic buildings moved from the Caesar Creek area, on land leased in Caesar Creek State Park.",
+      "meets": "Grounds open dawn to dusk daily; buildings open during events such as the pancake brunch, craft show and Candlelight Walk. 3999 Pioneer Village Rd.",
+      "contact": "Contact form on the website; P.O. Box 652, Waynesville",
+      "website": "https://www.ccpv.us/",
+      "facebook": "https://www.facebook.com/CCpioneervillage",
+      "howToHelp": "Volunteer, donate or become a member through the website.",
+      "source": [
+        "https://www.ccpv.us/"
+      ],
+      "verified": "2026-11-06"
+    },
+    {
+      "name": "Friends of the Mary L. Cook Public Library",
+      "category": "history-arts",
+      "what": "Library support group behind the book sale and the holiday auction.",
+      "website": "https://mlcook.lib.oh.us/content/friends-mary-l-cook-public-library-3",
+      "source": [],
+      "verified": "",
+      "toConfirm": "Contact, membership details and the library page (the library's site was down when checked)."
+    },
+    {
+      "name": "Museum at the Friends Home",
+      "category": "history-arts",
+      "what": "All-volunteer local history museum in a 1905 Quaker boarding house, preserving the history of Waynesville and nearby northeast Warren County villages.",
+      "meets": "Open Wednesdays and Saturdays, 1–5 p.m., and by appointment, 115 S. Fourth St.",
+      "phone": "513-897-1607",
+      "email": "info@friendshomemuseum.org",
+      "website": "https://www.friendshomemuseum.org/",
+      "facebook": "https://www.facebook.com/Museum-at-the-Friends-Home-126825098257/",
+      "howToHelp": "Volunteer, donate or become a member through the museum's website.",
+      "source": [
+        "https://www.friendshomemuseum.org/about-us"
+      ],
+      "verified": "2026-11-06"
+    },
+    {
+      "name": "Ohio Sauerkraut Festival",
+      "category": "business",
+      "what": "Annual October street festival on Main Street. Its food vendors are local nonprofits, and proceeds support area civic and charitable groups.",
+      "meets": "Second weekend of October.",
+      "phone": "513-897-8855",
+      "email": "media@waynesvilleohio.com",
+      "website": "https://sauerkrautfestival.waynesvilleohio.com/",
+      "source": [
+        "https://sauerkrautfestival.waynesvilleohio.com/"
+      ],
+      "verified": "2026-11-06"
+    },
+    {
+      "name": "Waynesville Area Chamber of Commerce",
+      "category": "business",
+      "what": "Business association that promotes Waynesville's shops, restaurants and events, including Christmas in the Village, and hosts member networking events.",
+      "phone": "513-897-8855",
+      "email": "office@waynesvilleohio.com",
+      "contact": "174 S. Main St., Waynesville",
+      "website": "https://www.waynesvilleohio.com/",
+      "facebook": "https://www.facebook.com/waynesvilleoh/",
+      "howToHelp": "Membership information on the Chamber's website.",
+      "source": [
+        "https://www.waynesvilleohio.com/"
+      ],
+      "verified": "2026-11-06"
+    },
+    {
+      "name": "Waynesville Merchants Association",
+      "category": "business",
+      "what": "Group of downtown merchants promoting Waynesville's local businesses and historic downtown, including the Waynesville Street Faire.",
+      "contact": "Contact form on the website",
+      "website": "https://waynesvilleshops.com/",
+      "howToHelp": "Membership runs January to December.",
+      "source": [
+        "https://waynesvilleshops.com/?p=83",
+        "https://waynesvilleshops.com/contact-us"
+      ],
+      "verified": "2026-11-06"
+    }
+  ]
+}

@@ -6,6 +6,8 @@
 import Base from "../layouts/Base.astro";
 import data from "../data/churches.json";
 import { upcomingEvents } from "../lib/events.js";
+import orgData from "../data/organizations.json";
+const hasOrgs = orgData.items.length > 0;
 
 type Church = {
   name: string; tradition?: string; address?: string; town?: string; phone?: string;
@@ -107,7 +109,7 @@ const listMail = "mailto:editor@waynesville.news?subject=" + encodeURIComponent(
     </div>
 
     <p class="small">
-      Need help with food, utilities or rides? See <a href="/resources/#help">Living in Waynesville</a>.
+      {hasOrgs && <>Clubs, teams and volunteer groups: <a href="/community/">community organizations</a>. </>}Need help with food, utilities or rides? See <a href="/resources/#help">Living in Waynesville</a>.
       Looking for a business? The <a href="/directory/">business directory</a>.
     </p>
   </div>
