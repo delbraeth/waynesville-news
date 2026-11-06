@@ -32,6 +32,7 @@
     "prune:events": "node scripts/prune-events.mjs",
     "check:briefs": "node scripts/check-briefs.mjs",
     "check:staleness": "node scripts/check-staleness.mjs",
+    "check:resources": "node scripts/check-resources.mjs",
     "verify:live": "node scripts/verify-live.mjs",
     "refresh:directory": "node scripts/fetch-directory.mjs",
     "refresh:nwctp": "node scripts/fetch-nwctp.mjs",

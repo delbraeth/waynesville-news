@@ -1,6 +1,6 @@
 # Planning note: community hub review (2026-11-05)
 
-**Status:** Living roadmap, last updated 2026-11-05. The first build is done
+**Status:** Living roadmap, last updated 2026-11-06. The first build is done
 (see "Roadmap" below). The review that started it is kept further down for
 reference.
 
@@ -56,10 +56,21 @@ reference.
      `isLocalEvent()` in `src/lib/events.js` reads the venue, and an event
      can override it with `local: true|false`. /events/ has a "Waynesville
      area only" checkbox and a "Regional" label.
-2. **Structured data** (schema.org Event and NewsArticle) for search engines.
+2. ~~**Structured data** (schema.org Event and NewsArticle) for search engines.~~
+   **Done 2026-11-06.** JSON-LD from `src/lib/structuredData.js`, passed to
+   `Base.astro` as `jsonLd`: NewsArticle on every brief and story, an
+   ItemList of Events on /events/ (upcoming items only), and WebSite plus
+   NewsMediaOrganization on the homepage. Built only from fields already on
+   the page.
 3. **Resource center upkeep:**
-   - a monthly link check, reusing `dropDeadWebsites` from
-     `scripts/fetch-directory.mjs`
+   - ~~a monthly link check, reusing `dropDeadWebsites` from
+     `scripts/fetch-directory.mjs`~~ **Done 2026-11-06.**
+     `npm run check:resources` (`scripts/check-resources.mjs`) tests every
+     link and source URL in `resources.json` and lists entries not verified
+     in 90 days. The test is shared with the directory refresh in
+     `scripts/lib/link-check.mjs`. `.github/workflows/check-resources.yml`
+     runs it on the 1st of each month, read-only; a red X (and GitHub's
+     failure email) means something needs fixing, listed in the run summary.
    - re-verify entries older than about 90 days
 4. **Homepage refresh:** give events, the directory, resources and "submit an
    event" clear entry points above the brief archive. Do this after the pieces
@@ -91,12 +102,18 @@ reference.
   "Editor's notes" below. Could share a format with the church directory.
 - **Volunteer board.** Could grow out of the nonprofit listing's "how to
   help" lines.
-- **Directory photos as a supporter perk.** Discussed 2026-11-05, not
-  decided.
-- **Human review on sensitive days** (elections, public safety, allegations).
-  This needs an explicit decision from the editor.
 - **Visitor guide and government issue trackers.** From the review's
   Phase 3.
+
+### On hold (editor's decision, 2026-11-06)
+
+Don't build these or bring them up as next steps until the editor reopens them.
+
+- **Human review before publishing**, including the middle path of review on
+  sensitive days only (elections, public safety, allegations). The daily brief
+  keeps auto-publishing as instructed on 2026-08-20.
+- **Directory photos**, including as a supporter perk. The directory stays
+  text-only.
 
 ## Source
 

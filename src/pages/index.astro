@@ -1,4 +1,5 @@
 ---
+import { website } from "../lib/structuredData.js";
 import Base from "../layouts/Base.astro";
 import FeaturedBrief from "../components/FeaturedBrief.astro";
 import HeadlineList from "../components/HeadlineList.astro";
@@ -21,7 +22,7 @@ const dateFmt = new Intl.DateTimeFormat("en-US", {
 const shortFmt = new Intl.DateTimeFormat("en-US", { month: "long", day: "numeric" });
 const dateLine = latest ? dateFmt.format(latest.data.date) : undefined;
 ---
-<Base dateLine={dateLine}>
+<Base dateLine={dateLine} jsonLd={website}>
   {latest ? (
     <section class="section">
       <div class="reading">

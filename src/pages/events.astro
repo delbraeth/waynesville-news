@@ -4,6 +4,7 @@ import SeasonalGuide from "../components/SeasonalGuide.astro";
 import eventsData from "../data/events.json";
 import { upcomingEvents, isLocalEvent } from "../lib/events.js";
 import { icsHref, googleCalendarUrl } from "../lib/ical.js";
+import { eventList } from "../lib/structuredData.js";
 
 const upcoming = upcomingEvents();
 
@@ -11,7 +12,7 @@ const evergreen = eventsData.items.filter((e) => e.evergreen).map((e) => ({ ...e
 const regionalCount = upcoming.filter((e) => !e._local).length;
 const submitMail = "mailto:editor@waynesville.news?subject=" + encodeURIComponent("Event for the calendar");
 ---
-<Base title="Events & Things to Do · Waynesville News" showInfoBar={false}>
+<Base title="Events & Things to Do · Waynesville News" showInfoBar={false} jsonLd={upcoming.length ? eventList(upcoming) : undefined}>
   <div class="reading">
     <p class="kicker">Events</p>
     <h1>Events &amp; Things to Do</h1>
