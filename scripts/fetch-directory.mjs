@@ -35,7 +35,8 @@ export const SECTIONS = [
   { id: "realestate", label: "Real estate & moving" },
   { id: "tech", label: "Technology, media & printing" },
   { id: "shop", label: "Shopping & specialty retail" },
-  { id: "stay", label: "Travel, lodging & event venues" },
+  { id: "stay", label: "Places to stay" },
+  { id: "venues", label: "Event venues & party rentals" },
   { id: "fun", label: "Arts, recreation & experiences" },
   { id: "farm", label: "Farms & agriculture" },
   { id: "pets", label: "Pets & veterinary" },
@@ -59,7 +60,7 @@ const CATEGORY_MAP = [
   [/^shopping/, "shop"],
   [/^lodging/, "stay"],
   [/^hotels?/, "stay"],
-  [/^event/, "stay"],
+  [/^event/, "venues"],
   [/^arts/, "fun"],
   [/^hands-on/, "fun"],
   [/^sports/, "fun"],
@@ -312,7 +313,7 @@ async function loadRecategorize() {
     // Each entry may fix sections, kinds (the tags shown under the name) and/or
     // about, for a Chamber listing whose categories or description are wrong.
     return new Map((m.recategorize ?? [])
-      .filter((r) => r?.name && (Array.isArray(r.sections) || Array.isArray(r.kinds) || typeof r.about === "string"))
+      .filter((r) => r?.name && (Array.isArray(r.sections) || Array.isArray(r.kinds) || typeof r.about === "string" || typeof r.phone === "string" || r.group))
       .map((r) => [nameKey(r.name), r]));
   } catch { return new Map(); }
 }
@@ -331,6 +332,8 @@ async function writeMerged(chamber) {
     if (fix?.sections) it.sections = fix.sections.filter((id) => SECTIONS.some((s) => s.id === id));
     if (fix?.kinds) it.kinds = fix.kinds;
     if (typeof fix?.about === "string") it.about = fix.about;
+    if (fix?.group) it.group = fix.group;
+    if (typeof fix?.phone === "string") it.phone = fix.phone;
   }
   await dropDeadWebsites(items);
   await writeFile(

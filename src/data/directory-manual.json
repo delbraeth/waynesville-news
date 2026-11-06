@@ -1,5 +1,5 @@
 {
-  "_note": "Hand-added directory listings for businesses that are not Chamber members (or to override a Chamber listing with the same name). Facts only, as the business publishes them; no private individuals' names. Fields: name (required), sections (array of section ids from directory.json, e.g. [\"home\"]), kinds (e.g. [\"Plumbing\"]), location, phone, website, email, social (facebook, instagram, tiktok, airbnb), about, source (where you verified it). After editing, run `npm run refresh:directory -- --manual-only`. To remove a listing for good (closed, moved, or asked to be removed), add it to \"exclude\" as {\"name\": \"...\", \"reason\": \"...\", \"date\": \"YYYY-MM-DD\"}; this also blocks it from the Chamber data. To move a listing to different sections without retyping it (e.g. a Chamber listing filed under the wrong category), add it to \"recategorize\" as {\"name\": \"...\", \"sections\": [\"...\"], \"reason\": \"...\"}. A recategorize entry can instead (or also) fix a Chamber listing's tags with \"kinds\": [\"...\"] or its description with \"about\": \"...\".",
+  "_note": "Hand-added directory listings for businesses that are not Chamber members (or to override a Chamber listing with the same name). Facts only, as the business publishes them; no private individuals' names. Fields: name (required), sections (array of section ids from directory.json, e.g. [\"home\"]), kinds (e.g. [\"Plumbing\"]), location, phone, website, email, social (facebook, instagram, tiktok, airbnb), about, source (where you verified it). After editing, run `npm run refresh:directory -- --manual-only`. To remove a listing for good (closed, moved, or asked to be removed), add it to \"exclude\" as {\"name\": \"...\", \"reason\": \"...\", \"date\": \"YYYY-MM-DD\"}; this also blocks it from the Chamber data. To move a listing to different sections without retyping it (e.g. a Chamber listing filed under the wrong category), add it to \"recategorize\" as {\"name\": \"...\", \"sections\": [\"...\"], \"reason\": \"...\"}. A recategorize entry can instead (or also) fix a Chamber listing's tags with \"kinds\": [\"...\"] or its description with \"about\": \"...\", its phone with \"phone\": \"...\", or pin its subgroup with \"group\": \"<label>\" (or {\"<section id>\": \"<label>\"}) from src/lib/directoryGroups.js.",
   "exclude": [
     {
       "name": "R5 Travel Leaders",
@@ -52,10 +52,9 @@
     {
       "name": "Once in a Blue Moon Farm",
       "sections": [
-        "farm",
-        "food"
+        "farm"
       ],
-      "reason": "u-pick farm"
+      "reason": "u-pick farm: under Farms, not places to eat"
     },
     {
       "name": "Butter Churn Cafe",
@@ -103,6 +102,97 @@
       "name": "Domino's Pizza - Southern Ohio Pizza",
       "about": "Offering pizza, pasta, sandwiches, and desserts",
       "reason": "drop the stray \"Main Office\" from the Chamber description"
+    },
+    {
+      "name": "A & S Party Rental",
+      "sections": [
+        "venues"
+      ],
+      "reason": "party rentals, not lodging"
+    },
+    {
+      "name": "Warren County Fairgrounds",
+      "sections": [
+        "venues"
+      ],
+      "reason": "event grounds, not lodging"
+    },
+    {
+      "name": "RiversEdge Canoe & Kayak Outfitters, Inc",
+      "sections": [
+        "fun"
+      ],
+      "reason": "canoe and kayak trips: recreation, not lodging"
+    },
+    {
+      "name": "Warren County Convention & Visitors Bureau",
+      "sections": [
+        "other"
+      ],
+      "reason": "county tourism office, not lodging"
+    },
+    {
+      "name": "Davidson Meat Processing",
+      "sections": [
+        "farm"
+      ],
+      "reason": "meat processing, not a place to eat"
+    },
+    {
+      "name": "Candace Wieland, Realtor-Coldwell Banker Heritage",
+      "group": {
+        "pro": "Business services"
+      },
+      "reason": "realtor and notary, not a bank"
+    },
+    {
+      "name": "Centerville License Bureau",
+      "group": {
+        "pro": "Business services"
+      },
+      "reason": "license bureau (plates and titles), not a law office"
+    },
+    {
+      "name": "DigiStitch Embroidery, Inc.",
+      "group": {
+        "shop": "Gifts & specialty",
+        "pro": "Printing, signs & marketing"
+      },
+      "reason": "custom embroidery, not antiques"
+    },
+    {
+      "name": "Red Barn Lumber & Supply",
+      "group": {
+        "home": "Builders & remodeling"
+      },
+      "reason": "lumber yard"
+    },
+    {
+      "name": "Lytle Grove LLC",
+      "group": {
+        "shop": "Gifts & specialty",
+        "pro": "Printing, signs & marketing"
+      },
+      "reason": "promotional items and logo apparel"
+    },
+    {
+      "name": "The Old Guy in the Woods",
+      "group": {
+        "shop": "Home décor & furniture"
+      },
+      "reason": "fine woodworking"
+    },
+    {
+      "name": "Elite Construction Solutions LLC",
+      "group": {
+        "home": "Builders & remodeling"
+      },
+      "reason": "excavation contractor"
+    },
+    {
+      "name": "Caleb's Meadow Antiques",
+      "phone": "513-658-2562",
+      "reason": "keep the shop number only; the Chamber listing put people's first names next to the numbers"
     }
   ],
   "items": [
@@ -407,7 +497,7 @@
     {
       "name": "Cassidy Travel",
       "sections": [
-        "stay"
+        "pro"
       ],
       "kinds": [
         "Travel Planning",
@@ -821,7 +911,7 @@
     {
       "name": "Once in a Blue Moon Farm",
       "sections": [
-        "food"
+        "farm"
       ],
       "kinds": [
         "Farm",
@@ -1042,7 +1132,7 @@
     {
       "name": "Venue at The Historic Lockup",
       "sections": [
-        "stay"
+        "venues"
       ],
       "kinds": [
         "Venue Rental"
@@ -1236,7 +1326,7 @@
     {
       "name": "Country Layne Travel",
       "sections": [
-        "stay"
+        "pro"
       ],
       "kinds": [
         "Travel Agency"

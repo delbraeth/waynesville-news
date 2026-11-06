@@ -39,6 +39,9 @@ const searchText = (i: Item) =>
 // listing filed in two sections gets the id in the first one only.
 const slug = (name: string) => name.toLowerCase().replace(/&/g, " and ").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 const anchorAt = new Map<string, string>();
+import { groupItems } from "../lib/directoryGroups.js";
+// Bigger sections render as subgroups (src/lib/directoryGroups.js).
+const subgroups = (id: string, list: Item[]) => groupItems(id, list) ?? [{ label: "", items: list }];
 const correctMail = (name: string) =>
   "mailto:editor@waynesville.news?subject=" + encodeURIComponent(`Directory correction: ${name}`) +
   "&body=" + encodeURIComponent("What should change (hours, phone, website, description, address, closed/moved)?\n\n");
@@ -119,8 +122,11 @@ const hasChurches = churchData.items.length > 0;
         {g.id === "faith" && (
           <p class="small muted">Holding a supper, concert, bazaar or service open to everyone? <a href="/events/#add-event">Send it for the events calendar</a>.</p>
         )}
+        {subgroups(g.id, g.items).map((sub) => (
+        <div class="dir-sub" data-sub>
+        {sub.label && <h3 class="dir-sub-h">{sub.label}</h3>}
         <ul class="directory">
-          {g.items.map((i) => {
+          {sub.items.map((i: Item) => {
             const s = slug(i.name);
             const owns = !anchorAt.has(s) || anchorAt.get(s) === g.id;
             if (!anchorAt.has(s)) anchorAt.set(s, g.id);
@@ -148,6 +154,8 @@ const hasChurches = churchData.items.length > 0;
             );
           })}
         </ul>
+        </div>
+        ))}
       </section>
     ))}
 
@@ -198,6 +206,7 @@ const hasChurches = churchData.items.length > 0;
         if (ok) shown++;
       }
       g.el.hidden = shown === 0;
+      g.el.querySelectorAll("[data-sub]").forEach((sub) => { sub.hidden = !sub.querySelector("li:not([hidden])"); });
       if (g.jump) {
         g.jump.hidden = shown === 0;
         if (g.count) g.count.textContent = String(shown);

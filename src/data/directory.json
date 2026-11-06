@@ -1,6 +1,6 @@
 {
   "_note": "Local business directory. Built by scripts/fetch-directory.mjs from the Waynesville Area Chamber of Commerce's public member directory (name, location, phone, website, and the Chamber's description, as published) plus hand-added listings in directory-manual.json. Contact names, emails and hours are deliberately not copied. Do not edit by hand — edit directory-manual.json and re-run `npm run refresh:directory` (or `npm run refresh:directory -- --manual-only` to merge manual edits without re-reading the Chamber site).",
-  "updated": "2026-11-06T19:43:42.987Z",
+  "updated": "2026-11-06T20:13:59.480Z",
   "sections": [
     {
       "id": "food",
@@ -36,7 +36,11 @@
     },
     {
       "id": "stay",
-      "label": "Travel, lodging & event venues"
+      "label": "Places to stay"
+    },
+    {
+      "id": "venues",
+      "label": "Event venues & party rentals"
     },
     {
       "id": "fun",
@@ -104,8 +108,7 @@
       "location": "300 Conover Dr., Franklin, OH 45005",
       "phone": "937-885-5454",
       "sections": [
-        "stay",
-        "fun"
+        "venues"
       ],
       "kinds": [
         "Venue Rental",
@@ -872,7 +875,7 @@
       "id": "chamber-634",
       "name": "Caleb's Meadow Antiques",
       "location": "21 South Main St., Waynesville, Ohio 45068",
-      "phone": "513-658-2562 (Bob/Shop); 513-260-9061 (Mary Beth)",
+      "phone": "513-658-2562",
       "sections": [
         "fun",
         "shop"
@@ -960,7 +963,10 @@
       "website": "http://www.candacecansell.com/",
       "about": "As a licensed Realtor with Coldwell Banker Heritage in Springboro, I provide Real Estate services to both buyers and sellers. I'm a member of NAR, OAR, DABR, and both the Dayton and Cincinnati MLS. I have a Military Markets Specialist designation, and am a Notary Public for…",
       "local": false,
-      "from": "chamber"
+      "from": "chamber",
+      "group": {
+        "pro": "Business services"
+      }
     },
     {
       "id": "manual-cassidypainting",
@@ -988,7 +994,7 @@
       "location": "Waynesville, OH",
       "phone": "",
       "sections": [
-        "stay"
+        "pro"
       ],
       "kinds": [
         "Travel Planning",
@@ -1038,7 +1044,10 @@
       "website": "https://centerville-license-bureau.hub.biz/?fbclid=IwAR17We_EvPlVzoJWzJFyYmHqxoWfRgZ_K7jIKKDR4Ht6n0OgOEpzYx1NY0k",
       "about": "Deputy Registrar for the State of Ohio. Auto registrations, driver's licenses and IDs, refee payments, BCI/FBI Web Check agent, boat registration. Notary services available.",
       "local": false,
-      "from": "chamber"
+      "from": "chamber",
+      "group": {
+        "pro": "Business services"
+      }
     },
     {
       "id": "chamber-347",
@@ -1135,7 +1144,7 @@
       "location": "Waynesville, OH",
       "phone": "937-403-7067",
       "sections": [
-        "stay"
+        "pro"
       ],
       "kinds": [
         "Travel Agency"
@@ -1247,7 +1256,7 @@
       "location": "6490 Corwin Ave, Waynesville, OH 45068",
       "phone": "513-897-2971",
       "sections": [
-        "food"
+        "farm"
       ],
       "kinds": [
         "Other Food Services"
@@ -1343,7 +1352,11 @@
       "website": "http://www.digistitchemb.com/",
       "about": "DigiStitch Embroidery provides custom embroidery, screen printing, laser engraving, banners, signs, business cards, spiritwear for schools, and other promotional and gift items.",
       "local": true,
-      "from": "chamber"
+      "from": "chamber",
+      "group": {
+        "shop": "Gifts & specialty",
+        "pro": "Printing, signs & marketing"
+      }
     },
     {
       "id": "manual-dollargeneral",
@@ -1471,7 +1484,10 @@
       "website": "http://www.elitecsohio.com/",
       "about": "ELITE Construction Solutions, LLC is a well-established excavation and construction company specializing in a wide range of services, including erosion control, skid loader operations, mini excavator work, utility installations, and more. With strong emphasis on quality,…",
       "local": true,
-      "from": "chamber"
+      "from": "chamber",
+      "group": {
+        "home": "Builders & remodeling"
+      }
     },
     {
       "id": "chamber-745",
@@ -2227,7 +2243,11 @@
       "website": "",
       "about": "",
       "local": false,
-      "from": "chamber"
+      "from": "chamber",
+      "group": {
+        "shop": "Gifts & specialty",
+        "pro": "Printing, signs & marketing"
+      }
     },
     {
       "id": "chamber-298",
@@ -2623,8 +2643,7 @@
       "location": "Waynesville, OH",
       "phone": "",
       "sections": [
-        "farm",
-        "food"
+        "farm"
       ],
       "kinds": [
         "Farm",
@@ -2788,7 +2807,10 @@
       "website": "",
       "about": "Lumber and hardware supply. Specializing in lumber, fasteners, paint, electrical and plumbing supplies, as well as other construction materials.",
       "local": true,
-      "from": "chamber"
+      "from": "chamber",
+      "group": {
+        "home": "Builders & remodeling"
+      }
     },
     {
       "id": "chamber-578",
@@ -2852,7 +2874,6 @@
       "location": "3828 St. Rt. 42 South, Waynesville, OH 45068",
       "phone": "937-903-6468",
       "sections": [
-        "stay",
         "fun"
       ],
       "kinds": [
@@ -3269,7 +3290,10 @@
       "website": "",
       "about": "Fine woodworking, small production runs",
       "local": true,
-      "from": "chamber"
+      "from": "chamber",
+      "group": {
+        "shop": "Home décor & furniture"
+      }
     },
     {
       "id": "chamber-260",
@@ -3563,7 +3587,7 @@
       "location": "260 Chapman St, Waynesville, OH 45068",
       "phone": "513-897-1607",
       "sections": [
-        "stay"
+        "venues"
       ],
       "kinds": [
         "Venue Rental"
@@ -3636,9 +3660,7 @@
       "location": "5412 Courseview Dr., Suite 220, Mason, OH 45040",
       "phone": "513-204-1900",
       "sections": [
-        "tech",
-        "stay",
-        "fun"
+        "other"
       ],
       "kinds": [
         "Advertising/Marketing/PR",
@@ -3660,9 +3682,7 @@
       "location": "665 N. Broadway St, Lebanon, OH 45036",
       "phone": "513-932-2636",
       "sections": [
-        "farm",
-        "fun",
-        "stay"
+        "venues"
       ],
       "kinds": [
         "Agriculture",
