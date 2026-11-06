@@ -5,6 +5,7 @@ import site from "../../data/site.json";
 import SubscribeBox from "../../components/SubscribeBox.astro";
 import audioIndex from "../../data/audio-index.json";
 import audioCfg from "../../data/audio.json";
+import { newsArticle } from "../../lib/structuredData.js";
 
 export async function getStaticPaths() {
   const briefs = (await getCollection("briefs")).filter((b) => b.data.published);
@@ -35,6 +36,7 @@ const dateFmt = new Intl.DateTimeFormat("en-US", {
   published={entry.data.date}
   dateLine={dateFmt.format(entry.data.date)}
   showInfoBar={false}
+  jsonLd={entry.data.demo ? undefined : newsArticle({ title: entry.data.title, dek: entry.data.dek, date: entry.data.date, url: Astro.url.pathname })}
 >
   <div class="reading">
     <p class="kicker">Daily Brief · {dateFmt.format(entry.data.date)}</p>

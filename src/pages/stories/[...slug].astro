@@ -2,6 +2,7 @@
 import Base from "../../layouts/Base.astro";
 import SubscribeBox from "../../components/SubscribeBox.astro";
 import { getCollection, render } from "astro:content";
+import { newsArticle } from "../../lib/structuredData.js";
 
 export async function getStaticPaths() {
   const stories = (await getCollection("stories")).filter((s) => s.data.published);
@@ -22,6 +23,7 @@ const dateFmt = new Intl.DateTimeFormat("en-US", { month: "long", day: "numeric"
   published={d.date}
   dateLine={dateFmt.format(d.date)}
   showInfoBar={false}
+  jsonLd={newsArticle({ title: d.title, dek: d.dek, date: d.date, updated: d.updated, url: Astro.url.pathname, image: d.image })}
 >
   <article class="reading story">
     <p class="kicker">{d.section ?? "Story"}</p>

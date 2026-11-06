@@ -56,7 +56,12 @@ reference.
      `isLocalEvent()` in `src/lib/events.js` reads the venue, and an event
      can override it with `local: true|false`. /events/ has a "Waynesville
      area only" checkbox and a "Regional" label.
-2. **Structured data** (schema.org Event and NewsArticle) for search engines.
+2. ~~**Structured data** (schema.org Event and NewsArticle) for search engines.~~
+   **Done 2026-11-06.** JSON-LD from `src/lib/structuredData.js`, passed to
+   `Base.astro` as `jsonLd`: NewsArticle on every brief and story, an
+   ItemList of Events on /events/ (upcoming items only), and WebSite plus
+   NewsMediaOrganization on the homepage. Built only from fields already on
+   the page.
 3. **Resource center upkeep:**
    - a monthly link check, reusing `dropDeadWebsites` from
      `scripts/fetch-directory.mjs`

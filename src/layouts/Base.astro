@@ -5,6 +5,7 @@ import Masthead from "../components/Masthead.astro";
 import InfoBar from "../components/InfoBar.astro";
 import SiteFooter from "../components/SiteFooter.astro";
 import { getPublicBriefs } from "../lib/briefs.js";
+import { ldJson } from "../lib/structuredData.js";
 
 const { briefs, isDemoMode } = await getPublicBriefs();
 
@@ -17,6 +18,7 @@ interface Props {
   imageAlt?: string;
   ogType?: "website" | "article";
   published?: Date;    // article publish date, for share cards
+  jsonLd?: object | object[]; // schema.org structured data (src/lib/structuredData.js)
 }
 const {
   title = "Waynesville News",
@@ -27,7 +29,9 @@ const {
   imageAlt,
   ogType = "website",
   published,
+  jsonLd,
 } = Astro.props;
+const jsonLdBlocks = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
 
 // Masthead date = the current edition (latest published brief), the SAME on every
 // page. Falls back to the build date before any brief exists. Formatted in UTC so
@@ -66,6 +70,7 @@ const ogImage = new URL(image || "/og.png", Astro.site);
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImage} />
+    {jsonLdBlocks.map((d) => <script type="application/ld+json" set:html={ldJson(d)} />)}
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
