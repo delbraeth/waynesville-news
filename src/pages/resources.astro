@@ -15,6 +15,8 @@ const tel = (p: string) => "tel:" + p.replace(/[^0-9]/g, "");
 const fmt = (iso?: string) =>
   iso ? new Date(iso + "T12:00:00").toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" }) : "";
 const updated = fmt(data.updated);
+import churchData from "../data/churches.json";
+const hasChurches = churchData.items.length > 0;
 ---
 <Base
   title="Living in Waynesville · Waynesville News"
@@ -66,7 +68,7 @@ const updated = fmt(data.updated);
     ))}
 
     <p class="small">
-      Looking for a business? See the <a href="/directory/">local business directory</a>. Things to do? The
+      {hasChurches && <>Looking for a church? See <a href="/churches/">churches &amp; places of worship</a>. </>}Looking for a business? See the <a href="/directory/">local business directory</a>. Things to do? The
       <a href="/events/">events calendar</a>.
     </p>
   </div>

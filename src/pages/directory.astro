@@ -52,6 +52,8 @@ const supporterKeys = new Set(
 const isSupporter = (i: Item) => supporterKeys.has(nameKey(i.name));
 const supporterCount = items.filter(isSupporter).length;
 const listMail = "mailto:editor@waynesville.news?subject=" + encodeURIComponent("Business directory listing");
+import churchData from "../data/churches.json";
+const hasChurches = churchData.items.length > 0;
 ---
 <Base
   title="Local Business Directory · Waynesville News"
@@ -101,6 +103,9 @@ const listMail = "mailto:editor@waynesville.news?subject=" + encodeURIComponent(
     {groups.map((g) => (
       <section class="dir-group" id={g.id} data-group={g.id}>
         <h2>{g.label}</h2>
+        {g.id === "faith" && hasChurches && (
+          <p class="small"><strong><a href="/churches/">See the church directory</a></strong> for every congregation in the area, with service times and community ministries.</p>
+        )}
         {g.id === "faith" && (
           <p class="small muted">Holding a supper, concert, bazaar or service open to everyone? <a href="/events/#add-event">Send it for the events calendar</a>.</p>
         )}

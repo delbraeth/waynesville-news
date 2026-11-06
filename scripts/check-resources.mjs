@@ -1,5 +1,6 @@
 // Monthly upkeep check for the resource center (/resources/, data in
-// src/data/resources.json). Read-only: it changes nothing, it reports.
+// src/data/resources.json) and the church directory (/churches/, data in
+// src/data/churches.json). Read-only: it changes nothing, it reports.
 //
 //  - Dead links: every link, links[].url and source URL is tested with the
 //    same rule the directory uses (scripts/lib/link-check.mjs): dead only when
@@ -23,8 +24,14 @@ const STALE_DAYS = argDays > 0 ? Number(process.argv[argDays + 1]) : 90;
 const todayET = new Intl.DateTimeFormat("en-CA", { timeZone: "America/New_York", year: "numeric", month: "2-digit", day: "2-digit" }).format(new Date());
 const ageDays = (iso) => Math.floor((Date.parse(`${todayET}T12:00:00Z`) - Date.parse(`${iso}T12:00:00Z`)) / 86400000);
 
+const CHURCHES = new URL("../src/data/churches.json", import.meta.url);
 const data = JSON.parse(await readFile(FILE, "utf8"));
-const entries = (data.sections ?? []).flatMap((s) => (s.items ?? []).map((it) => ({ ...it, section: s.title })));
+const churches = JSON.parse(await readFile(CHURCHES, "utf8"));
+const entries = [
+  ...(data.sections ?? []).flatMap((s) => (s.items ?? []).map((it) => ({ ...it, section: s.title }))),
+  // Church directory (/churches/): website plus each source URL.
+  ...(churches.items ?? []).map((c) => ({ ...c, section: "Churches", link: c.website, source: undefined, links: (c.source ?? []).map((url) => ({ url })) })),
+];
 
 // url -> the entries that use it (one fetch per distinct URL)
 const uses = new Map();
@@ -58,7 +65,7 @@ if (dead.length) {
 }
 if (stale.length) {
   lines.push(`### Not verified in the last ${STALE_DAYS} days — re-check against the source and update \`verified\``, "");
-  for (const e of stale) lines.push(`- ${e.name} (${e.section}) — ${e.verified ? `verified ${e.verified}, ${ageDays(e.verified)} day${ageDays(e.verified) === 1 ? "" : "s"} ago` : "no verified date"}${e.source ? ` — ${e.source}` : ""}`);
+  for (const e of stale) lines.push(`- ${e.name} (${e.section}) — ${e.verified ? `verified ${e.verified}, ${ageDays(e.verified)} day${ageDays(e.verified) === 1 ? "" : "s"} ago` : "no verified date"}${e.source || e.link ? ` — ${e.source || e.link}` : ""}`);
   lines.push("");
 }
 if (unknown.length) {

@@ -1,0 +1,126 @@
+---
+// Churches & places of worship in the Waynesville area. Hand-kept data in
+// src/data/churches.json; every fact comes from the church's own website (or
+// its denomination's official locator) and carries a verified date. No clergy,
+// staff or members are named: churches only.
+import Base from "../layouts/Base.astro";
+import data from "../data/churches.json";
+import { upcomingEvents } from "../lib/events.js";
+
+type Church = {
+  name: string; tradition?: string; address?: string; town?: string; phone?: string;
+  website?: string; services?: string; ministries?: string[]; source?: string[]; verified?: string;
+};
+const churches = (data.items as Church[]).slice().sort((a, b) => (a.town ?? "").localeCompare(b.town ?? "") || a.name.localeCompare(b.name));
+
+const tel = (p: string) => "tel:" + p.replace(/[^0-9]/g, "");
+const fmt = (iso?: string) =>
+  iso ? new Date(iso + "T12:00:00").toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" }) : "";
+
+// Upcoming calendar events held at a church: the event's venue names it.
+const key = (s = "") => s.toLowerCase().replace(/^(the|st\.?|saint)\s+/, "").replace(/[^a-z0-9 ]/g, " ").replace(/\s+/g, " ").trim();
+const coreName = (name: string) => key(name).replace(/\b(church|parish|of|waynesville|meeting|the)\b/g, " ").replace(/\s+/g, " ").trim();
+const upcoming = upcomingEvents();
+const eventsFor = (c: Church) => {
+  const core = coreName(c.name);
+  if (core.length < 4) return [];
+  return upcoming.filter((e) => key(e.venue).includes(core)).slice(0, 3);
+};
+
+const towns = [...new Set(churches.map((c) => c.town).filter(Boolean))] as string[];
+const listMail = "mailto:editor@waynesville.news?subject=" + encodeURIComponent("Church directory");
+---
+<Base
+  title="Churches in Waynesville · Waynesville News"
+  description="Churches and places of worship in Waynesville, Corwin, Harveysburg and nearby: addresses, service times and ministries open to the community, checked against each church's own website."
+  showInfoBar={false}
+>
+  <div class="reading">
+    <p class="kicker">Community</p>
+    <h1>Churches &amp; Places of Worship</h1>
+    <p class="dek">
+      Congregations in and around Waynesville, with service times and the ministries they open to the whole community,
+      from food pantries to youth groups.
+    </p>
+    <p class="small">
+      Service times are as each church publishes them, and every entry shows when we last checked it (updated {fmt(data.updated)}).
+      Times change, especially around holidays, so check the church's own site before you go.
+      Missing a church, or something's changed? <a href={listMail}>Tell the editor</a>.
+    </p>
+
+    {churches.length === 0 && <p><em>This directory is being compiled. Check back soon.</em></p>}
+
+    {towns.length > 1 && (
+      <nav class="res-toc" aria-label="Towns">
+        {towns.map((t) => <a href={`#${t.toLowerCase().replace(/[^a-z]+/g, "-")}`}>{t}</a>)}
+      </nav>
+    )}
+
+    {towns.map((t) => (
+      <section class="res-section" id={t.toLowerCase().replace(/[^a-z]+/g, "-")}>
+        <h2>{t}</h2>
+        <ul class="res-list">
+          {churches.filter((c) => c.town === t).map((c) => (
+            <li>
+              <div class="res-name">
+                {c.website ? <a href={c.website} target="_blank" rel="noopener">{c.name}</a> : c.name}
+              </div>
+              {c.tradition && <div class="ch-trad">{c.tradition}</div>}
+              {c.services && <p class="res-what"><strong>Services:</strong> {c.services}</p>}
+              {c.ministries && c.ministries.length > 0 && (
+                <ul class="ch-min">
+                  {c.ministries.map((m) => <li>{m}</li>)}
+                </ul>
+              )}
+              <div class="res-meta">
+                {c.phone && <a class="res-phone" href={tel(c.phone)}>{c.phone}</a>}
+                {c.address && <span>{c.address}</span>}
+              </div>
+              {eventsFor(c).length > 0 && (
+                <div class="ch-events">
+                  On the calendar: {eventsFor(c).map((e, i) => <>{i > 0 && " · "}<a href="/events/">{e.title}</a> <span class="muted">({e.dateLabel})</span></>)}
+                </div>
+              )}
+              {c.verified && (
+                <div class="res-src">
+                  Checked {fmt(c.verified)}
+                  {(c.source ?? []).map((s, i) => <> · <a href={s} target="_blank" rel="noopener">{i === 0 ? "source" : `source ${i + 1}`}</a></>)}
+                </div>
+              )}
+            </li>
+          ))}
+        </ul>
+      </section>
+    ))}
+
+    <div class="sp-join">
+      <h3>Holding something open to everyone?</h3>
+      <p>
+        Suppers, bazaars, concerts, VBS and holiday services go on the <a href="/events/">events calendar</a>.
+        <a href="/events/submit/">Submit an event</a> and we'll add it after checking it.
+      </p>
+    </div>
+
+    <p class="small">
+      Need help with food, utilities or rides? See <a href="/resources/#help">Living in Waynesville</a>.
+      Looking for a business? The <a href="/directory/">business directory</a>.
+    </p>
+  </div>
+</Base>
+
+<style>
+  .res-toc { display: flex; flex-wrap: wrap; gap: 0.4rem 1rem; margin: 1rem 0 0.5rem; font-size: 0.95rem; }
+  .res-section { margin-top: 1.75rem; scroll-margin-top: 1rem; }
+  .res-section h2 { margin-bottom: 0.4rem; }
+  .res-list { list-style: none; margin: 0; padding: 0; }
+  .res-list > li { padding: 0.85rem 0; border-bottom: 1px solid var(--rule); }
+  .res-name { font-weight: 600; }
+  .ch-trad { font-size: 0.9rem; color: var(--muted); }
+  .res-what { margin: 0.3rem 0 0; }
+  .ch-min { margin: 0.3rem 0 0 1.1rem; padding: 0; color: var(--ink-soft); font-size: 0.95rem; }
+  .ch-min li { margin: 0.1rem 0; }
+  .res-meta { display: flex; flex-wrap: wrap; gap: 0.25rem 1rem; margin-top: 0.35rem; font-size: 0.95rem; }
+  .res-phone { font-weight: 600; white-space: nowrap; }
+  .ch-events { margin-top: 0.3rem; font-size: 0.9rem; }
+  .res-src { margin-top: 0.3rem; font-size: 0.8rem; color: var(--muted); }
+</style>
