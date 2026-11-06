@@ -25,6 +25,11 @@
       "name": "Valentino Design",
       "reason": "Website is dead (editor, 2026-11-05)",
       "date": "2026-11-05"
+    },
+    {
+      "name": "Mami Fina's",
+      "reason": "Closed, per the editor",
+      "date": "2026-11-06"
     }
   ],
   "recategorize": [
@@ -868,23 +873,6 @@
       "website": "",
       "about": "Women's clothing boutique downtown, opened in 2022, selling clothing, accessories and gifts.",
       "source": "https://waynesvilleshops.com/specialty-shops-and-galleries/name/loveless-edge-1/"
-    },
-    {
-      "name": "Mami Fina's",
-      "sections": [
-        "food"
-      ],
-      "kinds": [
-        "Mexican",
-        "Restaurant"
-      ],
-      "location": "10 N. Main St., Waynesville, OH 45068",
-      "phone": "513-855-1210",
-      "about": "Family-owned restaurant serving authentic Mexican dishes.",
-      "source": "https://www.ohioslargestplayground.com/directory/mami-finas/",
-      "social": {
-        "facebook": "https://www.facebook.com/p/Mami-Finas-100091868704594/"
-      }
     },
     {
       "name": "Midwest Pay Link, Inc.",
