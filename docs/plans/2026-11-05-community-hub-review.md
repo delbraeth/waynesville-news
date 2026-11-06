@@ -100,6 +100,11 @@ reference.
   - Church events already flow into the events calendar.
 - **Nonprofit and community organization listing.** Editor's idea; see
   "Editor's notes" below. Could share a format with the church directory.
+  **Includes the schools and youth hub** (reviewer's priority 7; editor's
+  decision, 2026-11-06): youth and school-connected groups such as athletic
+  boosters, PTOs, scouts, 4-H, youth sports leagues and library youth
+  programs go in this listing, not on a separate page. Name groups and
+  their public contacts only, never students.
 - **Volunteer board.** Could grow out of the nonprofit listing's "how to
   help" lines.
 - **Visitor guide and government issue trackers.** From the review's
@@ -181,7 +186,7 @@ keeping editorial independence and sourcing standards.
    open forum.
 6. A volunteer opportunities board, plus lightweight organization profiles
    for nonprofits, clubs and civic groups.
-7. A schools and youth hub.
+7. A schools and youth hub. *(Folded into the nonprofit listing; see Ideas.)*
 8. A visitor guide: itineraries (Saturday downtown, antiques, the Little
    Miami trail, Renaissance Festival, Christmas in the Village), parking,
    restrooms and maps.
