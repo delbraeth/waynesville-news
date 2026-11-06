@@ -1,0 +1,121 @@
+---
+// Community organizations: nonprofits, clubs, youth sports, boosters, scouts.
+// Hand-kept data in src/data/organizations.json (rules in its _note). Public
+// organizational contacts only; no officers, coaches or volunteers named.
+import Base from "../layouts/Base.astro";
+import data from "../data/organizations.json";
+import { upcomingEvents } from "../lib/events.js";
+
+type Org = {
+  name: string; category: string; what?: string; meets?: string; contact?: string; phone?: string; email?: string;
+  website?: string; facebook?: string; howToHelp?: string; source?: string[]; verified?: string;
+};
+const orgs = data.items as Org[];
+const cats = data.categories.filter((c) => orgs.some((o) => o.category === c.id));
+
+const tel = (p: string) => "tel:" + p.replace(/[^0-9]/g, "");
+const fmt = (iso?: string) =>
+  iso ? new Date(iso + "T12:00:00").toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" }) : "";
+
+// Upcoming calendar events run by or held at the group: its name appears in
+// the event's title or venue ("Waynesville Lions Club Pancake Breakfast").
+const key = (s = "") => s.toLowerCase().replace(/[^a-z0-9 ]/g, " ").replace(/\s+/g, " ").trim();
+const coreName = (name: string) => key(name).replace(/\b(the|of|waynesville|area|inc|club)\b/g, " ").replace(/\s+/g, " ").trim();
+const upcoming = upcomingEvents();
+const eventsFor = (o: Org) => {
+  const core = coreName(o.name);
+  if (core.length < 5) return [];
+  return upcoming.filter((e) => key(`${e.title} ${e.venue}`).includes(core)).slice(0, 3);
+};
+const listMail = "mailto:editor@waynesville.news?subject=" + encodeURIComponent("Community organizations");
+---
+<Base
+  title="Community Organizations · Waynesville News"
+  description="Youth sports, boosters and PTOs, scouts and 4-H, service clubs, food help and history groups in Waynesville, Ohio: what each does, when it meets and how to get involved."
+  showInfoBar={false}
+>
+  <div class="reading">
+    <p class="kicker">Community</p>
+    <h1>Community Organizations</h1>
+    <p class="dek">
+      The clubs, teams and volunteers that keep Waynesville going: youth sports, school boosters, scouts, service clubs and more,
+      with how to join or help.
+    </p>
+    <p class="small">
+      Every entry comes from the group's own website and shows when we last checked it (updated {fmt(data.updated)}).
+      Run a group that's missing, or something's changed? <a href={listMail}>Tell the editor</a>.
+    </p>
+
+    {orgs.length === 0 && <p><em>This listing is being compiled. Check back soon.</em></p>}
+
+    {cats.length > 1 && (
+      <nav class="res-toc" aria-label="On this page">
+        {cats.map((c) => <a href={`#${c.id}`}>{c.title}</a>)}
+      </nav>
+    )}
+
+    {cats.map((c) => (
+      <section class="res-section" id={c.id}>
+        <h2>{c.title}</h2>
+        <ul class="res-list">
+          {orgs.filter((o) => o.category === c.id).sort((a, b) => a.name.localeCompare(b.name)).map((o) => (
+            <li>
+              <div class="res-name">
+                {o.website ? <a href={o.website} target="_blank" rel="noopener">{o.name}</a> : o.facebook ? <a href={o.facebook} target="_blank" rel="noopener">{o.name}</a> : o.name}
+              </div>
+              {!o.verified && <p class="ch-unconfirmed">Listed from public sources; details not yet confirmed with the group.</p>}
+              {o.what && <p class="res-what">{o.what}</p>}
+              {o.meets && <p class="res-what"><strong>Meets:</strong> {o.meets}</p>}
+              {o.howToHelp && <p class="res-what"><strong>Get involved:</strong> {o.howToHelp}</p>}
+              <div class="res-meta">
+                {o.phone && <a class="res-phone" href={tel(o.phone)}>{o.phone}</a>}
+                {o.email && <a href={`mailto:${o.email}`}>{o.email}</a>}
+                {o.contact && <span>{o.contact}</span>}
+                {o.website && o.facebook && <a href={o.facebook} target="_blank" rel="noopener">Facebook</a>}
+              </div>
+              {eventsFor(o).length > 0 && (
+                <div class="ch-events">
+                  On the calendar: {eventsFor(o).map((e, i) => <>{i > 0 && " · "}<a href="/events/">{e.title}</a> <span class="muted">({e.dateLabel})</span></>)}
+                </div>
+              )}
+              {o.verified && (
+                <div class="res-src">
+                  Checked {fmt(o.verified)}
+                  {(o.source ?? []).map((s, i) => <> · <a href={s} target="_blank" rel="noopener">{i === 0 ? "source" : `source ${i + 1}`}</a></>)}
+                </div>
+              )}
+            </li>
+          ))}
+        </ul>
+      </section>
+    ))}
+
+    <div class="sp-join">
+      <h3>Holding an event?</h3>
+      <p>
+        Fundraisers, sign-ups, tryouts and meetings open to the public go on the <a href="/events/">events calendar</a>.
+        <a href="/events/submit/">Submit an event</a> and we'll add it after checking it.
+      </p>
+    </div>
+
+    <p class="small">
+      Looking for a church? See <a href="/churches/">churches &amp; places of worship</a>. Need help with food, bills or rides?
+      <a href="/resources/#help">Living in Waynesville</a>. Looking for a business? The <a href="/directory/">business directory</a>.
+    </p>
+  </div>
+</Base>
+
+<style>
+  .res-toc { display: flex; flex-wrap: wrap; gap: 0.4rem 1rem; margin: 1rem 0 0.5rem; font-size: 0.95rem; }
+  .res-section { margin-top: 1.75rem; scroll-margin-top: 1rem; }
+  .res-section h2 { margin-bottom: 0.4rem; }
+  .res-list { list-style: none; margin: 0; padding: 0; }
+  .res-list > li { padding: 0.85rem 0; border-bottom: 1px solid var(--rule); }
+  .res-name { font-weight: 600; }
+  .res-what { margin: 0.3rem 0 0; }
+  .ch-unconfirmed { margin: 0.3rem 0 0; font-size: 0.9rem; font-style: italic; color: var(--muted); }
+  .res-meta { display: flex; flex-wrap: wrap; gap: 0.25rem 1rem; margin-top: 0.35rem; font-size: 0.95rem; }
+  .res-phone { font-weight: 600; white-space: nowrap; }
+  .ch-events { margin-top: 0.3rem; font-size: 0.9rem; }
+  .res-src { margin-top: 0.3rem; font-size: 0.8rem; color: var(--muted); }
+</style>

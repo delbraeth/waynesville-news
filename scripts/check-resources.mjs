@@ -1,6 +1,7 @@
 // Monthly upkeep check for the resource center (/resources/, data in
 // src/data/resources.json) and the church directory (/churches/, data in
-// src/data/churches.json). Read-only: it changes nothing, it reports.
+// src/data/churches.json) and community organizations (/community/, data in
+// src/data/organizations.json). Read-only: it changes nothing, it reports.
 //
 //  - Dead links: every link, links[].url and source URL is tested with the
 //    same rule the directory uses (scripts/lib/link-check.mjs): dead only when
@@ -27,10 +28,13 @@ const ageDays = (iso) => Math.floor((Date.parse(`${todayET}T12:00:00Z`) - Date.p
 const CHURCHES = new URL("../src/data/churches.json", import.meta.url);
 const data = JSON.parse(await readFile(FILE, "utf8"));
 const churches = JSON.parse(await readFile(CHURCHES, "utf8"));
+const orgs = JSON.parse(await readFile(new URL("../src/data/organizations.json", import.meta.url), "utf8"));
 const entries = [
   ...(data.sections ?? []).flatMap((s) => (s.items ?? []).map((it) => ({ ...it, section: s.title }))),
   // Church directory (/churches/): website plus each source URL.
   ...(churches.items ?? []).map((c) => ({ ...c, section: "Churches", link: c.website, source: undefined, links: (c.source ?? []).map((url) => ({ url })) })),
+  // Community organizations (/community/): website, Facebook and sources.
+  ...(orgs.items ?? []).map((o) => ({ ...o, section: "Community organizations", link: o.website, source: undefined, links: [o.facebook, ...(o.source ?? [])].filter(Boolean).map((url) => ({ url })) })),
 ];
 
 // url -> the entries that use it (one fetch per distinct URL)

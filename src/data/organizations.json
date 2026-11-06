@@ -1,0 +1,13 @@
+{
+  "_note": "Community organizations (/community/): nonprofits, civic and service clubs, youth sports, school-connected groups (boosters, PTOs), scouts and 4-H, and history, arts and library groups. Hand-kept. Facts only from the group's own website or its parent organization's official page, each with a verified date. Public organizational contacts only (website, general email or phone): never name officers, coaches, volunteers or any child. Churches are in churches.json; businesses in the directory. Entries with an empty `verified` date are shown as not yet confirmed; `toConfirm` (not shown on the site) lists what the editor still needs to check. Checked monthly by scripts/check-resources.mjs.",
+  "updated": "2026-11-06",
+  "categories": [
+    { "id": "youth-sports", "title": "Youth sports" },
+    { "id": "school", "title": "School groups & boosters" },
+    { "id": "scouts", "title": "Scouts & 4-H" },
+    { "id": "civic", "title": "Civic & service clubs" },
+    { "id": "help", "title": "Community help" },
+    { "id": "history-arts", "title": "History, arts & library" }
+  ],
+  "items": []
+}

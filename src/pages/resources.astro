@@ -17,6 +17,8 @@ const fmt = (iso?: string) =>
 const updated = fmt(data.updated);
 import churchData from "../data/churches.json";
 const hasChurches = churchData.items.length > 0;
+import orgData from "../data/organizations.json";
+const hasOrgs = orgData.items.length > 0;
 ---
 <Base
   title="Living in Waynesville · Waynesville News"
@@ -68,7 +70,7 @@ const hasChurches = churchData.items.length > 0;
     ))}
 
     <p class="small">
-      {hasChurches && <>Looking for a church? See <a href="/churches/">churches &amp; places of worship</a>. </>}Looking for a business? See the <a href="/directory/">local business directory</a>. Things to do? The
+      {hasOrgs && <>Want to get involved? See <a href="/community/">community organizations</a>. </>}{hasChurches && <>Looking for a church? See <a href="/churches/">churches &amp; places of worship</a>. </>}Looking for a business? See the <a href="/directory/">local business directory</a>. Things to do? The
       <a href="/events/">events calendar</a>.
     </p>
   </div>
