@@ -1,5 +1,5 @@
 {
-  "_note": "Hand-added directory listings for businesses that are not Chamber members (or to override a Chamber listing with the same name). Facts only, as the business publishes them; no private individuals' names. Fields: name (required), sections (array of section ids from directory.json, e.g. [\"home\"]), kinds (e.g. [\"Plumbing\"]), location, phone, website, email, social (facebook, instagram, tiktok, airbnb), about, source (where you verified it). After editing, run `npm run refresh:directory -- --manual-only`. To remove a listing for good (closed, moved, or asked to be removed), add it to \"exclude\" as {\"name\": \"...\", \"reason\": \"...\", \"date\": \"YYYY-MM-DD\"}; this also blocks it from the Chamber data. To move a listing to different sections without retyping it (e.g. a Chamber listing filed under the wrong category), add it to \"recategorize\" as {\"name\": \"...\", \"sections\": [\"...\"], \"reason\": \"...\"}. A recategorize entry can instead (or also) fix a Chamber listing's tags with \"kinds\": [\"...\"] or its description with \"about\": \"...\".",
+  "_note": "Hand-added directory listings for businesses that are not Chamber members (or to override a Chamber listing with the same name). Facts only, as the business publishes them; no private individuals' names. Fields: name (required), sections (array of section ids from directory.json, e.g. [\"home\"]), kinds (e.g. [\"Plumbing\"]), location, phone, website, email, social (facebook, instagram, tiktok, airbnb), about, source (where you verified it). After editing, run `npm run refresh:directory -- --manual-only`. To remove a listing for good (closed, moved, or asked to be removed), add it to \"exclude\" as {\"name\": \"...\", \"reason\": \"...\", \"date\": \"YYYY-MM-DD\"}; this also blocks it from the Chamber data. To move a listing to different sections without retyping it (e.g. a Chamber listing filed under the wrong category), add it to \"recategorize\" as {\"name\": \"...\", \"sections\": [\"...\"], \"reason\": \"...\"}. A recategorize entry can instead (or also) fix a Chamber listing's tags with \"kinds\": [\"...\"] or its description with \"about\": \"...\", its phone with \"phone\": \"...\", or pin its subgroup with \"group\": \"<label>\" (or {\"<section id>\": \"<label>\"}) from src/lib/directoryGroups.js.",
   "exclude": [
     {
       "name": "R5 Travel Leaders",
@@ -25,6 +25,11 @@
       "name": "Valentino Design",
       "reason": "Website is dead (editor, 2026-11-05)",
       "date": "2026-11-05"
+    },
+    {
+      "name": "Mami Fina's",
+      "reason": "Closed, per the editor",
+      "date": "2026-11-06"
     }
   ],
   "recategorize": [
@@ -52,10 +57,9 @@
     {
       "name": "Once in a Blue Moon Farm",
       "sections": [
-        "farm",
-        "food"
+        "farm"
       ],
-      "reason": "u-pick farm"
+      "reason": "u-pick farm: under Farms, not places to eat"
     },
     {
       "name": "Butter Churn Cafe",
@@ -103,6 +107,102 @@
       "name": "Domino's Pizza - Southern Ohio Pizza",
       "about": "Offering pizza, pasta, sandwiches, and desserts",
       "reason": "drop the stray \"Main Office\" from the Chamber description"
+    },
+    {
+      "name": "A & S Party Rental",
+      "sections": [
+        "venues"
+      ],
+      "reason": "party rentals, not lodging"
+    },
+    {
+      "name": "Warren County Fairgrounds",
+      "sections": [
+        "venues"
+      ],
+      "reason": "event grounds, not lodging"
+    },
+    {
+      "name": "RiversEdge Canoe & Kayak Outfitters, Inc",
+      "sections": [
+        "fun"
+      ],
+      "reason": "canoe and kayak trips: recreation, not lodging"
+    },
+    {
+      "name": "Warren County Convention & Visitors Bureau",
+      "sections": [
+        "other"
+      ],
+      "reason": "county tourism office, not lodging"
+    },
+    {
+      "name": "Davidson Meat Processing",
+      "sections": [
+        "farm"
+      ],
+      "reason": "meat processing, not a place to eat"
+    },
+    {
+      "name": "Candace Wieland, Realtor-Coldwell Banker Heritage",
+      "group": {
+        "pro": "Business services"
+      },
+      "reason": "realtor and notary, not a bank"
+    },
+    {
+      "name": "Centerville License Bureau",
+      "group": {
+        "pro": "Business services"
+      },
+      "reason": "license bureau (plates and titles), not a law office"
+    },
+    {
+      "name": "DigiStitch Embroidery, Inc.",
+      "group": {
+        "shop": "Gifts & specialty",
+        "pro": "Printing, signs & marketing"
+      },
+      "reason": "custom embroidery, not antiques"
+    },
+    {
+      "name": "Red Barn Lumber & Supply",
+      "group": {
+        "home": "Builders & remodeling"
+      },
+      "reason": "lumber yard"
+    },
+    {
+      "name": "Lytle Grove LLC",
+      "group": {
+        "shop": "Gifts & specialty",
+        "pro": "Printing, signs & marketing"
+      },
+      "reason": "promotional items and logo apparel"
+    },
+    {
+      "name": "The Old Guy in the Woods",
+      "group": {
+        "shop": "Home décor & furniture"
+      },
+      "reason": "fine woodworking"
+    },
+    {
+      "name": "Elite Construction Solutions LLC",
+      "group": {
+        "home": "Builders & remodeling"
+      },
+      "reason": "excavation contractor"
+    },
+    {
+      "name": "Caleb's Meadow Antiques",
+      "phone": "513-658-2562",
+      "reason": "keep the shop number only; the Chamber listing put people's first names next to the numbers"
+    },
+    {
+      "name": "Bentino's Pizza",
+      "about": "Pizza, calzones and sandwiches in a casual dining setting, serving Waynesville since 1998.",
+      "reason": "Chamber listing had no description; wording from the restaurant's own site and the county visitors bureau"
     }
   ],
   "items": [
@@ -345,6 +445,21 @@
       "source": "https://www.soarccsc.com/"
     },
     {
+      "name": "Caesar Creek State Park Campground",
+      "sections": [
+        "stay"
+      ],
+      "kinds": [
+        "Campground",
+        "State Park"
+      ],
+      "location": "8570 E. State Route 73, Waynesville, OH 45068",
+      "phone": "937-488-4595",
+      "website": "https://caesarcreekstatepark.com/camping/",
+      "about": "State park campground with 252 electric and 35 full-hookup sites for tents, pop-ups and RVs, plus showers, a camp store, a campers' beach and a boat ramp. Open all year, with fewer sites and no water Nov. 1 to Apr. 1.",
+      "source": "https://www.ohioslargestplayground.com/directory/caesar-creek-state-park-campground/"
+    },
+    {
       "name": "Caesar's Creek Pioneer Village",
       "sections": [
         "fun"
@@ -407,7 +522,7 @@
     {
       "name": "Cassidy Travel",
       "sections": [
-        "stay"
+        "pro"
       ],
       "kinds": [
         "Travel Planning",
@@ -435,6 +550,20 @@
       "website": "https://www.clearcreekfurniture.com/",
       "about": "Showroom for Amish-built hardwood furniture, including Shaker and Mission styles, plus outdoor pieces.",
       "source": "https://www.clearcreekfurniture.com/"
+    },
+    {
+      "name": "Cranberry Cottage",
+      "sections": [
+        "stay"
+      ],
+      "kinds": [
+        "Bed & Breakfast",
+        "Cottage"
+      ],
+      "location": "102 N. Main Street, Waynesville, OH 45068",
+      "phone": "937-307-7022",
+      "about": "A 1,300-square-foot cottage with a full kitchen, two rooms, a private bath and a free continental breakfast, a short walk from the downtown shops.",
+      "source": "https://www.ohioslargestplayground.com/directory/cranberry-cottage/"
     },
     {
       "name": "Dearinger Cleaning LLC",
@@ -555,6 +684,20 @@
       "source": "https://www.ohioslargestplayground.com/directory/grandmas-gardens/"
     },
     {
+      "name": "Gray Stone Cottage",
+      "sections": [
+        "stay"
+      ],
+      "kinds": [
+        "Guest Cottage"
+      ],
+      "location": "147 North Main Street, Waynesville, OH 45068",
+      "phone": "513-850-3881",
+      "website": "https://www.airbnb.com/rooms/50299704",
+      "about": "Rental cottage on North Main Street, booked through Airbnb; the phone number is for reservations.",
+      "source": "https://waynesvilleshops.com/lodging-food-and-entertainment/name/gray-stone-cottage/"
+    },
+    {
       "name": "Green Feather Apothecary",
       "sections": [
         "shop"
@@ -599,8 +742,8 @@
       "location": "121 S. Main St., Waynesville, OH 45068",
       "phone": "",
       "website": "",
-      "about": "Historic inn on Main Street in a building dating to 1822, open for overnight stays. Its restaurant is closed while it undergoes restoration.",
-      "source": "https://waynesvilleshops.com/lodging-food-and-entertainment/name/hammel-house-inn (rooms open, restaurant under restoration, per the editor, 2026-10-31)"
+      "about": "Historic inn on Main Street in a building dating to 1822, open for overnight stays. Its restaurant is closed for restoration and is expected to reopen soon.",
+      "source": "https://waynesvilleshops.com/lodging-food-and-entertainment/name/hammel-house-inn (rooms open, restaurant under restoration, per the editor, 2026-10-31); restaurant expected to reopen soon, per the editor, 2026-11-06"
     },
     {
       "name": "Hometown Marketplace",
@@ -805,6 +948,20 @@
       "source": "https://www.renfestival.com/"
     },
     {
+      "name": "Olive Branch Campground",
+      "sections": [
+        "stay"
+      ],
+      "kinds": [
+        "Campground",
+        "RV Park"
+      ],
+      "location": "6985 Wilmington Rd., Oregonia, OH 45054",
+      "phone": "513-932-4399",
+      "about": "Family RV campground on 25 wooded acres near I-71 Exit 36, with full-hookup sites (daily, monthly and seasonal), a pool, a fishing pond, a camp store and laundry.",
+      "source": "https://www.ohioslargestplayground.com/directory/olive-branch-campground/"
+    },
+    {
       "name": "On Target Heating and Cooling",
       "sections": [
         "home"
@@ -821,7 +978,7 @@
     {
       "name": "Once in a Blue Moon Farm",
       "sections": [
-        "food"
+        "farm"
       ],
       "kinds": [
         "Farm",
@@ -995,6 +1152,20 @@
       }
     },
     {
+      "name": "Thomas Swift House",
+      "sections": [
+        "stay"
+      ],
+      "kinds": [
+        "Bed & Breakfast"
+      ],
+      "location": "243 High Street, Waynesville, OH 45068",
+      "phone": "513-292-2092",
+      "website": "https://www.airbnb.com/rooms/646199766982354501",
+      "about": "Bed and breakfast in a restored 1813 Federal-style building above the Art Expressions shop downtown, by reservation (booked through Airbnb).",
+      "source": "https://waynesvilleshops.com/lodging-food-and-entertainment/name/thomas-swift-house-airbnb/"
+    },
+    {
       "name": "Thrive Upper Cervical Care Chiropractic",
       "sections": [
         "health"
@@ -1042,7 +1213,7 @@
     {
       "name": "Venue at The Historic Lockup",
       "sections": [
-        "stay"
+        "venues"
       ],
       "kinds": [
         "Venue Rental"
@@ -1098,6 +1269,21 @@
       "website": "https://www.villageamishfurniture.com/",
       "about": "Sells vintage architectural salvage and antique hardware, plus Amish-built and custom furniture for the home, office and outdoors. Also repairs and refinishes antique pieces.",
       "source": "https://www.villageamishfurniture.com/"
+    },
+    {
+      "name": "Waynesville Candy Shoppe",
+      "sections": [
+        "food",
+        "shop"
+      ],
+      "kinds": [
+        "Candy",
+        "Chocolates"
+      ],
+      "location": "33 South Main Street, Waynesville, OH 45068",
+      "phone": "513-897-2112",
+      "about": "Candy shop in an 1820s building with house-made chocolates, candies and seasonal treats. Open Thursday to Sunday, 11 a.m. to 5:30 p.m.",
+      "source": "https://www.ohioslargestplayground.com/directory/waynesville-candy-shoppe/"
     },
     {
       "name": "Waynesville Clock Shop",
@@ -1236,7 +1422,7 @@
     {
       "name": "Country Layne Travel",
       "sections": [
-        "stay"
+        "pro"
       ],
       "kinds": [
         "Travel Agency"
