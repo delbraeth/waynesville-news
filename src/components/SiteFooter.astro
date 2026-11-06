@@ -16,6 +16,8 @@ const podLinks = [
 ].filter(Boolean) as { href: string; label: string }[];
 // `footer: false` keeps a supporter off the site-wide footer line (still on /supporters/ and badged in the directory).
 const supporterItems = (supporters.items ?? []).filter((s) => s && s.name && s.footer !== false);
+import churchData from "../data/churches.json";
+const hasChurches = churchData.items.length > 0;
 ---
 <footer class="site-footer">
   <div class="inner">
@@ -43,6 +45,7 @@ const supporterItems = (supporters.items ?? []).filter((s) => s && s.name && s.f
           <li><a href="/public-safety/">Public Safety</a></li>
           <li><a href="/directory/">Business Directory</a></li>
           <li><a href="/resources/">Living in Waynesville</a></li>
+          {hasChurches && <li><a href="/churches/">Churches</a></li>}
           <li><a href="/supporters/">Supporters</a></li>
         </ul>
       </div>

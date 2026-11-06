@@ -1,0 +1,263 @@
+{
+  "_note": "Church directory (/churches/). Hand-kept. Every fact comes from the church's own website (or its denomination's official locator page) and carries a verified date; service times exactly as published. Name churches only, never clergy, staff or members. Ministries listed only when the church publishes them as open to the community. Checked monthly for dead links and entries older than 90 days by scripts/check-resources.mjs. Entries with an empty `verified` date are not yet confirmed: the page labels them so. `toConfirm` (not shown on the site) lists what the editor still needs to check; fill in the fields, set `verified` to the date checked, add the source (or \"Confirmed by the editor\" plus how), and delete `toConfirm`.",
+  "updated": "2026-11-06",
+  "items": [
+    {
+      "name": "CrossView Christian Church",
+      "tradition": "",
+      "address": "4237 E. Social Row Rd., Waynesville",
+      "town": "Waynesville",
+      "phone": "937-885-7402",
+      "website": "https://www.crossview.cc",
+      "services": "Sundays at 9:00 and 10:45 a.m. The 9:00 service is livestreamed on Facebook.",
+      "ministries": [
+        "Called 2 Care: free donated children's clothing, high chairs, strollers, shoes and more for foster, adoptive and kinship families. Open Wednesdays 6–7:30 p.m.; enter at the back of the building off Lytle Ferry Road.",
+        "Food 2 Go: meals for elementary-age children in the Waynesville community.",
+        "Collects food donations for the Waynesville Food Pantry.",
+        "CrossView Cares: request help such as meals, home or car repairs, help for seniors and people with disabilities, visits, or prayer, through the church's website.",
+        "Student ministry for middle and high school: small groups on Wednesdays.",
+        "Vacation Bible School each summer."
+      ],
+      "source": [
+        "https://www.crossview.cc/howweserve",
+        "https://www.crossview.cc/crossviewcares",
+        "https://www.crossview.cc/discipleshipatcrossview"
+      ],
+      "verified": "2026-11-06"
+    },
+    {
+      "name": "Harvest Baptist Church",
+      "tradition": "Baptist",
+      "address": "188 N. U.S. 42, Waynesville",
+      "town": "Waynesville",
+      "phone": "513-850-2701",
+      "website": "https://www.harvestbcwc.org",
+      "services": "Sundays at 10 a.m. and 6 p.m.; Wednesday studies at 6:30 p.m.",
+      "ministries": [
+        "Children's church (pre-K through 6th grade) during the 10 a.m. service.",
+        "HisPins youth archery on Wednesday evenings (dates on the church calendar).",
+        "Harvest Family Fun Day, a free community event each October.",
+        "Fifth Sunday fellowship meal after the morning service; guests welcome."
+      ],
+      "source": [
+        "https://www.harvestbcwc.org/visit-us",
+        "https://www.harvestbcwc.org/our-ministries"
+      ],
+      "verified": "2026-11-06"
+    },
+    {
+      "name": "Miami Monthly Meeting (Religious Society of Friends)",
+      "tradition": "Friends (Quaker), unprogrammed worship · Ohio Valley Yearly Meeting",
+      "address": "White Brick Meetinghouse, 169 S. Fourth St., Waynesville",
+      "town": "Waynesville",
+      "phone": "",
+      "website": "https://quaker.org/legacy/miami/",
+      "services": "Meeting for worship Sundays at 10:45 a.m., in person and online.",
+      "ministries": [
+        "First Day School (religious education) Sundays at 9:30 a.m.",
+        "Carry-in lunch the first Sunday of each month; all welcome."
+      ],
+      "source": [
+        "https://www.ovym.org/meetings/miami/"
+      ],
+      "verified": "2026-11-06"
+    },
+    {
+      "name": "St. Augustine Catholic Church",
+      "tradition": "Roman Catholic · Holy Saints of God Family of Parishes, Archdiocese of Cincinnati",
+      "address": "5715 Lytle Rd., Waynesville",
+      "town": "Waynesville",
+      "phone": "",
+      "website": "https://holysaintsofgod.org",
+      "services": "",
+      "ministries": [],
+      "source": [
+        "https://catholicaoc.org/beacons-of-light/parish-families/southeast-deanery-family-1-updated"
+      ],
+      "verified": "2026-11-06"
+    },
+    {
+      "name": "St. Mary's Episcopal Church",
+      "tradition": "Episcopal · Diocese of Southern Ohio",
+      "address": "107 S. Third St., Waynesville",
+      "town": "Waynesville",
+      "phone": "283-221-7970",
+      "website": "https://stmaryswaynesville.org",
+      "services": "Sundays at 10:30 a.m.",
+      "ministries": [
+        "Home of the Waynesville Food Pantry and Wayne Township Community Aid: non-perishable food, some paper, personal and household items, and help with utility bills, for Waynesville, Wayne Township, Corwin, Harveysburg, Lytle and Oregonia. Call 283-221-6908.",
+        "Bible study on the 2nd and 4th Sundays at 9:30 a.m."
+      ],
+      "source": [
+        "https://stmaryswaynesville.org/",
+        "https://stmaryswaynesville.org/calendar-of-upcoming-services-and-events/"
+      ],
+      "verified": "2026-11-06"
+    },
+    {
+      "name": "Waynesville United Methodist Church",
+      "tradition": "United Methodist · West Ohio Conference",
+      "address": "297 North St., Waynesville",
+      "town": "Waynesville",
+      "phone": "513-897-5771",
+      "website": "https://waynesvilleumc.org",
+      "services": "",
+      "ministries": [],
+      "source": [
+        "https://www.westohioumc.org/find-church?county=83"
+      ],
+      "verified": "2026-11-06"
+    },
+    {
+      "name": "Wellspring Baptist Church",
+      "tradition": "Baptist",
+      "address": "2094 E. State Route 73, Waynesville (Clearcreek Township)",
+      "town": "Waynesville",
+      "phone": "",
+      "website": "https://www.wellspringbaptistchurch.org",
+      "services": "Sundays: fellowship 9:45 a.m., worship 10 a.m., evening service 6 p.m. Wednesdays: Bible study and prayer, 7 p.m.",
+      "ministries": [
+        "Youth Bible study (ages 13–18), Sundays 5:30–7:30 p.m.",
+        "F.L.A.S.H. Kids Club (ages 4–12), Wednesdays 7–8 p.m. during the school year.",
+        "Nursery during all services; Sunday school for ages 3–12 during the morning service."
+      ],
+      "source": [
+        "https://www.wellspringbaptistchurch.org/",
+        "https://www.wellspringbaptistchurch.org/ministry-outreach"
+      ],
+      "verified": "2026-11-06"
+    },
+    {
+      "name": "Lytle United Methodist Church",
+      "tradition": "United Methodist · West Ohio Conference",
+      "address": "8464 Lytle Ferry Rd., Waynesville",
+      "town": "Lytle",
+      "phone": "",
+      "website": "",
+      "services": "",
+      "ministries": [],
+      "source": [
+        "https://www.westohioumc.org/find-church?county=83"
+      ],
+      "verified": "2026-11-06"
+    },
+    {
+      "name": "Oregonia United Methodist Church",
+      "tradition": "United Methodist · West Ohio Conference",
+      "address": "1444 Race St., Oregonia",
+      "town": "Oregonia",
+      "phone": "513-934-1000",
+      "website": "",
+      "services": "",
+      "ministries": [],
+      "source": [
+        "https://www.westohioumc.org/find-church?county=83"
+      ],
+      "verified": "2026-11-06"
+    },
+    {
+      "name": "Waynesville Church of the Nazarene",
+      "tradition": "",
+      "address": "7272 E. State Route 73, Waynesville",
+      "town": "Waynesville",
+      "phone": "",
+      "website": "",
+      "services": "",
+      "ministries": [],
+      "source": [],
+      "verified": "",
+      "toConfirm": "Address, phone, website and service times (listing sites only; no church website found)."
+    },
+    {
+      "name": "Waynesville Community Church",
+      "tradition": "",
+      "address": "1009 Lytle Rd., Waynesville",
+      "town": "Waynesville",
+      "phone": "",
+      "website": "",
+      "services": "",
+      "ministries": [],
+      "source": [],
+      "verified": "",
+      "toConfirm": "Address, tradition (listing sites say Southern Baptist), phone, service times. Its Facebook page may be facebook.com/Waynesville.us; confirm before adding it as the website."
+    },
+    {
+      "name": "Waynesville Church of Christ",
+      "tradition": "",
+      "address": "Third and Michigan streets, Waynesville",
+      "town": "Waynesville",
+      "phone": "",
+      "website": "",
+      "services": "",
+      "ministries": [],
+      "source": [],
+      "verified": "",
+      "toConfirm": "Street address, phone, website or Facebook page, service times (listing sites only)."
+    },
+    {
+      "name": "Friendship Baptist Church",
+      "tradition": "",
+      "address": "10600 E. State Route 73, Harveysburg",
+      "town": "Harveysburg",
+      "phone": "",
+      "website": "",
+      "services": "",
+      "ministries": [],
+      "source": [],
+      "verified": "",
+      "toConfirm": "Address, phone, service times (listing sites only; no website found)."
+    },
+    {
+      "name": "Harveysburg Full Gospel Church",
+      "tradition": "",
+      "address": "73 E. South St., Harveysburg",
+      "town": "Harveysburg",
+      "phone": "",
+      "website": "",
+      "services": "",
+      "ministries": [],
+      "source": [],
+      "verified": "",
+      "toConfirm": "Name: listing sites show the same address and phone as both Harveysburg Full Gospel Church and Pillar of Fire Worship Center. Confirm the current name, tradition, phone and service times."
+    },
+    {
+      "name": "Corwin Pentecostal Church",
+      "tradition": "",
+      "address": "33 S. New Burlington Rd., Corwin",
+      "town": "Corwin",
+      "phone": "",
+      "website": "",
+      "services": "",
+      "ministries": [],
+      "source": [],
+      "verified": "",
+      "toConfirm": "Address, phone, service times (listing sites only)."
+    },
+    {
+      "name": "Silver Grove Baptist Church",
+      "tradition": "",
+      "address": "7770 State Route 350, Oregonia",
+      "town": "Oregonia",
+      "phone": "",
+      "website": "",
+      "services": "",
+      "ministries": [],
+      "source": [],
+      "verified": "",
+      "toConfirm": "Whether it is still active, address, phone, service times (listing sites only)."
+    },
+    {
+      "name": "Ridgeville Community Church",
+      "tradition": "",
+      "address": "946 E. Lower Springboro Rd., Ridgeville",
+      "town": "Ridgeville",
+      "phone": "",
+      "website": "",
+      "services": "",
+      "ministries": [],
+      "source": [],
+      "verified": "",
+      "toConfirm": "Address, phone (listing sites disagree), service times."
+    }
+  ]
+}
