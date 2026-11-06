@@ -78,7 +78,18 @@ reference.
 
 ### Ideas (parked)
 
-- **Church directory.** Editor's idea, 2026-11-05. A dedicated page listing
+- **Church directory.** **First version built 2026-11-06** at `/churches/`
+  (data in `src/data/churches.json`; checked monthly by
+  `scripts/check-resources.mjs`). 9 churches verified from each church's own
+  site or its denomination's official locator. Still to add once an official
+  source can be confirmed: service times for St. Augustine and Waynesville
+  UMC (their sites block automated checks), and the Waynesville Church of the
+  Nazarene, Waynesville Community Church, Waynesville Church of Christ,
+  Friendship Baptist (Harveysburg), the Harveysburg Full Gospel / Pillar of
+  Fire church, Corwin Pentecostal, Silver Grove Baptist and Ridgeville
+  Community Church, which have no readable website. Jonah's Run Baptist
+  (near Harveysburg, Clinton County) and Lifehouse (Lebanon) were left out
+  as outside the area. Original idea, 2026-11-05. A dedicated page listing
   Waynesville-area churches with:
   - address
   - service times, as each church publishes them
