@@ -1,6 +1,6 @@
 # Planning note: community hub review (2026-11-05)
 
-**Status:** Living roadmap, last updated 2026-11-05. The first build is done
+**Status:** Living roadmap, last updated 2026-11-06. The first build is done
 (see "Roadmap" below). The review that started it is kept further down for
 reference.
 
@@ -91,12 +91,18 @@ reference.
   "Editor's notes" below. Could share a format with the church directory.
 - **Volunteer board.** Could grow out of the nonprofit listing's "how to
   help" lines.
-- **Directory photos as a supporter perk.** Discussed 2026-11-05, not
-  decided.
-- **Human review on sensitive days** (elections, public safety, allegations).
-  This needs an explicit decision from the editor.
 - **Visitor guide and government issue trackers.** From the review's
   Phase 3.
+
+### On hold (editor's decision, 2026-11-06)
+
+Don't build these or bring them up as next steps until the editor reopens them.
+
+- **Human review before publishing**, including the middle path of review on
+  sensitive days only (elections, public safety, allegations). The daily brief
+  keeps auto-publishing as instructed on 2026-08-20.
+- **Directory photos**, including as a supporter perk. The directory stays
+  text-only.
 
 ## Source
 
