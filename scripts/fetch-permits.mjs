@@ -29,8 +29,11 @@ const JURISDICTIONS = /^(wayne|village of waynesville|village of corwin)$/i;
 const COLUMNS = [
   ["issued", 0], ["permit", 90], ["applicant", 160], ["subdivision", 208], ["useGroup", 250],
   ["address", 295], ["projectName", 338], ["description", 380], ["valuation", 425],
-  ["cost", 490], ["sqft", 555], ["comRes", 580], ["lot", 635], ["jurisdiction", 665], ["parcel", 715],
+  ["cost", 490], ["sqft", 555], ["comRes", 580], ["lot", 635], ["jurisdiction", 665], ["parcel", 695],
 ];
+// Parcel's edge sits well left of where its digits start (~711–713pt): the
+// October 2026 report moved the column ~2pt left, and a tight edge glued every
+// parcel number onto the jurisdiction ("Wayne 0513115003"), so no row matched.
 // Numbers sit on a permit's first line only; text columns may wrap.
 const FIRST_LINE_ONLY = new Set(["issued", "permit", "valuation", "cost", "sqft", "comRes", "lot", "parcel"]);
 const MAX_SPAN_PT = 64; // ~8 wrapped lines; stops page-footer text bleeding in
@@ -103,6 +106,9 @@ async function main() {
   // the layout moved and the columns are wrong — fail rather than publish junk.
   const typed = all.filter((r) => /^(commercial|residential)$/i.test(r.comRes ?? "")).length;
   if (all.length < 10 || typed / all.length < 0.9) throw new Error(`report layout changed: ${typed}/${all.length} rows parsed cleanly`);
+  // Jurisdiction is a place name; digits in it mean a neighbouring column bled in.
+  const badJur = all.filter((r) => /\d/.test(r.jurisdiction ?? "")).length;
+  if (badJur / all.length > 0.1) throw new Error(`report layout changed: ${badJur}/${all.length} jurisdiction cells contain digits`);
 
   const items = all
     .filter((r) => JURISDICTIONS.test(r.jurisdiction ?? ""))
