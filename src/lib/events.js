@@ -14,6 +14,16 @@ export const TRICK_OR_TREAT = "trick-or-treat";
 const LOCAL_RE = /\b(waynesville|corwin|harveysburg|oregonia|ridgeville|lytle|mount holly|crosswick|caesar creek|45068|45054|45065)\b/i;
 export const isLocalEvent = (e) => (typeof e.local === "boolean" ? e.local : LOCAL_RE.test(e.venue ?? ""));
 
+// Long-running items that have already started (a donation drive, a month-long
+// request window) sort by their end date, so they don't sit above this
+// weekend's dated events. Everything else sorts by start.
+const WEEK = 7 * 86400000;
+function sortKey(e, today) {
+  const started = e._d < today;
+  const long = e._end.getTime() - e._d.getTime() > WEEK;
+  return started && long ? e._end.getTime() : e._d.getTime();
+}
+
 export function upcomingEvents(tag) {
   const startOfToday = new Date();
   startOfToday.setHours(0, 0, 0, 0);
@@ -28,5 +38,5 @@ export function upcomingEvents(tag) {
       _end: new Date(e.endISO ?? e.dateISO),
     }))
     .filter((e) => e._end >= startOfToday)
-    .sort((a, b) => a._d.getTime() - b._d.getTime());
+    .sort((a, b) => sortKey(a, startOfToday) - sortKey(b, startOfToday));
 }

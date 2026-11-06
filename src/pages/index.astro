@@ -11,6 +11,7 @@ import headlines from "../data/headlines.json";
 import { getPublicBriefs } from "../lib/briefs.js";
 import { getPublishedStories, storyHref } from "../lib/stories.js";
 import churchData from "../data/churches.json";
+import audioIndex from "../data/audio-index.json";
 import orgData from "../data/organizations.json";
 import directoryData from "../data/directory.json";
 import { upcomingEvents } from "../lib/events.js";
@@ -18,6 +19,8 @@ import { upcomingEvents } from "../lib/events.js";
 // "Find what you need": one tile per community section, each with a live count
 // so the homepage reads as a dashboard, not just an archive.
 const tiles = [
+  { href: "/schools/", title: "Schools", text: "Wayne Local news, board meetings, closings and Spartans sports, from every edition." },
+  { href: "/visit/", title: "Visiting Waynesville", text: "Parking, restrooms, Main Street shops, the trail, Caesar Creek and the festivals." },
   { href: "/events/", title: "Events", text: `${upcomingEvents().length} coming up, with a this-weekend view and add-to-calendar links.` },
   { href: "/resources/", title: "Living in Waynesville", text: "Utilities, trash, village and township offices, schools and emergency numbers." },
   { href: "/directory/", title: "Business directory", text: `${directoryData.items.length} local businesses, from antiques to auto repair.` },
@@ -37,8 +40,11 @@ const dateFmt = new Intl.DateTimeFormat("en-US", {
 });
 const shortFmt = new Intl.DateTimeFormat("en-US", { month: "long", day: "numeric" });
 const dateLine = latest ? dateFmt.format(latest.data.date) : undefined;
+const audio = latest ? (audioIndex.items as Record<string, { seconds?: number }>)[latest.id] : undefined;
+const listen = audio?.seconds ? `${Math.max(1, Math.round(audio.seconds / 60))} min` : undefined;
 ---
-<Base dateLine={dateLine} jsonLd={website}>
+<Base dateLine={dateLine} jsonLd={website} description="Waynesville, Ohio's daily local news: today's brief, events, schools, government, businesses, churches and community groups in one place.">
+  <h1 class="visually-hidden">Waynesville News: daily local news for Waynesville, Ohio</h1>
   {latest ? (
     <section class="section">
       <div class="reading">
@@ -47,6 +53,7 @@ const dateLine = latest ? dateFmt.format(latest.data.date) : undefined;
           dek={latest.data.dek}
           dateLabel={shortFmt.format(latest.data.date)}
           href={`/briefs/${latest.id}/`}
+          listen={listen}
         />
         <SubscribeBox />
       </div>
@@ -68,7 +75,7 @@ const dateLine = latest ? dateFmt.format(latest.data.date) : undefined;
       <h2 id="find-h">Find what you need</h2>
       <ul class="home-tiles">
         {tiles.map((t) => (
-          <li><a href={t.href}><strong>{t.title}</strong><span>{t.text}</span></a></li>
+          <li><a href={t.href}><strong>{t.title}</strong><span class="visually-hidden">: </span><span>{t.text}</span></a></li>
         ))}
       </ul>
     </section>
@@ -129,5 +136,5 @@ const dateLine = latest ? dateFmt.format(latest.data.date) : undefined;
   .home-tiles a { display: block; height: 100%; padding: 0.9rem 1rem; border: 1px solid var(--rule); border-radius: 6px; background: var(--paper-2); color: inherit; text-decoration: none; }
   .home-tiles a:hover, .home-tiles a:focus-visible { border-color: var(--accent); }
   .home-tiles strong { display: block; color: var(--accent-deep); font-size: 1.05rem; margin-bottom: 0.2rem; }
-  .home-tiles span { display: block; font-size: 0.92rem; color: var(--ink-soft); line-height: 1.4; }
+  .home-tiles span:not(.visually-hidden) { display: block; font-size: 0.92rem; color: var(--ink-soft); line-height: 1.4; }
 </style>

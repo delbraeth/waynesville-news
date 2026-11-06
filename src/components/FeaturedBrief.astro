@@ -1,6 +1,6 @@
 ---
-interface Props { title: string; dek?: string; dateLabel: string; href: string; }
-const { title, dek, dateLabel, href } = Astro.props;
+interface Props { title: string; dek?: string; dateLabel: string; href: string; listen?: string; }
+const { title, dek, dateLabel, href, listen } = Astro.props;
 const submitHref = "mailto:editor@waynesville.news?subject=" + encodeURIComponent("Story or event tip") +
   "&body=" + encodeURIComponent("What's happening:\n\nDate and time (for events):\n\nWhere:\n\nLink or source (if any):\n\nYour name and how to reach you (not published):\n");
 ---
@@ -10,6 +10,7 @@ const submitHref = "mailto:editor@waynesville.news?subject=" + encodeURIComponen
   {dek && <p class="dek">{dek}</p>}
   <div class="featured-actions">
     <a class="btn" href={href}>Read today’s brief →</a>
+    {listen && <a class="btn btn-outline" href={`${href}#listen`}>🎧 Listen ({listen})</a>}
     <a class="btn btn-outline" href={submitHref}>Submit a story or event</a>
   </div>
   <p class="muted small submit-note">Tips go to the editor and are reviewed before anything is published.</p>

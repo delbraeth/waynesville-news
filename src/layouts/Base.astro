@@ -83,10 +83,11 @@ const ogImage = new URL(image || "/og.png", Astro.site);
     <script is:inline>try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t}catch(e){}</script>
   </head>
   <body>
+    <a class="skip-link" href="#main">Skip to content</a>
     {isDemoMode && <DemoBanner />}
     <Masthead dateLine={dateLine ?? editionDateLine} />
     {showInfoBar && <InfoBar />}
-    <main>
+    <main id="main" tabindex="-1">
       <slot />
     </main>
     <SiteFooter />

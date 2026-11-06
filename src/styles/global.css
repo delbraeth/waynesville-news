@@ -9,7 +9,7 @@
   --paper-2: #f4f0e8;
   --ink: #1a1712;
   --ink-soft: #4a433a;
-  --muted: #776d60;
+  --muted: #6b6255;  /* 5.3:1 on --paper, 5.0:1 on --paper-2 */
   --rule: #e5ddce; /* hairline */
   --accent: #9e2b25;      /* barn red — nods to the antiques/rural identity */
   --accent-deep: #7c201b;
@@ -108,6 +108,13 @@ p { margin: 0 0 1rem; }
 
 a { color: var(--link); text-decoration: none; }
 a:hover { color: var(--link-hover); text-decoration: underline; }
+/* Links inside running text are underlined so they don't rely on color alone
+   (WCAG 1.4.1). Nav, buttons, tiles, headline lists and names stay plain. */
+.prose a, .dek a, .callout a, .res-what a, .ch-min a, p.small a, .brief-howmade a { text-decoration: underline; text-underline-offset: 0.15em; text-decoration-thickness: 1px; }
+.skip-link { position: absolute; left: 0.5rem; top: -3rem; z-index: 100; padding: 0.5rem 0.9rem; background: var(--ink); color: var(--paper); font-family: var(--font-sans); }
+.skip-link:focus { top: 0.5rem; }
+main:focus { outline: none; }
+.brief-howmade { margin-top: 1.5rem; padding-top: 0.8rem; border-top: 1px solid var(--rule); color: var(--ink-soft); }
 
 .kicker {
   font-family: var(--font-sans);
@@ -438,6 +445,9 @@ a.dir-supporter, a.dir-supporter:hover { color: #fff; text-decoration: none; }
 .callout .dir-supporter { margin-left: 0; }
 .dir-kinds { font-family: var(--font-sans); font-size: 0.78rem; color: var(--muted); margin-top: 0.15rem; }
 .dir-about { font-size: 0.93rem; color: var(--ink-soft); margin: 0.35rem 0 0; }
+.dir-tools { display: flex; flex-wrap: wrap; gap: 0.2rem 1rem; margin-top: 0.25rem; font-family: var(--font-sans); font-size: 0.78rem; }
+.dir-tools a { color: var(--muted); text-decoration: underline; text-underline-offset: 0.15em; }
+.directory li:target { background: var(--paper-2); outline: 2px solid var(--accent); outline-offset: 4px; }
 .dir-contact { display: flex; flex-wrap: wrap; gap: 0.2rem 1rem; font-family: var(--font-sans); font-size: 0.84rem; margin-top: 0.35rem; color: var(--muted); }
 .visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 .hl-pending { color: var(--accent); font-weight: 600; }

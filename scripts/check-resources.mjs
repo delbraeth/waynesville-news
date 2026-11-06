@@ -28,11 +28,15 @@ const ageDays = (iso) => Math.floor((Date.parse(`${todayET}T12:00:00Z`) - Date.p
 const CHURCHES = new URL("../src/data/churches.json", import.meta.url);
 const data = JSON.parse(await readFile(FILE, "utf8"));
 const churches = JSON.parse(await readFile(CHURCHES, "utf8"));
+const visit = JSON.parse(await readFile(new URL("../src/data/visit.json", import.meta.url), "utf8"));
 const orgs = JSON.parse(await readFile(new URL("../src/data/organizations.json", import.meta.url), "utf8"));
 const entries = [
   ...(data.sections ?? []).flatMap((s) => (s.items ?? []).map((it) => ({ ...it, section: s.title }))),
   // Church directory (/churches/): website plus each source URL.
   ...(churches.items ?? []).map((c) => ({ ...c, section: "Churches", link: c.website, source: undefined, links: (c.source ?? []).map((url) => ({ url })) })),
+  // Visiting Waynesville (/visit/): website, outside links and sources.
+  ...(visit.sections ?? []).flatMap((s) => (s.items ?? []).map((it) => ({ ...it, section: `Visit: ${s.title}`, link: it.website, source: undefined,
+    links: [...(it.links ?? []).map((l) => l.url).filter((u) => /^https?:/.test(u)), ...(it.source ?? [])].map((url) => ({ url })) }))),
   // Community organizations (/community/): website, Facebook and sources.
   ...(orgs.items ?? []).map((o) => ({ ...o, section: "Community organizations", link: o.website, source: undefined, links: [o.facebook, ...(o.source ?? [])].filter(Boolean).map((url) => ({ url })) })),
 ];

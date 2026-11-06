@@ -404,6 +404,22 @@ const closingsBlock = closingItems.length
     closingItems.map((c) => `- ${c.text} (${c.label}; ${link(c.src, c.link)})`).join("\n")
   : null;
 
+// The Merchants feed sometimes carries a single-day time for an event the
+// village calendar lists in full (Hearthwarming: feed "Fri 11–5", calendar
+// "Fri & Sat 11–8, Sun noon–5"). Two different hours on one page is worse than
+// one, and events.json is hand-verified, so the calendar wins: drop any feed
+// item whose title matches a calendar event on the same dates.
+const normT = (t = "") => t.toLowerCase().replace(/[^a-z0-9 ]+/g, " ").replace(/\s+/g, " ").trim();
+const onCalendar = (e) => {
+  const day = String(e.dateISO ?? "").slice(0, 10);
+  return events.items.some((c) => {
+    if (!c.dateISO || !day) return false;
+    const start = new Date(c.dateISO).toISOString().slice(0, 10), end = new Date(c.endISO ?? c.dateISO).toISOString().slice(0, 10);
+    const a = normT(c.title), b = normT(e.title);
+    return day >= start && day <= end && (a.includes(b) || b.includes(a));
+  });
+};
+shopsEvents = shopsEvents.filter((e) => !onCalendar(e));
 const shopsBlock = shopsEvents.length
   ? shopsEvents.map((e) => `- **${e.dateLabel}** — ${link(e.title, e.link)}`).join("\n")
   : null;

@@ -12,7 +12,7 @@ const evergreen = eventsData.items.filter((e) => e.evergreen).map((e) => ({ ...e
 const regionalCount = upcoming.filter((e) => !e._local).length;
 const submitMail = "mailto:editor@waynesville.news?subject=" + encodeURIComponent("Event for the calendar");
 ---
-<Base title="Events & Things to Do · Waynesville News" showInfoBar={false} jsonLd={upcoming.length ? eventList(upcoming) : undefined}>
+<Base title="Events & Things to Do · Waynesville News" description="What's happening in Waynesville, Ohio: festivals, downtown shopping weekends, library and school events, Caesar Creek and big regional draws, with a this-weekend view and add-to-calendar links." showInfoBar={false} jsonLd={upcoming.length ? eventList(upcoming) : undefined}>
   <div class="reading">
     <p class="kicker">Events</p>
     <h1>Events &amp; Things to Do</h1>

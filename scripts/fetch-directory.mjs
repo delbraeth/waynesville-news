@@ -309,7 +309,11 @@ export function stripContactNames(about = "", name = "") {
 async function loadRecategorize() {
   try {
     const m = JSON.parse(await readFile(MANUAL, "utf8"));
-    return new Map((m.recategorize ?? []).filter((r) => r?.name && Array.isArray(r.sections)).map((r) => [nameKey(r.name), r.sections]));
+    // Each entry may fix sections, kinds (the tags shown under the name) and/or
+    // about, for a Chamber listing whose categories or description are wrong.
+    return new Map((m.recategorize ?? [])
+      .filter((r) => r?.name && (Array.isArray(r.sections) || Array.isArray(r.kinds) || typeof r.about === "string"))
+      .map((r) => [nameKey(r.name), r]));
   } catch { return new Map(); }
 }
 
@@ -324,7 +328,9 @@ async function writeMerged(chamber) {
   for (const it of items) {
     it.about = stripContactNames(it.about, it.name);
     const fix = recat.get(nameKey(it.name));
-    if (fix) it.sections = fix.filter((id) => SECTIONS.some((s) => s.id === id));
+    if (fix?.sections) it.sections = fix.sections.filter((id) => SECTIONS.some((s) => s.id === id));
+    if (fix?.kinds) it.kinds = fix.kinds;
+    if (typeof fix?.about === "string") it.about = fix.about;
   }
   await dropDeadWebsites(items);
   await writeFile(
