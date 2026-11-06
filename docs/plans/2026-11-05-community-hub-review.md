@@ -84,12 +84,15 @@ reference.
   site or its denomination's official locator. Still to add once an official
   source can be confirmed: service times for St. Augustine and Waynesville
   UMC (their sites block automated checks), and the Waynesville Church of the
-  Nazarene, Waynesville Community Church, Waynesville Church of Christ,
+  Nazarene, Waynesville Community Church,
   Friendship Baptist (Harveysburg), the Harveysburg Full Gospel / Pillar of
   Fire church, Corwin Pentecostal, Silver Grove Baptist and Ridgeville
   Community Church, which have no readable website. Jonah's Run Baptist
   (near Harveysburg, Clinton County) and Lifehouse (Lebanon) were left out
-  as outside the area. Original idea, 2026-11-05. A dedicated page listing
+  as outside the area. Waynesville Church of Christ was removed on
+  2026-11-06: the editor believes it is no longer active, and its listed
+  address (Third and Michigan streets) doesn't exist, since Waynesville has
+  no Michigan Street. Original idea, 2026-11-05. A dedicated page listing
   Waynesville-area churches with:
   - address
   - service times, as each church publishes them
