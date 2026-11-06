@@ -247,6 +247,9 @@ const clip = (text = "", words = 25) => {
   const w = String(text).replace(/\s+/g, " ").trim().split(" ").filter(Boolean);
   return w.length <= words ? w.join(" ") : w.slice(0, words).join(" ").replace(/[,;:.…\s]+$/, "") + "…";
 };
+// Facebook post text can carry raw links (e.g. a Smore newsletter URL, which
+// the privacy gate rejects). Each item already links its post, so drop them.
+const noUrls = (s = "") => String(s).replace(/🔗\s*/gu, "").replace(/\bhttps?:\/\/\S+/gi, "").replace(/\s{2,}/g, " ").trim();
 const roadsOhgo = roads.filter((r) => r.source === "ohgo");
 const roadsCounty = roads.filter((r) => r.source === "engineer");
 const roadsBlock = roads.length
@@ -366,24 +369,24 @@ const libraryBlock = libraryUpcoming.length
 // attributed to it, with a link back.
 const fbBlock = fbSchools.length
   ? "**From Wayne Local Schools on Facebook**\n" +
-    fbSchools.slice(0, 3).map((p) => `- **${p.dateLabel}** — ${clip(`${p.title} ${p.excerpt}`, 30)} (${link("post", p.link)})`).join("\n")
+    fbSchools.slice(0, 3).map((p) => `- **${p.dateLabel}** — ${clip(noUrls(`${p.title} ${p.excerpt}`), 30)} (${link("post", p.link)})`).join("\n")
   : null;
 
 const fbCaesarBlock = fbCaesarCreek.length
   ? "**From Caesar Creek State Park on Facebook**\n" +
-    fbCaesarCreek.slice(0, 2).map((p) => `- **${p.dateLabel}** — ${clip(`${p.title} ${p.excerpt}`, 30)} (${link("post", p.link)})`).join("\n")
+    fbCaesarCreek.slice(0, 2).map((p) => `- **${p.dateLabel}** — ${clip(noUrls(`${p.title} ${p.excerpt}`), 30)} (${link("post", p.link)})`).join("\n")
   : null;
 
 const fbWcpdBlock = fbWcpdFriends.length
   ? "**From Friends of Warren County Park District on Facebook**\n" +
-    fbWcpdFriends.slice(0, 2).map((p) => `- **${p.dateLabel}** — ${clip(`${p.title} ${p.excerpt}`, 30)} (${link("post", p.link)})`).join("\n")
+    fbWcpdFriends.slice(0, 2).map((p) => `- **${p.dateLabel}** — ${clip(noUrls(`${p.title} ${p.excerpt}`), 30)} (${link("post", p.link)})`).join("\n")
   : null;
 
 // Wayne Township's page carries fire department posts (burn rules, safety,
 // events) along with roads, zoning and trustees, so it sits in Local government.
 const fbTownshipBlock = fbTownship.length
   ? "**From Wayne Township on Facebook**\n" +
-    fbTownship.slice(0, 2).map((p) => `- **${p.dateLabel}** — ${clip(`${p.title} ${p.excerpt}`, 30)} (${link("post", p.link)})`).join("\n")
+    fbTownship.slice(0, 2).map((p) => `- **${p.dateLabel}** — ${clip(noUrls(`${p.title} ${p.excerpt}`), 30)} (${link("post", p.link)})`).join("\n")
   : null;
 
 // Delays and closings go first, above everything else. From the district news
@@ -393,7 +396,7 @@ const closingItems = [
   ...closings.map((c) => ({ label: `posted ${c.posted.replace(/^(\w)(\w+)/, (_, a, b) => a + b.toLowerCase())}`, text: c.title, link: c.link, src: "district news" })),
   ...fbSchools
     .filter((p) => Date.parse(p.date) >= closingCutoff && isScheduleChange(`${p.title} ${p.excerpt}`))
-    .map((p) => ({ label: `posted ${p.dateLabel}`, text: clip(`${p.title} ${p.excerpt}`, 30), link: p.link, src: "Facebook" })),
+    .map((p) => ({ label: `posted ${p.dateLabel}`, text: clip(noUrls(`${p.title} ${p.excerpt}`), 30), link: p.link, src: "Facebook" })),
 ];
 const closingsBlock = closingItems.length
   ? "<!-- Editor note (stripped before publication): make this the lead item. Confirm the day in the district's post first; a post can be about a later date. -->\n" +
