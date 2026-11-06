@@ -7,12 +7,16 @@
 //    ohgo.com map: undocumented, so it may change without notice, and it
 //    ignores filters (the whole state, ~5 MB), so distance is computed here.
 // 2. Warren County Engineer news releases — county and township road closures
-//    OHGO does not carry. Only the release title and its date are used; the
-//    filename date is the closure's START date, not the release date.
+//    OHGO does not carry. The filename date is the closure's START date, not
+//    the release date. Each release's PDF is read for its end ("through
+//    Friday, November 13", "for five (5) days"), and closures that have ended
+//    are dropped; a release with no parseable end is kept for
+//    ENGINEER_PAST_DAYS after it starts.
 //
 // Descriptions are ODOT's own text, reproduced verbatim (trimmed to length).
 import { writeFile } from "node:fs/promises";
 import { keepOrExpire } from "./lib/stale-cache.mjs";
+import { getDocument } from "pdfjs-dist/legacy/build/pdf.mjs";
 
 const OUT = new URL("../src/data/roads.json", import.meta.url);
 const UA = { "User-Agent": "WaynesvilleDailyBrief/1.0 (waynesville.news)" };
@@ -86,6 +90,46 @@ async function fetchOhgo() {
   return items;
 }
 
+const MONTHS = ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"];
+const NUMBER_WORDS = { one: 1, two: 2, three: 3, four: 4, five: 5, six: 6, seven: 7, eight: 8, nine: 9, ten: 10 };
+
+// The release's last closed day, from its own wording, or null. Text from
+// these PDFs splits digits ("October 1 6 th", "202 6"), so digit runs are
+// re-joined first. Every "through/to/until … <Month> <day>" and "for N
+// days/weeks" is read and the latest wins, so "closed from … Friday, October
+// 16th, to … Sunday, October 18th" ends on the 18th.
+export function parseReleaseEnd(text, startISO) {
+  const t = String(text).replace(/\s+/g, " ").replace(/(\d) (?=\d)/g, "$1");
+  const [sy, sm] = startISO.split("-").map(Number);
+  const ends = [];
+  const monthRe = new RegExp(`\\b(?:through|thru|to|until)\\b.{0,60}?\\b(${MONTHS.join("|")})\\s+(\\d{1,2})\\b`, "gi");
+  for (const [, mon, day] of t.matchAll(monthRe)) {
+    const m = MONTHS.indexOf(mon.toLowerCase()) + 1;
+    const y = m < sm ? sy + 1 : sy; // a December closure can run into January
+    ends.push(`${y}-${String(m).padStart(2, "0")}-${String(day).padStart(2, "0")}`);
+  }
+  for (const [, word, num, unit] of t.matchAll(/\bfor\s+(?:(\w+)\s*)?\(?(\d+)?\)?\s*(day|week)s?\b/gi)) {
+    const n = Number(num) || NUMBER_WORDS[String(word).toLowerCase()];
+    if (n) ends.push(addDays(startISO, n * (/week/i.test(unit) ? 7 : 1) - 1));
+  }
+  const valid = ends.filter((e) => e >= startISO).sort();
+  return valid.length ? valid[valid.length - 1] : null;
+}
+
+async function releaseEnd(link, startISO) {
+  try {
+    const res = await fetch(link, { headers: UA, signal: AbortSignal.timeout(30_000) });
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const doc = await getDocument({ data: new Uint8Array(await res.arrayBuffer()), isEvalSupported: false }).promise;
+    let text = "";
+    for (let p = 1; p <= Math.min(doc.numPages, 2); p++) text += " " + (await (await doc.getPage(p)).getTextContent()).items.map((i) => i.str).join(" ");
+    return parseReleaseEnd(text, startISO);
+  } catch (e) {
+    console.error(`roads: could not read ${link}: ${e.message}`);
+    return null;
+  }
+}
+
 async function fetchEngineer() {
   const res = await fetch(ENGINEER_URL, { headers: UA, signal: AbortSignal.timeout(20_000) });
   if (!res.ok) throw new Error(`HTTP ${res.status} for ${ENGINEER_URL}`);
@@ -96,7 +140,7 @@ async function fetchEngineer() {
   if (all.length === 0) throw new Error("engineer release links not found — markup changed");
   const lo = addDays(todayET, -ENGINEER_PAST_DAYS), hi = addDays(todayET, ENGINEER_AHEAD_DAYS);
   const seen = new Set();
-  return all
+  const recent = all
     .map(([, href, , ymd, text]) => {
       const startISO = `${ymd.slice(0, 4)}-${ymd.slice(4, 6)}-${ymd.slice(6, 8)}`;
       const title = clean(text).replace(/^[A-Za-z]+ \d{1,2},? \d{4}\s*-\s*/, "");
@@ -106,6 +150,13 @@ async function fetchEngineer() {
     .filter((i) => /closure|closed/i.test(i.title) && i.startISO >= lo && i.startISO <= hi)
     .filter((i) => (seen.has(i.link) ? false : seen.add(i.link)))
     .sort((a, b) => b.startISO.localeCompare(a.startISO));
+  const items = [];
+  for (const i of recent) {
+    const endISO = await releaseEnd(i.link, i.startISO);
+    if (endISO && endISO < todayET) continue; // reopened
+    items.push(endISO ? { ...i, endISO } : i);
+  }
+  return items;
 }
 
 const write = (data, note) =>
@@ -127,7 +178,7 @@ async function main() {
         engineer: engineer.status === "fulfilled" ? ENGINEER_URL : "FAILED",
       },
     },
-    `State-route work within ${RADIUS_MI} miles of Waynesville (ODOT OHGO; Restricted/Closed only, ODOT's own descriptions) plus Warren County Engineer closure releases starting within ${ENGINEER_PAST_DAYS} days back / ${ENGINEER_AHEAD_DAYS} ahead (countywide; title and start date only).`,
+    `State-route work within ${RADIUS_MI} miles of Waynesville (ODOT OHGO; Restricted/Closed only, ODOT's own descriptions) plus Warren County Engineer closure releases starting within ${ENGINEER_PAST_DAYS} days back / ${ENGINEER_AHEAD_DAYS} ahead (countywide; title, start date, and the end date the release states; ended closures dropped).`,
   );
   const o = ohgo.value?.length ?? "failed", g = engineer.value?.length ?? "failed";
   console.log(`roads.json: ${o} state-route item(s) within ${RADIUS_MI} mi, ${g} county closure release(s)`);
