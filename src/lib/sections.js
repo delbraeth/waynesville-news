@@ -20,7 +20,12 @@ function splitSections(md) {
 
 // Is a section worth showing in a feed, or is it a "nothing to report" filler line?
 function isSubstantive(md) {
+  // Every brief's Public safety section opens with the NWS alert status ("No
+  // NWS weather alerts are in effect this morning."). That line alone isn't
+  // news, but it starts with "No", so it hid every section behind it (the
+  // /public-safety/ feed stopped at Oct 19). Judge the section without it.
   const text = md
+    .replace(/^(No NWS weather alerts are in effect[^.]*\.|NWS alert status could not be checked[^.]*\.)\s*/i, "")
     .replace(/https?:\/\/\S+/g, " ")
     .replace(/[#*_>[\]()`]/g, " ")
     .replace(/\s+/g, " ")

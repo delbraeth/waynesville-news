@@ -68,6 +68,13 @@ const dateFmt = new Intl.DateTimeFormat("en-US", {
         <a href={patreonUrl} target="_blank" rel="noopener">Support it on Patreon</a>.
       </div>
     )}
+    {!entry.data.demo && (
+      <p class="small brief-howmade">
+        <strong>How this brief is made:</strong> drafted with AI from the sources linked above and published
+        without a line-by-line human review. <a href="/about/#how">More about how it's made</a>.
+        Spot a mistake? <a href={`mailto:editor@waynesville.news?subject=${encodeURIComponent(`Correction: Daily Brief ${entry.id}`)}`}>Tell the editor</a>.
+      </p>
+    )}
     <p class="small"><a href="/briefs/">← All briefs</a></p>
   </div>
 </Base>

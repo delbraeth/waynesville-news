@@ -68,12 +68,18 @@ const all: Link[] = [...before, ...community, { label: "Supporters", href: "/sup
   </div>
 </nav>
 <script is:inline>
-// Close the Community dropdown on a click outside it or on Escape.
+// Close the Community dropdown and the phone "More" menu on a click outside,
+// on Escape, or when keyboard focus moves out of them (so an open menu never
+// covers the next focused link).
+var MENUS = "details.nav-drop[open], details.nav-more[open]";
 document.addEventListener("click", function (e) {
-  document.querySelectorAll("details.nav-drop[open]").forEach(function (d) { if (!d.contains(e.target)) d.removeAttribute("open"); });
+  document.querySelectorAll(MENUS).forEach(function (d) { if (!d.contains(e.target)) d.removeAttribute("open"); });
 });
 document.addEventListener("keydown", function (e) {
-  if (e.key === "Escape") document.querySelectorAll("details.nav-drop[open]").forEach(function (d) { d.removeAttribute("open"); d.querySelector("summary").focus(); });
+  if (e.key === "Escape") document.querySelectorAll(MENUS).forEach(function (d) { d.removeAttribute("open"); d.querySelector("summary").focus(); });
+});
+document.addEventListener("focusout", function (e) {
+  document.querySelectorAll(MENUS).forEach(function (d) { if (d.contains(e.target) && e.relatedTarget && !d.contains(e.relatedTarget)) d.removeAttribute("open"); });
 });
 (function () {
   var b = document.getElementById("theme-toggle");

@@ -1,5 +1,5 @@
 {
-  "_note": "Hand-added directory listings for businesses that are not Chamber members (or to override a Chamber listing with the same name). Facts only, as the business publishes them; no private individuals' names. Fields: name (required), sections (array of section ids from directory.json, e.g. [\"home\"]), kinds (e.g. [\"Plumbing\"]), location, phone, website, email, social (facebook, instagram, tiktok, airbnb), about, source (where you verified it). After editing, run `npm run refresh:directory -- --manual-only`. To remove a listing for good (closed, moved, or asked to be removed), add it to \"exclude\" as {\"name\": \"...\", \"reason\": \"...\", \"date\": \"YYYY-MM-DD\"}; this also blocks it from the Chamber data. To move a listing to different sections without retyping it (e.g. a Chamber listing filed under the wrong category), add it to \"recategorize\" as {\"name\": \"...\", \"sections\": [\"...\"], \"reason\": \"...\"}.",
+  "_note": "Hand-added directory listings for businesses that are not Chamber members (or to override a Chamber listing with the same name). Facts only, as the business publishes them; no private individuals' names. Fields: name (required), sections (array of section ids from directory.json, e.g. [\"home\"]), kinds (e.g. [\"Plumbing\"]), location, phone, website, email, social (facebook, instagram, tiktok, airbnb), about, source (where you verified it). After editing, run `npm run refresh:directory -- --manual-only`. To remove a listing for good (closed, moved, or asked to be removed), add it to \"exclude\" as {\"name\": \"...\", \"reason\": \"...\", \"date\": \"YYYY-MM-DD\"}; this also blocks it from the Chamber data. To move a listing to different sections without retyping it (e.g. a Chamber listing filed under the wrong category), add it to \"recategorize\" as {\"name\": \"...\", \"sections\": [\"...\"], \"reason\": \"...\"}. A recategorize entry can instead (or also) fix a Chamber listing's tags with \"kinds\": [\"...\"] or its description with \"about\": \"...\".",
   "exclude": [
     {
       "name": "R5 Travel Leaders",
@@ -84,6 +84,25 @@
         "fun"
       ],
       "reason": "museum; Chamber also files it under travel/tourism"
+    },
+    {
+      "name": "Butter Churn Cafe",
+      "kinds": [
+        "Restaurant"
+      ],
+      "reason": "cafe, not a venue rental (Chamber tag)"
+    },
+    {
+      "name": "The Village Family Restaurant",
+      "kinds": [
+        "Restaurant"
+      ],
+      "reason": "restaurant, not a venue rental (Chamber tag)"
+    },
+    {
+      "name": "Domino's Pizza - Southern Ohio Pizza",
+      "about": "Offering pizza, pasta, sandwiches, and desserts",
+      "reason": "drop the stray \"Main Office\" from the Chamber description"
     }
   ],
   "items": [

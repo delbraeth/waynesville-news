@@ -22,6 +22,7 @@ import Base from "../../layouts/Base.astro";
     window.addEventListener("DOMContentLoaded", () => {
       const q = new URLSearchParams(location.search).get("q") || "";
       const ui = new PagefindUI({ element: "#search", showSubResults: true, showImages: false, resetStyles: false });
+      document.querySelector(".pagefind-ui__search-input")?.setAttribute("aria-label", "Search Waynesville News");
       if (q) ui.triggerSearch(q);
     });
   </script>
