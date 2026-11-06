@@ -363,6 +363,39 @@
         "https://waynesvilleshops.com/contact-us"
       ],
       "verified": "2026-11-06"
+    },
+    {
+      "name": "Waynesville Blue Dolphins",
+      "category": "youth-sports",
+      "what": "Board-run summer youth swim team for swimmers of all levels, focused on building skills, strength and speed. Practice groups for 10 and under and 11 and older, plus a program for swimmers 6 and under at meets.",
+      "meets": "Summer season. Practices Monday through Thursday, 60 minutes; meets usually Tuesday and Thursday evenings (6–7 a season, optional).",
+      "website": "https://waynesvillebluedolphins.org",
+      "howToHelp": "Families take part through the team's volunteer program; details on the website.",
+      "source": [
+        "https://waynesvillebluedolphins.org",
+        "https://jobboard.usaswimming.org/company/3023/waynesville-blue-dolphins/"
+      ],
+      "verified": "2026-11-06"
+    },
+    {
+      "name": "Waynesville Youth Basketball Association",
+      "category": "youth-sports",
+      "what": "Youth basketball for grades 2 through 6, run with the Waynesville Boys Basketball program and athletic department.",
+      "contact": "Through the Wayne Local athletic department",
+      "source": [
+        "https://wayne-local.com/district-news/entry/boys-youth-night-basketball"
+      ],
+      "verified": "2026-11-06",
+      "toConfirm": "Season, registration, and a website or public contact (the only official source found is a January 2023 district post)."
+    },
+    {
+      "name": "Waynesville Spartan Lacrosse Club",
+      "category": "youth-sports",
+      "what": "USA Lacrosse youth club for Wayne Local School District residents, founded in 2018; spring season.",
+      "website": "https://waynesville-spartan-lacrosse-club.leaguemanagement.usalacrosse.com",
+      "source": [],
+      "verified": "",
+      "toConfirm": "Grades (search results say K–12, with spring 2026 registration for grades 3–12), registration dates, fees and fee assistance, and a public contact. The club's site couldn't be opened from the session that built this list."
     }
   ]
 }
