@@ -1,6 +1,6 @@
 {
   "_note": "Local business directory. Built by scripts/fetch-directory.mjs from the Waynesville Area Chamber of Commerce's public member directory (name, location, phone, website, and the Chamber's description, as published) plus hand-added listings in directory-manual.json. Contact names, emails and hours are deliberately not copied. Do not edit by hand — edit directory-manual.json and re-run `npm run refresh:directory` (or `npm run refresh:directory -- --manual-only` to merge manual edits without re-reading the Chamber site).",
-  "updated": "2026-11-05T14:57:14.267Z",
+  "updated": "2026-11-06T02:31:32.998Z",
   "sections": [
     {
       "id": "food",
@@ -3204,21 +3204,23 @@
       "from": "chamber"
     },
     {
-      "id": "chamber-751",
+      "id": "manual-kylestudergroup",
       "name": "The Kyle Studer Group",
-      "location": "P.O. Box 271, Waynesville, OH 450678",
-      "phone": "(740) 503-0226",
+      "location": "P.O. Box 271, Waynesville, OH 45068",
+      "phone": "740-503-0226",
       "sections": [
         "pro"
       ],
       "kinds": [
-        "Investments & Retirement Planning"
+        "Retirement Planning",
+        "Medicare",
+        "Long-Term Care"
       ],
-      "source": "https://www.waynesvilleohio.com/directory/listing/751",
-      "website": "http://www.kylestuder.com/",
-      "about": "The Kyle Studer Group is a retirement-focused financial planning firm serving individuals and families in Waynesville and the surrounding communities. We specialize in helping people transition from saving for retirement to creating reliable, long-term income they can count…",
+      "source": "https://kylestuder.com/",
+      "website": "https://kylestuder.com/",
+      "about": "Independent, retirement-focused financial services firm in Waynesville. Helps individuals and families with retirement income planning, Social Security decisions, Medicare, long-term care planning, life insurance, and legacy and tax planning.",
       "local": true,
-      "from": "chamber"
+      "from": "manual"
     },
     {
       "id": "chamber-257",

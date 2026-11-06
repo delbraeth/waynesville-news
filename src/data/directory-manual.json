@@ -1263,6 +1263,22 @@
       "website": "https://www.taylorswaynesville.com/",
       "about": "Coffee shop and creamery in downtown Waynesville with a full espresso bar, pastries, soft-serve ice cream and more.",
       "source": "https://www.waynesvilleohio.com/directory/listing/720"
+    },
+    {
+      "name": "The Kyle Studer Group",
+      "sections": [
+        "pro"
+      ],
+      "kinds": [
+        "Retirement Planning",
+        "Medicare",
+        "Long-Term Care"
+      ],
+      "location": "P.O. Box 271, Waynesville, OH 45068",
+      "phone": "740-503-0226",
+      "website": "https://kylestuder.com/",
+      "about": "Independent, retirement-focused financial services firm in Waynesville. Helps individuals and families with retirement income planning, Social Security decisions, Medicare, long-term care planning, life insurance, and legacy and tax planning.",
+      "source": "https://kylestuder.com/"
     }
   ]
 }
