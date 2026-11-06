@@ -1,0 +1,141 @@
+---
+// Visiting Waynesville: a day-tripper's guide. Hand-kept facts in
+// src/data/visit.json (same shape as resources.json: sections of items, each
+// with a source and a verified date). The "plan your day" links and the
+// upcoming big events are built from the directory and events data.
+import Base from "../layouts/Base.astro";
+import data from "../data/visit.json";
+import directory from "../data/directory.json";
+import { upcomingEvents, isLocalEvent } from "../lib/events.js";
+
+type Link = { label: string; url: string };
+type Item = {
+  name: string; what?: string; address?: string; hours?: string; phone?: string;
+  website?: string; links?: Link[]; source?: string[]; verified?: string;
+};
+type Section = { id: string; title: string; intro?: string; items: Item[] };
+const sections = (data.sections as Section[]).filter((s) => s.items.length > 0);
+
+const tel = (p: string) => "tel:" + p.replace(/[^0-9]/g, "");
+const fmt = (iso?: string) =>
+  iso ? new Date(iso + "T12:00:00").toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" }) : "";
+const mapHref = (a: string) => "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(a);
+
+const count = (id: string) => directory.items.filter((i) => i.local && i.sections.includes(id)).length;
+const plan = [
+  { href: "/events/?when=weekend", title: "This weekend", text: "What's on Friday through Sunday, in town and nearby." },
+  { href: "/directory/#food", title: "Where to eat", text: `${count("food")} restaurants, cafes and spots in the Waynesville area.` },
+  { href: "/directory/#shop", title: "Shops & antiques", text: `${count("shop")} shops in the Waynesville area, many on Main Street.` },
+  { href: "/directory/#stay", title: "Places to stay", text: "Inns, rentals and event venues." },
+  { href: "/holiday-lights/", title: "Holiday Lights", text: "Light displays and holiday events, in season." },
+];
+
+// Big draws in the next ~60 days: festivals and attractions, local first.
+const soon = upcomingEvents()
+  .filter((e) => /festival|attraction/i.test(e.category ?? "") && e._d.getTime() - Date.now() < 60 * 86400000)
+  .sort((a, b) => Number(isLocalEvent(b)) - Number(isLocalEvent(a)) || a._d.getTime() - b._d.getTime())
+  .slice(0, 6);
+---
+<Base
+  title="Visiting Waynesville, Ohio · Waynesville News"
+  description="Plan a day in Waynesville, Ohio: getting here and parking, Main Street shops and antiques, where to eat, the Little Miami Scenic Trail, Caesar Creek State Park and the festivals worth planning around."
+  showInfoBar={false}
+>
+  <div class="reading">
+    <p class="kicker">Visit</p>
+    <h1>Visiting Waynesville</h1>
+    <p class="dek">
+      A historic village between Dayton and Cincinnati: antiques and shops on Main Street, the Little Miami Scenic Trail,
+      Caesar Creek State Park next door, and festivals worth the drive.
+    </p>
+    <p class="small">
+      Facts come from each place's own website and show when we last checked them (updated {fmt(data.updated)}).
+      Hours change by season, so check before you go.
+    </p>
+
+    <h2 class="visit-h">Plan your day</h2>
+    <ul class="visit-tiles">
+      {plan.map((t) => (
+        <li><a href={t.href}><strong>{t.title}</strong><span class="visually-hidden">: </span><span>{t.text}</span></a></li>
+      ))}
+    </ul>
+
+    {soon.length > 0 && (
+      <>
+        <h2 class="visit-h">Coming up</h2>
+        <ul class="events">
+          {soon.map((e) => (
+            <li>
+              <div class="date">{e.dateLabel}</div>
+              <div>
+                <a class="ev-title" href={e.source} target="_blank" rel="noopener">{e.title}</a>
+                {!e._local && <span class="dir-badge ev-regional">Regional</span>}
+                <div class="ev-meta">{e.venue}</div>
+              </div>
+            </li>
+          ))}
+        </ul>
+        <p class="small"><a href="/events/">Full events calendar →</a></p>
+      </>
+    )}
+
+    {sections.length > 1 && (
+      <nav class="res-toc" aria-label="On this page">
+        {sections.map((s) => <a href={`#${s.id}`}>{s.title}</a>)}
+      </nav>
+    )}
+
+    {sections.map((s) => (
+      <section id={s.id} class="res-section">
+        <h2>{s.title}</h2>
+        {s.intro && <p class="small">{s.intro}</p>}
+        <ul class="res-list">
+          {s.items.map((it) => (
+            <li>
+              <div class="res-name">
+                {it.website ? <a href={it.website} target="_blank" rel="noopener">{it.name}</a> : it.name}
+              </div>
+              {it.what && <p class="res-what">{it.what}</p>}
+              {it.hours && <p class="res-what"><strong>Hours:</strong> {it.hours}</p>}
+              <div class="res-meta">
+                {it.phone && <a class="res-phone" href={tel(it.phone)}>{it.phone}</a>}
+                {it.address && <a href={mapHref(it.address)} target="_blank" rel="noopener">{it.address} (map)</a>}
+                {it.links && it.links.map((l) => <a href={l.url} target="_blank" rel="noopener">{l.label}</a>)}
+              </div>
+              {it.verified && (
+                <div class="res-src">
+                  Checked {fmt(it.verified)}
+                  {(it.source ?? []).map((u, i) => <> · <a href={u} target="_blank" rel="noopener">{i === 0 ? "source" : `source ${i + 1}`}</a></>)}
+                </div>
+              )}
+            </li>
+          ))}
+        </ul>
+      </section>
+    ))}
+
+    <p class="small">
+      Live here? See <a href="/resources/">Living in Waynesville</a>. Get the <a href="/briefs/">Daily Brief</a> for what's
+      happening each morning.
+    </p>
+  </div>
+</Base>
+
+<style>
+  .visit-h { margin-top: 1.75rem; }
+  .visit-tiles { list-style: none; margin: 0.5rem 0 0; padding: 0; display: grid; gap: 0.75rem; grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr)); }
+  .visit-tiles a { display: block; height: 100%; padding: 0.85rem 1rem; border: 1px solid var(--rule); border-radius: 6px; background: var(--paper-2); color: inherit; text-decoration: none; }
+  .visit-tiles a:hover, .visit-tiles a:focus-visible { border-color: var(--accent); }
+  .visit-tiles strong { display: block; color: var(--accent-deep); font-size: 1.05rem; margin-bottom: 0.2rem; }
+  .visit-tiles span:not(.visually-hidden) { display: block; font-size: 0.92rem; color: var(--ink-soft); line-height: 1.4; }
+  .res-toc { display: flex; flex-wrap: wrap; gap: 0.4rem 1rem; margin: 1.5rem 0 0.5rem; font-size: 0.95rem; }
+  .res-section { margin-top: 1.75rem; scroll-margin-top: 1rem; }
+  .res-list { list-style: none; margin: 0; padding: 0; }
+  .res-list > li { padding: 0.85rem 0; border-bottom: 1px solid var(--rule); }
+  .res-name { font-weight: 600; }
+  .res-what { margin: 0.3rem 0 0; }
+  .res-meta { display: flex; flex-wrap: wrap; gap: 0.25rem 1rem; margin-top: 0.35rem; font-size: 0.95rem; }
+  .res-meta a { overflow-wrap: anywhere; }
+  .res-phone { font-weight: 600; white-space: nowrap; }
+  .res-src { margin-top: 0.3rem; font-size: 0.8rem; color: var(--muted); }
+</style>

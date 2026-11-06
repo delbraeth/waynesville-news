@@ -1,0 +1,13 @@
+{
+  "_note": "Visiting Waynesville (/visit/). Hand-kept. Facts only from official sources (village, township, county, ODNR, Chamber, Merchants, event organizers), each with a verified date. Organizations and businesses only; no private individuals. Checked monthly by scripts/check-resources.mjs.",
+  "updated": "2026-11-06",
+  "sections": [
+    { "id": "getting-here", "title": "Getting here & parking", "items": [] },
+    { "id": "downtown", "title": "Downtown Main Street", "items": [] },
+    { "id": "trail", "title": "Little Miami Scenic Trail", "items": [] },
+    { "id": "caesar-creek", "title": "Caesar Creek State Park", "items": [] },
+    { "id": "events", "title": "Festivals worth planning around", "items": [] },
+    { "id": "history", "title": "History & museums", "items": [] },
+    { "id": "info", "title": "Visitor information", "items": [] }
+  ]
+}
