@@ -1,7 +1,21 @@
 {
   "_note": "Recent Caesar Creek State Park Facebook posts via rss.app bridge. Title + link + short excerpt; the park's own words. Fail-safe: kept from last run if the bridge is down.",
-  "updated": "2026-11-05T11:41:20.690Z",
+  "updated": "2026-11-06T11:40:57.039Z",
   "items": [
+    {
+      "title": "We found a cell phone in the campground near the amphitheater Please come to the campground check in to claim it.…",
+      "link": "https://www.facebook.com/CaesarCreekStatePark/posts/pfbid028AKNEHaonyBdE9qoEWtKh5VoMN9tHQ59fj47xmzFFK9RoLdY4rVrGcgkME7YDrewl",
+      "date": "Thu, 05 Nov 2026 20:41:46 GMT",
+      "dateLabel": "Thu, Nov 5",
+      "excerpt": "Campground Check In hours: Today- 10-6 Friday - 10-7 Saturday- 10-7 Sunday -10-6 Closed Monday/Tuesday"
+    },
+    {
+      "title": "🍂🍁 Fall is a Great Time to Get Outdoors! 🍁🍂 Cooler temperatures make for perfect hiking and fishing adventures at…",
+      "link": "https://www.facebook.com/CaesarCreekStatePark/posts/pfbid023awGaZwN1sJLBt74cc8DwpdGpEXxY3G9SyKCTVuHHkn9zkDAboVGv15CdZtpWBDnl",
+      "date": "Thu, 05 Nov 2026 17:37:24 GMT",
+      "dateLabel": "Thu, Nov 5",
+      "excerpt": "the park! We still have a few spots available in the campground. Before you head out, here’s an update on restroom availability through the weekend. We will post next week with availability for the following weekend. • North Pool Boat Ramp Restroom is Open • Wellman Boat Ramp and Trailhead…"
+    },
     {
       "title": "Happy Fall 🍂🍂 The courtesy docks at Furnas Shores and Campground boat ramps are pulled out for the off season.…",
       "link": "https://www.facebook.com/CaesarCreekStatePark/posts/pfbid02v4RPjaSiNXJK7gv2SVT2HPnh9YAk4U5cgD81PphheSSPTcpb7ndMGoXX6aK6CQMsl",
@@ -36,13 +50,6 @@
       "date": "Tue, 27 Oct 2026 12:27:06 GMT",
       "dateLabel": "Tue, Oct 27",
       "excerpt": "application. If you have any questions call our park office at 513-897-3055 opt. 2. Attention boat owners: Time is running out to enter the annual Ohio State Parks Dock Lottery! It might be fall now, but if you're hoping to score your perfect dock spot for next season, now’s the time to get your…"
-    },
-    {
-      "title": "Save the Date! Mark your calendars for a great fun filled event 🦉 Owl Fest returns November 13th & 14th at Caesar Creek…",
-      "link": "https://www.facebook.com/CaesarCreekStatePark/posts/pfbid0kCbQVH9vTxuTkD5WA4VKVJX68KBd6Pb25MY4w6LgGZEgcNmYZA1DNWgLQMDostFkl",
-      "date": "Mon, 26 Oct 2026 17:57:55 GMT",
-      "dateLabel": "Mon, Oct 26",
-      "excerpt": "! Join us for owl hikes, banding demos, live raptors, hands‑on workshops, and family fun."
     }
   ]
 }

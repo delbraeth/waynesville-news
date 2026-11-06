@@ -1,19 +1,7 @@
 {
   "_note": "Mary L. Cook Public Library — upcoming programs from the library's WhoFi event calendar (https://marylcook-main-oh.whofi.com/calendar/full), next 14 days. Canceled events excluded.",
-  "updated": "2026-11-05T11:41:21.957Z",
+  "updated": "2026-11-06T11:42:09.811Z",
   "items": [
-    {
-      "title": "Preschool Storytime",
-      "dateISO": "2026-11-05T10:30:00Z",
-      "dateLabel": "Thu · Nov 5, 10:30 AM",
-      "link": "https://marylcook-main-oh.whofi.com/calendar/event/354861/"
-    },
-    {
-      "title": "Teen Anime and Manga Club",
-      "dateISO": "2026-11-05T15:00:00Z",
-      "dateLabel": "Thu · Nov 5, 3:00 PM",
-      "link": "https://marylcook-main-oh.whofi.com/calendar/event/354836/"
-    },
     {
       "title": "Paint Party at the Library",
       "dateISO": "2026-11-07T10:00:00Z",
@@ -49,6 +37,18 @@
       "dateISO": "2026-11-11T15:00:00Z",
       "dateLabel": "Wed · Nov 11, 3:00 PM",
       "link": "https://marylcook-main-oh.whofi.com/calendar/event/354835/"
+    },
+    {
+      "title": "Junk Journal Drop in Program",
+      "dateISO": "2026-11-12T17:00:00Z",
+      "dateLabel": "Thu · Nov 12, 5:00 PM",
+      "link": "https://marylcook-main-oh.whofi.com/calendar/event/356821/"
+    },
+    {
+      "title": "Pj Storytime",
+      "dateISO": "2026-11-12T18:00:00Z",
+      "dateLabel": "Thu · Nov 12, 6:00 PM",
+      "link": "https://marylcook-main-oh.whofi.com/calendar/event/354881/"
     }
   ]
 }

@@ -1,6 +1,6 @@
 {
   "_note": "State-route work within 8 miles of Waynesville (ODOT OHGO; Restricted/Closed only, ODOT's own descriptions) plus Warren County Engineer closure releases starting within 21 days back / 14 ahead (countywide; title and start date only).",
-  "updated": "2026-11-05T11:41:22.009Z",
+  "updated": "2026-11-06T11:43:05.594Z",
   "items": [
     {
       "source": "ohgo",
@@ -29,12 +29,6 @@
       "title": "Innovation Way Closure Cyclocross Bike Race",
       "startISO": "2026-10-16",
       "link": "https://engineer.warrencountyohio.gov/doc/Information/NewsReleases/2026/20261016_Innovation_Way_Closure_Cyclocross_Bike_Race.pdf"
-    },
-    {
-      "source": "engineer",
-      "title": "Wilkens Blvd Northbound Closure",
-      "startISO": "2026-10-15",
-      "link": "https://engineer.warrencountyohio.gov/doc/Information/NewsReleases/2026/20261015_Wilkens_Blvd_Northbound_Closure.pdf"
     }
   ],
   "sources": {
