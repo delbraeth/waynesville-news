@@ -1,6 +1,6 @@
 {
   "_note": "Local business directory. Built by scripts/fetch-directory.mjs from the Waynesville Area Chamber of Commerce's public member directory (name, location, phone, website, and the Chamber's description, as published) plus hand-added listings in directory-manual.json. Contact names, emails and hours are deliberately not copied from the Chamber; an hours line appears only when the owner supplied it (hours + hoursChecked in directory-manual.json). Do not edit by hand — edit directory-manual.json and re-run `npm run refresh:directory` (or `npm run refresh:directory -- --manual-only` to merge manual edits without re-reading the Chamber site).",
-  "updated": "2026-11-07T10:59:04.948Z",
+  "updated": "2026-11-07T11:07:36.745Z",
   "sections": [
     {
       "id": "food",
@@ -580,19 +580,19 @@
     {
       "id": "manual-bentleyspawsomeresort",
       "name": "Bentley's Pawsome Resort",
-      "location": "4488 E State Rt 73, Waynesville, OH 45068",
-      "phone": "",
+      "location": "4488 E. State Route 73, Waynesville, OH 45068",
+      "phone": "513-970-4729",
       "sections": [
         "pets"
       ],
       "kinds": [
         "Pet Boarding",
         "Dog Daycare",
-        "Pet Grooming"
+        "Grooming"
       ],
-      "source": "https://bentleyspawsomeresort.com",
-      "website": "https://bentleyspawsomeresort.com/",
-      "about": "Pet resort offering dog daycare, dog and cat boarding, dog grooming and an indoor dog park.",
+      "source": "https://www.bentleyspawsomeresort.com (checked 2026-11-07)",
+      "website": "https://www.bentleyspawsomeresort.com/",
+      "about": "Pet boarding with dog and cat lodging, dog daycare, grooming and an indoor dog park.",
       "local": true,
       "from": "manual"
     },
@@ -801,21 +801,24 @@
       "from": "chamber"
     },
     {
-      "id": "chamber-344",
+      "id": "manual-caesarcreekanimalclinic",
       "name": "Caesar Creek Animal Clinic",
-      "location": "207 North St. Rt. 42, Waynesville, OH 45068",
+      "location": "207 N. State Route 42, Waynesville, OH 45068",
       "phone": "513-897-6544",
       "sections": [
         "pets"
       ],
       "kinds": [
-        "Veterinary Services"
+        "Veterinarian"
       ],
-      "source": "https://www.waynesvilleohio.com/directory/listing/344",
+      "source": "https://www.waynesvilleohio.com/directory/listing/344 (Chamber listing, checked 2026-11-07)",
       "website": "",
-      "about": "Additional: Dr. Matt Carey (8am-6pm, M, W, Th, F) Located in historic Waynesville, Ohio. We are here to provide care to your furry friends in need.",
+      "social": {
+        "facebook": "https://www.facebook.com/Caesar-Creek-Animal-Clinic-314736935323879/"
+      },
+      "about": "Veterinary clinic on State Route 42.",
       "local": true,
-      "from": "chamber"
+      "from": "manual"
     },
     {
       "id": "manual-caesarcreeklakevisitorcenter",
@@ -985,6 +988,28 @@
       "group": {
         "pro": "Business services"
       }
+    },
+    {
+      "id": "manual-carrollcreekfarms",
+      "name": "Carroll Creek Farms",
+      "location": "10045 Brooks Carroll Rd., Waynesville, OH 45068",
+      "phone": "513-884-5044",
+      "sections": [
+        "farm"
+      ],
+      "kinds": [
+        "Farm",
+        "Pasture-raised Meat",
+        "Farm Store"
+      ],
+      "source": "https://www.carrollcreekfarms.com/contact/ ; https://www.carrollcreekfarms.com/visit-farm/the-meat-retreat/ (checked 2026-11-07)",
+      "website": "https://www.carrollcreekfarms.com/",
+      "social": {
+        "facebook": "https://www.facebook.com/carrollcreekfarms"
+      },
+      "about": "Family farm near Caesar Creek State Park raising pasture-raised beef, pork, lamb, chicken and eggs, sold online and at its self-serve on-farm store, the Meat Retreat.",
+      "local": true,
+      "from": "manual"
     },
     {
       "id": "manual-cassidypainting",
@@ -1858,6 +1883,28 @@
       },
       "about": "Locally run rental company offering single-family homes and duplexes for rent in Waynesville, focused on comfortable homes and caring for tenants and the community. Supports local youth and community programs. Also has a short-term vacation rental in the Gatlinburg/Pigeon Forge area.",
       "local": true,
+      "from": "manual"
+    },
+    {
+      "id": "manual-hiddenvalleyorchards",
+      "name": "Hidden Valley Orchards",
+      "location": "5474 N. State Route 48, Lebanon, OH 45036",
+      "phone": "513-932-2869",
+      "sections": [
+        "farm"
+      ],
+      "kinds": [
+        "Orchard",
+        "Farm Market",
+        "Bakery"
+      ],
+      "source": "https://www.hiddenvalleyorchards.com ; https://www.hiddenvalleyorchards.com/plan-your-visit (checked 2026-11-07; phone from the farm's site; the visitors bureau lists 513-932-1869)",
+      "website": "https://www.hiddenvalleyorchards.com/",
+      "social": {
+        "facebook": "https://www.facebook.com/HiddenValleyOrchards"
+      },
+      "about": "Family fruit farm since 1956 on State Route 48 between Lebanon and Waynesville, with a farm market, bakery, seasonal play yards and events; hours change by season, so check its website.",
+      "local": false,
       "from": "manual"
     },
     {

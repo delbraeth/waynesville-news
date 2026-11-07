@@ -367,13 +367,13 @@
       "kinds": [
         "Pet Boarding",
         "Dog Daycare",
-        "Pet Grooming"
+        "Grooming"
       ],
-      "location": "4488 E State Rt 73, Waynesville, OH 45068",
-      "phone": "",
-      "website": "https://bentleyspawsomeresort.com",
-      "about": "Pet resort offering dog daycare, dog and cat boarding, dog grooming and an indoor dog park.",
-      "source": "https://bentleyspawsomeresort.com"
+      "location": "4488 E. State Route 73, Waynesville, OH 45068",
+      "phone": "513-970-4729",
+      "website": "https://www.bentleyspawsomeresort.com",
+      "about": "Pet boarding with dog and cat lodging, dog daycare, grooming and an indoor dog park.",
+      "source": "https://www.bentleyspawsomeresort.com (checked 2026-11-07)"
     },
     {
       "name": "BJ's Garage",
@@ -419,6 +419,23 @@
       "social": {
         "facebook": "https://www.facebook.com/BuckeyeSelect/"
       }
+    },
+    {
+      "name": "Caesar Creek Animal Clinic",
+      "sections": [
+        "pets"
+      ],
+      "kinds": [
+        "Veterinarian"
+      ],
+      "location": "207 N. State Route 42, Waynesville, OH 45068",
+      "phone": "513-897-6544",
+      "website": "",
+      "social": {
+        "facebook": "https://www.facebook.com/Caesar-Creek-Animal-Clinic-314736935323879/"
+      },
+      "about": "Veterinary clinic on State Route 42.",
+      "source": "https://www.waynesvilleohio.com/directory/listing/344 (Chamber listing, checked 2026-11-07)"
     },
     {
       "name": "Caesar Creek Lake Visitor Center",
@@ -507,6 +524,25 @@
       "website": "https://canadagoosegallery.com/",
       "about": "Gallery dedicated to P. Buckley Moss artwork, with prints, etchings, originals, ornaments and gifts. Offers custom framing.",
       "source": "https://canadagoosegallery.com/"
+    },
+    {
+      "name": "Carroll Creek Farms",
+      "sections": [
+        "farm"
+      ],
+      "kinds": [
+        "Farm",
+        "Pasture-raised Meat",
+        "Farm Store"
+      ],
+      "location": "10045 Brooks Carroll Rd., Waynesville, OH 45068",
+      "phone": "513-884-5044",
+      "website": "https://www.carrollcreekfarms.com",
+      "social": {
+        "facebook": "https://www.facebook.com/carrollcreekfarms"
+      },
+      "about": "Family farm near Caesar Creek State Park raising pasture-raised beef, pork, lamb, chicken and eggs, sold online and at its self-serve on-farm store, the Meat Retreat.",
+      "source": "https://www.carrollcreekfarms.com/contact/ ; https://www.carrollcreekfarms.com/visit-farm/the-meat-retreat/ (checked 2026-11-07)"
     },
     {
       "name": "Cassidy Painting",
@@ -749,6 +785,25 @@
       "website": "",
       "about": "Historic inn on Main Street in a building dating to 1822, open for overnight stays. Its restaurant is closed for restoration and is expected to reopen soon.",
       "source": "https://waynesvilleshops.com/lodging-food-and-entertainment/name/hammel-house-inn (rooms open, restaurant under restoration, per the editor, 2026-10-31); restaurant expected to reopen soon, per the editor, 2026-11-06"
+    },
+    {
+      "name": "Hidden Valley Orchards",
+      "sections": [
+        "farm"
+      ],
+      "kinds": [
+        "Orchard",
+        "Farm Market",
+        "Bakery"
+      ],
+      "location": "5474 N. State Route 48, Lebanon, OH 45036",
+      "phone": "513-932-2869",
+      "website": "https://www.hiddenvalleyorchards.com",
+      "social": {
+        "facebook": "https://www.facebook.com/HiddenValleyOrchards"
+      },
+      "about": "Family fruit farm since 1956 on State Route 48 between Lebanon and Waynesville, with a farm market, bakery, seasonal play yards and events; hours change by season, so check its website.",
+      "source": "https://www.hiddenvalleyorchards.com ; https://www.hiddenvalleyorchards.com/plan-your-visit (checked 2026-11-07; phone from the farm's site; the visitors bureau lists 513-932-1869)"
     },
     {
       "name": "Hometown Marketplace",
