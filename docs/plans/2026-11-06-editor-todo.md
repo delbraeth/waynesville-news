@@ -19,7 +19,6 @@ For each entry: fill in the confirmed fields, set `verified` to the date checked
 **Community organizations** (`src/data/organizations.json`)
 - [ ] Progressive Women's Club: meeting place (Methodist church or Quaker Heights?); left off until known
 - [ ] American Legion Post 615: confirm the Chamber listing's phone, email and 174 S. Fourth St. address are current (Facebook page linked, 2026-11-07)
-- [ ] Scouting: Pack 840 and Troop 318 still active? (Troops 51/1051 and Crew 6151 confirmed from their TroopTrack site, 2026-11-07)
 - [ ] Waynesville Lacrosse Club: fees (not on the club's home page)
 - [ ] Waynesville Youth Basketball Association: grades, season and registration dates (website and contact form added from waynesvilleyouthbasketball.com, 2026-11-07; the site lists no season details)
 - [ ] Youth wrestling, band boosters, Friends of the Library
@@ -68,7 +67,7 @@ For each entry: fill in the confirmed fields, set `verified` to the date checked
 - /corrections/: policy and public log; corrected briefs and stories show a correction note
 - Top menu: News dropdown (Stories, Government, Public Safety, Around Town), so the bar fits on one line
 
-**Scouting (2026-11-07):** Troops 51 and 1051 and Crew 6151 listed from troop-0051.trooptrack.com (editor's link): chartered to Waynesville Scouting, Wednesdays 7 p.m. at the American Legion, troop email and Facebook. The scoutmaster's name and cell number are left off (named individual)
+**Scouting (2026-11-07):** Pack 840 and Troop 318 removed: they don't exist (editor). Troops 51 and 1051 and Crew 6151 listed from troop-0051.trooptrack.com (editor's link): chartered to Waynesville Scouting, Wednesdays 7 p.m. at the American Legion, troop email and Facebook. The scoutmaster's name and cell number are left off (named individual)
 
 **Lighter fonts (2026-11-07):** Newsreader self-hosted as three static cuts, 67 KB instead of 195 KB from Google Fonts; homepage first visit drops from about 242 KB to about 115 KB, and no third-party font request
 
