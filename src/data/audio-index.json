@@ -41,6 +41,14 @@
         "2026-11-05-events-calendar-weekend-add-to-calendar"
       ],
       "recorded": "2026-11-06T11:45:38.888Z"
+    },
+    "2026-11-07": {
+      "url": "https://audio.waynesville.news/audio/2026-11-07.mp3",
+      "seconds": 196,
+      "bytes": 1570733,
+      "chars": 2726,
+      "model": "eleven_v4_turbo",
+      "recorded": "2026-11-07T11:46:57.338Z"
     }
   }
 }
