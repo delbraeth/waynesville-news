@@ -23,7 +23,7 @@ For each entry: fill in the confirmed fields, set `verified` to the date checked
 - [ ] Progressive Women's Club: meeting place (Methodist church or Quaker Heights?)
 - [ ] American Legion Post 615
 - [ ] Scouting: which of Pack 840, Troops 51 / 1051 / 318, Crew 6151 are active
-- [ ] Waynesville Spartan Lacrosse Club: grades, fees, sign-up dates (club site was blocked from the session)
+- [x] Waynesville Lacrosse Club: grades, season, registration deadline (Nov 30 to avoid late fee) and email from waynesvillelax.org (editor's link, 2026-11-07). Fees aren't on the home page.
 - [ ] Waynesville Youth Basketball Association: season and contact
 - [ ] Youth wrestling, band boosters, Friends of the Library
 - [ ] Rotary: which club? (District 6670 lists none in Waynesville; nearest is Lebanon)

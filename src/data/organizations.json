@@ -389,13 +389,16 @@
       "toConfirm": "Season, registration, and a website or public contact (the only official source found is a January 2023 district post)."
     },
     {
-      "name": "Waynesville Spartan Lacrosse Club",
+      "name": "Waynesville Lacrosse Club",
       "category": "youth-sports",
-      "what": "USA Lacrosse youth club for Wayne Local School District residents, founded in 2018; spring season.",
-      "website": "https://waynesville-spartan-lacrosse-club.leaguemanagement.usalacrosse.com",
-      "source": [],
-      "verified": "",
-      "toConfirm": "Grades (search results say K–12, with spring 2026 registration for grades 3–12), registration dates, fees and fee assistance, and a public contact. The club's site couldn't be opened from the session that built this list."
+      "what": "Youth lacrosse for boys and girls: teams for 3rd/4th grade, 5th/6th grade, middle school and high school, plus a co-ed K–2 fun league. The season runs early February through mid-May.",
+      "howToHelp": "Spring 2027 registration is open on the club's website; register before November 30, 2026 to avoid a late fee.",
+      "email": "info@waynesvillelax.org",
+      "website": "https://www.waynesvillelax.org",
+      "source": [
+        "https://www.waynesvillelax.org"
+      ],
+      "verified": "2026-11-07"
     },
     {
       "name": "The Bridge",
