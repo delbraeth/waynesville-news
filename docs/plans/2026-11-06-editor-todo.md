@@ -34,6 +34,8 @@ For each entry: fill in the confirmed fields, set `verified` to the date checked
 - [ ] Typical downtown shop hours
 - [ ] DORA hours and boundaries: not on the Merchants' DORA page (checked 2026-11-07). They'd be in the village council ordinance that created it, or ask the Merchants Association / village office (513-897-8015)
 
+- [ ] Jamie Gabbard – Glass House Realty: listed from the Merchants' 2026 member list with no phone or website; add a public business contact. (Older agent listings show Comey & Shepherd; the Merchants list says Glass House.)
+
 **Directory: places to eat and stay** (`src/data/directory-manual.json`)
 - [ ] Possibly missing; found only on listing sites, so not added: Remember When Tea Room (370 Old Stage Rd), Sun Sprouts Cafe and The Corwin Peddler (Corwin, by the trail), Terrapin Village B&B (Oregonia), Miller's Campground (6964 Townshipline Rd; its website now redirects to a for-sale page), Sinclair House B&B
 - Coffee Hub (415 S. Main) is closed, per the editor (2026-11-06); not added.
