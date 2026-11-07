@@ -1183,6 +1183,21 @@
       "source": "https://www.stubbsconner.com/locations/"
     },
     {
+      "name": "Subway",
+      "sections": [
+        "food"
+      ],
+      "kinds": [
+        "Sandwiches",
+        "Fast Food"
+      ],
+      "location": "354 S. Main St., Waynesville, OH 45068",
+      "phone": "513-709-8544",
+      "website": "https://restaurants.subway.com/united-states/oh/waynesville/354-s-main-st",
+      "about": "Sandwich chain restaurant on South Main Street.",
+      "source": "https://restaurants.subway.com/united-states/oh/waynesville/354-s-main-st (Subway's own location page, checked 2026-11-07)"
+    },
+    {
       "name": "The Buckeye Charm",
       "sections": [
         "shop"
