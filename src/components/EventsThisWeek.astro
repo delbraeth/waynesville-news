@@ -5,7 +5,10 @@ import { upcomingEvents } from "../lib/events.js";
 interface Props { limit?: number; heading?: boolean; }
 const { limit = 6, heading = true } = Astro.props;
 
-const upcoming = upcomingEvents().slice(0, limit);
+// At most two automatic library/Caesar Creek programs, so weekly storytimes
+// don't crowd out the town's one-off events; the events page has them all.
+let feedShown = 0;
+const upcoming = upcomingEvents().filter((e) => !e._feed || feedShown++ < 2).slice(0, limit);
 ---
 <section class="section">
   {heading && (

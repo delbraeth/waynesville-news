@@ -61,5 +61,5 @@ For each entry: fill in the confirmed fields, set `verified` to the date checked
 - [x] Site-wide search (directory, community, churches, resources, visit), with exact matches ranked first (2026-11-07)
 - [ ] Corrections policy page and public corrections log
 - [x] Tips and corrections forms: /tips/ and /corrections/submit/ (mailto, like the events form); linked from the footer, About, briefs and stories (2026-11-07)
-- [ ] Library programs and Caesar Creek events added to the calendar automatically, plus sign-up reminders
+- [x] Library programs (next 45 days) and Caesar Creek programs now on the events calendar automatically, with a "Sign up soon" box on /events/ and sign-up notes in the brief draft (2026-11-07)
 - [ ] Lighter fonts (about 90% of page weight; would save about 120 KB per page)

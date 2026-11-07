@@ -538,3 +538,11 @@ a.dir-supporter, a.dir-supporter:hover { color: #fff; text-decoration: none; }
 .submit-form legend { font-weight: 600; font-size: 0.95rem; margin-bottom: 0.3rem; }
 .submit-form fieldset label { font-weight: 400; display: flex; gap: 0.5rem; align-items: center; margin: 0.2rem 0; }
 .submit-form fieldset input[type="radio"] { width: auto; min-height: 0; margin: 0; }
+
+/* Events: sign-up reminders */
+.ev-signup { margin: 1rem 0 1.5rem; padding: 0.85rem 1rem; border: 1px solid var(--rule); border-left: 4px solid var(--accent); border-radius: 4px; background: var(--paper-2); }
+.ev-signup h3 { margin: 0 0 0.2rem; }
+.ev-signup ul { list-style: none; margin: 0.5rem 0 0; padding: 0; }
+.ev-signup li { padding: 0.35rem 0; }
+.ev-signup li + li { border-top: 1px solid var(--rule); }
+.ev-signup-line { font-size: 0.88rem; font-weight: 600; color: var(--accent-deep); }

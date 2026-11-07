@@ -1,6 +1,6 @@
 {
-  "_note": "Mary L. Cook Public Library — upcoming programs from the library's WhoFi event calendar (https://marylcook-main-oh.whofi.com/calendar/full), next 14 days. Canceled events excluded.",
-  "updated": "2026-11-06T11:42:09.811Z",
+  "_note": "Mary L. Cook Public Library — upcoming programs from the library's WhoFi event calendar (https://marylcook-main-oh.whofi.com/calendar/full). \"items\": next 14 days, for the daily brief (dateISO is Eastern wall-clock marked Z). \"calendar\": next 45 days for the events calendar, real offsets, with sign-up details read from each program's page (scripts/lib/signup.mjs). Canceled events and closures excluded.",
+  "updated": "2026-11-07T06:36:58.354Z",
   "items": [
     {
       "title": "Paint Party at the Library",
@@ -49,6 +49,254 @@
       "dateISO": "2026-11-12T18:00:00Z",
       "dateLabel": "Thu · Nov 12, 6:00 PM",
       "link": "https://marylcook-main-oh.whofi.com/calendar/event/354881/"
+    }
+  ],
+  "calendar": [
+    {
+      "title": "Paint Party at the Library",
+      "dateISO": "2026-11-07T10:00:00-05:00",
+      "endISO": "2026-11-07T11:00:00-05:00",
+      "dateLabel": "Sat, Nov 7 · 10:00 AM",
+      "link": "https://marylcook-main-oh.whofi.com/calendar/event/355955/",
+      "signup": {
+        "required": true,
+        "opens": "2026-10-21",
+        "inPerson": true,
+        "cost": "$10 deposit"
+      }
+    },
+    {
+      "title": "Toddler Time",
+      "dateISO": "2026-11-10T10:30:00-05:00",
+      "endISO": "2026-11-10T11:00:00-05:00",
+      "dateLabel": "Tue, Nov 10 · 10:30 AM",
+      "link": "https://marylcook-main-oh.whofi.com/calendar/event/354851/",
+      "signup": {
+        "required": false
+      }
+    },
+    {
+      "title": "Teen Tuesday (6th-12th Grade)",
+      "dateISO": "2026-11-10T15:00:00-05:00",
+      "endISO": "2026-11-10T16:00:00-05:00",
+      "dateLabel": "Tue, Nov 10 · 3:00 PM",
+      "link": "https://marylcook-main-oh.whofi.com/calendar/event/356793/",
+      "signup": {
+        "required": false
+      }
+    },
+    {
+      "title": "Chapters Book Club",
+      "dateISO": "2026-11-10T16:00:00-05:00",
+      "endISO": "2026-11-10T16:45:00-05:00",
+      "dateLabel": "Tue, Nov 10 · 4:00 PM",
+      "link": "https://marylcook-main-oh.whofi.com/calendar/event/354847/",
+      "signup": {
+        "required": true,
+        "opens": "2026-08-17"
+      }
+    },
+    {
+      "title": "Baby Bookworms",
+      "dateISO": "2026-11-11T10:30:00-05:00",
+      "endISO": "2026-11-11T11:00:00-05:00",
+      "dateLabel": "Wed, Nov 11 · 10:30 AM",
+      "link": "https://marylcook-main-oh.whofi.com/calendar/event/354859/",
+      "signup": {
+        "required": false
+      }
+    },
+    {
+      "title": "Dungeons and Dragons (Teen)",
+      "dateISO": "2026-11-11T15:00:00-05:00",
+      "endISO": "2026-11-11T16:00:00-05:00",
+      "dateLabel": "Wed, Nov 11 · 3:00 PM",
+      "link": "https://marylcook-main-oh.whofi.com/calendar/event/354835/"
+    },
+    {
+      "title": "Junk Journal Drop in Program",
+      "dateISO": "2026-11-12T17:00:00-05:00",
+      "endISO": "2026-11-12T18:45:00-05:00",
+      "dateLabel": "Thu, Nov 12 · 5:00 PM",
+      "link": "https://marylcook-main-oh.whofi.com/calendar/event/356821/",
+      "signup": {
+        "required": false
+      }
+    },
+    {
+      "title": "Pj Storytime",
+      "dateISO": "2026-11-12T18:00:00-05:00",
+      "endISO": "2026-11-12T18:30:00-05:00",
+      "dateLabel": "Thu, Nov 12 · 6:00 PM",
+      "link": "https://marylcook-main-oh.whofi.com/calendar/event/354881/",
+      "signup": {
+        "required": false
+      }
+    },
+    {
+      "title": "Rootfinders",
+      "dateISO": "2026-11-14T10:00:00-05:00",
+      "endISO": "2026-11-14T13:00:00-05:00",
+      "dateLabel": "Sat, Nov 14 · 10:00 AM",
+      "link": "https://marylcook-main-oh.whofi.com/calendar/event/356791/",
+      "signup": {
+        "required": false
+      }
+    },
+    {
+      "title": "The Art of Living Talk Series with Brother Brian",
+      "dateISO": "2026-11-14T10:00:00-05:00",
+      "endISO": "2026-11-14T11:00:00-05:00",
+      "dateLabel": "Sat, Nov 14 · 10:00 AM",
+      "link": "https://marylcook-main-oh.whofi.com/calendar/event/356132/"
+    },
+    {
+      "title": "Art Class for Kids: Magic Flashlight Art",
+      "dateISO": "2026-11-16T12:00:00-05:00",
+      "dateLabel": "Mon, Nov 16 · check the library for the time",
+      "link": "https://marylcook-main-oh.whofi.com/calendar/event/354833/",
+      "signup": {
+        "required": true,
+        "opens": "2026-11-02"
+      }
+    },
+    {
+      "title": "Interactive Movie Kit Pick up: Cloudy with a Chance of Meatballs",
+      "dateISO": "2026-11-16T09:00:00-05:00",
+      "endISO": "2026-11-16T19:00:00-05:00",
+      "dateLabel": "Mon, Nov 16 · 9:00 AM",
+      "link": "https://marylcook-main-oh.whofi.com/calendar/event/354834/"
+    },
+    {
+      "title": "Getting Reel Film Club",
+      "dateISO": "2026-11-16T17:30:00-05:00",
+      "endISO": "2026-11-16T18:15:00-05:00",
+      "dateLabel": "Mon, Nov 16 · 5:30 PM",
+      "link": "https://marylcook-main-oh.whofi.com/calendar/event/334490/",
+      "signup": {
+        "required": true
+      }
+    },
+    {
+      "title": "Toddler Time",
+      "dateISO": "2026-11-17T10:30:00-05:00",
+      "endISO": "2026-11-17T11:00:00-05:00",
+      "dateLabel": "Tue, Nov 17 · 10:30 AM",
+      "link": "https://marylcook-main-oh.whofi.com/calendar/event/354852/",
+      "signup": {
+        "required": false
+      }
+    },
+    {
+      "title": "Teen Tuesday (6th-12th Grade)",
+      "dateISO": "2026-11-17T15:00:00-05:00",
+      "endISO": "2026-11-17T16:00:00-05:00",
+      "dateLabel": "Tue, Nov 17 · 3:00 PM",
+      "link": "https://marylcook-main-oh.whofi.com/calendar/event/356794/",
+      "signup": {
+        "required": false
+      }
+    },
+    {
+      "title": "Rapid Readers Book Club",
+      "dateISO": "2026-11-17T16:00:00-05:00",
+      "endISO": "2026-11-17T16:45:00-05:00",
+      "dateLabel": "Tue, Nov 17 · 4:00 PM",
+      "link": "https://marylcook-main-oh.whofi.com/calendar/event/354849/",
+      "signup": {
+        "required": true,
+        "opens": "2026-08-17"
+      }
+    },
+    {
+      "title": "Genre Exploration Book Club Meeting",
+      "dateISO": "2026-11-17T17:30:00-05:00",
+      "endISO": "2026-11-17T18:15:00-05:00",
+      "dateLabel": "Tue, Nov 17 · 5:30 PM",
+      "link": "https://marylcook-main-oh.whofi.com/calendar/event/354866/",
+      "signup": {
+        "required": true
+      }
+    },
+    {
+      "title": "Library Regular Board Meeting",
+      "dateISO": "2026-11-17T18:30:00-05:00",
+      "endISO": "2026-11-17T19:30:00-05:00",
+      "dateLabel": "Tue, Nov 17 · 6:30 PM",
+      "link": "https://marylcook-main-oh.whofi.com/calendar/event/354864/"
+    },
+    {
+      "title": "Baby Bookworms",
+      "dateISO": "2026-11-18T10:30:00-05:00",
+      "endISO": "2026-11-18T11:00:00-05:00",
+      "dateLabel": "Wed, Nov 18 · 10:30 AM",
+      "link": "https://marylcook-main-oh.whofi.com/calendar/event/354860/",
+      "signup": {
+        "required": false
+      }
+    },
+    {
+      "title": "Service Dog Storytime (Special Preschool Storytime)",
+      "dateISO": "2026-11-19T10:30:00-05:00",
+      "endISO": "2026-11-19T11:30:00-05:00",
+      "dateLabel": "Thu, Nov 19 · 10:30 AM",
+      "link": "https://marylcook-main-oh.whofi.com/calendar/event/354830/"
+    },
+    {
+      "title": "Stuffed Animal Taxidermy",
+      "dateISO": "2026-11-19T15:00:00-05:00",
+      "endISO": "2026-11-19T16:00:00-05:00",
+      "dateLabel": "Thu, Nov 19 · 3:00 PM",
+      "link": "https://marylcook-main-oh.whofi.com/calendar/event/354837/"
+    },
+    {
+      "title": "Early Readers Kindergarten Book Club",
+      "dateISO": "2026-11-19T16:00:00-05:00",
+      "endISO": "2026-11-19T16:45:00-05:00",
+      "dateLabel": "Thu, Nov 19 · 4:00 PM",
+      "link": "https://marylcook-main-oh.whofi.com/calendar/event/354848/",
+      "signup": {
+        "required": true,
+        "opens": "2026-08-17"
+      }
+    },
+    {
+      "title": "Letters to Santa",
+      "dateISO": "2026-11-20T09:00:00-05:00",
+      "endISO": "2026-11-20T17:00:00-05:00",
+      "dateLabel": "Fri, Nov 20 · 9:00 AM",
+      "link": "https://marylcook-main-oh.whofi.com/calendar/event/356803/"
+    },
+    {
+      "title": "Crafting Fun Drop-in Program (Adults)",
+      "dateISO": "2026-11-21T10:30:00-05:00",
+      "endISO": "2026-11-21T13:30:00-05:00",
+      "dateLabel": "Sat, Nov 21 · 10:30 AM",
+      "link": "https://marylcook-main-oh.whofi.com/calendar/event/356838/",
+      "signup": {
+        "required": false
+      }
+    },
+    {
+      "title": "Art Class for Kids: Shrinky Dink Keychains",
+      "dateISO": "2026-12-07T16:15:00-05:00",
+      "endISO": "2026-12-07T17:00:00-05:00",
+      "dateLabel": "Mon, Dec 7 · 4:15 PM",
+      "link": "https://marylcook-main-oh.whofi.com/calendar/event/354839/",
+      "signup": {
+        "required": true,
+        "opens": "2026-11-23"
+      }
+    },
+    {
+      "title": "Getting Reel Film Club",
+      "dateISO": "2026-12-21T17:30:00-05:00",
+      "endISO": "2026-12-21T18:15:00-05:00",
+      "dateLabel": "Mon, Dec 21 · 5:30 PM",
+      "link": "https://marylcook-main-oh.whofi.com/calendar/event/334491/",
+      "signup": {
+        "required": true
+      }
     }
   ]
 }

@@ -1,8 +1,9 @@
 // One downloadable calendar file per dated event: /events/ical/<slug>.ics
-import eventsData from "../../../data/events.json";
 import { eventSlug, icsFor } from "../../../lib/ical.js";
+import { datedEvents } from "../../../lib/events.js";
 
-const dated = () => eventsData.items.filter((e) => !e.evergreen && e.dateISO);
+// events.json plus the library and Caesar Creek feeds (see src/lib/events.js).
+const dated = () => datedEvents();
 
 export function getStaticPaths() {
   const seen = new Set();
