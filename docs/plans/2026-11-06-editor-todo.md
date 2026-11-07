@@ -21,7 +21,7 @@ For each entry: fill in the confirmed fields, set `verified` to the date checked
 - [ ] American Legion Post 615
 - [ ] Scouting: Pack 840 and Troop 318 still active? (Troops 51/1051 and Crew 6151 confirmed from their TroopTrack site, 2026-11-07)
 - [ ] Waynesville Lacrosse Club: fees (not on the club's home page)
-- [ ] Waynesville Youth Basketball Association: season and contact
+- [ ] Waynesville Youth Basketball Association: grades, season and registration dates (website and contact form added from waynesvilleyouthbasketball.com, 2026-11-07; the site lists no season details)
 - [ ] Youth wrestling, band boosters, Friends of the Library
 - [ ] Rotary: which club? (District 6670 lists none in Waynesville; nearest is Lebanon)
 

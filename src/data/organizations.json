@@ -395,13 +395,15 @@
     {
       "name": "Waynesville Youth Basketball Association",
       "category": "youth-sports",
-      "what": "Youth basketball for grades 2 through 6, run with the Waynesville Boys Basketball program and athletic department.",
-      "contact": "Through the Wayne Local athletic department",
+      "what": "Competitive youth basketball club that serves as a feeder program for the Wayne Local middle and high school teams, teaching basic and advanced skills, teamwork and sportsmanship.",
+      "contact": "Email form on the club's website",
+      "website": "https://www.waynesvilleyouthbasketball.com",
       "source": [
+        "https://www.waynesvilleyouthbasketball.com",
         "https://wayne-local.com/district-news/entry/boys-youth-night-basketball"
       ],
-      "verified": "2026-11-06",
-      "toConfirm": "Season, registration, and a website or public contact (the only official source found is a January 2023 district post)."
+      "verified": "2026-11-07",
+      "toConfirm": "Grades, season and registration dates: the club's site lists none (checked 2026-11-07). A January 2023 district post described grades 2 through 6."
     },
     {
       "name": "Waynesville Lacrosse Club",
