@@ -21,6 +21,41 @@ const signupText = (e: any) => {
 const evergreen = eventsData.items.filter((e) => e.evergreen).map((e) => ({ ...e, _local: isLocalEvent(e) }));
 const regionalCount = upcoming.filter((e) => !e._local).length;
 const submitMail = "mailto:editor@waynesville.news?subject=" + encodeURIComponent("Event for the calendar");
+
+// Category filter: every category among upcoming events, most common first.
+const catCounts = new Map<string, number>();
+for (const e of upcoming) if (e.category) catCounts.set(e.category, (catCounts.get(e.category) ?? 0) + 1);
+const categories = [...catCounts.entries()].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
+
+// Month view: this month and next, in Eastern time. An event shows on each day
+// it runs, except long-running items (over a week), which show on their start
+// day only (or the 1st, if already under way) so they don't fill the grid.
+const ET = "America/New_York";
+const etDay = (d: Date) => d.toLocaleDateString("en-CA", { timeZone: ET });
+const todayISO = etDay(new Date());
+const WEEK = 7 * 86400000;
+const monthStart = todayISO.slice(0, 8) + "01"; // first day of the first month shown
+function monthGrid(y: number, m: number) {
+  const first = new Date(Date.UTC(y, m, 1, 12));
+  const days = new Date(Date.UTC(y, m + 1, 0, 12)).getUTCDate();
+  const cells: { iso?: string; day?: number; events: any[] }[] = [];
+  for (let i = 0; i < first.getUTCDay(); i++) cells.push({ events: [] });
+  for (let d = 1; d <= days; d++) {
+    const iso = `${y}-${String(m + 1).padStart(2, "0")}-${String(d).padStart(2, "0")}`;
+    const events = upcoming.filter((e) => {
+      const s = etDay(e._d), en = etDay(e._end);
+      const long = e._end.getTime() - e._d.getTime() > WEEK;
+      if (long) return iso === (s >= monthStart ? s : monthStart);
+      return iso >= s && iso <= en;
+    });
+    cells.push({ iso, day: d, events });
+  }
+  const label = first.toLocaleDateString("en-US", { month: "long", year: "numeric", timeZone: "UTC" });
+  return { label, cells };
+}
+const [ty, tm] = todayISO.split("-").map(Number);
+const months = [monthGrid(ty, tm - 1), monthGrid(tm === 12 ? ty + 1 : ty, tm % 12)];
+const dayLabel = (iso: string) => new Date(iso + "T12:00:00Z").toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric", timeZone: "UTC" });
 ---
 <Base title="Events & Things to Do · Waynesville News" description="What's happening in Waynesville, Ohio: festivals, downtown shopping weekends, library and school events, Caesar Creek and big regional draws, with a this-weekend view and add-to-calendar links." showInfoBar={false} jsonLd={upcoming.length ? eventList(upcoming) : undefined}>
   <div class="reading">
@@ -58,6 +93,19 @@ const submitMail = "mailto:editor@waynesville.news?subject=" + encodeURIComponen
       {regionalCount > 0 && (
         <label class="dir-local"><input id="ev-local" type="checkbox" /> Waynesville area only</label>
       )}
+      {categories.length > 1 && (
+        <label class="ev-cat-pick">Type
+          <select id="ev-cat">
+            <option value="">All types</option>
+            {categories.map(([c, n]) => <option value={c}>{c} ({n})</option>)}
+          </select>
+        </label>
+      )}
+      <fieldset class="ev-when ev-view">
+        <legend class="visually-hidden">View</legend>
+        <label><input type="radio" name="ev-view" value="list" checked /> List</label>
+        <label><input type="radio" name="ev-view" value="month" /> Month</label>
+      </fieldset>
     </div>
     {regionalCount > 0 && (
       <p class="small ev-filter-note">“Waynesville area only” hides {regionalCount} regional {regionalCount === 1 ? "event" : "events"} elsewhere in Warren County.</p>
@@ -66,7 +114,7 @@ const submitMail = "mailto:editor@waynesville.news?subject=" + encodeURIComponen
     <p id="ev-empty" class="ev-empty" hidden>Nothing on the calendar for this weekend yet. <a href="/events/submit/">Know of something?</a></p>
     <ul class="events" id="ev-upcoming">
       {upcoming.map((e) => (
-        <li data-local={e._local ? "1" : "0"} data-start={e.dateISO} data-end={e.endISO ?? e.dateISO}>
+        <li data-local={e._local ? "1" : "0"} data-cat={e.category ?? ""} data-start={e.dateISO} data-end={e.endISO ?? e.dateISO}>
           <div class="date">{e.dateLabel}</div>
           <div>
             <a class="ev-title" href={e.source} target="_blank" rel="noopener">{e.title}</a>
@@ -77,6 +125,12 @@ const submitMail = "mailto:editor@waynesville.news?subject=" + encodeURIComponen
               {e.registrationUrl && <> · <a href={e.registrationUrl} target="_blank" rel="noopener">Register</a></>}
             </div>
             {e.signup?.required && <div class="ev-signup-line">{signupText(e)}</div>}
+            {(e.cost || e.accessibility) && (
+              <div class="ev-facts">
+                {e.cost && <span><strong>Cost:</strong> {e.cost}</span>}
+                {e.accessibility && <span><strong>Accessibility:</strong> {e.accessibility}</span>}
+              </div>
+            )}
             <div class="ev-add">
               Add to calendar:
               <a href={icsHref(e)} download>Apple / Outlook</a> ·
@@ -86,6 +140,30 @@ const submitMail = "mailto:editor@waynesville.news?subject=" + encodeURIComponen
         </li>
       ))}
     </ul>
+
+    <div id="ev-month" class="ev-month" hidden>
+      {months.map((mo) => (
+        <section class="ev-mo" aria-label={mo.label}>
+          <h3>{mo.label}</h3>
+          <div class="ev-grid">
+            {["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"].map((w) => <div class="ev-wd" aria-hidden="true">{w}</div>)}
+            {mo.cells.map((c) => c.iso ? (
+              <div class={`ev-day${c.events.length ? "" : " ev-none"}${c.iso === todayISO ? " ev-today" : ""}${c.iso < todayISO ? " ev-past" : ""}`}>
+                <div class="ev-dnum"><span class="ev-dfull">{dayLabel(c.iso)}</span><span class="ev-dshort" aria-hidden="true">{c.day}</span></div>
+                {c.events.length > 0 && (
+                  <ul>
+                    {c.events.map((e) => (
+                      <li data-local={e._local ? "1" : "0"} data-cat={e.category ?? ""}><a href={e.source} target="_blank" rel="noopener">{e.title}</a></li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+            ) : <div class="ev-day ev-pad" aria-hidden="true"></div>)}
+          </div>
+        </section>
+      ))}
+      <p class="small muted">Long-running items (a donation drive, a weeks-long show) appear on their first day. Add-to-calendar links are in the list view.</p>
+    </div>
 
     <h3>Always on</h3>
     <ul class="events">
@@ -123,8 +201,13 @@ const submitMail = "mailto:editor@waynesville.news?subject=" + encodeURIComponen
     var empty = document.getElementById("ev-empty");
     var note = document.getElementById("ev-weekend-note");
     var KEY = "wn-events-local";
+    var cat = document.getElementById("ev-cat");
+    var views = document.querySelectorAll('input[name="ev-view"]');
+    var month = document.getElementById("ev-month");
+    var whenBox = document.querySelector("fieldset.ev-when:not(.ev-view)");
+    var gridItems = month ? month.querySelectorAll("li") : [];
     var items = Array.prototype.map.call(list.querySelectorAll("li"), function (li) {
-      return { li: li, local: li.dataset.local === "1", s: Date.parse(li.dataset.start), e: Date.parse(li.dataset.end) };
+      return { li: li, local: li.dataset.local === "1", cat: li.dataset.cat || "", s: Date.parse(li.dataset.start), e: Date.parse(li.dataset.end) };
     });
 
     // "This weekend": Mon–Thu → the coming Fri–Sun; Fri/Sat/Sun → today through Sunday.
@@ -143,12 +226,29 @@ const submitMail = "mailto:editor@waynesville.news?subject=" + encodeURIComponen
       radios.forEach(function (r) { if (r.checked) m = r.value; });
       return m;
     }
+    function view() {
+      var v = "list";
+      views.forEach(function (r) { if (r.checked) v = r.value; });
+      return v;
+    }
     function apply() {
       var onlyLocal = box ? box.checked : false;
-      var wk = mode() === "weekend" ? weekend() : null;
+      var c = cat ? cat.value : "";
+      var asMonth = view() === "month";
+      // Month view shows both months; the weekend choice applies to the list.
+      var wk = !asMonth && mode() === "weekend" ? weekend() : null;
+      list.hidden = asMonth;
+      if (month) month.hidden = !asMonth;
+      if (whenBox) whenBox.disabled = asMonth;
+      Array.prototype.forEach.call(gridItems, function (li) {
+        li.hidden = (onlyLocal && li.dataset.local !== "1") || (c && li.dataset.cat !== c);
+      });
+      if (month) Array.prototype.forEach.call(month.querySelectorAll(".ev-day:not(.ev-pad)"), function (d) {
+        d.classList.toggle("ev-none", !d.querySelector("li:not([hidden])"));
+      });
       var shown = 0;
       items.forEach(function (it) {
-        var ok = (!onlyLocal || it.local) &&
+        var ok = (!onlyLocal || it.local) && (!c || it.cat === c) &&
           (!wk || (it.s <= wk.end.getTime() && (isNaN(it.e) ? it.s : it.e) >= wk.start.getTime()));
         it.li.hidden = !ok;
         if (ok) shown++;
@@ -158,6 +258,12 @@ const submitMail = "mailto:editor@waynesville.news?subject=" + encodeURIComponen
         if (wk) note.textContent = "Showing " + fmt(wk.start) + (wk.start.toDateString() === wk.end.toDateString() ? "" : " – " + fmt(wk.end)) + ".";
       }
       if (empty) empty.hidden = !(wk && shown === 0);
+      if (cat) {
+        var url = new URL(location.href);
+        if (c) url.searchParams.set("cat", c); else url.searchParams.delete("cat");
+        if (asMonth) url.searchParams.set("view", "month"); else url.searchParams.delete("view");
+        history.replaceState(null, "", url);
+      }
       try { if (box) localStorage.setItem(KEY, box.checked ? "1" : "0"); } catch (e) {}
     }
 
@@ -165,6 +271,11 @@ const submitMail = "mailto:editor@waynesville.news?subject=" + encodeURIComponen
     if (/[?&]when=weekend\b/.test(location.search) || location.hash === "#weekend") {
       radios.forEach(function (r) { r.checked = r.value === "weekend"; });
     }
+    var qs = new URLSearchParams(location.search);
+    if (cat && qs.get("cat")) cat.value = qs.get("cat");
+    if (qs.get("view") === "month") views.forEach(function (r) { r.checked = r.value === "month"; });
+    if (cat) cat.addEventListener("change", apply);
+    views.forEach(function (r) { r.addEventListener("change", apply); });
     if (box) box.addEventListener("change", apply);
     radios.forEach(function (r) { r.addEventListener("change", apply); });
     apply();
@@ -180,4 +291,32 @@ const submitMail = "mailto:editor@waynesville.news?subject=" + encodeURIComponen
   .events .ev-add { font-size: 0.78rem; color: var(--muted); margin-top: 0.3rem; }
   .ev-filter-note { color: var(--muted); }
   .events li[hidden] { display: none; }
+  .ev-cat-pick { font-size: 0.9rem; display: flex; align-items: center; gap: 0.4rem; }
+  .ev-cat-pick select { font: inherit; padding: 0.3rem 0.4rem; border: 1px solid var(--rule); border-radius: 2px; background: var(--field); color: var(--ink); min-height: 2.25rem; }
+  .ev-view { margin-left: auto; }
+  fieldset.ev-when:disabled { opacity: 0.5; }
+  .ev-facts { font-size: 0.85rem; color: var(--ink-soft); display: flex; flex-wrap: wrap; gap: 0.15rem 1rem; margin-top: 0.2rem; }
+  .ev-mo { margin: 1rem 0 1.5rem; }
+  .ev-mo h3 { margin: 0 0 0.5rem; }
+  .ev-grid { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); border-top: 1px solid var(--rule); border-left: 1px solid var(--rule); }
+  .ev-wd { font-family: var(--font-sans); font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); padding: 0.3rem; border-right: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+  .ev-day { min-height: 5.5rem; padding: 0.3rem; border-right: 1px solid var(--rule); border-bottom: 1px solid var(--rule); font-family: var(--font-sans); font-size: 0.78rem; overflow: hidden; }
+  .ev-day ul { list-style: none; margin: 0.2rem 0 0; padding: 0; }
+  .ev-day li { margin: 0 0 0.25rem; line-height: 1.25; }
+  .ev-day li[hidden] { display: none; }
+  .ev-day a { text-decoration: none; }
+  .ev-dfull { display: none; }
+  .ev-dnum { font-weight: 700; color: var(--ink-soft); }
+  .ev-today { background: var(--paper-2); }
+  .ev-today .ev-dnum { color: var(--accent); }
+  .ev-past { opacity: 0.55; }
+  /* Phones: the month becomes a list of the days that have events. */
+  @media (max-width: 40rem) {
+    .ev-grid { display: block; border: 0; }
+    .ev-wd, .ev-pad, .ev-day.ev-none, .ev-past { display: none; }
+    .ev-day { min-height: 0; border: 0; border-bottom: 1px solid var(--rule); padding: 0.55rem 0; font-size: 0.92rem; opacity: 1; }
+    .ev-dfull { display: inline; }
+    .ev-dshort { display: none; }
+    .ev-day a { text-decoration: underline; }
+  }
 </style>

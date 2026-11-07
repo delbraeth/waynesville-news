@@ -70,6 +70,8 @@ Added with official sources: Designs Now (designsnow.biz, editor's link), Carrol
 
 **Caesar Creek Nature Center (2026-11-07):** added to the Visit page from caesarcreekstatepark.com (editor's link): exhibits, free programs most Thu/Fri/Sat, 513-897-2437. Its events feed was checked but not added: it is mostly Cowan Lake programs, and the Caesar Creek ones are already on the calendar from ODNR
 
+**Calendar (2026-11-07):** /events/ has a Month view (this month and next; a day list on phones), a Type filter (shareable as ?cat=Library), and optional cost and accessibility lines (`cost`, `accessibility` in events.json)
+
 **Volunteer board (2026-11-07):** /volunteer/ with current asks, standing ways to help and a post-a-need form. To add a dated ask: a `needs` entry in `src/data/volunteer.json` (hides after `until`), or tag an event `volunteer`
 
 **Accessibility and privacy (2026-11-07):** WCAG 2.2 AA scan of 19 pages now clean (link underlines, form autocomplete fixed); reflow, keyboard focus and Core Web Vitals checked; /privacy/ page added

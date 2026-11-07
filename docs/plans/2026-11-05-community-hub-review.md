@@ -187,7 +187,7 @@ keeping editorial independence and sourcing standards.
 1. Redesign the homepage as a community dashboard: what's happening, what I
    need to know, what I can do. Put events, businesses, services and
    volunteering above the archive of older briefs.
-2. Make the calendar the definitive Waynesville calendar:
+2. Make the calendar the definitive Waynesville calendar (**2026-11-07:** month view, a "Type" filter, and optional cost and accessibility lines added; library and Caesar Creek programs now flow in automatically):
    - month, week and list views
    - category filters
    - Apple, Google and .ics export
