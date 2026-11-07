@@ -264,6 +264,20 @@
       "title": "Community help",
       "items": [
         {
+          "name": "United Way 211 (help line, 24/7)",
+          "what": "Call 211 (or 513-721-7900, or 1-800-233-4357) any time to reach a trained specialist who connects you to local help: food, housing and rent help, utility bills, mental health support, child care and job services. Warren County is in United Way of Greater Cincinnati's 211 area.",
+          "phone": "211",
+          "link": "https://uwgc.org/get-help/united-way-211",
+          "links": [
+            {
+              "label": "Search 211 resources",
+              "url": "https://uwgc211.org"
+            }
+          ],
+          "source": "https://uwgc.org/get-help/united-way-211",
+          "verified": "2026-11-07"
+        },
+        {
           "name": "Waynesville Food Pantry and Wayne Township Community Aid",
           "what": "Free non-perishable food and some paper, personal and household products, plus Community Aid help with utility bills, for residents of Waynesville, Wayne Township, Corwin, Harveysburg, Lytle and Oregonia. Distribution Monday, Wednesday and Friday, 3–4:30 p.m. Call to ask for help with food or a utility bill. To donate food, drop off non-expired, non-perishable items at the pantry during open hours, at the Mary L. Cook Library, or in the lobby of the Wayne Township Fire Station (open 24/7). The pantry doesn’t take clothing or furniture.",
           "phone": "283-221-6908",
