@@ -77,12 +77,14 @@
     {
       "name": "Waynesville Youth Wrestling Club",
       "category": "youth-sports",
-      "what": "Youth wrestling (a 2018 district post listed ages 5 through 6th grade).",
+      "what": "Youth wrestling club for Waynesville kids; see its Facebook page for the season and sign-ups.",
+      "facebook": "https://www.facebook.com/WaynesvilleYouthWrestlingClub/",
       "source": [
+        "https://www.facebook.com/WaynesvilleYouthWrestlingClub/",
         "https://archive.wayne-local.com/district-news/entry/waynesville-youth-wrestling-sign-ups-788/"
       ],
       "verified": "",
-      "toConfirm": "Whether the club is still active (only a 2018 district sign-up post found), current ages, contact and season."
+      "toConfirm": "Facebook page added from the editor's link (2026-11-07); Facebook can't be read from the session. Still needed: current ages (a 2018 district post said ages 5 through 6th grade), season and a public contact."
     },
     {
       "name": "Waynesville Athletic Boosters",
