@@ -447,6 +447,7 @@ a.dir-supporter, a.dir-supporter:hover { color: #fff; text-decoration: none; }
 .callout .dir-supporter { margin-left: 0; }
 .dir-kinds { font-family: var(--font-sans); font-size: 0.78rem; color: var(--muted); margin-top: 0.15rem; }
 .dir-about { font-size: 0.93rem; color: var(--ink-soft); margin: 0.35rem 0 0; }
+.dir-hours { font-size: 0.93rem; margin: 0.3rem 0 0; }
 .dir-tools { display: flex; flex-wrap: wrap; gap: 0.2rem 1rem; margin-top: 0.25rem; font-family: var(--font-sans); font-size: 0.78rem; }
 .dir-tools a { color: var(--muted); text-decoration: underline; text-underline-offset: 0.15em; }
 .directory li:target { background: var(--paper-2); outline: 2px solid var(--accent); outline-offset: 4px; }

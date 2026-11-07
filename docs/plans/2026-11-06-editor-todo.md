@@ -34,7 +34,7 @@ For each entry: fill in the confirmed fields, set `verified` to the date checked
 - [ ] Typical downtown shop hours
 - [ ] DORA hours and boundaries: not on the Merchants' DORA page (checked 2026-11-07). They'd be in the village council ordinance that created it, or ask the Merchants Association / village office (513-897-8015)
 
-- [ ] Jamie Gabbard – Glass House Realty: listed from the Merchants' 2026 member list with no phone or website; add a public business contact. (Now with Glass House Realty; older Comey & Shepherd listings are out of date, per the editor.)
+- [x] Jamie Gabbard – Glass House Realty: phone, 220 N. Main St. office and agent page added from glasshouserealty.com (editor's link, 2026-11-07)
 
 **Directory: places to eat and stay** (`src/data/directory-manual.json`)
 - [ ] Possibly missing; found only on listing sites, so not added: Remember When Tea Room (370 Old Stage Rd), Sun Sprouts Cafe and The Corwin Peddler (Corwin, by the trail), Terrapin Village B&B (Oregonia), Miller's Campground (6964 Townshipline Rd; its website now redirects to a for-sale page), Sinclair House B&B
@@ -48,9 +48,9 @@ For each entry: fill in the confirmed fields, set `verified` to the date checked
 - [ ] `main` was force-updated on the morning of 2026-11-06, before the daily run. Confirm that was expected.
 
 ## 4. Decide
-- [ ] Show Village Council and school board dates before the County Commissioners in the info bar?
+- [x] Info bar shows the next Village Council or school board meeting on the calendar (within 3 weeks) before the County Commissioners (editor, 2026-11-07)
 - [ ] A Friday "This weekend in Waynesville" email for visitors, separate from the daily brief?
-- [ ] Optional owner-supplied hours lines in the directory (still text-only)?
+- [x] Owner-supplied hours lines in the directory: `hours` + `hoursChecked` in directory-manual.json; shown as "from the owner" with the date (editor, 2026-11-07)
 - [ ] Supporter page fixes: name the Patreon business tier, mention receipts, show the supporter's phone as promised
 - On hold (no action): human review before publishing; directory photos
 
