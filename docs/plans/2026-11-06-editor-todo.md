@@ -20,7 +20,7 @@ For each entry: fill in the confirmed fields, set `verified` to the date checked
 - [ ] Service times for Waynesville UMC (waynesvilleumc.org is down, so its link was removed; the Facebook page, now linked, doesn't show times without logging in)
 
 **Community organizations** (`src/data/organizations.json`)
-- [ ] Progressive Women's Club: meeting place (Methodist church or Quaker Heights?)
+- [x] Progressive Women's Club: marked confirmed (active per the editor; Facebook is its only online presence, 2026-11-07). Meeting place still unknown, so it isn't listed.
 - [ ] American Legion Post 615
 - [ ] Scouting: which of Pack 840, Troops 51 / 1051 / 318, Crew 6151 are active
 - [x] Waynesville Lacrosse Club: grades, season, registration deadline (Nov 30 to avoid late fee) and email from waynesvillelax.org (editor's link, 2026-11-07). Fees aren't on the home page.
