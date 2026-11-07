@@ -69,12 +69,16 @@
       "town": "Waynesville",
       "phone": "",
       "website": "https://holysaintsofgod.org",
-      "services": "",
-      "ministries": [],
-      "source": [
-        "https://catholicaoc.org/beacons-of-light/parish-families/southeast-deanery-family-1-updated"
+      "services": "Saturday 6 p.m. and Sunday 11 a.m.; Tuesday 7 p.m.; holy days 9 a.m. (as listed on CatholicMassTime.org; check with the parish for holiday changes).",
+      "ministries": [
+        "Communion services Monday, Wednesday and Friday at 9 a.m.",
+        "Eucharistic adoration Fridays, 9:15 a.m. to 1 p.m."
       ],
-      "verified": "2026-11-06"
+      "source": [
+        "https://catholicaoc.org/beacons-of-light/parish-families/southeast-deanery-family-1-updated",
+        "https://catholicmasstime.org/church/st-augustine/9103/"
+      ],
+      "verified": "2026-11-07"
     },
     {
       "name": "St. Mary's Episcopal Church",
@@ -100,13 +104,14 @@
       "address": "297 North St., Waynesville",
       "town": "Waynesville",
       "phone": "513-897-5771",
-      "website": "https://waynesvilleumc.org",
+      "website": "",
       "services": "",
       "ministries": [],
       "source": [
         "https://www.westohioumc.org/find-church?county=83"
       ],
-      "verified": "2026-11-06"
+      "verified": "2026-11-06",
+      "facebook": "https://www.facebook.com/WaynesvilleUMC/"
     },
     {
       "name": "Wellspring Baptist Church",

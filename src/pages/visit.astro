@@ -5,6 +5,7 @@
 // upcoming big events are built from the directory and events data.
 import Base from "../layouts/Base.astro";
 import data from "../data/visit.json";
+import { slug } from "../lib/slug.js";
 import directory from "../data/directory.json";
 import { upcomingEvents, isLocalEvent } from "../lib/events.js";
 
@@ -91,7 +92,7 @@ const soon = upcomingEvents()
         {s.intro && <p class="small">{s.intro}</p>}
         <ul class="res-list">
           {s.items.map((it) => (
-            <li>
+            <li id={slug(it.name)}>
               <div class="res-name">
                 {it.website ? <a href={it.website} target="_blank" rel="noopener">{it.name}</a> : it.name}
               </div>

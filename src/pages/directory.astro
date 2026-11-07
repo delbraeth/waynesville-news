@@ -6,7 +6,7 @@ import supporters from "../data/supporters.json";
 type Item = {
   id: string; name: string; location?: string; phone?: string; website?: string; email?: string;
   social?: { facebook?: string; instagram?: string; tiktok?: string; airbnb?: string };
-  about?: string; sections: string[]; kinds?: string[]; local?: boolean; source?: string; from?: string;
+  about?: string; hours?: string; hoursChecked?: string; sections: string[]; kinds?: string[]; local?: boolean; source?: string; from?: string;
 };
 
 const items = (directory.items ?? []) as Item[];
@@ -37,7 +37,7 @@ const searchText = (i: Item) =>
 
 // Each listing gets a shareable anchor (/directory/#butter-churn-cafe). A
 // listing filed in two sections gets the id in the first one only.
-const slug = (name: string) => name.toLowerCase().replace(/&/g, " and ").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+import { slug } from "../lib/slug.js";
 const anchorAt = new Map<string, string>();
 import { groupItems } from "../lib/directoryGroups.js";
 // Bigger sections render as subgroups (src/lib/directoryGroups.js).
@@ -139,6 +139,9 @@ const hasChurches = churchData.items.length > 0;
               </div>
               {tags(i).length > 0 && <div class="dir-kinds">{tags(i).join(" · ")}</div>}
               {i.about && <p class="dir-about">{i.about}</p>}
+              {i.hours && i.hoursChecked && (
+                <p class="dir-hours"><strong>Hours:</strong> {i.hours} <span class="muted">(from the owner, {new Date(i.hoursChecked + "T12:00:00").toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" })}; may change)</span></p>
+              )}
               <div class="dir-contact">
                 {i.location && <span>{i.location}</span>}
                 {i.phone && <a href={telHref(i.phone)}>{i.phone}</a>}

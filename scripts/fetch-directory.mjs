@@ -270,11 +270,24 @@ async function loadManual() {
       ...(/^[^\s@]+@[^\s@]+\.[a-z]{2,}$/i.test((m.email ?? "").trim()) ? { email: m.email.trim() } : {}),
       social: normalizeSocial(m.social),
       about: clean(m.about ?? ""),
+      ...ownerHours(m),
       local: m.local ?? isLocal(m.location),
       from: "manual",
     });
   }
   return out;
+}
+
+// Hours are only published when the business owner supplied them (editor,
+// 2026-11-07): "hours" is one plain-text line and "hoursChecked" the date the
+// owner gave or confirmed it. Without that date the line is dropped, so hours
+// scraped from listing sites can't slip in. Works on manual listings and on
+// "recategorize" entries (for Chamber listings).
+function ownerHours(m) {
+  const hours = clean(m?.hours ?? "");
+  const checked = /^\d{4}-\d{2}-\d{2}$/.test(m?.hoursChecked ?? "") ? m.hoursChecked : "";
+  if (hours && !checked) console.log(`directory: "${m.name}" has hours but no hoursChecked date — hours left off`);
+  return hours && checked ? { hours, hoursChecked: checked } : {};
 }
 
 // A listing whose website no longer exists keeps the listing but loses the
@@ -313,7 +326,7 @@ async function loadRecategorize() {
     // Each entry may fix sections, kinds (the tags shown under the name) and/or
     // about, for a Chamber listing whose categories or description are wrong.
     return new Map((m.recategorize ?? [])
-      .filter((r) => r?.name && (Array.isArray(r.sections) || Array.isArray(r.kinds) || typeof r.about === "string" || typeof r.phone === "string" || r.group))
+      .filter((r) => r?.name && (Array.isArray(r.sections) || Array.isArray(r.kinds) || typeof r.about === "string" || typeof r.phone === "string" || r.group || r.hours))
       .map((r) => [nameKey(r.name), r]));
   } catch { return new Map(); }
 }
@@ -334,12 +347,13 @@ async function writeMerged(chamber) {
     if (typeof fix?.about === "string") it.about = fix.about;
     if (fix?.group) it.group = fix.group;
     if (typeof fix?.phone === "string") it.phone = fix.phone;
+    if (fix?.hours) Object.assign(it, ownerHours(fix));
   }
   await dropDeadWebsites(items);
   await writeFile(
     OUT,
     JSON.stringify({
-      _note: "Local business directory. Built by scripts/fetch-directory.mjs from the Waynesville Area Chamber of Commerce's public member directory (name, location, phone, website, and the Chamber's description, as published) plus hand-added listings in directory-manual.json. Contact names, emails and hours are deliberately not copied. Do not edit by hand — edit directory-manual.json and re-run `npm run refresh:directory` (or `npm run refresh:directory -- --manual-only` to merge manual edits without re-reading the Chamber site).",
+      _note: "Local business directory. Built by scripts/fetch-directory.mjs from the Waynesville Area Chamber of Commerce's public member directory (name, location, phone, website, and the Chamber's description, as published) plus hand-added listings in directory-manual.json. Contact names, emails and hours are deliberately not copied from the Chamber; an hours line appears only when the owner supplied it (hours + hoursChecked in directory-manual.json). Do not edit by hand — edit directory-manual.json and re-run `npm run refresh:directory` (or `npm run refresh:directory -- --manual-only` to merge manual edits without re-reading the Chamber site).",
       updated: new Date().toISOString(),
       sections: SECTIONS,
       items,

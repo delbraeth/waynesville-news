@@ -48,7 +48,12 @@ try { obituaries = (await readJSON("src/data/obituaries.json")).items ?? []; } c
 let sports = { results: [], upcoming: [] };
 try { sports = await readJSON("src/data/sports.json"); } catch { /* optional */ }
 let libraryEvents = [];
-try { libraryEvents = (await readJSON("src/data/library-events.json")).items ?? []; } catch { /* optional */ }
+let libraryCalendar = [];
+try {
+  const lib = await readJSON("src/data/library-events.json");
+  libraryEvents = lib.items ?? [];
+  libraryCalendar = lib.calendar ?? [];
+} catch { /* optional */ }
 let commissionersDocs = [];
 try { commissionersDocs = (await readJSON("src/data/commissioners.json")).items ?? []; } catch { /* optional */ }
 let townshipAgendas = [];
@@ -359,9 +364,38 @@ const sportsBlock = (sportsResultsBlock || sportsUpcomingBlock)
 // times as today's. dateISO is a naive ET wall-clock string mislabelled "Z",
 // so compare the calendar-date part only.
 const libraryUpcoming = libraryEvents.filter((e) => !e.dateISO || e.dateISO.slice(0, 10) >= iso);
+// Sign-up details come from the calendar copy of the same program (same link).
+const signupByLink = new Map(libraryCalendar.filter((c) => c.signup?.required).map((c) => [c.link, c.signup]));
+const signupNote = (sg) => sg ? ` (registration required${sg.inPerson ? ", in person" : ""}${sg.cost ? `, ${sg.cost}` : ""})` : "";
 const libraryBlock = libraryUpcoming.length
-  ? libraryUpcoming.slice(0, 5).map((e) => `- **${e.dateLabel}** — ${link(e.title, e.link)}`).join("\n") +
+  ? libraryUpcoming.slice(0, 5).map((e) => `- **${e.dateLabel}** — ${link(e.title, e.link)}${signupNote(signupByLink.get(e.link))}`).join("\n") +
     (libraryUpcoming.length > 5 ? `\n- ${link(`${libraryUpcoming.length - 5} more programs on the library calendar`, "https://marylcook-main-oh.whofi.com/calendar/full")}` : "")
+  : null;
+
+// Sign-up reminders: library and Caesar Creek programs that need registration
+// and happen in the next 7 days, or whose registration opens in the next 3.
+// Same rules as signupReminders() in src/lib/events.js (the events page box).
+const addDaysISO = (n) => new Date(new Date(iso + "T12:00:00Z").getTime() + n * 86_400_000).toISOString().slice(0, 10);
+const etISO = (d) => new Date(d).toLocaleDateString("en-CA", { timeZone: "America/New_York" });
+const fmtShortDay = (d) => new Date(d + "T12:00:00Z").toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric", timeZone: "UTC" });
+// Programs already listed in the library block carry their note there.
+const inLibraryBlock = new Set(libraryUpcoming.slice(0, 5).map((e) => e.link));
+const signupSoon = [...libraryCalendar, ...caesarCreekEvents]
+  .filter((e) => e.signup?.required && e.dateISO && etISO(e.dateISO) >= iso && !inLibraryBlock.has(e.link))
+  .map((e) => {
+    const s = e.signup, day = etISO(e.dateISO);
+    let when;
+    if (s.opens && s.opens > iso) { if (s.opens > addDaysISO(3)) return null; when = `registration opens ${fmtShortDay(s.opens)}`; }
+    else if (s.deadline && s.deadline >= iso) when = `sign up by ${fmtShortDay(s.deadline)}`;
+    else if (day <= addDaysISO(7)) when = "registration required";
+    else return null;
+    const how = [s.inPerson && "in person", s.cost].filter(Boolean).join(", ");
+    return { e, day, line: `${when}${how ? ` (${how})` : ""}` };
+  })
+  .filter(Boolean)
+  .sort((a, b) => a.day.localeCompare(b.day));
+const signupBlock = signupSoon.length
+  ? signupSoon.slice(0, 3).map(({ e, line }) => `- **${e.dateLabel}** — ${link(e.title, e.link)}: ${line}`).join("\n")
   : null;
 
 // Facebook is robots-blocked, so the writer can't open the posts — the excerpt
@@ -612,7 +646,7 @@ ${weekendBlock ? `\n## Weekend planner\n${weekendBlock}\n` : ""}
 ## Schools
 TODO — Wayne Local board, Spartans, closings, library programs. Check:
 ${listSrc("Schools")}
-${boardRecapSchoolsBlock ? `\n${boardRecapSchoolsBlock}\n` : ""}${fbBlock ? `\n${fbBlock}\n` : ""}${libraryBlock ? `\n**Library programs** (Mary L. Cook Public Library)\n${libraryBlock}\n` : ""}
+${boardRecapSchoolsBlock ? `\n${boardRecapSchoolsBlock}\n` : ""}${fbBlock ? `\n${fbBlock}\n` : ""}${libraryBlock ? `\n**Library programs** (Mary L. Cook Public Library)\n${libraryBlock}\n` : ""}${signupBlock ? `\n**Sign up soon** (registration needed; full list on /events/)\n${signupBlock}\n` : ""}
 ${sportsBlock ? `\n## This week in sports\n${sportsBlock}\n` : ""}
 ## Local government
 Next up: **${meeting.body}**, ${meeting.whenLabel} — ${nextAgendaLinks}.${latestCommissioners ? `\nLatest posted by the commissioners: ${latestCommissioners}.` : ""}

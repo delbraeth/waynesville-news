@@ -2,11 +2,21 @@
 import Base from "../layouts/Base.astro";
 import SeasonalGuide from "../components/SeasonalGuide.astro";
 import eventsData from "../data/events.json";
-import { upcomingEvents, isLocalEvent } from "../lib/events.js";
+import { upcomingEvents, isLocalEvent, signupReminders } from "../lib/events.js";
 import { icsHref, googleCalendarUrl } from "../lib/ical.js";
 import { eventList } from "../lib/structuredData.js";
 
 const upcoming = upcomingEvents();
+const reminders = signupReminders(14);
+const signupText = (e: any) => {
+  const s = e.signup;
+  if (!s) return "";
+  if (!s.required) return "No registration needed";
+  const fmt = (d: string) => new Date(d + "T12:00:00").toLocaleDateString("en-US", { month: "short", day: "numeric" });
+  const today = new Date().toLocaleDateString("en-CA", { timeZone: "America/New_York" });
+  return ["Registration required", s.opens && s.opens > today && `opens ${fmt(s.opens)}`, s.deadline && `by ${fmt(s.deadline)}`, s.inPerson && "in person", s.cost]
+    .filter(Boolean).join(", ");
+};
 
 const evergreen = eventsData.items.filter((e) => e.evergreen).map((e) => ({ ...e, _local: isLocalEvent(e) }));
 const regionalCount = upcoming.filter((e) => !e._local).length;
@@ -21,6 +31,22 @@ const submitMail = "mailto:editor@waynesville.news?subject=" + encodeURIComponen
     </p>
 
     <SeasonalGuide />
+
+    {reminders.length > 0 && (
+      <section class="ev-signup" aria-labelledby="ev-signup-h">
+        <h3 id="ev-signup-h">Sign up soon</h3>
+        <p class="small muted">Programs that need registration, in the next two weeks or opening for sign-up this week.</p>
+        <ul>
+          {reminders.map((e) => (
+            <li>
+              <a href={e.source} target="_blank" rel="noopener">{e.title}</a>
+              <span class="muted"> · {e.dateLabel}</span>
+              <div class="ev-signup-line">{e.signupLine}</div>
+            </li>
+          ))}
+        </ul>
+      </section>
+    )}
 
     <h3>Upcoming</h3>
     <div class="ev-filter">
@@ -50,6 +76,7 @@ const submitMail = "mailto:editor@waynesville.news?subject=" + encodeURIComponen
               {e.venue}{e.note ? ` · ${e.note}` : ""}
               {e.registrationUrl && <> · <a href={e.registrationUrl} target="_blank" rel="noopener">Register</a></>}
             </div>
+            {e.signup?.required && <div class="ev-signup-line">{signupText(e)}</div>}
             <div class="ev-add">
               Add to calendar:
               <a href={icsHref(e)} download>Apple / Outlook</a> ·

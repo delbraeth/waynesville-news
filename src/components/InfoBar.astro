@@ -1,8 +1,23 @@
 ---
 import weather from "../data/weather.json";
 import { nextCommissionersMeeting } from "../lib/nextMeeting.js";
+import { upcomingEvents } from "../lib/events.js";
 
-const meeting = nextCommissionersMeeting();
+// Local bodies first (editor, 2026-11-07): the next Village Council or school
+// board meeting on the events calendar within three weeks; the County
+// Commissioners only when neither is coming up.
+const LOCAL_BODIES: [RegExp, string][] = [
+  [/village council/i, "Village Council"],
+  [/board of education|school board/i, "School Board"],
+];
+const now = Date.now();
+const local = upcomingEvents()
+  .filter((e) => e._d.getTime() > now && e._d.getTime() - now < 21 * 86400000)
+  .map((e) => ({ e, body: LOCAL_BODIES.find(([re]) => re.test(e.title))?.[1] }))
+  .find((x) => x.body);
+const meeting = local
+  ? { body: local.body, whenLabel: local.e.dateLabel }
+  : nextCommissionersMeeting();
 ---
 <div class="infobar">
   <div class="inner">
@@ -14,7 +29,7 @@ const meeting = nextCommissionersMeeting();
     )}
     <span class="item">
       <span class="label">Next Meeting</span>
-      <strong>{meeting.body}</strong> · {meeting.whenLabel}
+      <strong>{meeting.body}</strong> · {meeting.whenLabel}{local && <> · <a href="/events/">details</a></>}
     </span>
     <span class="spacer"></span>
     <span class="item"><a href="/events/">This week’s events →</a></span>

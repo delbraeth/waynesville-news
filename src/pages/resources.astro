@@ -1,6 +1,7 @@
 ---
 import Base from "../layouts/Base.astro";
 import data from "../data/resources.json";
+import { slug } from "../lib/slug.js";
 
 type Link = { label: string; url: string };
 type Item = {
@@ -47,7 +48,7 @@ const hasOrgs = orgData.items.length > 0;
         {s.intro && <p class="small">{s.intro}</p>}
         <ul class="res-list">
           {s.items.map((it) => (
-            <li>
+            <li id={slug(it.name)}>
               <div class="res-name">
                 {it.link ? <a href={it.link} target="_blank" rel="noopener">{it.name}</a> : it.name}
               </div>

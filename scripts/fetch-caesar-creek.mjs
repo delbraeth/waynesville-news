@@ -17,6 +17,7 @@
 // nothing is inferred from geography.
 import { writeFile } from "node:fs/promises";
 import { keepOrExpire } from "./lib/stale-cache.mjs";
+import { parseSignup } from "./lib/signup.mjs";
 
 const API_URL =
   "https://ohiodnr.gov/wps/odx-common/content/search/odnr.en?q=authoringTemplate:Event&size=2000";
@@ -92,14 +93,18 @@ async function main() {
     const end = Number.isFinite(endMs) && endMs > startMs ? new Date(endMs) : null;
     const timeRange = end ? `${fmtTime(start)}–${fmtTime(end)}` : fmtTime(start);
 
+    const summary = collapse(el.summary) || null;
+    const signup = summary ? parseSignup(summary, start.toISOString()) : null;
     items.push({
       title: stripParkSuffix(title) || title,
       dateISO: start.toISOString(),
+      ...(end ? { endISO: end.toISOString() } : {}),
       dateLabel: `${fmtDate(start)} · ${timeRange}`,
       // Where to actually show up — ODNR puts the meeting point here.
       meetAt: collapse(el.locationName) || null,
-      summary: collapse(el.summary) || null,
+      summary,
       link: eventURL(src.contentPath) ?? CALENDAR_URL,
+      ...(signup ? { signup } : {}),
     });
   }
 

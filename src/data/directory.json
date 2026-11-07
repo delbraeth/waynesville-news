@@ -1,6 +1,6 @@
 {
-  "_note": "Local business directory. Built by scripts/fetch-directory.mjs from the Waynesville Area Chamber of Commerce's public member directory (name, location, phone, website, and the Chamber's description, as published) plus hand-added listings in directory-manual.json. Contact names, emails and hours are deliberately not copied. Do not edit by hand — edit directory-manual.json and re-run `npm run refresh:directory` (or `npm run refresh:directory -- --manual-only` to merge manual edits without re-reading the Chamber site).",
-  "updated": "2026-11-06T20:22:28.111Z",
+  "_note": "Local business directory. Built by scripts/fetch-directory.mjs from the Waynesville Area Chamber of Commerce's public member directory (name, location, phone, website, and the Chamber's description, as published) plus hand-added listings in directory-manual.json. Contact names, emails and hours are deliberately not copied from the Chamber; an hours line appears only when the owner supplied it (hours + hoursChecked in directory-manual.json). Do not edit by hand — edit directory-manual.json and re-run `npm run refresh:directory` (or `npm run refresh:directory -- --manual-only` to merge manual edits without re-reading the Chamber site).",
+  "updated": "2026-11-07T06:41:30.289Z",
   "sections": [
     {
       "id": "food",
@@ -1952,6 +1952,23 @@
       "from": "chamber"
     },
     {
+      "id": "manual-jamiegabbardglasshouserealty",
+      "name": "Jamie Gabbard – Glass House Realty",
+      "location": "220 N. Main St., Waynesville, OH 45068",
+      "phone": "513-594-5066",
+      "sections": [
+        "realestate"
+      ],
+      "kinds": [
+        "Real Estate Agent"
+      ],
+      "source": "https://glasshouserealty.com/agents/Jamie-Gabbard/8886958 (agent page, checked 2026-11-07; link from the editor) ; https://waynesvilleshops.com/merchant-association-directory/ (2026 member list; listing by name OK'd by the editor, 2026-11-07)",
+      "website": "https://glasshouserealty.com/agents/Jamie-Gabbard/8886958",
+      "about": "Real estate agent with Glass House Realty, serving Waynesville; a 2026 member of the Waynesville Merchants Association.",
+      "local": true,
+      "from": "manual"
+    },
+    {
       "id": "chamber-281",
       "name": "Jamie Gabbard Group / Glasshouse Realty",
       "location": "220 North Main Street, Waynesville, Ohio 45068",
@@ -2278,6 +2295,27 @@
       "from": "manual"
     },
     {
+      "id": "manual-luckykat",
+      "name": "Lucky Kat",
+      "location": "185 S. Main St., Waynesville, OH 45068",
+      "phone": "",
+      "sections": [
+        "shop"
+      ],
+      "kinds": [
+        "Boutique",
+        "Women's Clothing"
+      ],
+      "source": "https://www.ohioslargestplayground.com/directory/lucky-kat/ ; https://waynesvilleshops.com/merchant-association-directory/ (2026 member list)",
+      "website": "http://shopluckykat.com/",
+      "social": {
+        "facebook": "https://www.facebook.com/shopluckykat"
+      },
+      "about": "Downtown boutique selling women's clothing, shoes and accessories.",
+      "local": true,
+      "from": "manual"
+    },
+    {
       "id": "chamber-764",
       "name": "Lytle Grove LLC",
       "location": "Centerville, Ohio",
@@ -2368,7 +2406,7 @@
       ],
       "source": "https://www.waynesvilleohio.com/directory/listing/596",
       "website": "",
-      "about": "",
+      "about": "Fast-food restaurant on South Main Street.",
       "local": true,
       "from": "chamber"
     },
@@ -2748,6 +2786,28 @@
       "from": "manual"
     },
     {
+      "id": "manual-pastperfectantiques",
+      "name": "Past Perfect Antiques",
+      "location": "77 S. Main St., Waynesville, OH 45068",
+      "phone": "513-855-4315",
+      "sections": [
+        "shop"
+      ],
+      "kinds": [
+        "Antiques",
+        "Collectibles",
+        "Vintage"
+      ],
+      "source": "https://waynesvilleshops.com/antique-shops-and-malls/ ; https://www.ohioslargestplayground.com/directory/past-perfect-antiques/ (phone is the cell number on the Merchants listing; OK'd by the editor, 2026-11-07)",
+      "website": "",
+      "social": {
+        "facebook": "https://www.facebook.com/pastperfectwaynesvilleohio"
+      },
+      "about": "Antiques shop with several local dealers selling antiques, collectibles and vintage home accessories.",
+      "local": true,
+      "from": "manual"
+    },
+    {
       "id": "manual-patsplace",
       "name": "Pat's Place",
       "location": "223 N. Main St., Waynesville, OH 45068",
@@ -2816,6 +2876,28 @@
       "about": "",
       "local": false,
       "from": "chamber"
+    },
+    {
+      "id": "manual-petalvintage",
+      "name": "Petal Vintage",
+      "location": "55 S. Main St., Waynesville, OH 45068",
+      "phone": "",
+      "sections": [
+        "shop"
+      ],
+      "kinds": [
+        "Vintage",
+        "Antiques"
+      ],
+      "source": "https://waynesvilleshops.com/antique-shops-and-malls/name/reas-fancy/ ; https://waynesvilleshops.com/merchant-association-directory/ (2026 member list)",
+      "website": "",
+      "social": {
+        "facebook": "https://www.facebook.com/petalvintage",
+        "instagram": "https://www.instagram.com/petalvintageshop"
+      },
+      "about": "Vintage shop on Main Street.",
+      "local": true,
+      "from": "manual"
     },
     {
       "id": "manual-prairieviewstorage",
@@ -3441,6 +3523,23 @@
       "from": "manual"
     },
     {
+      "id": "manual-stetsonhouse",
+      "name": "The Stetson House",
+      "location": "Main Street, downtown Waynesville, OH",
+      "phone": "",
+      "sections": [
+        "stay"
+      ],
+      "kinds": [
+        "Vacation Rental"
+      ],
+      "source": "https://waynesvilleshops.com/lodging-food-and-entertainment/name/the-stetson-house-airbnb/ ; https://www.airbnb.com/rooms/1486219445716202206",
+      "website": "https://www.airbnb.com/rooms/1486219445716202206",
+      "about": "Historic cottage on Main Street in downtown Waynesville, rented as a whole home through Airbnb (one bedroom, sleeps three).",
+      "local": true,
+      "from": "manual"
+    },
+    {
       "id": "chamber-757",
       "name": "The Tartan Turtle Ltd.",
       "location": "69 S. Main St, Waynesville, OH 45068",
@@ -4026,6 +4125,50 @@
       "about": "Wenches of Wormwood is a locally owned small business specializing in loose-leaf teas, herbal blends, crystals, spiritual and metaphysical goods, and thoughtfully curated gifts. Our shop combines traditional herbal knowledge with modern wellness, creativity, and a touch of…",
       "local": true,
       "from": "chamber"
+    },
+    {
+      "id": "manual-wendystreasures",
+      "name": "Wendy's Treasures",
+      "location": "Waynesville, OH",
+      "phone": "",
+      "sections": [
+        "shop"
+      ],
+      "kinds": [
+        "Antiques",
+        "Collectibles",
+        "Coins"
+      ],
+      "source": "https://www.ohioslargestplayground.com/directory/wendys-treasures/ ; https://waynesvilleshops.com/merchant-association-directory/ (2026 member list). Street address left off: the visitors bureau's 174 Main St. is now the Chamber's office.",
+      "website": "",
+      "social": {
+        "facebook": "https://www.facebook.com/profile.php?id=100057480008339"
+      },
+      "about": "Antiques, collectibles and new merchandise: coins, stamps, diecast cars, knives and swords, signs, antique lamps, china and furniture.",
+      "local": true,
+      "from": "manual"
+    },
+    {
+      "id": "manual-windmillfarmmarket",
+      "name": "Windmill Farm Market",
+      "location": "1454 E. State Route 73, Springboro, OH 45066",
+      "phone": "937-885-3965",
+      "sections": [
+        "farm"
+      ],
+      "kinds": [
+        "Farm Market",
+        "Fall Festival",
+        "Hayrides"
+      ],
+      "source": "https://waynesvilleshops.com/area-venues-events-and-attractions/name/windmill-farm-market/ ; https://www.windmillfarmmarket.com/",
+      "website": "https://www.windmillfarmmarket.com/",
+      "social": {
+        "facebook": "http://www.facebook.com/pages/Windmill-Farm-Market/308958077732"
+      },
+      "about": "Farm market with greenhouses, produce and farm animals; its fall festival has an adventure hayride. Check its website for seasonal hours.",
+      "local": false,
+      "from": "manual"
     },
     {
       "id": "chamber-727",

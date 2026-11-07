@@ -1,11 +1,8 @@
-# Editor to-do list (from the 2026-11-06 session)
+# Editor to-do list (started 2026-11-06, updated 2026-11-07)
 
-Open items from the day's work. Check items off as they're done.
+Open items first; what's done is logged at the bottom. Check items off as they're done.
 
-## 1. Merge
-- [ ] **PR #115**: reviewer fixes, the Visiting Waynesville page (`/visit/`) and the "No targeted ads. No algorithm." statement.
-
-## 2. Fill in details only the editor can confirm
+## 1. Fill in details only the editor can confirm
 For each entry: fill in the confirmed fields, set `verified` to the date checked, add a `source` (or "Confirmed by the editor" plus how), and delete `toConfirm`.
 
 **Churches** (`src/data/churches.json`)
@@ -16,46 +13,61 @@ For each entry: fill in the confirmed fields, set `verified` to the date checked
 - [ ] Corwin Pentecostal
 - [ ] Silver Grove Baptist (Oregonia): still active?
 - [ ] Ridgeville Community Church: listing sites give conflicting phone numbers
-- [ ] Service times for St. Augustine and Waynesville UMC (their sites block automated checks)
+- [ ] St. Augustine phone: listings disagree (513-897-2821 vs. 513-897-0545), so it's left off
+- [ ] Waynesville UMC service times (waynesvilleumc.org is down; the Facebook page doesn't show times without logging in)
 
 **Community organizations** (`src/data/organizations.json`)
-- [ ] Progressive Women's Club: meeting place (Methodist church or Quaker Heights?)
+- [ ] Progressive Women's Club: meeting place (Methodist church or Quaker Heights?); left off until known
 - [ ] American Legion Post 615
 - [ ] Scouting: which of Pack 840, Troops 51 / 1051 / 318, Crew 6151 are active
-- [ ] Waynesville Spartan Lacrosse Club: grades, fees, sign-up dates (club site was blocked from the session)
+- [ ] Waynesville Lacrosse Club: fees (not on the club's home page)
 - [ ] Waynesville Youth Basketball Association: season and contact
 - [ ] Youth wrestling, band boosters, Friends of the Library
 - [ ] Rotary: which club? (District 6670 lists none in Waynesville; nearest is Lebanon)
 
-**Visiting Waynesville** (`src/data/visit.json`): no official source could be read for these
+**Visiting Waynesville** (`src/data/visit.json`)
 - [ ] Caesar Creek State Park and nature center hours
-- [ ] Corwin trailhead parking and restrooms
 - [ ] Typical downtown shop hours
-- [ ] DORA hours and boundaries
+- [ ] DORA boundaries: not on the Merchants' DORA page. They'd be in the village council ordinance that created it, or ask the Merchants Association / village office
 
-**Directory: places to eat and stay** (`src/data/directory-manual.json`)
+**Directory: Merchants Association members** (`src/data/directory-manual.json`)
+- [ ] Wendy's Treasures: current street address (the visitors bureau's 174 Main St. is now the Chamber's office) and phone
+- [ ] Blitzen & Pine Christmas Shop: not added; only its name and Facebook page are official. Needs an address (a craft site says 275 Miami St.)
+- [ ] Red Brick Social Room: not added; event venue, only name and Facebook official. Listing sites say the 1836 Red Brick Meeting House, 407 High St., up to 120 guests
+
+**Directory: places to eat and stay**
 - [ ] Possibly missing; found only on listing sites, so not added: Remember When Tea Room (370 Old Stage Rd), Sun Sprouts Cafe and The Corwin Peddler (Corwin, by the trail), Terrapin Village B&B (Oregonia), Miller's Campground (6964 Townshipline Rd; its website now redirects to a for-sale page), Sinclair House B&B
-- Coffee Hub (415 S. Main) is closed, per the editor (2026-11-06); not added.
-- Hammel House Inn: rooms open; restaurant expected to reopen soon (editor, 2026-11-06). Listing updated.
-- [ ] Roscoe's (Coletranes) Pizza: one listing site marks it closed. Still open?
-- [ ] McDonald's: no official description found; add one or leave blank
 
-## 3. Check
+**Directory hours (new, optional)**
+- [ ] When an owner gives you their hours, add `"hours": "Tue–Sat 10–5"` and `"hoursChecked": "YYYY-MM-DD"` to their listing (or a `recategorize` entry for a Chamber listing) and run `npm run refresh:directory -- --manual-only`. Never copy hours from listing sites.
+
+## 2. Check
 - [ ] The STEP 1 edit to the daily routine took effect (the run report should show a permits refresh)
 - [ ] `main` was force-updated on the morning of 2026-11-06, before the daily run. Confirm that was expected.
+- [ ] After the next daily run: library and Caesar Creek programs appear on /events/ and the "Sign up soon" box looks right (both feeds were refreshed during the 2026-11-06 daily run)
 
-## 4. Decide
-- [ ] Show Village Council and school board dates before the County Commissioners in the info bar?
+## 3. Decide
 - [ ] A Friday "This weekend in Waynesville" email for visitors, separate from the daily brief?
-- [ ] Optional owner-supplied hours lines in the directory (still text-only)?
 - [ ] Supporter page fixes: name the Patreon business tier, mention receipts, show the supporter's phone as promised
 - On hold (no action): human review before publishing; directory photos
 
-## 5. Next builds (pick one)
+## 4. Next builds (pick one)
 - [ ] School status badge (open / delay / closed) and a school calendar (top parent ask)
 - [ ] Shorter Schools page that opens with a "This week" summary
-- [ ] Site-wide search (directory, community, resources, visit), with exact matches ranked first
-- [ ] Corrections policy page and public corrections log
-- [ ] Tips and corrections forms (events already has one)
-- [ ] Library programs and Caesar Creek events added to the calendar automatically, plus sign-up reminders
+- [ ] Corrections policy page and public corrections log (the correction form is live at /corrections/submit/; a policy page could live at /corrections/)
 - [ ] Lighter fonts (about 90% of page weight; would save about 120 KB per page)
+
+## Done
+**PR #115 (merged 2026-11-06):** reviewer fixes, the Visiting Waynesville page, "No targeted ads. No algorithm."
+
+**PR #117 (2026-11-07):**
+- Site-wide search: directory, community, churches, resources and visit listings, exact name matches first, above brief/story results
+- Tips and corrections forms: /tips/ and /corrections/submit/, linked from the footer, About, briefs and stories
+- Library programs (next 45 days) and Caesar Creek programs on the events calendar automatically, with a "Sign up soon" box on /events/ and sign-up notes in the brief draft
+- Owner-supplied hours lines in the directory (`hours` + `hoursChecked`)
+- Info bar shows the next Village Council or school board meeting before the County Commissioners
+- Directory: Past Perfect Antiques phone added (editor: cell numbers a business lists publicly on other sites are OK to publish); Jamie Gabbard – Glass House Realty (agent page, phone, 220 N. Main St.); Lucky Kat, Petal Vintage, Past Perfect Antiques, The Stetson House, Wendy's Treasures, Windmill Farm Market (Springboro); McDonald's described as fast food; Roscoe's open; Coffee Hub and Mami Fina's closed; Hammel House rooms open, restaurant reopening soon
+- Visit: DORA hours (every day, noon to 10 p.m.); Corwin trailhead facilities (trail map); walking-tour link
+- Community: Waynesville Lacrosse Club (grades, season, register by Nov 30 to avoid late fee); The Bridge; Progressive Women's Club confirmed active (Facebook only)
+- Churches: St. Augustine Mass times; Waynesville UMC linked to its Facebook page
+- Events: Town Square Days, "Step into Stars Hollow," Nov 21–22, 10 AM–7 PM
