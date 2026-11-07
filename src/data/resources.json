@@ -283,6 +283,20 @@
           "verified": "2026-11-05"
         },
         {
+          "name": "The Bridge (community outreach)",
+          "what": "Free food pantry, free showers and laundry, free counseling on Fridays by appointment, community dinners, and a shoe and coat giveaway. Open Thursdays 1–4 p.m.; Tuesdays, Wednesdays and Fridays by appointment between 9 a.m. and 4 p.m. Email to schedule; allow 24 hours for a reply.",
+          "address": "275 North St., Waynesville",
+          "link": "https://www.thebridgewaynesville.org",
+          "links": [
+            {
+              "label": "thebridgewaynesville@gmail.com",
+              "url": "mailto:thebridgewaynesville@gmail.com"
+            }
+          ],
+          "source": "https://www.thebridgewaynesville.org",
+          "verified": "2026-11-07"
+        },
+        {
           "name": "Elderly Services Program (Warren County Community Services)",
           "what": "Help for Warren County residents 60 and older who need help with daily tasks such as bathing, cooking or transportation and aren’t covered by another payer such as Medicaid, Medicare, insurance or hospice. A care manager visits to build a care plan. Services can include home care, home-delivered meals, medical transportation, emergency pendants, minor home repairs such as ramps and grab bars, and adult day programs. Some seniors pay nothing; others pay part on a sliding scale. To apply, call the intake line.",
           "phone": "513-695-2271",
