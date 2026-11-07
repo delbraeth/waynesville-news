@@ -50,7 +50,7 @@ For each entry: fill in the confirmed fields, set `verified` to the date checked
 
 ## 3. Decide
 - Friday "This weekend in Waynesville" email: not now (editor, 2026-11-07)
-- [x] Supporter page fixes (2026-11-07): one Patreon link, with "choose the $10 a month tier"; receipts come from Patreon; not tax-deductible; listing promise is now phone and/or website. Cassidy Travel's phone added (editor)
+- [x] Supporter page fixes (2026-11-07): one Patreon link, with "choose the $10 a month tier"; receipts come from Patreon; not tax-deductible; listing promise is now phone and/or website. Cassidy Travel lists its website only; its phone is on that site (editor)
 - On hold (no action): human review before publishing; directory photos
 
 ## 4. Next builds
