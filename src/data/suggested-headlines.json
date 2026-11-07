@@ -1,14 +1,12 @@
 {
   "_note": "Candidate local headlines (Google News RSS). Published as a quoted headline (or, when available, a short publisher-written excerpt) + source + link; never reproduce article body text.",
-  "updated": "2026-11-06T11:42:01.547Z",
+  "updated": "2026-11-07T11:42:19.304Z",
   "items": [
     {
-      "title": "Lebanon Lawmaker Adam Mathews Named Legislator of the Year by Ohio Chamber of Commerce",
-      "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNRnpKR18zQk1wY0VwSnM0WlRQYnpZZS1LRXN2c3JxYjBfSFhfU2lWc1Nid3F4cVJIYmhOOTBsSzJ0Mk1RQ2ZvdEZWV2J5WnJiVjRZaGg1Q0QtYjhGWklsaVZLZklobDhwQjNRWVlNNVozWUVaMjhrcDFvVVFkSDFQaDhQdk5Ca21qRkhZMUlOa1pjVEp6VWFUX3BPMGRWZURNRnF3dlRKaENpTlNKRFZxdTlBcy0wQnFSWlhKZGhtWGE0QQ?oc=5",
-      "source": "Warren County Post",
-      "date": "Fri, 06 Nov 2026 03:25:22 GMT",
-      "sourceUrl": "https://warrencountypost.com/g/lebanon-oh/n/397380/lebanon-lawmaker-adam-mathews-named-legislator-year-ohio-chamber-commerce",
-      "excerpt": "Rep. Adam Mathews Honored with Ohio Chamber of Commerce Legislator of the Year Award"
+      "title": "ELECTION RESULTS | Warren County races",
+      "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQRFN1WXcxY21pZGpNSFlnZ0tfdkM1UGhGV3d3a2Z5bzVyZk52WG50SUtOZTJIdGVHQU1UZWxaN01Xc0NRR2tFamk4YldteHFTcWNhZTV3WHFTcHNsTzVsXzhGQV9HMTI1Yzl1Tzd5RjZUQ3BDNnpkNm9RanByZkU3YjdVZGd2Zw?oc=5",
+      "source": "WLWT",
+      "date": "Wed, 04 Nov 2026 05:18:00 GMT"
     },
     {
       "title": "Warren County, Ohio, election results – Nov. 3, 2026",
@@ -17,16 +15,18 @@
       "date": "Tue, 03 Nov 2026 17:30:32 GMT"
     },
     {
-      "title": "ELECTION RESULTS | Warren County races",
-      "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQRFN1WXcxY21pZGpNSFlnZ0tfdkM1UGhGV3d3a2Z5bzVyZk52WG50SUtOZTJIdGVHQU1UZWxaN01Xc0NRR2tFamk4YldteHFTcWNhZTV3WHFTcHNsTzVsXzhGQV9HMTI1Yzl1Tzd5RjZUQ3BDNnpkNm9RanByZkU3YjdVZGd2Zw?oc=5",
-      "source": "WLWT",
-      "date": "Wed, 04 Nov 2026 05:18:00 GMT"
+      "title": "Warren County Votes Push Zac Haines to Victory in Ohio Senate District 7 Race",
+      "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOZTRHajhmN1ppaUh0Rks3VTViUDc0cUl3MTZaUVYyWU12WW45VzYtMElsUjhrN001QnFEaTY0ekRGV3VUMzRjUGdiSzBDTGpLNUd2d3lQTTh3WXd0eFpvYWxhZ1lKd2RVY1J6TWU2b0pwU1NnM0xtc29PdlU5REcwRENZTl93MTVSTUw5Rk9CcktjNTBFblhvajd1cm9hWjIzRmQ3TW9XYkJxeDlLQVhzUEJ4QTBGaDRSbUNHSUJVOA?oc=5",
+      "source": "Warren County Post",
+      "date": "Wed, 04 Nov 2026 04:06:59 GMT"
     },
     {
       "title": "2026 NOVEMBER ELECTIONS: Latest Results for Warren County Ohio",
       "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPQVYwcGlHaGlYdjBDQ0RJaS0zV3FXUkN2M3dUbEpVQzBXdnphUWtSVjg2eXRIM1NFdTVKdTFUN2lrX3NxSWU3anhRNDVldWg4NXdKbkV2WUcwbWNOV09adnFveHNKTUZxRG5CTFFta2FtN2FGX00zQ3g5VDhJYkEyQkM3QmxrRUdFanRWbENlTS1UZUI2aHdDX0RpTkU2SXRhaVRNX2RFa1I4YUdIaW05all3?oc=5",
       "source": "Dayton Daily News",
-      "date": "Wed, 04 Nov 2026 00:20:00 GMT"
+      "date": "Wed, 04 Nov 2026 00:20:00 GMT",
+      "sourceUrl": "https://www.daytondailynews.com/election-results-warren-county/article_8bd2bd00-c8d3-544a-ab01-1d5f118e4fc2.html",
+      "excerpt": "The latest results for Ohio's November 3, 2026, election in Warren County, Ohio."
     },
     {
       "title": "Warren County, Ohio election results, Nov. 3, 2026",
@@ -35,22 +35,24 @@
       "date": "Tue, 03 Nov 2026 11:22:20 GMT"
     },
     {
-      "title": "Between Dayton And Cincinnati Is Ohio's Scenic Lake Park With Fishing, Trails, And Sporty Appeal",
-      "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQaTB5blhHOF92a0h6NlJ0UjdKbEpuektFUnVrU3lTeWtXZlFBcWpUY3Z2Q1V1ZWdMRlpsc1FocWZZNHdGbm9mN0dreHNBQV9uZjgxYjIxT0lLc1gzSGhkRzA1OWxoa1ZybTljd3JSYm5ZU3JNNGYtWno2OUh6ZzZoOE9HeUNIclBHMTRTaWpNeE1YNWhCRnVfQzNMM2dJQ2ZVazZ0eHE0RVA0Zy1ZNzh1U0c3R1JZT3VlTzFWMGI4QUdFS1R2OUZRZ2owcGl0U2c?oc=5",
-      "source": "https://www.islands.com/",
-      "date": "Sat, 31 Oct 2026 19:00:00 GMT"
-    },
-    {
-      "title": "Warren County Votes Push Zac Haines to Victory in Ohio Senate District 7 Race",
-      "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOZTRHajhmN1ppaUh0Rks3VTViUDc0cUl3MTZaUVYyWU12WW45VzYtMElsUjhrN001QnFEaTY0ekRGV3VUMzRjUGdiSzBDTGpLNUd2d3lQTTh3WXd0eFpvYWxhZ1lKd2RVY1J6TWU2b0pwU1NnM0xtc29PdlU5REcwRENZTl93MTVSTUw5Rk9CcktjNTBFblhvajd1cm9hWjIzRmQ3TW9XYkJxeDlLQVhzUEJ4QTBGaDRSbUNHSUJVOA?oc=5",
+      "title": "Lebanon Lawmaker Adam Mathews Named Legislator of the Year by Ohio Chamber of Commerce",
+      "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNRnpKR18zQk1wY0VwSnM0WlRQYnpZZS1LRXN2c3JxYjBfSFhfU2lWc1Nid3F4cVJIYmhOOTBsSzJ0Mk1RQ2ZvdEZWV2J5WnJiVjRZaGg1Q0QtYjhGWklsaVZLZklobDhwQjNRWVlNNVozWUVaMjhrcDFvVVFkSDFQaDhQdk5Ca21qRkhZMUlOa1pjVEp6VWFUX3BPMGRWZURNRnF3dlRKaENpTlNKRFZxdTlBcy0wQnFSWlhKZGhtWGE0QQ?oc=5",
       "source": "Warren County Post",
-      "date": "Wed, 04 Nov 2026 04:06:59 GMT"
+      "date": "Fri, 06 Nov 2026 03:25:22 GMT"
     },
     {
       "title": "Study proposes six connectors between I-75 and I-71 in northern Warren County",
       "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPdnRqdHhfSkFMdndPYldKeGtlcG16ZjlUVUw0cWlnRlpwSWthcExrNVB6a3Z4S0ZrM2JWaGRqMXNGbEpOUHhIaWpHU3VjZE9SR2huaW4tYkdCWlFDYUF3bm1TWU5VSE93M3g3SUliQUl3X3dHWTUzQTA4Q1J0QXl2MW82NWlON2hIN3g1VW9QUl9DRWV0?oc=5",
       "source": "Dayton Daily News",
       "date": "Thu, 05 Nov 2026 10:02:05 GMT"
+    },
+    {
+      "title": "Warren County Voters Renew Mental Health and Senior Services Levies; Turtlecreek Fire Levy Passes",
+      "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOaTFVNnlqMDExLW41d1ExZ3BXRmNoUllTT1YtdWp6SHFVZlItanhwemxoMVZXSm9CZlBOcElhakdxOFpYWmJYZENkNlFOOU9LRWx3bEtDcy1UZnh2SXk2V1IyeWNZeWdQVW0zNG5GeklLZkV1TXpUSVRWckFVb2dzcmtFV0pjLUx0ZVFDcVlJRGVDV0tWMExuSENtUG1LZ3JjM1RxXzc4d21XX1VDU0piUUw0VzI2WlhoQmc?oc=5",
+      "source": "Warren County Post",
+      "date": "Wed, 04 Nov 2026 03:26:55 GMT",
+      "sourceUrl": "https://warrencountypost.com/g/lebanon-oh/n/397174/warren-county-voters-renew-mental-health-and-senior-services-levies",
+      "excerpt": "Warren County voters approved property tax renewals"
     }
   ]
 }
