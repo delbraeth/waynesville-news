@@ -55,10 +55,11 @@ For each entry: fill in the confirmed fields, set `verified` to the date checked
 - [ ] School status badge (open / delay / closed) and a school calendar (top parent ask)
 - [ ] Shorter Schools page that opens with a "This week" summary
 - [ ] Corrections policy page and public corrections log (the correction form is live at /corrections/submit/; a policy page could live at /corrections/)
-- [ ] Lighter fonts (about 90% of page weight; would save about 120 KB per page)
 
 ## Done
 **PR #115 (merged 2026-11-06):** reviewer fixes, the Visiting Waynesville page, "No targeted ads. No algorithm."
+
+**Lighter fonts (2026-11-07):** Newsreader self-hosted as three static cuts, 67 KB instead of 195 KB from Google Fonts; homepage first visit drops from about 242 KB to about 115 KB, and no third-party font request
 
 **PR #117 (2026-11-07):**
 - Site-wide search: directory, community, churches, resources and visit listings, exact name matches first, above brief/story results
