@@ -153,6 +153,23 @@
           ]
         },
         {
+          "name": "Caesar Creek Nature Center",
+          "what": "The park's nature center, across the street from Pioneer Village: ambassador animals, a bird-viewing area, a playscape, education exhibits and hiking trails. Free naturalist programs year-round, most Thursdays, Fridays and Saturdays; see our calendar or call for hours.",
+          "phone": "513-897-2437",
+          "website": "https://caesarcreekstatepark.com/caesar-creek-state-park-nature-center/",
+          "links": [
+            {
+              "label": "Naturalist programs (our calendar)",
+              "url": "/events/"
+            }
+          ],
+          "source": [
+            "https://caesarcreekstatepark.com/caesar-creek-state-park-nature-center/"
+          ],
+          "sourceNote": "Nature Center Association of Caesar Creek page (editor's link, 2026-11-07). It gives no opening hours.",
+          "verified": "2026-11-07"
+        },
+        {
           "name": "Caesar's Creek Pioneer Village",
           "what": "Volunteer-run living-history village of historic buildings, on land leased in the state park. Grounds open dawn to dusk; the buildings open during events.",
           "source": [

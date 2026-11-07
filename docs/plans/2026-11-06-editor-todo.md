@@ -26,7 +26,7 @@ For each entry: fill in the confirmed fields, set `verified` to the date checked
 - [ ] Rotary: which club? (District 6670 lists none in Waynesville; nearest is Lebanon)
 
 **Visiting Waynesville** (`src/data/visit.json`)
-- [ ] Caesar Creek State Park and nature center hours
+- [ ] Caesar Creek State Park and nature center opening hours (the Nature Center is now listed from the Nature Center Association's page, with phone and program days, but that page gives no hours)
 - [ ] Typical downtown shop hours
 - [ ] DORA boundaries: not on the Merchants' DORA page. They'd be in the village council ordinance that created it, or ask the Merchants Association / village office
 
@@ -58,6 +58,8 @@ For each entry: fill in the confirmed fields, set `verified` to the date checked
 
 ## Done
 **PR #115 (merged 2026-11-06):** reviewer fixes, the Visiting Waynesville page, "No targeted ads. No algorithm."
+
+**Caesar Creek Nature Center (2026-11-07):** added to the Visit page from caesarcreekstatepark.com (editor's link): exhibits, free programs most Thu/Fri/Sat, 513-897-2437. Its events feed was checked but not added: it is mostly Cowan Lake programs, and the Caesar Creek ones are already on the calendar from ODNR
 
 **Scouting (2026-11-07):** Troops 51 and 1051 and Crew 6151 listed from troop-0051.trooptrack.com (editor's link): chartered to Waynesville Scouting, Wednesdays 7 p.m. at the American Legion, troop email and Facebook. The scoutmaster's name and cell number are left off (named individual)
 
