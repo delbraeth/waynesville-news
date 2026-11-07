@@ -84,10 +84,12 @@
         {
           "name": "DORA (outdoor refreshment area)",
           "what": "Inside the DORA, you can buy a drink from a participating bar or restaurant and carry it outside. Each shop decides whether drinks may come inside; look for a notice at the door.",
+          "hours": "Every day, noon to 10 p.m.",
           "source": [
             "https://waynesvilleshops.com/dora"
           ],
-          "verified": "2026-11-06",
+          "sourceNote": "Hours confirmed by the editor, 2026-11-07.",
+          "verified": "2026-11-07",
           "website": "https://waynesvilleshops.com/dora"
         }
       ]

@@ -32,7 +32,8 @@ For each entry: fill in the confirmed fields, set `verified` to the date checked
 - [ ] Caesar Creek State Park and nature center hours
 - [x] Corwin trailhead parking and restrooms: added from the Little Miami State Park trail map (editor's link, 2026-11-07)
 - [ ] Typical downtown shop hours
-- [ ] DORA hours and boundaries: not on the Merchants' DORA page (checked 2026-11-07). They'd be in the village council ordinance that created it, or ask the Merchants Association / village office (513-897-8015)
+- [x] DORA hours: every day, noon to 10 p.m. (editor, 2026-11-07)
+- [ ] DORA boundaries: not on the Merchants' DORA page. They'd be in the village council ordinance that created it, or ask the Merchants Association / village office
 
 - [x] Jamie Gabbard – Glass House Realty: phone, 220 N. Main St. office and agent page added from glasshouserealty.com (editor's link, 2026-11-07)
 
