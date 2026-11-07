@@ -555,3 +555,25 @@ a.dir-supporter, a.dir-supporter:hover { color: #fff; text-decoration: none; }
 .ev-signup li { padding: 0.35rem 0; }
 .ev-signup li + li { border-top: 1px solid var(--rule); }
 .ev-signup-line { font-size: 0.88rem; font-weight: 600; color: var(--accent-deep); }
+
+/* School status badge (src/components/SchoolStatus.astro) */
+.school-status { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.2rem 0.65rem; margin: 1rem 0; padding: 0.7rem 0.9rem; border: 1px solid var(--rule); border-left: 5px solid var(--muted); border-radius: 4px; background: var(--paper-2); font-family: var(--font-sans); }
+.school-status .ss-label { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em; color: var(--muted); width: 100%; }
+.school-status .ss-state { font-size: 1.15rem; }
+.school-status .ss-detail { font-size: 0.95rem; color: var(--ink-soft); }
+.school-status .ss-note { font-size: 0.78rem; color: var(--muted); width: 100%; }
+.school-status.ss-ok { border-left-color: #2e7d4f; }
+.school-status.ss-ok .ss-state { color: #2e7d4f; }
+.school-status.ss-warn { border-left-color: #b26a00; }
+.school-status.ss-warn .ss-state { color: #b26a00; }
+.school-status.ss-alert { border-left-color: var(--accent); background: color-mix(in srgb, var(--accent) 8%, var(--paper-2)); }
+.school-status.ss-alert .ss-state { color: var(--accent); }
+.school-status.ss-compact { margin: 0 0 1rem; padding: 0.5rem 0.8rem; }
+.school-status.ss-compact .ss-state { font-size: 1rem; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .school-status.ss-ok .ss-state { color: #6fcf97; } :root:not([data-theme="light"]) .school-status.ss-warn .ss-state { color: #f2b45c; } }
+:root[data-theme="dark"] .school-status.ss-ok .ss-state { color: #6fcf97; }
+:root[data-theme="dark"] .school-status.ss-warn .ss-state { color: #f2b45c; }
+
+/* Correction note at the end of a brief or story */
+.corr-note { margin: 1.5rem 0 1rem; padding: 0.7rem 0.9rem; border-left: 3px solid var(--accent); background: var(--paper-2); font-family: var(--font-sans); font-size: 0.9rem; }
+.corr-note ul { margin: 0.3rem 0; padding-left: 1.1rem; }

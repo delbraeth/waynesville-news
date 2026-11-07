@@ -18,14 +18,20 @@ const community: Link[] = [
   churchData.items.length > 0 && { label: "Churches", href: "/churches/" },
   orgData.items.length > 0 && { label: "Clubs & Nonprofits", href: "/community/" },
 ].filter(Boolean) as Link[];
-const before: Link[] = [
-  { label: "Daily Briefs", href: "/briefs/" },
+// Top bar (editor, 2026-11-07): eight items so it fits on one line. The
+// news sections share a "News" dropdown, like the Community one.
+const news: Link[] = [
   { label: "Stories", href: "/stories/" },
-  { label: "Events", href: "/events/" },
-  { label: "Schools", href: "/schools/" },
   { label: "Government", href: "/government/" },
   { label: "Public Safety", href: "/public-safety/" },
   { label: "Around Town", href: "/around-town/" },
+];
+const before: Link[] = [
+  { label: "Daily Briefs", href: "/briefs/" },
+];
+const middle: Link[] = [
+  { label: "Events", href: "/events/" },
+  { label: "Schools", href: "/schools/" },
   { label: "Directory", href: "/directory/" },
 ];
 const after: Link[] = [
@@ -33,7 +39,7 @@ const after: Link[] = [
   { label: "Subscribe", href: "#subscribe", cls: "nav-subscribe" },
 ];
 // Phone "More" menu: everything, Community pages included, plus About.
-const all: Link[] = [...before, ...community, { label: "Supporters", href: "/supporters/" }, { label: "About", href: "/about/" }, ...after];
+const all: Link[] = [...before, ...news, ...middle, ...community, { label: "Supporters", href: "/supporters/" }, { label: "About", href: "/about/" }, ...after];
 ---
 <header class="masthead">
   <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Switch to dark mode" title="Light or dark">☾</button>
@@ -44,6 +50,15 @@ const all: Link[] = [...before, ...community, { label: "Supporters", href: "/sup
 <nav class="mainnav" aria-label="Sections">
   <ul class="nav-full">
     {before.map((n) => <li><a href={n.href} class={n.cls}>{n.label}</a></li>)}
+    <li>
+      <details class="nav-drop">
+        <summary>News <span aria-hidden="true">▾</span></summary>
+        <ul>
+          {news.map((n) => <li><a href={n.href}>{n.label}</a></li>)}
+        </ul>
+      </details>
+    </li>
+    {middle.map((n) => <li><a href={n.href} class={n.cls}>{n.label}</a></li>)}
     <li>
       <details class="nav-drop">
         <summary>Community <span aria-hidden="true">▾</span></summary>
