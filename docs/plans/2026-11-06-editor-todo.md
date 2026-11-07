@@ -24,6 +24,7 @@ For each entry: fill in the confirmed fields, set `verified` to the date checked
 - [ ] Youth wrestling: ages, season and contact (Facebook page linked, 2026-11-07)
 - [ ] Band boosters: meeting schedule and contact (Facebook page linked, 2026-11-07)
 - [ ] Friends of the Library
+- [ ] Waynesville Area Arts Council (added 2026-11-07 with its Facebook page): programs, how to join, contact
 - [ ] Rotary: which club? (District 6670 lists none in Waynesville; nearest is Lebanon)
 
 **Visiting Waynesville** (`src/data/visit.json`)

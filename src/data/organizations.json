@@ -300,6 +300,18 @@
       "verified": "2026-11-05"
     },
     {
+      "name": "Waynesville Area Arts Council",
+      "category": "history-arts",
+      "what": "Local arts group behind community art programs, including workshops at the Mary L. Cook Public Library (such as the Gingerbread 101 workshop) and Art Class for Kids with the library.",
+      "facebook": "https://www.facebook.com/waynesvilleareaartscouncil/",
+      "source": [
+        "https://www.facebook.com/waynesvilleareaartscouncil/",
+        "https://marylcook-main-oh.whofi.com/calendar/full"
+      ],
+      "verified": "",
+      "toConfirm": "Facebook page from the editor's link (2026-11-07); Facebook can't be read from the session. The programs come from the library's calendar. Still needed: what else it runs, how to join or volunteer, and a public contact."
+    },
+    {
       "name": "Caesar's Creek Pioneer Village",
       "category": "history-arts",
       "what": "Volunteer-run, privately funded living-history village of historic buildings moved from the Caesar Creek area, on land leased in Caesar Creek State Park.",
