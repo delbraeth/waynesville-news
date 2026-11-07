@@ -1,0 +1,14 @@
+{
+  "_note": "Editor score corrections applied on top of MaxPreps by scripts/fetch-sports.mjs, for when MaxPreps has a score wrong. Match on date (YYYY-MM-DD, ET), sport and opponent (case-insensitive, substring). Set wayneScore and opponentScore; result (W/L/T) is recomputed. Remove an entry once MaxPreps is fixed or the game is out of the 7-day window.",
+  "items": [
+    {
+      "date": "2026-11-06",
+      "sport": "Football",
+      "level": "Varsity",
+      "opponent": "Preble Shawnee",
+      "wayneScore": 35,
+      "opponentScore": 13,
+      "reason": "Final was 35-13 per the editor (2026-11-07); MaxPreps shows 35-14."
+    }
+  ]
+}
