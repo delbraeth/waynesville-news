@@ -33,7 +33,7 @@ For each entry: fill in the confirmed fields, set `verified` to the date checked
 - [ ] DORA boundaries: not on the Merchants' DORA page. They'd be in the village council ordinance that created it, or ask the Merchants Association / village office
 
 **Directory: Merchants Association members** (`src/data/directory-manual.json`)
-- [ ] Wendy's Treasures: current street address (the visitors bureau's 174 Main St. is now the Chamber's office) and phone
+- [ ] Wendy's Treasures: phone (address 88 S. Main St. from the editor, 2026-11-07)
 - [ ] Blitzen & Pine Christmas Shop: not added; only its name and Facebook page are official. Needs an address (a craft site says 275 Miami St.)
 - [ ] Red Brick Social Room: not added; event venue, only name and Facebook official. Listing sites say the 1836 Red Brick Meeting House, 407 High St., up to 120 guests
 
