@@ -49,8 +49,8 @@ For each entry: fill in the confirmed fields, set `verified` to the date checked
 - [ ] After the next daily run: library and Caesar Creek programs appear on /events/ and the "Sign up soon" box looks right (both feeds were refreshed during the 2026-11-06 daily run)
 
 ## 3. Decide
-- [ ] A Friday "This weekend in Waynesville" email for visitors, separate from the daily brief?
-- [ ] Supporter page fixes: name the Patreon business tier, mention receipts, show the supporter's phone as promised
+- Friday "This weekend in Waynesville" email: not now (editor, 2026-11-07)
+- [x] Supporter page fixes (2026-11-07): one Patreon link, with "choose the $10 a month tier"; receipts come from Patreon; not tax-deductible; listing promise is now phone and/or website. Cassidy Travel's phone added (editor)
 - On hold (no action): human review before publishing; directory photos
 
 ## 4. Next builds

@@ -56,7 +56,7 @@ const prettyUrl = (u: string) => u.replace(/^https?:\/\/(www\.)?/, "").replace(/
         Help keep independent local news going in Waynesville. Business supporters get:
       </p>
       <ul>
-        <li>A listing on this page: your business name, what you do, phone and website.</li>
+        <li>A listing on this page: your business name, what you do, and your phone and website (whichever you'd like listed).</li>
         <li>A <span class="dir-supporter">★ Supporter</span> badge on your listing in the <a href="/directory/">Business Directory</a>.</li>
         <li>A "supported by" mention at the end of the audio Daily Brief and podcast, shared in rotation with other supporters.</li>
       </ul>
@@ -69,9 +69,13 @@ const prettyUrl = (u: string) => u.replace(/^https?:\/\/(www\.)?/, "").replace(/
           ? <><a class="sp-cta" href={tierUrl} target="_blank" rel="noopener">Become a business supporter →</a><br /></>
           : null}
         <span class="small">
-          {tierUrl ? "After you join, " : "To join, "}<a href={joinMail}>email the editor</a> your business name,
-          a one-line description, phone and website.
+          {tierUrl ? <>On Patreon, choose the {tierPrice ? <strong>{tierPrice}</strong> : "business"} tier. After you join, </> : "To join, "}<a href={joinMail}>email the editor</a> your business name,
+          a one-line description, and the phone and website you'd like listed.
         </span>
+      </p>
+      <p class="small">
+        Patreon handles billing and emails you a receipt for each payment; you can cancel anytime from your Patreon account.
+        Waynesville News isn't a nonprofit, so support isn't tax-deductible.
       </p>
     </div>
 
