@@ -16,7 +16,8 @@ For each entry: fill in the confirmed fields, set `verified` to the date checked
 - [ ] Corwin Pentecostal
 - [ ] Silver Grove Baptist (Oregonia): still active?
 - [ ] Ridgeville Community Church: listing sites give conflicting phone numbers
-- [ ] Service times for St. Augustine and Waynesville UMC (their sites block automated checks)
+- [x] St. Augustine Mass times added from CatholicMassTime.org (editor's link, 2026-11-07). Phone left off: listings disagree (513-897-2821 vs. 513-897-0545)
+- [ ] Service times for Waynesville UMC (its site blocks automated checks)
 
 **Community organizations** (`src/data/organizations.json`)
 - [ ] Progressive Women's Club: meeting place (Methodist church or Quaker Heights?)
