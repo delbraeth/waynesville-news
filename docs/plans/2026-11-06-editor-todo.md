@@ -37,6 +37,13 @@ For each entry: fill in the confirmed fields, set `verified` to the date checked
 
 - [x] Jamie Gabbard – Glass House Realty: phone, 220 N. Main St. office and agent page added from glasshouserealty.com (editor's link, 2026-11-07)
 
+**Directory: Merchants Association members** (`src/data/directory-manual.json`)
+Added 2026-11-07 from the 2026 member list: Lucky Kat, Petal Vintage, Past Perfect Antiques, The Stetson House (Airbnb), Wendy's Treasures, Windmill Farm Market (Springboro; marked outside the area).
+- [ ] Wendy's Treasures: current street address (the visitors bureau's 174 Main St. is now the Chamber's office) and phone
+- [ ] Past Perfect Antiques: OK to publish 513-855-4315? The Merchants listing labels it a cell number
+- [ ] Blitzen & Pine Christmas Shop: not added; only its name and Facebook page are official. Needs an address (a craft site says 275 Miami St.)
+- [ ] Red Brick Social Room: not added; event venue, only name and Facebook official. Listing sites say the 1836 Red Brick Meeting House, 407 High St., up to 120 guests
+
 **Directory: places to eat and stay** (`src/data/directory-manual.json`)
 - [ ] Possibly missing; found only on listing sites, so not added: Remember When Tea Room (370 Old Stage Rd), Sun Sprouts Cafe and The Corwin Peddler (Corwin, by the trail), Terrapin Village B&B (Oregonia), Miller's Campground (6964 Townshipline Rd; its website now redirects to a for-sale page), Sinclair House B&B
 - Coffee Hub (415 S. Main) is closed, per the editor (2026-11-06); not added.

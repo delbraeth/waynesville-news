@@ -894,6 +894,24 @@
       "source": "https://waynesvilleshops.com/specialty-shops-and-galleries/name/loveless-edge-1/"
     },
     {
+      "name": "Lucky Kat",
+      "sections": [
+        "shop"
+      ],
+      "kinds": [
+        "Boutique",
+        "Women's Clothing"
+      ],
+      "location": "185 S. Main St., Waynesville, OH 45068",
+      "phone": "",
+      "website": "http://shopluckykat.com",
+      "social": {
+        "facebook": "https://www.facebook.com/shopluckykat"
+      },
+      "about": "Downtown boutique selling women's clothing, shoes and accessories.",
+      "source": "https://www.ohioslargestplayground.com/directory/lucky-kat/ ; https://waynesvilleshops.com/merchant-association-directory/ (2026 member list)"
+    },
+    {
       "name": "Midwest Pay Link, Inc.",
       "sections": [
         "pro"
@@ -1026,6 +1044,25 @@
       "source": "https://www.campkern.org/groups-and-families/ozone-zipline-adventures"
     },
     {
+      "name": "Past Perfect Antiques",
+      "sections": [
+        "shop"
+      ],
+      "kinds": [
+        "Antiques",
+        "Collectibles",
+        "Vintage"
+      ],
+      "location": "77 S. Main St., Waynesville, OH 45068",
+      "phone": "",
+      "website": "",
+      "social": {
+        "facebook": "https://www.facebook.com/pastperfectwaynesvilleohio"
+      },
+      "about": "Antiques shop with several local dealers selling antiques, collectibles and vintage home accessories.",
+      "source": "https://waynesvilleshops.com/antique-shops-and-malls/ ; https://www.ohioslargestplayground.com/directory/past-perfect-antiques/ (phone listed there is labeled a cell number, so it's left off until the shop confirms it)"
+    },
+    {
       "name": "Pat's Place",
       "sections": [
         "shop",
@@ -1038,6 +1075,25 @@
       "location": "223 N. Main St., Waynesville, OH 45068",
       "about": "Gas station and convenience store on North Main Street selling lottery tickets, candy and ice cream.",
       "source": "Editor-confirmed (2026-11-03)"
+    },
+    {
+      "name": "Petal Vintage",
+      "sections": [
+        "shop"
+      ],
+      "kinds": [
+        "Vintage",
+        "Antiques"
+      ],
+      "location": "55 S. Main St., Waynesville, OH 45068",
+      "phone": "",
+      "website": "",
+      "social": {
+        "facebook": "https://www.facebook.com/petalvintage",
+        "instagram": "https://www.instagram.com/petalvintageshop"
+      },
+      "about": "Vintage shop on Main Street.",
+      "source": "https://waynesvilleshops.com/antique-shops-and-malls/name/reas-fancy/ ; https://waynesvilleshops.com/merchant-association-directory/ (2026 member list)"
     },
     {
       "name": "Rock Creek Renovation",
@@ -1153,6 +1209,20 @@
       "website": "https://www.secretgardenwaynesville.com",
       "about": "Sells made-in-America garden art such as concrete statuary, wrought iron, gazing globes and birdhouses, plus home gifts, a seasonal Halloween shop and year-round Christmas items. Does not sell live plants.",
       "source": "https://www.secretgardenwaynesville.com"
+    },
+    {
+      "name": "The Stetson House",
+      "sections": [
+        "stay"
+      ],
+      "kinds": [
+        "Vacation Rental"
+      ],
+      "location": "Main Street, downtown Waynesville, OH",
+      "phone": "",
+      "website": "https://www.airbnb.com/rooms/1486219445716202206",
+      "about": "Historic cottage on Main Street in downtown Waynesville, rented as a whole home through Airbnb (one bedroom, sleeps three).",
+      "source": "https://waynesvilleshops.com/lodging-food-and-entertainment/name/the-stetson-house-airbnb/ ; https://www.airbnb.com/rooms/1486219445716202206"
     },
     {
       "name": "Therapeutic Massage of Waynesville",
@@ -1520,6 +1590,44 @@
       "website": "https://kylestuder.com/",
       "about": "Independent, retirement-focused financial services firm in Waynesville. Helps individuals and families with retirement income planning, Social Security decisions, Medicare, long-term care planning, life insurance, and legacy and tax planning.",
       "source": "https://kylestuder.com/"
+    },
+    {
+      "name": "Wendy's Treasures",
+      "sections": [
+        "shop"
+      ],
+      "kinds": [
+        "Antiques",
+        "Collectibles",
+        "Coins"
+      ],
+      "location": "Waynesville, OH",
+      "phone": "",
+      "website": "",
+      "social": {
+        "facebook": "https://www.facebook.com/profile.php?id=100057480008339"
+      },
+      "about": "Antiques, collectibles and new merchandise: coins, stamps, diecast cars, knives and swords, signs, antique lamps, china and furniture.",
+      "source": "https://www.ohioslargestplayground.com/directory/wendys-treasures/ ; https://waynesvilleshops.com/merchant-association-directory/ (2026 member list). Street address left off: the visitors bureau's 174 Main St. is now the Chamber's office."
+    },
+    {
+      "name": "Windmill Farm Market",
+      "sections": [
+        "farm"
+      ],
+      "kinds": [
+        "Farm Market",
+        "Fall Festival",
+        "Hayrides"
+      ],
+      "location": "1454 E. State Route 73, Springboro, OH 45066",
+      "phone": "937-885-3965",
+      "website": "https://www.windmillfarmmarket.com/",
+      "social": {
+        "facebook": "http://www.facebook.com/pages/Windmill-Farm-Market/308958077732"
+      },
+      "about": "Farm market with greenhouses, produce and farm animals; its fall festival has an adventure hayride. Check its website for seasonal hours.",
+      "source": "https://waynesvilleshops.com/area-venues-events-and-attractions/name/windmill-farm-market/ ; https://www.windmillfarmmarket.com/"
     }
   ]
 }
