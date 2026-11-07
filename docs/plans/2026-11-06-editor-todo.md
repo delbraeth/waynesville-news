@@ -22,7 +22,8 @@ For each entry: fill in the confirmed fields, set `verified` to the date checked
 - [ ] Waynesville Lacrosse Club: fees (not on the club's home page)
 - [ ] Waynesville Youth Basketball Association: grades, season and registration dates (website and contact form added from waynesvilleyouthbasketball.com, 2026-11-07; the site lists no season details)
 - [ ] Youth wrestling: ages, season and contact (Facebook page linked, 2026-11-07)
-- [ ] Band boosters, Friends of the Library
+- [ ] Band boosters: meeting schedule and contact (Facebook page linked, 2026-11-07)
+- [ ] Friends of the Library
 - [ ] Rotary: which club? (District 6670 lists none in Waynesville; nearest is Lebanon)
 
 **Visiting Waynesville** (`src/data/visit.json`)

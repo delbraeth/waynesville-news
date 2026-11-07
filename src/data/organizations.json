@@ -104,9 +104,12 @@
       "name": "Waynesville Band Boosters",
       "category": "school",
       "what": "Parent group supporting Waynesville's school bands.",
-      "source": [],
+      "facebook": "https://www.facebook.com/WaynesvilleBandBoosters/",
+      "source": [
+        "https://www.facebook.com/WaynesvilleBandBoosters/"
+      ],
       "verified": "",
-      "toConfirm": "Contact, website or Facebook page, meeting schedule (seen only as a donor in a 2022 district post)."
+      "toConfirm": "Facebook page added from the editor's link (2026-11-07); Facebook can't be read from the session. Still needed: meeting schedule and a public contact."
     },
     {
       "name": "Waynesville Elementary PTO",
