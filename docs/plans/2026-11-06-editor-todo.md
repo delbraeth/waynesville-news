@@ -32,7 +32,7 @@ For each entry: fill in the confirmed fields, set `verified` to the date checked
 - [ ] Caesar Creek State Park and nature center hours
 - [x] Corwin trailhead parking and restrooms: added from the Little Miami State Park trail map (editor's link, 2026-11-07)
 - [ ] Typical downtown shop hours
-- [ ] DORA hours and boundaries
+- [ ] DORA hours and boundaries: not on the Merchants' DORA page (checked 2026-11-07). They'd be in the village council ordinance that created it, or ask the Merchants Association / village office (513-897-8015)
 
 **Directory: places to eat and stay** (`src/data/directory-manual.json`)
 - [ ] Possibly missing; found only on listing sites, so not added: Remember When Tea Room (370 Old Stage Rd), Sun Sprouts Cafe and The Corwin Peddler (Corwin, by the trail), Terrapin Village B&B (Oregonia), Miller's Campground (6964 Townshipline Rd; its website now redirects to a for-sale page), Sinclair House B&B
