@@ -30,7 +30,7 @@ For each entry: fill in the confirmed fields, set `verified` to the date checked
 
 **Visiting Waynesville** (`src/data/visit.json`): no official source could be read for these
 - [ ] Caesar Creek State Park and nature center hours
-- [ ] Corwin trailhead parking and restrooms
+- [x] Corwin trailhead parking and restrooms: added from the Little Miami State Park trail map (editor's link, 2026-11-07)
 - [ ] Typical downtown shop hours
 - [ ] DORA hours and boundaries
 

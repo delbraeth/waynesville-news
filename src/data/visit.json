@@ -104,7 +104,28 @@
             "http://www.ohioslargestplayground.com/directory/little-miami-scenic-trail/"
           ],
           "verified": "2026-11-06",
-          "website": "https://www.miamivalleytrails.org/trails/little-miami-scenic-trail"
+          "website": "https://www.miamivalleytrails.org/trails/little-miami-scenic-trail",
+          "links": [
+            {
+              "label": "Trail map (PDF)",
+              "url": "https://littlemiamistatepark.org/images/documents/maps/Little_Miami_Scenic_Trail_map.pdf"
+            }
+          ]
+        },
+        {
+          "name": "Corwin trailhead",
+          "what": "The closest trailhead to Waynesville, in the Village of Corwin. The trail map shows parking, restrooms, picnic tables, wheelchair access and canoe access on the Little Miami River there. From Corwin it's 7 miles north to Spring Valley (and about 14 more to Xenia) or 14.2 miles south to Morrow. Caesar Creek State Canoe Access is just south of the village.",
+          "website": "https://littlemiamistatepark.org/images/documents/maps/Little_Miami_Scenic_Trail_map.pdf",
+          "links": [
+            {
+              "label": "Trail map (PDF)",
+              "url": "https://littlemiamistatepark.org/images/documents/maps/Little_Miami_Scenic_Trail_map.pdf"
+            }
+          ],
+          "source": [
+            "https://littlemiamistatepark.org/images/documents/maps/Little_Miami_Scenic_Trail_map.pdf"
+          ],
+          "verified": "2026-11-07"
         }
       ]
     },
