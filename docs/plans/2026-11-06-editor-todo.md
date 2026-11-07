@@ -39,7 +39,7 @@ For each entry: fill in the confirmed fields, set `verified` to the date checked
 - Coffee Hub (415 S. Main) is closed, per the editor (2026-11-06); not added.
 - Hammel House Inn: rooms open; restaurant expected to reopen soon (editor, 2026-11-06). Listing updated.
 - [x] Roscoe's (Coletranes) Pizza: open, per the editor (2026-11-07). Listing stays.
-- [ ] McDonald's: no official description found; add one or leave blank
+- [x] McDonald's: described simply as a fast-food restaurant (editor, 2026-11-07)
 
 ## 3. Check
 - [ ] The STEP 1 edit to the daily routine took effect (the run report should show a permits refresh)
