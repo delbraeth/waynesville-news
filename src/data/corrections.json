@@ -3,6 +3,13 @@
   "items": [
     {
       "date": "2026-11-07",
+      "page": "/community/",
+      "what": "Scouting units",
+      "wrong": "Listed Cub Scout Pack 840 and Scouts BSA Troop 318 (as unconfirmed, from older sources).",
+      "right": "Removed: those units don't exist. Troops 51 and 1051 and Crew 6151 are Waynesville's scouting units."
+    },
+    {
+      "date": "2026-11-07",
       "page": "/churches/",
       "what": "Waynesville United Methodist Church",
       "wrong": "Linked to waynesvilleumc.org, which is no longer working.",
