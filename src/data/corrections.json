@@ -1,0 +1,61 @@
+{
+  "_note": "Public corrections log, shown on /corrections/ (newest first). Hand-kept: add an entry whenever a published brief, story, listing or page is corrected. Fields: date (YYYY-MM-DD the fix went live), page (site path, e.g. /briefs/2026-11-06/), what (the item), wrong (what we said), right (what's correct now / what we did). An entry whose page is a brief or story also appears as a correction note at the end of that brief or story. Don't name private individuals; don't log typo fixes that don't change meaning. Entries before 2026-11-07 were reconstructed from the site's change history.",
+  "items": [
+    {
+      "date": "2026-11-07",
+      "page": "/churches/",
+      "what": "Waynesville United Methodist Church",
+      "wrong": "Linked to waynesvilleumc.org, which is no longer working.",
+      "right": "The dead link was removed; the church's Facebook page is linked instead."
+    },
+    {
+      "date": "2026-11-06",
+      "page": "/briefs/2026-11-06/",
+      "what": "Daily Brief, Nov. 6: Hearthwarming Holidays",
+      "wrong": "Listed Friday hours of 11 a.m. to 5 p.m., from the Merchants Association's event feed, which conflicted with the event's verified hours on our calendar.",
+      "right": "The conflicting line was removed; the calendar's hours stand (Fri & Sat 11 a.m.–8 p.m., Sun noon–5 p.m.)."
+    },
+    {
+      "date": "2026-11-06",
+      "page": "/public-safety/",
+      "what": "Road closures (Daily Brief and Public Safety)",
+      "wrong": "Listed Innovation Way and northbound Wilkens Blvd. as closed after they had reopened.",
+      "right": "Removed, per the editor; ended county closures now drop off automatically."
+    },
+    {
+      "date": "2026-11-06",
+      "page": "/directory/",
+      "what": "Mami Fina's",
+      "wrong": "Listed as an open restaurant.",
+      "right": "Removed: the restaurant has closed."
+    },
+    {
+      "date": "2026-11-06",
+      "page": "/directory/",
+      "what": "Hammel House Inn",
+      "wrong": "Described the inn's restaurant as open.",
+      "right": "The rooms are open; the restaurant is closed for restoration and expected to reopen soon."
+    },
+    {
+      "date": "2026-11-06",
+      "page": "/churches/",
+      "what": "Waynesville Church of Christ",
+      "wrong": "Listed from a directory entry with a Michigan Street address; there is no Michigan Street in Waynesville, and the congregation is not believed to be active.",
+      "right": "Removed."
+    },
+    {
+      "date": "2026-11-05",
+      "page": "/directory/",
+      "what": "Taylor's Coffee & Creamery",
+      "wrong": "Showed a placeholder phone number (999-999-9999).",
+      "right": "Placeholder removed and the shop's website added."
+    },
+    {
+      "date": "2026-11-05",
+      "page": "/directory/",
+      "what": "Valentino Design",
+      "wrong": "Listed with a website that no longer exists.",
+      "right": "Removed at the editor's request."
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+---
+// Corrections policy and the public log (src/data/corrections.json).
+import Base from "../../layouts/Base.astro";
+import data from "../../data/corrections.json";
+
+type Item = { date: string; page?: string; what: string; wrong: string; right: string };
+const items = (data.items as Item[]).slice().sort((a, b) => b.date.localeCompare(a.date));
+const fmt = (iso: string) => new Date(iso + "T12:00:00").toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" });
+---
+<Base title="Corrections · Waynesville News" description="How Waynesville News corrects mistakes, and a public log of every correction to a brief, story, listing or page." showInfoBar={false}>
+  <div class="reading">
+    <p class="kicker">About</p>
+    <h1>Corrections</h1>
+    <p class="dek">We get things wrong sometimes. When we do, we fix it, say so, and keep a record here.</p>
+
+    <section id="policy" class="corr-sec">
+      <h2>Our policy</h2>
+      <ul class="corr-policy">
+        <li><strong>We fix errors of fact</strong>: a wrong date, time, name, address, phone number, number or claim. Report one with the <a href="/corrections/submit/">correction form</a> or by email to <a href="mailto:editor@waynesville.news?subject=Correction">editor@waynesville.news</a>.</li>
+        <li><strong>We check before we change.</strong> We confirm the fix against the original source or a second one, usually the same day.</li>
+        <li><strong>We don't fix things silently.</strong> Every correction that changes meaning is listed below. When it's in a Daily Brief or a story, a correction note is added at the end of that page too.</li>
+        <li><strong>Listings change all the time.</strong> Updating a phone number or hours because a business changed them isn't a correction. Fixing something we had wrong is.</li>
+        <li><strong>Typos and broken formatting</strong> that don't change meaning are fixed without a note.</li>
+        <li><strong>Calendars and status notices aren't official.</strong> The school calendar, the school status badge and event times come from public sources and can change; the district, village or organizer has the final word.</li>
+      </ul>
+      <p class="small">How the brief is made: it's drafted with AI from public sources each morning and published without a line-by-line human review, with every item linked to its source. That's why reader corrections matter, and why each one is checked and logged. See <a href="/about/#how">About</a>.</p>
+    </section>
+
+    <section id="log" class="corr-sec">
+      <h2>Corrections log</h2>
+      {items.length === 0 ? <p class="muted">No corrections yet.</p> : (
+        <ol class="corr-log">
+          {items.map((c) => (
+            <li>
+              <div class="corr-head"><span class="corr-date">{fmt(c.date)}</span> · {c.page ? <a href={c.page}>{c.what}</a> : c.what}</div>
+              <p><span class="corr-label">We said:</span> {c.wrong}</p>
+              <p><span class="corr-label">Correction:</span> {c.right}</p>
+            </li>
+          ))}
+        </ol>
+      )}
+    </section>
+  </div>
+</Base>
+
+<style>
+  .corr-sec { margin-top: 1.75rem; }
+  .corr-policy { padding-left: 1.2rem; }
+  .corr-policy li { margin: 0.45rem 0; }
+  .corr-log { list-style: none; margin: 0; padding: 0; }
+  .corr-log li { padding: 0.8rem 0; border-bottom: 1px solid var(--rule); }
+  .corr-log p { margin: 0.25rem 0 0; }
+  .corr-head { font-weight: 600; }
+  .corr-date { font-family: var(--font-sans); font-size: 0.85rem; color: var(--muted); font-weight: 600; }
+  .corr-label { font-family: var(--font-sans); font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--accent-deep); }
+</style>
