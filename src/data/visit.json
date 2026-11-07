@@ -239,12 +239,19 @@
         },
         {
           "name": "Self-guided historic walking tour",
-          "what": "A walking-tour brochure and map of historic Waynesville, online or in print at the Chamber office and the Museum at the Friends Home.",
+          "what": "A walking-tour brochure and map of historic Waynesville from the Museum at the Friends Home and the Chamber of Commerce. Open the PDF online, or pick up a printed copy at the Chamber office or the museum (115 S. Fourth St.).",
           "source": [
+            "https://www.friendshomemuseum.org/copy-of-waynesville-ungrd-rr-commit",
             "https://waynesvilleshops.com/about-waynesville/history/historic-walking-tour/"
           ],
-          "verified": "2026-11-06",
-          "website": "https://waynesvilleshops.com/about-waynesville/history/historic-walking-tour/"
+          "verified": "2026-11-07",
+          "website": "https://www.friendshomemuseum.org/copy-of-waynesville-ungrd-rr-commit",
+          "links": [
+            {
+              "label": "Walking-tour brochure (PDF, on the museum's site)",
+              "url": "https://www.friendshomemuseum.org/copy-of-waynesville-ungrd-rr-commit"
+            }
+          ]
         }
       ]
     },
