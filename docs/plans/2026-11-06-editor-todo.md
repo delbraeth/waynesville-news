@@ -42,6 +42,8 @@ For each entry: fill in the confirmed fields, set `verified` to the date checked
 - [ ] When an owner gives you their hours, add `"hours": "Tue–Sat 10–5"` and `"hoursChecked": "YYYY-MM-DD"` to their listing (or a `recategorize` entry for a Chamber listing) and run `npm run refresh:directory -- --manual-only`. Never copy hours from listing sites.
 
 ## 2. Check
+- [ ] Corrections log (/corrections/): entries before Nov 7 were reconstructed from the change history; prune or reword any you don't want public. Add new ones to `src/data/corrections.json`
+- [ ] School calendar: spring 2027 days off were read from the board-approved PDF by color (yellow holiday, blue break, gray conference exchange, orange teacher day). Glance at /schools/#calendar against the PDF. Update `src/data/school-calendar-manual.json` each spring
 - [ ] The STEP 1 edit to the daily routine took effect (the run report should show a permits refresh)
 - [ ] `main` was force-updated on the morning of 2026-11-06, before the daily run. Confirm that was expected.
 - [ ] After the next daily run: library and Caesar Creek programs appear on /events/ and the "Sign up soon" box looks right (both feeds were refreshed during the 2026-11-06 daily run)
@@ -51,15 +53,20 @@ For each entry: fill in the confirmed fields, set `verified` to the date checked
 - [ ] Supporter page fixes: name the Patreon business tier, mention receipts, show the supporter's phone as promised
 - On hold (no action): human review before publishing; directory photos
 
-## 4. Next builds (pick one)
-- [ ] School status badge (open / delay / closed) and a school calendar (top parent ask)
-- [ ] Shorter Schools page that opens with a "This week" summary
-- [ ] Corrections policy page and public corrections log (the correction form is live at /corrections/submit/; a policy page could live at /corrections/)
+## 4. Next builds
+- [ ] Nothing queued; pick from the reviewer list or suggest one
 
 ## Done
 **PR #115 (merged 2026-11-06):** reviewer fixes, the Visiting Waynesville page, "No targeted ads. No algorithm."
 
 **Caesar Creek Nature Center (2026-11-07):** added to the Visit page from caesarcreekstatepark.com (editor's link): exhibits, free programs most Thu/Fri/Sat, 513-897-2437. Its events feed was checked but not added: it is mostly Cowan Lake programs, and the Caesar Creek ones are already on the calendar from ODNR
+
+**Schools, corrections, menu (2026-11-07):**
+- School status badge (homepage and /schools/): delay / closed / early release from the district's own post, else no school (calendar, weekend, summer), else open; always marked "Not official" with the time checked
+- School calendar from the district's public Google Calendar (refreshed daily, `scripts/fetch-school-calendar.mjs`) plus the board-approved 2026-27 PDF; marked not official
+- Shorter /schools/: status, "This week" (district calendar, Spartans games, school events), lead paragraph of the last four briefs' school news, the calendar, sources (about 4,900px tall on a phone, down from 32,000)
+- /corrections/: policy and public log; corrected briefs and stories show a correction note
+- Top menu: News dropdown (Stories, Government, Public Safety, Around Town), so the bar fits on one line
 
 **Scouting (2026-11-07):** Troops 51 and 1051 and Crew 6151 listed from troop-0051.trooptrack.com (editor's link): chartered to Waynesville Scouting, Wednesdays 7 p.m. at the American Legion, troop email and Facebook. The scoutmaster's name and cell number are left off (named individual)
 

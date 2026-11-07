@@ -1,0 +1,19 @@
+---
+// Wayne Local Schools status for today (see src/lib/schools.js). Built when
+// the site builds, so it says when it was checked and that it isn't the
+// district's official notice.
+import { schoolStatus, DISTRICT_NEWS } from "../lib/schools.js";
+
+interface Props { compact?: boolean }
+const { compact = false } = Astro.props;
+const s = schoolStatus();
+const tone = ["closed", "remote"].includes(s.state) ? "alert" : ["delay", "early"].includes(s.state) ? "warn" : s.state === "open" ? "ok" : "off";
+---
+<div class={`school-status ss-${tone}${compact ? " ss-compact" : ""}`} role="status">
+  <span class="ss-label">Wayne Local · {s.dayLabel}</span>
+  <strong class="ss-state">{s.label}</strong>
+  {s.detail && <span class="ss-detail">{s.link ? <a href={s.link} target="_blank" rel="noopener">{s.detail}</a> : s.detail}</span>}
+  <span class="ss-note">
+    Not official. Checked {s.asOf}; for changes after that, see <a href={DISTRICT_NEWS} target="_blank" rel="noopener">district news</a>{!compact && <> or the <a href="/schools/#calendar">school calendar</a></>}.
+  </span>
+</div>

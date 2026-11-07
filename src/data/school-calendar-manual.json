@@ -1,0 +1,144 @@
+{
+  "_note": "Hand-kept from the Wayne Local School District 2026-27 calendar (board approved 4/2025), read from the PDF on 2026-11-07: https://www.wayne-local.com/media/user/calendars-latest/School%20Calendar%202026-27%20Approved%204-2025.pdf. Covers dates the district hasn't put on its Google Calendar yet; where both list a day, src/lib/schools.js prefers the Google Calendar (src/data/school-calendar.json, refreshed daily). Shaded days in the PDF: yellow = No School - Holiday, blue = No School; Break/Day Off, gray = Conference Exchange Day, orange = Teacher Professional Day. Update each spring from the next year's approved calendar.",
+  "source": "https://www.wayne-local.com/media/user/calendars-latest/School%20Calendar%202026-27%20Approved%204-2025.pdf",
+  "schoolYear": "2026-27",
+  "firstDay": "2026-08-18",
+  "lastDay": "2027-05-26",
+  "items": [
+    {
+      "title": "No School - Holiday (Labor Day)",
+      "date": "2026-09-07",
+      "allDay": true,
+      "kind": "no-school"
+    },
+    {
+      "title": "No School - Teacher Professional Day",
+      "date": "2026-10-09",
+      "allDay": true,
+      "kind": "no-school"
+    },
+    {
+      "title": "No School - Day Off",
+      "date": "2026-10-12",
+      "allDay": true,
+      "kind": "no-school"
+    },
+    {
+      "title": "2-Hour Early Release (end of Quarter 1)",
+      "date": "2026-10-16",
+      "allDay": true,
+      "kind": "early-release"
+    },
+    {
+      "title": "No School - Thanksgiving Break",
+      "date": "2026-11-23",
+      "allDay": true,
+      "kind": "no-school",
+      "endDate": "2026-11-27"
+    },
+    {
+      "title": "Quarter 2 ends; 2-Hour Early Release",
+      "date": "2026-12-18",
+      "allDay": true,
+      "kind": "early-release"
+    },
+    {
+      "title": "No School - Winter Break",
+      "date": "2026-12-21",
+      "allDay": true,
+      "kind": "no-school",
+      "endDate": "2027-01-01"
+    },
+    {
+      "title": "No School - Teacher Professional Day",
+      "date": "2027-01-04",
+      "allDay": true,
+      "kind": "no-school"
+    },
+    {
+      "title": "Quarter 3 begins",
+      "date": "2027-01-05",
+      "allDay": true,
+      "kind": "event"
+    },
+    {
+      "title": "No School - Holiday (Martin Luther King Jr. Day)",
+      "date": "2027-01-18",
+      "allDay": true,
+      "kind": "no-school"
+    },
+    {
+      "title": "Parent-teacher conferences, K–12, 4–7 p.m.",
+      "date": "2027-02-11",
+      "allDay": true,
+      "kind": "event"
+    },
+    {
+      "title": "No School - Teacher Professional Day",
+      "date": "2027-02-12",
+      "allDay": true,
+      "kind": "no-school"
+    },
+    {
+      "title": "No School - Holiday (Presidents' Day)",
+      "date": "2027-02-15",
+      "allDay": true,
+      "kind": "no-school"
+    },
+    {
+      "title": "Parent-teacher conferences, grades 6–12, 4–7 p.m.",
+      "date": "2027-03-04",
+      "allDay": true,
+      "kind": "event"
+    },
+    {
+      "title": "Parent-teacher conferences, grades K–5, 4–7 p.m.",
+      "date": "2027-03-11",
+      "allDay": true,
+      "kind": "event"
+    },
+    {
+      "title": "Quarter 3 ends; 2-Hour Early Release",
+      "date": "2027-03-12",
+      "allDay": true,
+      "kind": "early-release"
+    },
+    {
+      "title": "No School - Spring Break",
+      "date": "2027-03-15",
+      "allDay": true,
+      "kind": "no-school",
+      "endDate": "2027-03-19"
+    },
+    {
+      "title": "Quarter 4 begins",
+      "date": "2027-03-22",
+      "allDay": true,
+      "kind": "event"
+    },
+    {
+      "title": "No School - Holiday",
+      "date": "2027-03-26",
+      "allDay": true,
+      "kind": "no-school"
+    },
+    {
+      "title": "No School - Conference Exchange Day",
+      "date": "2027-03-29",
+      "allDay": true,
+      "kind": "no-school"
+    },
+    {
+      "title": "Graduation",
+      "date": "2027-05-16",
+      "allDay": true,
+      "kind": "event"
+    },
+    {
+      "title": "Last day of school for students; 2-Hour Early Release",
+      "date": "2027-05-26",
+      "allDay": true,
+      "kind": "early-release"
+    }
+  ]
+}

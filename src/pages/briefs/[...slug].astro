@@ -28,6 +28,8 @@ const podLinks = [
 const dateFmt = new Intl.DateTimeFormat("en-US", {
   weekday: "long", month: "long", day: "numeric", year: "numeric",
 });
+import correctionsData from "../../data/corrections.json";
+const corrections = correctionsData.items.filter((c) => c.page === `/briefs/${entry.id}/`);
 ---
 <Base
   title={`${entry.data.title} · Waynesville News`}
@@ -66,6 +68,13 @@ const dateFmt = new Intl.DateTimeFormat("en-US", {
       <div class="callout">
         <strong>Find the Brief useful?</strong> It's free and independent.
         <a href={patreonUrl} target="_blank" rel="noopener">Support it on Patreon</a>.
+      </div>
+    )}
+    {corrections.length > 0 && (
+      <div class="corr-note">
+        <strong>{corrections.length === 1 ? "Correction" : "Corrections"}:</strong>
+        <ul>{corrections.map((c) => <li>{new Date(c.date + "T12:00:00").toLocaleDateString("en-US", { month: "short", day: "numeric" })}: {c.right} (We had said: {c.wrong})</li>)}</ul>
+        <a href="/corrections/#log">All corrections</a>
       </div>
     )}
     {!entry.data.demo && (

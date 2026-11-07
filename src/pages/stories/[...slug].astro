@@ -13,6 +13,8 @@ const { entry } = Astro.props;
 const { Content } = await render(entry);
 const d = entry.data;
 const dateFmt = new Intl.DateTimeFormat("en-US", { month: "long", day: "numeric", year: "numeric", timeZone: "UTC" });
+import correctionsData from "../../data/corrections.json";
+const corrections = correctionsData.items.filter((c) => c.page === `/stories/${entry.id}/`);
 ---
 <Base
   title={`${d.title} · Waynesville News`}
@@ -46,6 +48,13 @@ const dateFmt = new Intl.DateTimeFormat("en-US", { month: "long", day: "numeric"
       <Content />
     </div>
     <SubscribeBox />
+    {corrections.length > 0 && (
+      <div class="corr-note">
+        <strong>{corrections.length === 1 ? "Correction" : "Corrections"}:</strong>
+        <ul>{corrections.map((c) => <li>{new Date(c.date + "T12:00:00").toLocaleDateString("en-US", { month: "short", day: "numeric" })}: {c.right} (We had said: {c.wrong})</li>)}</ul>
+        <a href="/corrections/#log">All corrections</a>
+      </div>
+    )}
     <p class="small">Spot a mistake? <a href={`/corrections/submit/?page=${encodeURIComponent(`/stories/${entry.id}/`)}`}>Report a correction</a>. Know something we should look into? <a href="/tips/">Send a tip</a>.</p>
     <p class="small"><a href="/stories/">← All stories</a></p>
   </article>

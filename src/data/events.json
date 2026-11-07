@@ -353,6 +353,16 @@
       "category": "Sports",
       "source": "/images/events/2026-11-06-football-playoff-preble-shawnee.jpg",
       "note": "Second-round OHSAA playoff game hosted by Waynesville, which had a first-round bye. OHSAA sets ticket prices: adults $12, students $5. Cash is taken at the gate; to pay by card, buy online through OHSAA (student tickets go on sale online after 4 PM Nov 6). Waynesville athletic passes and senior passes are not accepted for playoff games."
+    },
+    {
+      "title": "Playoff football, Region 20 semifinal: Waynesville at Graham",
+      "dateISO": "2026-11-13T19:00:00-05:00",
+      "dateLabel": "Fri, Nov 13 · 7:00 PM",
+      "venue": "Graham High School, St. Paris (away)",
+      "category": "Sports",
+      "local": true,
+      "source": "https://www.maxpreps.com/oh/football/game/graham-local-st-paris-vs-waynesville/11-13-2026/?c=3a9be22b-749e-4a99-a948-867beeb7242d",
+      "note": "Division V, Region 20 semifinal. Waynesville (9-2) beat Preble Shawnee in Round 2 and travels to Graham in St. Paris. Kickoff time is from MaxPreps; OHSAA sets playoff ticket prices and sells tickets online, so check OHSAA before you go."
     }
   ]
 }
