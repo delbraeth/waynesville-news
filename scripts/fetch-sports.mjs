@@ -19,7 +19,7 @@
 // invented — scores and matchups reproduced verbatim from MaxPreps' own
 // markup, each linking to their game page.
 import { writeFile } from "node:fs/promises";
-import { existsSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
 import { keepOrExpire } from "./lib/stale-cache.mjs";
 
 const UA = "Mozilla/5.0 (WaynesvilleDailyBrief/1.0; waynesville.news)";
@@ -150,7 +150,7 @@ async function main() {
       .sort((a, b) => a._d - b._d)
       .map(({ _d, ...g }) => g);
 
-  const results = inWindow(allResults);
+  const results = applyOverrides(inWindow(allResults));
   // A game lands in `upcoming` because no score parsed, NOT because it is in
   // the future — MaxPreps rarely posts JV scores, so played games sat here for
   // a week and published under "Upcoming". Require an actually-future date;
@@ -167,6 +167,23 @@ async function main() {
 
   await write({ results, upcoming }, note);
   console.log(`sports.json: ${results.length} result(s), ${upcoming.length} upcoming${failures.length ? `, ${failures.length} page fetch failure(s)` : ""}`);
+}
+
+// Editor score corrections (src/data/sports-overrides.json) win over MaxPreps.
+function applyOverrides(results) {
+  let overrides = [];
+  try { overrides = JSON.parse(readFileSync(new URL("../src/data/sports-overrides.json", import.meta.url), "utf8")).items ?? []; } catch { /* optional */ }
+  return results.map((g) => {
+    const o = overrides.find((x) =>
+      g.dateISO.slice(0, 10) === x.date &&
+      g.sport.toLowerCase() === String(x.sport).toLowerCase() &&
+      (!x.level || (g.level ?? "").toLowerCase() === x.level.toLowerCase()) &&
+      g.opponent.toLowerCase().includes(String(x.opponent).toLowerCase()));
+    if (!o || !Number.isFinite(o.wayneScore) || !Number.isFinite(o.opponentScore)) return g;
+    const result = o.wayneScore > o.opponentScore ? "W" : o.wayneScore < o.opponentScore ? "L" : "T";
+    console.log(`sports: editor override for ${g.sport} vs ${g.opponent} ${g.dateISO.slice(0, 10)}: ${g.wayneScore}-${g.opponentScore} -> ${o.wayneScore}-${o.opponentScore}`);
+    return { ...g, wayneScore: o.wayneScore, opponentScore: o.opponentScore, result, scoreSource: "editor" };
+  });
 }
 
 main().catch(async (e) => {

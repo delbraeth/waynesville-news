@@ -1,18 +1,31 @@
 {
   "_note": "Waynesville Spartans schedule + results (MaxPreps), past 7 days / next 7 days. Scraped directly from each sport's own schedule page (football, volleyball, soccer -- varsity + JV), not the school hub page, which has been observed to silently omit some contests. Scores and matchups reproduced verbatim from MaxPreps' own markup; each links to their game page.",
-  "updated": "2026-11-06T11:42:08.439Z",
-  "results": [],
-  "upcoming": [
+  "updated": "2026-11-07T07:11:53.135Z",
+  "results": [
     {
       "dateISO": "2026-11-06T19:00:00",
       "sport": "Football",
       "level": "Varsity",
       "opponent": "Preble Shawnee",
+      "wayneScore": 35,
+      "opponentScore": 13,
+      "result": "W",
+      "isHome": true,
+      "link": "https://www.maxpreps.com/oh/football/game/preble-shawnee-camden-vs-waynesville/11-6-2026/?c=a24a818e-b5b2-4c28-ba36-48a9b46daf00",
+      "scoreSource": "editor"
+    }
+  ],
+  "upcoming": [
+    {
+      "dateISO": "2026-11-13T19:00:00",
+      "sport": "Football",
+      "level": "Varsity",
+      "opponent": "Graham Local",
       "wayneScore": null,
       "opponentScore": null,
       "result": null,
-      "isHome": true,
-      "link": "https://www.maxpreps.com/oh/football/game/preble-shawnee-camden-vs-waynesville/11-6-2026/?c=a24a818e-b5b2-4c28-ba36-48a9b46daf00"
+      "isHome": false,
+      "link": "https://www.maxpreps.com/oh/football/game/graham-local-st-paris-vs-waynesville/11-13-2026/?c=3a9be22b-749e-4a99-a948-867beeb7242d"
     }
   ]
 }
