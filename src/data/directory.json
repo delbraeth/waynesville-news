@@ -1,6 +1,6 @@
 {
   "_note": "Local business directory. Built by scripts/fetch-directory.mjs from the Waynesville Area Chamber of Commerce's public member directory (name, location, phone, website, and the Chamber's description, as published) plus hand-added listings in directory-manual.json. Contact names, emails and hours are deliberately not copied from the Chamber; an hours line appears only when the owner supplied it (hours + hoursChecked in directory-manual.json). Do not edit by hand — edit directory-manual.json and re-run `npm run refresh:directory` (or `npm run refresh:directory -- --manual-only` to merge manual edits without re-reading the Chamber site).",
-  "updated": "2026-11-07T06:38:53.140Z",
+  "updated": "2026-11-07T06:41:30.289Z",
   "sections": [
     {
       "id": "food",
@@ -2789,7 +2789,7 @@
       "id": "manual-pastperfectantiques",
       "name": "Past Perfect Antiques",
       "location": "77 S. Main St., Waynesville, OH 45068",
-      "phone": "",
+      "phone": "513-855-4315",
       "sections": [
         "shop"
       ],
@@ -2798,7 +2798,7 @@
         "Collectibles",
         "Vintage"
       ],
-      "source": "https://waynesvilleshops.com/antique-shops-and-malls/ ; https://www.ohioslargestplayground.com/directory/past-perfect-antiques/ (phone listed there is labeled a cell number, so it's left off until the shop confirms it)",
+      "source": "https://waynesvilleshops.com/antique-shops-and-malls/ ; https://www.ohioslargestplayground.com/directory/past-perfect-antiques/ (phone is the cell number on the Merchants listing; OK'd by the editor, 2026-11-07)",
       "website": "",
       "social": {
         "facebook": "https://www.facebook.com/pastperfectwaynesvilleohio"

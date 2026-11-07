@@ -32,7 +32,6 @@ For each entry: fill in the confirmed fields, set `verified` to the date checked
 
 **Directory: Merchants Association members** (`src/data/directory-manual.json`)
 - [ ] Wendy's Treasures: current street address (the visitors bureau's 174 Main St. is now the Chamber's office) and phone
-- [ ] Past Perfect Antiques: OK to publish 513-855-4315? The Merchants listing labels it a cell number
 - [ ] Blitzen & Pine Christmas Shop: not added; only its name and Facebook page are official. Needs an address (a craft site says 275 Miami St.)
 - [ ] Red Brick Social Room: not added; event venue, only name and Facebook official. Listing sites say the 1836 Red Brick Meeting House, 407 High St., up to 120 guests
 
@@ -67,7 +66,7 @@ For each entry: fill in the confirmed fields, set `verified` to the date checked
 - Library programs (next 45 days) and Caesar Creek programs on the events calendar automatically, with a "Sign up soon" box on /events/ and sign-up notes in the brief draft
 - Owner-supplied hours lines in the directory (`hours` + `hoursChecked`)
 - Info bar shows the next Village Council or school board meeting before the County Commissioners
-- Directory: Jamie Gabbard – Glass House Realty (agent page, phone, 220 N. Main St.); Lucky Kat, Petal Vintage, Past Perfect Antiques, The Stetson House, Wendy's Treasures, Windmill Farm Market (Springboro); McDonald's described as fast food; Roscoe's open; Coffee Hub and Mami Fina's closed; Hammel House rooms open, restaurant reopening soon
+- Directory: Past Perfect Antiques phone added (editor: cell numbers a business lists publicly on other sites are OK to publish); Jamie Gabbard – Glass House Realty (agent page, phone, 220 N. Main St.); Lucky Kat, Petal Vintage, Past Perfect Antiques, The Stetson House, Wendy's Treasures, Windmill Farm Market (Springboro); McDonald's described as fast food; Roscoe's open; Coffee Hub and Mami Fina's closed; Hammel House rooms open, restaurant reopening soon
 - Visit: DORA hours (every day, noon to 10 p.m.); Corwin trailhead facilities (trail map); walking-tour link
 - Community: Waynesville Lacrosse Club (grades, season, register by Nov 30 to avoid late fee); The Bridge; Progressive Women's Club confirmed active (Facebook only)
 - Churches: St. Augustine Mass times; Waynesville UMC linked to its Facebook page
