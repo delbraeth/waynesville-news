@@ -131,8 +131,12 @@ reference.
   boosters, PTOs, scouts, 4-H, youth sports leagues and library youth
   programs go in this listing, not on a separate page. Name groups and
   their public contacts only, never students.
-- **Volunteer board.** Could grow out of the nonprofit listing's "how to
-  help" lines.
+- **Volunteer board.** **Built 2026-11-07** at `/volunteer/` (data in
+  `src/data/volunteer.json`): current asks (dated needs that hide after
+  their date, plus events tagged "volunteer"), standing ways to help drawn
+  from verified groups' "how to help" lines and WCCS's volunteer and RSVP
+  programs, and a "post a volunteer need" mailto form. Linked from the
+  Community menu, the Community page and the footer.
 - **Visitor guide and government issue trackers.** From the review's
   Phase 3.
 
@@ -183,7 +187,7 @@ keeping editorial independence and sourcing standards.
 1. Redesign the homepage as a community dashboard: what's happening, what I
    need to know, what I can do. Put events, businesses, services and
    volunteering above the archive of older briefs.
-2. Make the calendar the definitive Waynesville calendar:
+2. Make the calendar the definitive Waynesville calendar (**2026-11-07:** month view, a "Type" filter, and optional cost and accessibility lines added; library and Caesar Creek programs now flow in automatically):
    - month, week and list views
    - category filters
    - Apple, Google and .ics export
@@ -220,6 +224,15 @@ keeping editorial independence and sourcing standards.
 10. Accessibility and mobile improvements: a WCAG 2.2 AA audit, Core Web
     Vitals, structured data, link and feed monitoring, and a privacy policy
     for submissions.
+    **Done 2026-11-07:** axe-core WCAG 2.2 AA scan of 19 pages on a phone
+    in light and dark mode; fixed links that relied on color alone (now
+    underlined in running text) and an invalid `autocomplete` on the forms;
+    re-scan clean. Manual checks: no sideways scrolling at 320px, a visible
+    focus ring on every keyboard stop, no third-party requests. Lab Core Web
+    Vitals on a throttled phone: LCP 0.3–0.8 s, CLS 0 (home, events,
+    directory, schools, a brief). `/privacy/` added and linked from the
+    footer and the three forms. Structured data and link monitoring were
+    done 2026-11-06.
 
 The reviewer said items 1–5 would make the biggest difference to everyday use.
 

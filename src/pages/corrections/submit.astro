@@ -29,7 +29,7 @@ const plainMail = `mailto:${EDITOR}?subject=${encodeURIComponent("Correction")}`
         <input name="source" />
       </label>
       <label>Your name and how to reach you <span class="hint">(for the editor only; not published)</span>
-        <input name="submitter" autocomplete="name email" />
+        <input name="submitter" autocomplete="name" />
       </label>
       <p id="corr-error" class="submit-error" role="alert" hidden></p>
       <button class="btn" type="submit">Create email</button>
@@ -43,7 +43,7 @@ const plainMail = `mailto:${EDITOR}?subject=${encodeURIComponent("Correction")}`
     <p class="small">
       Prefer plain email? Write to <a href={plainMail}>{EDITOR}</a> with the subject “Correction.”
       Have a news tip instead? <a href="/tips/">Send a tip</a>. How we handle corrections, and every one we've made:
-      <a href="/corrections/">corrections policy and log</a>.
+      <a href="/corrections/">corrections policy and log</a>. The form only writes an email in your own mail app; see <a href="/privacy/">privacy</a>.
     </p>
   </div>
 </Base>

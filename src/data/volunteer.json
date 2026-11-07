@@ -1,0 +1,57 @@
+{
+  "_note": "Volunteer board (/volunteer/). Hand-kept. \"ongoing\": standing ways to help. An entry with \"org\" names a group in organizations.json and shows that group's howToHelp line, linked to its Community listing; an entry without \"org\" carries its own name, what, link, source and verified date. Give each a \"kind\": hands-on, donate, youth or seniors. \"needs\": specific, dated asks ({title, org, what, how, link, until: YYYY-MM-DD, source}); each hides itself after its \"until\" date. Events in events.json tagged \"volunteer\" also appear under Current asks until they end. Public organizational contacts only; never name volunteers or children.",
+  "updated": "2026-11-07",
+  "ongoing": [
+    {
+      "org": "Waynesville Food Pantry and Wayne Township Community Aid",
+      "kind": "donate"
+    },
+    {
+      "org": "Caesar's Creek Pioneer Village",
+      "kind": "hands-on"
+    },
+    {
+      "org": "Museum at the Friends Home",
+      "kind": "hands-on"
+    },
+    {
+      "org": "Waynesville Athletic Boosters",
+      "kind": "youth"
+    },
+    {
+      "org": "Waynesville Elementary PTO",
+      "kind": "youth"
+    },
+    {
+      "org": "Waynesville Baseball Softball Association",
+      "kind": "youth"
+    },
+    {
+      "org": "Waynesville Youth Football & Cheerleading Association",
+      "kind": "youth"
+    },
+    {
+      "org": "Waynesville Blue Dolphins",
+      "kind": "youth"
+    },
+    {
+      "name": "RSVP volunteer program (55 and older)",
+      "kind": "seniors",
+      "what": "AmeriCorps Seniors RSVP of Warren County matches volunteers 55 and older with local nonprofits: packing food for the hungry, tutoring, visiting isolated older adults, hospice, early learning centers and adult literacy.",
+      "how": "Download the membership form from the RSVP page and mail it to RSVP, 645 Oak Street, Lebanon.",
+      "link": "https://www.wccsi.org/get-involved/rsvp-volunteer-program/",
+      "source": "https://www.wccsi.org/get-involved/rsvp-volunteer-program/",
+      "verified": "2026-11-07"
+    },
+    {
+      "name": "Warren County Community Services volunteers",
+      "kind": "hands-on",
+      "what": "Lead activities at the 741 senior center, help in early learning classrooms or with the grounds, or tutor adults in reading and English (training provided).",
+      "how": "See the volunteer page for each program.",
+      "link": "https://www.wccsi.org/get-involved/volunteer/",
+      "source": "https://www.wccsi.org/get-involved/volunteer/",
+      "verified": "2026-11-07"
+    }
+  ],
+  "needs": []
+}
