@@ -26,7 +26,7 @@ For each entry: fill in the confirmed fields, set `verified` to the date checked
 - [ ] Rotary: which club? (District 6670 lists none in Waynesville; nearest is Lebanon)
 
 **Visiting Waynesville** (`src/data/visit.json`)
-- [ ] Caesar Creek State Park and nature center opening hours (the Nature Center is now listed from the Nature Center Association's page, with phone and program days, but that page gives no hours)
+- [ ] Caesar Creek State Park, Nature Center and Visitor Center (separate buildings) opening hours, and the Visitor Center's address (the Nature Center is now listed from the Nature Center Association's page, with phone and program days, but that page gives no hours)
 - [ ] Typical downtown shop hours
 - [ ] DORA boundaries: not on the Merchants' DORA page. They'd be in the village council ordinance that created it, or ask the Merchants Association / village office
 

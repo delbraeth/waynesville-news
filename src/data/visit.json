@@ -154,7 +154,7 @@
         },
         {
           "name": "Caesar Creek Nature Center",
-          "what": "The park's nature center, across the street from Pioneer Village: ambassador animals, a bird-viewing area, a playscape, education exhibits and hiking trails. Free naturalist programs year-round, most Thursdays, Fridays and Saturdays; see our calendar or call for hours.",
+          "what": "The park's nature center, across the street from Pioneer Village (a separate building from the Visitor Center): ambassador animals, a bird-viewing area, a playscape, education exhibits and hiking trails. Free naturalist programs year-round, most Thursdays, Fridays and Saturdays; see our calendar or call for hours.",
           "phone": "513-897-2437",
           "website": "https://caesarcreekstatepark.com/caesar-creek-state-park-nature-center/",
           "links": [
@@ -167,6 +167,22 @@
             "https://caesarcreekstatepark.com/caesar-creek-state-park-nature-center/"
           ],
           "sourceNote": "Nature Center Association of Caesar Creek page (editor's link, 2026-11-07). It gives no opening hours.",
+          "verified": "2026-11-07"
+        },
+        {
+          "name": "Caesar Creek Visitor Center",
+          "what": "The park's Visitor Center is a separate building from the Nature Center. Some events, like Owl Fest, meet here; check each event's listing for which location to go to.",
+          "phone": "513-897-1050",
+          "links": [
+            {
+              "label": "Events at the park (our calendar)",
+              "url": "/events/"
+            }
+          ],
+          "source": [
+            "https://caesarcreekstatepark.com/caesar-creek-state-park-nature-center/"
+          ],
+          "sourceNote": "Phone from the Nature Center Association's contacts list; the editor confirmed the two are separate locations (2026-11-07). Address and hours not listed there.",
           "verified": "2026-11-07"
         },
         {
