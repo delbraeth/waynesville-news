@@ -44,7 +44,8 @@ export const CEILINGS = {
   "museum-events": 7,   // dated, forward-looking
   permits: 45,          // monthly report, already 5-6 weeks behind by design             // lane restrictions change daily
   nwctp: 7,             // transportation-plan tracker; a week dark means changes go unnoticed
-  elections: 7,         // ballot issues are fixed once certified; hours are static
+  elections: 7,
+  "school-calendar": 14, // the district calendar changes rarely         // ballot issues are fixed once certified; hours are static
 };
 
 /**

@@ -56,6 +56,8 @@ jobs:
         run: npm run refresh:sports || echo "sports refresh skipped/failed"
       - name: Pull library events
         run: npm run refresh:library || echo "library events refresh skipped/failed"
+      - name: Pull school calendar
+        run: npm run refresh:school-calendar || echo "school calendar refresh skipped/failed"
       - name: Pull Wayne Township agendas
         run: npm run refresh:township || echo "township agendas refresh skipped/failed"
       - name: Pull Warren County Commissioners agendas/minutes

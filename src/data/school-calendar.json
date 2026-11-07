@@ -1,0 +1,64 @@
+{
+  "_note": "Wayne Local Schools district calendar (public Google Calendar embedded at https://www.wayne-local.com/calendars/wayne-local-schools/). District's own titles. Built by scripts/fetch-school-calendar.mjs; dates the district hasn't entered yet come from src/data/school-calendar-manual.json.",
+  "updated": "2026-11-07T07:01:38.169Z",
+  "source": "https://www.wayne-local.com/calendars/wayne-local-schools/",
+  "items": [
+    {
+      "title": "No School - Teacher Professional Day",
+      "date": "2026-10-09",
+      "allDay": true,
+      "kind": "no-school"
+    },
+    {
+      "title": "Sauerkraut Festival",
+      "date": "2026-10-10",
+      "allDay": true,
+      "kind": "event"
+    },
+    {
+      "title": "Sauerkraut Festival",
+      "date": "2026-10-11",
+      "allDay": true,
+      "kind": "event"
+    },
+    {
+      "title": "No School",
+      "date": "2026-10-12",
+      "allDay": true,
+      "kind": "no-school"
+    },
+    {
+      "title": "Two-hour Early Release",
+      "date": "2026-10-16",
+      "allDay": true,
+      "kind": "early-release"
+    },
+    {
+      "title": "Board of Education Meeting",
+      "dateISO": "2026-11-09T23:00:00.000Z",
+      "endISO": "2026-11-10T00:00:00.000Z",
+      "allDay": false,
+      "kind": "board"
+    },
+    {
+      "title": "Veteran's Day Celebration",
+      "date": "2026-11-11",
+      "allDay": true,
+      "kind": "event"
+    },
+    {
+      "title": "No School - Thanksgiving Break",
+      "date": "2026-11-23",
+      "endDate": "2026-11-27",
+      "allDay": true,
+      "kind": "no-school"
+    },
+    {
+      "title": "Board of Education Meeting",
+      "dateISO": "2026-12-14T23:00:00.000Z",
+      "endISO": "2026-12-15T00:00:00.000Z",
+      "allDay": false,
+      "kind": "board"
+    }
+  ]
+}

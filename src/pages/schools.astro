@@ -1,26 +1,136 @@
 ---
+// Schools: today's status, this week at a glance, the latest from the briefs
+// (four, not the old 24), and the district calendar. Calendar and status come
+// from src/lib/schools.js; they are marked as not official throughout.
 import Base from "../layouts/Base.astro";
-import SectionFeed from "../components/SectionFeed.astro";
+import SchoolStatus from "../components/SchoolStatus.astro";
 import { sectionFeed } from "../lib/sections.js";
+import { upcomingEvents } from "../lib/events.js";
+import sports from "../data/sports.json";
+import { upcomingSchoolDays, whenLabel, etDate, fmtDay, CALENDAR_PAGE, CALENDAR_PDF, DISTRICT_NEWS } from "../lib/schools.js";
 
 const sources = [
-  { name: "Wayne Local Board of Education (BoardDocs)", href: "https://go.boarddocs.com/oh/waylo/Board.nsf/Public", what: "official board agendas, minutes & meeting records" },
-  { name: "Wayne Local — District News", href: "https://www.wayne-local.com/district-news", what: "closings, staffing, operations, announcements" },
+  { name: "Wayne Local — District News", href: DISTRICT_NEWS, what: "closings, delays and announcements (official)" },
+  { name: "Wayne Local — District calendar", href: CALENDAR_PAGE, what: "the district's calendar (official)" },
+  { name: "2026-27 school calendar (PDF)", href: CALENDAR_PDF, what: "board-approved calendar (official)" },
+  { name: "Wayne Local Board of Education (BoardDocs)", href: "https://go.boarddocs.com/oh/waylo/Board.nsf/Public", what: "board agendas, minutes and meeting records" },
   { name: "Waynesville Spartans Athletics", href: "https://www.waynesvillesports.com/", what: "team schedules, results, athletic news" },
-  { name: "MaxPreps — Waynesville", href: "https://www.maxpreps.com/oh/waynesville/waynesville-spartans/", what: "structured scores & schedules, all sports" },
-  { name: "Mary L. Cook Public Library", href: "https://www.mlcook.lib.oh.us/", what: "kids & teen programs, community events" },
-  { name: "Wayne Local Schools — Facebook", href: "https://www.facebook.com/waynelocalschools", what: "closings, delays, events & announcements (auto-pulled)" },
+  { name: "MaxPreps — Waynesville", href: "https://www.maxpreps.com/oh/waynesville/waynesville-spartans/", what: "scores and schedules, all sports" },
+  { name: "Wayne Local Schools — Facebook", href: "https://www.facebook.com/waynelocalschools", what: "closings, delays, events and announcements" },
 ];
 
-const items = await sectionFeed(["Schools", "This week in sports"], { limit: 24 });
+// This week: district calendar, Spartans games, and school events on our calendar.
+type Row = { sort: string; when: string; title: string; href?: string; tag: string };
+const today = etDate();
+const weekEnd = new Date(Date.now() + 7 * 86400000);
+const cal = upcomingSchoolDays(7);
+const rows: Row[] = cal.map((i) => ({
+  sort: i.dateISO ?? i.date, when: whenLabel(i), title: i.title, href: CALENDAR_PAGE,
+  tag: i.kind === "no-school" ? "No school" : i.kind === "early-release" ? "Early release" : i.kind === "board" ? "Board" : "District",
+}));
+for (const g of sports.upcoming ?? []) {
+  const d = new Date(g.dateISO);
+  if (etDate(d) < today || d > weekEnd) continue;
+  rows.push({
+    sort: g.dateISO, tag: "Spartans",
+    when: `${fmtDay(g.dateISO.slice(0, 10))} · ${d.toLocaleTimeString("en-US", { hour: "numeric", minute: "2-digit", timeZone: "UTC" })}`,
+    title: `${g.level && g.level !== "Varsity" ? g.level + " " : ""}${g.sport}: ${g.isHome ? "vs." : "at"} ${g.opponent}`, href: g.link,
+  });
+}
+const SCHOOL_RE = /\b(wayne local|wls|spartans?|board of education|elementary|middle school|high school|pto|boosters?)\b/i;
+const hasBoard = rows.some((r) => r.tag === "Board");
+for (const e of upcomingEvents()) {
+  if (e._d > weekEnd || etDate(e._end) < today) continue;
+  if (!SCHOOL_RE.test(`${e.title} ${e.venue}`)) continue;
+  if (hasBoard && /board of education/i.test(e.title)) continue; // already on the district calendar
+  if (rows.some((r) => r.tag === "Spartans" && r.sort.slice(0, 10) === e.dateISO.slice(0, 10) && /football|soccer|volleyball|basketball/i.test(e.title))) continue;
+  rows.push({ sort: e.dateISO, when: e.dateLabel, title: e.title, href: e.source, tag: "Event" });
+}
+rows.sort((a, b) => a.sort.localeCompare(b.sort));
+
+// Calendar: days off, early releases and key dates over the next four months.
+const ahead = upcomingSchoolDays(120).filter((i) => i.kind !== "board");
+
+// Just the lead paragraph of each recent Schools section; the full section is
+// one click away in its brief.
+const items = (await sectionFeed(["Schools"], { limit: 4 }))
+  .map((it) => ({ ...it, lead: (/<p>[\s\S]*?<\/p>/.exec(it.html) ?? [""])[0] }))
+  .filter((it) => it.lead);
+const dfmt = new Intl.DateTimeFormat("en-US", { weekday: "short", month: "long", day: "numeric", timeZone: "UTC" });
 ---
-<Base title="Schools · Waynesville News" description="Wayne Local Schools news: board meetings, closings and delays, Spartans sports and library programs in Waynesville, Ohio." showInfoBar={false}>
-  <SectionFeed
-    title="Schools"
-    kicker="Section"
-    intro="Wayne Local board decisions, Spartans sports, closings, and library programs — the beat this community cares about most, pulled from every edition."
-    items={items}
-    showHeading={true}
-    sources={sources}
-  />
+<Base title="Schools · Waynesville News" description="Wayne Local Schools today: delays and closings, this week's calendar, Spartans games, board meetings and the latest school news in Waynesville, Ohio." showInfoBar={false}>
+  <div class="reading">
+    <p class="kicker">Section</p>
+    <h1>Schools</h1>
+    <p class="dek">Wayne Local at a glance: today's status, this week, the latest news and the calendar.</p>
+
+    <SchoolStatus />
+
+    <section class="sch-sec" aria-labelledby="sch-week">
+      <h2 id="sch-week">This week</h2>
+      {rows.length === 0 ? <p class="muted">Nothing on the school calendar for the next seven days.</p> : (
+        <ul class="sch-week">
+          {rows.map((r) => (
+            <li>
+              <span class="sch-when">{r.when}</span>
+              <span class="sch-tag">{r.tag}</span>
+              {r.href ? <a href={r.href} target="_blank" rel="noopener">{r.title}</a> : r.title}
+            </li>
+          ))}
+        </ul>
+      )}
+    </section>
+
+    <section class="sch-sec" aria-labelledby="sch-news">
+      <h2 id="sch-news">Latest from the briefs</h2>
+      {items.length === 0 ? <p class="muted">School news fills in as new briefs publish.</p> : (
+        <div class="sectionfeed">
+          {items.map((it) => (
+            <article class="sf-item">
+              <a class="sf-date" href={`/briefs/${it.id}/`}>{dfmt.format(it.date)} →</a>
+              <div class="prose sf-body" set:html={it.lead} />
+            </article>
+          ))}
+        </div>
+      )}
+      <p class="small"><a href="/briefs/archive/">Older school news is in every brief in the archive →</a> · <a href="/search/">Search</a></p>
+    </section>
+
+    <section class="sch-sec" id="calendar" aria-labelledby="sch-cal">
+      <h2 id="sch-cal">School calendar</h2>
+      <p class="sch-unofficial">
+        <strong>Not official.</strong> Copied from the district's <a href={CALENDAR_PAGE} target="_blank" rel="noopener">online calendar</a>
+        (checked daily) and its board-approved <a href={CALENDAR_PDF} target="_blank" rel="noopener">2026-27 calendar (PDF)</a>.
+        Dates can change; the district's calendar and notices are the official word.
+      </p>
+      {ahead.length === 0 ? <p class="muted">No calendar dates in the next four months.</p> : (
+        <ul class="sch-cal">
+          {ahead.map((i) => (
+            <li class={`sch-${i.kind}`}>
+              <span class="sch-when">{whenLabel(i)}</span>
+              <span>{i.title}</span>
+            </li>
+          ))}
+        </ul>
+      )}
+    </section>
+
+    <div class="sf-sources">
+      <h3>Sources we watch</h3>
+      <ul>
+        {sources.map((s) => <li><a href={s.href} target="_blank" rel="noopener">{s.name}</a>{s.what ? ` — ${s.what}` : ""}</li>)}
+      </ul>
+    </div>
+  </div>
 </Base>
+
+<style>
+  .sch-sec { margin-top: 1.75rem; }
+  .sch-sec h2 { margin-bottom: 0.5rem; }
+  .sch-week, .sch-cal { list-style: none; margin: 0; padding: 0; }
+  .sch-week li, .sch-cal li { display: flex; flex-wrap: wrap; gap: 0.15rem 0.6rem; align-items: baseline; padding: 0.5rem 0; border-bottom: 1px solid var(--rule); }
+  .sch-when { font-family: var(--font-sans); font-size: 0.85rem; font-weight: 600; color: var(--ink-soft); min-width: 9.5rem; }
+  .sch-tag { font-family: var(--font-sans); font-size: 0.66rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--accent-deep); border: 1px solid var(--rule); border-radius: 2px; padding: 0.05rem 0.35rem; }
+  .sch-cal .sch-no-school span:last-child { font-weight: 600; }
+  .sch-unofficial { font-size: 0.88rem; color: var(--ink-soft); background: var(--paper-2); border-left: 3px solid var(--accent); padding: 0.5rem 0.75rem; margin: 0 0 0.75rem; }
+</style>

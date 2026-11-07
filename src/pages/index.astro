@@ -7,6 +7,7 @@ import SectionBlock from "../components/SectionBlock.astro";
 import EventsThisWeek from "../components/EventsThisWeek.astro";
 import BriefCard from "../components/BriefCard.astro";
 import SubscribeBox from "../components/SubscribeBox.astro";
+import SchoolStatus from "../components/SchoolStatus.astro";
 import headlines from "../data/headlines.json";
 import { getPublicBriefs } from "../lib/briefs.js";
 import { getPublishedStories, storyHref } from "../lib/stories.js";
@@ -19,7 +20,7 @@ import { upcomingEvents } from "../lib/events.js";
 // "Find what you need": one tile per community section, each with a live count
 // so the homepage reads as a dashboard, not just an archive.
 const tiles = [
-  { href: "/schools/", title: "Schools", text: "Wayne Local news, board meetings, closings and Spartans sports, from every edition." },
+  { href: "/schools/", title: "Schools", text: "Today's status, this week, the school calendar, board meetings and Spartans sports." },
   { href: "/visit/", title: "Visiting Waynesville", text: "Parking, restrooms, Main Street shops, the trail, Caesar Creek and the festivals." },
   { href: "/events/", title: "Events", text: `${upcomingEvents().length} coming up, with a this-weekend view and add-to-calendar links.` },
   { href: "/resources/", title: "Living in Waynesville", text: "Utilities, trash, village and township offices, schools and emergency numbers." },
@@ -48,6 +49,7 @@ const listen = audio?.seconds ? `${Math.max(1, Math.round(audio.seconds / 60))} 
   {latest ? (
     <section class="section">
       <div class="reading">
+        <SchoolStatus compact />
         <FeaturedBrief
           title={latest.data.title}
           dek={latest.data.dek}
