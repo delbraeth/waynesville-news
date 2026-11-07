@@ -37,7 +37,7 @@ const searchText = (i: Item) =>
 
 // Each listing gets a shareable anchor (/directory/#butter-churn-cafe). A
 // listing filed in two sections gets the id in the first one only.
-const slug = (name: string) => name.toLowerCase().replace(/&/g, " and ").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+import { slug } from "../lib/slug.js";
 const anchorAt = new Map<string, string>();
 import { groupItems } from "../lib/directoryGroups.js";
 // Bigger sections render as subgroups (src/lib/directoryGroups.js).

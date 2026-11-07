@@ -57,7 +57,7 @@ For each entry: fill in the confirmed fields, set `verified` to the date checked
 ## 5. Next builds (pick one)
 - [ ] School status badge (open / delay / closed) and a school calendar (top parent ask)
 - [ ] Shorter Schools page that opens with a "This week" summary
-- [ ] Site-wide search (directory, community, resources, visit), with exact matches ranked first
+- [x] Site-wide search (directory, community, churches, resources, visit), with exact matches ranked first (2026-11-07)
 - [ ] Corrections policy page and public corrections log
 - [ ] Tips and corrections forms (events already has one)
 - [ ] Library programs and Caesar Creek events added to the calendar automatically, plus sign-up reminders

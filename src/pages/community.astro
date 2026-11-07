@@ -4,6 +4,7 @@
 // organizational contacts only; no officers, coaches or volunteers named.
 import Base from "../layouts/Base.astro";
 import data from "../data/organizations.json";
+import { slug } from "../lib/slug.js";
 import { upcomingEvents } from "../lib/events.js";
 
 type Org = {
@@ -59,7 +60,7 @@ const listMail = "mailto:editor@waynesville.news?subject=" + encodeURIComponent(
         <h2>{c.title}</h2>
         <ul class="res-list">
           {orgs.filter((o) => o.category === c.id).sort((a, b) => a.name.localeCompare(b.name)).map((o) => (
-            <li>
+            <li id={slug(o.name)}>
               <div class="res-name">
                 {o.website ? <a href={o.website} target="_blank" rel="noopener">{o.name}</a> : o.facebook ? <a href={o.facebook} target="_blank" rel="noopener">{o.name}</a> : o.name}
               </div>

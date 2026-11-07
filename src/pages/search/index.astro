@@ -1,29 +1,155 @@
 ---
 import Base from "../../layouts/Base.astro";
-// Pagefind builds its index at deploy time (npm run build → pagefind --site dist)
-// from every brief and story body (data-pagefind-body). No outside service.
+import directory from "../../data/directory.json";
+import orgData from "../../data/organizations.json";
+import churchData from "../../data/churches.json";
+import resourceData from "../../data/resources.json";
+import visitData from "../../data/visit.json";
+import { slug } from "../../lib/slug.js";
+// Two searches on one page, both built at deploy time with no outside service:
+// 1. Listings: every directory business, community group, church, resource and
+//    visitor entry, from the same JSON the pages use. Ranked in the browser so
+//    an exact name match always comes first (see score() below).
+// 2. Pagefind (npm run build → pagefind --site dist): every brief and story
+//    body (data-pagefind-body).
+
+type Entry = { n: string; u: string; t: string; d: string; k: string };
+const sectionLabel = new Map(directory.sections.map((s) => [s.id, s.label]));
+const orgCat = new Map(orgData.categories.map((c) => [c.id, c.title]));
+const short = (s = "", max = 140) => (s.length > max ? s.slice(0, s.lastIndexOf(" ", max)).replace(/[,;:.]$/, "") + "…" : s);
+
+const entries: Entry[] = [
+  ...directory.items.map((i: any) => ({
+    n: i.name, u: `/directory/#${slug(i.name)}`,
+    t: "Directory · " + (sectionLabel.get(i.sections[0]) ?? "Business"),
+    d: short([(i.kinds ?? []).join(", "), i.location].filter(Boolean).join(" · ")),
+    k: [i.about, ...(i.kinds ?? []), ...i.sections.map((s: string) => sectionLabel.get(s) ?? ""), i.location].join(" "),
+  })),
+  ...orgData.items.map((o: any) => ({
+    n: o.name, u: `/community/#${slug(o.name)}`, t: "Community · " + (orgCat.get(o.category) ?? "Group"),
+    d: short(o.what ?? ""), k: [o.what, o.meets, o.howToHelp, orgCat.get(o.category)].join(" "),
+  })),
+  ...churchData.items.map((c: any) => ({
+    n: c.name, u: `/churches/#${slug(c.name)}`, t: "Churches" + (c.town ? " · " + c.town : ""),
+    d: short([c.tradition, c.address].filter(Boolean).join(" · ")),
+    k: ["church worship", c.tradition, c.town, c.address, c.services, ...(c.ministries ?? [])].join(" "),
+  })),
+  ...resourceData.sections.flatMap((s: any) => s.items.map((it: any) => ({
+    n: it.name, u: `/resources/#${slug(it.name)}`, t: "Living in Waynesville · " + s.title,
+    d: short(it.what ?? ""), k: [it.what, it.address, s.title].join(" "),
+  }))),
+  ...visitData.sections.flatMap((s: any) => s.items.map((it: any) => ({
+    n: it.name, u: `/visit/#${slug(it.name)}`, t: "Visiting · " + s.title,
+    d: short(it.what ?? ""), k: [it.what, it.address, it.hours, s.title].join(" "),
+  }))),
+].map((e) => ({ ...e, k: e.k.replace(/\s+/g, " ").trim() }));
 ---
 <Base
   title="Search · Waynesville News"
-  description="Search every Daily Brief edition and story on Waynesville News."
+  description="Search Waynesville News: the business directory, community groups, churches, resources, the visitor guide, and every Daily Brief and story."
   showInfoBar={false}
 >
   <div class="reading">
     <p class="kicker">Search</p>
-    <h1>Search the Brief</h1>
-    <p class="dek">Every daily brief and story. Try a street, a team, a business or a meeting.</p>
+    <h1>Search Waynesville News</h1>
+    <p class="dek">Businesses, groups, churches, resources and every daily brief. Try a business, a street, a team or a meeting.</p>
     <link href="/pagefind/pagefind-ui.css" rel="stylesheet" />
     <div id="search" class="site-search"></div>
-    <noscript><p class="muted">Search needs JavaScript. The <a href="/briefs/archive/">full archive</a> lists every edition by month.</p></noscript>
+    <section id="listing-results" class="listing-results" aria-live="polite" hidden>
+      <h2 class="lr-h">Listings</h2>
+      <ul class="lr-list"></ul>
+      <button type="button" class="lr-more btn-link" hidden></button>
+      <h2 class="lr-h lr-h2">In the briefs and stories</h2>
+    </section>
+    <noscript><p class="muted">Search needs JavaScript. Browse the <a href="/directory/">directory</a>, <a href="/community/">community groups</a>, <a href="/resources/">resources</a>, or the <a href="/briefs/archive/">full archive</a> of briefs by month.</p></noscript>
     <p class="small muted" style="margin-top:2rem;">Prefer browsing? See the <a href="/briefs/archive/">full archive by month</a>.</p>
   </div>
   <script is:inline src="/pagefind/pagefind-ui.js"></script>
-  <script is:inline>
-    window.addEventListener("DOMContentLoaded", () => {
-      const q = new URLSearchParams(location.search).get("q") || "";
-      const ui = new PagefindUI({ element: "#search", showSubResults: true, showImages: false, resetStyles: false });
-      document.querySelector(".pagefind-ui__search-input")?.setAttribute("aria-label", "Search Waynesville News");
-      if (q) ui.triggerSearch(q);
+  <script is:inline define:vars={{ entries }}>
+    // Normalize for matching: case, "&" vs "and", apostrophes ("Roscoe's" = "roscoes").
+    function norm(s) {
+      return (s || "").toLowerCase().replace(/&/g, " and ").replace(/['’]/g, "").replace(/[^a-z0-9]+/g, " ").trim();
+    }
+    var idx = entries.map(function (e) {
+      var n = norm(e.n);
+      return { e: e, n: n, nw: n.split(" "), tw: norm(e.t + " " + e.k).split(" ") };
+    });
+    function allPrefix(words, pool) {
+      return words.every(function (w) { return pool.some(function (p) { return p.indexOf(w) === 0; }); });
+    }
+    // Exact name first, then names starting with the query, then the query as
+    // whole words in the name, then every word in the name, then anywhere in
+    // the name, then every word somewhere in the listing's text.
+    function score(x, q, qw) {
+      if (x.n === q) return 1000;
+      if (x.n.indexOf(q) === 0) return 800;
+      if ((" " + x.n + " ").indexOf(" " + q + " ") >= 0) return 700;
+      if (allPrefix(qw, x.nw)) return 600;
+      if (x.n.indexOf(q) >= 0) return 500;
+      if (allPrefix(qw, x.nw.concat(x.tw))) return 300;
+      return 0;
+    }
+    var box = document.getElementById("listing-results");
+    var list = box.querySelector(".lr-list");
+    var more = box.querySelector(".lr-more");
+    var LIMIT = 8;
+    var hits = [];
+    function render(showAll) {
+      list.textContent = "";
+      hits.slice(0, showAll ? hits.length : LIMIT).forEach(function (h) {
+        var li = document.createElement("li");
+        var a = document.createElement("a");
+        a.href = h.e.u; a.textContent = h.e.n; a.className = "lr-name";
+        var t = document.createElement("span");
+        t.className = "lr-type"; t.textContent = h.e.t;
+        li.appendChild(a); li.appendChild(t);
+        if (h.e.d) { var d = document.createElement("div"); d.className = "lr-desc"; d.textContent = h.e.d; li.appendChild(d); }
+        list.appendChild(li);
+      });
+      more.hidden = showAll || hits.length <= LIMIT;
+      more.textContent = "Show all " + hits.length + " listings";
+    }
+    function run(raw) {
+      var q = norm(raw);
+      if (q.length < 2) { box.hidden = true; return; }
+      var qw = q.split(" ");
+      hits = idx.map(function (x) { return { e: x.e, s: score(x, q, qw), len: x.n.length }; })
+        .filter(function (h) { return h.s > 0; })
+        .sort(function (a, b) { return b.s - a.s || a.len - b.len || a.e.n.localeCompare(b.e.n); });
+      box.hidden = hits.length === 0;
+      render(false);
+    }
+    more.addEventListener("click", function () { render(true); });
+
+    window.addEventListener("DOMContentLoaded", function () {
+      var q = new URLSearchParams(location.search).get("q") || "";
+      var host = document.getElementById("search");
+      var ui = new PagefindUI({ element: "#search", showSubResults: true, showImages: false, resetStyles: false });
+      var input = document.querySelector(".pagefind-ui__search-input");
+      // Listings sit between the search box and the brief/story results.
+      var form = host.querySelector(".pagefind-ui__form");
+      var drawer = host.querySelector(".pagefind-ui__drawer");
+      if (form && drawer) form.insertBefore(box, drawer); else host.parentNode.insertBefore(box, host.nextSibling);
+      if (input) {
+        input.setAttribute("aria-label", "Search Waynesville News");
+        input.addEventListener("input", function () { run(input.value); });
+      }
+      host.addEventListener("click", function (ev) {
+        if (ev.target.closest && ev.target.closest(".pagefind-ui__search-clear")) run("");
+      });
+      if (q) { ui.triggerSearch(q); run(q); }
     });
   </script>
 </Base>
+
+<style is:global>
+  .listing-results { margin: 1rem 0 0.5rem; }
+  .listing-results .lr-h { font-size: 1.05rem; margin: 0 0 0.4rem; }
+  .listing-results .lr-h2 { margin-top: 1.5rem; }
+  .listing-results .lr-list { list-style: none; margin: 0; padding: 0; }
+  .listing-results .lr-list li { padding: 0.55rem 0; border-bottom: 1px solid var(--rule); }
+  .listing-results .lr-name { font-weight: 600; margin-right: 0.5rem; }
+  .listing-results .lr-type { font-size: 0.82rem; color: var(--muted); }
+  .listing-results .lr-desc { font-size: 0.9rem; color: var(--ink-soft); margin-top: 0.15rem; }
+  .listing-results .lr-more { margin-top: 0.5rem; background: none; border: 0; padding: 0; color: var(--accent-deep); text-decoration: underline; cursor: pointer; font: inherit; font-size: 0.95rem; }
+</style>
