@@ -120,6 +120,14 @@ a:hover { color: var(--link-hover); text-decoration: underline; }
 /* Links inside running text are underlined so they don't rely on color alone
    (WCAG 1.4.1). Nav, buttons, tiles, headline lists and names stay plain. */
 .prose a, .dek a, .callout a, .res-what a, .ch-min a, p.small a, .brief-howmade a { text-decoration: underline; text-underline-offset: 0.15em; text-decoration-thickness: 1px; }
+/* WCAG 1.4.1 (link-in-text-block): links that sit in running text need more
+   than color to stand out, so underline links in paragraphs, list items and
+   the small "source"/"note" lines. Buttons, tiles and nav are left alone. */
+.reading p > a:not(.btn):not(.sp-cta), .reading li > a:not(.btn),
+.infobar .item a, .ss-note a, .res-src a, .ch-events a, .corr-head a {
+  text-decoration: underline; text-underline-offset: 0.15em; text-decoration-thickness: 1px;
+}
+.visit-tiles a, .visit-tiles a:hover { text-decoration: none; }
 .skip-link { position: absolute; left: 0.5rem; top: -3rem; z-index: 100; padding: 0.5rem 0.9rem; background: var(--ink); color: var(--paper); font-family: var(--font-sans); }
 .skip-link:focus { top: 0.5rem; }
 main:focus { outline: none; }

@@ -1,0 +1,55 @@
+---
+// Privacy: what the site does and doesn't collect. Every statement here was
+// checked against the code on 2026-11-07 (no analytics or ad scripts, no
+// cookies, no third-party requests while browsing; two localStorage keys).
+// Update this page if any of that changes.
+import Base from "../layouts/Base.astro";
+---
+<Base title="Privacy · Waynesville News" description="What Waynesville News collects (very little) and what it doesn't: no ads, no tracking, no cookies. How the email newsletter, forms and search handle your information." showInfoBar={false}>
+  <div class="reading">
+    <p class="kicker">About</p>
+    <h1>Privacy</h1>
+    <p class="dek">Short version: we don't track you, and we don't sell or share anything about you.</p>
+
+    <h2>Reading the site</h2>
+    <ul>
+      <li><strong>No ads, no tracking, no analytics.</strong> The site runs no advertising, analytics or social-media scripts, and it sets no cookies.</li>
+      <li><strong>Nothing loads from other companies while you browse.</strong> Fonts and search are served from our own site.</li>
+      <li><strong>Two settings stay in your own browser:</strong> your light or dark mode choice, and whether the events page shows only Waynesville-area events. They're stored on your device, never sent to us, and you can clear them by clearing your browser's site data.</li>
+      <li><strong>Our web host</strong>, Cloudflare, handles requests to deliver the pages and the audio brief, as any host does. We don't use it to profile readers.</li>
+      <li><strong>Search runs in your browser.</strong> What you type into search isn't sent to us or anyone else.</li>
+    </ul>
+
+    <h2>The email newsletter</h2>
+    <p>
+      If you sign up for the Daily Brief by email, your address goes to <a href="https://buttondown.com/legal/privacy" target="_blank" rel="noopener">Buttondown</a>,
+      the service that sends it. We use it only to send the brief. Every email has an unsubscribe link, and we never sell or share the list.
+    </p>
+
+    <h2>Forms: events, tips and corrections</h2>
+    <p>
+      The <a href="/events/submit/">event</a>, <a href="/tips/">tip</a> and <a href="/corrections/submit/">correction</a> forms don't send
+      anything to a server. They write an email in your own email app; nothing goes anywhere until you press send there.
+      We read what you send at editor@waynesville.news.
+    </p>
+    <ul>
+      <li>We publish only what's meant for readers, like an event's details and its public contact.</li>
+      <li>Your name and how to reach you are for the editor only. We don't publish them.</li>
+      <li>We don't name people who send tips unless they say we can.</li>
+    </ul>
+
+    <h2>Supporting the site</h2>
+    <p>
+      Reader and business support goes through <a href="https://www.patreon.com/policy/privacy" target="_blank" rel="noopener">Patreon</a>,
+      which handles payment and receipts. We see a supporter's name and tier, not card details.
+    </p>
+
+    <h2>Links to other sites</h2>
+    <p>Our stories and listings link to the sources we used and to businesses' own sites. Those sites have their own privacy practices.</p>
+
+    <h2>Questions</h2>
+    <p>Email <a href="mailto:editor@waynesville.news?subject=Privacy">editor@waynesville.news</a>. See also <a href="/about/#no-ads">no targeted ads, no algorithm</a> and our <a href="/corrections/">corrections policy</a>.</p>
+
+    <p class="small muted">Last updated November 7, 2026.</p>
+  </div>
+</Base>

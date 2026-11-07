@@ -66,7 +66,7 @@ const plainMail = `mailto:${EDITOR}?subject=${encodeURIComponent("Event submissi
       </label>
 
       <label>Your name and how to reach you <span class="hint">(for the editor only; not published)</span>
-        <input name="submitter" autocomplete="name email" />
+        <input name="submitter" autocomplete="name" />
       </label>
 
       <p class="small">
@@ -88,7 +88,7 @@ const plainMail = `mailto:${EDITOR}?subject=${encodeURIComponent("Event submissi
     <p class="small">
       Prefer plain email? Write to <a href={plainMail}>{EDITOR}</a> with the subject “Event submission.”
       We list events that are open to the public. We don't publish private phone numbers or the names of private
-      individuals without asking, and we may shorten descriptions.
+      individuals without asking, and we may shorten descriptions. The form only writes an email in your own mail app; see <a href="/privacy/">privacy</a>.
     </p>
 
     <p class="small"><a href="/events/">← Events calendar</a></p>

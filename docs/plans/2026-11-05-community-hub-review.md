@@ -220,6 +220,15 @@ keeping editorial independence and sourcing standards.
 10. Accessibility and mobile improvements: a WCAG 2.2 AA audit, Core Web
     Vitals, structured data, link and feed monitoring, and a privacy policy
     for submissions.
+    **Done 2026-11-07:** axe-core WCAG 2.2 AA scan of 19 pages on a phone
+    in light and dark mode; fixed links that relied on color alone (now
+    underlined in running text) and an invalid `autocomplete` on the forms;
+    re-scan clean. Manual checks: no sideways scrolling at 320px, a visible
+    focus ring on every keyboard stop, no third-party requests. Lab Core Web
+    Vitals on a throttled phone: LCP 0.3–0.8 s, CLS 0 (home, events,
+    directory, schools, a brief). `/privacy/` added and linked from the
+    footer and the three forms. Structured data and link monitoring were
+    done 2026-11-06.
 
 The reviewer said items 1–5 would make the biggest difference to everyday use.
 
