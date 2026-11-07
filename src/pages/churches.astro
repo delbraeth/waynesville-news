@@ -11,7 +11,7 @@ const hasOrgs = orgData.items.length > 0;
 
 type Church = {
   name: string; tradition?: string; address?: string; town?: string; phone?: string;
-  website?: string; services?: string; ministries?: string[]; source?: string[]; verified?: string;
+  website?: string; facebook?: string; services?: string; ministries?: string[]; source?: string[]; verified?: string;
 };
 const churches = (data.items as Church[]).slice().sort((a, b) => (a.town ?? "").localeCompare(b.town ?? "") || a.name.localeCompare(b.name));
 
@@ -73,7 +73,7 @@ const listMail = "mailto:editor@waynesville.news?subject=" + encodeURIComponent(
               {!c.verified && <p class="ch-unconfirmed">Listed from public directories; details not yet confirmed with the church. Check before you go.</p>}
               {c.services
                 ? <p class="res-what"><strong>Services:</strong> {c.services}</p>
-                : c.verified && <p class="res-what muted">{c.website ? "Check the church's website for service times." : c.phone ? "Service times aren't posted online; call the church." : "Service times aren't posted online."}</p>}
+                : c.verified && <p class="res-what muted">{c.website || c.facebook ? `Check the church's ${c.website ? "website" : "Facebook page"} for service times.` : c.phone ? "Service times aren't posted online; call the church." : "Service times aren't posted online."}</p>}
               {c.ministries && c.ministries.length > 0 && (
                 <ul class="ch-min">
                   {c.ministries.map((m) => <li>{m}</li>)}
@@ -82,6 +82,7 @@ const listMail = "mailto:editor@waynesville.news?subject=" + encodeURIComponent(
               <div class="res-meta">
                 {c.phone && <a class="res-phone" href={tel(c.phone)}>{c.phone}</a>}
                 {c.address && <span>{c.address}</span>}
+                {c.facebook && <a href={c.facebook} target="_blank" rel="noopener">Facebook</a>}
               </div>
               {eventsFor(c).length > 0 && (
                 <div class="ch-events">
