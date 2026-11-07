@@ -19,14 +19,14 @@ For each entry: fill in the confirmed fields, set `verified` to the date checked
 **Community organizations** (`src/data/organizations.json`)
 - [ ] Progressive Women's Club: meeting place (Methodist church or Quaker Heights?); left off until known
 - [ ] American Legion Post 615
-- [ ] Scouting: which of Pack 840, Troops 51 / 1051 / 318, Crew 6151 are active
+- [ ] Scouting: Pack 840 and Troop 318 still active? (Troops 51/1051 and Crew 6151 confirmed from their TroopTrack site, 2026-11-07)
 - [ ] Waynesville Lacrosse Club: fees (not on the club's home page)
 - [ ] Waynesville Youth Basketball Association: season and contact
 - [ ] Youth wrestling, band boosters, Friends of the Library
 - [ ] Rotary: which club? (District 6670 lists none in Waynesville; nearest is Lebanon)
 
 **Visiting Waynesville** (`src/data/visit.json`)
-- [ ] Caesar Creek State Park and nature center hours
+- [ ] Caesar Creek State Park, Nature Center and Visitor Center (separate buildings) opening hours, and the Visitor Center's address (the Nature Center is now listed from the Nature Center Association's page, with phone and program days, but that page gives no hours)
 - [ ] Typical downtown shop hours
 - [ ] DORA boundaries: not on the Merchants' DORA page. They'd be in the village council ordinance that created it, or ask the Merchants Association / village office
 
@@ -55,10 +55,15 @@ For each entry: fill in the confirmed fields, set `verified` to the date checked
 - [ ] School status badge (open / delay / closed) and a school calendar (top parent ask)
 - [ ] Shorter Schools page that opens with a "This week" summary
 - [ ] Corrections policy page and public corrections log (the correction form is live at /corrections/submit/; a policy page could live at /corrections/)
-- [ ] Lighter fonts (about 90% of page weight; would save about 120 KB per page)
 
 ## Done
 **PR #115 (merged 2026-11-06):** reviewer fixes, the Visiting Waynesville page, "No targeted ads. No algorithm."
+
+**Caesar Creek Nature Center (2026-11-07):** added to the Visit page from caesarcreekstatepark.com (editor's link): exhibits, free programs most Thu/Fri/Sat, 513-897-2437. Its events feed was checked but not added: it is mostly Cowan Lake programs, and the Caesar Creek ones are already on the calendar from ODNR
+
+**Scouting (2026-11-07):** Troops 51 and 1051 and Crew 6151 listed from troop-0051.trooptrack.com (editor's link): chartered to Waynesville Scouting, Wednesdays 7 p.m. at the American Legion, troop email and Facebook. The scoutmaster's name and cell number are left off (named individual)
+
+**Lighter fonts (2026-11-07):** Newsreader self-hosted as three static cuts, 67 KB instead of 195 KB from Google Fonts; homepage first visit drops from about 242 KB to about 115 KB, and no third-party font request
 
 **PR #117 (2026-11-07):**
 - Site-wide search: directory, community, churches, resources and visit listings, exact name matches first, above brief/story results
