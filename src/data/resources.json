@@ -327,6 +327,25 @@
           ],
           "source": "https://www.wccsi.org/programs-services/care-management-elderly-services-program-esp/",
           "verified": "2026-11-05"
+        },
+        {
+          "name": "Warren County Community Services: help for families",
+          "what": "Utility and energy help for income-eligible households, including the Winter and Summer Crisis programs for homes facing disconnection; Head Start and Early Head Start (income-eligible) and gold-rated early learning centers for children from birth to age 4; and a list of food pantries.",
+          "phone": "513-695-2100",
+          "address": "645 Oak Street, Lebanon",
+          "link": "https://www.wccsi.org/",
+          "links": [
+            {
+              "label": "Utility and energy help",
+              "url": "https://www.wccsi.org/programs-services/community-assistance/"
+            },
+            {
+              "label": "Early learning and Head Start",
+              "url": "https://www.wccsi.org/programs-services/early-learning-centers/"
+            }
+          ],
+          "source": "https://www.wccsi.org/programs-services/community-assistance/",
+          "verified": "2026-11-07"
         }
       ]
     },

@@ -1,6 +1,6 @@
 {
   "_note": "Local business directory. Built by scripts/fetch-directory.mjs from the Waynesville Area Chamber of Commerce's public member directory (name, location, phone, website, and the Chamber's description, as published) plus hand-added listings in directory-manual.json. Contact names, emails and hours are deliberately not copied from the Chamber; an hours line appears only when the owner supplied it (hours + hoursChecked in directory-manual.json). Do not edit by hand — edit directory-manual.json and re-run `npm run refresh:directory` (or `npm run refresh:directory -- --manual-only` to merge manual edits without re-reading the Chamber site).",
-  "updated": "2026-11-07T11:20:18.251Z",
+  "updated": "2026-11-07T17:53:19.318Z",
   "sections": [
     {
       "id": "food",
@@ -4214,7 +4214,7 @@
     {
       "id": "manual-wendystreasures",
       "name": "Wendy's Treasures",
-      "location": "Waynesville, OH",
+      "location": "88 S. Main St., Waynesville, OH 45068",
       "phone": "",
       "sections": [
         "shop"
@@ -4224,7 +4224,7 @@
         "Collectibles",
         "Coins"
       ],
-      "source": "https://www.ohioslargestplayground.com/directory/wendys-treasures/ ; https://waynesvilleshops.com/merchant-association-directory/ (2026 member list). Street address left off: the visitors bureau's 174 Main St. is now the Chamber's office.",
+      "source": "https://www.ohioslargestplayground.com/directory/wendys-treasures/ ; https://waynesvilleshops.com/merchant-association-directory/ (2026 member list). Address 88 S. Main St. confirmed by the editor (2026-11-07).",
       "website": "",
       "social": {
         "facebook": "https://www.facebook.com/profile.php?id=100057480008339"
