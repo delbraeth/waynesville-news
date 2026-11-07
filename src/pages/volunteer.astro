@@ -1,0 +1,182 @@
+---
+// Volunteer board: current asks (dated needs from volunteer.json plus events
+// tagged "volunteer"), standing ways to help (volunteer.json "ongoing", most
+// drawn from groups' howToHelp lines in organizations.json), and a form for
+// groups to post a need. See the _note in src/data/volunteer.json.
+import Base from "../layouts/Base.astro";
+import data from "../data/volunteer.json";
+import orgData from "../data/organizations.json";
+import { upcomingEvents } from "../lib/events.js";
+import { slug } from "../lib/slug.js";
+
+type Org = { name: string; what?: string; howToHelp?: string; website?: string; facebook?: string; source?: string[]; verified?: string };
+type Ongoing = { org?: string; kind: string; help?: string; name?: string; what?: string; how?: string; link?: string; source?: string; verified?: string };
+type Need = { title: string; org?: string; what?: string; how?: string; link?: string; until: string; source?: string };
+
+const orgs = new Map((orgData.items as Org[]).map((o) => [o.name, o]));
+const today = new Date().toLocaleDateString("en-CA", { timeZone: "America/New_York" });
+const fmt = (iso: string) => new Date(iso + "T12:00:00").toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" });
+
+// Standing ways to help. Org-backed entries show only verified groups.
+const items = (data.ongoing as Ongoing[]).map((x) => {
+  if (x.org) {
+    const o = orgs.get(x.org);
+    if (!o || !o.verified || !(x.help || o.howToHelp)) return null;
+    return { kind: x.kind, name: o.name, what: x.help || o.howToHelp, page: `/community/#${slug(o.name)}`, link: o.website || o.facebook, verified: o.verified };
+  }
+  return { kind: x.kind, name: x.name!, what: [x.what, x.how].filter(Boolean).join(" "), page: undefined, link: x.link, verified: x.verified };
+}).filter(Boolean) as { kind: string; name: string; what?: string; page?: string; link?: string; verified?: string }[];
+
+const KINDS = [
+  { id: "hands-on", title: "Lend a hand" },
+  { id: "donate", title: "Give food or goods" },
+  { id: "youth", title: "Kids, schools and teams" },
+  { id: "seniors", title: "For volunteers 55 and older" },
+];
+
+// Current asks: dated needs, plus calendar events tagged "volunteer".
+const needs = (data.needs as Need[]).filter((n) => n.until >= today);
+const asks = upcomingEvents("volunteer");
+
+const EDITOR = "editor@waynesville.news";
+const plainMail = `mailto:${EDITOR}?subject=${encodeURIComponent("Volunteer need")}`;
+---
+<Base title="Volunteer in Waynesville · Waynesville News" description="Ways to volunteer and help in Waynesville, Ohio: current asks from local groups, the food pantry, youth sports and schools, history and senior programs, and a form to post a volunteer need." showInfoBar={false}>
+  <div class="reading">
+    <p class="kicker">Community</p>
+    <h1>Volunteer</h1>
+    <p class="dek">Ways to pitch in around Waynesville, from the food pantry to the ball fields.</p>
+    <p class="small">
+      Each group's details come from its own website and link to its listing on our <a href="/community/">community page</a>.
+      Running a group that needs help? <a href="#post">Post a volunteer need</a>.
+    </p>
+
+    <section class="vol-sec" aria-labelledby="vol-now">
+      <h2 id="vol-now">Current asks</h2>
+      {needs.length === 0 && asks.length === 0 ? (
+        <p class="muted">No specific asks right now. The standing ways to help below are always open.</p>
+      ) : (
+        <ul class="res-list">
+          {needs.map((n) => (
+            <li>
+              <div class="res-name">{n.link ? <a href={n.link} target="_blank" rel="noopener">{n.title}</a> : n.title}</div>
+              {n.org && <div class="vol-org">{n.org}</div>}
+              {n.what && <p class="res-what">{n.what}</p>}
+              {n.how && <p class="res-what"><strong>How:</strong> {n.how}</p>}
+              <div class="res-src">Through {fmt(n.until)}</div>
+            </li>
+          ))}
+          {asks.map((e) => (
+            <li>
+              <div class="res-name"><a href={e.source} target="_blank" rel="noopener">{e.title}</a></div>
+              <div class="vol-org">{e.dateLabel} · {e.venue}</div>
+              {e.note && <p class="res-what">{e.note}</p>}
+            </li>
+          ))}
+        </ul>
+      )}
+    </section>
+
+    <section class="vol-sec" aria-labelledby="vol-ongoing">
+      <h2 id="vol-ongoing">Standing ways to help</h2>
+      {KINDS.map((k) => {
+        const list = items.filter((i) => i.kind === k.id);
+        return list.length > 0 && (
+          <>
+            <h3 class="vol-kind">{k.title}</h3>
+            <ul class="res-list">
+              {list.map((i) => (
+                <li id={slug(i.name)}>
+                  <div class="res-name">{i.link ? <a href={i.link} target="_blank" rel="noopener">{i.name}</a> : i.name}</div>
+                  {i.what && <p class="res-what">{i.what}</p>}
+                  <div class="res-src">
+                    {i.page && <><a href={i.page}>More about this group</a> · </>}
+                    {i.verified && <>Checked {fmt(i.verified)}</>}
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </>
+        );
+      })}
+    </section>
+
+    <section class="vol-sec" id="post" aria-labelledby="vol-post">
+      <h2 id="vol-post">Post a volunteer need</h2>
+      <p>
+        Need hands for a supper, a cleanup, a drive or a season? Fill this in and press <strong>Create email</strong>; your email app
+        opens with it written out. We list needs from groups serving Waynesville after checking them, and take them down when they're filled
+        or their date passes.
+      </p>
+      <form id="vol-form" class="submit-form" novalidate>
+        <label>Group or organization <span class="req" aria-hidden="true">*</span>
+          <input name="org" required />
+        </label>
+        <label>What help do you need? <span class="req" aria-hidden="true">*</span>
+          <textarea name="what" rows="4" required placeholder="e.g. 6 people to serve at the Dec. 5 pancake breakfast, 7–11 a.m."></textarea>
+        </label>
+        <div class="row">
+          <label>When
+            <input name="when" placeholder="Date, or ongoing" />
+          </label>
+          <label>List it until
+            <input name="until" type="date" />
+          </label>
+        </div>
+        <label>How to sign up <span class="hint">(a link, email or phone we can publish)</span>
+          <input name="how" />
+        </label>
+        <label>Your name and how to reach you <span class="hint">(for the editor only; not published)</span>
+          <input name="submitter" autocomplete="name" />
+        </label>
+        <p id="vol-error" class="submit-error" role="alert" hidden></p>
+        <button class="btn" type="submit">Create email</button>
+      </form>
+      <noscript><p>This form needs JavaScript. You can also <a href={plainMail}>email the editor</a> at <strong>{EDITOR}</strong>.</p></noscript>
+      <p class="small">
+        Prefer plain email? Write to <a href={plainMail}>{EDITOR}</a> with the subject “Volunteer need.” The form only writes an email in
+        your own mail app; see <a href="/privacy/">privacy</a>. We don't publish volunteers' or children's names.
+      </p>
+    </section>
+  </div>
+</Base>
+
+<script is:inline define:vars={{ EDITOR }}>
+  (function () {
+    var form = document.getElementById("vol-form");
+    var err = document.getElementById("vol-error");
+    if (!form) return;
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var f = form.elements;
+      var missing = [["org", "group"], ["what", "what help you need"]].filter(function (r) { return !f[r[0]].value.trim(); });
+      if (missing.length) {
+        err.textContent = "Please fill in: " + missing.map(function (r) { return r[1]; }).join(", ") + ".";
+        err.hidden = false; f[missing[0][0]].focus(); return;
+      }
+      err.hidden = true;
+      var lines = [
+        "VOLUNTEER NEED", "",
+        "Group: " + f.org.value.trim(), "",
+        "Help needed:", f.what.value.trim(), "",
+        "When: " + (f.when.value.trim() || "(not given)"),
+        "List until: " + (f.until.value || "(not given)"),
+        "How to sign up (public): " + (f.how.value.trim() || "(not given)"), "",
+        "From (not for publication): " + (f.submitter.value.trim() || "(not given)"),
+      ];
+      var subject = "Volunteer need: " + f.org.value.trim().slice(0, 60);
+      window.location.href = "mailto:" + EDITOR + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(lines.join("\n"));
+    });
+  })();
+</script>
+
+<style>
+  .vol-sec { margin-top: 1.75rem; }
+  .vol-kind { margin: 1.25rem 0 0.25rem; font-size: 1.05rem; }
+  .vol-org { font-size: 0.9rem; color: var(--muted); }
+  .res-list { list-style: none; margin: 0; padding: 0; }
+  .res-list > li { padding: 0.85rem 0; border-bottom: 1px solid var(--rule); }
+  .res-name { font-weight: 600; }
+  .res-what { margin: 0.3rem 0 0; }
+  .res-src { margin-top: 0.3rem; font-size: 0.8rem; color: var(--muted); }
+</style>

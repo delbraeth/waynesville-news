@@ -131,8 +131,12 @@ reference.
   boosters, PTOs, scouts, 4-H, youth sports leagues and library youth
   programs go in this listing, not on a separate page. Name groups and
   their public contacts only, never students.
-- **Volunteer board.** Could grow out of the nonprofit listing's "how to
-  help" lines.
+- **Volunteer board.** **Built 2026-11-07** at `/volunteer/` (data in
+  `src/data/volunteer.json`): current asks (dated needs that hide after
+  their date, plus events tagged "volunteer"), standing ways to help drawn
+  from verified groups' "how to help" lines and WCCS's volunteer and RSVP
+  programs, and a "post a volunteer need" mailto form. Linked from the
+  Community menu, the Community page and the footer.
 - **Visitor guide and government issue trackers.** From the review's
   Phase 3.
 
