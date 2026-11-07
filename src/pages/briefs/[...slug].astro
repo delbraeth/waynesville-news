@@ -72,7 +72,7 @@ const dateFmt = new Intl.DateTimeFormat("en-US", {
       <p class="small brief-howmade">
         <strong>How this brief is made:</strong> drafted with AI from the sources linked above and published
         without a line-by-line human review. <a href="/about/#how">More about how it's made</a>.
-        Spot a mistake? <a href={`mailto:editor@waynesville.news?subject=${encodeURIComponent(`Correction: Daily Brief ${entry.id}`)}`}>Tell the editor</a>.
+        Spot a mistake? <a href={`/corrections/submit/?page=${encodeURIComponent(`/briefs/${entry.id}/`)}`}>Report a correction</a>.
       </p>
     )}
     <p class="small"><a href="/briefs/">← All briefs</a></p>

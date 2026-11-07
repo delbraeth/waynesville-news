@@ -1,0 +1,87 @@
+---
+// News tip form. Like /events/submit/, it builds an email in the reader's own
+// mail app (mailto:): no server, no third-party form service, nothing stored.
+import Base from "../layouts/Base.astro";
+
+const EDITOR = "editor@waynesville.news";
+const plainMail = `mailto:${EDITOR}?subject=${encodeURIComponent("News tip")}`;
+---
+<Base title="Send a Tip · Waynesville News" description="Send the Waynesville News a news tip: something happening in Waynesville, Corwin or Wayne Township that people should know about." showInfoBar={false}>
+  <div class="reading">
+    <p class="kicker">Tips</p>
+    <h1>Send a tip</h1>
+    <p class="dek">
+      Road work, a new business, a closing, a school or village decision, something odd on Main Street?
+      If people in Waynesville should know about it, tell us.
+    </p>
+    <p>
+      Fill in what you know and press <strong>Create email</strong>. Your email app opens with everything filled in;
+      just hit send. We check every tip against a public source or a second person before anything is published.
+    </p>
+
+    <form id="tip-form" class="submit-form" novalidate>
+      <label>What's going on? <span class="req" aria-hidden="true">*</span>
+        <textarea name="what" rows="6" required placeholder="What happened or is about to, and why it matters."></textarea>
+      </label>
+      <div class="row">
+        <label>Where
+          <input name="where" placeholder="Street, building or area" />
+        </label>
+        <label>When
+          <input name="when" placeholder="Date or time, if you know" />
+        </label>
+      </div>
+      <label>Where we can check it <span class="hint">(a link, document, agenda, post or person to ask)</span>
+        <input name="link" placeholder="https:// or a description" />
+      </label>
+      <label>Your name and how to reach you <span class="hint">(for the editor only; never published)</span>
+        <input name="submitter" autocomplete="name email" />
+      </label>
+      <fieldset class="tip-credit">
+        <legend>If we use it, can we say it came from you?</legend>
+        <label><input type="radio" name="credit" value="No, keep me anonymous" checked /> No, keep me anonymous</label>
+        <label><input type="radio" name="credit" value="Yes, you may name me" /> Yes, you may name me</label>
+      </fieldset>
+      <p class="small">Have a photo or document? Attach it to the email before you send.</p>
+      <p id="tip-error" class="submit-error" role="alert" hidden></p>
+      <button class="btn" type="submit">Create email</button>
+    </form>
+
+    <noscript>
+      <p>This form needs JavaScript. You can also <a href={plainMail}>email the editor</a> at <strong>{EDITOR}</strong>.</p>
+    </noscript>
+
+    <p class="small">
+      Prefer plain email? Write to <a href={plainMail}>{EDITOR}</a>. We don't name people who send tips unless they say
+      we can. Event to list? Use <a href="/events/submit/">Submit an event</a>. Something we got wrong?
+      <a href="/corrections/submit/">Report a correction</a>.
+    </p>
+  </div>
+</Base>
+
+<script is:inline define:vars={{ EDITOR }}>
+  (function () {
+    var form = document.getElementById("tip-form");
+    var err = document.getElementById("tip-error");
+    if (!form) return;
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var f = form.elements;
+      var what = f.what.value.trim();
+      if (!what) { err.textContent = "Please tell us what's going on."; err.hidden = false; f.what.focus(); return; }
+      err.hidden = true;
+      var credit = (form.querySelector('input[name="credit"]:checked') || {}).value || "No, keep me anonymous";
+      var lines = [
+        "NEWS TIP", "",
+        "What: " + what, "",
+        "Where: " + (f.where.value.trim() || "(not given)"),
+        "When: " + (f.when.value.trim() || "(not given)"),
+        "Where to check it: " + (f.link.value.trim() || "(not given)"), "",
+        "From (not for publication): " + (f.submitter.value.trim() || "(not given)"),
+        "Credit: " + credit,
+      ];
+      var subject = "News tip: " + what.replace(/\s+/g, " ").slice(0, 60) + (what.length > 60 ? "…" : "");
+      window.location.href = "mailto:" + EDITOR + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(lines.join("\n"));
+    });
+  })();
+</script>

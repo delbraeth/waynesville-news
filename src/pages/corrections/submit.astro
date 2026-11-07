@@ -1,0 +1,80 @@
+---
+// Correction report form (mailto:, like /events/submit/). Pages link here with
+// ?page=<path> so the form knows which page the reader was on.
+import Base from "../../layouts/Base.astro";
+
+const EDITOR = "editor@waynesville.news";
+const plainMail = `mailto:${EDITOR}?subject=${encodeURIComponent("Correction")}`;
+---
+<Base title="Report a Correction · Waynesville News" description="Tell the Waynesville News about a mistake: a wrong date, name, address, phone number or fact in a brief, story or listing." showInfoBar={false}>
+  <div class="reading">
+    <p class="kicker">Corrections</p>
+    <h1>Report a correction</h1>
+    <p class="dek">
+      A wrong date, a closed business, a bad phone number, a fact we got wrong? Tell us and we'll fix it,
+      usually the same day once we've checked it.
+    </p>
+
+    <form id="corr-form" class="submit-form" novalidate>
+      <label>Which page? <span class="req" aria-hidden="true">*</span>
+        <input name="page" required placeholder="Paste the link, or e.g. “Nov 6 brief” or “directory: Hammel House”" />
+      </label>
+      <label>What's wrong? <span class="req" aria-hidden="true">*</span>
+        <textarea name="wrong" rows="3" required placeholder="Quote or describe what the page says."></textarea>
+      </label>
+      <label>What's right? <span class="req" aria-hidden="true">*</span>
+        <textarea name="right" rows="3" required placeholder="The correct information."></textarea>
+      </label>
+      <label>How do you know? <span class="hint">(a link, document, or “I own the business”, “I was there”)</span>
+        <input name="source" />
+      </label>
+      <label>Your name and how to reach you <span class="hint">(for the editor only; not published)</span>
+        <input name="submitter" autocomplete="name email" />
+      </label>
+      <p id="corr-error" class="submit-error" role="alert" hidden></p>
+      <button class="btn" type="submit">Create email</button>
+    </form>
+
+    <noscript>
+      <p>This form needs JavaScript. You can also <a href={plainMail}>email the editor</a> at <strong>{EDITOR}</strong>
+        with the page, what's wrong and what's right.</p>
+    </noscript>
+
+    <p class="small">
+      Prefer plain email? Write to <a href={plainMail}>{EDITOR}</a> with the subject “Correction.”
+      Have a news tip instead? <a href="/tips/">Send a tip</a>.
+    </p>
+  </div>
+</Base>
+
+<script is:inline define:vars={{ EDITOR }}>
+  (function () {
+    var form = document.getElementById("corr-form");
+    var err = document.getElementById("corr-error");
+    if (!form) return;
+    // Prefill the page from ?page=/path/ (same-site paths only).
+    var pg = new URLSearchParams(location.search).get("page") || "";
+    if (/^\/[^\s]*$/.test(pg) && !/^\/\//.test(pg)) form.elements.page.value = location.origin + pg;
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var f = form.elements;
+      var missing = [["page", "which page"], ["wrong", "what's wrong"], ["right", "what's right"]]
+        .filter(function (r) { return !f[r[0]].value.trim(); });
+      if (missing.length) {
+        err.textContent = "Please fill in: " + missing.map(function (r) { return r[1]; }).join(", ") + ".";
+        err.hidden = false; f[missing[0][0]].focus(); return;
+      }
+      err.hidden = true;
+      var lines = [
+        "CORRECTION", "",
+        "Page: " + f.page.value.trim(), "",
+        "What it says:", f.wrong.value.trim(), "",
+        "What's right:", f.right.value.trim(), "",
+        "How they know: " + (f.source.value.trim() || "(not given)"), "",
+        "From (not for publication): " + (f.submitter.value.trim() || "(not given)"),
+      ];
+      var subject = "Correction: " + f.page.value.trim().replace(/^https?:\/\/[^/]+/, "").slice(0, 70);
+      window.location.href = "mailto:" + EDITOR + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(lines.join("\n"));
+    });
+  })();
+</script>

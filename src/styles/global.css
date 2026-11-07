@@ -515,3 +515,26 @@ a.dir-supporter, a.dir-supporter:hover { color: #fff; text-decoration: none; }
 .brief-audio-label { margin: 0 0 0.5rem; font-weight: 600; font-size: 0.95rem; }
 .brief-audio audio { width: 100%; }
 .brief-audio .small { margin: 0.5rem 0 0; }
+
+/* Mailto forms: events/submit, tips, corrections/submit */
+  .submit-form { display: grid; gap: 0.9rem; margin: 1.25rem 0; max-width: 36rem; }
+  .submit-form label { display: block; font-weight: 600; font-size: 0.95rem; }
+  .submit-form label > input,
+  .submit-form label > textarea { display: block; margin-top: 0.3rem; }
+  .submit-form .row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.9rem; }
+  .submit-form input,
+  .submit-form textarea {
+    font: inherit; font-weight: 400; padding: 0.55rem 0.65rem; border: 1px solid var(--rule); border-radius: 2px;
+    background: var(--field); color: var(--ink); width: 100%; box-sizing: border-box; min-height: 2.75rem;
+  }
+  .submit-form input:focus-visible,
+  .submit-form textarea:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+  .submit-form .hint { font-weight: 400; color: var(--muted); font-size: 0.85rem; }
+  .submit-form .req { color: var(--accent); }
+  .submit-form .btn { justify-self: start; }
+  .submit-error { color: var(--accent); font-weight: 600; margin: 0; }
+  @media (max-width: 30rem) { .submit-form .row { grid-template-columns: 1fr; } }
+.submit-form fieldset { border: 0; margin: 0; padding: 0; }
+.submit-form legend { font-weight: 600; font-size: 0.95rem; margin-bottom: 0.3rem; }
+.submit-form fieldset label { font-weight: 400; display: flex; gap: 0.5rem; align-items: center; margin: 0.2rem 0; }
+.submit-form fieldset input[type="radio"] { width: auto; min-height: 0; margin: 0; }

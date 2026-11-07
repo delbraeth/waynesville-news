@@ -46,6 +46,7 @@ const dateFmt = new Intl.DateTimeFormat("en-US", { month: "long", day: "numeric"
       <Content />
     </div>
     <SubscribeBox />
+    <p class="small">Spot a mistake? <a href={`/corrections/submit/?page=${encodeURIComponent(`/stories/${entry.id}/`)}`}>Report a correction</a>. Know something we should look into? <a href="/tips/">Send a tip</a>.</p>
     <p class="small"><a href="/stories/">← All stories</a></p>
   </article>
 </Base>

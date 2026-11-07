@@ -59,6 +59,6 @@ For each entry: fill in the confirmed fields, set `verified` to the date checked
 - [ ] Shorter Schools page that opens with a "This week" summary
 - [x] Site-wide search (directory, community, churches, resources, visit), with exact matches ranked first (2026-11-07)
 - [ ] Corrections policy page and public corrections log
-- [ ] Tips and corrections forms (events already has one)
+- [x] Tips and corrections forms: /tips/ and /corrections/submit/ (mailto, like the events form); linked from the footer, About, briefs and stories (2026-11-07)
 - [ ] Library programs and Caesar Creek events added to the calendar automatically, plus sign-up reminders
 - [ ] Lighter fonts (about 90% of page weight; would save about 120 KB per page)
