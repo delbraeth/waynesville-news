@@ -37,6 +37,14 @@ For each entry: fill in the confirmed fields, set `verified` to the date checked
 - [ ] Blitzen & Pine Christmas Shop: not added; only its name and Facebook page are official. Needs an address (a craft site says 275 Miami St.)
 - [ ] Red Brick Social Room: not added; event venue, only name and Facebook official. Listing sites say the 1836 Red Brick Meeting House, 407 High St., up to 120 guests
 
+**Directory: from the editor's list (2026-11-07)**
+Added with official sources: Carroll Creek Farms, Hidden Valley Orchards (Lebanon address, so marked outside the area). Updated: Caesar Creek Animal Clinic (already a Chamber listing; its description named a staff vet, now replaced) and Bentley's Pawsome Resort (phone added from its site). Already listed: The Secret Garden, Silver Spur Western Store.
+- [ ] Bridge Riding for the Disabled (nonprofit therapeutic riding, 743 W. Pekin Rd., Lebanon; bridgeriding.org, 937-654-4693): still running? Its website hasn't been updated since about 2018. Would go on the Community page if active
+- [ ] Designs Now, Inc. (sign shop): found only on listing sites (57 US 42?), no phone or website. Still operating? Or did you mean another business?
+- [ ] Cherokee Self Storage (5649 US 42): listing sites only, with two phone numbers (513-897-5150 / 513-586-3033). Which is right?
+- [ ] Kennels found only on listing sites: Old Stage Kennel (9069 Old Stage Rd, 937-862-4353), Country Boarding & Kennel / Oakes Pet Care (9289 Old Stage Rd), A-1 Kennels (1087 S. Nixon Camp Rd., Oregonia). Which are open?
+- [ ] Buckeye Select Kennels: one listing site puts Old Stage Kennel at 9635 Old Stage Rd, Buckeye Select's listed address. Confirm Buckeye Select's address
+
 **Directory: places to eat and stay**
 - [ ] Possibly missing; found only on listing sites, so not added: Remember When Tea Room (370 Old Stage Rd), Sun Sprouts Cafe and The Corwin Peddler (Corwin, by the trail), Terrapin Village B&B (Oregonia), Miller's Campground (6964 Townshipline Rd; its website now redirects to a for-sale page), Sinclair House B&B
 

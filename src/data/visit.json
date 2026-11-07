@@ -198,6 +198,30 @@
       ]
     },
     {
+      "id": "more",
+      "title": "More to do",
+      "items": [
+        {
+          "name": "Fox Hollow Rodeo",
+          "what": "A rodeo every Saturday night, year round, rain or shine: semi-pro and amateur bull riding, barrel racing (summer only), and calf and sheep riding (\"mutton bustin'\") for young riders. No alcohol, coolers or outside food and drinks; tickets are non-refundable.",
+          "hours": "Saturdays, 6–10 p.m.",
+          "address": "1909 E. State Route 73, Waynesville, OH 45068",
+          "phone": "513-668-4081",
+          "website": "https://foxhollowrodeo.simpletix.com/",
+          "links": [
+            {
+              "label": "Tickets",
+              "url": "https://foxhollowrodeo.simpletix.com/"
+            }
+          ],
+          "source": [
+            "https://foxhollowrodeo.simpletix.com/"
+          ],
+          "verified": "2026-11-07"
+        }
+      ]
+    },
+    {
       "id": "events",
       "title": "Festivals worth planning around",
       "intro": "Dates change each year; each festival's own site has the current schedule. Our events calendar lists them as dates are announced.",
