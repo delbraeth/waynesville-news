@@ -1,13 +1,7 @@
 {
   "_note": "Mary L. Cook Public Library — upcoming programs from the library's WhoFi event calendar (https://marylcook-main-oh.whofi.com/calendar/full). \"items\": next 14 days, for the daily brief (dateISO is Eastern wall-clock marked Z). \"calendar\": next 45 days for the events calendar, real offsets, with sign-up details read from each program's page (scripts/lib/signup.mjs). Canceled events and closures excluded.",
-  "updated": "2026-11-07T11:42:33.017Z",
+  "updated": "2026-11-08T11:41:12.092Z",
   "items": [
-    {
-      "title": "Paint Party at the Library",
-      "dateISO": "2026-11-07T10:00:00Z",
-      "dateLabel": "Sat · Nov 7, 10:00 AM",
-      "link": "https://marylcook-main-oh.whofi.com/calendar/event/355955/"
-    },
     {
       "title": "Toddler Time",
       "dateISO": "2026-11-10T10:30:00Z",
@@ -49,22 +43,15 @@
       "dateISO": "2026-11-12T18:00:00Z",
       "dateLabel": "Thu · Nov 12, 6:00 PM",
       "link": "https://marylcook-main-oh.whofi.com/calendar/event/354881/"
+    },
+    {
+      "title": "Rootfinders",
+      "dateISO": "2026-11-14T10:00:00Z",
+      "dateLabel": "Sat · Nov 14, 10:00 AM",
+      "link": "https://marylcook-main-oh.whofi.com/calendar/event/356791/"
     }
   ],
   "calendar": [
-    {
-      "title": "Paint Party at the Library",
-      "dateISO": "2026-11-07T10:00:00-05:00",
-      "endISO": "2026-11-07T11:00:00-05:00",
-      "dateLabel": "Sat, Nov 7 · 10:00 AM",
-      "link": "https://marylcook-main-oh.whofi.com/calendar/event/355955/",
-      "signup": {
-        "required": true,
-        "opens": "2026-10-21",
-        "inPerson": true,
-        "cost": "$10 deposit"
-      }
-    },
     {
       "title": "Toddler Time",
       "dateISO": "2026-11-10T10:30:00-05:00",
