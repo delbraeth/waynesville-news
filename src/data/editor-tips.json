@@ -1,0 +1,12 @@
+{
+  "_note": "Editor-supplied facts for upcoming briefs. scripts/draft-brief.mjs puts each item whose from–until window includes the brief's date into the draft as an editor note under 'This morning in Waynesville'. Facts here came from the editor and are cleared to use as written (attribute them to the named source). Remove items once their window has passed.",
+  "items": [
+    {
+      "from": "2026-11-08",
+      "until": "2026-11-09",
+      "section": "Schools (strong lead-item candidate)",
+      "text": "Waynesville HS boys cross country placed 7th as a team at the OHSAA state meet on Saturday, Nov 7; the team's top runner finished 28th overall in 16:08.8. Source: Wayne Local Schools graphic shared by the editor. Do not name the runner (student). The Nov 7 brief already carries this as an evening update, so in the Nov 8 brief present it as a weekend recap, not breaking news.",
+      "source": "https://www.facebook.com/waynelocalschools"
+    }
+  ]
+}

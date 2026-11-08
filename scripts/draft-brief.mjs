@@ -88,6 +88,10 @@ let closings = [];
 try { closings = (await readJSON("src/data/closings.json")).items ?? []; } catch { /* optional */ }
 let fbWcpdFriends = [];
 try { fbWcpdFriends = dropPastEventPosts((await readJSON("src/data/fb-wcpd-friends.json")).items ?? []); } catch { /* optional */ }
+// Editor tips: facts the editor supplied between runs (editor-tips.json),
+// shown in the draft as editor notes while their from–until window is open.
+let editorTips = [];
+try { editorTips = ((await readJSON("src/data/editor-tips.json")).items ?? []).filter((t) => t.from && t.until && iso >= t.from && iso <= t.until); } catch { /* optional */ }
 
 const longDate = now.toLocaleDateString("en-US", {
   weekday: "long", month: "long", day: "numeric", year: "numeric", timeZone: "America/New_York",
@@ -638,7 +642,7 @@ published: false
 ${weatherBlock ?? "TODO — weather unavailable this morning; check https://forecast.weather.gov/MapClick.php?lat=39.5287&lon=-84.0891"}
 
 ## This morning in Waynesville
-${closingsBlock ? `\n${closingsBlock}\n` : ""}
+${closingsBlock ? `\n${closingsBlock}\n` : ""}${editorTips.length ? `\n<!-- Editor note (stripped before publication): facts from the editor for this edition. Use them as written, attributed to the named source, and delete this note.\n${editorTips.map((t) => `- [${t.section ?? "Any section"}] ${t.text}${t.source ? ` (link: ${t.source})` : ""}`).join("\n")}\n-->\n` : ""}
 1. TODO — lead item (schools first). *(link the source)*
 2. TODO — second item. *(link the source)*
 3. TODO — third item. *(link the source)*
