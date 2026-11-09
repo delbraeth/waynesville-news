@@ -13,7 +13,7 @@
       "name": "Voice B"
     }
   ],
-  "voiceRotationStart": "2026-11-09",
+  "voiceRotationStart": "2026-11-08",
   "modelId": "eleven_v4_turbo",
   "maxChars": 3000,
   "minCreditsLeft": 4000,
