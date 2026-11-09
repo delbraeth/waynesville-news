@@ -144,6 +144,18 @@ const stories = await flaggedStories(date, audioIndex);
 const storiesText = stories.length
   ? (stories.length === 1 ? "Also from Waynesville News: " : "Also from Waynesville News today. ") + stories.map((s) => s.text).join(" ") + " The full stor" + (stories.length === 1 ? "y is" : "ies are") + " at waynesville dot news."
   : "";
+// Voice rotation: audio.json "voices" is a list of { id, name?, voiceSettings? }
+// taken in turn one per day, counted from "voiceRotationStart" (that date gets
+// the first voice). Each voice uses its own voiceSettings or the top-level
+// ones. No list = the single top-level voiceId every day.
+export function pickVoice(cfg, date) {
+  const list = (cfg.voices ?? []).filter((v) => v?.id);
+  const pick = list.length
+    ? list[((Math.round((Date.parse(`${date}T12:00:00Z`) - Date.parse(`${cfg.voiceRotationStart || "2026-01-01"}T12:00:00Z`)) / 86400000) % list.length) + list.length) % list.length]
+    : { id: cfg.voiceId, name: cfg.voiceName };
+  return { id: pick.id, name: pick.name || "", settings: pick.voiceSettings || cfg.voiceSettings };
+}
+
 // Audio sponsor tag: supporters.json items with an "audio" object
 // ({ line, start?, end? }). Each sponsor gets at most one spot a week; with
 // fewer than seven sponsors their spots are spread across the week (and the
@@ -217,11 +229,21 @@ try {
   }
 } catch (e) { console.log(`credits: check failed (${e.message}); continuing`); }
 
-const res = await fetch(`${API}/text-to-speech/${cfg.voiceId}?output_format=${cfg.outputFormat || "mp3_44100_128"}`, {
+const tts = (v) => fetch(`${API}/text-to-speech/${v.id}?output_format=${cfg.outputFormat || "mp3_44100_128"}`, {
   method: "POST",
   headers: { "xi-api-key": key, "Content-Type": "application/json", Accept: "audio/mpeg" },
-  body: JSON.stringify({ text: script, model_id: process.env.ELEVENLABS_MODEL || cfg.modelId, ...(cfg.voiceSettings ? { voice_settings: cfg.voiceSettings } : {}) }),
+  body: JSON.stringify({ text: script, model_id: process.env.ELEVENLABS_MODEL || cfg.modelId, ...(v.settings ? { voice_settings: v.settings } : {}) }),
 });
+let voice = pickVoice(cfg, date);
+console.log(`voice: ${voice.name || voice.id}`);
+let res = await tts(voice);
+// A rotation voice that fails (e.g. a library voice that was removed) falls
+// back to the default voice for the day instead of skipping the episode.
+if (!res.ok && voice.id !== cfg.voiceId && res.status !== 401 && res.status !== 429) {
+  console.log(`voice ${voice.name || voice.id}: ElevenLabs HTTP ${res.status}: ${(await res.text()).slice(0, 200)} — falling back to the default voice`);
+  voice = { id: cfg.voiceId, name: cfg.voiceName || "default", settings: cfg.voiceSettings };
+  res = await tts(voice);
+}
 if (!res.ok) { console.error(`ElevenLabs HTTP ${res.status}: ${(await res.text()).slice(0, 300)}`); process.exit(1); }
 let buf = Buffer.from(await res.arrayBuffer());
 
@@ -259,6 +281,6 @@ await writeFile(out, buf);
 await writeFile(out.replace(/\.mp3$/, ".txt"), script + "\n");
 const kbps = Number(/_(\d+)$/.exec(cfg.outputFormat || "mp3_44100_128")?.[1] || 128);
 const seconds = Math.round((buf.length * 8) / (kbps * 1000));
-const meta = { date, chars: script.length, bytes: buf.length, seconds, model: process.env.ELEVENLABS_MODEL || cfg.modelId, ...(sponsor ? { sponsor: sponsor.name } : {}), ...(stories.length ? { stories: stories.map((s) => s.slug) } : {}) };
+const meta = { date, chars: script.length, bytes: buf.length, seconds, model: process.env.ELEVENLABS_MODEL || cfg.modelId, voice: voice.name || voice.id, ...(sponsor ? { sponsor: sponsor.name } : {}), ...(stories.length ? { stories: stories.map((s) => s.slug) } : {}) };
 await writeFile(out.replace(/\.mp3$/, ".json"), JSON.stringify(meta, null, 2) + "\n");
 console.log(`wrote ${out} (${(buf.length / 1024).toFixed(0)} KB, ~${seconds}s, ${script.length} characters, date ${date})`);
