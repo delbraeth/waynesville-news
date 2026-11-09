@@ -18,6 +18,24 @@ const SITE = "https://waynesville.news";
 const API = "https://api.buttondown.com/v1/emails";
 const STATE = new URL("src/data/newsletter-sent.json", root);
 const SITE_CONFIG = new URL("src/data/site.json", root);
+const AUDIO_CONFIG = new URL("src/data/audio.json", root);
+
+// "Listen" line for the email. The Send newsletter and Daily audio Actions run
+// side by side, so the email usually goes out before today's MP3 exists. It
+// therefore links the brief page (its player appears as soon as the recording
+// lands) and the podcast show pages from audio.json, never the MP3 itself.
+// Returns "" when audio is turned off.
+function listenLine(audioCfg, webUrl) {
+  if (!audioCfg?.enabled) return "";
+  const pod = audioCfg.podcast ?? {};
+  const links = [
+    ["on the web", webUrl],
+    ["Apple Podcasts", pod.apple],
+    ["Spotify", pod.spotify],
+    ["YouTube", pod.youtube],
+  ].filter(([, href]) => typeof href === "string" && href.trim());
+  return `🎧 **Listen to today's brief:** ${links.map(([l, h]) => `[${l}](${h.trim()})`).join(" · ")}`;
+}
 
 const key = process.env.BUTTONDOWN_API_KEY;
 const headers = { Authorization: `Token ${key}`, "Content-Type": "application/json" };
@@ -96,8 +114,11 @@ async function main() {
   );
   let patreonUrl = "";
   try { patreonUrl = JSON.parse(await readFile(SITE_CONFIG, "utf8")).patreon?.url?.trim() || ""; } catch {}
+  let listen = "";
+  try { listen = listenLine(JSON.parse(await readFile(AUDIO_CONFIG, "utf8")), webUrl); } catch {}
   const emailBody = [
     dek ? `*${dek}*\n` : "",
+    listen ? `${listen}\n` : "",
     md,
     "",
     "---",
