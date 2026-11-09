@@ -1,7 +1,21 @@
 {
   "_note": "Recent Wayne Local Schools Facebook posts via rss.app bridge. Title + link + short excerpt; the district's own words. Fail-safe: kept from last run if the bridge is down.",
-  "updated": "2026-11-08T11:41:05.210Z",
+  "updated": "2026-11-09T11:40:57.741Z",
   "items": [
+    {
+      "title": "Wayne Local Families & Community! Diehl Law is giving us all a chance to recognize the amazing work of our teachers.…",
+      "link": "https://www.facebook.com/waynelocalschools/posts/pfbid0iRHgkZ3qVpYtpQqqYWzxNkZXhn35wGoo28ADwdVJhLa6KETaTaKkfRGAjGzwCqSfl",
+      "date": "Sun, 08 Nov 2026 23:15:02 GMT",
+      "dateLabel": "Sun, Nov 8",
+      "excerpt": "Once again, they've launched an effort to spotlight educators who go above and beyond—and we’d love to see our Wayne Local teachers nominated! Take a minute to nominate a teacher who has made an impact. Your nomination is a simple way to say “thank you” for all they pour into our students every…"
+    },
+    {
+      "title": "Students in Dr. Kerns’ and Mrs. Baker’s classes recently visited Lowe’s on Wilmington Pike for a cool building adventure…",
+      "link": "https://www.facebook.com/waynelocalschools/posts/pfbid0JcSG1FpZ2pWde8iztUhfDg57WzwN2hH8ZAa8Dfs9E943dxT5Kh7ESjPK1orF7Zfpl",
+      "date": "Sun, 08 Nov 2026 15:15:02 GMT",
+      "dateLabel": "Sun, Nov 8",
+      "excerpt": "! Decked out in safety goggles and aprons, students worked alongside Lowe’s employees and staff to build their very own airplanes! Beyond the fun, students strengthened their fine motor skills, practiced following visual directions, and gained valuable hands-on experience. A BIG thank you to…"
+    },
     {
       "title": "#SPARTANPRIDECONGRATULATIONS to our HS Boys Cross Country Team who finished 7th overall out of Division III! #SPARTANPRI...",
       "link": "https://www.facebook.com/waynelocalschools/posts/pfbid0dpAGQpy6hykergNoHpsXjPmfZdohhhzEhaRsfCFoHak1zkBSWsnjubThZrRL5Dq9l",
@@ -43,20 +57,6 @@
       "date": "Fri, 06 Nov 2026 17:50:40 GMT",
       "dateLabel": "Fri, Nov 6",
       "excerpt": "public schools. According to the Ohio School Boards Association - ✅Voters approved 72 of 134 school tax issues statewide. 🗳Only 29% of additional-funding requests received voter approval. ❓Why does this matter? Renewals generally continue existing revenue, while additional levies provide new…"
-    },
-    {
-      "title": "Preble Shawnee comes to town tonight to take on the Spartans! OHSAA ticket prices, Adult - $12 / Student - $5. Tickets…",
-      "link": "https://www.facebook.com/waynelocalschools/posts/pfbid0XqdquHv1JyXinbkEo2VtUAgfcGRvDVJtnoxQBRcFGnNsDMkU87xN3sDf4gvh1pn6l",
-      "date": "Fri, 06 Nov 2026 15:28:44 GMT",
-      "dateLabel": "Fri, Nov 6",
-      "excerpt": "can be purchased at https://events.hometownticketing.com/…/L2VtYmVkL2V2ZW50LzQ0… or with cash at the gate. No passes accepted."
-    },
-    {
-      "title": "Today, 43 students —our largest group yet— headed to El Mesón in West Carrollton for a fun-filled experience celebrating…",
-      "link": "https://www.facebook.com/reel/2335190770658294/",
-      "date": "Thu, 05 Nov 2026 20:11:45 GMT",
-      "dateLabel": "Thu, Nov 5",
-      "excerpt": "Hispanic culture! Students enjoyed authentic Colombian dishes, including arroz con pollo, fried plantains, and yuca, but the fun didn't stop with the food! They put their Spanish skills to work, explored cultural traditions, and hit the dance floor to show off their moves! A big thank you to…"
     }
   ]
 }

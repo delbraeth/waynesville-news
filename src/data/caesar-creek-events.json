@@ -1,6 +1,6 @@
 {
   "_note": "Caesar Creek State Park programs from the ODNR events calendar, next 60 days. Titles, times and meeting points reproduced from ODNR's own listing.",
-  "updated": "2026-11-08T11:41:05.256Z",
+  "updated": "2026-11-09T11:40:57.992Z",
   "source": "https://ohiodnr.gov/go-and-do/plan-a-visit/events-calendar/events-calendar?keyword=Caesar%20Creek",
   "items": [
     {
@@ -41,6 +41,15 @@
       "meetAt": "Nature Center",
       "summary": "Meet at the Nature Center",
       "link": "https://ohiodnr.gov/home/news-and-events/all-events/parks-wc-events/SW-Ohio/WinterSolsticeWalkandTalkCaesarCreek-12-21-26."
+    },
+    {
+      "title": "Meet the Animals",
+      "dateISO": "2027-01-07T18:00:00.000Z",
+      "endISO": "2027-01-07T20:00:00.000Z",
+      "dateLabel": "Thu, Jan 7 · 1:00 PM–3:00 PM",
+      "meetAt": "Nature Center",
+      "summary": "Meet at the Nature Center",
+      "link": "https://ohiodnr.gov/home/news-and-events/all-events/parks-wc-events/SW-Ohio/MeettheAnimalsCaesarCreek-1-7-27."
     }
   ]
 }
