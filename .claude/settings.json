@@ -1,5 +1,8 @@
 {
   "permissions": {
-    "allow": ["Bash(npm run newsletter:send)"]
+    "allow": [
+      "Bash(npm run newsletter:send)",
+      "Bash(git push origin HEAD:claude/daily)"
+    ]
   }
 }
