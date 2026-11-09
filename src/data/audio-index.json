@@ -57,6 +57,14 @@
       "chars": 2611,
       "model": "eleven_v4_turbo",
       "recorded": "2026-11-08T11:45:29.840Z"
+    },
+    "2026-11-09": {
+      "url": "https://audio.waynesville.news/audio/2026-11-09.mp3",
+      "seconds": 199,
+      "bytes": 1591840,
+      "chars": 2766,
+      "model": "eleven_v4_turbo",
+      "recorded": "2026-11-09T14:24:49.364Z"
     }
   }
 }
