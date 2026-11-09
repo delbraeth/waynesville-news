@@ -59,12 +59,12 @@
       "recorded": "2026-11-08T11:45:29.840Z"
     },
     "2026-11-09": {
-      "url": "https://audio.waynesville.news/audio/2026-11-09.mp3",
+      "url": "https://audio.waynesville.news/audio/2026-11-09.mp3?v=2",
       "seconds": 182,
       "bytes": 1454958,
       "chars": 2766,
       "model": "eleven_v4_turbo",
-      "voice": "Voice B",
+      "voice": "Brody",
       "recorded": "2026-11-09T15:00:58.583Z"
     }
   }

@@ -97,10 +97,12 @@ jobs:
             aws s3 cp "$SRC" "s3://$R2_BUCKET/audio/$DATE.mp3" \
               --endpoint-url "https://$R2_ACCOUNT_ID.r2.cloudflarestorage.com" \
               --content-type audio/mpeg --region auto
-            URL="${R2_PUBLIC_URL%/}/audio/$DATE.mp3"
+            # ?v= changes on every recording, so a re-record isn't masked by a
+            # copy the browser or podcast app already saved under the old URL.
+            URL="${R2_PUBLIC_URL%/}/audio/$DATE.mp3?v=$(date -u +%Y%m%d%H%M%S)"
             ADD=""
           else
-            URL="/audio/$DATE.mp3"
+            URL="/audio/$DATE.mp3?v=$(date -u +%Y%m%d%H%M%S)"
             ADD="public/audio/$DATE.mp3"
           fi
           echo "URL=$URL" >> "$GITHUB_ENV"
