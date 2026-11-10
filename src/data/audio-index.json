@@ -66,6 +66,18 @@
       "model": "eleven_v4_turbo",
       "voice": "Brody",
       "recorded": "2026-11-09T15:00:58.583Z"
+    },
+    "2026-11-10": {
+      "url": "https://audio.waynesville.news/audio/2026-11-10.mp3?v=20261110114745",
+      "seconds": 202,
+      "bytes": 1617545,
+      "chars": 2819,
+      "model": "eleven_v4_turbo",
+      "voice": "Alyson",
+      "stories": [
+        "2026-11-10-holiday-lights-guide"
+      ],
+      "recorded": "2026-11-10T11:47:45.463Z"
     }
   }
 }
