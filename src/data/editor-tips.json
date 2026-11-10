@@ -2,11 +2,18 @@
   "_note": "Editor-supplied facts for upcoming briefs. scripts/draft-brief.mjs puts each item whose from–until window includes the brief's date into the draft as an editor note under 'This morning in Waynesville'. Facts here came from the editor and are cleared to use as written (attribute them to the named source). Remove items once their window has passed.",
   "items": [
     {
-      "from": "2026-11-08",
-      "until": "2026-11-09",
-      "section": "Schools (strong lead-item candidate)",
-      "text": "Waynesville HS boys cross country placed 7th as a team at the OHSAA state meet on Saturday, Nov 7; the team's top runner finished 28th overall in 16:08.8. Source: Wayne Local Schools graphic shared by the editor. Do not name the runner (student). The Nov 7 brief already carries this as an evening update, so in the Nov 8 brief present it as a weekend recap, not breaking news.",
-      "source": "https://www.facebook.com/waynelocalschools"
+      "from": "2026-11-13",
+      "until": "2026-11-13",
+      "section": "This morning in Waynesville — LEAD ITEM #1 (editor's instruction)",
+      "text": "Make Spartan football the first lead item: Waynesville plays the Region 20 semifinal at Graham Local (Graham High School, St. Paris) tonight at 7:00 PM, after beating Preble Shawnee 35-13 in Round 2. Confirm the kickoff time and opponent against sports.json and the events calendar; do not predict or assert any result. Link the MaxPreps game page from sports.json. A one-line pointer to Saturday's Fantasy Festival is fine as the closing sentence, but keep the festival as a lesser item today.",
+      "source": "https://www.maxpreps.com/oh/waynesville/waynesville-spartans/"
+    },
+    {
+      "from": "2026-11-14",
+      "until": "2026-11-14",
+      "section": "This morning in Waynesville — LEAD ITEM #1 (editor's instruction)",
+      "text": "Make the Waynesville Fantasy Festival the first lead item: free, 11 AM–8 PM downtown. Use the details in the festival's events.json entry (High Street attractions, Dwarven Beer Garden times: Sean Nos 11 AM & 5 PM, Creep It Real 12:30 & 3:30 PM, Whiskey Witches bourbon tasting 5 PM inside the Villager Pub with preregistration required, Riddles in the Dark 3 PM at the Stone House Tavern, six food trucks) and link the festival map at /images/events/2026-11-14-fantasy-festival-map.png. Do not name individual craft vendors. If sports.json has Friday's Graham result, give it as the second lead item using only that score.",
+      "source": "/images/events/2026-11-14-fantasy-festival-map.png"
     }
   ]
 }
