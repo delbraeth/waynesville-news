@@ -1,6 +1,6 @@
 {
   "_note": "Caesar Creek State Park programs from the ODNR events calendar, next 60 days. Titles, times and meeting points reproduced from ODNR's own listing.",
-  "updated": "2026-11-09T11:40:57.992Z",
+  "updated": "2026-11-10T11:44:39.961Z",
   "source": "https://ohiodnr.gov/go-and-do/plan-a-visit/events-calendar/events-calendar?keyword=Caesar%20Creek",
   "items": [
     {
@@ -41,6 +41,15 @@
       "meetAt": "Nature Center",
       "summary": "Meet at the Nature Center",
       "link": "https://ohiodnr.gov/home/news-and-events/all-events/parks-wc-events/SW-Ohio/WinterSolsticeWalkandTalkCaesarCreek-12-21-26."
+    },
+    {
+      "title": "First Day Hike",
+      "dateISO": "2027-01-01T18:00:00.000Z",
+      "endISO": "2027-01-01T20:00:00.000Z",
+      "dateLabel": "Fri, Jan 1 · 1:00 PM–3:00 PM",
+      "meetAt": "Campground Commissary",
+      "summary": "A 1- or 3-mile winter hike at Cowan Lake State Park. Part of the ODNR Winter Hike Series.",
+      "link": "https://ohiodnr.gov/home/news-and-events/all-events/parks-wc-events/SW-Ohio/caesarcreek-firstday-010127"
     },
     {
       "title": "Meet the Animals",

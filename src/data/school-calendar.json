@@ -1,20 +1,8 @@
 {
   "_note": "Wayne Local Schools district calendar (public Google Calendar embedded at https://www.wayne-local.com/calendars/wayne-local-schools/). District's own titles. Built by scripts/fetch-school-calendar.mjs; dates the district hasn't entered yet come from src/data/school-calendar-manual.json.",
-  "updated": "2026-11-07T07:01:38.169Z",
+  "updated": "2026-11-10T11:45:06.280Z",
   "source": "https://www.wayne-local.com/calendars/wayne-local-schools/",
   "items": [
-    {
-      "title": "No School - Teacher Professional Day",
-      "date": "2026-10-09",
-      "allDay": true,
-      "kind": "no-school"
-    },
-    {
-      "title": "Sauerkraut Festival",
-      "date": "2026-10-10",
-      "allDay": true,
-      "kind": "event"
-    },
     {
       "title": "Sauerkraut Festival",
       "date": "2026-10-11",

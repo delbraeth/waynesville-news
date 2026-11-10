@@ -1,6 +1,6 @@
 {
   "_note": "Mary L. Cook Public Library — upcoming programs from the library's WhoFi event calendar (https://marylcook-main-oh.whofi.com/calendar/full). \"items\": next 14 days, for the daily brief (dateISO is Eastern wall-clock marked Z). \"calendar\": next 45 days for the events calendar, real offsets, with sign-up details read from each program's page (scripts/lib/signup.mjs). Canceled events and closures excluded.",
-  "updated": "2026-11-09T11:41:06.653Z",
+  "updated": "2026-11-10T11:43:00.092Z",
   "items": [
     {
       "title": "Toddler Time",
@@ -265,6 +265,17 @@
       }
     },
     {
+      "title": "Santa Open House",
+      "dateISO": "2026-12-05T10:30:00-05:00",
+      "endISO": "2026-12-05T12:30:00-05:00",
+      "dateLabel": "Sat, Dec 5 · 10:30 AM",
+      "link": "https://marylcook-main-oh.whofi.com/calendar/event/357815/",
+      "signup": {
+        "required": true,
+        "deadline": "2026-11-09"
+      }
+    },
+    {
       "title": "Art Class for Kids: Shrinky Dink Keychains",
       "dateISO": "2026-12-07T16:15:00-05:00",
       "endISO": "2026-12-07T17:00:00-05:00",
@@ -274,6 +285,30 @@
         "required": true,
         "opens": "2026-11-23"
       }
+    },
+    {
+      "title": "Rootfinders",
+      "dateISO": "2026-12-12T10:00:00-05:00",
+      "endISO": "2026-12-12T13:00:00-05:00",
+      "dateLabel": "Sat, Dec 12 · 10:00 AM",
+      "link": "https://marylcook-main-oh.whofi.com/calendar/event/357930/",
+      "signup": {
+        "required": false
+      }
+    },
+    {
+      "title": "The Art of Living Talk Series with Brother Brian",
+      "dateISO": "2026-12-12T10:00:00-05:00",
+      "endISO": "2026-12-12T11:00:00-05:00",
+      "dateLabel": "Sat, Dec 12 · 10:00 AM",
+      "link": "https://marylcook-main-oh.whofi.com/calendar/event/357929/"
+    },
+    {
+      "title": "Genre Exploration Book Club Meeting",
+      "dateISO": "2026-12-15T17:30:00-05:00",
+      "endISO": "2026-12-15T18:15:00-05:00",
+      "dateLabel": "Tue, Dec 15 · 5:30 PM",
+      "link": "https://marylcook-main-oh.whofi.com/calendar/event/357928/"
     },
     {
       "title": "Getting Reel Film Club",

@@ -1,7 +1,15 @@
 {
   "_note": "Village of Waynesville and Wayne Township notices posted in the past 14 days. Titles and synopses verbatim from each government's own site.",
-  "updated": "2026-11-09T11:41:08.356Z",
+  "updated": "2026-11-10T11:44:59.914Z",
   "items": [
+    {
+      "source": "township",
+      "issuer": "Wayne Township",
+      "title": "Veterans Day Observation",
+      "dateISO": "2026-11-09",
+      "summary": "In observance of Veterans Day, Wayne Township Administrative Offices will be closed on Wednesday, November 11, 2026. As we honor the brave men and women who have served in the United States Armed Forces, we extend our sincere gratitude for their service, dedication, and sacrifice. Regular administrative office hours will resume on Thursday, November…",
+      "link": "https://waynetwpwarrencooh.gov/veterans-day-observation/"
+    },
     {
       "source": "township",
       "issuer": "Wayne Township",

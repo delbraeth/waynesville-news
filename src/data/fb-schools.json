@@ -1,7 +1,28 @@
 {
   "_note": "Recent Wayne Local Schools Facebook posts via rss.app bridge. Title + link + short excerpt; the district's own words. Fail-safe: kept from last run if the bridge is down.",
-  "updated": "2026-11-09T11:40:57.741Z",
+  "updated": "2026-11-10T11:41:03.734Z",
   "items": [
+    {
+      "title": "Wayne Local Schools invites veterans and active-duty military members to join us on Wednesday, November 11, for a…",
+      "link": "https://www.facebook.com/waynelocalschools/posts/pfbid02PFJzSEid65LiQnTUUn97uZ57X3hJccWm59CPnw2fKEduqBjQb4PhGpBC4Rktm2Anl",
+      "date": "Mon, 09 Nov 2026 22:38:02 GMT",
+      "dateLabel": "Mon, Nov 9",
+      "excerpt": "special morning of appreciation and celebration! ❤️🤍💙 Veterans Day Events: 7:45–8:30 a.m. | Veterans Breakfast 8:50–9:30 a.m. | Veterans Day Program 9:30–10:00 a.m. | Veterans Car Parade Help us spread the word! Invite the veterans and service members in your life to join us. Please RSVP using…"
+    },
+    {
+      "title": "This month's regular meeting of the Wayne Local Schools Board of Education is on Monday, November 9, at 6:00 p.m. at the…",
+      "link": "https://www.facebook.com/waynelocalschools/posts/pfbid0Msb29ok1Hn28XaMAQybKLq1Rn8uEQReZ9nufS2fuEjJ3wwDWzBGbU1YtdQsZhJb7l",
+      "date": "Sat, 07 Nov 2026 18:33:02 GMT",
+      "dateLabel": "Sat, Nov 7",
+      "excerpt": "PAC in the Auditorium (625 Dayton Rd.). ⭐The biannual Spartan Recognition Awards Ceremony will begin at the start of the meeting; a short break will follow, and the remainder of the business meeting will proceed as usual. Please join us!"
+    },
+    {
+      "title": "Last week, WHS students gathered for another successful Supper Club! This special event brings WHS students together…",
+      "link": "https://www.facebook.com/waynelocalschools/posts/pfbid02pRn4gWniB3nY9FXzV4jRnLRtnbC3QeBnfBcirmfpLLdxyD2gNAMLEP7j5SRs2peql",
+      "date": "Mon, 09 Nov 2026 16:47:56 GMT",
+      "dateLabel": "Mon, Nov 9",
+      "excerpt": "with community members and school staff to build relationships, explore career opportunities, practice communication and networking skills, and gain valuable mentorship, all while sharing a meal! 🧡A BIG thank-you to Buffalo Wild Wings in Lebanon for supporting our Supper Club! 🤍We're also…"
+    },
     {
       "title": "Wayne Local Families & Community! Diehl Law is giving us all a chance to recognize the amazing work of our teachers.…",
       "link": "https://www.facebook.com/waynelocalschools/posts/pfbid0iRHgkZ3qVpYtpQqqYWzxNkZXhn35wGoo28ADwdVJhLa6KETaTaKkfRGAjGzwCqSfl",
@@ -24,13 +45,6 @@
       "excerpt": "#SPARTANPRIDE CONGRATULATIONS to our HS Boys Cross Country Team who finished 7th overall out of Division III! #SPARTANPRIDE"
     },
     {
-      "title": "This month's regular meeting of the Wayne Local Schools Board of Education is on Monday, November 9, at 6:00 p.m. at the…",
-      "link": "https://www.facebook.com/waynelocalschools/posts/pfbid0Msb29ok1Hn28XaMAQybKLq1Rn8uEQReZ9nufS2fuEjJ3wwDWzBGbU1YtdQsZhJb7l",
-      "date": "Sat, 07 Nov 2026 18:33:02 GMT",
-      "dateLabel": "Sat, Nov 7",
-      "excerpt": "PAC in the Auditorium (625 Dayton Rd.). ⭐The biannual Spartan Recognition Awards Ceremony will begin at the start of the meeting; a short break will follow, and the remainder of the business meeting will proceed as usual. Please join us!"
-    },
-    {
       "title": "Good luck, Spartans!GOOD LUCK to our Boys Cross Country Team running in the OHSAA DIII State Tournament TODAY! Remember...",
       "link": "https://www.facebook.com/waynelocalschools/posts/pfbid03177AG8yKSLVL8YhfygAnhUx7NVt5AqzyzHqK8dU2VtVUPsfCoT151WVEWt1AipAYl",
       "date": "Sat, 07 Nov 2026 14:49:28 GMT",
@@ -43,20 +57,6 @@
       "date": "Sat, 07 Nov 2026 13:00:33 GMT",
       "dateLabel": "Sat, Nov 7",
       "excerpt": "hands-on learning! Students painted and carved pumpkins, measured their height, counted ribs and seeds, explored pumpkin sizes, and voted on their favorite jack-o'-lantern faces! The big experiment? Predicting whether a pumpkin would sink or float, then testing their predictions! Who knew…"
-    },
-    {
-      "title": "🎉Good luck at State to our Waynesville Boys Cross Country team and Jake Todd, who also qualified individually!…",
-      "link": "https://www.facebook.com/reel/1118904490847178/",
-      "date": "Fri, 06 Nov 2026 19:23:53 GMT",
-      "dateLabel": "Fri, Nov 6",
-      "excerpt": "#SPARTANPRIDE"
-    },
-    {
-      "title": "Today's WLS Fiscal Focus: Ohio Schools and the Ballot Box The November 3 election highlighted the challenges of funding…",
-      "link": "https://www.facebook.com/waynelocalschools/posts/pfbid033nBgQh4BtDwT2hhZAa9gvDnQP3JESJJDR6NLgUUyecsEjsVnaFCfij9Kkt7akcqFl",
-      "date": "Fri, 06 Nov 2026 17:50:40 GMT",
-      "dateLabel": "Fri, Nov 6",
-      "excerpt": "public schools. According to the Ohio School Boards Association - ✅Voters approved 72 of 134 school tax issues statewide. 🗳Only 29% of additional-funding requests received voter approval. ❓Why does this matter? Renewals generally continue existing revenue, while additional levies provide new…"
     }
   ]
 }
