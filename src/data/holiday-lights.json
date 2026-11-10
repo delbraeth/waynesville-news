@@ -1,6 +1,6 @@
 {
   "_note": "Holiday Lights guide (/holiday-lights/). Hand-maintained: each display verified on its own official page; record the URL in `source`. Never guess dates: if the organizer hasn't posted this year's dates, set dates2026Confirmed false, leave startDate/endDate empty and describe the usual pattern in `when`. Private home displays only when the display has its own public page and invites visitors; never name homeowners. tier: local (Waynesville/Corwin/Harveysburg/Oregonia/Caesar Creek), county (Warren County and adjacent towns), drive (worth a drive, ~1 hour). The guide is promoted on the home and events pages between season.showFrom and season.showUntil.",
-  "updated": "2026-11-09",
+  "updated": "2026-11-10",
   "season": {
     "label": "2026",
     "showFrom": "2026-11-01",
@@ -171,6 +171,21 @@
       "about": "A volunteer-run drive-through light display in Smith Park.",
       "website": "https://www.lightupmiddletown.org/",
       "source": "https://www.lightupmiddletown.org/"
+    },
+    {
+      "name": "Hillsboro’s Winter Wonderland",
+      "tier": "drive",
+      "kind": "drive-through",
+      "location": "Highland County Fairgrounds, Exhibition Rd., Hillsboro",
+      "town": "Hillsboro",
+      "startDate": "2026-11-27",
+      "endDate": "2027-01-10",
+      "dates2026Confirmed": true,
+      "when": "Nov. 27–29; Dec. 4–6, 11–13 and 18–23; Jan. 1–3 and 8–10; 6–10 pm. Food trucks at the exit most nights",
+      "price": "$25 per vehicle (Christmas Cruise Pass), sold online; tickets not on sale yet. Cashless: gate tickets are bought through the website",
+      "about": "A 5,000-foot lighted drive-through trail with animated displays and holiday music on a dedicated radio station.",
+      "website": "https://www.hillsborowinterwonderland.com/",
+      "source": "https://www.hillsborowinterwonderland.com/event"
     }
   ]
 }
