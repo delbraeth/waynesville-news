@@ -1,6 +1,6 @@
 {
   "_note": "Volunteer board (/volunteer/). Hand-kept. \"ongoing\": standing ways to help. An entry with \"org\" names a group in organizations.json and shows that group's howToHelp line, linked to its Community listing; an entry without \"org\" carries its own name, what, link, source and verified date. Give each a \"kind\": hands-on, donate, youth or seniors. \"needs\": specific, dated asks ({title, org, what, how, link, until: YYYY-MM-DD, source}); each hides itself after its \"until\" date. Events in events.json tagged \"volunteer\" also appear under Current asks until they end. Public organizational contacts only; never name volunteers or children.",
-  "updated": "2026-11-07",
+  "updated": "2026-11-11",
   "ongoing": [
     {
       "org": "Waynesville Food Pantry and Wayne Township Community Aid",
@@ -12,6 +12,10 @@
     },
     {
       "org": "Museum at the Friends Home",
+      "kind": "hands-on"
+    },
+    {
+      "org": "Waynesville Lions Club",
       "kind": "hands-on"
     },
     {
