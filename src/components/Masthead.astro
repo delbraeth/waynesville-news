@@ -19,8 +19,8 @@ const community: Link[] = [
   orgData.items.length > 0 && { label: "Clubs & Nonprofits", href: "/community/" },
   { label: "Volunteer", href: "/volunteer/" },
 ].filter(Boolean) as Link[];
-// Top bar (editor, 2026-11-07): eight items so it fits on one line. The
-// news sections share a "News" dropdown, like the Community one.
+// Top bar (editor, 2026-11-11): newspaper-style sections. The
+// news sections share a "Local News" dropdown, like the Community one.
 const news: Link[] = [
   { label: "Stories", href: "/stories/" },
   { label: "Government", href: "/government/" },
@@ -28,11 +28,12 @@ const news: Link[] = [
   { label: "Around Town", href: "/around-town/" },
 ];
 const before: Link[] = [
-  { label: "Daily Briefs", href: "/briefs/" },
+  { label: "Today", href: "/briefs/" },
 ];
 const middle: Link[] = [
-  { label: "Events", href: "/events/" },
+  { label: "Calendar", href: "/events/" },
   { label: "Schools", href: "/schools/" },
+  { label: "Sports", href: "/sports/" },
   { label: "Business", href: "/directory/" },
 ];
 const after: Link[] = [
@@ -53,7 +54,7 @@ const all: Link[] = [...before, ...news, ...middle, ...community, { label: "Supp
     {before.map((n) => <li><a href={n.href} class={n.cls}>{n.label}</a></li>)}
     <li>
       <details class="nav-drop">
-        <summary>News <span aria-hidden="true">▾</span></summary>
+        <summary>Local News <span aria-hidden="true">▾</span></summary>
         <ul>
           {news.map((n) => <li><a href={n.href}>{n.label}</a></li>)}
         </ul>
@@ -73,8 +74,8 @@ const all: Link[] = [...before, ...news, ...middle, ...community, { label: "Supp
   {/* Phones: three most-used links plus a "More" menu with everything. Pure
       HTML <details>, so it works without JavaScript and with screen readers. */}
   <div class="nav-compact">
-    <a href="/briefs/">Briefs</a>
-    <a href="/events/">Events</a>
+    <a href="/briefs/">Today</a>
+    <a href="/events/">Calendar</a>
     <a href="/directory/">Business</a>
     <details class="nav-more">
       <summary><span aria-hidden="true">☰</span> More</summary>

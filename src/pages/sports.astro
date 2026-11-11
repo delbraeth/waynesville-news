@@ -1,0 +1,114 @@
+---
+// Sports: Spartans results and upcoming games (MaxPreps, via sports.json),
+// sports events on our calendar (send-offs, tryouts, youth clubs), and the
+// sports sections of recent briefs for older results.
+import Base from "../layouts/Base.astro";
+import { sectionFeed } from "../lib/sections.js";
+import { upcomingEvents } from "../lib/events.js";
+import sports from "../data/sports.json";
+import { etDate, fmtDay } from "../lib/schools.js";
+
+const sources = [
+  { name: "MaxPreps — Waynesville", href: "https://www.maxpreps.com/oh/waynesville/waynesville-spartans/", what: "scores and schedules, all sports" },
+  { name: "Waynesville Spartans Athletics", href: "https://www.waynesvillesports.com/", what: "team schedules, results, athletic news" },
+  { name: "OHSAA", href: "https://www.ohsaa.org/", what: "tournament brackets and playoff tickets" },
+];
+
+const timeOf = (iso: string) => new Date(iso).toLocaleTimeString("en-US", { hour: "numeric", minute: "2-digit", timeZone: "UTC" });
+const gameTitle = (g: any) => `${g.level && g.level !== "Varsity" ? g.level + " " : ""}${g.sport}`;
+
+const results = [...(sports.results ?? [])].sort((a: any, b: any) => b.dateISO.localeCompare(a.dateISO));
+const today = etDate();
+const upcoming = (sports.upcoming ?? [])
+  .filter((g: any) => etDate(new Date(g.dateISO)) >= today)
+  .sort((a: any, b: any) => a.dateISO.localeCompare(b.dateISO));
+
+// Sports events on the community calendar over the next 45 days.
+const horizon = new Date(Date.now() + 45 * 86400000);
+const events = upcomingEvents().filter((e: any) =>
+  /^sports$/i.test(e.category ?? "") && e._d <= horizon && etDate(e._end) >= today)
+  // Skip calendar entries for a game MaxPreps already lists that day.
+  .filter((e: any) => !upcoming.some((g: any) => g.dateISO.slice(0, 10) === e.dateISO.slice(0, 10) &&
+    new RegExp(`\\b${g.sport}\\b`, "i").test(e.title) && !/send.?off|tryout/i.test(e.title)));
+
+const items = await sectionFeed(["This week in sports"], { limit: 6 });
+const dfmt = new Intl.DateTimeFormat("en-US", { weekday: "short", month: "long", day: "numeric", timeZone: "UTC" });
+---
+<Base title="Sports · Waynesville News" description="Waynesville Spartans scores, schedules and playoff news, plus youth sports tryouts and send-offs in Waynesville, Ohio." showInfoBar={false}>
+  <div class="reading">
+    <p class="kicker">Section</p>
+    <h1>Sports</h1>
+    <p class="dek">Spartans scores and schedules, playoff news, and youth sports around Waynesville.</p>
+
+    <section class="sp-sec" aria-labelledby="sp-up">
+      <h2 id="sp-up">Coming up</h2>
+      {upcoming.length === 0 && events.length === 0 ? <p class="muted">No games on the schedule for the next week.</p> : (
+        <ul class="sp-list">
+          {upcoming.map((g: any) => (
+            <li>
+              <span class="sp-when">{fmtDay(g.dateISO.slice(0, 10))} · {timeOf(g.dateISO)}</span>
+              <span class="sp-tag">Spartans</span>
+              <a href={g.link} target="_blank" rel="noopener">{gameTitle(g)}: {g.isHome ? "vs." : "at"} {g.opponent}</a>
+            </li>
+          ))}
+          {events.map((e: any) => (
+            <li>
+              <span class="sp-when">{e.dateLabel}</span>
+              <span class="sp-tag">Event</span>
+              <span><a href={e.source} target={e.source.startsWith("/") ? undefined : "_blank"} rel="noopener">{e.title}</a><span class="sp-venue"> · {e.venue}</span></span>
+            </li>
+          ))}
+        </ul>
+      )}
+    </section>
+
+    <section class="sp-sec" aria-labelledby="sp-res">
+      <h2 id="sp-res">Results this week</h2>
+      {results.length === 0 ? <p class="muted">No results in the past week.</p> : (
+        <ul class="sp-list">
+          {results.map((g: any) => (
+            <li>
+              <span class="sp-when">{fmtDay(g.dateISO.slice(0, 10))}</span>
+              <span class={`sp-tag sp-${(g.result ?? "").toLowerCase()}`}>{g.result ?? "Final"}</span>
+              <a href={g.link} target="_blank" rel="noopener">{gameTitle(g)}: Waynesville {g.wayneScore}, {g.opponent} {g.opponentScore}</a>
+              <span class="sp-venue">({g.isHome ? "home" : "away"})</span>
+            </li>
+          ))}
+        </ul>
+      )}
+      <p class="small">Scores from MaxPreps, checked daily; the full season is on <a href="https://www.maxpreps.com/oh/waynesville/waynesville-spartans/" target="_blank" rel="noopener">MaxPreps</a>.</p>
+    </section>
+
+    <section class="sp-sec" aria-labelledby="sp-news">
+      <h2 id="sp-news">From recent briefs</h2>
+      {items.length === 0 ? <p class="muted">Sports news fills in as new briefs publish.</p> : (
+        <div class="sectionfeed">
+          {items.map((it: any) => (
+            <article class="sf-item">
+              <a class="sf-date" href={`/briefs/${it.id}/`}>{dfmt.format(it.date)} →</a>
+              <div class="prose sf-body" set:html={it.html} />
+            </article>
+          ))}
+        </div>
+      )}
+      <p class="small"><a href="/briefs/archive/">Older results are in every brief in the archive →</a> · <a href="/schools/">Schools</a></p>
+    </section>
+
+    <div class="sf-sources">
+      <h3>Sources we watch</h3>
+      <ul>
+        {sources.map((s) => <li><a href={s.href} target="_blank" rel="noopener">{s.name}</a>{s.what ? ` — ${s.what}` : ""}</li>)}
+      </ul>
+    </div>
+  </div>
+</Base>
+
+<style>
+  .sp-sec { margin-top: 1.75rem; }
+  .sp-sec h2 { margin-bottom: 0.5rem; }
+  .sp-list { list-style: none; margin: 0; padding: 0; }
+  .sp-list li { display: flex; flex-wrap: wrap; gap: 0.15rem 0.6rem; align-items: baseline; padding: 0.5rem 0; border-bottom: 1px solid var(--rule); }
+  .sp-when { font-family: var(--font-sans); font-size: 0.85rem; font-weight: 600; color: var(--ink-soft); min-width: 9.5rem; }
+  .sp-tag { font-family: var(--font-sans); font-size: 0.66rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--accent-deep); border: 1px solid var(--rule); border-radius: 2px; padding: 0.05rem 0.35rem; }
+  .sp-venue { color: var(--ink-soft); font-size: 0.9rem; }
+</style>
