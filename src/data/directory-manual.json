@@ -1715,6 +1715,26 @@
       },
       "about": "Farm market with greenhouses, produce and farm animals; its fall festival has an adventure hayride. Check its website for seasonal hours.",
       "source": "https://waynesvilleshops.com/area-venues-events-and-attractions/name/windmill-farm-market/ ; https://www.windmillfarmmarket.com/"
+    },
+    {
+      "name": "The Robinson Ranch",
+      "sections": [
+        "farm"
+      ],
+      "kinds": [
+        "Farm",
+        "Beef & Pork",
+        "Meat Shares"
+      ],
+      "location": "Waynesville, OH",
+      "phone": "937-371-3856",
+      "website": "https://therobinsonranch.org/",
+      "social": {
+        "facebook": "https://www.facebook.com/therobinsonranchohio/",
+        "instagram": "https://www.instagram.com/therobinsonranch2016/"
+      },
+      "about": "Family farm in Waynesville raising beef and pork, sold as custom shares processed by local butchers. Individual cuts are also sold through participating shops; check the farm's website for details.",
+      "source": "https://therobinsonranch.org/"
     }
   ]
 }

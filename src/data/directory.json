@@ -1,6 +1,6 @@
 {
   "_note": "Local business directory. Built by scripts/fetch-directory.mjs from the Waynesville Area Chamber of Commerce's public member directory (name, location, phone, website, and the Chamber's description, as published) plus hand-added listings in directory-manual.json. Contact names, emails and hours are deliberately not copied from the Chamber; an hours line appears only when the owner supplied it (hours + hoursChecked in directory-manual.json). Do not edit by hand — edit directory-manual.json and re-run `npm run refresh:directory` (or `npm run refresh:directory -- --manual-only` to merge manual edits without re-reading the Chamber site).",
-  "updated": "2026-11-07T17:53:19.318Z",
+  "updated": "2026-11-11T18:22:22.639Z",
   "sections": [
     {
       "id": "food",
@@ -3570,6 +3570,29 @@
       "about": "We are your One-Stop Family owned printing location. We print or copy anything on paper, such as business cards, letterhead, envelopes, brochures, booklets, flyers. We also print signs, and many types of marketing products. Check out our website at www.printing-center.net",
       "local": false,
       "from": "chamber"
+    },
+    {
+      "id": "manual-robinsonranch",
+      "name": "The Robinson Ranch",
+      "location": "Waynesville, OH",
+      "phone": "937-371-3856",
+      "sections": [
+        "farm"
+      ],
+      "kinds": [
+        "Farm",
+        "Beef & Pork",
+        "Meat Shares"
+      ],
+      "source": "https://therobinsonranch.org/",
+      "website": "https://therobinsonranch.org/",
+      "social": {
+        "facebook": "https://www.facebook.com/therobinsonranchohio/",
+        "instagram": "https://www.instagram.com/therobinsonranch2016/"
+      },
+      "about": "Family farm in Waynesville raising beef and pork, sold as custom shares processed by local butchers. Individual cuts are also sold through participating shops; check the farm's website for details.",
+      "local": true,
+      "from": "manual"
     },
     {
       "id": "chamber-590",
