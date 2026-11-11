@@ -78,6 +78,15 @@
         "2026-11-10-holiday-lights-guide"
       ],
       "recorded": "2026-11-10T11:47:45.463Z"
+    },
+    "2026-11-11": {
+      "url": "https://audio.waynesville.news/audio/2026-11-11.mp3?v=20261111114823",
+      "seconds": 187,
+      "bytes": 1498426,
+      "chars": 2804,
+      "model": "eleven_v4_turbo",
+      "voice": "Brody",
+      "recorded": "2026-11-11T11:48:24.420Z"
     }
   }
 }
