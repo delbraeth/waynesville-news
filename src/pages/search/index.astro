@@ -21,7 +21,7 @@ const short = (s = "", max = 140) => (s.length > max ? s.slice(0, s.lastIndexOf(
 const entries: Entry[] = [
   ...directory.items.map((i: any) => ({
     n: i.name, u: `/directory/#${slug(i.name)}`,
-    t: "Directory · " + (sectionLabel.get(i.sections[0]) ?? "Business"),
+    t: "Business · " + (sectionLabel.get(i.sections[0]) ?? "Other"),
     d: short([(i.kinds ?? []).join(", "), i.location].filter(Boolean).join(" · ")),
     k: [i.about, ...(i.kinds ?? []), ...i.sections.map((s: string) => sectionLabel.get(s) ?? ""), i.location].join(" "),
   })),
