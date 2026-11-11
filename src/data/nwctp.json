@@ -1,8 +1,15 @@
 {
   "_note": "North Warren County Transportation Plan project site, tracked via ArcGIS Online's public REST API (items published by the project account, with page text). `changes` lists items first seen as new/updated/removed, newest first, dated by the Eastern date of the run that noticed them. Titles and text are as published. Built by scripts/fetch-nwctp.mjs.",
-  "updated": "2026-11-10T11:45:03.868Z",
+  "updated": "2026-11-11T11:44:29.335Z",
   "hub": "https://northwarrencountytransportationplan-burgessniple.hub.arcgis.com",
   "items": [
+    {
+      "id": "8dae095ab7eb47b1a235a0a20577e5e8",
+      "type": "Form",
+      "title": "North Warren County Transportation Plan Comments",
+      "modified": "2026-11-10T19:15:07.000Z",
+      "link": "https://survey123.arcgis.com/share/8dae095ab7eb47b1a235a0a20577e5e8"
+    },
     {
       "id": "2156fd5cba494a4788d296ac591ce0c4",
       "type": "Hub Page",
@@ -91,13 +98,6 @@
       "link": "https://www.arcgis.com/sharing/rest/content/items/595f256156d74c3ab4239b0823929620/data"
     },
     {
-      "id": "8dae095ab7eb47b1a235a0a20577e5e8",
-      "type": "Form",
-      "title": "North Warren County Transportation Plan Comments",
-      "modified": "2026-10-28T17:48:47.000Z",
-      "link": "https://survey123.arcgis.com/share/8dae095ab7eb47b1a235a0a20577e5e8"
-    },
-    {
       "id": "b92186d216474dddaba0538945984336",
       "type": "Hub Page",
       "title": "How to Participate",
@@ -139,6 +139,14 @@
     }
   ],
   "changes": [
+    {
+      "date": "2026-11-11",
+      "kind": "updated",
+      "id": "8dae095ab7eb47b1a235a0a20577e5e8",
+      "type": "Form",
+      "title": "North Warren County Transportation Plan Comments",
+      "link": "https://survey123.arcgis.com/share/8dae095ab7eb47b1a235a0a20577e5e8"
+    },
     {
       "date": "2026-11-04",
       "kind": "updated",

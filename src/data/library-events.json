@@ -1,25 +1,7 @@
 {
   "_note": "Mary L. Cook Public Library — upcoming programs from the library's WhoFi event calendar (https://marylcook-main-oh.whofi.com/calendar/full). \"items\": next 14 days, for the daily brief (dateISO is Eastern wall-clock marked Z). \"calendar\": next 45 days for the events calendar, real offsets, with sign-up details read from each program's page (scripts/lib/signup.mjs). Canceled events and closures excluded.",
-  "updated": "2026-11-10T11:43:00.092Z",
+  "updated": "2026-11-11T11:42:44.016Z",
   "items": [
-    {
-      "title": "Toddler Time",
-      "dateISO": "2026-11-10T10:30:00Z",
-      "dateLabel": "Tue · Nov 10, 10:30 AM",
-      "link": "https://marylcook-main-oh.whofi.com/calendar/event/354851/"
-    },
-    {
-      "title": "Teen Tuesday (6th-12th Grade)",
-      "dateISO": "2026-11-10T15:00:00Z",
-      "dateLabel": "Tue · Nov 10, 3:00 PM",
-      "link": "https://marylcook-main-oh.whofi.com/calendar/event/356793/"
-    },
-    {
-      "title": "Chapters Book Club",
-      "dateISO": "2026-11-10T16:00:00Z",
-      "dateLabel": "Tue · Nov 10, 4:00 PM",
-      "link": "https://marylcook-main-oh.whofi.com/calendar/event/354847/"
-    },
     {
       "title": "Baby Bookworms",
       "dateISO": "2026-11-11T10:30:00Z",
@@ -49,40 +31,27 @@
       "dateISO": "2026-11-14T10:00:00Z",
       "dateLabel": "Sat · Nov 14, 10:00 AM",
       "link": "https://marylcook-main-oh.whofi.com/calendar/event/356791/"
+    },
+    {
+      "title": "The Art of Living Talk Series with Brother Brian",
+      "dateISO": "2026-11-14T10:00:00Z",
+      "dateLabel": "Sat · Nov 14, 10:00 AM",
+      "link": "https://marylcook-main-oh.whofi.com/calendar/event/356132/"
+    },
+    {
+      "title": "Art Class for Kids: Magic Flashlight Art",
+      "dateISO": "2026-11-16T04:15:00Z",
+      "dateLabel": "Mon · Nov 16, 4:15 AM",
+      "link": "https://marylcook-main-oh.whofi.com/calendar/event/354833/"
+    },
+    {
+      "title": "Interactive Movie Kit Pick up: Cloudy with a Chance of Meatballs",
+      "dateISO": "2026-11-16T09:00:00Z",
+      "dateLabel": "Mon · Nov 16, 9:00 AM",
+      "link": "https://marylcook-main-oh.whofi.com/calendar/event/354834/"
     }
   ],
   "calendar": [
-    {
-      "title": "Toddler Time",
-      "dateISO": "2026-11-10T10:30:00-05:00",
-      "endISO": "2026-11-10T11:00:00-05:00",
-      "dateLabel": "Tue, Nov 10 · 10:30 AM",
-      "link": "https://marylcook-main-oh.whofi.com/calendar/event/354851/",
-      "signup": {
-        "required": false
-      }
-    },
-    {
-      "title": "Teen Tuesday (6th-12th Grade)",
-      "dateISO": "2026-11-10T15:00:00-05:00",
-      "endISO": "2026-11-10T16:00:00-05:00",
-      "dateLabel": "Tue, Nov 10 · 3:00 PM",
-      "link": "https://marylcook-main-oh.whofi.com/calendar/event/356793/",
-      "signup": {
-        "required": false
-      }
-    },
-    {
-      "title": "Chapters Book Club",
-      "dateISO": "2026-11-10T16:00:00-05:00",
-      "endISO": "2026-11-10T16:45:00-05:00",
-      "dateLabel": "Tue, Nov 10 · 4:00 PM",
-      "link": "https://marylcook-main-oh.whofi.com/calendar/event/354847/",
-      "signup": {
-        "required": true,
-        "opens": "2026-08-17"
-      }
-    },
     {
       "title": "Baby Bookworms",
       "dateISO": "2026-11-11T10:30:00-05:00",
@@ -287,6 +256,26 @@
       }
     },
     {
+      "title": "Trivia Night",
+      "dateISO": "2026-12-07T18:00:00-05:00",
+      "endISO": "2026-12-07T19:00:00-05:00",
+      "dateLabel": "Mon, Dec 7 · 6:00 PM",
+      "link": "https://marylcook-main-oh.whofi.com/calendar/event/358128/",
+      "signup": {
+        "required": true
+      }
+    },
+    {
+      "title": "The Loop Group (Fiber Crafts Club)",
+      "dateISO": "2026-12-08T17:30:00-05:00",
+      "endISO": "2026-12-08T18:30:00-05:00",
+      "dateLabel": "Tue, Dec 8 · 5:30 PM",
+      "link": "https://marylcook-main-oh.whofi.com/calendar/event/358129/",
+      "signup": {
+        "required": false
+      }
+    },
+    {
       "title": "Rootfinders",
       "dateISO": "2026-12-12T10:00:00-05:00",
       "endISO": "2026-12-12T13:00:00-05:00",
@@ -318,6 +307,16 @@
       "link": "https://marylcook-main-oh.whofi.com/calendar/event/334491/",
       "signup": {
         "required": true
+      }
+    },
+    {
+      "title": "The Loop Group (Fiber Crafts Club)",
+      "dateISO": "2026-12-22T17:30:00-05:00",
+      "endISO": "2026-12-22T18:30:00-05:00",
+      "dateLabel": "Tue, Dec 22 · 5:30 PM",
+      "link": "https://marylcook-main-oh.whofi.com/calendar/event/358130/",
+      "signup": {
+        "required": false
       }
     }
   ]

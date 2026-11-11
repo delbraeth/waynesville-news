@@ -1,6 +1,6 @@
 {
   "_note": "Caesar Creek State Park programs from the ODNR events calendar, next 60 days. Titles, times and meeting points reproduced from ODNR's own listing.",
-  "updated": "2026-11-10T11:44:39.961Z",
+  "updated": "2026-11-11T11:44:12.172Z",
   "source": "https://ohiodnr.gov/go-and-do/plan-a-visit/events-calendar/events-calendar?keyword=Caesar%20Creek",
   "items": [
     {
@@ -47,8 +47,8 @@
       "dateISO": "2027-01-01T18:00:00.000Z",
       "endISO": "2027-01-01T20:00:00.000Z",
       "dateLabel": "Fri, Jan 1 · 1:00 PM–3:00 PM",
-      "meetAt": "Campground Commissary",
-      "summary": "A 1- or 3-mile winter hike at Cowan Lake State Park. Part of the ODNR Winter Hike Series.",
+      "meetAt": "Nature Center",
+      "summary": "A 3-mile First Day hike at Caesar Creek State Park. Part of the ODNR Winter Hike series.",
       "link": "https://ohiodnr.gov/home/news-and-events/all-events/parks-wc-events/SW-Ohio/caesarcreek-firstday-010127"
     },
     {
@@ -59,6 +59,24 @@
       "meetAt": "Nature Center",
       "summary": "Meet at the Nature Center",
       "link": "https://ohiodnr.gov/home/news-and-events/all-events/parks-wc-events/SW-Ohio/MeettheAnimalsCaesarCreek-1-7-27."
+    },
+    {
+      "title": "Maple Sugaring for Beginners & Winter Tree Identification - Discussion",
+      "dateISO": "2027-01-09T15:00:00.000Z",
+      "endISO": "2027-01-10T04:30:00.000Z",
+      "dateLabel": "Sat, Jan 9 · 10:00 AM–11:30 PM",
+      "meetAt": "Nature Center",
+      "summary": "Meet at the Nature Center.",
+      "link": "https://ohiodnr.gov/home/news-and-events/all-events/parks-wc-events/SW-Ohio/MapleSugaringforBeginnersWinterTreeIdentificationDiscussionCaesarCreek-1-9-27."
+    },
+    {
+      "title": "Maple Sugaring for Beginners & Winter Tree Identification - Guided Walk",
+      "dateISO": "2027-01-09T18:00:00.000Z",
+      "endISO": "2027-01-09T20:00:00.000Z",
+      "dateLabel": "Sat, Jan 9 · 1:00 PM–3:00 PM",
+      "meetAt": "Nature Center",
+      "summary": "Meet at the Nature Center",
+      "link": "https://ohiodnr.gov/home/news-and-events/all-events/parks-wc-events/SW-Ohio/MapleSugaringforBeginnersWinterTreeIdentificationGuidedWalkCaesarCreek-1-9-27."
     }
   ]
 }

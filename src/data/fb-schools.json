@@ -1,7 +1,14 @@
 {
   "_note": "Recent Wayne Local Schools Facebook posts via rss.app bridge. Title + link + short excerpt; the district's own words. Fail-safe: kept from last run if the bridge is down.",
-  "updated": "2026-11-10T11:41:03.734Z",
+  "updated": "2026-11-11T11:40:38.877Z",
   "items": [
+    {
+      "title": "🇺🇸 Waynesville Elementary kindergartners have been busy writing thank you cards to veterans, reading books about…",
+      "link": "https://www.facebook.com/reel/29703152095943919/",
+      "date": "Tue, 10 Nov 2026 16:53:04 GMT",
+      "dateLabel": "Tue, Nov 10",
+      "excerpt": "Veterans Day, and creating patriotic hats and posters to honor those who have served our country. Today, students enjoyed a special visit from the Sanders family, who shared the meaning and importance of Veterans Day and introduced students to the different branches of the U.S. Military. A…"
+    },
     {
       "title": "Wayne Local Schools invites veterans and active-duty military members to join us on Wednesday, November 11, for a…",
       "link": "https://www.facebook.com/waynelocalschools/posts/pfbid02PFJzSEid65LiQnTUUn97uZ57X3hJccWm59CPnw2fKEduqBjQb4PhGpBC4Rktm2Anl",
@@ -50,13 +57,6 @@
       "date": "Sat, 07 Nov 2026 14:49:28 GMT",
       "dateLabel": "Sat, Nov 7",
       "excerpt": "Good luck, Spartans! GOOD LUCK to our Boys Cross Country Team running in the OHSAA DIII State Tournament TODAY! Remember to join us by lining Spartan Way to send them off in style. They will leave at 11:30am. #SPARTANPRIDE"
-    },
-    {
-      "title": "Sink or Float? That was the big question! Mrs. Voelker’s kindergarten class turned Pumpkin Day into a fun-filled day of…",
-      "link": "https://www.facebook.com/waynelocalschools/posts/pfbid02axADeKEQKAkmgdVCr6fjKZLdYjQDEfLqwWNBt5yP6vzLnv7pfPGug5YNdA3AhhVQl",
-      "date": "Sat, 07 Nov 2026 13:00:33 GMT",
-      "dateLabel": "Sat, Nov 7",
-      "excerpt": "hands-on learning! Students painted and carved pumpkins, measured their height, counted ribs and seeds, explored pumpkin sizes, and voted on their favorite jack-o'-lantern faces! The big experiment? Predicting whether a pumpkin would sink or float, then testing their predictions! Who knew…"
     }
   ]
 }
