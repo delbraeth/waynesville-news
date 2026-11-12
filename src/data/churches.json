@@ -105,12 +105,16 @@
       "town": "Waynesville",
       "phone": "513-897-5771",
       "website": "",
-      "services": "",
-      "ministries": [],
-      "source": [
-        "https://www.westohioumc.org/find-church?county=83"
+      "services": "Sundays at 10:15 a.m., with children's Sunday school during the service. Also streamed live on Facebook.",
+      "ministries": [
+        "Messy Church for families on the first Thursday of each month, 6–7:30 p.m. Children must come with an adult.",
+        "Collects food donations for the local food pantry: drop them at the welcome center or in the labeled drawers at the Third Street entrance."
       ],
-      "verified": "2026-11-06",
+      "source": [
+        "https://www.westohioumc.org/find-church?county=83",
+        "https://myemail.constantcontact.com/Hello-November-.html?soid=1101745943563&aid=ilCOMLgIB8E"
+      ],
+      "verified": "2026-11-12",
       "facebook": "https://www.facebook.com/WaynesvilleUMC/"
     },
     {
