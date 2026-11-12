@@ -8,7 +8,8 @@ export function mergeSameSlotGames(games) {
   const out = [];
   const bySlot = new Map();
   for (const g of games) {
-    const key = `${g.dateISO}|${g.sport}|${g.level ?? ""}`;
+    // A canceled game never merges with one that's still on.
+    const key = `${g.dateISO}|${g.sport}|${g.level ?? ""}|${g.canceled ? "x" : ""}`;
     const prev = bySlot.get(key);
     if (prev) {
       prev.opponents.push(g.opponent);
@@ -26,10 +27,11 @@ const joinNames = (a) => (a.length <= 2 ? a.join(" and ") : `${a.slice(0, -1).jo
 
 export function gameLabel(g) {
   const opps = g.opponents ?? [g.opponent];
-  return `${levelLabel(g)}${g.sport}${g.scrimmage ? " scrimmage" : ""}: ${g.isHome ? "vs." : "at"} ${joinNames(opps)}`;
+  return `${g.canceled ? "Canceled: " : ""}${levelLabel(g)}${g.sport}${g.scrimmage ? " scrimmage" : ""}: ${g.isHome ? "vs." : "at"} ${joinNames(opps)}`;
 }
 
 // Show the "may be a scrimmage" hedge only when the school hasn't told us.
+// (Labels and times come from the school's list via scripts/fetch-sports.mjs.)
 export const needsSlotNote = (g) => (g.opponents?.length ?? 1) > 1 && !g.scrimmage;
 
 export const SAME_SLOT_NOTE = "MaxPreps lists these at the same time; it may be a multi-team scrimmage. Confirm with the school.";
