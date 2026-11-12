@@ -363,7 +363,7 @@ sports.upcoming = (sports.upcoming ?? []).filter(
 );
 const sportsUpcomingBlock = sports.upcoming.length
   ? sports.upcoming.map((g) =>
-      `- **${g.sport} (${g.level})** — ${g.isHome === false ? "@" : "vs"} ${g.opponent}, ${fmtGameDate(g.dateISO)} — ${link("details", g.link)}`
+      `- **${g.sport} (${g.level})** — ${g.scrimmage ? "scrimmage " : ""}${g.isHome === false ? "@" : "vs"} ${g.opponent}, ${fmtGameDate(g.dateISO)} — ${link("details", g.link)}`
     ).join("\n")
   : null;
 // Swimming & diving (swimmeet.com): team place at invitationals and

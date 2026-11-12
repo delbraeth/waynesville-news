@@ -9,7 +9,7 @@ import sports from "../data/sports.json";
 import swimming from "../data/swimming.json";
 import fbAthletics from "../data/fb-athletics.json";
 import { etDate, fmtDay } from "../lib/schools.js";
-import { mergeSameSlotGames, gameLabel, SAME_SLOT_NOTE } from "../lib/sports.js";
+import { mergeSameSlotGames, gameLabel, needsSlotNote, SAME_SLOT_NOTE } from "../lib/sports.js";
 
 const sources = [
   { name: "MaxPreps — Waynesville", href: "https://www.maxpreps.com/oh/waynesville/waynesville-spartans/", what: "scores and schedules, all sports" },
@@ -63,7 +63,7 @@ const dfmt = new Intl.DateTimeFormat("en-US", { weekday: "short", month: "long",
             <li>
               <span class="sp-when">{fmtDay(g.dateISO.slice(0, 10))} · {timeOf(g.dateISO)}</span>
               <span class="sp-tag">Spartans</span>
-              <span><a href={g.link} target="_blank" rel="noopener">{gameLabel(g)}</a>{g.opponents.length > 1 && <span class="sp-venue"> · {SAME_SLOT_NOTE}</span>}</span>
+              <span><a href={g.link} target="_blank" rel="noopener">{gameLabel(g)}</a>{needsSlotNote(g) && <span class="sp-venue"> · {SAME_SLOT_NOTE}</span>}</span>
             </li>
           ))}
           {swimUpcoming.map((m: any) => (
@@ -92,7 +92,7 @@ const dfmt = new Intl.DateTimeFormat("en-US", { weekday: "short", month: "long",
             <li>
               <span class="sp-when">{fmtDay(g.dateISO.slice(0, 10))}</span>
               <span class={`sp-tag sp-${(g.result ?? "").toLowerCase()}`}>{g.result ?? "Final"}</span>
-              <a href={g.link} target="_blank" rel="noopener">{gameTitle(g)}: Waynesville {g.wayneScore}, {g.opponent} {g.opponentScore}</a>
+              <a href={g.link} target="_blank" rel="noopener">{gameTitle(g)}{g.scrimmage ? " scrimmage" : ""}: Waynesville {g.wayneScore}, {g.opponent} {g.opponentScore}</a>
               <span class="sp-venue">({g.isHome ? "home" : "away"})</span>
             </li>
           ))}
