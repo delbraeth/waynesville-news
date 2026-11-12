@@ -92,7 +92,7 @@ export function buildWeekendPlanner({ iso, link, events = [], caesar = [], libra
   // Keyed on the opponent alone so a calendar entry for the same game
   // ("Playoff football, Round 2: Waynesville vs. Preble Shawnee") counts as a dupe.
   feed(sports.filter((g) => g.level === "Varsity" && g.dateISO), (g) => fromNaive(g.dateISO), (g) => g.opponent,
-    (g, p) => `${clock(p.time)} — Spartans ${g.sport.toLowerCase()} ${g.isHome === false ? "at" : "vs."} ${g.opponent}${g.isHome === true ? " (home)" : ""} — ${link("details", g.link)}`);
+    (g, p) => `${clock(p.time)} — Spartans ${g.sport.toLowerCase()}${g.scrimmage ? " scrimmage" : ""} ${g.isHome === false ? "at" : "vs."} ${g.opponent}${g.isHome === true ? " (home)" : ""} — ${link("details", g.link)}`);
   feed(caesar, (e) => fromInstant(e.dateISO), (e) => e.title, (e) => withTime(e.dateLabel, `${link(e.title, e.link)} (Caesar Creek State Park)`));
   feed(library, (e) => fromNaive(e.dateISO), (e) => e.title, (e) => withTime(e.dateLabel, `${link(e.title, e.link)} (Mary L. Cook Public Library)`));
   feed(shops, (e) => fromNaive(e.dateISO), (e) => e.title, (e) => withTime(e.dateLabel, `${link(e.title, e.link)} (downtown merchants)`));

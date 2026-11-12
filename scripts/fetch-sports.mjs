@@ -120,6 +120,54 @@ function parseSchedule(html, sport, level) {
   return { results, upcoming };
 }
 
+// The school's own athletics site (waynesvillesports.com) marks scrimmages,
+// which MaxPreps lists as ordinary games (e.g. Nov 18, 2026: MaxPreps showed
+// varsity boys basketball "vs. Little Miami" AND "vs. Cedarville" at 6 PM; the
+// school lists one scrimmage vs. "Little Miami/Cedarville"). Its schedule page
+// loads a public JSON feed; we read only its notes to flag scrimmages, and
+// MaxPreps stays the source for matchups, times and scores. Rows with a
+// malformed date (one golf row read "0206-08-24") are skipped. A failed fetch
+// just means no scrimmage labels this run.
+const ATHLETICS_FEED = "https://waynesvillesports.com/api/sport-events";
+
+async function fetchAthletics() {
+  try {
+    const res = await fetch(ATHLETICS_FEED, { headers: { "User-Agent": UA }, signal: AbortSignal.timeout(20_000) });
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const rows = await res.json();
+    if (!Array.isArray(rows)) throw new Error("unexpected feed shape");
+    const year = new Date().getFullYear();
+    return rows.filter((r) => {
+      const m = /^(\d{4})-\d{2}-\d{2}$/.exec(r?.eventDate ?? "");
+      return m && Math.abs(Number(m[1]) - year) <= 1 && typeof r.team === "string";
+    });
+  } catch (e) {
+    console.log(`sports: athletics feed unavailable (${e.message}); no scrimmage labels this run`);
+    return [];
+  }
+}
+
+const norm = (s = "") => String(s).toLowerCase().replace(/[^a-z0-9 ]/g, " ").replace(/\s+/g, " ").trim();
+// "Varsity Boys Basketball" / "JV Volleyball" / "Wrestling" -> level + sport words.
+function athleticsMatches(row, g) {
+  if (row.eventDate !== g.dateISO.slice(0, 10)) return false;
+  const team = norm(row.team);
+  const level = norm(g.level ?? "Varsity");
+  const hasLevel = /^(varsity|jv|freshman|7th|8th|ms|hs)\b/.test(team);
+  if (hasLevel ? !team.startsWith(level + " ") : level !== "varsity") return false;
+  if (!norm(g.sport).split(" ").every((w) => team.split(" ").includes(w))) return false;
+  const opp = norm(g.opponent);
+  return String(row.opponent ?? "").split("/").map(norm).filter(Boolean)
+    .some((o) => o.includes(opp) || opp.includes(o));
+}
+
+function markScrimmages(games, athletics) {
+  return games.map((g) => {
+    const row = athletics.find((r) => athleticsMatches(r, g));
+    return row && /scrimmage/i.test(row.notes ?? "") ? { ...g, scrimmage: true } : g;
+  });
+}
+
 const write = (data, note) =>
   writeFile(OUT, JSON.stringify({ _note: note, updated: new Date().toISOString(), ...data }, null, 2) + "\n");
 
@@ -160,19 +208,21 @@ async function main() {
       .sort((a, b) => a._d - b._d)
       .map(({ _d, ...g }) => g);
 
-  const results = applyOverrides(inWindow(allResults));
+  const athletics = await fetchAthletics();
+  const results = markScrimmages(applyOverrides(inWindow(allResults)), athletics);
   // A game lands in `upcoming` because no score parsed, NOT because it is in
   // the future — MaxPreps rarely posts JV scores, so played games sat here for
   // a week and published under "Upcoming". Require an actually-future date;
   // the 3h grace keeps a game in progress listed.
-  const upcoming = inWindow(allUpcoming, new Date(nowET.getTime() - 3 * 3600e3));
+  const upcoming = markScrimmages(inWindow(allUpcoming, new Date(nowET.getTime() - 3 * 3600e3)), athletics);
   const orphaned = allUpcoming.length - upcoming.length;
 
   const note =
     `Waynesville Spartans schedule + results (MaxPreps), past ${LOOKBACK_DAYS} days / next ${LOOKAHEAD_DAYS} days. ` +
     `Scraped directly from each sport's own schedule page (football, volleyball, soccer -- varsity + JV), not the ` +
     `school hub page, which has been observed to silently omit some contests. Scores and matchups reproduced ` +
-    `verbatim from MaxPreps' own markup; each links to their game page.` +
+    `verbatim from MaxPreps' own markup; each links to their game page. "scrimmage": true comes from the school's ` +
+    `athletics site (waynesvillesports.com), which marks scrimmages that MaxPreps lists as games.` +
     (failures.length ? ` Fetch failures this run (skipped, not treated as fatal): ${failures.join("; ")}.` : "");
 
   await write({ results, upcoming }, note);

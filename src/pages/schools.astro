@@ -7,7 +7,7 @@ import SchoolStatus from "../components/SchoolStatus.astro";
 import { sectionFeed } from "../lib/sections.js";
 import { upcomingEvents } from "../lib/events.js";
 import sports from "../data/sports.json";
-import { mergeSameSlotGames, gameLabel } from "../lib/sports.js";
+import { mergeSameSlotGames, gameLabel, needsSlotNote } from "../lib/sports.js";
 import { upcomingSchoolDays, whenLabel, etDate, fmtDay, CALENDAR_PAGE, CALENDAR_PDF, DISTRICT_NEWS } from "../lib/schools.js";
 
 const sources = [
@@ -35,7 +35,7 @@ for (const g of mergeSameSlotGames(sports.upcoming ?? [])) {
   rows.push({
     sort: g.dateISO, tag: "Spartans",
     when: `${fmtDay(g.dateISO.slice(0, 10))} · ${d.toLocaleTimeString("en-US", { hour: "numeric", minute: "2-digit", timeZone: "UTC" })}`,
-    title: gameLabel(g) + (g.opponents.length > 1 ? " (same time on MaxPreps; may be a scrimmage)" : ""), href: g.link,
+    title: gameLabel(g) + (needsSlotNote(g) ? " (same time on MaxPreps; may be a scrimmage)" : ""), href: g.link,
   });
 }
 const SCHOOL_RE = /\b(wayne local|wls|spartans?|board of education|elementary|middle school|high school|pto|boosters?)\b/i;
