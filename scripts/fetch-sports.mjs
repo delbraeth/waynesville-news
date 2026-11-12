@@ -124,10 +124,10 @@ function parseSchedule(html, sport, level) {
 // which MaxPreps lists as ordinary games (e.g. Nov 18, 2026: MaxPreps showed
 // varsity boys basketball "vs. Little Miami" AND "vs. Cedarville" at 6 PM; the
 // school lists one scrimmage vs. "Little Miami/Cedarville"). Its schedule page
-// loads a public JSON feed; we read only its notes to flag scrimmages, and
-// MaxPreps stays the source for matchups, times and scores. Rows with a
+// loads a public JSON feed; we use it for scrimmage and canceled labels and
+// start times, and MaxPreps stays the source for matchups and scores. Rows with a
 // malformed date (one golf row read "0206-08-24") are skipped. A failed fetch
-// just means no scrimmage labels this run.
+// just means no school labels or times this run.
 const ATHLETICS_FEED = "https://waynesvillesports.com/api/sport-events";
 
 async function fetchAthletics() {
@@ -142,7 +142,7 @@ async function fetchAthletics() {
       return m && Math.abs(Number(m[1]) - year) <= 1 && typeof r.team === "string";
     });
   } catch (e) {
-    console.log(`sports: athletics feed unavailable (${e.message}); no scrimmage labels this run`);
+    console.log(`sports: athletics feed unavailable (${e.message}); no school labels or times this run`);
     return [];
   }
 }
@@ -161,10 +161,37 @@ function athleticsMatches(row, g) {
     .some((o) => o.includes(opp) || opp.includes(o));
 }
 
-function markScrimmages(games, athletics) {
+// "6:00 PM" or "5:30:00 PM" -> "18:00"; null for missing or odd values.
+function schoolTime(t) {
+  const m = /^(\d{1,2}):(\d{2})(?::\d{2})?\s*(AM|PM)$/i.exec(String(t ?? "").trim());
+  if (!m) return null;
+  let h = Number(m[1]) % 12;
+  if (/pm/i.test(m[3])) h += 12;
+  return `${String(h).padStart(2, "0")}:${m[2]}`;
+}
+
+// Editor rule (2026-11-12): the school's list wins for times, MaxPreps for
+// scores and matchups. From the matching school row we take:
+// - "scrimmage": true when its notes say scrimmage;
+// - "canceled": true when its notes or status say canceled (the game stays
+//   listed, labeled, so nobody wonders where it went);
+// - its start time, when it differs from MaxPreps' ("maxprepsTime" keeps
+//   the old one for reference).
+function applySchoolSchedule(games, athletics) {
   return games.map((g) => {
     const row = athletics.find((r) => athleticsMatches(r, g));
-    return row && /scrimmage/i.test(row.notes ?? "") ? { ...g, scrimmage: true } : g;
+    if (!row) return g;
+    const out = { ...g };
+    const notes = `${row.notes ?? ""} ${row.status ?? ""}`;
+    if (/scrimmage/i.test(notes)) out.scrimmage = true;
+    if (/cancel+ed/i.test(notes)) out.canceled = true;
+    const t = schoolTime(row.startTime);
+    if (t && t !== g.dateISO.slice(11, 16)) {
+      out.maxprepsTime = g.dateISO.slice(11, 16);
+      out.dateISO = `${g.dateISO.slice(0, 11)}${t}:00`;
+      console.log(`sports: school time for ${g.level} ${g.sport} vs ${g.opponent} ${g.dateISO.slice(0, 10)}: ${out.maxprepsTime} -> ${t}`);
+    }
+    return out;
   });
 }
 
@@ -209,20 +236,22 @@ async function main() {
       .map(({ _d, ...g }) => g);
 
   const athletics = await fetchAthletics();
-  const results = markScrimmages(applyOverrides(inWindow(allResults)), athletics);
+  const results = applySchoolSchedule(applyOverrides(inWindow(allResults)), athletics);
   // A game lands in `upcoming` because no score parsed, NOT because it is in
   // the future — MaxPreps rarely posts JV scores, so played games sat here for
   // a week and published under "Upcoming". Require an actually-future date;
   // the 3h grace keeps a game in progress listed.
-  const upcoming = markScrimmages(inWindow(allUpcoming, new Date(nowET.getTime() - 3 * 3600e3)), athletics);
+  // Re-sort after the school's times are applied.
+  const upcoming = applySchoolSchedule(inWindow(allUpcoming, new Date(nowET.getTime() - 3 * 3600e3)), athletics)
+    .sort((a, b) => a.dateISO.localeCompare(b.dateISO));
   const orphaned = allUpcoming.length - upcoming.length;
 
   const note =
     `Waynesville Spartans schedule + results (MaxPreps), past ${LOOKBACK_DAYS} days / next ${LOOKAHEAD_DAYS} days. ` +
     `Scraped directly from each sport's own schedule page (football, volleyball, soccer -- varsity + JV), not the ` +
     `school hub page, which has been observed to silently omit some contests. Scores and matchups reproduced ` +
-    `verbatim from MaxPreps' own markup; each links to their game page. "scrimmage": true comes from the school's ` +
-    `athletics site (waynesvillesports.com), which marks scrimmages that MaxPreps lists as games.` +
+    `verbatim from MaxPreps' own markup; each links to their game page. Start times, "scrimmage" and "canceled" come ` +
+    `from the school's athletics site (waynesvillesports.com) when it lists the game; "maxprepsTime" is MaxPreps' time when they differ.` +
     (failures.length ? ` Fetch failures this run (skipped, not treated as fatal): ${failures.join("; ")}.` : "");
 
   await write({ results, upcoming }, note);
