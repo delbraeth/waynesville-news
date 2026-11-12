@@ -1,5 +1,5 @@
 {
-  "_note": "Church directory (/churches/). Hand-kept. Every fact comes from the church's own website (or its denomination's official locator page) and carries a verified date; service times exactly as published. Name churches only, never clergy, staff or members. Ministries listed only when the church publishes them as open to the community. Checked monthly for dead links and entries older than 90 days by scripts/check-resources.mjs. Entries with an empty `verified` date are not yet confirmed: the page labels them so. `toConfirm` (not shown on the site) lists what the editor still needs to check; fill in the fields, set `verified` to the date checked, add the source (or \"Confirmed by the editor\" plus how), and delete `toConfirm`.",
+  "_note": "Church directory (/churches/). Hand-kept. Every fact comes from the church's own website (or its denomination's official locator page) and carries a verified date; service times exactly as published. Clergy and church staff may be named in their church roles, in an optional `staff` list (e.g. \"Rev. Jane Doe\"; add the role when there's more than one person, e.g. \"Rev. Jane Doe, pastor\"), from the church's own publications or its denomination's locator. Never name members or volunteers. Ministries listed only when the church publishes them as open to the community. Checked monthly for dead links and entries older than 90 days by scripts/check-resources.mjs. Entries with an empty `verified` date are not yet confirmed: the page labels them so. `toConfirm` (not shown on the site) lists what the editor still needs to check; fill in the fields, set `verified` to the date checked, add the source (or \"Confirmed by the editor\" plus how), and delete `toConfirm`.",
   "updated": "2026-11-06",
   "items": [
     {
@@ -101,16 +101,23 @@
     {
       "name": "Waynesville United Methodist Church",
       "tradition": "United Methodist · West Ohio Conference",
+      "staff": [
+        "Rev. Joni Manson"
+      ],
       "address": "297 North St., Waynesville",
       "town": "Waynesville",
       "phone": "513-897-5771",
       "website": "",
-      "services": "",
-      "ministries": [],
-      "source": [
-        "https://www.westohioumc.org/find-church?county=83"
+      "services": "Sundays at 10:15 a.m., with children's Sunday school during the service. Also streamed live on Facebook.",
+      "ministries": [
+        "Messy Church for families on the first Thursday of each month, 6–7:30 p.m. Children must come with an adult.",
+        "Collects food donations for the local food pantry: drop them at the welcome center or in the labeled drawers at the Third Street entrance."
       ],
-      "verified": "2026-11-06",
+      "source": [
+        "https://www.westohioumc.org/find-church?county=83",
+        "https://myemail.constantcontact.com/Hello-November-.html?soid=1101745943563&aid=ilCOMLgIB8E"
+      ],
+      "verified": "2026-11-12",
       "facebook": "https://www.facebook.com/WaynesvilleUMC/"
     },
     {
@@ -135,6 +142,9 @@
     {
       "name": "Lytle United Methodist Church",
       "tradition": "United Methodist · West Ohio Conference",
+      "staff": [
+        "Rev. David Tackett"
+      ],
       "address": "8464 Lytle Ferry Rd., Waynesville",
       "town": "Lytle",
       "phone": "",
@@ -149,6 +159,9 @@
     {
       "name": "Oregonia United Methodist Church",
       "tradition": "United Methodist · West Ohio Conference",
+      "staff": [
+        "Rev. Bryan (Scott) Hicks"
+      ],
       "address": "1444 Race St., Oregonia",
       "town": "Oregonia",
       "phone": "513-934-1000",

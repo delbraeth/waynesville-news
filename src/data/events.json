@@ -492,6 +492,19 @@
       "category": "Sports",
       "source": "/images/events/2026-11-18-waynesville-fc-tryouts.webp",
       "note": "Waynesville FC holds supplemental tryouts for a girls 11v11 team playing in spring 2027, for players with birthdays between August 1, 2014 and July 31, 2015. Tap Details for the flyer."
+    },
+    {
+      "title": "Messy Church at Waynesville United Methodist",
+      "dateISO": "2026-12-03T18:00:00-05:00",
+      "endISO": "2026-12-03T19:30:00-05:00",
+      "dateLabel": "Thu, Dec 3 · 6–7:30 PM",
+      "venue": "Waynesville United Methodist Church, 297 North St., Waynesville",
+      "category": "Family",
+      "orgs": [
+        "Waynesville United Methodist Church"
+      ],
+      "source": "https://myemail.constantcontact.com/Hello-November-.html?soid=1101745943563&aid=ilCOMLgIB8E",
+      "note": "A monthly evening for families on the first Thursday of each month. Children must come with an adult. All are welcome."
     }
   ]
 }
