@@ -36,6 +36,17 @@ const FEEDS = [
     note: "Recent Caesar Creek State Park Facebook posts via rss.app bridge. Title + link + short excerpt; the park's own words. Fail-safe: kept from last run if the bridge is down.",
   },
   {
+    // Warren County Sheriff on X (added 2026-11-12, per the editor). The
+    // Sheriff's website has no press-release page. BACKGROUND ONLY: the
+    // draft hands these to the writer in a stripped editor note; they are
+    // never auto-listed, because posts can name people who were arrested.
+    label: "x-sheriff", // x.com/WCSO_Ohio
+    url: "https://rss.app/feeds/FI52HFVA1u71V7kB.xml",
+    out: new URL("../src/data/sheriff.json", import.meta.url),
+    what: "recent Warren County Sheriff posts",
+    note: "Recent Warren County Sheriff's Office posts on X (@WCSO_Ohio) via rss.app bridge. Background for the writer only; never auto-listed in the brief. Fail-safe: kept from last run if the bridge is down.",
+  },
+  {
     // Spartans Athletics (added 2026-11-12, per the editor): game recaps and
     // schedules for every sport, including swimming dual meets that no
     // other source covers.

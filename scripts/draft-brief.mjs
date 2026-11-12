@@ -45,6 +45,8 @@ let prosecutorItems = [];
 try { prosecutorItems = (await readJSON("src/data/prosecutor-press.json")).items ?? []; } catch { /* optional */ }
 let obituaries = [];
 try { obituaries = (await readJSON("src/data/obituaries.json")).items ?? []; } catch { /* optional */ }
+let sheriffPosts = [];
+try { sheriffPosts = ((await readJSON("src/data/sheriff.json")).items ?? []).filter((p) => !/^RT by @/i.test(p.title ?? "")); } catch { /* optional */ }
 let fbAthletics = [];
 try { fbAthletics = dropPastEventPosts((await readJSON("src/data/fb-athletics.json")).items ?? []); } catch { /* optional */ }
 let swimming = { results: [], upcoming: [] };
@@ -711,6 +713,7 @@ ${caesarBlock || fbCaesarBlock ? `\n## Caesar Creek State Park\n${caesarBlock ? 
 ## Public safety
 ${safetyBlock}
 ${listSrc("Public Safety")}
+${sheriffPosts.length ? `\n<!-- Editor note (stripped before publication): recent Warren County Sheriff's Office posts on X (@WCSO_Ohio). Background only; nothing here is published unless you write it. Mention a post only if it affects Waynesville, Wayne Township, Corwin, Caesar Creek or nearby roads, or is a countywide public-safety notice readers can act on (road hazards, scams, missing persons, drug take-back days, safety events). Attribute to the Sheriff's Office and link the post. Never name a suspect or arrested person, never describe a crime beyond what the Sheriff states, and skip promotions, ceremonies and retweets. Delete this note when done.\n${sheriffPosts.slice(0, 6).map((p) => `- ${p.dateLabel}: ${noUrls(`${p.title} ${p.excerpt ?? ""}`).replace(/-->/g, "—>").slice(0, 400)} (link: ${p.link})`).join("\n")}\n-->\n` : ""}
 ${roadsBlock ? `\n${roadsBlock}\n` : ""}
 ## This week's events
 ${eventsBlock}

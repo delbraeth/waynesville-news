@@ -31,6 +31,7 @@ export const CEILINGS = {
   "fb-schools": 3,      // recent district posts
   "fb-caesar-creek": 3, // recent park posts
   "swimming": 2,        // swimmeet.com meets (results past 7 days)
+  "x-sheriff": 4,       // Sheriff on X (background only)
   "fb-athletics": 3,    // recent Spartans Athletics posts
   "fb-wcpd": 3,         // recent Warren County Park District posts
   "fb-wcpd-friends": 3, // recent Friends of WCPD posts
