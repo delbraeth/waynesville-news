@@ -36,6 +36,23 @@ const dateRange = (d: Display) =>
   : "";
 
 const year = lights.season?.label ?? "";
+// Festive header: a draped string of bulbs. Positions follow a gentle sag
+// between hang points so the wire reads as a real light string.
+const BULB_COLORS = ["#ff4d4d", "#ffd23f", "#3ddc84", "#4dabff", "#ff8fd8"];
+const W = 600, SPANS = 4, PER_SPAN = 5;
+const sag = (x: number) => {
+  const span = W / SPANS, t = (x % span) / span;
+  return 10 + 22 * Math.sin(Math.PI * t);
+};
+const wire = Array.from({ length: 121 }, (_, i) => {
+  const x = (i / 120) * W;
+  return `${i ? "L" : "M"}${x.toFixed(1)},${sag(x === W ? W - 0.01 : x).toFixed(1)}`;
+}).join(" ");
+const bulbs = Array.from({ length: SPANS * PER_SPAN }, (_, i) => {
+  const x = (W / (SPANS * PER_SPAN)) * (i + 0.5);
+  return { x, y: sag(x), color: BULB_COLORS[i % BULB_COLORS.length], delay: ((i * 7) % 10) / 5 };
+});
+
 const submitMail = "mailto:editor@waynesville.news?subject=" + encodeURIComponent("Holiday lights listing");
 ---
 <Base
@@ -44,12 +61,32 @@ const submitMail = "mailto:editor@waynesville.news?subject=" + encodeURIComponen
   showInfoBar={false}
 >
   <div class="reading">
-    <p class="kicker">Holidays {year}</p>
-    <h1>Holiday Lights Guide</h1>
-    <p class="dek">
-      Christmas light displays in and around Waynesville — close to home first, then around Warren County,
-      then the big shows worth a drive.
-    </p>
+    <header class="hl-hero">
+      <svg class="hl-string" viewBox={`0 0 ${W} 52`} preserveAspectRatio="none" aria-hidden="true">
+        <defs>
+          <filter id="hl-glow" x="-200%" y="-100%" width="500%" height="300%">
+            <feGaussianBlur stdDeviation="3" result="b" />
+            <feMerge><feMergeNode in="b" /><feMergeNode in="SourceGraphic" /></feMerge>
+          </filter>
+        </defs>
+        <path d={wire} fill="none" stroke="#2d4a2f" stroke-width="2" />
+        {bulbs.map((b) => (
+          <g transform={`translate(${b.x.toFixed(1)} ${b.y.toFixed(1)})`}>
+            <rect x="-3" y="0" width="6" height="5" rx="1" fill="#556b4f" />
+            <ellipse class="hl-bulb" cx="0" cy="12" rx="5" ry="8" fill={b.color}
+              filter="url(#hl-glow)" style={`animation-delay:${b.delay}s`} />
+          </g>
+        ))}
+      </svg>
+      <div class="hl-hero-text">
+        <p class="hl-kicker">Holidays {year}</p>
+        <h1>Holiday Lights Guide</h1>
+        <p class="hl-dek">
+          Christmas light displays in and around Waynesville — close to home first, then around Warren County,
+          then the big shows worth a drive.
+        </p>
+      </div>
+    </header>
 
     <p class="callout">
       Dates, hours and prices are as each organizer posts them. Many haven't announced {year} details yet; those
@@ -114,3 +151,56 @@ const submitMail = "mailto:editor@waynesville.news?subject=" + encodeURIComponen
     </div>
   </div>
 </Base>
+
+<style>
+  /* Night-sky banner. Fixed colors (not theme tokens): it is a picture of a
+     winter night in both light and dark mode, and the cream text keeps
+     well over 7:1 contrast on the navy. */
+  .hl-hero {
+    position: relative;
+    margin: 0 0 1.5rem;
+    padding: 3.4rem 1.25rem 1.6rem;
+    border-radius: 12px;
+    overflow: hidden;
+    color: #fbf6ea;
+    background:
+      linear-gradient(180deg, #0f1d3a 0%, #172b52 60%, #1f3a5f 100%);
+    box-shadow: inset 0 -18px 30px -18px rgba(255,255,255,.18);
+  }
+  .hl-string {
+    position: absolute; top: 0; left: 0;
+    width: 100%; height: 52px;
+    overflow: visible;
+  }
+  .hl-bulb {
+    animation: hl-twinkle 2s ease-in-out infinite;
+  }
+  @keyframes hl-twinkle {
+    0%, 100% { opacity: 1; }
+    50% { opacity: .45; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .hl-bulb { animation: none; }
+  }
+  .hl-hero-text { position: relative; }
+  .hl-kicker {
+    font-family: var(--font-sans);
+    text-transform: uppercase;
+    letter-spacing: .09em;
+    font-size: .78rem;
+    font-weight: 600;
+    color: #ffd23f;
+    margin: 0 0 .35rem;
+  }
+  .hl-hero h1 {
+    color: #fbf6ea;
+    margin: 0 0 .5rem;
+    text-shadow: 0 0 18px rgba(255, 210, 63, .35);
+  }
+  .hl-dek {
+    font-family: var(--font-serif);
+    font-size: 1.12rem;
+    color: #dfe6f2;
+    margin: 0;
+  }
+</style>
