@@ -367,6 +367,7 @@ main { display: block; padding: 1.5rem 0 3rem; }
   width: 100%; max-width: 15rem; background: var(--field); color: var(--ink); margin-bottom: 0.4rem;
 }
 .signup .btn { padding: 0.5rem 0.9rem; margin-top: 0; }
+.signup label { display: block; margin-bottom: 0.2rem; color: var(--ink-soft); }
 
 /* ---------- subscribe box (top of home page and briefs) ---------- */
 .subscribe-box {

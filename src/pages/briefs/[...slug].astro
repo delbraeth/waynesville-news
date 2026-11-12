@@ -1,6 +1,7 @@
 ---
+import { getPublicBriefs } from "../../lib/briefs.js";
 import Base from "../../layouts/Base.astro";
-import { getCollection, render } from "astro:content";
+import { render } from "astro:content";
 import site from "../../data/site.json";
 import SubscribeBox from "../../components/SubscribeBox.astro";
 import audioIndex from "../../data/audio-index.json";
@@ -8,7 +9,9 @@ import audioCfg from "../../data/audio.json";
 import { newsArticle } from "../../lib/structuredData.js";
 
 export async function getStaticPaths() {
-  const briefs = (await getCollection("briefs")).filter((b) => b.data.published);
+  // Every published brief, except the sample/demo edition once real briefs
+  // exist (getPublicBriefs), so the demo page isn't built or listed in the sitemap.
+  const { briefs } = await getPublicBriefs();
   return briefs.map((entry) => ({ params: { slug: entry.id }, props: { entry } }));
 }
 

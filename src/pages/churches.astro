@@ -20,14 +20,30 @@ const tel = (p: string) => "tel:" + p.replace(/[^0-9]/g, "");
 const fmt = (iso?: string) =>
   iso ? new Date(iso + "T12:00:00").toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" }) : "";
 
-// Upcoming calendar events held at a church: the event's venue names it.
+// Upcoming calendar events held at or run by a church. An event matches when:
+// - it names the church explicitly (events.json: "orgs": ["<church name>"]), or
+// - its venue contains the church's full name, or
+// - its venue contains every distinctive word of the name ("CrossView",
+//   "Augustine"; a lone word needs 6+ letters). Generic words don't count, so "Waynesville Community Church"
+//   no longer matches "Spartan Community Field", and one United Methodist
+//   church doesn't pick up another's events.
 const key = (s = "") => s.toLowerCase().replace(/^(the|st\.?|saint)\s+/, "").replace(/[^a-z0-9 ]/g, " ").replace(/\s+/g, " ").trim();
-const coreName = (name: string) => key(name).replace(/\b(church|parish|of|waynesville|meeting|the)\b/g, " ").replace(/\s+/g, " ").trim();
+const GENERIC = /\b(church|parish|of|the|meeting|waynesville|lytle|oregonia|ridgeville|corwin|harveysburg|community|united|methodist|baptist|christian|catholic|episcopal|pentecostal|full|gospel|first|friends|religious|society)\b/g;
+const distinctive = (name: string) => key(name).replace(GENERIC, " ").split(" ").filter((w) => w.length >= 4);
+const hasWord = (text: string, w: string) => new RegExp(`\\b${w}\\b`).test(text);
 const upcoming = upcomingEvents();
 const eventsFor = (c: Church) => {
-  const core = coreName(c.name);
-  if (core.length < 4) return [];
-  return upcoming.filter((e) => key(e.venue).includes(core)).slice(0, 3);
+  const full = key(c.name);
+  const words = distinctive(c.name);
+  return upcoming.filter((e: any) => {
+    if ((e.orgs ?? []).includes(c.name)) return true;
+    const venue = key(e.venue);
+    if (venue.includes(full)) return true;
+    // One short word ("Mary") is too common to trust alone: "Mary L. Cook
+    // Public Library" isn't St. Mary's. A lone word needs 6+ letters.
+    if (words.length === 0 || (words.length === 1 && words[0].length < 6)) return false;
+    return words.every((w) => hasWord(venue, w));
+  }).slice(0, 3);
 };
 
 // Waynesville first, then the outlying towns alphabetically.

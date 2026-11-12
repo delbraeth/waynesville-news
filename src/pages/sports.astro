@@ -9,6 +9,7 @@ import sports from "../data/sports.json";
 import swimming from "../data/swimming.json";
 import fbAthletics from "../data/fb-athletics.json";
 import { etDate, fmtDay } from "../lib/schools.js";
+import { mergeSameSlotGames, gameLabel, SAME_SLOT_NOTE } from "../lib/sports.js";
 
 const sources = [
   { name: "MaxPreps — Waynesville", href: "https://www.maxpreps.com/oh/waynesville/waynesville-spartans/", what: "scores and schedules, all sports" },
@@ -23,9 +24,9 @@ const gameTitle = (g: any) => `${g.level && g.level !== "Varsity" ? g.level + " 
 
 const results = [...(sports.results ?? [])].sort((a: any, b: any) => b.dateISO.localeCompare(a.dateISO));
 const today = etDate();
-const upcoming = (sports.upcoming ?? [])
+const upcoming = mergeSameSlotGames((sports.upcoming ?? [])
   .filter((g: any) => etDate(new Date(g.dateISO)) >= today)
-  .sort((a: any, b: any) => a.dateISO.localeCompare(b.dateISO));
+  .sort((a: any, b: any) => a.dateISO.localeCompare(b.dateISO)));
 
 // Sports events on the community calendar over the next 45 days.
 const horizon = new Date(Date.now() + 45 * 86400000);
@@ -62,7 +63,7 @@ const dfmt = new Intl.DateTimeFormat("en-US", { weekday: "short", month: "long",
             <li>
               <span class="sp-when">{fmtDay(g.dateISO.slice(0, 10))} · {timeOf(g.dateISO)}</span>
               <span class="sp-tag">Spartans</span>
-              <a href={g.link} target="_blank" rel="noopener">{gameTitle(g)}: {g.isHome ? "vs." : "at"} {g.opponent}</a>
+              <span><a href={g.link} target="_blank" rel="noopener">{gameLabel(g)}</a>{g.opponents.length > 1 && <span class="sp-venue"> · {SAME_SLOT_NOTE}</span>}</span>
             </li>
           ))}
           {swimUpcoming.map((m: any) => (
