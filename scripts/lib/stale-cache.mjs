@@ -30,6 +30,7 @@ export const CEILINGS = {
   "prosecutor-press": 3, // "released in the past week"
   "fb-schools": 3,      // recent district posts
   "fb-caesar-creek": 3, // recent park posts
+  "swimming": 2,        // swimmeet.com meets (results past 7 days)
   "fb-wcpd": 3,         // recent Warren County Park District posts
   "fb-wcpd-friends": 3, // recent Friends of WCPD posts
   "fb-township": 3,     // recent Wayne Township posts (incl. fire/EMS)

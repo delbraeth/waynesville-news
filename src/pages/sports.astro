@@ -6,11 +6,13 @@ import Base from "../layouts/Base.astro";
 import { sectionFeed } from "../lib/sections.js";
 import { upcomingEvents } from "../lib/events.js";
 import sports from "../data/sports.json";
+import swimming from "../data/swimming.json";
 import { etDate, fmtDay } from "../lib/schools.js";
 
 const sources = [
   { name: "MaxPreps — Waynesville", href: "https://www.maxpreps.com/oh/waynesville/waynesville-spartans/", what: "scores and schedules, all sports" },
   { name: "Waynesville Spartans Athletics", href: "https://www.waynesvillesports.com/", what: "team schedules, results, athletic news" },
+  { name: "swimmeet.com", href: "https://www.swimmeet.com/ohio/", what: "Ohio swimming & diving meet results" },
   { name: "OHSAA", href: "https://www.ohsaa.org/", what: "tournament brackets and playoff tickets" },
 ];
 
@@ -31,6 +33,11 @@ const events = upcomingEvents().filter((e: any) =>
   .filter((e: any) => !upcoming.some((g: any) => g.dateISO.slice(0, 10) === e.dateISO.slice(0, 10) &&
     new RegExp(`\\b${g.sport}\\b`, "i").test(e.title) && !/send.?off|tryout/i.test(e.title)));
 
+// Swimming & diving meets (swimmeet.com): invitationals and championships.
+const ord = (n: number) => n + (["th", "st", "nd", "rd"][(n % 100 - 20) % 10] || ["th", "st", "nd", "rd"][n % 100] || "th");
+const swimResults = (swimming.results ?? []).filter((r: any) => r.places?.length);
+const swimUpcoming = (swimming.upcoming ?? []).filter((m: any) => m.endISO >= today);
+
 const items = await sectionFeed(["This week in sports"], { limit: 6 });
 const dfmt = new Intl.DateTimeFormat("en-US", { weekday: "short", month: "long", day: "numeric", timeZone: "UTC" });
 ---
@@ -42,13 +49,20 @@ const dfmt = new Intl.DateTimeFormat("en-US", { weekday: "short", month: "long",
 
     <section class="sp-sec" aria-labelledby="sp-up">
       <h2 id="sp-up">Coming up</h2>
-      {upcoming.length === 0 && events.length === 0 ? <p class="muted">No games on the schedule for the next week.</p> : (
+      {upcoming.length === 0 && events.length === 0 && swimUpcoming.length === 0 ? <p class="muted">No games on the schedule for the next week.</p> : (
         <ul class="sp-list">
           {upcoming.map((g: any) => (
             <li>
               <span class="sp-when">{fmtDay(g.dateISO.slice(0, 10))} · {timeOf(g.dateISO)}</span>
               <span class="sp-tag">Spartans</span>
               <a href={g.link} target="_blank" rel="noopener">{gameTitle(g)}: {g.isHome ? "vs." : "at"} {g.opponent}</a>
+            </li>
+          ))}
+          {swimUpcoming.map((m: any) => (
+            <li>
+              <span class="sp-when">{fmtDay(m.dateISO)}{m.endISO !== m.dateISO ? `–${fmtDay(m.endISO).replace(/^\w+, /, "")}` : ""}</span>
+              <span class="sp-tag">Swimming</span>
+              <span><a href={m.link} target="_blank" rel="noopener">{m.meet}</a><span class="sp-venue"> · {m.city}</span></span>
             </li>
           ))}
           {events.map((e: any) => (
@@ -64,7 +78,7 @@ const dfmt = new Intl.DateTimeFormat("en-US", { weekday: "short", month: "long",
 
     <section class="sp-sec" aria-labelledby="sp-res">
       <h2 id="sp-res">Results this week</h2>
-      {results.length === 0 ? <p class="muted">No results in the past week.</p> : (
+      {results.length === 0 && swimResults.length === 0 ? <p class="muted">No results in the past week.</p> : (
         <ul class="sp-list">
           {results.map((g: any) => (
             <li>
@@ -74,9 +88,16 @@ const dfmt = new Intl.DateTimeFormat("en-US", { weekday: "short", month: "long",
               <span class="sp-venue">({g.isHome ? "home" : "away"})</span>
             </li>
           ))}
+          {swimResults.map((r: any) => (
+            <li>
+              <span class="sp-when">{fmtDay(r.endISO)}</span>
+              <span class="sp-tag">Swimming</span>
+              <span><a href={r.link} target="_blank" rel="noopener">{r.meet}</a>: {r.places.map((p: any) => `${p.team} ${ord(p.place)} of ${p.of}${p.score ? ` (${p.score} pts)` : ""}`).join(", ")}</span>
+            </li>
+          ))}
         </ul>
       )}
-      <p class="small">Scores from MaxPreps, checked daily; the full season is on <a href="https://www.maxpreps.com/oh/waynesville/waynesville-spartans/" target="_blank" rel="noopener">MaxPreps</a>.</p>
+      <p class="small">Scores from MaxPreps and, for swimming and diving meets, swimmeet.com, checked daily; the full season is on <a href="https://www.maxpreps.com/oh/waynesville/waynesville-spartans/" target="_blank" rel="noopener">MaxPreps</a>.</p>
     </section>
 
     <section class="sp-sec" aria-labelledby="sp-news">

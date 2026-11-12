@@ -45,6 +45,8 @@ let prosecutorItems = [];
 try { prosecutorItems = (await readJSON("src/data/prosecutor-press.json")).items ?? []; } catch { /* optional */ }
 let obituaries = [];
 try { obituaries = (await readJSON("src/data/obituaries.json")).items ?? []; } catch { /* optional */ }
+let swimming = { results: [], upcoming: [] };
+try { swimming = await readJSON("src/data/swimming.json"); } catch { /* optional */ }
 let sports = { results: [], upcoming: [] };
 try { sports = await readJSON("src/data/sports.json"); } catch { /* optional */ }
 let libraryEvents = [];
@@ -358,10 +360,20 @@ const sportsUpcomingBlock = sports.upcoming.length
       `- **${g.sport} (${g.level})** — ${g.isHome === false ? "@" : "vs"} ${g.opponent}, ${fmtGameDate(g.dateISO)} — ${link("details", g.link)}`
     ).join("\n")
   : null;
-const sportsBlock = (sportsResultsBlock || sportsUpcomingBlock)
+// Swimming & diving (swimmeet.com): team place at invitationals and
+// championship meets. Dual meets aren't posted there.
+const ord = (n) => n + (["th", "st", "nd", "rd"][(n % 100 - 20) % 10] || ["th", "st", "nd", "rd"][n % 100] || "th");
+const swimDate = (iso) => new Date(iso + "T12:00:00Z").toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric", timeZone: "UTC" });
+const swimResults = (swimming.results ?? []).filter((r) => r.places?.length).map((r) =>
+  `- **Swimming & Diving** — ${r.meet}: ${r.places.map((p) => `${p.team} ${ord(p.place)} of ${p.of}${p.score ? ` (${p.score} pts)` : ""}`).join(", ")} — ${link("results", r.link)}`);
+const swimUpcoming = (swimming.upcoming ?? []).filter((m) => m.endISO >= nowFakeET.toISOString().slice(0, 10)).map((m) =>
+  `- **Swimming & Diving** — ${m.meet}, ${m.city}, ${swimDate(m.dateISO)}${m.endISO !== m.dateISO ? `–${swimDate(m.endISO).replace(/^\w+, /, "")}` : ""} — ${link("meet page", m.link)}`);
+const allResults = [sportsResultsBlock, ...swimResults].filter(Boolean).join("\n") || null;
+const allUpcoming = [sportsUpcomingBlock, ...swimUpcoming].filter(Boolean).join("\n") || null;
+const sportsBlock = (allResults || allUpcoming)
   ? [
-      sportsResultsBlock ? `**Results**\n${sportsResultsBlock}` : null,
-      sportsUpcomingBlock ? `**Upcoming**\n${sportsUpcomingBlock}` : null,
+      allResults ? `**Results**\n${allResults}` : null,
+      allUpcoming ? `**Upcoming**\n${allUpcoming}` : null,
     ].filter(Boolean).join("\n\n")
   : null;
 
