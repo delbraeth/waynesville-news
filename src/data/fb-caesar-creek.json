@@ -1,7 +1,14 @@
 {
   "_note": "Recent Caesar Creek State Park Facebook posts via rss.app bridge. Title + link + short excerpt; the park's own words. Fail-safe: kept from last run if the bridge is down.",
-  "updated": "2026-11-11T11:40:39.071Z",
+  "updated": "2026-11-12T00:11:51.939Z",
   "items": [
+    {
+      "title": "Happy Veterans Day and thank you to all who have served our nation. As a token of gratitude for the sacrifices made by…",
+      "link": "https://www.facebook.com/CaesarCreekStatePark/posts/pfbid02aXG9YHMHqzG8eQM3FJ4eSFZbPYbWBuSsazowxGY2cvQXjhShau3z4XqHifPaE4nPl",
+      "date": "Wed, 11 Nov 2026 18:47:07 GMT",
+      "dateLabel": "Wed, Nov 11",
+      "excerpt": "veterans and active-duty military members, Ohio State Parks now offer a year-round 25% discount on overnight camping, cabins, cottages, lodge stays, and many other rentals. Whether you're planning a weekend camping trip, a family getaway, or a peaceful retreat in nature, this new benefit makes…"
+    },
     {
       "title": "❄️ Winter Weather Update ❄️ With cold temperatures arriving this week, the park has now been winterized for the season…",
       "link": "https://www.facebook.com/CaesarCreekStatePark/posts/pfbid0iV7Utb2MMBrbbWSeutq4fGA2KtdToehCPwsxVnrj2x3xDTF72WiViVmmcVp7KQJxl",
@@ -43,20 +50,6 @@
       "date": "Mon, 02 Nov 2026 17:27:48 GMT",
       "dateLabel": "Mon, Nov 2",
       "excerpt": "Wellman and Northpool boat ramp docks stay in year-round. We appreciate our boating community and thank you for a great season this year!"
-    },
-    {
-      "title": "Autumn Colors @ Caesar Creek State Park. Photos by Marlon CarrOhio State Parks, Warren County - Ohio's Largest Playgroun...",
-      "link": "https://www.facebook.com/CaesarCreekStatePark/posts/pfbid05sjaN4Py9WGbhHpYPJ2Ln1Rz5fVnqeyLmw9qq8jYzNVqwu1H1opZJ5sxad1sXBbNl",
-      "date": "Sun, 01 Nov 2026 15:10:44 GMT",
-      "dateLabel": "Sun, Nov 1",
-      "excerpt": "Autumn Colors @ Caesar Creek State Park. Photos by Marlon Carr Ohio State Parks, Warren County - Ohio's Largest Playground"
-    },
-    {
-      "title": "What do you see?Took a quick stroll yesterday",
-      "link": "https://www.facebook.com/CaesarCreekStatePark/posts/pfbid031coruP9DEkjtUgo93KsahRNUcYupy895rDLEhYYv5pyMGvZ2cD1i8DPzz6zvdmiRl",
-      "date": "Sun, 01 Nov 2026 12:23:07 GMT",
-      "dateLabel": "Sun, Nov 1",
-      "excerpt": "What do you see? Took a quick stroll yesterday"
     }
   ]
 }

@@ -27,7 +27,7 @@ const OUT = new URL("../src/data/sports.json", import.meta.url);
 const LOOKBACK_DAYS = 7;
 const LOOKAHEAD_DAYS = 7;
 
-// Fall sports tracked for the brief. Add/remove sport-season entries here as
+// Sports tracked for the brief. Add/remove sport-season entries here as
 // the school year moves through winter/spring sports. Note soccer fields
 // BOTH a boys team (/soccer/) and a girls team (/soccer/girls/) — an
 // earlier version tracked only the girls pages and silently missed every
@@ -41,6 +41,16 @@ const SCHEDULE_PAGES = [
   { sport: "Boys Soccer", level: "JV", url: "https://www.maxpreps.com/oh/waynesville/waynesville-spartans/soccer/jv/schedule/" },
   { sport: "Girls Soccer", level: "Varsity", url: "https://www.maxpreps.com/oh/waynesville/waynesville-spartans/soccer/girls/schedule/" },
   { sport: "Girls Soccer", level: "JV", url: "https://www.maxpreps.com/oh/waynesville/waynesville-spartans/soccer/girls/jv/schedule/" },
+  // Winter (added 2026-11-12). Fall pages can stay: a finished season just
+  // yields nothing in the 7-day window. Wrestling is mostly tournaments,
+  // which MaxPreps lists without a vs/@ row, so only its duals appear here.
+  // MaxPreps had no Waynesville bowling or swimming schedule pages (301) as
+  // of 2026-11-12; add them if they appear.
+  { sport: "Boys Basketball", level: "Varsity", url: "https://www.maxpreps.com/oh/waynesville/waynesville-spartans/basketball/schedule/" },
+  { sport: "Boys Basketball", level: "JV", url: "https://www.maxpreps.com/oh/waynesville/waynesville-spartans/basketball/jv/schedule/" },
+  { sport: "Girls Basketball", level: "Varsity", url: "https://www.maxpreps.com/oh/waynesville/waynesville-spartans/basketball/girls/schedule/" },
+  { sport: "Girls Basketball", level: "JV", url: "https://www.maxpreps.com/oh/waynesville/waynesville-spartans/basketball/girls/jv/schedule/" },
+  { sport: "Wrestling", level: "Varsity", url: "https://www.maxpreps.com/oh/waynesville/waynesville-spartans/wrestling/schedule/" },
 ];
 
 const ROW_RE = /<tr[^>]*>([\s\S]*?)<\/tr>/g;

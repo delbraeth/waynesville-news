@@ -1,0 +1,80 @@
+name: Closings watch (winter school mornings)
+
+# Checks Wayne Local's district news for delays and closings every 30 minutes
+# on school-day mornings, November through March, so a 5:30 a.m. delay
+# reaches the site's school status box the same morning instead of the next
+# day. Added 2026-11-12 per the editor.
+#
+# Commits only when the list of delay/closing posts actually changes (not on
+# the timestamp alone), on top of claude/daily, then fast-forwards main, the
+# same way send-newsletter.yml records a send. Cloudflare deploys main.
+# Pushes made with GITHUB_TOKEN don't trigger workflows, so this can't loop.
+on:
+  schedule:
+    # Mon–Fri at 10:00, 10:30, 11:00, 12:30, 13:00 and 13:30 UTC = 5:00,
+    # 5:30, 6:00, 7:30, 8:00 and 8:30 a.m. EST (an hour later in EDT, early
+    # November and March). The 11:30–12:00 UTC slots are skipped on purpose:
+    # the daily brief run starts about then, refreshes closings itself, and
+    # its push to claude/daily would be refused if this job pushed mid-run.
+    # GitHub may start scheduled runs a few minutes late.
+    - cron: "0,30 10 * 11,12,1,2,3 1-5"
+    - cron: "0 11 * 11,12,1,2,3 1-5"
+    - cron: "30 12 * 11,12,1,2,3 1-5"
+    - cron: "0,30 13 * 11,12,1,2,3 1-5"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: closings-watch
+  cancel-in-progress: false
+
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: claude/daily
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+      - name: Check the district's news page
+        run: |
+          cp src/data/closings.json "$RUNNER_TEMP/before.json"
+          node scripts/fetch-closings.mjs
+      - name: Did the list change?
+        id: diff
+        run: |
+          changed=$(node -e '
+            const fs = require("fs");
+            const a = JSON.parse(fs.readFileSync(process.env.RUNNER_TEMP + "/before.json", "utf8")).items ?? [];
+            const b = JSON.parse(fs.readFileSync("src/data/closings.json", "utf8")).items ?? [];
+            console.log(JSON.stringify(a) === JSON.stringify(b) ? "no" : "yes");
+          ')
+          echo "changed=$changed" >> "$GITHUB_OUTPUT"
+          echo "closings changed: $changed"
+      - name: Publish the change
+        if: steps.diff.outputs.changed == 'yes'
+        run: |
+          set -euo pipefail
+          cp src/data/closings.json "$RUNNER_TEMP/closings.json"
+          git config user.name "waynesville-news-bot"
+          git config user.email "actions@users.noreply.github.com"
+          ok=0
+          for attempt in 1 2 3; do
+            git fetch origin claude/daily main
+            git checkout -q -f -B record origin/claude/daily
+            if ! git merge-base --is-ancestor origin/main HEAD; then
+              git merge --no-edit -m "Merge main into claude/daily" origin/main
+            fi
+            cp "$RUNNER_TEMP/closings.json" src/data/closings.json
+            git add src/data/closings.json
+            git diff --cached --quiet || git commit -m "closings: update from district news ($(TZ=America/New_York date '+%b %-d, %-I:%M %p'))"
+            if git push origin HEAD:claude/daily; then ok=1; break; fi
+            echo "push attempt $attempt failed, retrying..." && sleep 5
+          done
+          if [ "$ok" != "1" ]; then echo "::error::Closings changed but the push to claude/daily failed."; exit 1; fi
+          git push origin HEAD:main

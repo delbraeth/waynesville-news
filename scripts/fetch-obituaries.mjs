@@ -21,6 +21,45 @@ const diedFrom = (dateRange) => {
   return isNaN(d) ? null : d;
 };
 
+// "Forrest D. Bush" and "Forrest Bush" are the same person: match on first
+// and last name only.
+const nameKey = (n) => {
+  const w = String(n).toLowerCase().replace(/["'“”‘’()]/g, " ").replace(/\b(jr|sr|ii|iii|iv)\b\.?/g, " ").split(/\s+/).filter((x) => x && !/^[a-z]\.?$/.test(x));
+  return w.length ? `${w[0]} ${w[w.length - 1]}` : "";
+};
+
+const TOWNS = ["Waynesville", "Corwin", "Harveysburg", "Oregonia"];
+const NEWS_Q = `(${TOWNS.map((t) => `"${t}, OH"`).join(" OR ")}) obituary when:10d`;
+// "Jane Doe Obituary (2026) - Waynesville, OH - Some Funeral Home - Legacy | Obituary"
+const LEGACY_RE = new RegExp(`^(.+?) Obituary \\(\\d{4}\\) - (${TOWNS.join("|")}), OH - (.+?) - Legacy`);
+
+async function otherHomes(cutoff) {
+  const url = `https://news.google.com/rss/search?q=${encodeURIComponent(NEWS_Q)}&hl=en-US&gl=US&ceid=US:en`;
+  const res = await fetch(url, { headers: { "User-Agent": "WaynesvilleDailyBrief/1.0 (waynesville.news)" }, signal: AbortSignal.timeout(20_000) });
+  if (!res.ok) throw new Error(`Google News HTTP ${res.status}`);
+  const xml = await res.text();
+  const out = [];
+  for (const [, item] of xml.matchAll(/<item>([\s\S]*?)<\/item>/g)) {
+    const title = (/<title>([\s\S]*?)<\/title>/.exec(item)?.[1] ?? "").replace(/&amp;/g, "&").replace(/&#39;|&apos;/g, "'").replace(/&quot;/g, '"');
+    const m = LEGACY_RE.exec(title);
+    if (!m) continue;
+    const [, name, town, source] = m;
+    if (/stubbs-conner/i.test(source)) continue; // already read directly above
+    const posted = new Date(/<pubDate>([^<]+)<\/pubDate>/.exec(item)?.[1] ?? "");
+    if (isNaN(posted) || posted < cutoff) continue;
+    const link = /<link>([^<]+)<\/link>/.exec(item)?.[1];
+    if (!link || out.some((o) => nameKey(o.name) === nameKey(name))) continue;
+    const label = posted.toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric", timeZone: "America/New_York" });
+    out.push({
+      name: name.replace(/[<>]/g, "").trim(),
+      dateRange: `${town}, Ohio · notice posted ${label} (${source.replace(/[<>]/g, "").trim()})`,
+      postedISO: posted.toISOString(),
+      link,
+    });
+  }
+  return out;
+}
+
 async function main() {
   const res = await fetch(INDEX_URL, { headers: { "User-Agent": "WaynesvilleDailyBrief/1.0 (waynesville.news)" }, signal: AbortSignal.timeout(20_000) });
   if (!res.ok) throw new Error(`HTTP ${res.status}`);
@@ -65,7 +104,21 @@ async function main() {
     .sort((a, b) => b.died - a.died)
     .map(({ died, ...rest }) => rest);
 
-  await write(items, "Obituaries from Stubbs-Conner Funeral Home (Waynesville), past 7 days by date of death. Names and dates reproduced verbatim; link goes to the full tribute page.");
+  // Other funeral homes (added 2026-11-12): notices that Legacy.com files
+  // under Waynesville, Corwin, Harveysburg or Oregonia, found through Google
+  // News. Catches residents served by homes in Lebanon, Springboro,
+  // Wilmington and beyond, whose own sites are script-rendered or
+  // bot-blocked. Best-effort: a failure here never costs the Stubbs-Conner list.
+  try {
+    for (const extra of await otherHomes(cutoff)) {
+      if (items.some((i) => nameKey(i.name) === nameKey(extra.name))) continue;
+      items.push(extra);
+    }
+  } catch (e) {
+    console.error("obituaries: other funeral homes skipped:", e.message);
+  }
+
+  await write(items, "Obituaries for the past 7 days: Stubbs-Conner Funeral Home (Waynesville) by date of death, plus Legacy.com notices from other funeral homes that list Waynesville, Corwin, Harveysburg or Oregonia as the hometown (by date posted). Names reproduced verbatim; each links to the full notice.");
   console.log(`obituaries.json: ${items.length} item(s) in the past ${LOOKBACK_DAYS} days`);
 }
 
@@ -87,7 +140,7 @@ main().catch(async (e) => {
     cutoff.setDate(cutoff.getDate() - LOOKBACK_DAYS);
     cutoff.setHours(0, 0, 0, 0);
     const kept = (cached.items ?? []).filter((i) => {
-      const d = diedFrom(i.dateRange);
+      const d = i.postedISO ? new Date(i.postedISO) : diedFrom(i.dateRange);
       return d && d >= cutoff;
     });
     if (kept.length !== (cached.items ?? []).length) {

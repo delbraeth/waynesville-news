@@ -2,7 +2,8 @@
 // is robots-blocked and cannot be fetched directly. One data file per page:
 // Wayne Local Schools -> src/data/fb-schools.json, Caesar Creek State Park ->
 // src/data/fb-caesar-creek.json, Friends of Warren County Park District ->
-// src/data/fb-wcpd-friends.json, Wayne Township (trustees, fire/EMS, roads,
+// src/data/fb-wcpd-friends.json, Warren County Park District -> src/data/fb-wcpd.json,
+// Wayne Township (trustees, fire/EMS, roads,
 // zoning) -> src/data/fb-township.json. Published as a short quoted post title + link
 // + a plain-text excerpt; the page's own words, linked back to the post. Never
 // invents anything.
@@ -33,6 +34,16 @@ const FEEDS = [
     out: new URL("../src/data/fb-caesar-creek.json", import.meta.url),
     what: "recent Caesar Creek State Park posts",
     note: "Recent Caesar Creek State Park Facebook posts via rss.app bridge. Title + link + short excerpt; the park's own words. Fail-safe: kept from last run if the bridge is down.",
+  },
+  {
+    // The Park District's own Facebook page (added 2026-11-12, per the
+    // editor). Its events page still sits behind a bot challenge; this feed
+    // is the official stand-in and takes priority over the Friends group.
+    label: "fb-wcpd", // facebook.com/WarrenCountyParkDistrict
+    url: "https://rss.app/feeds/yOjfVwcTtGVSkhVW.xml",
+    out: new URL("../src/data/fb-wcpd.json", import.meta.url),
+    what: "recent Warren County Park District posts",
+    note: "Recent Warren County Park District Facebook posts via rss.app bridge. Title + link + short excerpt; the Park District's own words. Fail-safe: kept from last run if the bridge is down.",
   },
   {
     // The Park District's own events page (Constant Contact) sits behind a

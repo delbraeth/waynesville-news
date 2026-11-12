@@ -1,6 +1,6 @@
 {
   "_note": "Waynesville Spartans schedule + results (MaxPreps), past 7 days / next 7 days. Scraped directly from each sport's own schedule page (football, volleyball, soccer -- varsity + JV), not the school hub page, which has been observed to silently omit some contests. Scores and matchups reproduced verbatim from MaxPreps' own markup; each links to their game page.",
-  "updated": "2026-11-11T11:42:35.728Z",
+  "updated": "2026-11-12T00:07:58.069Z",
   "results": [
     {
       "dateISO": "2026-11-06T19:00:00",
@@ -26,6 +26,61 @@
       "result": null,
       "isHome": false,
       "link": "https://www.maxpreps.com/oh/football/game/graham-local-st-paris-vs-waynesville/11-13-2026/?c=3a9be22b-749e-4a99-a948-867beeb7242d"
+    },
+    {
+      "dateISO": "2026-11-14T10:00:00",
+      "sport": "Boys Basketball",
+      "level": "JV",
+      "opponent": "Loveland",
+      "wayneScore": null,
+      "opponentScore": null,
+      "result": null,
+      "isHome": true,
+      "link": "https://www.maxpreps.com/oh/basketball/game/loveland-vs-waynesville/jv/11-14-2026/?c=37241a9f-2ae1-4f82-8a69-f73340eb3d41"
+    },
+    {
+      "dateISO": "2026-11-17T17:00:00",
+      "sport": "Girls Basketball",
+      "level": "Varsity",
+      "opponent": "Preble Shawnee",
+      "wayneScore": null,
+      "opponentScore": null,
+      "result": null,
+      "isHome": true,
+      "link": "https://www.maxpreps.com/oh/basketball/girls/game/preble-shawnee-camden-vs-waynesville/11-17-2026/?c=fe12d950-bbd5-4ca7-ba5e-3e2f6aa05bfe"
+    },
+    {
+      "dateISO": "2026-11-18T18:00:00",
+      "sport": "Boys Basketball",
+      "level": "Varsity",
+      "opponent": "Little Miami",
+      "wayneScore": null,
+      "opponentScore": null,
+      "result": null,
+      "isHome": true,
+      "link": "https://www.maxpreps.com/oh/basketball/game/little-miami-morrow-vs-waynesville/11-18-2026/?c=9b2a7395-a758-40ee-8b0d-ddf2b5d0d984"
+    },
+    {
+      "dateISO": "2026-11-18T18:00:00",
+      "sport": "Boys Basketball",
+      "level": "Varsity",
+      "opponent": "Cedarville",
+      "wayneScore": null,
+      "opponentScore": null,
+      "result": null,
+      "isHome": true,
+      "link": "https://www.maxpreps.com/oh/basketball/game/cedarville-vs-waynesville/11-18-2026/?c=ff38b66e-9a9e-4848-8328-1b8beb88e62e"
+    },
+    {
+      "dateISO": "2026-11-18T18:00:00",
+      "sport": "Boys Basketball",
+      "level": "JV",
+      "opponent": "Little Miami",
+      "wayneScore": null,
+      "opponentScore": null,
+      "result": null,
+      "isHome": true,
+      "link": "https://www.maxpreps.com/oh/basketball/game/little-miami-morrow-vs-waynesville/jv/11-18-2026/?c=503378e7-2fbd-4067-a6af-2762fb530836"
     }
   ]
 }

@@ -86,6 +86,8 @@ let fbTownship = [];
 try { fbTownship = dropPastEventPosts((await readJSON("src/data/fb-township.json")).items ?? []); } catch { /* optional */ }
 let closings = [];
 try { closings = (await readJSON("src/data/closings.json")).items ?? []; } catch { /* optional */ }
+let fbWcpd = [];
+try { fbWcpd = dropPastEventPosts((await readJSON("src/data/fb-wcpd.json")).items ?? []); } catch { /* optional */ }
 let fbWcpdFriends = [];
 try { fbWcpdFriends = dropPastEventPosts((await readJSON("src/data/fb-wcpd-friends.json")).items ?? []); } catch { /* optional */ }
 // Editor tips: facts the editor supplied between runs (editor-tips.json),
@@ -415,7 +417,12 @@ const fbCaesarBlock = fbCaesarCreek.length
     fbCaesarCreek.slice(0, 2).map((p) => `- **${p.dateLabel}** — ${clip(noUrls(`${p.title} ${p.excerpt}`), 30)} (${link("post", p.link)})`).join("\n")
   : null;
 
-const fbWcpdBlock = fbWcpdFriends.length
+// The Park District's own page first; the volunteer Friends group only when
+// the official page has nothing recent.
+const fbWcpdBlock = fbWcpd.length
+  ? "**From Warren County Park District on Facebook**\n" +
+    fbWcpd.slice(0, 2).map((p) => `- **${p.dateLabel}** — ${clip(noUrls(`${p.title} ${p.excerpt}`), 30)} (${link("post", p.link)})`).join("\n")
+  : fbWcpdFriends.length
   ? "**From Friends of Warren County Park District on Facebook**\n" +
     fbWcpdFriends.slice(0, 2).map((p) => `- **${p.dateLabel}** — ${clip(noUrls(`${p.title} ${p.excerpt}`), 30)} (${link("post", p.link)})`).join("\n")
   : null;
