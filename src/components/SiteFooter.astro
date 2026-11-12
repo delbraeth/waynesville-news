@@ -69,7 +69,8 @@ const hasOrgs = orgData.items.length > 0;
               target="popupwindow"
               onsubmit={`window.open('https://buttondown.com/${nl.username}','popupwindow')`}
             >
-              <input type="email" name="email" placeholder="you@example.com" required />
+              <label class="small" for="footer-email">Email address</label>
+              <input id="footer-email" type="email" name="email" placeholder="you@example.com" autocomplete="email" required />
               <button class="btn" type="submit">Subscribe</button>
             </form>
           </>
@@ -77,7 +78,8 @@ const hasOrgs = orgData.items.length > 0;
           <>
             <p class="small muted">Coming soon — a free email edition.</p>
             <form class="signup" onsubmit="return false;" aria-label="Email signup (coming soon)">
-              <input type="email" placeholder="you@example.com" disabled />
+              <label class="small" for="footer-email-soon">Email address</label>
+              <input id="footer-email-soon" type="email" placeholder="you@example.com" disabled />
               <button class="btn" type="submit" disabled>Notify me</button>
             </form>
           </>

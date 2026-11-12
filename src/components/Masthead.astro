@@ -7,6 +7,10 @@ const { dateLine = new Intl.DateTimeFormat("en-US", {
 }).format(new Date()) } = Astro.props;
 
 import churchData from "../data/churches.json";
+import { getPublicBriefs } from "../lib/briefs.js";
+// "Today" opens the latest edition; the full list stays at /briefs/ (footer and home page).
+const { briefs: publicBriefs } = await getPublicBriefs();
+const todayHref = publicBriefs[0] ? `/briefs/${publicBriefs[0].id}/` : "/briefs/";
 import orgData from "../data/organizations.json";
 
 type Link = { label: string; href: string; cls?: string };
@@ -28,7 +32,7 @@ const news: Link[] = [
   { label: "Around Town", href: "/around-town/" },
 ];
 const before: Link[] = [
-  { label: "Today", href: "/briefs/" },
+  { label: "Today", href: todayHref },
 ];
 const middle: Link[] = [
   { label: "Calendar", href: "/events/" },
@@ -74,7 +78,7 @@ const all: Link[] = [...before, ...news, ...middle, ...community, { label: "Supp
   {/* Phones: three most-used links plus a "More" menu with everything. Pure
       HTML <details>, so it works without JavaScript and with screen readers. */}
   <div class="nav-compact">
-    <a href="/briefs/">Today</a>
+    <a href={todayHref}>Today</a>
     <a href="/events/">Calendar</a>
     <a href="/directory/">Business</a>
     <details class="nav-more">

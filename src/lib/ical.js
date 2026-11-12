@@ -2,6 +2,7 @@
 // file body (served from /events/ical/<slug>.ics), and a Google Calendar link.
 //
 // Timing rules, so calendars show something sensible:
+// Days and times are judged in Eastern time (see etDate/etTime).
 // - Same-day event with a real start time → timed event (end = endISO, or
 //   start + 1 hour when no end is given).
 // - Multi-day event, or a start at midnight / 11:59 PM (all-day or a
@@ -9,11 +10,32 @@
 //   the daily hours) goes in the description.
 const SITE = "https://waynesville.news";
 
-const slugify = (s) =>
+const slugifyFull = (s) =>
   String(s).toLowerCase().normalize("NFKD").replace(/[\u0300-\u036f]/g, "")
-    .replace(/&/g, " and ").replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "").slice(0, 60).replace(/-+$/, "");
+    .replace(/&/g, " and ").replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
 
-export const eventSlug = (e) => `${(e.dateISO ?? "").slice(0, 10)}-${slugify(e.title)}`;
+// Short, stable hash (FNV-1a, base 36) to keep slugs unique when a long title
+// is cut at 60 characters: "Maple Sugaring … - Discussion" and "… - Guided Walk"
+// would otherwise share one slug, one .ics file and one calendar UID.
+const hash = (s) => {
+  let h = 0x811c9dc5;
+  for (const ch of String(s)) { h ^= ch.codePointAt(0); h = Math.imul(h, 0x01000193) >>> 0; }
+  return h.toString(36).slice(0, 6);
+};
+const SLUG_MAX = 60;
+const titleSlug = (t) => {
+  const full = slugifyFull(t);
+  if (full.length <= SLUG_MAX) return full;
+  return `${full.slice(0, SLUG_MAX).replace(/-+$/, "")}-${hash(t)}`;
+};
+// Eastern-time calendar day and clock time, so events stored in UTC ("…Z", as
+// the library and Caesar Creek feeds are) and with an offset ("…-05:00", as
+// events.json is) are judged the same way.
+const ET = "America/New_York";
+const etDate = (iso) => new Date(iso).toLocaleDateString("en-CA", { timeZone: ET });
+const etTime = (iso) => new Date(iso).toLocaleTimeString("en-GB", { timeZone: ET, hour: "2-digit", minute: "2-digit", hourCycle: "h23" });
+
+export const eventSlug = (e) => `${e.dateISO ? etDate(e.dateISO) : ""}-${titleSlug(e.title)}`;
 export const icsHref = (e) => `/events/ical/${eventSlug(e)}.ics`;
 
 const ymd = (iso) => iso.slice(0, 10).replace(/-/g, "");
@@ -27,9 +49,9 @@ const utcStamp = (d) => d.toISOString().replace(/[-:]/g, "").replace(/\.\d{3}Z$/
 export function eventTiming(e) {
   const start = e.dateISO;
   const end = e.endISO ?? null;
-  const startDay = start.slice(0, 10);
-  const endDay = (end ?? start).slice(0, 10);
-  const hhmm = start.slice(11, 16);
+  const startDay = etDate(start);
+  const endDay = etDate(end ?? start);
+  const hhmm = etTime(start);
   const allDay = endDay !== startDay || hhmm === "00:00" || hhmm === "23:59";
   if (allDay) {
     // DTEND for all-day events is exclusive: the day after the last day.
