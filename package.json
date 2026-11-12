@@ -38,7 +38,8 @@
     "verify:live": "node scripts/verify-live.mjs",
     "refresh:directory": "node scripts/fetch-directory.mjs",
     "refresh:nwctp": "node scripts/fetch-nwctp.mjs",
-    "refresh:closings": "node scripts/fetch-closings.mjs"
+    "refresh:closings": "node scripts/fetch-closings.mjs; node scripts/fetch-board-recap.mjs",
+    "refresh:board-recap": "node scripts/fetch-board-recap.mjs"
   },
   "dependencies": {
     "@astrojs/rss": "^4.0.11",

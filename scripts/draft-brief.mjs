@@ -66,6 +66,8 @@ let caesarCreekEvents = [];
 try { caesarCreekEvents = (await readJSON("src/data/caesar-creek-events.json")).items ?? []; } catch { /* optional */ }
 let villageMinutes = null;
 try { villageMinutes = (await readJSON("src/data/village-minutes.json")).item ?? null; } catch { /* optional */ }
+let recapFeed = null;
+try { recapFeed = await readJSON("src/data/board-recap-feed.json"); } catch { /* optional */ }
 let boardRecap = null;
 try { boardRecap = (await readJSON("src/data/board-recap.json")).item ?? null; } catch { /* optional */ }
 let notices = [];
@@ -583,6 +585,21 @@ const boardRecapBlock = recapFresh
     ].filter(Boolean).join("\n")
   : null;
 
+// A recap newly posted on the district's Board of Education page (read by
+// fetch-board-recap.mjs) goes to the writer as an editor note, flagged on the
+// day it is first seen and the day after (in case that day's run missed it).
+const recapFeedNote = (() => {
+  if (!recapFeed?.text || recapFeed.seeded || !recapFeed.firstSeen) return null;
+  const todayET = new Date().toLocaleDateString("en-CA", { timeZone: "America/New_York" });
+  const ageDays = (Date.parse(todayET) - Date.parse(recapFeed.firstSeen)) / 86400000;
+  if (ageDays < 0 || ageDays > 1) return null;
+  return `<!-- Editor note (stripped before publication): NEW Wayne Local Board of Education recap (${recapFeed.meetingDateLabel} meeting), posted on the district's Board of Education page. ` +
+    `Skip it if yesterday's brief already covered this meeting. Otherwise use it in Schools and/or as a lead item: the most newsworthy decisions (levies, finances, contracts, policy, staffing, construction) first, ` +
+    `facts only as the recap states them, attributed to "the district's board meeting recap". Name only board members and district staff in their public roles; never name students, community members who spoke, or private individuals (name a donating business instead of a person). ` +
+    `Cite "Wayne Local Board Meeting Recap (${recapFeed.meetingDateLabel})" and link ${recapFeed.page} — never a smore.com link. Delete this note when done.\n\n` +
+    recapFeed.text.replace(/-->/g, "—>") + "\n-->";
+})();
+
 const boardRecapSchoolsBlock = recapFresh && (boardRecap.schools ?? []).length
   ? `**From the ${boardRecap.meetingDateLabel} board meeting**\n` +
     boardRecap.schools.map((t) => `- ${t}`).join("\n")
@@ -669,7 +686,7 @@ ${weekendBlock ? `\n## Weekend planner\n${weekendBlock}\n` : ""}
 ## Schools
 TODO — Wayne Local board, Spartans, closings, library programs. Check:
 ${listSrc("Schools")}
-${boardRecapSchoolsBlock ? `\n${boardRecapSchoolsBlock}\n` : ""}${fbBlock ? `\n${fbBlock}\n` : ""}${libraryBlock ? `\n**Library programs** (Mary L. Cook Public Library)\n${libraryBlock}\n` : ""}${signupBlock ? `\n**Sign up soon** (registration needed; full list on /events/)\n${signupBlock}\n` : ""}
+${recapFeedNote ? `\n${recapFeedNote}\n` : ""}${boardRecapSchoolsBlock ? `\n${boardRecapSchoolsBlock}\n` : ""}${fbBlock ? `\n${fbBlock}\n` : ""}${libraryBlock ? `\n**Library programs** (Mary L. Cook Public Library)\n${libraryBlock}\n` : ""}${signupBlock ? `\n**Sign up soon** (registration needed; full list on /events/)\n${signupBlock}\n` : ""}
 ${sportsBlock ? `\n## This week in sports\n${sportsBlock}\n` : ""}
 ## Local government
 Next up: **${meeting.body}**, ${meeting.whenLabel} — ${nextAgendaLinks}.${latestCommissioners ? `\nLatest posted by the commissioners: ${latestCommissioners}.` : ""}
