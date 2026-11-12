@@ -1,36 +1,12 @@
 {
   "_note": "Candidate local headlines (Google News RSS). Published as a quoted headline (or, when available, a short publisher-written excerpt) + source + link; never reproduce article body text.",
-  "updated": "2026-11-11T11:42:30.806Z",
+  "updated": "2026-11-12T11:42:26.973Z",
   "items": [
     {
-      "title": "Warren County couple convicted of sex crimes against a child and a dog learn sentences",
-      "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxORmtmODBZTWR1ZmJOejF1UW8yZkJWd1hNUDEwS19mVzk1VTY4NXNuS1ZYazEwaWJWcm5VN0RCX3dxZDh0MGRibkdoUTlfZE81TTJmZDNMR0U1cFdCUmxzZHFxdXcwT0JySnM3RVFJOTRxbGt6RThGbFdCdnpkMlh1bFFJTlpuUGdmRjhIc3VWVVp2XzVxUGo2bExzOA?oc=5",
-      "source": "WLWT",
-      "date": "Wed, 11 Nov 2026 04:15:00 GMT"
-    },
-    {
-      "title": "Warren County couple sentenced to prison in disturbing sex crimes case",
-      "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOMzRmLXBGVmFVb05Kc3hQNXM0TktlcGlUaFd1TWRnQ2p3UGVkYmFxNkpoYXdwWDNNQ3h6X3EyME1mMGxLdVZabl9BYUlVT0lNMVJ4V3F2bmpFZTJmTlkzaHIxckNFRlEyOWRrdHZ6cmVudnZFN25UdU13OHJpMldsaW45UFliUDVmYUJRRll4Mnh6VVR5MzFDTHptTG5rVmxtV0d4elF2N1h3UVE?oc=5",
-      "source": "WCPO 9 Cincinnati",
-      "date": "Wed, 11 Nov 2026 04:01:57 GMT"
-    },
-    {
-      "title": "Warren County Community Services, Inc. (WCCS) Offers Winter Crisis Program to Help Warren County Residents Keep the Heat On",
-      "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQZ1V1RVhCNWVIY21KX3hzSlo3dklSSDVic0ZWZDZXNFdScHlDeWQ2dlpTTFJKVTdHd1FCcW03WTNlNVZiQWptOU5uOERwQ290ckdLWV9JUXpScnVLeWJKcDU4cnhmYnBQaDFzVnIzVnM1LUZqRGtWV2ZYTTNQY2dNTC1BclY3c0VaWElLVDU3Y1RHVXp3NFZxLXJRSlVBUDdKdnYtaDBtZ1NLcjN0MEo4R2ZfaXZQWlNLTzk4NXdsMGxWbVlp?oc=5",
-      "source": "Warren County Post",
-      "date": "Wed, 11 Nov 2026 02:40:14 GMT"
-    },
-    {
-      "title": "Tri-State woman found guilty of multiple sex-related crimes involving child, animals",
-      "link": "https://news.google.com/rss/articles/CBMiuwJBVV95cUxNTGZvaGhiOVJ0RlRoRHZhQWNEUlBFNzhydjgydEpPZi1CcVNOdFRRNUxXWFJnZjhQQ3drbmVDajQ4SGNiZFFIeDNQTnJ1MnZDaHZkMzNSSUhuUjQ2ZkUyLUszM2dxZjZXLXE3Y3FYOEVXbF9mZnEwMW90a1VyQkZlTU1XWk5IbldFV2VFNGxTTTRsaHVnSy14c3pDNUlfSWZJNkYtN0JZd3lEaEFfMmJMQXJ3b283N3dDUTM3cDU4MTdBT01DOEV3Mjl3R1lPaHRXcl9SWkxKM1JYT0Vpbm1yc093TlI2RG42WXBTaEhSSVluU08tcTliaWtROGVxd09KNmEtM0hMcjBwcEVuQUtKaEFJOVJCVUVjZ0YzOVFwTVdud05jV3E3dmRrWlV1UjFHb3RxaDlHNDdLcWc?oc=5",
-      "source": "WKRC",
-      "date": "Wed, 11 Nov 2026 01:44:32 GMT"
-    },
-    {
-      "title": "Veterans honored at Waynesville recognition ceremony",
-      "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQZDlNbnFoOUxEVGFFT0hHZmlqR3I1VFMtS0xSeHRWa2dCblJRT3R1UWxIZjA2Mnk5Vk9ycWdLeVk3cDFiWFJfclJOYmQyNmtTSzNDRWZjWGxKVS1vV2xKRUdOcDJ6aExkdEJZblcxajRmYU1ucC1aUWdacGE2ZGJIU2xNTmp3SkZFbU95dzVwLXVrZw?oc=5",
-      "source": "WKEF",
-      "date": "Mon, 09 Nov 2026 21:18:29 GMT"
+      "title": "ODNR graduates 3 K9 teams in Warren County",
+      "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNNVZXZXJWYWJLbm5tcUpjQkxzVElUTEFTNW43cFlGVlN2Ti1DSE9PYnp4dzZaSlUtaXctNUJucUJ3aEpjaGpoQlp2WEl5MTJvZmdMTHFtV2xQOHN6UjMtZGY0UVcyYTRQVHFGZFFPUmNxNFdTR2RWaHFVWlBSNy1jZEFTQjNialVLOGlzMzlISFliTHlMa042N0U0Zlh2WEVsaG05NnBOSzVTa2pIaDdPV1diQTg4NjRuaEU2LUMwbzlBczcxYkR0SThB?oc=5",
+      "source": "Dayton Daily News",
+      "date": "Wed, 11 Nov 2026 13:18:37 GMT"
     },
     {
       "title": "Sentencing to be held Tuesday for Warren County couple convicted of sex crimes",
@@ -39,16 +15,40 @@
       "date": "Tue, 10 Nov 2026 21:42:00 GMT"
     },
     {
-      "title": "Study proposes six connectors between I-75 and I-71 in northern Warren County",
-      "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPdnRqdHhfSkFMdndPYldKeGtlcG16ZjlUVUw0cWlnRlpwSWthcExrNVB6a3Z4S0ZrM2JWaGRqMXNGbEpOUHhIaWpHU3VjZE9SR2huaW4tYkdCWlFDYUF3bm1TWU5VSE93M3g3SUliQUl3X3dHWTUzQTA4Q1J0QXl2MW82NWlON2hIN3g1VW9QUl9DRWV0?oc=5",
-      "source": "Dayton Daily News",
-      "date": "Sat, 07 Nov 2026 00:01:49 GMT"
+      "title": "Warren County Community Services, Inc. (WCCS) Offers Winter Crisis Program to Help Warren County Residents Keep the Heat On",
+      "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQZ1V1RVhCNWVIY21KX3hzSlo3dklSSDVic0ZWZDZXNFdScHlDeWQ2dlpTTFJKVTdHd1FCcW03WTNlNVZiQWptOU5uOERwQ290ckdLWV9JUXpScnVLeWJKcDU4cnhmYnBQaDFzVnIzVnM1LUZqRGtWV2ZYTTNQY2dNTC1BclY3c0VaWElLVDU3Y1RHVXp3NFZxLXJRSlVBUDdKdnYtaDBtZ1NLcjN0MEo4R2ZfaXZQWlNLTzk4NXdsMGxWbVlp?oc=5",
+      "source": "Warren County Post",
+      "date": "Wed, 11 Nov 2026 02:40:14 GMT"
     },
     {
-      "title": "Cincinnati's Nights of Lights holiday drive-thru display moves to a new location",
-      "link": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxPQlNJRzdpaEd5NHdCcXdZQmZOV05aMnJPaGt0UEJ6blNIckFEN2dWeV9OUnhuNGNidWNyNC1KZWJYZm5mTEJRamt2Q2xRWXBpaDNreDFxM0MzS1B0N3doTjRzVVVOajVqa0R1c0Fsc2ZwMUtZaTRlUFAtb0Z1cjFRZS1pVWktNDJzSEdTTkFtVnNieklpS3lWcXJhejlwbFVZMjYwaWxyeGlVdkVOLTlFNlpXUGlaaVQ2aEZiVGhaa1hzYVBRYmY0eVY2VUtKVllOQklnckZNN3liYS1XNGNoSVlzRDFGUjNuTm9sUHJ3?oc=5",
+      "title": "Veterans honored at Waynesville recognition ceremony",
+      "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQZDlNbnFoOUxEVGFFT0hHZmlqR3I1VFMtS0xSeHRWa2dCblJRT3R1UWxIZjA2Mnk5Vk9ycWdLeVk3cDFiWFJfclJOYmQyNmtTSzNDRWZjWGxKVS1vV2xKRUdOcDJ6aExkdEJZblcxajRmYU1ucC1aUWdacGE2ZGJIU2xNTmp3SkZFbU95dzVwLXVrZw?oc=5",
+      "source": "WKEF",
+      "date": "Mon, 09 Nov 2026 21:18:29 GMT"
+    },
+    {
+      "title": "Warren County couple sentenced to prison in disturbing sex crimes case",
+      "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOMzRmLXBGVmFVb05Kc3hQNXM0TktlcGlUaFd1TWRnQ2p3UGVkYmFxNkpoYXdwWDNNQ3h6X3EyME1mMGxLdVZabl9BYUlVT0lNMVJ4V3F2bmpFZTJmTlkzaHIxckNFRlEyOWRrdHZ6cmVudnZFN25UdU13OHJpMldsaW45UFliUDVmYUJRRll4Mnh6VVR5MzFDTHptTG5rVmxtV0d4elF2N1h3UVE?oc=5",
+      "source": "WCPO 9 Cincinnati",
+      "date": "Wed, 11 Nov 2026 04:01:57 GMT"
+    },
+    {
+      "title": "Tri-State couple sentenced for multiple sex-related crimes involving child, animals",
+      "link": "https://news.google.com/rss/articles/CBMiuwJBVV95cUxNTGZvaGhiOVJ0RlRoRHZhQWNEUlBFNzhydjgydEpPZi1CcVNOdFRRNUxXWFJnZjhQQ3drbmVDajQ4SGNiZFFIeDNQTnJ1MnZDaHZkMzNSSUhuUjQ2ZkUyLUszM2dxZjZXLXE3Y3FYOEVXbF9mZnEwMW90a1VyQkZlTU1XWk5IbldFV2VFNGxTTTRsaHVnSy14c3pDNUlfSWZJNkYtN0JZd3lEaEFfMmJMQXJ3b283N3dDUTM3cDU4MTdBT01DOEV3Mjl3R1lPaHRXcl9SWkxKM1JYT0Vpbm1yc093TlI2RG42WXBTaEhSSVluU08tcTliaWtROGVxd09KNmEtM0hMcjBwcEVuQUtKaEFJOVJCVUVjZ0YzOVFwTVdud05jV3E3dmRrWlV1UjFHb3RxaDlHNDdLcWc?oc=5",
       "source": "WKRC",
-      "date": "Mon, 09 Nov 2026 15:28:11 GMT"
+      "date": "Wed, 11 Nov 2026 01:44:32 GMT"
+    },
+    {
+      "title": "Forrest Bush Obituary (2026) - Wilmington, OH - Greene County Dailies",
+      "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPVThOalZnVXZmd0xTM1lyalB6ZjFCMjFTdnRuVmtFWS12MS11WFpzSnc1MWd2NlBEOHVmMnQ1WHEzSVhBVU40VkNqeFY3cGZTVVBnMVVZU1l3RzhpcUVIcXg2STRoUFNaLTNLTGZrcWZXelU2Mmh3NUdBM25CVnF1NTZKdFJNUTE5dHZtM2pSZWxaTV9FeWc?oc=5",
+      "source": "Legacy | Obituary",
+      "date": "Fri, 06 Nov 2026 16:59:27 GMT"
+    },
+    {
+      "title": "Popular holiday drive-thru light show finds new home in Warren County",
+      "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNZmhhQTVHUVowWWNNbEUyQWo1Y2RtTlpVeTRKZXZlVXlQX2hodnBnd2JtX2RxRk96QnU2RDl0cFFCSm51UmZtTFY3YlZFcGpXZmNod2VyS1JVUGlNZW1XZGQ4Yk5uNFZZTHFpQXQ0ZzNpdUEyWXdXa2xLSXZBOHJqM1cwbUhMVVZSNWJJTWZ3?oc=5",
+      "source": "WLWT",
+      "date": "Mon, 09 Nov 2026 15:26:00 GMT"
     }
   ]
 }

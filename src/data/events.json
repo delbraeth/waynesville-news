@@ -1,5 +1,5 @@
 {
-  "_note": "Real venues and sources, verified against each listed source on 2026-11-11; Warren County tourism calendar re-checked 2026-11-11 (daily automated refresh). Wayne Local school dates per The Spartan (September and October 2026) and the district Community Events & Activities newsletter (October 2026) and Board Meeting Recap (October 2026). Waynesville Elementary book fair, PTO meeting and Holiday Shop dates per the school’s upcoming-events graphic (November 2026). Mary L. Cook Public Library programs per the library's monthly newsletter (November 2026). Recurring items (rodeo, commissioners, ghost walk, Lions Club meetings on the 2nd and 4th Tuesdays) show the next occurrence. Warren County Park District events page SUSPENDED as a source per Cap'n (2026-10-03): it sits behind a Cloudflare bot challenge (403 since 2026-09-24). Do not fetch it or report it as failing; its items from the 2026-09-23 check are kept until they expire. Resume only when Cap'n provides a working source. Event notes and dateLabels are shown to readers: write them for readers (what, when, where, and a helpful pointer like \"check the event website for times\" when a detail is missing). Never put editorial or process notes in them (\"not published\", \"confirm before printing\", \"corrected from\", \"checked on\"); record corrections in the commit message instead. Tag Christmas-season community events (tree lightings, Santa visits, holiday markets, single-date light shows) with \"holiday\" so they also appear on the Holiday Lights guide. Waynesville area vs. regional: an event counts as Waynesville-area when its venue names Waynesville, Corwin, Harveysburg, Oregonia, Ridgeville, Lytle, Mount Holly, Crosswick, Caesar Creek or ZIP 45068/45054/45065 (see src/lib/events.js); always put the town in the venue. Optional \"cost\" (e.g. \"Free\", \"$5 adults, kids free\") and \"accessibility\" (e.g. \"Wheelchair accessible; parking behind the building\") show as a line under the event, only when the organizer or its source says so. Set \"local\": true or false to override (e.g. an online survey about Waynesville, or an out-of-town group serving Waynesville families). Optional \"orgs\": [\"<exact name from churches.json>\"] ties an event to a church on the Churches page when its venue doesn't name the church.",
+  "_note": "Real venues and sources, verified against each listed source on 2026-11-12; Warren County tourism calendar re-checked 2026-11-12 (daily automated refresh). Wayne Local school dates per The Spartan (September and October 2026) and the district Community Events & Activities newsletter (October 2026) and Board Meeting Recap (October 2026). Waynesville Elementary book fair, PTO meeting and Holiday Shop dates per the school’s upcoming-events graphic (November 2026). Mary L. Cook Public Library programs per the library's monthly newsletter (November 2026). Recurring items (rodeo, commissioners, ghost walk, Lions Club meetings on the 2nd and 4th Tuesdays) show the next occurrence. Warren County Park District events page SUSPENDED as a source per Cap'n (2026-10-03): it sits behind a Cloudflare bot challenge (403 since 2026-09-24). Do not fetch it or report it as failing; its items from the 2026-09-23 check are kept until they expire. Resume only when Cap'n provides a working source. Event notes and dateLabels are shown to readers: write them for readers (what, when, where, and a helpful pointer like \"check the event website for times\" when a detail is missing). Never put editorial or process notes in them (\"not published\", \"confirm before printing\", \"corrected from\", \"checked on\"); record corrections in the commit message instead. Tag Christmas-season community events (tree lightings, Santa visits, holiday markets, single-date light shows) with \"holiday\" so they also appear on the Holiday Lights guide. Waynesville area vs. regional: an event counts as Waynesville-area when its venue names Waynesville, Corwin, Harveysburg, Oregonia, Ridgeville, Lytle, Mount Holly, Crosswick, Caesar Creek or ZIP 45068/45054/45065 (see src/lib/events.js); always put the town in the venue. Optional \"cost\" (e.g. \"Free\", \"$5 adults, kids free\") and \"accessibility\" (e.g. \"Wheelchair accessible; parking behind the building\") show as a line under the event, only when the organizer or its source says so. Set \"local\": true or false to override (e.g. an online survey about Waynesville, or an out-of-town group serving Waynesville families). Optional \"orgs\": [\"<exact name from churches.json>\"] ties an event to a church on the Churches page when its venue doesn't name the church.",
   "items": [
     {
       "title": "Waynesville Fantasy Festival",
@@ -59,16 +59,6 @@
       "category": "Government",
       "source": "https://www.wayne-local.com/",
       "note": "Per Wayne Local Board Meeting Recap (Oct 2026): the bi-annual Spartan Recognition Awards ceremony opens the meeting, followed by a short break and the regular business meeting. Open to the public."
-    },
-    {
-      "title": "Gingerbread 101 Workshop",
-      "dateISO": "2026-11-07T11:00:00-05:00",
-      "endISO": "2026-11-07T13:30:00-05:00",
-      "dateLabel": "Sat, Nov 7 · 11:00 AM–1:30 PM",
-      "venue": "Mary L. Cook Public Library, 381 Old Stage Rd, Waynesville",
-      "category": "Family",
-      "source": "https://www.mlcook.lib.oh.us/",
-      "note": "The Waynesville Area Arts Council hosts a gingerbread-making workshop at the library. Register in person at the library; a cash deposit ($10 per person, or $20 for a group of 2–4) is collected at sign-up and refunded at the workshop. Children must be accompanied by an adult."
     },
     {
       "title": "Warren County Commissioners — Weekly Session",
@@ -290,19 +280,6 @@
       "category": "Government",
       "source": "https://www.waynesvilleohio.com/events",
       "note": "Free community meeting. Warren County Engineer Kurt Weber will talk about the North Warren County Transportation Plan and the I-75 to I-71 route option through town. RSVP to the Waynesville Area Chamber of Commerce at 513-897-8855. Can’t make it? The county’s online survey is open through Nov. 17."
-    },
-    {
-      "title": "CrossView Christmas Bazaar",
-      "dateISO": "2026-11-06T15:00:00-05:00",
-      "endISO": "2026-11-07T16:00:00-05:00",
-      "dateLabel": "Fri–Sat, Nov 6–7 · Fri 3–7 PM, Sat 9 AM–4 PM",
-      "venue": "CrossView Christian Church, 4237 E. Social Row Rd, Waynesville",
-      "category": "Community",
-      "tags": [
-        "holiday"
-      ],
-      "source": "/images/events/2026-11-06-crossview-christmas-bazaar.jpg",
-      "note": "Christmas gift bazaar with vendor tables at CrossView Christian Church. See the flyer for details, or visit the church’s website, crossview.cc."
     },
     {
       "title": "Dessert Auction for the Miami Cemetery Association Roads Fund",
