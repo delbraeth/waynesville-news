@@ -36,6 +36,16 @@ const FEEDS = [
     note: "Recent Caesar Creek State Park Facebook posts via rss.app bridge. Title + link + short excerpt; the park's own words. Fail-safe: kept from last run if the bridge is down.",
   },
   {
+    // Spartans Athletics (added 2026-11-12, per the editor): game recaps and
+    // schedules for every sport, including swimming dual meets that no
+    // other source covers.
+    label: "fb-athletics", // facebook.com/waynesvilleAth
+    url: "https://rss.app/feeds/BewlRMoO6R0bSmMm.xml",
+    out: new URL("../src/data/fb-athletics.json", import.meta.url),
+    what: "recent Waynesville Spartans Athletics posts",
+    note: "Recent Waynesville Spartans Athletics Facebook posts via rss.app bridge. Title + link + short excerpt; the athletic department's own words. Fail-safe: kept from last run if the bridge is down.",
+  },
+  {
     // The Park District's own Facebook page (added 2026-11-12, per the
     // editor). Its events page still sits behind a bot challenge; this feed
     // is the official stand-in and takes priority over the Friends group.

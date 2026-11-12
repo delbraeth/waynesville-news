@@ -45,6 +45,8 @@ let prosecutorItems = [];
 try { prosecutorItems = (await readJSON("src/data/prosecutor-press.json")).items ?? []; } catch { /* optional */ }
 let obituaries = [];
 try { obituaries = (await readJSON("src/data/obituaries.json")).items ?? []; } catch { /* optional */ }
+let fbAthletics = [];
+try { fbAthletics = dropPastEventPosts((await readJSON("src/data/fb-athletics.json")).items ?? []); } catch { /* optional */ }
 let swimming = { results: [], upcoming: [] };
 try { swimming = await readJSON("src/data/swimming.json"); } catch { /* optional */ }
 let sports = { results: [], upcoming: [] };
@@ -372,10 +374,14 @@ const swimUpcoming = (swimming.upcoming ?? []).filter((m) => m.endISO >= nowFake
   `- **Swimming & Diving** — ${m.meet}, ${m.city}, ${swimDate(m.dateISO)}${m.endISO !== m.dateISO ? `–${swimDate(m.endISO).replace(/^\w+, /, "")}` : ""} — ${link("meet page", m.link)}`);
 const allResults = [sportsResultsBlock, ...swimResults].filter(Boolean).join("\n") || null;
 const allUpcoming = [sportsUpcomingBlock, ...swimUpcoming].filter(Boolean).join("\n") || null;
-const sportsBlock = (allResults || allUpcoming)
+const sportsBlock = (allResults || allUpcoming || fbAthletics.length)
   ? [
       allResults ? `**Results**\n${allResults}` : null,
       allUpcoming ? `**Upcoming**\n${allUpcoming}` : null,
+      fbAthletics.length
+        ? "**From Spartans Athletics on Facebook**\n" +
+          fbAthletics.slice(0, 2).map((p) => `- **${p.dateLabel}** — ${clip(noUrls(`${p.title} ${p.excerpt}`), 30)} (${link("post", p.link)})`).join("\n")
+        : null,
     ].filter(Boolean).join("\n\n")
   : null;
 

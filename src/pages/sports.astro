@@ -7,12 +7,14 @@ import { sectionFeed } from "../lib/sections.js";
 import { upcomingEvents } from "../lib/events.js";
 import sports from "../data/sports.json";
 import swimming from "../data/swimming.json";
+import fbAthletics from "../data/fb-athletics.json";
 import { etDate, fmtDay } from "../lib/schools.js";
 
 const sources = [
   { name: "MaxPreps — Waynesville", href: "https://www.maxpreps.com/oh/waynesville/waynesville-spartans/", what: "scores and schedules, all sports" },
   { name: "Waynesville Spartans Athletics", href: "https://www.waynesvillesports.com/", what: "team schedules, results, athletic news" },
   { name: "swimmeet.com", href: "https://www.swimmeet.com/ohio/", what: "Ohio swimming & diving meet results" },
+  { name: "Waynesville Spartans Athletics — Facebook", href: "https://www.facebook.com/waynesvilleAth", what: "game recaps, schedules and team news" },
   { name: "OHSAA", href: "https://www.ohsaa.org/", what: "tournament brackets and playoff tickets" },
 ];
 
@@ -37,6 +39,11 @@ const events = upcomingEvents().filter((e: any) =>
 const ord = (n: number) => n + (["th", "st", "nd", "rd"][(n % 100 - 20) % 10] || ["th", "st", "nd", "rd"][n % 100] || "th");
 const swimResults = (swimming.results ?? []).filter((r: any) => r.places?.length);
 const swimUpcoming = (swimming.upcoming ?? []).filter((m: any) => m.endISO >= today);
+
+const posts = (fbAthletics.items ?? []).slice(0, 5).map((p: any) => {
+  const t = p.title.replace(/#SPARTANPRIDE/gi, " ").replace(/#\w+(?=\s|$)/g, "").replace(/\s+/g, " ").trim();
+  return { ...p, short: t.length > 140 ? t.slice(0, 140).replace(/\s+\S*$/, "") + "…" : t };
+});
 
 const items = await sectionFeed(["This week in sports"], { limit: 6 });
 const dfmt = new Intl.DateTimeFormat("en-US", { weekday: "short", month: "long", day: "numeric", timeZone: "UTC" });
@@ -99,6 +106,21 @@ const dfmt = new Intl.DateTimeFormat("en-US", { weekday: "short", month: "long",
       )}
       <p class="small">Scores from MaxPreps and, for swimming and diving meets, swimmeet.com, checked daily; the full season is on <a href="https://www.maxpreps.com/oh/waynesville/waynesville-spartans/" target="_blank" rel="noopener">MaxPreps</a>.</p>
     </section>
+
+    {posts.length > 0 && (
+      <section class="sp-sec" aria-labelledby="sp-fb">
+        <h2 id="sp-fb">From Spartans Athletics</h2>
+        <ul class="sp-list">
+          {posts.map((p: any) => (
+            <li>
+              <span class="sp-when">{p.dateLabel}</span>
+              <span><a href={p.link} target="_blank" rel="noopener">{p.short}</a></span>
+            </li>
+          ))}
+        </ul>
+        <p class="small">Posts from the <a href="https://www.facebook.com/waynesvilleAth" target="_blank" rel="noopener">Waynesville Spartans Athletics</a> Facebook page, checked daily.</p>
+      </section>
+    )}
 
     <section class="sp-sec" aria-labelledby="sp-news">
       <h2 id="sp-news">From recent briefs</h2>
