@@ -1,6 +1,6 @@
 {
   "_note": "Holiday Lights guide (/holiday-lights/). Hand-maintained: each display verified on its own official page; record the URL in `source`. Never guess dates: if the organizer hasn't posted this year's dates, set dates2026Confirmed false, leave startDate/endDate empty and describe the usual pattern in `when`. Private home displays only when the display has its own public page and invites visitors; never name homeowners. tier: local (Waynesville/Corwin/Harveysburg/Oregonia/Caesar Creek), county (Warren County and adjacent towns), drive (worth a drive, ~1 hour). The guide is promoted on the home and events pages between season.showFrom and season.showUntil.",
-  "updated": "2026-11-10",
+  "updated": "2026-11-12",
   "season": {
     "label": "2026",
     "showFrom": "2026-11-01",
@@ -148,10 +148,10 @@
       "kind": "drive-through",
       "location": "Land of Illusion, 8762 Thomas Road, Middletown",
       "town": "Middletown",
-      "startDate": "",
-      "endDate": "",
-      "dates2026Confirmed": false,
-      "when": "Usually Nov. 20 – Dec. 24, 6–10 pm, plus drive-through only Dec. 26–30",
+      "startDate": "2026-11-18",
+      "endDate": "2026-12-30",
+      "dates2026Confirmed": true,
+      "when": "Opens Nov. 18. Through Dec. 24, 6–10 pm; closed Christmas Day; drive-through only Dec. 26–30, 6–9 pm",
       "price": "Tickets sold online; check the site for prices",
       "about": "A 2-mile drive-through route with eight themed areas, plus a Christmas village with a 45-foot tree, Santa's Workshop and a petting zoo.",
       "website": "https://www.landofillusion.com/glow/",
