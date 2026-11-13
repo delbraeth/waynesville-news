@@ -482,6 +482,24 @@
       ],
       "source": "https://myemail.constantcontact.com/Hello-November-.html?soid=1101745943563&aid=ilCOMLgIB8E",
       "note": "A monthly evening for families on the first Thursday of each month. Children must come with an adult. All are welcome."
+    },
+    {
+      "title": "Wrestling Parent Meeting — 7th & 8th Grade",
+      "dateISO": "2026-11-16T16:20:00-05:00",
+      "dateLabel": "Mon, Nov 16 · 4:20 PM",
+      "venue": "Waynesville Middle/High School cafeteria, Waynesville",
+      "category": "Sports",
+      "source": "/images/events/2026-11-wrestling-parent-meetings.webp",
+      "note": "Parent meeting for Waynesville middle school (7th and 8th grade) wrestling, in the MS/HS cafe. Tap Details for the team's flyer."
+    },
+    {
+      "title": "Wrestling Parent Meeting — High School",
+      "dateISO": "2026-11-17T18:00:00-05:00",
+      "dateLabel": "Tue, Nov 17 · 6:00 PM",
+      "venue": "Waynesville Middle/High School cafeteria, Waynesville",
+      "category": "Sports",
+      "source": "/images/events/2026-11-wrestling-parent-meetings.webp",
+      "note": "Parent meeting for Waynesville High School wrestling, in the MS/HS cafe. Tap Details for the team's flyer."
     }
   ]
 }
