@@ -1,6 +1,6 @@
 {
   "_note": "Waynesville Spartans schedule + results (MaxPreps), past 7 days / next 7 days. Scraped directly from each sport's own schedule page (football, volleyball, soccer -- varsity + JV), not the school hub page, which has been observed to silently omit some contests. Scores and matchups reproduced verbatim from MaxPreps' own markup; each links to their game page. Start times, \"scrimmage\" and \"canceled\" come from the school's athletics site (waynesvillesports.com) when it lists the game; \"maxprepsTime\" is MaxPreps' time when they differ.",
-  "updated": "2026-11-12T11:42:34.486Z",
+  "updated": "2026-11-13T11:41:11.477Z",
   "results": [
     {
       "dateISO": "2026-11-06T19:00:00",

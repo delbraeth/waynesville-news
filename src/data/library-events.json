@@ -1,19 +1,7 @@
 {
   "_note": "Mary L. Cook Public Library — upcoming programs from the library's WhoFi event calendar (https://marylcook-main-oh.whofi.com/calendar/full). \"items\": next 14 days, for the daily brief (dateISO is Eastern wall-clock marked Z). \"calendar\": next 45 days for the events calendar, real offsets, with sign-up details read from each program's page (scripts/lib/signup.mjs). Canceled events and closures excluded.",
-  "updated": "2026-11-12T11:42:47.851Z",
+  "updated": "2026-11-13T11:41:18.545Z",
   "items": [
-    {
-      "title": "Junk Journal Drop in Program",
-      "dateISO": "2026-11-12T17:00:00Z",
-      "dateLabel": "Thu · Nov 12, 5:00 PM",
-      "link": "https://marylcook-main-oh.whofi.com/calendar/event/356821/"
-    },
-    {
-      "title": "Pj Storytime",
-      "dateISO": "2026-11-12T18:00:00Z",
-      "dateLabel": "Thu · Nov 12, 6:00 PM",
-      "link": "https://marylcook-main-oh.whofi.com/calendar/event/354881/"
-    },
     {
       "title": "Rootfinders",
       "dateISO": "2026-11-14T10:00:00Z",
@@ -49,29 +37,21 @@
       "dateISO": "2026-11-17T10:30:00Z",
       "dateLabel": "Tue · Nov 17, 10:30 AM",
       "link": "https://marylcook-main-oh.whofi.com/calendar/event/354852/"
+    },
+    {
+      "title": "Teen Tuesday (6th-12th Grade)",
+      "dateISO": "2026-11-17T15:00:00Z",
+      "dateLabel": "Tue · Nov 17, 3:00 PM",
+      "link": "https://marylcook-main-oh.whofi.com/calendar/event/356794/"
+    },
+    {
+      "title": "Rapid Readers Book Club",
+      "dateISO": "2026-11-17T16:00:00Z",
+      "dateLabel": "Tue · Nov 17, 4:00 PM",
+      "link": "https://marylcook-main-oh.whofi.com/calendar/event/354849/"
     }
   ],
   "calendar": [
-    {
-      "title": "Junk Journal Drop in Program",
-      "dateISO": "2026-11-12T17:00:00-05:00",
-      "endISO": "2026-11-12T18:45:00-05:00",
-      "dateLabel": "Thu, Nov 12 · 5:00 PM",
-      "link": "https://marylcook-main-oh.whofi.com/calendar/event/356821/",
-      "signup": {
-        "required": false
-      }
-    },
-    {
-      "title": "Pj Storytime",
-      "dateISO": "2026-11-12T18:00:00-05:00",
-      "endISO": "2026-11-12T18:30:00-05:00",
-      "dateLabel": "Thu, Nov 12 · 6:00 PM",
-      "link": "https://marylcook-main-oh.whofi.com/calendar/event/354881/",
-      "signup": {
-        "required": false
-      }
-    },
     {
       "title": "Rootfinders",
       "dateISO": "2026-11-14T10:00:00-05:00",

@@ -1,5 +1,5 @@
 {
-  "_note": "Real venues and sources, verified against each listed source on 2026-11-12; Warren County tourism calendar re-checked 2026-11-12 (daily automated refresh). Wayne Local school dates per The Spartan (September and October 2026) and the district Community Events & Activities newsletter (October 2026) and Board Meeting Recap (October 2026). Waynesville Elementary book fair, PTO meeting and Holiday Shop dates per the school’s upcoming-events graphic (November 2026). Mary L. Cook Public Library programs per the library's monthly newsletter (November 2026). Recurring items (rodeo, commissioners, ghost walk, Lions Club meetings on the 2nd and 4th Tuesdays) show the next occurrence. Warren County Park District events page SUSPENDED as a source per Cap'n (2026-10-03): it sits behind a Cloudflare bot challenge (403 since 2026-09-24). Do not fetch it or report it as failing; its items from the 2026-09-23 check are kept until they expire. Resume only when Cap'n provides a working source. Event notes and dateLabels are shown to readers: write them for readers (what, when, where, and a helpful pointer like \"check the event website for times\" when a detail is missing). Never put editorial or process notes in them (\"not published\", \"confirm before printing\", \"corrected from\", \"checked on\"); record corrections in the commit message instead. Tag Christmas-season community events (tree lightings, Santa visits, holiday markets, single-date light shows) with \"holiday\" so they also appear on the Holiday Lights guide. Waynesville area vs. regional: an event counts as Waynesville-area when its venue names Waynesville, Corwin, Harveysburg, Oregonia, Ridgeville, Lytle, Mount Holly, Crosswick, Caesar Creek or ZIP 45068/45054/45065 (see src/lib/events.js); always put the town in the venue. Optional \"cost\" (e.g. \"Free\", \"$5 adults, kids free\") and \"accessibility\" (e.g. \"Wheelchair accessible; parking behind the building\") show as a line under the event, only when the organizer or its source says so. Set \"local\": true or false to override (e.g. an online survey about Waynesville, or an out-of-town group serving Waynesville families). Optional \"orgs\": [\"<exact name from churches.json>\"] ties an event to a church on the Churches page when its venue doesn't name the church.",
+  "_note": "Real venues and sources, verified against each listed source on 2026-11-13; Warren County tourism calendar re-checked 2026-11-13 (daily automated refresh). Wayne Local school dates per The Spartan (September and October 2026) and the district Community Events & Activities newsletter (October 2026) and Board Meeting Recap (October 2026). Waynesville Elementary book fair, PTO meeting and Holiday Shop dates per the school’s upcoming-events graphic (November 2026). Mary L. Cook Public Library programs per the library's monthly newsletter (November 2026). Recurring items (rodeo, commissioners, ghost walk, Lions Club meetings on the 2nd and 4th Tuesdays) show the next occurrence. Warren County Park District events page SUSPENDED as a source per Cap'n (2026-10-03): it sits behind a Cloudflare bot challenge (403 since 2026-09-24). Do not fetch it or report it as failing; its items from the 2026-09-23 check are kept until they expire. Resume only when Cap'n provides a working source. Event notes and dateLabels are shown to readers: write them for readers (what, when, where, and a helpful pointer like \"check the event website for times\" when a detail is missing). Never put editorial or process notes in them (\"not published\", \"confirm before printing\", \"corrected from\", \"checked on\"); record corrections in the commit message instead. Tag Christmas-season community events (tree lightings, Santa visits, holiday markets, single-date light shows) with \"holiday\" so they also appear on the Holiday Lights guide. Waynesville area vs. regional: an event counts as Waynesville-area when its venue names Waynesville, Corwin, Harveysburg, Oregonia, Ridgeville, Lytle, Mount Holly, Crosswick, Caesar Creek or ZIP 45068/45054/45065 (see src/lib/events.js); always put the town in the venue. Optional \"cost\" (e.g. \"Free\", \"$5 adults, kids free\") and \"accessibility\" (e.g. \"Wheelchair accessible; parking behind the building\") show as a line under the event, only when the organizer or its source says so. Set \"local\": true or false to override (e.g. an online survey about Waynesville, or an out-of-town group serving Waynesville families). Optional \"orgs\": [\"<exact name from churches.json>\"] ties an event to a church on the Churches page when its venue doesn't name the church.",
   "items": [
     {
       "title": "Waynesville Fantasy Festival",
@@ -185,19 +185,6 @@
       "local": true
     },
     {
-      "title": "Hearthwarming Holidays",
-      "dateISO": "2026-11-06T11:00:00-05:00",
-      "endISO": "2026-11-08T17:00:00-05:00",
-      "dateLabel": "Fri–Sun, Nov 6–8 · Fri & Sat 11 AM–8 PM, Sun noon–5 PM",
-      "venue": "Historic downtown Waynesville",
-      "category": "Festival",
-      "source": "https://waynesvilleshops.com/?p=17396",
-      "note": "Holiday open house weekend in the downtown shops; collect recipe cards as you stroll from shop to shop. Free admission.",
-      "tags": [
-        "holiday"
-      ]
-    },
-    {
       "title": "Town Square Days: Step into Stars Hollow",
       "dateISO": "2026-11-21T10:00:00-05:00",
       "endISO": "2026-11-22T19:00:00-05:00",
@@ -326,15 +313,6 @@
       "local": true,
       "source": "/images/events/2026-11-13-graham-game-day-info.webp",
       "note": "Division V, Region 20 semifinal. Waynesville (9-2) beat Preble Shawnee in Round 2 and travels to Graham in St. Paris. Per the Spartans' game-day flyer: buy tickets online through OHSAA's Hometown Ticketing (same price as the gate); the gate takes cash only, no cards. Visitors should park in the gravel lot past the school's main entrance, closest to the visitor stands. The high school student spirit bus leaves at 5:15 PM (permission slip required; $5 student tickets online). Can't make the trip? Graham streams the game on HUDL for a fee. Tap Details for the flyer."
-    },
-    {
-      "title": "American Legion Post 615 Annual Veterans Day Dinner",
-      "dateISO": "2026-11-08T15:00:00-05:00",
-      "dateLabel": "Sun, Nov 8 · starting at 3:00 PM",
-      "venue": "American Legion Post 615, Waynesville",
-      "category": "Community",
-      "source": "/images/events/2026-11-08-american-legion-veterans-day-dinner.webp",
-      "note": "Post 615 invites all veterans and Legion members to its annual Veterans Day dinner. Check with the post for the location and any RSVP."
     },
     {
       "title": "Lebanon Horse-Drawn Carriage Parade & Christmas Festival",

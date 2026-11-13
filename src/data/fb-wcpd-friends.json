@@ -1,5 +1,13 @@
 {
   "_note": "Recent Friends of Warren County Park District Facebook posts via rss.app bridge. Title + link + short excerpt; the group's own words. Fail-safe: kept from last run if the bridge is down.",
-  "updated": "2026-11-12T11:41:15.251Z",
-  "items": []
+  "updated": "2026-11-13T11:41:07.852Z",
+  "items": [
+    {
+      "title": "Renew or join now for a chance to win a mountain bike. Drawing will be held on Jan 9th, 2027. Your support is essential…",
+      "link": "https://www.facebook.com/FriendsWCPD/posts/pfbid02rxZJuqiDG9zw7MyKzvFQ678eVFcnq4WXxXbxHxATJKHz12v8xBScN2Hm7m1Kb3WSl",
+      "date": "Thu, 12 Nov 2026 23:59:24 GMT",
+      "dateLabel": "Thu, Nov 12",
+      "excerpt": "to our organization and for Warren County parks."
+    }
+  ]
 }
