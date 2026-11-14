@@ -1,5 +1,5 @@
 {
-  "_note": "Real venues and sources, verified against each listed source on 2026-11-13; Warren County tourism calendar re-checked 2026-11-13 (daily automated refresh). Wayne Local school dates per The Spartan (September and October 2026) and the district Community Events & Activities newsletter (October 2026) and Board Meeting Recap (October 2026). Waynesville Elementary book fair, PTO meeting and Holiday Shop dates per the school’s upcoming-events graphic (November 2026). Mary L. Cook Public Library programs per the library's monthly newsletter (November 2026). Recurring items (rodeo, commissioners, ghost walk, Lions Club meetings on the 2nd and 4th Tuesdays) show the next occurrence. Warren County Park District events page SUSPENDED as a source per Cap'n (2026-10-03): it sits behind a Cloudflare bot challenge (403 since 2026-09-24). Do not fetch it or report it as failing; its items from the 2026-09-23 check are kept until they expire. Resume only when Cap'n provides a working source. Event notes and dateLabels are shown to readers: write them for readers (what, when, where, and a helpful pointer like \"check the event website for times\" when a detail is missing). Never put editorial or process notes in them (\"not published\", \"confirm before printing\", \"corrected from\", \"checked on\"); record corrections in the commit message instead. Tag Christmas-season community events (tree lightings, Santa visits, holiday markets, single-date light shows) with \"holiday\" so they also appear on the Holiday Lights guide. Waynesville area vs. regional: an event counts as Waynesville-area when its venue names Waynesville, Corwin, Harveysburg, Oregonia, Ridgeville, Lytle, Mount Holly, Crosswick, Caesar Creek or ZIP 45068/45054/45065 (see src/lib/events.js); always put the town in the venue. Optional \"cost\" (e.g. \"Free\", \"$5 adults, kids free\") and \"accessibility\" (e.g. \"Wheelchair accessible; parking behind the building\") show as a line under the event, only when the organizer or its source says so. Set \"local\": true or false to override (e.g. an online survey about Waynesville, or an out-of-town group serving Waynesville families). Optional \"orgs\": [\"<exact name from churches.json>\"] ties an event to a church on the Churches page when its venue doesn't name the church.",
+  "_note": "Real venues and sources, verified against each listed source on 2026-11-14; Warren County tourism calendar re-checked 2026-11-14 (daily automated refresh). Wayne Local school dates per The Spartan (September and October 2026) and the district Community Events & Activities newsletter (October 2026) and Board Meeting Recap (October and November 2026). Waynesville Elementary book fair, PTO meeting and Holiday Shop dates per the school’s upcoming-events graphic (November 2026). Mary L. Cook Public Library programs per the library's monthly newsletter (November 2026). Recurring items (rodeo, commissioners, ghost walk, Lions Club meetings on the 2nd and 4th Tuesdays) show the next occurrence. Warren County Park District events page SUSPENDED as a source per Cap'n (2026-10-03): it sits behind a Cloudflare bot challenge (403 since 2026-09-24). Do not fetch it or report it as failing; its items from the 2026-09-23 check are kept until they expire. Resume only when Cap'n provides a working source. Event notes and dateLabels are shown to readers: write them for readers (what, when, where, and a helpful pointer like \"check the event website for times\" when a detail is missing). Never put editorial or process notes in them (\"not published\", \"confirm before printing\", \"corrected from\", \"checked on\"); record corrections in the commit message instead. Tag Christmas-season community events (tree lightings, Santa visits, holiday markets, single-date light shows) with \"holiday\" so they also appear on the Holiday Lights guide. Waynesville area vs. regional: an event counts as Waynesville-area when its venue names Waynesville, Corwin, Harveysburg, Oregonia, Ridgeville, Lytle, Mount Holly, Crosswick, Caesar Creek or ZIP 45068/45054/45065 (see src/lib/events.js); always put the town in the venue. Optional \"cost\" (e.g. \"Free\", \"$5 adults, kids free\") and \"accessibility\" (e.g. \"Wheelchair accessible; parking behind the building\") show as a line under the event, only when the organizer or its source says so. Set \"local\": true or false to override (e.g. an online survey about Waynesville, or an out-of-town group serving Waynesville families). Optional \"orgs\": [\"<exact name from churches.json>\"] ties an event to a church on the Churches page when its venue doesn't name the church.",
   "items": [
     {
       "title": "Waynesville Fantasy Festival",
@@ -50,15 +50,6 @@
       "source": "https://www.sixflags.com/kingsisland/events/winterfest",
       "note": "Per Kings Island: holiday event on select nights. Opening weekend hours Nov 27 & 29 5–10 PM, Nov 28 4–10 PM. December open dates on the park calendar: Dec 4–6, 11–23 and 26–31; check the calendar for each night's hours.",
       "cost": "Free for ages 65+ (born on or before Dec. 31, 1961) with Kings Island’s free 2026 Senior Admission: register on the park’s ticket site, limit two per order, ID required at the gate, parking not included. Others need a ticket or season pass."
-    },
-    {
-      "title": "Wayne Local Schools Board of Education — Regular Meeting & Spartan Recognition Awards",
-      "dateISO": "2026-11-09T18:00:00-05:00",
-      "dateLabel": "Mon, Nov 9 · 6:00 PM",
-      "venue": "WLS Performing Arts Center (Auditorium), 625 Dayton Rd, Waynesville",
-      "category": "Government",
-      "source": "https://www.wayne-local.com/",
-      "note": "Per Wayne Local Board Meeting Recap (Oct 2026): the bi-annual Spartan Recognition Awards ceremony opens the meeting, followed by a short break and the regular business meeting. Open to the public."
     },
     {
       "title": "Warren County Commissioners — Weekly Session",
@@ -499,6 +490,46 @@
       "local": true,
       "source": "https://www.maxpreps.com/oh/football/game/bishop-fenwick-franklin-vs-waynesville/11-20-2026/?c=2f2a6d51-5706-4af5-a1bd-43c71e2f70d3",
       "note": "Division V, Region 20 final. Waynesville beat Graham 14-7 in the semifinal; Bishop Fenwick, from Franklin, won 27-13 at Williamsburg. OHSAA plays regional finals at neutral sites; check back here or the Spartans' pages for the site and ticket details once they're announced."
+    },
+    {
+      "title": "Wayne Local Schools Board of Education — Regular Meeting",
+      "dateISO": "2026-12-14T18:00:00-05:00",
+      "dateLabel": "Mon, Dec 14 · 6:00 PM",
+      "venue": "WLS Performing Arts Center (second floor), 625 Dayton Rd, Waynesville",
+      "category": "Government",
+      "source": "https://www.wayne-local.com/",
+      "note": "Per Wayne Local Board Meeting Recap (Nov 2026): regularly scheduled business meeting. Open to the public."
+    },
+    {
+      "title": "Spartan Holiday Food Drive",
+      "dateISO": "2026-11-30T08:00:00-05:00",
+      "endISO": "2026-12-11T15:00:00-05:00",
+      "dateLabel": "Mon, Nov 30 – Fri, Dec 11",
+      "venue": "Wayne Local Schools, Waynesville",
+      "category": "Community",
+      "source": "https://www.wayne-local.com/",
+      "note": "Per Wayne Local Schools Community Events & Activities newsletter (Oct 2026): the Waynesville Student Council and American Legion Holiday Food Drive collects nonperishable food for local families through American Legion Post 615. Students drop off items in homerooms (WES) or second-period classes (WMS/WHS)."
+    },
+    {
+      "title": "WMS/WHS Winter Art Exhibition",
+      "dateISO": "2026-12-10T16:00:00-05:00",
+      "endISO": "2026-12-10T19:00:00-05:00",
+      "dateLabel": "Thu, Dec 10 · 4–7 PM",
+      "venue": "WLS Performing Arts Center, 625 Dayton Rd, Waynesville",
+      "category": "Family",
+      "source": "https://www.wayne-local.com/",
+      "note": "Per Wayne Local Schools Community Events & Activities newsletter (Oct 2026): annual one-night show of artwork by students in grades 6–12."
+    },
+    {
+      "title": "Warren County Career Pathway Expo",
+      "dateISO": "2026-12-10T12:30:00-05:00",
+      "endISO": "2026-12-10T13:45:00-05:00",
+      "dateLabel": "Thu, Dec 10 · 12:30–1:45 PM",
+      "venue": "Warren County Fairgrounds Event Center, Lebanon",
+      "category": "Community",
+      "source": "https://www.wayne-local.com/",
+      "local": true,
+      "note": "Per Wayne Local Schools Community Events & Activities newsletter (Oct 2026): local professionals are invited to support students from Waynesville High School and other Warren County schools as they share end-of-semester presentations."
     }
   ]
 }

@@ -1,7 +1,35 @@
 {
   "_note": "Recent Wayne Local Schools Facebook posts via rss.app bridge. Title + link + short excerpt; the district's own words. Fail-safe: kept from last run if the bridge is down.",
-  "updated": "2026-11-13T11:41:07.293Z",
+  "updated": "2026-11-14T11:40:47.188Z",
   "items": [
+    {
+      "title": "Congratulations, Spartans! #SPARTANPRIDEOn to the Regional Final!",
+      "link": "https://www.facebook.com/waynelocalschools/posts/pfbid023eSG3smMoFzwepjGzkkfWypV3uFq5R1WDYWM6KQPUU1gPzpU1C1QM7qGXUE6a4jel",
+      "date": "Sat, 14 Nov 2026 02:25:11 GMT",
+      "dateLabel": "Fri, Nov 13",
+      "excerpt": "Congratulations, Spartans! #SPARTANPRIDE On to the Regional Final!"
+    },
+    {
+      "title": "🎭 WHS Theatre will take the stage this weekend! Come support our talented theatre students for Radium Girls, a powerful…",
+      "link": "https://www.facebook.com/waynelocalschools/posts/pfbid02REK1hpeorgu5P3z1vP68BAeqRZdzewb9S7B5Qqq76aPYHrp2VrctPuwYpXCSKcdul",
+      "date": "Fri, 13 Nov 2026 22:00:05 GMT",
+      "dateLabel": "Fri, Nov 13",
+      "excerpt": "production based on the true story of young women whose courage helped change the world. Here are the performance dates/times: 📅 Friday, November 13 | 7 p.m. 📅 Saturday, November 14 | 7 p.m. 📅 Sunday, November 15 | 2 p.m. 📍 Waynesville Performing Arts Center 🎟️ Students: $10 | Adults: $12…"
+    },
+    {
+      "title": "💰 WLS Fiscal Focus: How Cash Reserves Support Our Students Over the years, the district’s costs have increased more…",
+      "link": "https://www.facebook.com/waynelocalschools/posts/pfbid0387UtbP6cTbKjkw9qBVNBPyf2WQxxgZyV4xA1mXYZ6kMRmrnNN5Av9jdhCzVrC3DEl",
+      "date": "Fri, 13 Nov 2026 19:55:52 GMT",
+      "dateLabel": "Fri, Nov 13",
+      "excerpt": "than revenue. Our cash reserves have helped bridge that gap, sustaining the programs, staffing, and learning opportunities our students count on. 💭Think of reserves as the district’s savings account. When annual expenses exceed annual revenue, we use those savings to help cover the difference.…"
+    },
+    {
+      "title": "Our School Psychologists, Erin Kefalos and Steph Ghantous, wear many hats in our schools and do so much more than most…",
+      "link": "https://www.facebook.com/waynelocalschools/posts/pfbid0yEZEhnnJnaNmD7GdfnjMHVWQa6aZypScHupNWPDqtPbPecacAb7i4gDoUEC7mtZNl",
+      "date": "Fri, 13 Nov 2026 16:20:25 GMT",
+      "dateLabel": "Fri, Nov 13",
+      "excerpt": "realize! They build strong relationships, support students’ academic, behavioral, and social-emotional growth, and collaborate with families and staff to help every student learn, grow, and thrive. In celebration of National School Psychology Week, join us in thanking Erin and Steph for…"
+    },
     {
       "title": "🏆We had the pleasure of celebrating 12 OUTSTANDING Spartans who make Wayne Local Schools an even better place to learn,…",
       "link": "https://www.facebook.com/waynelocalschools/posts/pfbid01SSc16qTW6VM563eVatkrufCdukGjfpLjFuNFnbfGTt8NjVANap9GHG39fz7reP3l",
@@ -29,34 +57,6 @@
       "date": "Thu, 12 Nov 2026 00:30:06 GMT",
       "dateLabel": "Wed, Nov 11",
       "excerpt": "guest speakers, Mr. Stamper and Mr. Shane. Our WES kindergartners have been busy over the past two weeks selecting and writing special thank you cards for our veterans! Their thoughtful messages will be shared with the Warren County Veterans Services Commission, which will deliver the cards to…"
-    },
-    {
-      "title": "What does Veterans Day mean to our students? Their words said it beautifully today. As part of our Veterans Day…",
-      "link": "https://www.facebook.com/waynelocalschools/posts/pfbid0N78ao7XZc6ZbHHHHWTDiuRLLKSsRcdq7v9LnhU3tSwUUNeccNHN1FPqYmHeCsmZml",
-      "date": "Wed, 11 Nov 2026 23:10:54 GMT",
-      "dateLabel": "Wed, Nov 11",
-      "excerpt": "Celebration, students across the district wrote essays in their ELA classes reflecting on the meaning and importance of Veterans Day. A committee reviewed the submissions and selected one essay from each school to be shared during today's program. We couldn't be prouder of the thoughtfulness,…"
-    },
-    {
-      "title": "More from #VeteransDay2026!…",
-      "link": "https://www.facebook.com/waynelocalschools/posts/pfbid0meav14yj1XMbBrsKnpJkXr4WsApL1AqLMwHvios6yg37RNY7c7kGFojAJPnA2wx7l",
-      "date": "Wed, 11 Nov 2026 21:01:23 GMT",
-      "dateLabel": "Wed, Nov 11",
-      "excerpt": ""
-    },
-    {
-      "title": "#ThankYouVeterans for your courage, sacrifice, and service!🧡…",
-      "link": "https://www.facebook.com/waynelocalschools/posts/pfbid06WyszTiXUTHsSPeMvoaeb3Fp9pziqwok7GcJjb3cpcVUP6DzhJBteQLAh3B4Lg7Ql",
-      "date": "Wed, 11 Nov 2026 19:00:08 GMT",
-      "dateLabel": "Wed, Nov 11",
-      "excerpt": ""
-    },
-    {
-      "title": "Today, Wayne Local Schools had the honor of welcoming our veterans for a celebration that reminded us all of the true…",
-      "link": "https://www.facebook.com/reel/1869149840760926/",
-      "date": "Wed, 11 Nov 2026 17:48:36 GMT",
-      "dateLabel": "Wed, Nov 11",
-      "excerpt": "meaning of service and sacrifice. Our Veterans Day Celebration began with a Veterans Breakfast, followed by a heartfelt program and our Veterans Car Parade, where students and staff lined the campus to show their gratitude and appreciation. Our veterans are living examples of courage, sacrifice,…"
     }
   ]
 }

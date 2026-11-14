@@ -1,6 +1,6 @@
 {
   "_note": "Waynesville Spartans schedule + results (MaxPreps), past 7 days / next 7 days. Scraped directly from each sport's own schedule page (football, volleyball, soccer -- varsity + JV), not the school hub page, which has been observed to silently omit some contests. Scores and matchups reproduced verbatim from MaxPreps' own markup; each links to their game page. Start times, \"scrimmage\" and \"canceled\" come from the school's athletics site (waynesvillesports.com) when it lists the game; \"maxprepsTime\" is MaxPreps' time when they differ.",
-  "updated": "2026-11-14T03:31:16.627Z",
+  "updated": "2026-11-14T11:42:05.342Z",
   "results": [
     {
       "dateISO": "2026-11-13T19:00:00",
@@ -75,6 +75,17 @@
       "isHome": true,
       "link": "https://www.maxpreps.com/oh/basketball/game/little-miami-morrow-vs-waynesville/jv/11-18-2026/?c=503378e7-2fbd-4067-a6af-2762fb530836",
       "scrimmage": true
+    },
+    {
+      "dateISO": "2026-11-20T19:00:00",
+      "sport": "Football",
+      "level": "Varsity",
+      "opponent": "Bishop Fenwick",
+      "wayneScore": null,
+      "opponentScore": null,
+      "result": null,
+      "isHome": false,
+      "link": "https://www.maxpreps.com/oh/football/game/bishop-fenwick-franklin-vs-waynesville/11-20-2026/?c=2f2a6d51-5706-4af5-a1bd-43c71e2f70d3"
     }
   ]
 }

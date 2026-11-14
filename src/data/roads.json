@@ -1,6 +1,6 @@
 {
   "_note": "State-route work within 8 miles of Waynesville (ODOT OHGO; Restricted/Closed only, ODOT's own descriptions) plus Warren County Engineer closure releases starting within 21 days back / 14 ahead (countywide; title, start date, and the end date the release states; ended closures dropped).",
-  "updated": "2026-11-13T11:41:08.700Z",
+  "updated": "2026-11-14T11:43:54.776Z",
   "items": [
     {
       "source": "ohgo",
@@ -11,13 +11,6 @@
       "endISO": "2026-11-30",
       "description": "Resurfacing S.R. 73, between Red Lion- Five Points Road and Harveysburg Road, as well as the installation of a left-turn lane on S.R. 73 at Old S.R. 73 near Waynesville. Traffic will be maintained in one lane in either direction with the use of flaggers and/or other traffic…",
       "miles": 0.6
-    },
-    {
-      "source": "engineer",
-      "title": "Morrow-Woodville Rd Closure to be extended",
-      "startISO": "2026-11-04",
-      "link": "https://engineer.warrencountyohio.gov/doc/Information/NewsReleases/2026/20261104_Morrow-Woodville_Rd_Closure_to_be_extended.pdf",
-      "endISO": "2026-11-13"
     }
   ],
   "sources": {
