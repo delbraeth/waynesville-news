@@ -478,6 +478,17 @@
       "category": "Sports",
       "source": "/images/events/2026-11-wrestling-parent-meetings.webp",
       "note": "Parent meeting for Waynesville High School wrestling, in the MS/HS cafe. Tap Details for the team's flyer."
+    },
+    {
+      "title": "Radium Girls — Waynesville Theater",
+      "dateISO": "2026-11-13T19:00:00-05:00",
+      "endISO": "2026-11-15T16:00:00-05:00",
+      "dateLabel": "Fri–Sun, Nov 13–15 · Fri & Sat 7 PM, Sun 2 PM",
+      "venue": "Waynesville Performing Arts Center, 659 Dayton Rd, Waynesville",
+      "category": "Community",
+      "cost": "$10 students, $12 adults; pay at the door (cash or card)",
+      "source": "/images/events/2026-11-13-radium-girls.jpg",
+      "note": "Waynesville theater presents Radium Girls, the play by D.W. Gregory. Tickets are sold at the door. Tap Details for the flyer."
     }
   ]
 }
