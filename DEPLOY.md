@@ -51,6 +51,13 @@ Spaceship lists those values in your email settings. If you keep DNS at Spaceshi
 Every `git push` — a new brief in `src/content/briefs/`, or refreshed `src/data/*.json` — triggers an
 automatic rebuild and deploy. That is the entire publish loop.
 
+## 6. Facebook posts (Zapier, outside this repo)
+
+New briefs and stories reach the Waynesville News Facebook page through a **Zapier** Zap that watches
+the site's RSS feed, `https://waynesville.news/rss.xml` (built by `src/pages/rss.xml.js`), and posts
+each new item. Nothing in this repo or its GitHub Actions posts to Facebook; to pause, change or debug
+those posts, go to the Zap in Zapier. If the feed URL or item format changes, check the Zap still fires.
+
 ---
 
 Need help with any step when you get there? Say the word and I'll walk it through with you.
