@@ -53,11 +53,27 @@ automatic rebuild and deploy. That is the entire publish loop.
 
 ## 6. Facebook posts (Zapier, outside this repo)
 
-New briefs and stories reach the Waynesville News Facebook page through a **Zapier** Zap that watches
-the site's RSS feed, `https://waynesville.news/rss.xml` (built by `src/pages/rss.xml.js`), and posts
-each new item. Nothing in this repo or its GitHub Actions posts to Facebook; to pause, change or debug
-those posts, go to the Zap in Zapier. If the feed URL or item format changes, check the Zap still fires.
+New briefs reach the Waynesville News Facebook page through a **Zapier** Zap that watches an RSS feed
+and posts each new item. Nothing in this repo or its GitHub Actions posts to Facebook; to pause, change
+or debug those posts, go to the Zap in Zapier.
 
----
+**Use `https://waynesville.news/facebook.xml`** (built by `src/pages/facebook.xml.js`) for the Zap.
+It carries the last 10 daily briefs, one item per edition, and each item has:
 
-Need help with any step when you get there? Say the word and I'll walk it through with you.
+- a **daily header graphic**, `https://waynesville.news/cards/<YYYY-MM-DD>.png` (1200×630), in both
+  `<enclosure>` and `<media:content>`. It shows the headline, an "Inside today" list of the three lead
+  items, and the day's weather. Drawn at build time by `src/lib/brief-card.js` (satori + resvg, using
+  the bundled Newsreader font in `src/assets/card-fonts/`);
+- a ready-to-post caption in `<description>`: the dek, then the link to the brief.
+
+The brief pages also use that graphic as their `og:image`, so a plain link post shows it as well.
+
+Two ways to set up the Zap action:
+
+- **Photo post (biggest image in the feed):** Facebook Pages → *Create Page Photo*. Photo URL = the
+  item's enclosure URL; Message = the item's Description.
+- **Link post:** Facebook Pages → *Create Page Post*. Link URL = the item's Link; Message = the
+  Description. Facebook pulls the graphic from the page's `og:image`.
+
+The older `https://waynesville.news/rss.xml` (briefs and stories, no images) stays as the general feed.
+If either feed's URL or item format changes, check the Zap still fires.
