@@ -7,6 +7,7 @@ import SubscribeBox from "../../components/SubscribeBox.astro";
 import audioIndex from "../../data/audio-index.json";
 import audioCfg from "../../data/audio.json";
 import { newsArticle } from "../../lib/structuredData.js";
+import { cardPath } from "../../lib/brief-card.js";
 
 export async function getStaticPaths() {
   // Every published brief, except the sample/demo edition once real briefs
@@ -38,6 +39,8 @@ const corrections = correctionsData.items.filter((c) => c.page === `/briefs/${en
   title={`${entry.data.title} · Waynesville News`}
   description={entry.data.dek}
   ogType="article"
+  image={cardPath(entry.id)}
+  imageAlt={`Waynesville News Daily Brief, ${dateFmt.format(entry.data.date)}: ${entry.data.title}`}
   published={entry.data.date}
   dateLine={dateFmt.format(entry.data.date)}
   showInfoBar={false}
