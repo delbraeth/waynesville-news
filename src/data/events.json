@@ -489,6 +489,16 @@
       "cost": "$10 students, $12 adults; pay at the door (cash or card)",
       "source": "/images/events/2026-11-13-radium-girls.jpg",
       "note": "Waynesville theater presents Radium Girls, the play by D.W. Gregory. Tickets are sold at the door. Tap Details for the flyer."
+    },
+    {
+      "title": "Playoff football, Region 20 final: Waynesville vs. Bishop Fenwick",
+      "dateISO": "2026-11-20T19:00:00-05:00",
+      "dateLabel": "Fri, Nov 20 · 7:00 PM",
+      "venue": "Neutral site to be announced by OHSAA",
+      "category": "Sports",
+      "local": true,
+      "source": "https://www.maxpreps.com/oh/waynesville/waynesville-spartans/football/schedule/",
+      "note": "Division V, Region 20 final. Waynesville beat Graham 14-7 in the semifinal; Bishop Fenwick won 27-13 at Williamsburg. OHSAA plays regional finals at neutral sites; check back here or the Spartans' pages for the site and ticket details once they're announced."
     }
   ]
 }
