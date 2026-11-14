@@ -2,11 +2,26 @@
 // Daily briefs only, newest first, each with:
 //   - <enclosure> and <media:content>: the day's header graphic (/cards/<date>.png),
 //     for a Zapier "Create Page Photo" step (map the enclosure URL to Photo URL);
-//   - <description>: a ready-to-post plain-text caption (dek + link);
+//   - <description>: a ready-to-post plain-text caption: the dek, a direct
+//     "Listen" link to the day's audio, and the link to the brief;
 //   - the brief page itself carries the same graphic as og:image, so a plain
 //     link post shows it too.
 import { getPublicBriefs } from "../lib/briefs.js";
 import { renderBriefCard, cardPath } from "../lib/brief-card.js";
+import audioIndex from "../data/audio-index.json";
+
+// Zapier posts an item once, the first time it sees it, so an edition is held
+// out of this feed until its audio is recorded (daily-audio.yml pushes
+// audio-index.json a few minutes after the brief goes live, which rebuilds the
+// site). If the recording fails, the edition is released without the Listen
+// line by any build after noon Eastern on its date, so it is never lost.
+const RELEASE_WITHOUT_AUDIO_UTC_HOUR = 17; // noon EST / 1 p.m. EDT
+const audioFor = (id) => {
+  const a = audioIndex.items?.[id];
+  return a?.url ? a : null;
+};
+const isReady = (b, now) =>
+  audioFor(b.id) || now.getTime() >= b.data.date.getTime() + RELEASE_WITHOUT_AUDIO_UTC_HOUR * 3600 * 1000;
 
 const esc = (s = "") =>
   String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
@@ -16,14 +31,24 @@ const FEED_ITEMS = 10;
 export async function GET(context) {
   const site = String(context.site).replace(/\/$/, "");
   const { briefs } = await getPublicBriefs();
-  const recent = [...briefs].sort((a, b) => b.data.date.getTime() - a.data.date.getTime()).slice(0, FEED_ITEMS);
+  const now = new Date();
+  const recent = [...briefs]
+    .filter((b) => isReady(b, now))
+    .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
+    .slice(0, FEED_ITEMS);
 
   const items = await Promise.all(
     recent.map(async (b) => {
       const page = `${site}/briefs/${b.id}/`;
       const img = `${site}${cardPath(b.id)}`;
       const bytes = (await renderBriefCard(b)).length;
-      const caption = `${b.data.dek ?? ""}\n\nRead today's Daily Brief, with links to every source: ${page}`.trim();
+      const audio = audioFor(b.id);
+      const mins = audio?.seconds ? ` (${Math.max(1, Math.round(audio.seconds / 60))} min)` : "";
+      const caption = [
+        b.data.dek ?? "",
+        audio ? `🎧 Listen to today's brief${mins}: ${audio.url}` : "",
+        `Read today's Daily Brief, with links to every source: ${page}`,
+      ].filter(Boolean).join("\n\n");
       return `    <item>
       <title>${esc(b.data.title)}</title>
       <link>${esc(page)}</link>
