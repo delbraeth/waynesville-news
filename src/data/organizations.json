@@ -29,6 +29,10 @@
     {
       "id": "business",
       "title": "Business associations & festivals"
+    },
+    {
+      "id": "hobby",
+      "title": "Hobby & science clubs"
     }
   ],
   "items": [
@@ -441,6 +445,20 @@
         "https://www.thebridgewaynesville.org"
       ],
       "verified": "2026-11-07"
+    },
+    {
+      "name": "Southwest Ohio Rocketry Association (SORA)",
+      "category": "hobby",
+      "what": "Model rocketry club that launches at Hisey Park in Corwin. It teams up with the Warren County Astronomy Club for free night launches and telescope viewing at the park's Fred Bay Observatory.",
+      "meets": "Scheduled club launches at Hisey Park, 5443 Middletown Rd., Corwin; dates are on the club calendar. Rockets may be launched at the park only during a scheduled club launch.",
+      "website": "https://rocketryohio.com/",
+      "source": [
+        "https://rocketryohio.com/",
+        "https://rocketryohio.com/launch-site",
+        "https://rocketryohio.com/calendar"
+      ],
+      "verified": "2026-11-15",
+      "toConfirm": "Regular meeting schedule, how to join, and the club's Facebook page URL (the site mentions one but doesn't link it)."
     }
   ]
 }
