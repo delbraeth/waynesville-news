@@ -15,6 +15,7 @@
 // a skipped day as non-fatal; exits non-zero on real errors.
 import { readFile, writeFile, readdir } from "node:fs/promises";
 import { existsSync } from "node:fs";
+import { dayBite } from "./day-bite.mjs";
 
 const ROOT = new URL("../", import.meta.url);
 const cfg = JSON.parse(await readFile(new URL("src/data/audio.json", ROOT), "utf8"));
@@ -62,7 +63,7 @@ async function buildScript(date) {
 
   const md = await readFile(new URL(`src/content/briefs/${date}.md`, ROOT), "utf8");
   const day = new Date(`${date}T12:00:00Z`).toLocaleDateString("en-US", { weekday: "long", month: "long", day: "numeric", timeZone: "UTC" });
-  const parts = [`Good morning, Waynesville. It's ${day}, and this is the Daily Brief from Waynesville News.`];
+  const parts = [`Good morning, Waynesville! It's ${day}.`];
 
   const today = /\*\*Today:\*\*\s*([^\n]+)/.exec(section(md, "Weather"))?.[1];
   if (today) {
@@ -236,7 +237,23 @@ const sponsorText = sponsor
   : forTheEar(houseSpot?.text || cfg.housePromo || "");
 const reserved = (sponsorText ? sponsorText.length + 2 : 0) + (storiesText ? storiesText.length + 2 : 0);
 if (reserved > cfg.maxChars - 600) console.log(`warning: flagged stories and sponsor take ${reserved} of ${cfg.maxChars} characters`);
-let script = cap(await buildScript(date), cfg.maxChars - reserved);
+// Opening: "Good morning, Waynesville! It's <day>." then the daily info bite
+// (scripts/day-bite.mjs). Rewrites the older long greeting the daily run may
+// still write ("..., and this is the Daily Brief from Waynesville News."), and
+// adds the opening if a script lacks one.
+export function withOpening(text, date) {
+  const day = new Date(`${date}T12:00:00Z`).toLocaleDateString("en-US", { weekday: "long", month: "long", day: "numeric", timeZone: "UTC" });
+  const bite = dayBite(date);
+  // "It's Friday, November 13. It's World Kindness Day." reads better as one sentence.
+  const opening = /^It's /.test(bite)
+    ? `Good morning, Waynesville! It's ${day}, and it's ${bite.slice(5)}`
+    : `Good morning, Waynesville! It's ${day}.${bite ? ` ${bite}` : ""}`;
+  const greeting = /^\s*Good morning,? Waynesville[.!]?\s*(?:It'?s [^.\n]*?(?:,\s*and this is the Daily Brief from Waynesville News)?\.)?/i;
+  return greeting.test(text) ? text.replace(greeting, opening) : `${opening}\n\n${text.trim()}`;
+}
+const bite = dayBite(date);
+if (bite) console.log(`day bite: ${bite}`);
+let script = cap(withOpening(await buildScript(date), date), cfg.maxChars - reserved);
 if (storiesText) {
   const i = script.lastIndexOf("\n\n");
   script = script.slice(0, i) + "\n\n" + storiesText + script.slice(i);
