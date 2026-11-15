@@ -35,6 +35,13 @@ const stories = defineCollection({
     // episode reads podcastText if given, otherwise the title and dek.
     podcast: z.union([z.boolean(), z.string().regex(/^\d{4}-\d{2}-\d{2}$/)]).optional(),
     podcastText: z.string().optional(),
+    // Breaking news: true = also post this story to Facebook right away, as a
+    // new item in /facebook.xml with a red "Breaking news" graphic
+    // (/cards/breaking/<id>.png). breakingAt is the exact time it broke (ISO
+    // with ET offset, e.g. 2026-11-15T11:50:00-05:00); it is the item's
+    // pubDate and the time on the graphic. Defaults to `date`.
+    breaking: z.boolean().default(false),
+    breakingAt: z.coerce.date().optional(),
   }),
 });
 

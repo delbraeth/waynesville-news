@@ -1,5 +1,8 @@
 // RSS feed made for the Zapier -> Facebook Page automation (see DEPLOY.md §6).
-// Daily briefs only, newest first, each with:
+// Daily briefs, plus breaking-news stories (stories with `breaking: true`),
+// newest first. A breaking story is a new item (its own guid), so Zapier posts
+// it as soon as the site deploys, with a red "Breaking news" graphic
+// (/cards/breaking/<id>.png). Each daily brief has:
 //   - <enclosure> and <media:content>: the day's header graphic (/cards/<date>.png),
 //     for a Zapier "Create Page Photo" step (map the enclosure URL to Photo URL);
 //   - <description>: a ready-to-post plain-text caption: the dek, a direct
@@ -7,7 +10,8 @@
 //   - the brief page itself carries the same graphic as og:image, so a plain
 //     link post shows it too.
 import { getPublicBriefs } from "../lib/briefs.js";
-import { renderBriefCard, cardPath } from "../lib/brief-card.js";
+import { renderBriefCard, cardPath, renderBreakingCard, breakingCardPath, breakingTime } from "../lib/brief-card.js";
+import { getPublishedStories } from "../lib/stories.js";
 import audioIndex from "../data/audio-index.json";
 
 // Zapier posts an item once, the first time it sees it, so an edition is held
@@ -27,6 +31,9 @@ const esc = (s = "") =>
   String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 
 const FEED_ITEMS = 10;
+// Breaking stories stay in the feed this long (Zapier only needs to see an
+// item once; this just keeps the feed from filling up with old alerts).
+const BREAKING_DAYS = 14;
 
 export async function GET(context) {
   const site = String(context.site).replace(/\/$/, "");
@@ -37,8 +44,36 @@ export async function GET(context) {
     .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
     .slice(0, FEED_ITEMS);
 
+  const breaking = (await getPublishedStories())
+    .filter((s) => s.data.breaking && now.getTime() - breakingTime(s).getTime() < BREAKING_DAYS * 86400000)
+    .map((s) => ({ kind: "breaking", s, at: breakingTime(s) }));
+  const entries = [...recent.map((b) => ({ kind: "brief", b, at: b.data.date })), ...breaking]
+    .sort((x, y) => y.at.getTime() - x.at.getTime())
+    .slice(0, FEED_ITEMS);
+
   const items = await Promise.all(
-    recent.map(async (b) => {
+    entries.map(async (entry) => {
+      if (entry.kind === "breaking") {
+        const st = entry.s;
+        const page = `${site}/stories/${st.id}/`;
+        const img = `${site}${breakingCardPath(st.id)}`;
+        const bytes = (await renderBreakingCard(st)).length;
+        const caption = [
+          `🚨 BREAKING: ${st.data.title}`,
+          st.data.dek ?? "",
+          `Read more: ${page}`,
+        ].filter(Boolean).join("\n\n");
+        return `    <item>
+      <title>${esc(`Breaking: ${st.data.title}`)}</title>
+      <link>${esc(page)}</link>
+      <guid isPermaLink="true">${esc(page)}</guid>
+      <pubDate>${entry.at.toUTCString()}</pubDate>
+      <description>${esc(caption)}</description>
+      <enclosure url="${esc(img)}" length="${bytes}" type="image/png" />
+      <media:content url="${esc(img)}" medium="image" type="image/png" width="1200" height="630" />
+    </item>`;
+      }
+      const b = entry.b;
       const page = `${site}/briefs/${b.id}/`;
       const img = `${site}${cardPath(b.id)}`;
       const bytes = (await renderBriefCard(b)).length;
@@ -67,7 +102,7 @@ export async function GET(context) {
     <title>Waynesville News — Daily Brief (for Facebook)</title>
     <link>${site}/</link>
     <atom:link href="${site}/facebook.xml" rel="self" type="application/rss+xml" />
-    <description>The Waynesville Daily Brief, one item per edition, with a header graphic for each day.</description>
+    <description>The Waynesville Daily Brief, one item per edition, with a header graphic for each day, plus breaking news.</description>
     <language>en-us</language>
 ${items.join("\n")}
   </channel>

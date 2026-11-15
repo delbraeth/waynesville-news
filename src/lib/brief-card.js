@@ -163,3 +163,71 @@ export function renderBriefCard(brief) {
 }
 
 export const cardPath = (id) => `/cards/${id}.png`;
+
+// Breaking-news graphic for a story flagged `breaking: true`: same size and
+// fonts as the daily card, with a red "Breaking news" band, the time it broke,
+// the headline and the dek. Used in /facebook.xml and as the story's og:image.
+const timeFmt = new Intl.DateTimeFormat("en-US", {
+  weekday: "short", month: "short", day: "numeric", hour: "numeric", minute: "2-digit", timeZone: "America/New_York",
+});
+export const breakingTime = (story) => story.data.breakingAt ?? story.data.date;
+
+// Keep "7 p.m." / "10 a.m." together on one line.
+const keepTimes = (s = "") => String(s).replace(/(\d) (a\.m\.|p\.m\.)/g, "$1\u00a0$2");
+
+export function breakingCardTree({ title, dek, when }) {
+  title = keepTimes(title);
+  dek = dek && keepTimes(dek);
+  const headline = clip(title, 110);
+  const n = headline.length;
+  const size = n <= 40 ? 84 : n <= 65 ? 74 : n <= 90 ? 64 : 56;
+  return h(
+    "div",
+    { width: CARD_WIDTH, height: CARD_HEIGHT, flexDirection: "column", backgroundColor: COLORS.paper, fontFamily: "Newsreader", color: COLORS.ink },
+    h(
+      "div",
+      { backgroundColor: "#c0201a", color: "#fff", padding: "20px 60px", justifyContent: "space-between", alignItems: "center" },
+      h(
+        "div",
+        { alignItems: "center", fontSize: 44, fontWeight: 600, letterSpacing: 4, textTransform: "uppercase" },
+        h("div", { width: 22, height: 22, borderRadius: 11, backgroundColor: "#fff", marginRight: 18 }),
+        "Breaking news",
+      ),
+      h("div", { fontSize: 30 }, when),
+    ),
+    h(
+      "div",
+      { flexDirection: "column", flexGrow: 1, padding: "40px 60px 0" },
+      h("div", { fontSize: size, fontWeight: 600, lineHeight: 1.06, letterSpacing: -0.5 }, headline),
+      dek
+        ? h("div", { fontSize: 34, color: COLORS.inkSoft, lineHeight: 1.3, marginTop: 26, paddingTop: 20, borderTop: "3px solid #c0201a", width: "100%" }, clip(dek, 170))
+        : null,
+    ),
+    h(
+      "div",
+      { borderTop: `2px solid ${COLORS.rule}`, margin: "0 60px", padding: "16px 0 24px", justifyContent: "space-between", alignItems: "center", fontSize: 30, color: COLORS.muted },
+      h("div", { fontWeight: 600, color: COLORS.ink }, "Waynesville News"),
+      h("div", { fontWeight: 600, color: COLORS.accent }, "waynesville.news"),
+    ),
+  );
+}
+
+const breakingCache = new Map();
+// story: an astro:content entry from the stories collection.
+export function renderBreakingCard(story) {
+  if (!breakingCache.has(story.id)) {
+    breakingCache.set(
+      story.id,
+      (async () => {
+        const svg = await satori(
+          breakingCardTree({ title: story.data.title, dek: story.data.dek, when: timeFmt.format(breakingTime(story)) }),
+          { width: CARD_WIDTH, height: CARD_HEIGHT, fonts: await loadFonts() },
+        );
+        return new Resvg(svg, { fitTo: { mode: "width", value: CARD_WIDTH } }).render().asPng();
+      })(),
+    );
+  }
+  return breakingCache.get(story.id);
+}
+
+export const breakingCardPath = (id) => `/cards/breaking/${id}.png`;

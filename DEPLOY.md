@@ -68,6 +68,14 @@ It carries the last 10 daily briefs, one item per edition, and each item has:
 
 The brief pages also use that graphic as their `og:image`, so a plain link post shows it as well.
 
+**Breaking news.** To push an alert to Facebook between editions, publish a story in
+`src/content/stories/` with `breaking: true` and `breakingAt:` set to the time it broke (ISO with the
+ET offset, e.g. `2026-11-15T11:55:00-05:00`). On the next deploy it appears at the top of
+`/facebook.xml` as a new item (guid = the story URL), so the Zap posts it once, using a red
+"Breaking news" graphic at `/cards/breaking/<story id>.png` (headline, dek and time) and a caption
+that starts "🚨 BREAKING:". Breaking items stay in the feed for 14 days. Don't change a breaking
+story's file name after it posts: a new URL is a new guid, and Zapier would post it again.
+
 Two ways to set up the Zap action:
 
 - **Photo post (biggest image in the feed):** Facebook Pages → *Create Page Photo*. Photo URL = the
