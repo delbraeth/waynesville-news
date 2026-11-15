@@ -2,18 +2,18 @@
   "_note": "Editor-supplied facts for upcoming briefs. scripts/draft-brief.mjs puts each item whose from–until window includes the brief's date into the draft as an editor note under 'This morning in Waynesville'. Facts here came from the editor and are cleared to use as written (attribute them to the named source). Remove items once their window has passed.",
   "items": [
     {
-      "from": "2026-11-13",
-      "until": "2026-11-13",
+      "from": "2026-11-16",
+      "until": "2026-11-16",
       "section": "This morning in Waynesville — LEAD ITEM #1 (editor's instruction)",
-      "text": "Make Spartan football the first lead item: Waynesville plays the Region 20 semifinal at Graham Local (Graham High School, St. Paris) tonight at 7:00 PM, after beating Preble Shawnee 35-13 in Round 2. Confirm the kickoff time and opponent against sports.json and the events calendar; do not predict or assert any result. Link the MaxPreps game page from sports.json. A one-line pointer to Saturday's Fantasy Festival is fine as the closing sentence, but keep the festival as a lesser item today.",
-      "source": "https://www.maxpreps.com/oh/waynesville/waynesville-spartans/"
+      "text": "Make Friday's regional final the first lead item, with as much practical detail as can be verified: Waynesville (beat top seed Graham Local 14-7) plays Bishop Fenwick (6 seed, beat No. 2 Williamsburg 27-13) in the Division V, Region 20 final, Friday, Nov. 20, 7:00 PM. Regional finals are at neutral sites: give the stadium and address only if OHSAA (ohsaa.org) or Wayne Local/Waynesville Athletics has announced it; otherwise say the site has not been announced yet. Tickets are sold online at ohsaa.org/tickets; OHSAA's playoff notice says they go on sale Tuesdays at 10 AM, so confirm the day on ohsaa.org before stating it and include prices only if OHSAA lists them. Mention any fan bus or spirit info only if the school has posted it. Confirm kickoff and opponent against sports.json; link the MaxPreps game page from sports.json. Do not predict a result.",
+      "source": "https://www.ohsaa.org/tickets"
     },
     {
-      "from": "2026-11-14",
-      "until": "2026-11-14",
-      "section": "This morning in Waynesville — LEAD ITEM #1 (editor's instruction)",
-      "text": "Make the Waynesville Fantasy Festival the first lead item: free, 11 AM–8 PM downtown. Use the details in the festival's events.json entry (High Street attractions, Dwarven Beer Garden times: Sean Nos 11 AM & 5 PM, Creep It Real 12:30 & 3:30 PM, Whiskey Witches bourbon tasting 5 PM inside the Villager Pub with preregistration required, Riddles in the Dark 3 PM at the Stone House Tavern, six food trucks) and link the festival map at /images/events/2026-11-14-fantasy-festival-map.png. Do not name individual craft vendors. If sports.json has Friday's Graham result, give it as the second lead item using only that score.",
-      "source": "/images/events/2026-11-14-fantasy-festival-map.png"
+      "from": "2026-11-16",
+      "until": "2026-11-16",
+      "section": "This morning in Waynesville — LEAD ITEM #2 (editor's instruction)",
+      "text": "Second lead item: the North Warren County Transportation Plan online survey closes Tuesday, Nov. 17. Use the details in its events.json entry: it is the last chance to comment on the plan, including options for a new I-75 to I-71 connection (one would follow US 42 and S.R. 73 through Waynesville and Corwin) and priority intersections such as S.R. 73 and US 42 in Waynesville. Link the survey page from that entry and tell readers how long it stays open (through Tuesday).",
+      "source": "https://northwarrencountytransportationplan-burgessniple.hub.arcgis.com/pages/f27bc61005b842439ceb569b82c0b9cf"
     }
   ]
 }
