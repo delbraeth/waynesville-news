@@ -521,7 +521,11 @@
       "venue": "Waynesville Elementary School gym, 659 Dayton Rd, Waynesville",
       "category": "Sports",
       "source": "/images/events/2026-12-02-whs-spirit-clinic.webp",
-      "note": "The Waynesville High School competition cheerleaders teach a cheer, a chant, a band dance and the fight song. Each participant gets a t-shirt to wear for a halftime performance at the varsity boys basketball game on Friday, Dec. 4. Sign-up is by the team's Google form; tap Details for the flyer."
+      "note": "The Waynesville High School competition cheerleaders teach a cheer, a chant, a band dance and the fight song. Each participant gets a t-shirt to wear for a halftime performance at the varsity boys basketball game on Friday, Dec. 4. Sign up online with the team's form; tap Details for the flyer.",
+      "registrationUrl": "https://forms.gle/GC6uu9WedxLyZAku5",
+      "signup": {
+        "required": true
+      }
     }
   ]
 }
