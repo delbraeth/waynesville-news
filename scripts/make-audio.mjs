@@ -15,6 +15,7 @@
 // a skipped day as non-fatal; exits non-zero on real errors.
 import { readFile, writeFile, readdir } from "node:fs/promises";
 import { existsSync } from "node:fs";
+import { dayBite } from "./day-bite.mjs";
 
 const ROOT = new URL("../", import.meta.url);
 const cfg = JSON.parse(await readFile(new URL("src/data/audio.json", ROOT), "utf8"));
@@ -62,7 +63,7 @@ async function buildScript(date) {
 
   const md = await readFile(new URL(`src/content/briefs/${date}.md`, ROOT), "utf8");
   const day = new Date(`${date}T12:00:00Z`).toLocaleDateString("en-US", { weekday: "long", month: "long", day: "numeric", timeZone: "UTC" });
-  const parts = [`Good morning, Waynesville. It's ${day}, and this is the Daily Brief from Waynesville News.`];
+  const parts = [`Good morning, Waynesville! It's ${day}.`];
 
   const today = /\*\*Today:\*\*\s*([^\n]+)/.exec(section(md, "Weather"))?.[1];
   if (today) {
@@ -184,14 +185,75 @@ export function pickSponsor(supporters, date) {
   }
   return null;
 }
+// House spots: on days no supporter has the slot, read one spot from the
+// houseSpots pool in audio.json instead (self-promotion and seasonal public-
+// service reminders). A spot may carry a season window, "from"/"to" as MM-DD
+// (wrapping the new year is fine, e.g. 12-01 to 02-28), and a weight (default 1;
+// give seasonal spots 2-3 so they come up more often in season). The pick is a
+// weighted pseudo-random draw that is fixed per date (a re-record reads the same
+// spot) and skips any spot used in the previous few days while others are
+// eligible. It is worked out day by day from a fixed start date, so every run
+// agrees on the history. Falls back to housePromo when the pool is empty.
+const HOUSE_EPOCH = "2026-01-01";
+const HOUSE_NO_REPEAT_DAYS = 4;
+function inSeason(spot, date) {
+  if (!spot.from && !spot.to) return true;
+  const md = date.slice(5);
+  const from = spot.from || "01-01", to = spot.to || "12-31";
+  return from <= to ? md >= from && md <= to : md >= from || md <= to;
+}
+function dateHash(date) {
+  let h = 2166136261;
+  for (const c of `house-spot:${date}`) h = Math.imul(h ^ c.charCodeAt(0), 16777619);
+  h ^= h >>> 16; h = Math.imul(h, 0x85ebca6b); h ^= h >>> 13; h = Math.imul(h, 0xc2b2ae35); h ^= h >>> 16;
+  return (h >>> 0) / 4294967296;
+}
+function drawHouseSpot(spots, date, recent) {
+  const eligible = spots.filter((s) => s?.id && s?.text && inSeason(s, date));
+  const fresh = eligible.filter((s) => !recent.includes(s.id));
+  const pool = fresh.length ? fresh : eligible;
+  const total = pool.reduce((t, s) => t + (s.weight ?? 1), 0);
+  if (!total) return null;
+  let r = dateHash(date) * total;
+  for (const s of pool) { r -= s.weight ?? 1; if (r < 0) return s; }
+  return pool[pool.length - 1];
+}
+export function pickHouseSpot(spots = [], date) {
+  const recent = [];
+  let pick = null;
+  for (let t = Date.parse(`${HOUSE_EPOCH}T12:00:00Z`), end = Date.parse(`${date}T12:00:00Z`); t <= end; t += 86400000) {
+    pick = drawHouseSpot(spots, new Date(t).toISOString().slice(0, 10), recent);
+    if (pick) { recent.push(pick.id); if (recent.length > HOUSE_NO_REPEAT_DAYS) recent.shift(); }
+  }
+  return pick ?? drawHouseSpot(spots, date, []);
+}
+
 const supporters = JSON.parse(await readFile(new URL("src/data/supporters.json", ROOT), "utf8"));
 const sponsor = pickSponsor(supporters, date);
+const houseSpot = sponsor ? null : pickHouseSpot(cfg.houseSpots, date);
+if (houseSpot) console.log(`house spot: ${houseSpot.id}`);
 const sponsorText = sponsor
   ? forTheEar(`Today's Daily Brief is supported by ${sponsor.name}, ${sponsor.audio.line.replace(/\.?\s*$/, ".")} Learn more at waynesville dot news slash supporters.`)
-  : forTheEar(cfg.housePromo || "");
+  : forTheEar(houseSpot?.text || cfg.housePromo || "");
 const reserved = (sponsorText ? sponsorText.length + 2 : 0) + (storiesText ? storiesText.length + 2 : 0);
 if (reserved > cfg.maxChars - 600) console.log(`warning: flagged stories and sponsor take ${reserved} of ${cfg.maxChars} characters`);
-let script = cap(await buildScript(date), cfg.maxChars - reserved);
+// Opening: "Good morning, Waynesville! It's <day>." then the daily info bite
+// (scripts/day-bite.mjs). Rewrites the older long greeting the daily run may
+// still write ("..., and this is the Daily Brief from Waynesville News."), and
+// adds the opening if a script lacks one.
+export function withOpening(text, date) {
+  const day = new Date(`${date}T12:00:00Z`).toLocaleDateString("en-US", { weekday: "long", month: "long", day: "numeric", timeZone: "UTC" });
+  const bite = dayBite(date);
+  // "It's Friday, November 13. It's World Kindness Day." reads better as one sentence.
+  const opening = /^It's /.test(bite)
+    ? `Good morning, Waynesville! It's ${day}, and it's ${bite.slice(5)}`
+    : `Good morning, Waynesville! It's ${day}.${bite ? ` ${bite}` : ""}`;
+  const greeting = /^\s*Good morning,? Waynesville[.!]?\s*(?:It'?s [^.\n]*?(?:,\s*and this is the Daily Brief from Waynesville News)?\.)?/i;
+  return greeting.test(text) ? text.replace(greeting, opening) : `${opening}\n\n${text.trim()}`;
+}
+const bite = dayBite(date);
+if (bite) console.log(`day bite: ${bite}`);
+let script = cap(withOpening(await buildScript(date), date), cfg.maxChars - reserved);
 if (storiesText) {
   const i = script.lastIndexOf("\n\n");
   script = script.slice(0, i) + "\n\n" + storiesText + script.slice(i);
@@ -281,6 +343,6 @@ await writeFile(out, buf);
 await writeFile(out.replace(/\.mp3$/, ".txt"), script + "\n");
 const kbps = Number(/_(\d+)$/.exec(cfg.outputFormat || "mp3_44100_128")?.[1] || 128);
 const seconds = Math.round((buf.length * 8) / (kbps * 1000));
-const meta = { date, chars: script.length, bytes: buf.length, seconds, model: process.env.ELEVENLABS_MODEL || cfg.modelId, voice: voice.name || voice.id, ...(sponsor ? { sponsor: sponsor.name } : {}), ...(stories.length ? { stories: stories.map((s) => s.slug) } : {}) };
+const meta = { date, chars: script.length, bytes: buf.length, seconds, model: process.env.ELEVENLABS_MODEL || cfg.modelId, voice: voice.name || voice.id, ...(sponsor ? { sponsor: sponsor.name } : {}), ...(houseSpot ? { houseSpot: houseSpot.id } : {}), ...(stories.length ? { stories: stories.map((s) => s.slug) } : {}) };
 await writeFile(out.replace(/\.mp3$/, ".json"), JSON.stringify(meta, null, 2) + "\n");
 console.log(`wrote ${out} (${(buf.length / 1024).toFixed(0)} KB, ~${seconds}s, ${script.length} characters, date ${date})`);
