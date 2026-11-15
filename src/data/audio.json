@@ -147,6 +147,194 @@
       "to": "02-28",
       "weight": 1,
       "text": "When the temperature drops, check on older neighbors and anyone living alone, and bring pets inside on the coldest nights."
+    },
+    {
+      "id": "churches",
+      "text": "Looking for a church home? Service times and contacts for Waynesville congregations are at waynesville dot news slash churches."
+    },
+    {
+      "id": "community-groups",
+      "text": "From the Lions Club to the band boosters, Waynesville's community groups are listed at waynesville dot news slash community. Find one to join, or tell us about yours."
+    },
+    {
+      "id": "visit",
+      "text": "Friends coming to town? Send them to waynesville dot news slash visit for the antique shops, places to eat, Caesar Creek and the trail."
+    },
+    {
+      "id": "government",
+      "text": "Village Council, Wayne Township trustees, the county commissioners: meeting dates, agendas and minutes are all at waynesville dot news slash government."
+    },
+    {
+      "id": "public-safety",
+      "text": "Road work, weather alerts and safety news for our area are gathered at waynesville dot news slash public safety."
+    },
+    {
+      "id": "sports",
+      "text": "Keep up with the Spartans. Scores, schedules and results are at waynesville dot news slash sports."
+    },
+    {
+      "id": "living-here",
+      "text": "New to Waynesville? Trash and recycling, utilities, schools, the library and who to call are all at waynesville dot news slash resources."
+    },
+    {
+      "id": "corrections",
+      "text": "We work to get it right, and when we don't, we fix it in the open. See a mistake? Let us know at waynesville dot news slash corrections."
+    },
+    {
+      "id": "submit-event",
+      "text": "Hosting something in Waynesville? Submit it for the events calendar at waynesville dot news slash events slash submit."
+    },
+    {
+      "id": "weekend-briefs",
+      "text": "The Daily Brief comes out every day, weekends too. Missed one? Every recent edition is at waynesville dot news slash briefs."
+    },
+    {
+      "id": "business-listing",
+      "text": "Own a business in Waynesville? Make sure you're in our free business directory. Check your listing at waynesville dot news slash directory."
+    },
+    {
+      "id": "library-card",
+      "text": "Your Mary L. Cook Public Library card gets you books, movies and programs for all ages. Stop by the library on Old Stage Road, or check its calendar online."
+    },
+    {
+      "id": "small-business-saturday",
+      "from": "11-22",
+      "to": "11-28",
+      "weight": 2,
+      "text": "Small Business Saturday is the Saturday after Thanksgiving. Waynesville's shops and restaurants are a great place to start your holiday shopping."
+    },
+    {
+      "id": "food-pantry",
+      "from": "11-10",
+      "to": "12-31",
+      "weight": 1,
+      "text": "The holidays are a busy time for local food drives and pantries. If you can, give a few cans or an hour of your time. Ways to help are at waynesville dot news slash volunteer."
+    },
+    {
+      "id": "frozen-pipes",
+      "from": "12-15",
+      "to": "02-28",
+      "weight": 1,
+      "text": "On the coldest nights, let faucets on outside walls drip, and open the cabinet doors under the sink to help keep pipes from freezing."
+    },
+    {
+      "id": "shoveling",
+      "from": "12-15",
+      "to": "03-10",
+      "weight": 1,
+      "text": "Shoveling snow is hard work. Take breaks, push rather than lift when you can, and give your neighbor's walk a pass if they could use a hand."
+    },
+    {
+      "id": "new-year-resolution",
+      "from": "12-28",
+      "to": "01-15",
+      "weight": 1,
+      "text": "Looking for a New Year's resolution? Get involved. Waynesville's groups and volunteer needs are at waynesville dot news slash volunteer."
+    },
+    {
+      "id": "smoke-alarms-dst",
+      "from": "03-01",
+      "to": "03-20",
+      "weight": 2,
+      "text": "When you change your clocks, test your smoke alarms too, and swap the batteries if they need it."
+    },
+    {
+      "id": "severe-weather",
+      "from": "03-15",
+      "to": "06-30",
+      "weight": 2,
+      "text": "Severe weather season is here. Know where you'd shelter in a storm, keep your phone's emergency alerts turned on, and have a way to get warnings if the power goes out."
+    },
+    {
+      "id": "flooding",
+      "from": "03-01",
+      "to": "06-15",
+      "weight": 1,
+      "text": "Heavy spring rain can flood low roads fast. If water covers the road, turn around. It takes only a few inches of moving water to sweep a car away."
+    },
+    {
+      "id": "spring-cleanup",
+      "from": "04-01",
+      "to": "05-15",
+      "weight": 1,
+      "text": "Spring cleaning? Check with the village and the township for yard waste and bulk pickup rules before you set it out."
+    },
+    {
+      "id": "heat",
+      "from": "06-15",
+      "to": "09-10",
+      "weight": 2,
+      "text": "On hot days, drink plenty of water, take breaks in the shade, and check on older neighbors. Never leave a child or a pet in a parked car, not even for a minute."
+    },
+    {
+      "id": "water-safety",
+      "from": "05-20",
+      "to": "09-07",
+      "weight": 2,
+      "text": "Heading to Caesar Creek? Swim only in designated areas, and wear a life jacket when you're on a boat. Keep a close eye on kids around water."
+    },
+    {
+      "id": "fireworks",
+      "from": "06-25",
+      "to": "07-06",
+      "weight": 2,
+      "text": "Celebrating the Fourth? Leave the big shows to the pros, keep water handy, and remember that fireworks can frighten pets and some veterans."
+    },
+    {
+      "id": "trail-safety",
+      "from": "05-01",
+      "to": "09-30",
+      "weight": 1,
+      "text": "Sharing the Little Miami Scenic Trail? Call out when you pass, keep to the right, and watch for walkers, runners and kids."
+    },
+    {
+      "id": "ticks",
+      "from": "04-15",
+      "to": "08-31",
+      "weight": 1,
+      "text": "Out in the woods or tall grass? Check yourself, your kids and your pets for ticks when you get home."
+    },
+    {
+      "id": "school-buses",
+      "from": "08-10",
+      "to": "09-15",
+      "weight": 2,
+      "text": "School is back in session. Slow down in school zones, and stop for school buses when their red lights are flashing and the stop arm is out."
+    },
+    {
+      "id": "farm-equipment",
+      "from": "09-15",
+      "to": "11-15",
+      "weight": 1,
+      "text": "It's harvest season. Watch for slow-moving tractors and farm equipment on country roads, and pass only when it's safe."
+    },
+    {
+      "id": "halloween",
+      "from": "10-20",
+      "to": "10-31",
+      "weight": 2,
+      "text": "Trick-or-treaters will be out soon. Drive slowly through neighborhoods, and help kids stay visible with flashlights or reflective tape."
+    },
+    {
+      "id": "fall-back",
+      "from": "10-25",
+      "to": "11-08",
+      "weight": 2,
+      "text": "When the clocks fall back, it gets dark earlier on the drive home. Watch for walkers and kids, and test your smoke alarms while you're changing the clocks."
+    },
+    {
+      "id": "voter-registration",
+      "from": "09-01",
+      "to": "10-05",
+      "weight": 1,
+      "text": "Election Day is coming. Make sure you're registered and your address is up to date at vote ohio dot gov."
+    },
+    {
+      "id": "leaf-season",
+      "from": "10-15",
+      "to": "11-30",
+      "weight": 1,
+      "text": "Raking leaves? Keep them out of the street and storm drains, and check the village and township rules before you burn anything."
     }
   ]
 }
