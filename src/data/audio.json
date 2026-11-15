@@ -1,5 +1,5 @@
 {
-  "_note": "Daily audio brief (ElevenLabs text-to-speech). voiceId is the custom 'Waynesville News' voice. modelId eleven_v4_turbo (chosen by the editor after side-by-side samples): on the 121k-credit plan that is about 550,000 characters a month, so a ~3-minute (3,000-character) daily script uses about a sixth. eleven_v4 is the non-Turbo option at about half the characters. maxChars hard-caps each script. minCreditsLeft: skip the day (don't fail) if fewer credits remain. outputFormat mp3_44100_64 keeps a 3-minute file near 1.4 MB. voiceSettings are passed to ElevenLabs. enabled: the daily-audio workflow records only when true. The script comes from src/content/audio/<date>.txt when the daily run writes one, otherwise it is built from the brief. Recordings are listed in audio-index.json. The API key lives only in the ELEVENLABS_API_KEY repository secret. intro/outro: style A music (warm acoustic guitar and light piano) generated with ElevenLabs music and chosen by the editor; make-audio wraps each recording in them with ffmpeg (skipped if ffmpeg or the files are missing). housePromo: read in the sponsor slot (before the sign-off) on days no supporter has an audio line; set it to \"\" to drop it. Flagging a story for the episode: add podcast: true to a published story's frontmatter (src/content/stories/) to have it read in the next episode within 7 days of its date, once; or podcast: \"YYYY-MM-DD\" for a specific day. It reads the title and dek, or podcastText if given, and room is reserved for it under maxChars so it is never cut. Voice rotation: voices lists the voices (id, name, optional voiceSettings) read in turn, one per day, starting with the first on voiceRotationStart; voiceId stays the default and the fallback if a rotation voice fails. Each episode records its voice in audio-index.json.",
+  "_note": "Daily audio brief (ElevenLabs text-to-speech). voiceId is the custom 'Waynesville News' voice. modelId eleven_v4_turbo (chosen by the editor after side-by-side samples): on the 121k-credit plan that is about 550,000 characters a month, so a ~3-minute (3,000-character) daily script uses about a sixth. eleven_v4 is the non-Turbo option at about half the characters. maxChars hard-caps each script. minCreditsLeft: skip the day (don't fail) if fewer credits remain. outputFormat mp3_44100_64 keeps a 3-minute file near 1.4 MB. voiceSettings are passed to ElevenLabs. enabled: the daily-audio workflow records only when true. The script comes from src/content/audio/<date>.txt when the daily run writes one, otherwise it is built from the brief. Recordings are listed in audio-index.json. The API key lives only in the ELEVENLABS_API_KEY repository secret. intro/outro: style A music (warm acoustic guitar and light piano) generated with ElevenLabs music and chosen by the editor; make-audio wraps each recording in them with ffmpeg (skipped if ffmpeg or the files are missing). houseSpots: on days no supporter has the slot (before the sign-off), one spot from this pool is read instead: self-promotion and seasonal public-service reminders. Fields: id, text (written for the ear, about 30 words; spell out web addresses as \"waynesville dot news slash events\"), optional from/to season window as MM-DD (may wrap the new year) and weight (default 1). The pick is pseudo-random but fixed per date and never repeats the previous day; audio-index.json records it as houseSpot. Facts only: keep safety tips general and well established, no statistics without a source. housePromo is the fallback when no spot is eligible; set it to \"\" to drop it. Flagging a story for the episode: add podcast: true to a published story's frontmatter (src/content/stories/) to have it read in the next episode within 7 days of its date, once; or podcast: \"YYYY-MM-DD\" for a specific day. It reads the title and dek, or podcastText if given, and room is reserved for it under maxChars so it is never cut. Voice rotation: voices lists the voices (id, name, optional voiceSettings) read in turn, one per day, starting with the first on voiceRotationStart; voiceId stays the default and the fallback if a rotation voice fails. Each episode records its voice in audio-index.json.",
   "enabled": true,
   "voiceId": "l12ajs4YORCBWJk3zF1J",
   "voiceName": "Alyson",
@@ -32,5 +32,121 @@
     "spotify": "https://open.spotify.com/show/6U0OBBxTqiczD7wYToSDCl",
     "youtube": "https://www.youtube.com/playlist?list=PLJ74b1i1oB7k"
   },
-  "housePromo": "Waynesville News is free, independent and made right here in town. Want your business to support it, and be mentioned right here? Find out how at waynesville dot news slash supporters."
+  "housePromo": "Waynesville News is free, independent and made right here in town. Want your business to support it, and be mentioned right here? Find out how at waynesville dot news slash supporters.",
+  "houseSpots": [
+    {
+      "id": "supporters",
+      "text": "Waynesville News is free, independent and made right here in town. Want your business to support it, and be mentioned right here? Find out how at waynesville dot news slash supporters.",
+      "weight": 3
+    },
+    {
+      "id": "newsletter",
+      "text": "Like waking up to the Daily Brief? Get it in your inbox every morning, free. Sign up at waynesville dot news."
+    },
+    {
+      "id": "follow-podcast",
+      "text": "Listening on Apple Podcasts or Spotify? Tap follow, and the Daily Brief will be waiting for you every morning. A quick rating helps your neighbors find it, too."
+    },
+    {
+      "id": "share",
+      "text": "Know someone new to Waynesville? Send them the Daily Brief. It's the quickest way to keep up with the village, and it's free at waynesville dot news."
+    },
+    {
+      "id": "events",
+      "text": "Looking for something to do this weekend? Festivals, library programs, school events and more are all in one place at waynesville dot news slash events, with add-to-calendar links."
+    },
+    {
+      "id": "directory",
+      "text": "Shopping local? The business directory at waynesville dot news slash directory lists Waynesville shops, restaurants and services, with hours and phone numbers."
+    },
+    {
+      "id": "volunteer",
+      "text": "Want to help out around town? Local groups post their volunteer needs at waynesville dot news slash volunteer. Your group can post one there, too."
+    },
+    {
+      "id": "tips",
+      "text": "See something happening in Waynesville, Corwin or Wayne Township that your neighbors should know about? Send us a tip at waynesville dot news slash tips."
+    },
+    {
+      "id": "ask-the-brief",
+      "text": "Wondering about a road project or a new building in town? Email the editor with Ask the Brief in the subject line. We answer the best questions right here."
+    },
+    {
+      "id": "holiday-lights",
+      "from": "11-01",
+      "to": "01-06",
+      "weight": 2,
+      "text": "Planning a night out to see the lights? Our Holiday Lights guide lists displays in and around Waynesville, with dates and hours, at waynesville dot news slash holiday lights."
+    },
+    {
+      "id": "holiday-scams",
+      "from": "11-10",
+      "to": "01-10",
+      "weight": 2,
+      "text": "A safety reminder: scammers get busy during the holidays. Be wary of texts and emails about package deliveries, prizes or account problems. Don't click the link. Go straight to the company's own website or app instead."
+    },
+    {
+      "id": "deer",
+      "from": "10-15",
+      "to": "12-31",
+      "weight": 2,
+      "text": "Drive with care: deer are on the move this time of year, especially at dawn and dusk. Slow down on country roads, and if you see one deer, expect more behind it."
+    },
+    {
+      "id": "package-theft",
+      "from": "11-20",
+      "to": "12-31",
+      "weight": 2,
+      "text": "Expecting holiday packages? Track your deliveries, bring them in promptly, or ask a neighbor to grab them if you're away."
+    },
+    {
+      "id": "cooking-fires",
+      "from": "11-15",
+      "to": "11-30",
+      "weight": 2,
+      "text": "A Thanksgiving safety reminder: stay in the kitchen while you're frying, grilling or cooking on the stovetop, and keep a lid nearby to smother a pan fire."
+    },
+    {
+      "id": "tree-fire-safety",
+      "from": "11-25",
+      "to": "01-06",
+      "weight": 2,
+      "text": "Keep the holidays merry and safe: water your Christmas tree every day, keep it away from heat sources, and turn off decorative lights before bed."
+    },
+    {
+      "id": "winter-driving",
+      "from": "12-01",
+      "to": "03-15",
+      "weight": 2,
+      "text": "Winter driving reminder: bridges and overpasses freeze first. Give yourself extra time and extra space on icy mornings, and clear all the snow off your car before you go."
+    },
+    {
+      "id": "space-heaters",
+      "from": "11-01",
+      "to": "03-15",
+      "weight": 2,
+      "text": "Staying warm? Keep space heaters at least three feet from anything that can burn, plug them straight into the wall, and turn them off when you leave the room."
+    },
+    {
+      "id": "carbon-monoxide",
+      "from": "11-01",
+      "to": "03-15",
+      "weight": 1,
+      "text": "With the furnace running, make sure your carbon monoxide alarms work. Test them, change the batteries, and never run a generator or grill inside the house or garage."
+    },
+    {
+      "id": "school-closings",
+      "from": "11-15",
+      "to": "03-15",
+      "weight": 1,
+      "text": "When winter weather hits, we post Wayne Local delays and closings as soon as the district announces them. Check the schools page at waynesville dot news slash schools."
+    },
+    {
+      "id": "check-neighbors",
+      "from": "12-01",
+      "to": "02-28",
+      "weight": 1,
+      "text": "When the temperature drops, check on older neighbors and anyone living alone, and bring pets inside on the coldest nights."
+    }
+  ]
 }
