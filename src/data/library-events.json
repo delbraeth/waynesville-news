@@ -1,19 +1,7 @@
 {
   "_note": "Mary L. Cook Public Library — upcoming programs from the library's WhoFi event calendar (https://marylcook-main-oh.whofi.com/calendar/full). \"items\": next 14 days, for the daily brief (dateISO is Eastern wall-clock marked Z). \"calendar\": next 45 days for the events calendar, real offsets, with sign-up details read from each program's page (scripts/lib/signup.mjs). Canceled events and closures excluded.",
-  "updated": "2026-11-14T11:42:18.770Z",
+  "updated": "2026-11-15T11:42:24.935Z",
   "items": [
-    {
-      "title": "Rootfinders",
-      "dateISO": "2026-11-14T10:00:00Z",
-      "dateLabel": "Sat · Nov 14, 10:00 AM",
-      "link": "https://marylcook-main-oh.whofi.com/calendar/event/356791/"
-    },
-    {
-      "title": "The Art of Living Talk Series with Brother Brian",
-      "dateISO": "2026-11-14T10:00:00Z",
-      "dateLabel": "Sat · Nov 14, 10:00 AM",
-      "link": "https://marylcook-main-oh.whofi.com/calendar/event/356132/"
-    },
     {
       "title": "Interactive Movie Kit Pick up: Cloudy with a Chance of Meatballs",
       "dateISO": "2026-11-16T09:00:00Z",
@@ -49,26 +37,21 @@
       "dateISO": "2026-11-17T16:00:00Z",
       "dateLabel": "Tue · Nov 17, 4:00 PM",
       "link": "https://marylcook-main-oh.whofi.com/calendar/event/354849/"
+    },
+    {
+      "title": "Genre Exploration Book Club Meeting",
+      "dateISO": "2026-11-17T17:30:00Z",
+      "dateLabel": "Tue · Nov 17, 5:30 PM",
+      "link": "https://marylcook-main-oh.whofi.com/calendar/event/354866/"
+    },
+    {
+      "title": "Library Regular Board Meeting",
+      "dateISO": "2026-11-17T18:30:00Z",
+      "dateLabel": "Tue · Nov 17, 6:30 PM",
+      "link": "https://marylcook-main-oh.whofi.com/calendar/event/354864/"
     }
   ],
   "calendar": [
-    {
-      "title": "Rootfinders",
-      "dateISO": "2026-11-14T10:00:00-05:00",
-      "endISO": "2026-11-14T13:00:00-05:00",
-      "dateLabel": "Sat, Nov 14 · 10:00 AM",
-      "link": "https://marylcook-main-oh.whofi.com/calendar/event/356791/",
-      "signup": {
-        "required": false
-      }
-    },
-    {
-      "title": "The Art of Living Talk Series with Brother Brian",
-      "dateISO": "2026-11-14T10:00:00-05:00",
-      "endISO": "2026-11-14T11:00:00-05:00",
-      "dateLabel": "Sat, Nov 14 · 10:00 AM",
-      "link": "https://marylcook-main-oh.whofi.com/calendar/event/356132/"
-    },
     {
       "title": "Interactive Movie Kit Pick up: Cloudy with a Chance of Meatballs",
       "dateISO": "2026-11-16T09:00:00-05:00",
@@ -477,6 +460,16 @@
       "endISO": "2026-12-22T18:30:00-05:00",
       "dateLabel": "Tue, Dec 22 · 5:30 PM",
       "link": "https://marylcook-main-oh.whofi.com/calendar/event/358130/",
+      "signup": {
+        "required": false
+      }
+    },
+    {
+      "title": "DIY New Year's Eve Headband Drop-in Program",
+      "dateISO": "2026-12-29T17:00:00-05:00",
+      "endISO": "2026-12-29T18:45:00-05:00",
+      "dateLabel": "Tue, Dec 29 · 5:00 PM",
+      "link": "https://marylcook-main-oh.whofi.com/calendar/event/357927/",
       "signup": {
         "required": false
       }

@@ -1,6 +1,6 @@
 {
   "_note": "Waynesville Spartans schedule + results (MaxPreps), past 7 days / next 7 days. Scraped directly from each sport's own schedule page (football, volleyball, soccer -- varsity + JV), not the school hub page, which has been observed to silently omit some contests. Scores and matchups reproduced verbatim from MaxPreps' own markup; each links to their game page. Start times, \"scrimmage\" and \"canceled\" come from the school's athletics site (waynesvillesports.com) when it lists the game; \"maxprepsTime\" is MaxPreps' time when they differ.",
-  "updated": "2026-11-14T11:42:05.342Z",
+  "updated": "2026-11-15T11:42:12.243Z",
   "results": [
     {
       "dateISO": "2026-11-13T19:00:00",
@@ -15,18 +15,6 @@
     }
   ],
   "upcoming": [
-    {
-      "dateISO": "2026-11-14T10:00:00",
-      "sport": "Boys Basketball",
-      "level": "JV",
-      "opponent": "Loveland",
-      "wayneScore": null,
-      "opponentScore": null,
-      "result": null,
-      "isHome": true,
-      "link": "https://www.maxpreps.com/oh/basketball/game/loveland-vs-waynesville/jv/11-14-2026/?c=37241a9f-2ae1-4f82-8a69-f73340eb3d41",
-      "scrimmage": true
-    },
     {
       "dateISO": "2026-11-17T18:00:00",
       "sport": "Girls Basketball",

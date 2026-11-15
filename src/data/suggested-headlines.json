@@ -1,20 +1,18 @@
 {
   "_note": "Candidate local headlines (Google News RSS). Published as a quoted headline (or, when available, a short publisher-written excerpt) + source + link; never reproduce article body text.",
-  "updated": "2026-11-14T11:41:55.224Z",
+  "updated": "2026-11-15T11:42:02.964Z",
   "items": [
+    {
+      "title": "Pheasant Hunting in Ohio",
+      "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTE9pVWx6M0tpVmVjTGM4elU3dmVtUDREb0J1NTFCUkZLTlFVdDlWS0RqNDl6RmlpdXpacVZMX05QTjNtUGxReHVHWGtYQWlXWnlXVlFmVlZBYzA3dHMxVW5ZRmdJczBYZ3NTMXVfWURFUnhPWjlQTVo2MndVemo?oc=5",
+      "source": "Warren County Post",
+      "date": "Sun, 15 Nov 2026 04:08:50 GMT"
+    },
     {
       "title": "Cincinnati’s Night of Lights moves to Warren County Fairgrounds",
       "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNQVNHd0FKLUxLdldxSTlNT0h2blRzbGNyYUJhODBoS1VFZTB2MjB3anZ4YVVROWU3SUtDc3drcEdHaTRHM1pvQUxydjlfdDNSQ1FQNzcwamR2SkZfVnQxUVlUdFFnOEhNbTc5eE5vZjF4QlJWQWxXTi1ESWFLRHZuY3FIMS10Sm1pRGRoWmNMbEM5djVC?oc=5",
       "source": "FOX19 | Cincinnati",
-      "date": "Thu, 12 Nov 2026 16:44:00 GMT",
-      "sourceUrl": "https://www.fox19.com/2026/11/12/cincinnatis-night-lights-moves-warren-county-fairgrounds/",
-      "excerpt": "It will feature more than two million lights synchronized to holiday music."
-    },
-    {
-      "title": "ODNR graduates 3 K9 teams in Warren County",
-      "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOc0dGZ01DS21VeWVCZ0R5M0dXSlNxbkpQS1UwaHdHSzlfeV81ekhnZVVPN3NHV1AzaFZzdl9MLVJBYUhzR2dWNVJzSlJjUkkxNVN4SnQ0TVp2cllVemVwaFF2T3VsUnAwY1AzZXpyODNYblBGX1R0VTRWTWJqa2p2MkctcmxZTUJuSGxSWEJUOUlwcWVB?oc=5",
-      "source": "Dayton Daily News",
-      "date": "Wed, 11 Nov 2026 13:18:37 GMT"
+      "date": "Thu, 12 Nov 2026 16:44:00 GMT"
     },
     {
       "title": "Sentencing to be held Tuesday for Warren County couple convicted of sex crimes",
@@ -23,16 +21,18 @@
       "date": "Tue, 10 Nov 2026 21:42:00 GMT"
     },
     {
+      "title": "Holiday Magic Across Warren County: Your Guide to Christmas Festivals, Parades and Tree Lightings",
+      "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNYzRITlZzZ3JsemxaUFZfUnJJZk43YU9uSWZDcnVYalBRaW5xVnJETXZyQk1CdmNKSnA3aTh3bUJCZlpJYUJJS19IOW95Z3dHOE5na2ZudEdhaU9IQXlMVVR2N2pyX3NDNW00WEQ3b2NwaXhrbWRuN2NSNFgwY1ZRVHNWbmxaS2lWMk9kbTZzcUEwTndKcll0NWU0WnlrX3FKdDFJMG9CTkh3WUgxMTJ5eHJHSWVNLXNreFZrX2toeDdEX09XV0Zj?oc=5",
+      "source": "Warren County Post",
+      "date": "Sun, 15 Nov 2026 00:21:36 GMT",
+      "sourceUrl": "https://warrencountypost.com/g/lebanon-oh/n/398213/holiday-magic-across-warren-county-your-guide-christmas-festivals-parades-and",
+      "excerpt": "From hometown parades and festive markets to dazzling light displays and ceremonies honoring veterans, communities throughout Warren County are preparing to celebrate the season."
+    },
+    {
       "title": "Semi driver, passenger seriously injured in crash resulting in hazardous spill",
       "link": "https://news.google.com/rss/articles/CBMi2gJBVV95cUxObHpYR3JCYTM4eEZlSlJEUlJqMVRMQkhBOUltTmtJaHpHT0xfV0FjS09OSkNDNUt5RlJSSXpSNl9TRWlhSUR5Y3lyN2RIQ1NDQ2lmMnFnX3I5Nk1Na0Q0a0QwenZoMTRNZVZXRkJsWFBKa1dnajg1ZndVTjNUS2hxUmx0aFp5S3YxVVhMV3FQVlVTaEtOZjRTdlVHVmlIMkJBM29XQVBJMzM4NnNYVmtkMC1vdmtNa3Q3eXVSTUwwVmJ6dlZDbU9VdjN6Ymp5X0FxQmowRmpTSWc3TGplR2htZm1XTmhjMHMtWFJiU2lXczhtOTk2ZkVYNGhCd09kR3hlMUp2X3hORXFoZDFaNGg5QV8xOWFaVHV1cGVxSWc3QXRfMGJva3QzVmM0WFkyYkllN2xCQjFndDhyM2pDb0xoeXVrZlR2eHFRZ1dMSGR6cENvdC1FZ0hoU0hB?oc=5",
       "source": "WKRC",
       "date": "Thu, 12 Nov 2026 05:31:51 GMT"
-    },
-    {
-      "title": "Popular holiday drive-thru light show finds new home in Warren County",
-      "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNZmhhQTVHUVowWWNNbEUyQWo1Y2RtTlpVeTRKZXZlVXlQX2hodnBnd2JtX2RxRk96QnU2RDl0cFFCSm51UmZtTFY3YlZFcGpXZmNod2VyS1JVUGlNZW1XZGQ4Yk5uNFZZTHFpQXQ0ZzNpdUEyWXdXa2xLSXZBOHJqM1cwbUhMVVZSNWJJTWZ3?oc=5",
-      "source": "WLWT",
-      "date": "Mon, 09 Nov 2026 15:26:00 GMT"
     },
     {
       "title": "Domestic dispute triggers Warren County shelter-in-place warning",
@@ -41,16 +41,18 @@
       "date": "Thu, 12 Nov 2026 16:38:52 GMT"
     },
     {
-      "title": "Cincinnati's Nights of Lights holiday drive-thru display moves to a new location",
-      "link": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxPQlNJRzdpaEd5NHdCcXdZQmZOV05aMnJPaGt0UEJ6blNIckFEN2dWeV9OUnhuNGNidWNyNC1KZWJYZm5mTEJRamt2Q2xRWXBpaDNreDFxM0MzS1B0N3doTjRzVVVOajVqa0R1c0Fsc2ZwMUtZaTRlUFAtb0Z1cjFRZS1pVWktNDJzSEdTTkFtVnNieklpS3lWcXJhejlwbFVZMjYwaWxyeGlVdkVOLTlFNlpXUGlaaVQ2aEZiVGhaa1hzYVBRYmY0eVY2VUtKVllOQklnckZNN3liYS1XNGNoSVlzRDFGUjNuTm9sUHJ3?oc=5",
-      "source": "WKRC",
-      "date": "Mon, 09 Nov 2026 15:28:11 GMT"
+      "title": "From Proposal to Pavement: Warren County Engineer Explains How Transportation Projects Move Forward",
+      "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPUmoybklqSnRBNW1nNXhMdlBLQmxRYVJ1bEs3WXZSbDNMY1k5OHdDeC1uTXgtWHQxQ2NGcmpOMUpMaWl1WUJ6b3VhMk5HNE4tWU9iY3VRT0tuV3h4TUQ4M0g1czBkSHVicnZvRDRLbllyNmMwUm1IUzlzcDZENHpiZnFtd1BLclkzVFlRdUlRSlZBdDNnVEJHZ0NnNDlyYzNiQ3Zpenk5cDFSaU9QWXk2d25SQjl5SHNEdG5WajFCdmNKREhfNEZz?oc=5",
+      "source": "Warren County Post",
+      "date": "Sat, 14 Nov 2026 20:48:03 GMT",
+      "sourceUrl": "https://warrencountypost.com/g/lebanon-oh/n/398228/proposal-pavement-warren-county-engineer-explains-how-transportation-projects",
+      "excerpt": "North Warren County Transportation Plan remains in its first phase, with no routes selected or construction funding secured"
     },
     {
-      "title": "Warren County couple sentenced to prison in disturbing sex crimes case",
-      "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOMzRmLXBGVmFVb05Kc3hQNXM0TktlcGlUaFd1TWRnQ2p3UGVkYmFxNkpoYXdwWDNNQ3h6X3EyME1mMGxLdVZabl9BYUlVT0lNMVJ4V3F2bmpFZTJmTlkzaHIxckNFRlEyOWRrdHZ6cmVudnZFN25UdU13OHJpMldsaW45UFliUDVmYUJRRll4Mnh6VVR5MzFDTHptTG5rVmxtV0d4elF2N1h3UVE?oc=5",
-      "source": "WCPO 9 News",
-      "date": "Wed, 11 Nov 2026 04:01:57 GMT"
+      "title": "Popular holiday drive-thru light show finds new home in Warren County",
+      "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNZmhhQTVHUVowWWNNbEUyQWo1Y2RtTlpVeTRKZXZlVXlQX2hodnBnd2JtX2RxRk96QnU2RDl0cFFCSm51UmZtTFY3YlZFcGpXZmNod2VyS1JVUGlNZW1XZGQ4Yk5uNFZZTHFpQXQ0ZzNpdUEyWXdXa2xLSXZBOHJqM1cwbUhMVVZSNWJJTWZ3?oc=5",
+      "source": "WLWT",
+      "date": "Mon, 09 Nov 2026 15:26:00 GMT"
     }
   ]
 }

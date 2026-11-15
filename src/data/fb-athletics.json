@@ -1,7 +1,21 @@
 {
   "_note": "Recent Waynesville Spartans Athletics Facebook posts via rss.app bridge. Title + link + short excerpt; the athletic department's own words. Fail-safe: kept from last run if the bridge is down.",
-  "updated": "2026-11-14T11:40:47.786Z",
+  "updated": "2026-11-15T11:41:18.356Z",
   "items": [
+    {
+      "title": "The Spartans are moving on! #SPARTANPRDE…",
+      "link": "https://www.facebook.com/reel/2226841014928884/",
+      "date": "Sat, 14 Nov 2026 13:41:43 GMT",
+      "dateLabel": "Sat, Nov 14",
+      "excerpt": ""
+    },
+    {
+      "title": "🟠⚫️ Waynesville beat Graham Local 14-7 to advance in the Division V playoffs. The Spartans will face Fenwick in a…",
+      "link": "https://www.facebook.com/waynesvilleAth/posts/pfbid0Y9suBVMNk6QF15gNEazVXVMwncmyn3dsKQ8BVRK5xBhW23h4iKyr5NsP7GGjyjKgl",
+      "date": "Sat, 14 Nov 2026 12:36:49 GMT",
+      "dateLabel": "Sat, Nov 14",
+      "excerpt": "regional final next Friday 📸 Kyle Hendrix"
+    },
     {
       "title": "#SPARTANPRIDE. REGIONAL FINALS HERE WE COME!On to the Regional Final!",
       "link": "https://www.facebook.com/waynesvilleAth/posts/pfbid0xRGXx2ytocMdNCDFvSRybTQXS554EEk8NCjw28euv8ZJr4VnbSGKXfg25cVs7ratl",
@@ -43,20 +57,6 @@
       "date": "Sun, 08 Nov 2026 15:59:44 GMT",
       "dateLabel": "Sun, Nov 8",
       "excerpt": "Night at 7:00 PM. Please sign up by Wednesday at Noon if interested!"
-    },
-    {
-      "title": "CONGRATULATIONS to our HS Boys Cross Country Team who finished 7th overall out of Division III! #SPARTANPRIDE…",
-      "link": "https://www.facebook.com/waynesvilleAth/posts/pfbid02d1xyC41mmmuAN5F5ajMbrKPp6wbR69rwrKmwntRxKuJLoGHTGp3CT7kZuBMg18vLl",
-      "date": "Sat, 07 Nov 2026 21:42:49 GMT",
-      "dateLabel": "Sat, Nov 7",
-      "excerpt": ""
-    },
-    {
-      "title": "Some more photos from last night. #SPARTANPRIDEGood job Waynesville with the dominating Win over Preble Shawnee!!! The R...",
-      "link": "https://www.facebook.com/waynesvilleAth/posts/pfbid0rappLG92GVcqgEWkvKFab55V97z4XpttkuUVSReYxs28eYNNFZacE6aMcJWwTkKal",
-      "date": "Sat, 07 Nov 2026 21:18:11 GMT",
-      "dateLabel": "Sat, Nov 7",
-      "excerpt": "Some more photos from last night. #SPARTANPRIDE Good job Waynesville with the dominating Win over Preble Shawnee!!! The Report Ohio"
     }
   ]
 }

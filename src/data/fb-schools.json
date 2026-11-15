@@ -1,7 +1,14 @@
 {
   "_note": "Recent Wayne Local Schools Facebook posts via rss.app bridge. Title + link + short excerpt; the district's own words. Fail-safe: kept from last run if the bridge is down.",
-  "updated": "2026-11-14T11:40:47.188Z",
+  "updated": "2026-11-15T11:41:17.713Z",
   "items": [
+    {
+      "title": "Students in Mrs. Baker’s class got some hands-on job training while preparing Chick-fil-A lunches for WMS and WHS…",
+      "link": "https://www.facebook.com/waynelocalschools/posts/pfbid0Vs5Xh3bRrAiZea5ihTJy7msi9hpEM7crGTkkmsq5WHSQkkzG8Rdv8j2RBZcrbRndl",
+      "date": "Sat, 14 Nov 2026 15:10:59 GMT",
+      "dateLabel": "Sat, Nov 14",
+      "excerpt": "teachers! From collecting orders and counting supplies to assembling boxes, following instructions, and checking each order for accuracy, students practiced valuable workplace skills like organization, attention to detail, teamwork, and completing tasks independently. A big thank you to…"
+    },
     {
       "title": "Congratulations, Spartans! #SPARTANPRIDEOn to the Regional Final!",
       "link": "https://www.facebook.com/waynelocalschools/posts/pfbid023eSG3smMoFzwepjGzkkfWypV3uFq5R1WDYWM6KQPUU1gPzpU1C1QM7qGXUE6a4jel",
@@ -50,13 +57,6 @@
       "date": "Thu, 12 Nov 2026 14:09:28 GMT",
       "dateLabel": "Thu, Nov 12",
       "excerpt": "Calling ALL Spartans! This Friday at 4 p.m. join us for the WHS Football community send-off! Waynesville Football | All-Village Spartan Send Off Let’s line Lytle Road this Friday, Nov. 13, and give our Spartans a big send-off as they head to St. Paris Graham for their third regional semifinal in…"
-    },
-    {
-      "title": "A little card can deliver a BIG thank you. We learned that today during our Veterans Day Celebration, thanks to our…",
-      "link": "https://www.facebook.com/waynelocalschools/posts/pfbid0ffBtjcojht2jAo7S92PDfwJFodAu7LaeX2vuPYT3VgEW9i3uaESuN5CBgAvPTk7Dl",
-      "date": "Thu, 12 Nov 2026 00:30:06 GMT",
-      "dateLabel": "Wed, Nov 11",
-      "excerpt": "guest speakers, Mr. Stamper and Mr. Shane. Our WES kindergartners have been busy over the past two weeks selecting and writing special thank you cards for our veterans! Their thoughtful messages will be shared with the Warren County Veterans Services Commission, which will deliver the cards to…"
     }
   ]
 }
