@@ -57,5 +57,15 @@
       "verified": "2026-11-07"
     }
   ],
-  "needs": []
+  "needs": [
+    {
+      "title": "Umpire Manager for the 2027 baseball and softball season",
+      "org": "Waynesville Baseball Softball Association",
+      "what": "The association needs a parent, community member or volunteer to serve as Umpire Manager for 2027. It says 2027 registration will not open until the role is filled.",
+      "how": "Email waynesvillebaseballandsoftball@gmail.com to volunteer or learn more.",
+      "link": "https://clubs.bluesombrero.com/waynesvillebandsb",
+      "until": "2026-12-31",
+      "source": "Waynesville Baseball & Softball's volunteer call (social post, Nov. 2026), sent in by the editor 2026-11-15"
+    }
+  ]
 }
