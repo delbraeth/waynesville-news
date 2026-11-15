@@ -1,5 +1,5 @@
 {
-  "_note": "Volunteer board (/volunteer/). Hand-kept. \"ongoing\": standing ways to help. An entry with \"org\" names a group in organizations.json and shows that group's howToHelp line, linked to its Community listing; an entry without \"org\" carries its own name, what, link, source and verified date. Give each a \"kind\": hands-on, donate, youth or seniors. \"needs\": specific, dated asks ({title, org, what, how, link, until: YYYY-MM-DD, source}); each hides itself after its \"until\" date. Events in events.json tagged \"volunteer\" also appear under Current asks until they end. Public organizational contacts only; never name volunteers or children.",
+  "_note": "Volunteer board (/volunteer/). Hand-kept. \"ongoing\": standing ways to help. An entry with \"org\" names a group in organizations.json and shows that group's howToHelp line, linked to its Community listing; an entry without \"org\" carries its own name, what, link, source and verified date. Give each a \"kind\": hands-on, donate, youth or seniors. \"needs\": specific, dated asks ({title, org, what, how, link, until: YYYY-MM-DD, source}); each hides itself after its \"until\" date. Events in events.json tagged \"volunteer\" also appear under Current asks until they end. Public organizational contacts first. An officer may be named as a contact when the group itself publishes the name for that ask (editor's rule, 2026-11-15); never name other volunteers or any child.",
   "updated": "2026-11-11",
   "ongoing": [
     {
@@ -57,5 +57,15 @@
       "verified": "2026-11-07"
     }
   ],
-  "needs": []
+  "needs": [
+    {
+      "title": "Umpire Manager for the 2027 baseball and softball season",
+      "org": "Waynesville Baseball Softball Association",
+      "what": "The association needs a parent, community member or volunteer to serve as Umpire Manager for 2027. It says 2027 registration will not open until the role is filled.",
+      "how": "Email waynesvillebaseballandsoftball@gmail.com, or reach out to Board President Allen Cline.",
+      "link": "https://clubs.bluesombrero.com/waynesvillebandsb",
+      "until": "2026-12-31",
+      "source": "Waynesville Baseball & Softball's volunteer call (social post, Nov. 2026), sent in by the editor 2026-11-15"
+    }
+  ]
 }
