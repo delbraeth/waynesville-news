@@ -1735,6 +1735,24 @@
       },
       "about": "Family farm in Waynesville raising beef and pork, sold as custom shares processed by local butchers. Individual cuts are also sold through participating shops; check the farm's website for details.",
       "source": "https://therobinsonranch.org/"
+    },
+    {
+      "name": "Sun Sprouts Cafe",
+      "sections": [
+        "food"
+      ],
+      "kinds": [
+        "Cafe",
+        "Coffee"
+      ],
+      "location": "On the Little Miami Bike Path, Corwin (Waynesville, OH 45068)",
+      "phone": "513-855-1075",
+      "social": {
+        "facebook": "https://www.facebook.com/profile.php?id=61558194279209",
+        "instagram": "https://www.instagram.com/sunsproutscafe"
+      },
+      "about": "Cafe right on the Little Miami Bike Path in Corwin, with dishes made from scratch with fresh ingredients: organic coffee, smoothies, soups, avocado toast, paninis, grain bowls, popsicles and more.",
+      "source": "https://www.facebook.com/profile.php?id=61558194279209"
     }
   ]
 }
