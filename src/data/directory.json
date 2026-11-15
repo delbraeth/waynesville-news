@@ -1,6 +1,6 @@
 {
   "_note": "Local business directory. Built by scripts/fetch-directory.mjs from the Waynesville Area Chamber of Commerce's public member directory (name, location, phone, website, and the Chamber's description, as published) plus hand-added listings in directory-manual.json. Contact names, emails and hours are deliberately not copied from the Chamber; an hours line appears only when the owner supplied it (hours + hoursChecked in directory-manual.json). Do not edit by hand — edit directory-manual.json and re-run `npm run refresh:directory` (or `npm run refresh:directory -- --manual-only` to merge manual edits without re-reading the Chamber site).",
-  "updated": "2026-11-11T18:22:22.639Z",
+  "updated": "2026-11-15T14:07:26.534Z",
   "sections": [
     {
       "id": "food",
@@ -3392,6 +3392,28 @@
       "source": "https://restaurants.subway.com/united-states/oh/waynesville/354-s-main-st (Subway's own location page, checked 2026-11-07)",
       "website": "https://restaurants.subway.com/united-states/oh/waynesville/354-s-main-st",
       "about": "Sandwich chain restaurant on South Main Street.",
+      "local": true,
+      "from": "manual"
+    },
+    {
+      "id": "manual-sunsproutscafe",
+      "name": "Sun Sprouts Cafe",
+      "location": "On the Little Miami Bike Path, Corwin (Waynesville, OH 45068)",
+      "phone": "513-855-1075",
+      "sections": [
+        "food"
+      ],
+      "kinds": [
+        "Cafe",
+        "Coffee"
+      ],
+      "source": "https://www.facebook.com/profile.php?id=61558194279209",
+      "website": "",
+      "social": {
+        "facebook": "https://www.facebook.com/profile.php?id=61558194279209",
+        "instagram": "https://www.instagram.com/sunsproutscafe"
+      },
+      "about": "Cafe right on the Little Miami Bike Path in Corwin, with dishes made from scratch with fresh ingredients: organic coffee, smoothies, soups, avocado toast, paninis, grain bowls, popsicles and more.",
       "local": true,
       "from": "manual"
     },
