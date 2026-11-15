@@ -3,6 +3,7 @@ import Base from "../../layouts/Base.astro";
 import SubscribeBox from "../../components/SubscribeBox.astro";
 import { getCollection, render } from "astro:content";
 import { newsArticle } from "../../lib/structuredData.js";
+import { breakingCardPath } from "../../lib/brief-card.js";
 
 export async function getStaticPaths() {
   const stories = (await getCollection("stories")).filter((s) => s.data.published);
@@ -12,6 +13,8 @@ export async function getStaticPaths() {
 const { entry } = Astro.props;
 const { Content } = await render(entry);
 const d = entry.data;
+// Breaking stories without their own image share the breaking-news graphic.
+const shareImage = d.image ?? (d.breaking ? breakingCardPath(entry.id) : undefined);
 const dateFmt = new Intl.DateTimeFormat("en-US", { month: "long", day: "numeric", year: "numeric", timeZone: "UTC" });
 import correctionsData from "../../data/corrections.json";
 const corrections = correctionsData.items.filter((c) => c.page === `/stories/${entry.id}/`);
@@ -19,13 +22,13 @@ const corrections = correctionsData.items.filter((c) => c.page === `/stories/${e
 <Base
   title={`${d.title} · Waynesville News`}
   description={d.dek}
-  image={d.image}
+  image={shareImage}
   imageAlt={d.imageAlt}
   ogType="article"
   published={d.date}
   dateLine={dateFmt.format(d.date)}
   showInfoBar={false}
-  jsonLd={newsArticle({ title: d.title, dek: d.dek, date: d.date, updated: d.updated, url: Astro.url.pathname, image: d.image })}
+  jsonLd={newsArticle({ title: d.title, dek: d.dek, date: d.date, updated: d.updated, url: Astro.url.pathname, image: shareImage })}
 >
   <article class="reading story">
     <p class="kicker">{d.section ?? "Story"}</p>
