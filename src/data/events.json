@@ -526,6 +526,17 @@
       "signup": {
         "required": true
       }
+    },
+    {
+      "title": "Nationwide Emergency Alert System test (TV and radio)",
+      "dateISO": "2026-11-17T14:20:00-05:00",
+      "endISO": "2026-11-17T14:50:00-05:00",
+      "dateLabel": "Tue, Nov 17 · 2:20–2:50 PM",
+      "venue": "TV and radio, nationwide (including Waynesville)",
+      "category": "Government",
+      "source": "https://www.fema.gov/press-release/20260916/fema-and-fcc-schedule-2026-nationwide-test-emergency-alert-system-november",
+      "note": "FEMA and the FCC will test the Emergency Alert System on broadcast and cable TV and radio. It will not go to cellphones. The message will say it is only a test, and no action is needed. If severe weather or a real emergency gets in the way, the backup date is Thursday, Dec. 3.",
+      "local": true
     }
   ]
 }
