@@ -37,6 +37,51 @@ function easter(y) {
 
 const thanksgiving = (y) => nthWeekday(y, 11, 4, 4);
 
+// Equinoxes and solstices: Meeus, Astronomical Algorithms ch. 27 (mean
+// instant for 2000-3000 plus the 24 periodic terms), good to about a minute.
+// Returns a Date (UTC), after subtracting Delta T (TT - UTC, about 69 s in the 2020s).
+const SEASON_TERMS = [
+  [485, 324.96, 1934.136], [203, 337.23, 32964.467], [199, 342.08, 20.186], [182, 27.85, 445267.112],
+  [156, 73.14, 45036.886], [136, 171.52, 22518.443], [77, 222.54, 65928.934], [74, 296.72, 3034.906],
+  [70, 243.58, 9037.513], [58, 119.81, 33718.147], [52, 297.17, 150.678], [50, 21.02, 2281.226],
+  [45, 247.54, 29929.562], [44, 325.15, 31555.956], [29, 60.93, 4443.417], [18, 155.12, 67555.328],
+  [17, 288.79, 4562.452], [16, 198.04, 62894.029], [14, 199.76, 31436.921], [12, 95.39, 14577.848],
+  [12, 287.11, 31931.756], [12, 320.81, 34777.259], [9, 227.73, 1222.114], [8, 15.45, 16859.074],
+];
+function seasonStart(y, k) { // k: 0 March equinox, 1 June solstice, 2 September equinox, 3 December solstice
+  const Y = (y - 2000) / 1000;
+  const jde0 = [
+    2451623.80984 + 365242.37404 * Y + 0.05169 * Y ** 2 - 0.00411 * Y ** 3 - 0.00057 * Y ** 4,
+    2451716.56767 + 365241.62603 * Y + 0.00325 * Y ** 2 + 0.00888 * Y ** 3 - 0.0003 * Y ** 4,
+    2451810.21715 + 365242.01767 * Y - 0.11575 * Y ** 2 + 0.00337 * Y ** 3 + 0.00078 * Y ** 4,
+    2451900.05952 + 365242.74049 * Y - 0.06223 * Y ** 2 - 0.00823 * Y ** 3 + 0.00032 * Y ** 4,
+  ][k];
+  const rad = Math.PI / 180;
+  const T = (jde0 - 2451545) / 36525;
+  const W = (35999.373 * T - 2.47) * rad;
+  const dL = 1 + 0.0334 * Math.cos(W) + 0.0007 * Math.cos(2 * W);
+  const S = SEASON_TERMS.reduce((sum, [A, B, C]) => sum + A * Math.cos((B + C * T) * rad), 0);
+  const jde = jde0 + (0.00001 * S) / dL;
+  const DELTA_T_SECONDS = 69;
+  return new Date((jde - 2440587.5) * 86400000 - DELTA_T_SECONDS * 1000);
+}
+const etDay = (d) => d.toLocaleDateString("en-CA", { timeZone: "America/New_York" });
+const etClock = (d) => d.toLocaleTimeString("en-US", { hour: "numeric", minute: "2-digit", timeZone: "America/New_York" }).replace(" AM", " a.m.").replace(" PM", " p.m.");
+function seasonLines(y) {
+  // "began" when it happened before the morning brief is likely heard.
+  const lines = [
+    (v, t) => `Spring officially ${v} at ${t} today, with the March equinox.`,
+    (v, t) => `Summer officially ${v} at ${t} today, with the June solstice, and it's the longest day of the year.`,
+    (v, t) => `Fall officially ${v} at ${t} today, with the September equinox.`,
+    (v, t) => `Winter officially ${v} at ${t} today, with the December solstice. It's the shortest day of the year, and from here the days get longer.`,
+  ];
+  return lines.map((line, k) => {
+    const at = new Date(seasonStart(y, k).getTime() + 30000); // round to the nearest minute
+    const hourEt = Number(at.toLocaleString("en-US", { hour: "numeric", hour12: false, timeZone: "America/New_York" })) % 24;
+    return [etDay(at), line(hourEt < 6 ? "began" : "begins", etClock(at))];
+  });
+}
+
 function ruleHolidays(y) {
   const tg = thanksgiving(y);
   const dstStart = nthWeekday(y, 3, 0, 2), dstEnd = nthWeekday(y, 11, 0, 1);
@@ -63,6 +108,7 @@ function ruleHolidays(y) {
     [iso(addDays(tg, 1)), "It's Black Friday. If you're shopping, think local first."],
     [iso(addDays(tg, 2)), "It's Small Business Saturday, a great day to shop Waynesville's stores."],
     [iso(addDays(tg, 5)), "It's Giving Tuesday, a day to support the local causes you care about."],
+    ...seasonLines(y),
   ]);
 }
 
