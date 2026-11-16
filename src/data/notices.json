@@ -1,9 +1,26 @@
 {
   "_note": "Village of Waynesville and Wayne Township notices posted in the past 14 days. Titles and synopses verbatim from each government's own site.",
-  "updated": "2026-11-15T11:43:58.827Z",
-  "items": [],
+  "updated": "2026-11-16T11:43:18.394Z",
+  "items": [
+    {
+      "source": "township",
+      "issuer": "Wayne Township",
+      "title": "Veterans Day Observation",
+      "dateISO": "2026-11-09",
+      "summary": "In observance of Veterans Day, Wayne Township Administrative Offices will be closed on Wednesday, November 11, 2026. As we honor the brave men and women who have served in the United States Armed Forces, we extend our sincere gratitude for their service, dedication, and sacrifice. Regular administrative office hours will resume on Thursday, November…",
+      "link": "https://waynetwpwarrencooh.gov/veterans-day-observation/"
+    },
+    {
+      "source": "township",
+      "issuer": "Wayne Township",
+      "title": "Northern Warren County Transpiration Plan",
+      "dateISO": "2026-11-04",
+      "summary": "Warren County, the Miami Valley Regional Planning Commission, and the Ohio-Kentucky-Indiana Regional Council of Governments are developing the North Warren County Transportation Plan. Wayne Township is sharing this information to help residents stay informed and participate in the planning process. This is a multiphase study focused on long-term transportation planning across northern Warren…",
+      "link": "https://waynetwpwarrencooh.gov/northern-warren-county-transpiration-plan/"
+    }
+  ],
   "sources": {
     "village": "https://www.villageofwaynesville.org/news/",
-    "township": "FAILED"
+    "township": "https://waynetwpwarrencooh.gov/"
   }
 }

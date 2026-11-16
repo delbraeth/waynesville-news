@@ -1,6 +1,6 @@
 {
   "_note": "Mary L. Cook Public Library — upcoming programs from the library's WhoFi event calendar (https://marylcook-main-oh.whofi.com/calendar/full). \"items\": next 14 days, for the daily brief (dateISO is Eastern wall-clock marked Z). \"calendar\": next 45 days for the events calendar, real offsets, with sign-up details read from each program's page (scripts/lib/signup.mjs). Canceled events and closures excluded.",
-  "updated": "2026-11-15T11:42:24.935Z",
+  "updated": "2026-11-16T11:41:41.241Z",
   "items": [
     {
       "title": "Interactive Movie Kit Pick up: Cloudy with a Chance of Meatballs",
