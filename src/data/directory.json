@@ -1,6 +1,6 @@
 {
   "_note": "Local business directory. Built by scripts/fetch-directory.mjs from the Waynesville Area Chamber of Commerce's public member directory (name, location, phone, website, and the Chamber's description, as published) plus hand-added listings in directory-manual.json. Contact names, emails and hours are deliberately not copied from the Chamber; an hours line appears only when the owner supplied it (hours + hoursChecked in directory-manual.json). Do not edit by hand — edit directory-manual.json and re-run `npm run refresh:directory` (or `npm run refresh:directory -- --manual-only` to merge manual edits without re-reading the Chamber site).",
-  "updated": "2026-11-15T14:07:26.534Z",
+  "updated": "2026-11-16T11:31:54.986Z",
   "sections": [
     {
       "id": "food",
@@ -2158,6 +2158,27 @@
         "facebook": "https://www.facebook.com/p/La-Bella-Vida-Pet-Salon-LLC-100084022669688/"
       },
       "about": "Pet grooming salon taking appointments by call or text, with curbside pickup.",
+      "local": true,
+      "from": "manual"
+    },
+    {
+      "id": "manual-labellavidapetsalon",
+      "name": "La Bella Vida Pet Salon",
+      "location": "108 N. Marvin Ln., Waynesville, OH 45068",
+      "phone": "937-681-0008",
+      "sections": [
+        "pets"
+      ],
+      "kinds": [
+        "Grooming"
+      ],
+      "source": "https://labellavidapetsalon.com/",
+      "website": "https://labellavidapetsalon.com/",
+      "social": {
+        "facebook": "https://www.facebook.com/profile.php?id=100084022669688",
+        "instagram": "https://www.instagram.com/la_bella_vida_dog_grooming/"
+      },
+      "about": "Full-service grooming for dogs, cats, bunnies and guinea pigs: full grooms, bath and brush, and nail trims on their own, with weekend appointments for cats with a dedicated cat groomer. Call or text 937-681-0008 or 513-383-1038, or book online.",
       "local": true,
       "from": "manual"
     },
