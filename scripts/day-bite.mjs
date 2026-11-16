@@ -116,6 +116,19 @@ function sunBite(dt) {
   return `The sun rises at ${clock(rise)} and sets at ${clock(set)}, for ${h} hours${mins} of daylight.`;
 }
 
+// Everyday line from the pool, for days with nothing else to say: entries in
+// season for this month, rotating one per day (consecutive days get
+// consecutive lines, so nothing repeats until the pool has gone round).
+function poolBite(dt) {
+  const month = dt.getUTCMonth() + 1;
+  const pool = (data.pool ?? [])
+    .map((e) => (typeof e === "string" ? { text: e } : e))
+    .filter((e) => e.text && (!e.months || e.months.includes(month)));
+  if (!pool.length) return "";
+  const dayNumber = Math.floor(dt.getTime() / 86400000);
+  return pool[dayNumber % pool.length].text;
+}
+
 export function dayBite(date) {
   const [y, mo, d] = date.split("-").map(Number);
   const dt = utcNoon(y, mo, d);
@@ -125,7 +138,9 @@ export function dayBite(date) {
   const count = countdown(dt);
   if (main) return [main, count].filter(Boolean).join(" ");
   if (count) return count.replace(/^And /, "");
-  return sunBite(dt);
+  // Sunrise and daylight on Mondays only; a pool line the rest of the week.
+  if (dt.getUTCDay() === 1) return sunBite(dt);
+  return poolBite(dt) || sunBite(dt);
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) {
