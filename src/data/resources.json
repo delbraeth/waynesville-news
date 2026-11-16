@@ -55,6 +55,14 @@
           "verified": "2026-11-05"
         },
         {
+          "name": "Veterans Crisis Line",
+          "what": "Free, confidential support 24/7 for veterans, service members, National Guard and Reserve members, and their families and friends. Dial 988, then press 1; text 838255; or chat online. You don't need VA benefits or VA health care to use it.",
+          "phone": "988",
+          "link": "https://www.veteranscrisisline.net/",
+          "source": "https://www.veteranscrisisline.net/",
+          "verified": "2026-11-16"
+        },
+        {
           "name": "Weather alerts and road conditions",
           "what": "National Weather Service forecast and alerts for Waynesville, and OHGO for state-route traffic and closures.",
           "link": "https://forecast.weather.gov/MapClick.php?lat=39.5287&lon=-84.0891",
