@@ -1,6 +1,6 @@
 {
   "_note": "Local business directory. Built by scripts/fetch-directory.mjs from the Waynesville Area Chamber of Commerce's public member directory (name, location, phone, website, and the Chamber's description, as published) plus hand-added listings in directory-manual.json. Contact names, emails and hours are deliberately not copied from the Chamber; an hours line appears only when the owner supplied it (hours + hoursChecked in directory-manual.json). Do not edit by hand — edit directory-manual.json and re-run `npm run refresh:directory` (or `npm run refresh:directory -- --manual-only` to merge manual edits without re-reading the Chamber site).",
-  "updated": "2026-11-16T11:31:54.986Z",
+  "updated": "2026-11-16T12:03:41.396Z",
   "sections": [
     {
       "id": "food",
@@ -1844,6 +1844,9 @@
       ],
       "source": "https://hailstormvintage.com",
       "website": "https://hailstormvintage.com/",
+      "social": {
+        "instagram": "https://www.instagram.com/hailstormvintage_/"
+      },
       "about": "Buys, sells and trades comic books, vintage toys and action figures, retro clothing, records and pop-culture collectibles.",
       "local": true,
       "from": "manual"
