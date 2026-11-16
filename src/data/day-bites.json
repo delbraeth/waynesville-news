@@ -72,46 +72,72 @@
     "Samuel Heighway, an engineer from Shropshire, England, laid out Waynesville in 1797.",
     "Fun fact: Ohio's state fossil is the trilobite Isotelus, and fossil hunters find trilobites at Caesar Creek.",
     "Quaker families began arriving in Waynesville in 1801. The Museum at the Friends Home tells their story.",
+    "Waynesville is often called the most haunted village in Ohio, a title popularized by Chris Woodyard's Haunted Ohio books.",
     "The first Ohio Sauerkraut Festival, in 1970, drew about 1,500 people, who ate 528 pounds of sauerkraut.",
     "Fun fact: Ohio's flag is the only U.S. state flag that isn't a rectangle.",
     "The Sauerkraut Festival began as a merchants' sidewalk sale, with a sauerkraut dinner added to draw a crowd.",
     "Waynesville calls itself the Antiques Capital of the Midwest, and Main Street makes the case.",
+    "Fun fact: Depending on who's counting, Waynesville has anywhere from 15 to more than 30 reportedly haunted sites.",
     "Fun fact: Ohio's official state beverage is tomato juice.",
     "Caesar Creek Lake, a few miles east of the village, covers about 2,830 acres.",
     "Fossil hunters can search the Caesar Creek spillway with a free permit from the visitor center.",
     "Fun fact: Seven U.S. presidents were born in Ohio.",
+    "The Hammel House Inn dates to 1822, and its ghost stories are a fixture of local ghost tours.",
     "Got a question about something happening in town? Email the editor with Ask the Brief in the subject line.",
     "Know of an event we're missing? Send it our way and we'll add it to the calendar.",
     "Fun fact: The buckeye got its name because the nut looks like the eye of a deer.",
     "Every event on our calendar has an add-to-calendar button. Find it at waynesville dot news slash events.",
+    "Ghost stories are part of the charm around here. If a door creaks downtown this morning, just say good morning.",
     "Our Resources page puts local emergency numbers, crisis lines and county services in one place.",
     "Fun fact: Ohio's name comes from an Iroquoian word meaning \"great river.\"",
     "Looking for a plumber, a groomer or a good lunch? Our business directory lists more than 200 local businesses.",
     "If you're looking to get involved, our Community page lists local clubs, youth sports and volunteer groups.",
+    "The Ohio Sauerkraut Festival fills downtown Waynesville the second full weekend of every October.",
     "Fun fact: Cincinnati's Red Stockings became baseball's first openly all-professional team in 1869.",
     "Shop local when you can. Every dollar spent in town helps keep Main Street going.",
     "Check on an older neighbor today. A quick hello goes a long way.",
     "Fun fact: The Wright brothers built their first airplane in their Dayton bicycle shop.",
+    "By one count, the Sauerkraut Festival goes through about seven tons of sauerkraut in a single weekend.",
     "Your library card at the Mary L. Cook Public Library opens up books, movies and more, all free.",
     "Thanks for starting your day with us. If you like the Daily Brief, tell a friend.",
     "Fun fact: Honey never spoils. Archaeologists have found edible honey in ancient Egyptian tombs.",
     "Every source in today's brief is linked in the written edition at waynesville dot news.",
+    "Sauerkraut Festival crowds can top 300,000 people, many times the village's own population.",
     "You can get the Daily Brief in your inbox each morning. Sign up at waynesville dot news.",
     "Fun fact: An octopus has three hearts.",
     "Grab your coffee. Here's what's happening around the village.",
     "Whatever today brings, we hope it's a good one, Waynesville.",
+    "Fun fact: Sauerkraut is German for \"sour cabbage,\" and it's just cabbage and salt, left to ferment.",
     "Fun fact: A group of crows is called a murder.",
     "A little kindness goes a long way. Hold a door for someone today.",
     "Don't forget to drink some water today. Your future self will thank you.",
     "Fun fact: Botanically speaking, bananas are berries and strawberries aren't.",
+    "One Sauerkraut Festival favorite is the German sundae: potatoes topped with cheese, bacon, sour cream, sauerkraut and an olive.",
     "Spotted something new downtown? Let us know, and we might feature it.",
     "News tip, event or correction? Reach us at editor at waynesville dot news.",
     "Fun fact: Sea otters sometimes hold hands while they sleep so they don't drift apart.",
     "If we ever get something wrong, tell us. We fix it and note the correction on the site.",
+    {
+      "text": "The Museum at the Friends Home runs ghost tours of the village, starting at the gazebo across from the Hammel House.",
+      "months": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
     "Have a great day, and give a local business some love if you can.",
     "Fun fact: A day on Venus is longer than its year.",
     "Every brief comes in an audio version too. You're listening to it right now.",
     "If you pass a neighbor this morning, give a wave.",
+    {
+      "text": "October is ghost season in Waynesville, the village often called Ohio's most haunted.",
+      "months": [
+        10
+      ]
+    },
     "Fun fact: Wombat poop is cube-shaped.",
     "Drive safe today, and watch for walkers and cyclists on the back roads.",
     {
@@ -133,6 +159,12 @@
         6,
         7,
         8,
+        9
+      ]
+    },
+    {
+      "text": "Sauerkraut Festival season is almost here. Downtown fills up the second full weekend of October.",
+      "months": [
         9
       ]
     },
