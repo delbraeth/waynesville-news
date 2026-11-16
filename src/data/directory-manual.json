@@ -1753,6 +1753,24 @@
       },
       "about": "Cafe right on the Little Miami Bike Path in Corwin, with dishes made from scratch with fresh ingredients: organic coffee, smoothies, soups, avocado toast, paninis, grain bowls, popsicles and more.",
       "source": "https://www.facebook.com/profile.php?id=61558194279209"
+    },
+    {
+      "name": "La Bella Vida Pet Salon",
+      "sections": [
+        "pets"
+      ],
+      "kinds": [
+        "Grooming"
+      ],
+      "location": "108 N. Marvin Ln., Waynesville, OH 45068",
+      "phone": "937-681-0008",
+      "website": "https://labellavidapetsalon.com/",
+      "social": {
+        "facebook": "https://www.facebook.com/profile.php?id=100084022669688",
+        "instagram": "https://www.instagram.com/la_bella_vida_dog_grooming/"
+      },
+      "about": "Full-service grooming for dogs, cats, bunnies and guinea pigs: full grooms, bath and brush, and nail trims on their own, with weekend appointments for cats with a dedicated cat groomer. Call or text 937-681-0008 or 513-383-1038, or book online.",
+      "source": "https://labellavidapetsalon.com/"
     }
   ]
 }
