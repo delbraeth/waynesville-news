@@ -882,22 +882,6 @@
       "source": "https://keepinitcountryfarm.com/"
     },
     {
-      "name": "La Bella Vida Pet Salon",
-      "sections": [
-        "pets"
-      ],
-      "kinds": [
-        "Pet Grooming"
-      ],
-      "location": "108 N. Marvin Ln, Waynesville, OH 45068",
-      "phone": "",
-      "about": "Pet grooming salon taking appointments by call or text, with curbside pickup.",
-      "source": "https://www.facebook.com/p/La-Bella-Vida-Pet-Salon-LLC-100084022669688/ (open per the editor, 2026-10-31)",
-      "social": {
-        "facebook": "https://www.facebook.com/p/La-Bella-Vida-Pet-Salon-LLC-100084022669688/"
-      }
-    },
-    {
       "name": "Lemonwood Soap Company",
       "sections": [
         "shop"
@@ -1772,8 +1756,71 @@
         "facebook": "https://www.facebook.com/profile.php?id=100084022669688",
         "instagram": "https://www.instagram.com/la_bella_vida_dog_grooming/"
       },
-      "about": "Full-service grooming for dogs, cats, bunnies and guinea pigs: full grooms, bath and brush, and nail trims on their own, with weekend appointments for cats with a dedicated cat groomer. Call or text 937-681-0008 or 513-383-1038, or book online.",
+      "about": "Full-service grooming for dogs, cats, bunnies and guinea pigs: full grooms, bath and brush, and nail trims on their own, with weekend appointments for cats with a dedicated cat groomer. Call or text 937-681-0008 or 513-383-1038, or book online. Curbside pickup.",
       "source": "https://labellavidapetsalon.com/"
+    },
+    {
+      "name": "Augustine Automotive South",
+      "sections": [
+        "auto"
+      ],
+      "kinds": [
+        "Auto Repair"
+      ],
+      "location": "2046 E. State Route 73, Waynesville, OH 45068",
+      "about": "Automotive repair shop on State Route 73.",
+      "source": "Business list from the editor, 2026-11-17"
+    },
+    {
+      "name": "Outlaw Beauty Salon & Co.",
+      "sections": [
+        "health"
+      ],
+      "kinds": [
+        "Hair Salon",
+        "Beauty"
+      ],
+      "location": "224 High St., Waynesville, OH 45068",
+      "about": "Hair and beauty salon on High Street.",
+      "source": "Business list from the editor, 2026-11-17"
+    },
+    {
+      "name": "T&S Automotive",
+      "sections": [
+        "auto"
+      ],
+      "kinds": [
+        "Auto Repair"
+      ],
+      "location": "132 High St., Waynesville, OH 45068",
+      "about": "Automotive repair shop on High Street.",
+      "source": "Business list from the editor, 2026-11-17"
+    },
+    {
+      "name": "Solar Shade Truck And Car Paradise",
+      "sections": [
+        "auto"
+      ],
+      "kinds": [
+        "Truck Accessories",
+        "Window Tinting"
+      ],
+      "location": "1673 E. State Route 73, Waynesville, OH 45068",
+      "about": "Truck accessories and window tinting on State Route 73.",
+      "source": "Business list from the editor, 2026-11-17"
+    },
+    {
+      "name": "Tom Zengel Concrete & Contracting Inc.",
+      "sections": [
+        "home"
+      ],
+      "kinds": [
+        "Concrete",
+        "Contractor"
+      ],
+      "location": "2981 E. Lytle Five Points Rd., Waynesville, OH 45068",
+      "about": "Concrete contractor.",
+      "source": "Business list from the editor, 2026-11-17"
     }
   ]
 }

@@ -1,6 +1,6 @@
 {
   "_note": "Local business directory. Built by scripts/fetch-directory.mjs from the Waynesville Area Chamber of Commerce's public member directory (name, location, phone, website, and the Chamber's description, as published) plus hand-added listings in directory-manual.json. Contact names, emails and hours are deliberately not copied from the Chamber; an hours line appears only when the owner supplied it (hours + hoursChecked in directory-manual.json). Do not edit by hand — edit directory-manual.json and re-run `npm run refresh:directory` (or `npm run refresh:directory -- --manual-only` to merge manual edits without re-reading the Chamber site).",
-  "updated": "2026-11-16T12:03:41.396Z",
+  "updated": "2026-11-17T06:45:57.782Z",
   "sections": [
     {
       "id": "food",
@@ -414,6 +414,23 @@
       "about": "Area Leader in Facilities Maintenance and retail construction with 24-hour service, if needed.",
       "local": true,
       "from": "chamber"
+    },
+    {
+      "id": "manual-augustineautomotivesouth",
+      "name": "Augustine Automotive South",
+      "location": "2046 E. State Route 73, Waynesville, OH 45068",
+      "phone": "",
+      "sections": [
+        "auto"
+      ],
+      "kinds": [
+        "Auto Repair"
+      ],
+      "source": "Business list from the editor, 2026-11-17",
+      "website": "",
+      "about": "Automotive repair shop on State Route 73.",
+      "local": true,
+      "from": "manual"
     },
     {
       "id": "manual-bandbcarryout",
@@ -2147,26 +2164,6 @@
     {
       "id": "manual-labellavidapetsalon",
       "name": "La Bella Vida Pet Salon",
-      "location": "108 N. Marvin Ln, Waynesville, OH 45068",
-      "phone": "",
-      "sections": [
-        "pets"
-      ],
-      "kinds": [
-        "Pet Grooming"
-      ],
-      "source": "https://www.facebook.com/p/La-Bella-Vida-Pet-Salon-LLC-100084022669688/ (open per the editor, 2026-10-31)",
-      "website": "",
-      "social": {
-        "facebook": "https://www.facebook.com/p/La-Bella-Vida-Pet-Salon-LLC-100084022669688/"
-      },
-      "about": "Pet grooming salon taking appointments by call or text, with curbside pickup.",
-      "local": true,
-      "from": "manual"
-    },
-    {
-      "id": "manual-labellavidapetsalon",
-      "name": "La Bella Vida Pet Salon",
       "location": "108 N. Marvin Ln., Waynesville, OH 45068",
       "phone": "937-681-0008",
       "sections": [
@@ -2181,7 +2178,7 @@
         "facebook": "https://www.facebook.com/profile.php?id=100084022669688",
         "instagram": "https://www.instagram.com/la_bella_vida_dog_grooming/"
       },
-      "about": "Full-service grooming for dogs, cats, bunnies and guinea pigs: full grooms, bath and brush, and nail trims on their own, with weekend appointments for cats with a dedicated cat groomer. Call or text 937-681-0008 or 513-383-1038, or book online.",
+      "about": "Full-service grooming for dogs, cats, bunnies and guinea pigs: full grooms, bath and brush, and nail trims on their own, with weekend appointments for cats with a dedicated cat groomer. Call or text 937-681-0008 or 513-383-1038, or book online. Curbside pickup.",
       "local": true,
       "from": "manual"
     },
@@ -2860,6 +2857,24 @@
       "from": "manual"
     },
     {
+      "id": "manual-outlawbeautysalonand",
+      "name": "Outlaw Beauty Salon & Co.",
+      "location": "224 High St., Waynesville, OH 45068",
+      "phone": "",
+      "sections": [
+        "health"
+      ],
+      "kinds": [
+        "Hair Salon",
+        "Beauty"
+      ],
+      "source": "Business list from the editor, 2026-11-17",
+      "website": "",
+      "about": "Hair and beauty salon on High Street.",
+      "local": true,
+      "from": "manual"
+    },
+    {
       "id": "manual-ozoneziplineadventuresatymcacampkern",
       "name": "Ozone Zipline Adventures at YMCA Camp Kern",
       "location": "5291 State Route 350, Oregonia, OH 45054",
@@ -3275,6 +3290,24 @@
       "from": "manual"
     },
     {
+      "id": "manual-solarshadetruckandcarparadise",
+      "name": "Solar Shade Truck And Car Paradise",
+      "location": "1673 E. State Route 73, Waynesville, OH 45068",
+      "phone": "",
+      "sections": [
+        "auto"
+      ],
+      "kinds": [
+        "Truck Accessories",
+        "Window Tinting"
+      ],
+      "source": "Business list from the editor, 2026-11-17",
+      "website": "",
+      "about": "Truck accessories and window tinting on State Route 73.",
+      "local": true,
+      "from": "manual"
+    },
+    {
       "id": "chamber-685",
       "name": "Spivey's Premier Painting LLC",
       "location": "2700 Brimstone Rd, Wilmington, OH 45177",
@@ -3438,6 +3471,23 @@
         "instagram": "https://www.instagram.com/sunsproutscafe"
       },
       "about": "Cafe right on the Little Miami Bike Path in Corwin, with dishes made from scratch with fresh ingredients: organic coffee, smoothies, soups, avocado toast, paninis, grain bowls, popsicles and more.",
+      "local": true,
+      "from": "manual"
+    },
+    {
+      "id": "manual-tandsautomotive",
+      "name": "T&S Automotive",
+      "location": "132 High St., Waynesville, OH 45068",
+      "phone": "",
+      "sections": [
+        "auto"
+      ],
+      "kinds": [
+        "Auto Repair"
+      ],
+      "source": "Business list from the editor, 2026-11-17",
+      "website": "",
+      "about": "Automotive repair shop on High Street.",
       "local": true,
       "from": "manual"
     },
@@ -3801,6 +3851,24 @@
       "source": "https://thrivechirodr.com/",
       "website": "https://thrivechirodr.com/",
       "about": "Downtown chiropractic office focused on upper cervical (neck) care, also offering SoftWave therapy. Free consultations by appointment. Open Monday through Thursday; see the website for hours.",
+      "local": true,
+      "from": "manual"
+    },
+    {
+      "id": "manual-tomzengelconcreteandcontracting",
+      "name": "Tom Zengel Concrete & Contracting Inc.",
+      "location": "2981 E. Lytle Five Points Rd., Waynesville, OH 45068",
+      "phone": "",
+      "sections": [
+        "home"
+      ],
+      "kinds": [
+        "Concrete",
+        "Contractor"
+      ],
+      "source": "Business list from the editor, 2026-11-17",
+      "website": "",
+      "about": "Concrete contractor.",
       "local": true,
       "from": "manual"
     },
