@@ -1,6 +1,6 @@
 {
   "_note": "Waynesville Spartans schedule + results (MaxPreps), past 7 days / next 7 days. Scraped directly from each sport's own schedule page (football, volleyball, soccer -- varsity + JV), not the school hub page, which has been observed to silently omit some contests. Scores and matchups reproduced verbatim from MaxPreps' own markup; each links to their game page. Start times, \"scrimmage\" and \"canceled\" come from the school's athletics site (waynesvillesports.com) when it lists the game; \"maxprepsTime\" is MaxPreps' time when they differ.",
-  "updated": "2026-11-16T11:41:25.814Z",
+  "updated": "2026-11-17T11:42:09.590Z",
   "results": [
     {
       "dateISO": "2026-11-13T19:00:00",
@@ -74,6 +74,32 @@
       "result": null,
       "isHome": true,
       "link": "https://www.maxpreps.com/oh/football/game/bishop-fenwick-franklin-vs-waynesville/11-20-2026/?c=2f2a6d51-5706-4af5-a1bd-43c71e2f70d3"
+    },
+    {
+      "dateISO": "2026-11-23T18:00:00",
+      "sport": "Boys Basketball",
+      "level": "Varsity",
+      "opponent": "Roger Bacon",
+      "wayneScore": null,
+      "opponentScore": null,
+      "result": null,
+      "isHome": true,
+      "link": "https://www.maxpreps.com/oh/basketball/game/roger-bacon-cincinnati-vs-waynesville/11-23-2026/?c=102a71af-e352-4f9c-a058-58f79fd4400c",
+      "scrimmage": true,
+      "maxprepsTime": "17:00"
+    },
+    {
+      "dateISO": "2026-11-23T18:00:00",
+      "sport": "Boys Basketball",
+      "level": "JV",
+      "opponent": "Roger Bacon",
+      "wayneScore": null,
+      "opponentScore": null,
+      "result": null,
+      "isHome": true,
+      "link": "https://www.maxpreps.com/oh/basketball/game/roger-bacon-cincinnati-vs-waynesville/jv/11-23-2026/?c=10e381d2-8b2b-4a7b-a7bb-b098142c16dd",
+      "scrimmage": true,
+      "maxprepsTime": "17:00"
     }
   ]
 }

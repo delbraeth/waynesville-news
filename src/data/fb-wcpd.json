@@ -1,7 +1,21 @@
 {
   "_note": "Recent Warren County Park District Facebook posts via rss.app bridge. Title + link + short excerpt; the Park District's own words. Fail-safe: kept from last run if the bridge is down.",
-  "updated": "2026-11-16T11:40:48.945Z",
+  "updated": "2026-11-17T11:41:18.110Z",
   "items": [
+    {
+      "title": "We want your feedback! If you are interested in adult Wellness Walks this winter, in coordination with our friends at…",
+      "link": "https://www.facebook.com/WarrenCountyParkDistrict/posts/pfbid02RzYUv5X33Z745FECFTH67ywkmFWGGxDabBTUfcAZTNhhb5H3T9RzFHcc7m5KCwxRl",
+      "date": "Mon, 16 Nov 2026 20:25:05 GMT",
+      "dateLabel": "Mon, Nov 16",
+      "excerpt": "Warren County Extension and other community partners, please complete this quick survey. https://osu.az1.qualtrics.com/jfe/form/SV_390tD1vguB58nqe"
+    },
+    {
+      "title": "Beautiful day for a walk in the woods!WOW, just wow! What a perfect morning for a hike. Thanks to all of you that made i...",
+      "link": "https://www.facebook.com/WarrenCountyParkDistrict/posts/pfbid02dDysuksavrLYmSAt6QQqEBLUU9ig384kwwWNoEtv6FWZ1B2D45DKezKCB6fgwswBl",
+      "date": "Mon, 16 Nov 2026 16:43:21 GMT",
+      "dateLabel": "Mon, Nov 16",
+      "excerpt": "Beautiful day for a walk in the woods! WOW, just wow! What a perfect morning for a hike. Thanks to all of you that made it. A special shout out to Shannon from the Warren County Park District and John from the Friends of Warren County Park District who gave us their time and knowledge!! We…"
+    },
     {
       "title": "Our Friends of Warren County Park District are so important in so many ways. They help provide volunteer support, raise…",
       "link": "https://www.facebook.com/WarrenCountyParkDistrict/posts/pfbid02t2vBN2wj3AFbmmHb1NEUxT3VXieR1KyJ4dDahsgEXs7naKJVSEpA76MR3VcA8BfLl",
@@ -29,13 +43,6 @@
       "date": "Sat, 07 Nov 2026 14:39:01 GMT",
       "dateLabel": "Sat, Nov 7",
       "excerpt": "working on our winter programming schedule and will have a few different opportunities to learn about maple sugaring, including tree walks, winter tree ID, and beginning maple sugaring. 🥞 If you think that tapping trees might be something you want to learn about, knowing what trees you have in…"
-    },
-    {
-      "title": "Congrats to all of our Thursday night Armco Park Appreciation Tournament teams. “Web Gems” were the upper bracket…",
-      "link": "https://www.facebook.com/WarrenCountyParkDistrict/posts/pfbid0RsLK5H8NKwCkzYekxqgFiAzHAWQKZDzj81Nuakkt6RxKGoo2zAeLxN6qvA17EdSGl",
-      "date": "Fri, 06 Nov 2026 19:27:31 GMT",
-      "dateLabel": "Fri, Nov 6",
-      "excerpt": "winners, and “Softballs” were the winning team in the lower division bracket. Great work! Not pictured: “Purple Brite,” “ Rondon’s,” and “Bombsquad”"
     }
   ]
 }

@@ -1,7 +1,23 @@
 {
   "_note": "Village of Waynesville and Wayne Township notices posted in the past 14 days. Titles and synopses verbatim from each government's own site.",
-  "updated": "2026-11-16T11:43:18.394Z",
+  "updated": "2026-11-17T11:44:01.725Z",
   "items": [
+    {
+      "source": "village",
+      "issuer": "Village of Waynesville",
+      "title": "Water Main Break 11.15.2026",
+      "dateISO": "2026-11-16",
+      "summary": "On Sunday, November 15, 2026, there was a water main break on Mill St. This has been resolved. The water is safe to drink and there is NO BOIL ADVISORY. If your water is discolored or cloudy, please flush the line by letting the water run for a few moments. If you have any questions, you may call ...",
+      "link": "https://www.villageofwaynesville.org/news/entry/water-main-break-11-15-2026/"
+    },
+    {
+      "source": "village",
+      "issuer": "Village of Waynesville",
+      "title": "UPDATE: Water Main Break-Laura Marie Drive",
+      "dateISO": "2026-11-16",
+      "summary": "UPDATE: Water Main Break on Laura Marie Drive The Water Main Break affecting Laura Marie Drive has been resolved. There is NO BOIL ADVISORY. If you are experiencing any brown or discoloration in your water, please flush your line by letting the water run for a few moments. Full service ETA is 4:45p...",
+      "link": "https://www.villageofwaynesville.org/news/entry/update-water-main-break-laura-marie-drive/"
+    },
     {
       "source": "township",
       "issuer": "Wayne Township",
