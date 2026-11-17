@@ -1,0 +1,33 @@
+---
+// One display on the Holiday Lights guide.
+import lights from "../data/holiday-lights.json";
+
+interface Props { d: {
+  name: string; kind?: string; location?: string; town?: string; startDate?: string; endDate?: string;
+  dates2026Confirmed?: boolean; when?: string; price?: string; about?: string; website?: string;
+} }
+const { d } = Astro.props;
+const year = lights.season?.label ?? "";
+const dayFmt = new Intl.DateTimeFormat("en-US", { month: "short", day: "numeric", timeZone: "UTC" });
+const fmt = (iso: string) => dayFmt.format(new Date(iso + "T12:00:00Z"));
+const dateRange =
+  d.startDate && d.endDate ? `${fmt(d.startDate)} – ${fmt(d.endDate)}`
+  : d.startDate ? `Opens ${fmt(d.startDate)}`
+  : "";
+---
+<li>
+  <div class="dir-name">
+    {d.website ? <a href={d.website} target="_blank" rel="noopener">{d.name}</a> : d.name}
+    {d.kind && <span class="dir-badge">{d.kind}</span>}
+  </div>
+  <div class="dir-kinds">
+    {[d.town, dateRange].filter(Boolean).join(" · ")}
+    {d.dates2026Confirmed === false && <span class="hl-pending"> · {year} dates not yet announced</span>}
+  </div>
+  {d.about && <p class="dir-about">{d.about}</p>}
+  <div class="dir-contact">
+    {d.when && <span>{d.when}</span>}
+    {d.price && <span>{d.price}</span>}
+  </div>
+  {d.location && <div class="dir-contact"><span>{d.location}</span></div>}
+</li>

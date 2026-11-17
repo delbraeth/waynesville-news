@@ -7,6 +7,7 @@
 import Base from "../layouts/Base.astro";
 import data from "../data/churches.json";
 import { slug } from "../lib/slug.js";
+import { christmasEveLine } from "../lib/holiday.js";
 import { upcomingEvents } from "../lib/events.js";
 import orgData from "../data/organizations.json";
 const hasOrgs = orgData.items.length > 0;
@@ -93,6 +94,7 @@ const listMail = "mailto:editor@waynesville.news?subject=" + encodeURIComponent(
               {c.services
                 ? <p class="res-what"><strong>Services:</strong> {c.services}</p>
                 : c.verified && <p class="res-what muted">{c.website || c.facebook ? `Check the church's ${c.website ? "website" : "Facebook page"} for service times.` : c.phone ? "Service times aren't posted online; call the church." : "Service times aren't posted online."}</p>}
+              {christmasEveLine(c) && <p class="res-what"><strong>Christmas Eve:</strong> {christmasEveLine(c)} · <a href="/holiday-lights/christmas-eve/">all services</a></p>}
               {c.staff && c.staff.length > 0 && <p class="res-what"><strong>{c.staff.length > 1 ? "Staff" : "Pastor"}:</strong> {c.staff.join(" · ")}</p>}
               {c.ministries && c.ministries.length > 0 && (
                 <ul class="ch-min">
