@@ -56,7 +56,7 @@ const bulbs = Array.from({ length: SPANS * PER_SPAN }, (_, i) => {
   return { x, y: sag(x), color: BULB_COLORS[i % BULB_COLORS.length], delay: ((i * 7) % 10) / 5 };
 });
 
-type Photo = { image: string; alt: string; kind: "home" | "business"; business?: string; message?: string; added: string };
+type Photo = { image: string; alt: string; kind: "home" | "business"; business?: string; place?: string; message?: string; added: string };
 // A business photo links to its Business Directory listing when the name matches one.
 const listed = new Set((directory.items as { name: string }[]).map((i) => i.name));
 const dirLink = (name?: string) => (name && listed.has(name) ? `/directory/#${slug(name)}` : "");
@@ -68,6 +68,7 @@ const photoBody = [
   "Home or business:",
   "Business name (businesses only):",
   "Short message to show with your photo (optional, like \"Happy holidays from the Smiths\"):",
+  "Town or neighborhood to show (like Waynesville, Corwin, Lytle, Mount Holly, Wayne Township or your subdivision; no street or address):",
   "ZIP code (must be 45068):",
   "",
   "I took these photos of my own home or business, and Waynesville News may publish them: yes",
@@ -176,7 +177,7 @@ const submitMail = "mailto:editor@waynesville.news?subject=" + encodeURIComponen
                 {ph.kind === "business" && ph.business && (
                   <strong>{dirLink(ph.business) ? <a href={dirLink(ph.business)}>{ph.business}</a> : ph.business}</strong>
                 )}
-                <span class="muted">Waynesville</span>
+                <span class="muted">{ph.place || "Waynesville"}</span>
               </p>
             </li>
           ))}
@@ -199,7 +200,8 @@ const submitMail = "mailto:editor@waynesville.news?subject=" + encodeURIComponen
         </ul>
         <p class="small">
           Add a short holiday message if you like, such as "Happy holidays from the Smiths." For homes we never post
-          an address, street or house number, just your message and "Waynesville." Businesses are named and linked to their listing in our <a href="/directory/">Business Directory</a>. We remove
+          an address, street or house number, just your message and your town or neighborhood (Waynesville, Corwin,
+          Lytle, Mount Holly, Wayne Township or your subdivision). Businesses are named and linked to their listing in our <a href="/directory/">Business Directory</a>. We remove
           location data from every photo before it goes up, and we take a photo down any time you ask. Sending a photo
           means you're OK with us posting it here.
         </p>
