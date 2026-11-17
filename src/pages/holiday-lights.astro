@@ -1,6 +1,9 @@
 ---
 import Base from "../layouts/Base.astro";
 import lights from "../data/holiday-lights.json";
+import photoData from "../data/holiday-photos.json";
+import directory from "../data/directory.json";
+import { slug } from "../lib/slug.js";
 import { currentDisplays, holidayEvents } from "../lib/holiday.js";
 
 type Display = {
@@ -52,6 +55,25 @@ const bulbs = Array.from({ length: SPANS * PER_SPAN }, (_, i) => {
   const x = (W / (SPANS * PER_SPAN)) * (i + 0.5);
   return { x, y: sag(x), color: BULB_COLORS[i % BULB_COLORS.length], delay: ((i * 7) % 10) / 5 };
 });
+
+type Photo = { image: string; alt: string; kind: "home" | "business"; business?: string; place?: string; message?: string; added: string };
+// A business photo links to its Business Directory listing when the name matches one.
+const listed = new Set((directory.items as { name: string }[]).map((i) => i.name));
+const dirLink = (name?: string) => (name && listed.has(name) ? `/directory/#${slug(name)}` : "");
+// Reader photos: only editor-approved items are in the data file. Newest first.
+const photos = ([...(photoData.items as Photo[])]).sort((a, b) => b.added.localeCompare(a.added));
+const photoBody = [
+  "Attach up to 3 photos, then fill in:",
+  "",
+  "Home or business:",
+  "Business name (businesses only):",
+  "Short message to show with your photo (optional, like \"Happy holidays from the Smiths\"):",
+  "Town or neighborhood to show (like Waynesville, Corwin, Lytle, Mount Holly, Wayne Township or your subdivision; no street or address):",
+  "ZIP code (must be 45068):",
+  "",
+  "I took these photos of my own home or business, and Waynesville News may publish them: yes",
+].join("\n");
+const photoMail = "mailto:editor@waynesville.news?subject=" + encodeURIComponent("Holiday photo") + "&body=" + encodeURIComponent(photoBody);
 
 const submitMail = "mailto:editor@waynesville.news?subject=" + encodeURIComponent("Holiday lights listing");
 ---
@@ -141,6 +163,51 @@ const submitMail = "mailto:editor@waynesville.news?subject=" + encodeURIComponen
       </section>
     )}
 
+    <section class="dir-group" id="photos">
+      <h2>Lights around the village</h2>
+      {photos.length > 0 ? (
+        <ul class="hp-grid">
+          {photos.map((ph) => (
+            <li>
+              <a href={ph.image} target="_blank" rel="noopener">
+                <img src={ph.image} alt={ph.alt} loading="lazy" decoding="async" />
+              </a>
+              <p class="hp-cap">
+                {ph.message && <span class="hp-msg">“{ph.message}”</span>}
+                {ph.kind === "business" && ph.business && (
+                  <strong>{dirLink(ph.business) ? <a href={dirLink(ph.business)}>{ph.business}</a> : ph.business}</strong>
+                )}
+                <span class="muted">{ph.place || "Waynesville"}</span>
+              </p>
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <p class="muted">No photos yet this season. Yours could be the first.</p>
+      )}
+
+      <div class="hp-share">
+        <h3>Share your lights</h3>
+        <p>
+          Decorated your house or business? <a href={photoMail}>Email the editor</a> up to three photos.
+          The editor reviews every photo before anything is posted, and not every photo will run.
+        </p>
+        <ul>
+          <li><strong>Waynesville only.</strong> The home or business must be in ZIP code 45068.</li>
+          <li><strong>Your own place.</strong> Send photos you took of your own home, yard or business.</li>
+          <li><strong>Family-friendly.</strong> Nothing you wouldn't show a room full of kids.</li>
+          <li><strong>Decorations, not people.</strong> Please leave out faces, especially children's, and readable house numbers and license plates.</li>
+        </ul>
+        <p class="small">
+          Add a short holiday message if you like, such as "Happy holidays from the Smiths." For homes we never post
+          an address, street or house number, just your message and your town or neighborhood (Waynesville, Corwin,
+          Lytle, Mount Holly, Wayne Township or your subdivision). Businesses are named and linked to their listing in our <a href="/directory/">Business Directory</a>. We remove
+          location data from every photo before it goes up, and we take a photo down any time you ask. Sending a photo
+          means you're OK with us posting it here.
+        </p>
+      </div>
+    </section>
+
     <div class="sp-join">
       <h3>Know a display we're missing?</h3>
       <p>
@@ -183,6 +250,25 @@ const submitMail = "mailto:editor@waynesville.news?subject=" + encodeURIComponen
     .hl-bulb { animation: none; }
   }
   .hl-hero-text { position: relative; }
+  .hp-grid {
+    list-style: none; margin: 0 0 1.2rem; padding: 0;
+    display: grid; gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 220px), 1fr));
+  }
+  .hp-grid img {
+    display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover;
+    border-radius: 8px; background: var(--rule, #ddd);
+  }
+  .hp-cap { margin: .4rem 0 0; font-size: .92rem; }
+  .hp-cap > * { display: block; }
+  .hp-msg { font-family: var(--font-serif); font-style: italic; font-size: 1.02rem; }
+  .hp-share {
+    margin-top: 1rem; padding: 1rem 1.1rem;
+    border: 1px solid var(--rule, #ccc); border-radius: 10px;
+  }
+  .hp-share h3 { margin-top: 0; }
+  .hp-share ul { padding-left: 1.2rem; }
+  .hp-share li { margin: .3rem 0; }
   .hl-kicker {
     font-family: var(--font-sans);
     text-transform: uppercase;
