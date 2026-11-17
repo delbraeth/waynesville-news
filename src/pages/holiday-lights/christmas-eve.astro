@@ -1,0 +1,46 @@
+---
+import Base from "../../layouts/Base.astro";
+import HolidayHeader from "../../components/HolidayHeader.astro";
+import { christmasEveServices } from "../../lib/holiday.js";
+import { slug } from "../../lib/slug.js";
+
+const services = christmasEveServices();
+const churchMail = "mailto:editor@waynesville.news?subject=" + encodeURIComponent("Christmas Eve service");
+---
+<Base
+  title="Christmas Eve Services · Holiday Guide · Waynesville News"
+  description="Christmas Eve church services in Waynesville, Corwin and Wayne Township, Ohio, by time, with links to each church."
+  showInfoBar={false}
+>
+  <div class="reading">
+    <HolidayHeader title="Christmas Eve Services" current="eve">
+      Christmas Eve services at churches in and around Waynesville, earliest first.
+    </HolidayHeader>
+
+    {services.length > 0 ? (
+      <ul class="events">
+        {services.map((s) => (
+          <li>
+            <div class="date">{s.time}</div>
+            <div>
+              <a class="ev-title" href={`/churches/#${slug(s.church)}`}>{s.church}</a>
+              <div class="ev-meta">{[s.what, s.town].filter(Boolean).join(" · ")}</div>
+            </div>
+          </li>
+        ))}
+      </ul>
+    ) : (
+      <p class="muted">We'll list services here as churches post them in December.</p>
+    )}
+
+    <p class="small">
+      Times are as each church posts them. Tap a church for its address, phone and website, and check with the
+      church before you go. See all area congregations in the <a href="/churches/">church directory</a>.
+    </p>
+
+    <div class="sp-join">
+      <h3>Is your church's service missing?</h3>
+      <p><a href={churchMail}>Email the editor</a> with the church, the service times and a link to where the church posted them.</p>
+    </div>
+  </div>
+</Base>

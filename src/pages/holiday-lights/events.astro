@@ -1,0 +1,38 @@
+---
+import Base from "../../layouts/Base.astro";
+import HolidayHeader from "../../components/HolidayHeader.astro";
+import { holidayEvents } from "../../lib/holiday.js";
+
+const events = holidayEvents();
+---
+<Base
+  title="Holiday Events · Holiday Guide · Waynesville News"
+  description="Tree lightings, Santa visits, Christmas in the Village and other holiday events in and around Waynesville, Ohio."
+  showInfoBar={false}
+>
+  <div class="reading">
+    <HolidayHeader title="Holiday Events" current="events">
+      Tree lightings, Santa visits, holiday markets and more in and around Waynesville, soonest first.
+    </HolidayHeader>
+
+    {events.length > 0 ? (
+      <section class="dir-group">
+        <ul class="events">
+          {events.map((e) => (
+            <li>
+              <div class="date">{e.dateLabel}</div>
+              <div>
+                <a class="ev-title" href={e.source} target="_blank" rel="noopener">{e.title}</a>
+                <div class="ev-meta">{e.venue}{e.note ? ` · ${e.note}` : ""}</div>
+              </div>
+            </li>
+          ))}
+        </ul>
+      </section>
+    ) : (
+      <p class="muted">No holiday events on the calendar right now. Check the <a href="/events/">full events calendar</a>.</p>
+    )}
+
+    <p><a class="more" href="/events/">Full events calendar →</a></p>
+  </div>
+</Base>
