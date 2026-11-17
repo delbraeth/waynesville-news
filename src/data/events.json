@@ -471,7 +471,7 @@
       "category": "Sports",
       "local": true,
       "source": "/images/events/2026-11-20-regional-final-lakota-east.webp",
-      "note": "Division V, Region 20 final at a neutral site, Lakota East High School in Liberty Township, 7 p.m. Waynesville beat Graham 14-7 in the semifinal; Bishop Fenwick, from Franklin, won 27-13 at Williamsburg. Check the Spartans' pages for ticket details; tap Details for the team's graphic."
+      "note": "Division V, Region 20 final at a neutral site, Lakota East High School in Liberty Township, 7 p.m., with Waynesville as the home team. Waynesville beat Graham 14-7 in the semifinal; Bishop Fenwick, from Franklin, won 27-13 at Williamsburg. Check the Spartans' pages for ticket details; tap Details for the team's graphic."
     },
     {
       "title": "Wayne Local Schools Board of Education — Regular Meeting",
@@ -537,6 +537,15 @@
       "source": "https://www.fema.gov/press-release/20260916/fema-and-fcc-schedule-2026-nationwide-test-emergency-alert-system-november",
       "note": "FEMA and the FCC will test the Emergency Alert System on broadcast and cable TV and radio. It will not go to cellphones. The message will say it is only a test, and no action is needed. If severe weather or a real emergency gets in the way, the backup date is Thursday, Dec. 3.",
       "local": true
+    },
+    {
+      "title": "All-Village Spartan Send-Off — Regional Final",
+      "dateISO": "2026-11-20T16:30:00-05:00",
+      "dateLabel": "Fri, Nov 20 · 4:30 PM · Free",
+      "venue": "Waynesville High School and along the route, Waynesville",
+      "category": "Sports",
+      "source": "/images/events/2026-11-20-spartan-send-off.webp",
+      "note": "Waynesville Football invites the whole village to line the route and cheer the Spartans on as they leave for the Division V, Region 20 final against Bishop Fenwick at 7 p.m. at Lakota East High School. The buses turn right out of the school, right on Main Street, then right on State Route 73. Tap Details for the flyer."
     }
   ]
 }
