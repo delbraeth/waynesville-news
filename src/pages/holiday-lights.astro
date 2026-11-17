@@ -2,6 +2,8 @@
 import Base from "../layouts/Base.astro";
 import lights from "../data/holiday-lights.json";
 import photoData from "../data/holiday-photos.json";
+import directory from "../data/directory.json";
+import { slug } from "../lib/slug.js";
 import { currentDisplays, holidayEvents } from "../lib/holiday.js";
 
 type Display = {
@@ -54,7 +56,10 @@ const bulbs = Array.from({ length: SPANS * PER_SPAN }, (_, i) => {
   return { x, y: sag(x), color: BULB_COLORS[i % BULB_COLORS.length], delay: ((i * 7) % 10) / 5 };
 });
 
-type Photo = { image: string; alt: string; kind: "home" | "business"; business?: string; area?: string; message?: string; added: string };
+type Photo = { image: string; alt: string; kind: "home" | "business"; business?: string; message?: string; added: string };
+// A business photo links to its Business Directory listing when the name matches one.
+const listed = new Set((directory.items as { name: string }[]).map((i) => i.name));
+const dirLink = (name?: string) => (name && listed.has(name) ? `/directory/#${slug(name)}` : "");
 // Reader photos: only editor-approved items are in the data file. Newest first.
 const photos = ([...(photoData.items as Photo[])]).sort((a, b) => b.added.localeCompare(a.added));
 const photoBody = [
@@ -168,8 +173,10 @@ const submitMail = "mailto:editor@waynesville.news?subject=" + encodeURIComponen
               </a>
               <p class="hp-cap">
                 {ph.message && <span class="hp-msg">“{ph.message}”</span>}
-                {ph.kind === "business" && ph.business && <strong>{ph.business}</strong>}
-                <span class="muted">{ph.kind === "business" ? (ph.area ?? "Waynesville") : "Waynesville"}</span>
+                {ph.kind === "business" && ph.business && (
+                  <strong>{dirLink(ph.business) ? <a href={dirLink(ph.business)}>{ph.business}</a> : ph.business}</strong>
+                )}
+                <span class="muted">Waynesville</span>
               </p>
             </li>
           ))}
@@ -192,7 +199,7 @@ const submitMail = "mailto:editor@waynesville.news?subject=" + encodeURIComponen
         </ul>
         <p class="small">
           Add a short holiday message if you like, such as "Happy holidays from the Smiths." For homes we never post
-          an address, street or house number, just your message and "Waynesville." Businesses can be named. We remove
+          an address, street or house number, just your message and "Waynesville." Businesses are named and linked to their listing in our <a href="/directory/">Business Directory</a>. We remove
           location data from every photo before it goes up, and we take a photo down any time you ask. Sending a photo
           means you're OK with us posting it here.
         </p>
