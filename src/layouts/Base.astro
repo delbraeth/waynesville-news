@@ -19,6 +19,7 @@ interface Props {
   ogType?: "website" | "article";
   published?: Date;    // article publish date, for share cards
   jsonLd?: object | object[]; // schema.org structured data (src/lib/structuredData.js)
+  noindex?: boolean;   // keep utility pages (search, forms) out of search engines; also leave them out of the sitemap in astro.config
 }
 const {
   title = "Waynesville News",
@@ -30,6 +31,7 @@ const {
   ogType = "website",
   published,
   jsonLd,
+  noindex = false,
 } = Astro.props;
 const jsonLdBlocks = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
 
@@ -52,6 +54,7 @@ const ogImage = new URL(image || "/og.png", Astro.site);
     <title>{title}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
+    {noindex && <meta name="robots" content="noindex, follow" />}
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="alternate" type="application/rss+xml" title="Waynesville News" href="/rss.xml" />
     <link rel="alternate" type="application/rss+xml" title="Waynesville News Daily Brief (podcast)" href="/podcast.xml" />
@@ -59,6 +62,7 @@ const ogImage = new URL(image || "/og.png", Astro.site);
     <!-- Open Graph -->
     <meta property="og:type" content={ogType} />
     <meta property="og:site_name" content="Waynesville News" />
+    <meta property="og:locale" content="en_US" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />

@@ -44,7 +44,7 @@ const corrections = correctionsData.items.filter((c) => c.page === `/briefs/${en
   published={entry.data.date}
   dateLine={dateFmt.format(entry.data.date)}
   showInfoBar={false}
-  jsonLd={entry.data.demo ? undefined : newsArticle({ title: entry.data.title, dek: entry.data.dek, date: entry.data.date, url: Astro.url.pathname })}
+  jsonLd={entry.data.demo ? undefined : newsArticle({ title: entry.data.title, dek: entry.data.dek, date: entry.data.date, url: Astro.url.pathname, image: cardPath(entry.id) })}
 >
   <div class="reading">
     <p class="kicker">Daily Brief · {dateFmt.format(entry.data.date)}</p>

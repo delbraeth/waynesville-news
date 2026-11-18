@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://waynesville.news/sitemap-index.xml
+Sitemap: https://waynesville.news/news-sitemap.xml
