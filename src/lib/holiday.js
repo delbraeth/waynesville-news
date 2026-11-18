@@ -3,6 +3,7 @@
 // so it switches itself on in November and off after the holidays.
 import lights from "../data/holiday-lights.json";
 import churches from "../data/churches.json";
+import { slug } from "./slug.js";
 import { upcomingEvents } from "./events.js";
 
 export const HOLIDAY = "holiday";
@@ -43,7 +44,7 @@ export function christmasEveServices() {
   return (churches.items ?? [])
     .filter((c) => c.christmasEve && c.christmasEve.year === year && (c.christmasEve.services ?? []).length)
     .flatMap((c) => c.christmasEve.services.map((s) => ({
-      church: c.name, town: c.town, start: s.start, time: timeLabel(s.start), what: s.what ?? "",
+      church: c.name, slug: slug(c.name), town: c.town, address: c.address, website: c.website, start: s.start, time: timeLabel(s.start), what: s.what ?? "",
     })))
     .sort((a, b) => a.start.localeCompare(b.start) || a.church.localeCompare(b.church));
 }

@@ -6,9 +6,20 @@ const abs = (u) => (u ? new URL(u, SITE).toString() : undefined);
 
 export const publisher = {
   "@type": "NewsMediaOrganization",
+  "@id": `${SITE}/#org`,
   name: "Waynesville News",
   url: `${SITE}/`,
-  logo: { "@type": "ImageObject", url: `${SITE}/podcast-cover.jpg` },
+  logo: { "@type": "ImageObject", url: `${SITE}/podcast-cover.jpg`, width: 3000, height: 3000 },
+  description: "Daily local news for Waynesville, Ohio, Corwin and Wayne Township: schools, local government, events, businesses and community.",
+  email: "editor@waynesville.news",
+  areaServed: [
+    { "@type": "City", name: "Waynesville", address: { "@type": "PostalAddress", addressLocality: "Waynesville", addressRegion: "OH", postalCode: "45068", addressCountry: "US" } },
+    { "@type": "AdministrativeArea", name: "Wayne Township, Warren County, Ohio" },
+    { "@type": "City", name: "Corwin, Ohio" },
+  ],
+  sameAs: ["https://www.facebook.com/WaynesvilleNews/"],
+  publishingPrinciples: `${SITE}/about/`,
+  correctionsPolicy: `${SITE}/corrections/`,
 };
 
 // Brief or story page. `date` is the content collection's Date (UTC midnight
@@ -25,6 +36,8 @@ export function newsArticle({ title, dek, date, updated, url, image }) {
     mainEntityOfPage: abs(url),
     url: abs(url),
     image: [abs(image || "/og.png")],
+    inLanguage: "en-US",
+    isAccessibleForFree: true,
     author: { "@type": "Organization", name: "Waynesville News", url: `${SITE}/` },
     publisher,
   };
@@ -60,10 +73,58 @@ export const eventList = (events) => ({
 export const website = {
   "@context": "https://schema.org",
   "@graph": [
-    { "@type": "WebSite", name: "Waynesville News", url: `${SITE}/` },
+    {
+      "@type": "WebSite",
+      "@id": `${SITE}/#website`,
+      name: "Waynesville News",
+      url: `${SITE}/`,
+      inLanguage: "en-US",
+      publisher: { "@id": `${SITE}/#org` },
+      potentialAction: {
+        "@type": "SearchAction",
+        target: { "@type": "EntryPoint", urlTemplate: `${SITE}/search/?q={search_term_string}` },
+        "query-input": "required name=search_term_string",
+      },
+    },
     publisher,
   ],
 };
+
+// Holiday Lights display with dates (undated ones are skipped by the caller).
+// Dates are whole days, as the organizer posts them.
+export function displayEvent(d) {
+  return {
+    "@type": "Event",
+    name: d.name,
+    startDate: d.startDate,
+    endDate: d.endDate ?? undefined,
+    description: d.about || undefined,
+    url: abs(d.website || d.source),
+    eventStatus: "https://schema.org/EventScheduled",
+    eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
+    location: { "@type": "Place", name: d.location || d.town, address: /\b(oh|ohio)\b/i.test(d.location ?? "") ? d.location : `${d.location || d.town}, Ohio` },
+  };
+}
+
+// A church's Christmas Eve service (from christmasEveServices()).
+export function serviceEvent(s, year) {
+  return {
+    "@type": "Event",
+    name: `${s.what || "Christmas Eve service"} at ${s.church}`,
+    startDate: `${year}-12-24T${s.start}:00-05:00`,
+    url: abs(`/churches/#${s.slug}`),
+    eventStatus: "https://schema.org/EventScheduled",
+    eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
+    location: { "@type": "Place", name: s.church, address: s.address ? `${s.address}, Ohio` : `${s.town}, Ohio` },
+    organizer: { "@type": "Organization", name: s.church, url: s.website || undefined },
+  };
+}
+
+export const itemList = (items) => ({
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  itemListElement: items.map((item, i) => ({ "@type": "ListItem", position: i + 1, item })),
+});
 
 // Safe to drop into a <script> tag: "<" can't close it early.
 export const ldJson = (data) => JSON.stringify(data).replace(/</g, "\\u003c");

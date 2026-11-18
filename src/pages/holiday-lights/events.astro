@@ -2,6 +2,7 @@
 import Base from "../../layouts/Base.astro";
 import HolidayHeader from "../../components/HolidayHeader.astro";
 import { holidayEvents } from "../../lib/holiday.js";
+import { eventList } from "../../lib/structuredData.js";
 
 const events = holidayEvents();
 ---
@@ -9,6 +10,7 @@ const events = holidayEvents();
   title="Holiday Events · Holiday Guide · Waynesville News"
   description="Tree lightings, Santa visits, Christmas in the Village and other holiday events in and around Waynesville, Ohio."
   showInfoBar={false}
+  jsonLd={events.length ? eventList(events) : undefined}
 >
   <div class="reading">
     <HolidayHeader title="Holiday Events" current="events">
