@@ -6,7 +6,7 @@ import Base from "../../layouts/Base.astro";
 const EDITOR = "editor@waynesville.news";
 const plainMail = `mailto:${EDITOR}?subject=${encodeURIComponent("Correction")}`;
 ---
-<Base title="Report a Correction · Waynesville News" description="Tell the Waynesville News about a mistake: a wrong date, name, address, phone number or fact in a brief, story or listing." showInfoBar={false}>
+<Base title="Report a Correction · Waynesville News" description="Tell the Waynesville News about a mistake: a wrong date, name, address, phone number or fact in a brief, story or listing." noindex showInfoBar={false}>
   <div class="reading">
     <p class="kicker">Corrections</p>
     <h1>Report a correction</h1>

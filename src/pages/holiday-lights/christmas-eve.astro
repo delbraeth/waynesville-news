@@ -1,16 +1,21 @@
 ---
 import Base from "../../layouts/Base.astro";
 import HolidayHeader from "../../components/HolidayHeader.astro";
+import lights from "../../data/holiday-lights.json";
 import { christmasEveServices } from "../../lib/holiday.js";
+import { serviceEvent, itemList } from "../../lib/structuredData.js";
 import { slug } from "../../lib/slug.js";
 
 const services = christmasEveServices();
+const year = lights.season?.label ?? "";
 const churchMail = "mailto:editor@waynesville.news?subject=" + encodeURIComponent("Christmas Eve service");
 ---
 <Base
   title="Christmas Eve Services · Holiday Guide · Waynesville News"
   description="Christmas Eve church services in Waynesville, Corwin and Wayne Township, Ohio, by time, with links to each church."
   showInfoBar={false}
+  noindex={services.length === 0}
+  jsonLd={services.length ? itemList(services.map((s) => serviceEvent(s, year))) : undefined}
 >
   <div class="reading">
     <HolidayHeader title="Christmas Eve Services" current="eve">
