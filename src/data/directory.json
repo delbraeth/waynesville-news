@@ -1,6 +1,6 @@
 {
   "_note": "Local business directory. Built by scripts/fetch-directory.mjs from the Waynesville Area Chamber of Commerce's public member directory (name, location, phone, website, and the Chamber's description, as published) plus hand-added listings in directory-manual.json. Contact names, emails and hours are deliberately not copied from the Chamber; an hours line appears only when the owner supplied it (hours + hoursChecked in directory-manual.json). Do not edit by hand — edit directory-manual.json and re-run `npm run refresh:directory` (or `npm run refresh:directory -- --manual-only` to merge manual edits without re-reading the Chamber site).",
-  "updated": "2026-11-17T06:45:57.782Z",
+  "updated": "2026-11-18T16:05:38.381Z",
   "sections": [
     {
       "id": "food",
@@ -1045,26 +1045,6 @@
         "facebook": "https://www.facebook.com/tcassidypainting/"
       },
       "about": "Small local painting business based in Waynesville.",
-      "local": true,
-      "from": "manual"
-    },
-    {
-      "id": "manual-cassidytravel",
-      "name": "Cassidy Travel",
-      "location": "Waynesville, OH",
-      "phone": "",
-      "sections": [
-        "pro"
-      ],
-      "kinds": [
-        "Travel Planning",
-        "Accessible Travel",
-        "Cruises"
-      ],
-      "source": "Description supplied by the business, 2026-10-31; https://cassidytravel.org/",
-      "website": "https://cassidytravel.org/",
-      "email": "patrick.cassidy@fora.travel",
-      "about": "Plans cruises, theme park vacations, all-inclusive resorts and group trips from Waynesville. Patrick Cassidy, an independent travel advisor with Fora Travel, specializes in multi-generational trips and travel for people with disabilities, autism and sensory needs. A power wheelchair user, Patrick checks accessible rooms, ride access, parking and quiet spaces before clients book. Credentials include Certified Autism Travel Professional, Certified Accessible Travel Advocate, College of Disney Knowledge graduate, and top-tier certification with Holland America, Princess, Norwegian and Virgin Voyages. No planning fee for vacations.",
       "local": true,
       "from": "manual"
     },
@@ -2929,6 +2909,30 @@
       "source": "Editor-confirmed (2026-11-03)",
       "website": "",
       "about": "Gas station and convenience store on North Main Street selling lottery tickets, candy and ice cream.",
+      "local": true,
+      "from": "manual"
+    },
+    {
+      "id": "manual-patrickcassidytravel",
+      "name": "Patrick Cassidy Travel",
+      "location": "Waynesville, OH",
+      "phone": "513-897-3457",
+      "sections": [
+        "pro"
+      ],
+      "kinds": [
+        "Travel Planning",
+        "Accessible Travel",
+        "Cruises"
+      ],
+      "source": "Description supplied by the business, 2026-10-31; updated by the business 2026-11-18 (renamed Patrick Cassidy Travel); https://cassidytravel.org/",
+      "website": "https://cassidytravel.org/",
+      "email": "patrick.cassidy@fora.travel",
+      "social": {
+        "facebook": "https://www.facebook.com/patrickcassidytravel",
+        "instagram": "https://www.instagram.com/patrickcassidytravel/"
+      },
+      "about": "Plans cruises, Disney and theme park vacations, all-inclusive resorts and group trips from Waynesville. Patrick Cassidy, an independent travel advisor of Fora Travel, specializes in multigenerational trips and travel for people with disabilities, autism and sensory needs. A power wheelchair user, Patrick checks accessible rooms, ride access, parking and quiet spaces before clients book. Credentials include Certified Autism Travel Professional, Certified Accessible Travel Advocate, KultureCity Sensory Inclusive certification, College of Disney Knowledge graduate, Holland America Line Academy Platinum (top tier), and top-tier certification with Princess, Norwegian and Virgin Voyages. No planning fee for vacations.",
       "local": true,
       "from": "manual"
     },

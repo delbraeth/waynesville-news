@@ -561,7 +561,7 @@
       }
     },
     {
-      "name": "Cassidy Travel",
+      "name": "Patrick Cassidy Travel",
       "sections": [
         "pro"
       ],
@@ -571,11 +571,15 @@
         "Cruises"
       ],
       "location": "Waynesville, OH",
-      "phone": "",
+      "phone": "513-897-3457",
       "website": "https://cassidytravel.org/",
       "email": "patrick.cassidy@fora.travel",
-      "about": "Plans cruises, theme park vacations, all-inclusive resorts and group trips from Waynesville. Patrick Cassidy, an independent travel advisor with Fora Travel, specializes in multi-generational trips and travel for people with disabilities, autism and sensory needs. A power wheelchair user, Patrick checks accessible rooms, ride access, parking and quiet spaces before clients book. Credentials include Certified Autism Travel Professional, Certified Accessible Travel Advocate, College of Disney Knowledge graduate, and top-tier certification with Holland America, Princess, Norwegian and Virgin Voyages. No planning fee for vacations.",
-      "source": "Description supplied by the business, 2026-10-31; https://cassidytravel.org/"
+      "about": "Plans cruises, Disney and theme park vacations, all-inclusive resorts and group trips from Waynesville. Patrick Cassidy, an independent travel advisor of Fora Travel, specializes in multigenerational trips and travel for people with disabilities, autism and sensory needs. A power wheelchair user, Patrick checks accessible rooms, ride access, parking and quiet spaces before clients book. Credentials include Certified Autism Travel Professional, Certified Accessible Travel Advocate, KultureCity Sensory Inclusive certification, College of Disney Knowledge graduate, Holland America Line Academy Platinum (top tier), and top-tier certification with Princess, Norwegian and Virgin Voyages. No planning fee for vacations.",
+      "source": "Description supplied by the business, 2026-10-31; updated by the business 2026-11-18 (renamed Patrick Cassidy Travel); https://cassidytravel.org/",
+      "social": {
+        "facebook": "https://www.facebook.com/patrickcassidytravel",
+        "instagram": "https://www.instagram.com/patrickcassidytravel/"
+      }
     },
     {
       "name": "Clear Creek Amish Furniture",
