@@ -1,37 +1,7 @@
 {
   "_note": "Mary L. Cook Public Library — upcoming programs from the library's WhoFi event calendar (https://marylcook-main-oh.whofi.com/calendar/full). \"items\": next 14 days, for the daily brief (dateISO is Eastern wall-clock marked Z). \"calendar\": next 45 days for the events calendar, real offsets, with sign-up details read from each program's page (scripts/lib/signup.mjs). Canceled events and closures excluded.",
-  "updated": "2026-11-17T11:42:22.947Z",
+  "updated": "2026-11-18T11:42:01.089Z",
   "items": [
-    {
-      "title": "Toddler Time",
-      "dateISO": "2026-11-17T10:30:00Z",
-      "dateLabel": "Tue · Nov 17, 10:30 AM",
-      "link": "https://marylcook-main-oh.whofi.com/calendar/event/354852/"
-    },
-    {
-      "title": "Teen Tuesday (6th-12th Grade)",
-      "dateISO": "2026-11-17T15:00:00Z",
-      "dateLabel": "Tue · Nov 17, 3:00 PM",
-      "link": "https://marylcook-main-oh.whofi.com/calendar/event/356794/"
-    },
-    {
-      "title": "Rapid Readers Book Club",
-      "dateISO": "2026-11-17T16:00:00Z",
-      "dateLabel": "Tue · Nov 17, 4:00 PM",
-      "link": "https://marylcook-main-oh.whofi.com/calendar/event/354849/"
-    },
-    {
-      "title": "Genre Exploration Book Club Meeting",
-      "dateISO": "2026-11-17T17:30:00Z",
-      "dateLabel": "Tue · Nov 17, 5:30 PM",
-      "link": "https://marylcook-main-oh.whofi.com/calendar/event/354866/"
-    },
-    {
-      "title": "Library Regular Board Meeting",
-      "dateISO": "2026-11-17T18:30:00Z",
-      "dateLabel": "Tue · Nov 17, 6:30 PM",
-      "link": "https://marylcook-main-oh.whofi.com/calendar/event/354864/"
-    },
     {
       "title": "Baby Bookworms",
       "dateISO": "2026-11-18T10:30:00Z",
@@ -49,57 +19,39 @@
       "dateISO": "2026-11-19T15:00:00Z",
       "dateLabel": "Thu · Nov 19, 3:00 PM",
       "link": "https://marylcook-main-oh.whofi.com/calendar/event/354837/"
+    },
+    {
+      "title": "Early Readers Kindergarten Book Club",
+      "dateISO": "2026-11-19T16:00:00Z",
+      "dateLabel": "Thu · Nov 19, 4:00 PM",
+      "link": "https://marylcook-main-oh.whofi.com/calendar/event/354848/"
+    },
+    {
+      "title": "Letters to Santa",
+      "dateISO": "2026-11-20T09:00:00Z",
+      "dateLabel": "Fri · Nov 20, 9:00 AM",
+      "link": "https://marylcook-main-oh.whofi.com/calendar/event/356803/"
+    },
+    {
+      "title": "Crafting Fun Drop-in Program (Adults)",
+      "dateISO": "2026-11-21T10:30:00Z",
+      "dateLabel": "Sat · Nov 21, 10:30 AM",
+      "link": "https://marylcook-main-oh.whofi.com/calendar/event/356838/"
+    },
+    {
+      "title": "The Loop Group (Fiber Crafts Club)",
+      "dateISO": "2026-11-24T17:30:00Z",
+      "dateLabel": "Tue · Nov 24, 5:30 PM",
+      "link": "https://marylcook-main-oh.whofi.com/calendar/event/358155/"
+    },
+    {
+      "title": "Thanksgiving",
+      "dateISO": "2026-11-26T00:00:00Z",
+      "dateLabel": "Thu · Nov 26, 12:00 AM",
+      "link": "https://marylcook-main-oh.whofi.com/calendar/event/8100/"
     }
   ],
   "calendar": [
-    {
-      "title": "Toddler Time",
-      "dateISO": "2026-11-17T10:30:00-05:00",
-      "endISO": "2026-11-17T11:00:00-05:00",
-      "dateLabel": "Tue, Nov 17 · 10:30 AM",
-      "link": "https://marylcook-main-oh.whofi.com/calendar/event/354852/",
-      "signup": {
-        "required": false
-      }
-    },
-    {
-      "title": "Teen Tuesday (6th-12th Grade)",
-      "dateISO": "2026-11-17T15:00:00-05:00",
-      "endISO": "2026-11-17T16:00:00-05:00",
-      "dateLabel": "Tue, Nov 17 · 3:00 PM",
-      "link": "https://marylcook-main-oh.whofi.com/calendar/event/356794/",
-      "signup": {
-        "required": false
-      }
-    },
-    {
-      "title": "Rapid Readers Book Club",
-      "dateISO": "2026-11-17T16:00:00-05:00",
-      "endISO": "2026-11-17T16:45:00-05:00",
-      "dateLabel": "Tue, Nov 17 · 4:00 PM",
-      "link": "https://marylcook-main-oh.whofi.com/calendar/event/354849/",
-      "signup": {
-        "required": true,
-        "opens": "2026-08-17"
-      }
-    },
-    {
-      "title": "Genre Exploration Book Club Meeting",
-      "dateISO": "2026-11-17T17:30:00-05:00",
-      "endISO": "2026-11-17T18:15:00-05:00",
-      "dateLabel": "Tue, Nov 17 · 5:30 PM",
-      "link": "https://marylcook-main-oh.whofi.com/calendar/event/354866/",
-      "signup": {
-        "required": true
-      }
-    },
-    {
-      "title": "Library Regular Board Meeting",
-      "dateISO": "2026-11-17T18:30:00-05:00",
-      "endISO": "2026-11-17T19:30:00-05:00",
-      "dateLabel": "Tue, Nov 17 · 6:30 PM",
-      "link": "https://marylcook-main-oh.whofi.com/calendar/event/354864/"
-    },
     {
       "title": "Baby Bookworms",
       "dateISO": "2026-11-18T10:30:00-05:00",

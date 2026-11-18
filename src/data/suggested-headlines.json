@@ -1,7 +1,13 @@
 {
   "_note": "Candidate local headlines (Google News RSS). Published as a quoted headline (or, when available, a short publisher-written excerpt) + source + link; never reproduce article body text.",
-  "updated": "2026-11-17T11:41:59.824Z",
+  "updated": "2026-11-18T11:41:41.660Z",
   "items": [
+    {
+      "title": "‘Gilmore Girls’ themed weekend in Waynesville is here: What to know",
+      "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQWFF6MnhBdFdqOFdWTFBVa3c1a1QzSW9yeW13Q25tOXF0b09lY3gzQW1mTzkzbGtoYnFGRzNjNW5tb19DNGUtUzk1YUFnbU5IeXdfSF8zZnlnVENrR0g1ckJwcWZIS1d5UVNyeGllbnIzR0wxeTd2X0pZU3BaRlFuWGZMRjg2aGwtRDZLNkI3NHFLOExY?oc=5",
+      "source": "Dayton Daily News",
+      "date": "Mon, 16 Nov 2026 19:59:15 GMT"
+    },
     {
       "title": "Warren County woman shares story after nearly falling for jury duty scam",
       "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQYVV2czA3MnpmQWl4R3hZRGwxaUNjcVotQi1VbmRsRlhsbzN2b1NQMHdnNkhiU1l3dEFNN1h1ano3STFXODlvenNhWXY3dUJJLWdDdkRJaG1JbHV1UXUydmdpdWJnNTdxcDVoN2Fmb0lEcjVhMWNscDlCdkJ4dXVxdW5YVWY4Zw?oc=5",
@@ -9,46 +15,18 @@
       "date": "Mon, 16 Nov 2026 22:22:00 GMT"
     },
     {
-      "title": "‘Gilmore Girls’ themed weekend in Waynesville is here: What to know",
-      "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQWFF6MnhBdFdqOFdWTFBVa3c1a1QzSW9yeW13Q25tOXF0b09lY3gzQW1mTzkzbGtoYnFGRzNjNW5tb19DNGUtUzk1YUFnbU5IeXdfSF8zZnlnVENrR0g1ckJwcWZIS1d5UVNyeGllbnIzR0wxeTd2X0pZU3BaRlFuWGZMRjg2aGwtRDZLNkI3NHFLOExY?oc=5",
-      "source": "Dayton Daily News",
-      "date": "Mon, 16 Nov 2026 20:09:11 GMT"
-    },
-    {
       "title": "Governor-Elect Amy Acton Announces Transition Co-Chairs",
       "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOUHVuUnRCWU1xaWVGUVNaMXBYREFheXBGVmxiM2FaVXJFcUFYS1pHUXdaSVVHOW5HaG56TUlVWWhMNDhjdXBweDMyREVNTnU4RDBJWTdoQjRhek0yUDhXUFBVQnIwUE05WkFOWF9zSkdWVTUxYnZyUmc4M1p0YUJxQ3Y2Z0ZNNXFJUWEyVlpBb0h3MUZ0OGg2ZWhfU3FTYldycW94ZEhXbHNaUQ?oc=5",
       "source": "Warren County Post",
-      "date": "Mon, 16 Nov 2026 04:27:56 GMT"
+      "date": "Mon, 16 Nov 2026 04:27:56 GMT",
+      "sourceUrl": "https://warrencountypost.com/g/lebanon-oh/n/398328/governor-elect-amy-acton-announces-transition-co-chairs",
+      "excerpt": "Acton Pepper Transition Appoints Senior Transition Staff"
     },
     {
-      "title": "Cincinnati’s Night of Lights moves to Warren County Fairgrounds",
-      "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNQVNHd0FKLUxLdldxSTlNT0h2blRzbGNyYUJhODBoS1VFZTB2MjB3anZ4YVVROWU3SUtDc3drcEdHaTRHM1pvQUxydjlfdDNSQ1FQNzcwamR2SkZfVnQxUVlUdFFnOEhNbTc5eE5vZjF4QlJWQWxXTi1ESWFLRHZuY3FIMS10Sm1pRGRoWmNMbEM5djVC?oc=5",
-      "source": "FOX19 | Cincinnati",
-      "date": "Thu, 12 Nov 2026 16:44:00 GMT"
-    },
-    {
-      "title": "Holiday Magic Across Warren County: Your Guide to Christmas Festivals, Parades and Tree Lightings",
-      "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNYzRITlZzZ3JsemxaUFZfUnJJZk43YU9uSWZDcnVYalBRaW5xVnJETXZyQk1CdmNKSnA3aTh3bUJCZlpJYUJJS19IOW95Z3dHOE5na2ZudEdhaU9IQXlMVVR2N2pyX3NDNW00WEQ3b2NwaXhrbWRuN2NSNFgwY1ZRVHNWbmxaS2lWMk9kbTZzcUEwTndKcll0NWU0WnlrX3FKdDFJMG9CTkh3WUgxMTJ5eHJHSWVNLXNreFZrX2toeDdEX09XV0Zj?oc=5",
-      "source": "Warren County Post",
-      "date": "Sun, 15 Nov 2026 00:21:36 GMT"
-    },
-    {
-      "title": "Domestic dispute triggers Warren County shelter-in-place warning",
-      "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPRUxtVXNkOG9DLXhuT1czMVRoVmRPZHZRSUhWOFN3ZDJYQnV3VWxuOTY2NUtfcFZGLUlnQnBFSFV5Z0xJM0p5Q3ZIa0Z6bTg4VzU0eDZFT3IzXzNiYXh5VFFndjc2RC1ici1fT3JYYTRLQ2kzbjNhYjlWVjNBT3kzUVc1M0tlbGY3dnpFZGtlSTh6MGRM?oc=5",
-      "source": "Dayton Daily News",
-      "date": "Thu, 12 Nov 2026 16:26:54 GMT"
-    },
-    {
-      "title": "Warren County couple sentenced to prison in disturbing sex crimes case",
-      "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOMzRmLXBGVmFVb05Kc3hQNXM0TktlcGlUaFd1TWRnQ2p3UGVkYmFxNkpoYXdwWDNNQ3h6X3EyME1mMGxLdVZabl9BYUlVT0lNMVJ4V3F2bmpFZTJmTlkzaHIxckNFRlEyOWRrdHZ6cmVudnZFN25UdU13OHJpMldsaW45UFliUDVmYUJRRll4Mnh6VVR5MzFDTHptTG5rVmxtV0d4elF2N1h3UVE?oc=5",
-      "source": "WCPO 9 News",
-      "date": "Wed, 11 Nov 2026 04:01:57 GMT"
-    },
-    {
-      "title": "Sentencing to be held Tuesday for Warren County couple convicted of sex crimes",
-      "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOazFGb1ItdXFNbFZuZmRxSXRtUEttczlUMGVaQndieTltOElKQ3hzdXBkNEI2NW9DVDdZcGJTYWVta2g3ZmpkX0FfUS1ReHVHaGNzckpnZEFkOUlvVnAzTUdjQ2NxaUx4RGlLVjFHQks3bG5xTkxiRkRMTEUzajRrQ0NSOUJ5YlZGemJWa3o1SU4zaTBGY2hveEMxQ2c?oc=5",
-      "source": "WLWT",
-      "date": "Tue, 10 Nov 2026 21:42:00 GMT"
+      "title": "Semi driver, passenger seriously injured in crash resulting in hazardous spill",
+      "link": "https://news.google.com/rss/articles/CBMi2gJBVV95cUxObHpYR3JCYTM4eEZlSlJEUlJqMVRMQkhBOUltTmtJaHpHT0xfV0FjS09OSkNDNUt5RlJSSXpSNl9TRWlhSUR5Y3lyN2RIQ1NDQ2lmMnFnX3I5Nk1Na0Q0a0QwenZoMTRNZVZXRkJsWFBKa1dnajg1ZndVTjNUS2hxUmx0aFp5S3YxVVhMV3FQVlVTaEtOZjRTdlVHVmlIMkJBM29XQVBJMzM4NnNYVmtkMC1vdmtNa3Q3eXVSTUwwVmJ6dlZDbU9VdjN6Ymp5X0FxQmowRmpTSWc3TGplR2htZm1XTmhjMHMtWFJiU2lXczhtOTk2ZkVYNGhCd09kR3hlMUp2X3hORXFoZDFaNGg5QV8xOWFaVHV1cGVxSWc3QXRfMGJva3QzVmM0WFkyYkllN2xCQjFndDhyM2pDb0xoeXVrZlR2eHFRZ1dMSGR6cENvdC1FZ0hoU0hB?oc=5",
+      "source": "WKRC",
+      "date": "Thu, 12 Nov 2026 05:31:51 GMT"
     }
   ]
 }

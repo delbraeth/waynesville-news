@@ -1,7 +1,14 @@
 {
   "_note": "Recent Wayne Local Schools Facebook posts via rss.app bridge. Title + link + short excerpt; the district's own words. Fail-safe: kept from last run if the bridge is down.",
-  "updated": "2026-11-17T11:41:17.781Z",
+  "updated": "2026-11-18T11:40:56.316Z",
   "items": [
+    {
+      "title": "Spartans: You or someone you know may be a great fit for this opportunity!Wayne Local Schools is seeking a Head Varsity...",
+      "link": "https://www.facebook.com/waynelocalschools/posts/pfbid0hv8kmGDDhbTCR8TfJzPbdL6he7tsL8DCd7XyVBj8AehWDUzWP9eDtkT9vu9JtENal",
+      "date": "Tue, 17 Nov 2026 18:48:21 GMT",
+      "dateLabel": "Tue, Nov 17",
+      "excerpt": "Spartans: You or someone you know may be a great fit for this opportunity! Wayne Local Schools is seeking a Head Varsity Boys Soccer Coach to lead the Waynesville Spartans. Interested candidates should email Jamie Manley, Athletic Director, at jmanley@waynelocal.net."
+    },
     {
       "title": "As we move into the season of gratitude, we’re appreciative of our WLS Transportation team and everything they do for…",
       "link": "https://www.facebook.com/waynelocalschools/posts/pfbid02VAtZewsWJ4zqc1jbBKtNeVNfSryERsfvcbhzefM9QEg4gbYsabXXmS3q8WEJSrYol",
@@ -50,13 +57,6 @@
       "date": "Sun, 15 Nov 2026 18:10:29 GMT",
       "dateLabel": "Sun, Nov 15",
       "excerpt": "women whose courage helped change the world. Don't miss your last chance to catch this moving performance! 📅 Sunday, November 15 | 2 p.m. 📍 Waynesville Performing Arts Center 🎟️ Students: $10 | Adults: $12 💳 Tickets available at the door. Cash and cards accepted."
-    },
-    {
-      "title": "SPARTANS, LET’S PACK THE STANDS!!! #SPARTANPRIDE…",
-      "link": "https://www.facebook.com/waynelocalschools/posts/pfbid026NnszDQmcXQUjXtWJkBWb8v2AUosmKe2ArYU7YPZUSZWBen7bgqVz691B9Ej43LRl",
-      "date": "Sun, 15 Nov 2026 16:08:35 GMT",
-      "dateLabel": "Sun, Nov 15",
-      "excerpt": ""
     }
   ]
 }
