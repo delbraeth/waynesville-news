@@ -1,13 +1,7 @@
 {
   "_note": "Mary L. Cook Public Library — upcoming programs from the library's WhoFi event calendar (https://marylcook-main-oh.whofi.com/calendar/full). \"items\": next 14 days, for the daily brief (dateISO is Eastern wall-clock marked Z). \"calendar\": next 45 days for the events calendar, real offsets, with sign-up details read from each program's page (scripts/lib/signup.mjs). Canceled events and closures excluded.",
-  "updated": "2026-11-18T11:42:01.089Z",
+  "updated": "2026-11-19T11:41:53.694Z",
   "items": [
-    {
-      "title": "Baby Bookworms",
-      "dateISO": "2026-11-18T10:30:00Z",
-      "dateLabel": "Wed · Nov 18, 10:30 AM",
-      "link": "https://marylcook-main-oh.whofi.com/calendar/event/354860/"
-    },
     {
       "title": "Service Dog Storytime (Special Preschool Storytime)",
       "dateISO": "2026-11-19T10:30:00Z",
@@ -49,19 +43,15 @@
       "dateISO": "2026-11-26T00:00:00Z",
       "dateLabel": "Thu · Nov 26, 12:00 AM",
       "link": "https://marylcook-main-oh.whofi.com/calendar/event/8100/"
+    },
+    {
+      "title": "Toddler Time",
+      "dateISO": "2026-12-01T10:30:00Z",
+      "dateLabel": "Tue · Dec 1, 10:30 AM",
+      "link": "https://marylcook-main-oh.whofi.com/calendar/event/358161/"
     }
   ],
   "calendar": [
-    {
-      "title": "Baby Bookworms",
-      "dateISO": "2026-11-18T10:30:00-05:00",
-      "endISO": "2026-11-18T11:00:00-05:00",
-      "dateLabel": "Wed, Nov 18 · 10:30 AM",
-      "link": "https://marylcook-main-oh.whofi.com/calendar/event/354860/",
-      "signup": {
-        "required": false
-      }
-    },
     {
       "title": "Service Dog Storytime (Special Preschool Storytime)",
       "dateISO": "2026-11-19T10:30:00-05:00",

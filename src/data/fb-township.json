@@ -1,7 +1,14 @@
 {
   "_note": "Recent Wayne Township (Warren Co.) Facebook posts via rss.app bridge. Title + link + short excerpt; the township's own words. Fail-safe: kept from last run if the bridge is down.",
-  "updated": "2026-11-18T11:40:56.806Z",
+  "updated": "2026-11-19T11:40:50.415Z",
   "items": [
+    {
+      "title": "Board of Trustees Meeting 11/17/2026…",
+      "link": "https://www.facebook.com/waynetownshipus/posts/pfbid02vceUN4tF2iSjMCSLA97rp7E63DGWX7axFuknZVqM6BTs4RgHi5dFGwkD1DDDYreWl",
+      "date": "Wed, 18 Nov 2026 14:29:24 GMT",
+      "dateLabel": "Wed, Nov 18",
+      "excerpt": ""
+    },
     {
       "title": "1. Call to order: 7:00 pm A. Welcome- Please sign in on our guest sheet for the township’s records B. Roll call C.…",
       "link": "https://www.facebook.com/waynetownshipus/posts/pfbid0c2R36eND9mwX5MCfiQPW2aqhQhxr2g3xTT2jkxf9pTweLvLAKzRG2jVTjDCuRjKXl",

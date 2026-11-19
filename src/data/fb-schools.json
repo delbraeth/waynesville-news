@@ -1,7 +1,21 @@
 {
   "_note": "Recent Wayne Local Schools Facebook posts via rss.app bridge. Title + link + short excerpt; the district's own words. Fail-safe: kept from last run if the bridge is down.",
-  "updated": "2026-11-18T11:40:56.316Z",
+  "updated": "2026-11-19T11:40:49.934Z",
   "items": [
+    {
+      "title": "🟠⚫️ Waynesville coach Ben Johnson and the Spartans are preparing for a Division V, Region 20 championship game against…",
+      "link": "https://www.facebook.com/waynelocalschools/posts/pfbid02HUG1DGsGvfG3a53tmvKDBt1A8izv2RyVxXKfSiFicV4r9L46ZCvPYyVuNsv4phuDl",
+      "date": "Wed, 18 Nov 2026 20:40:33 GMT",
+      "dateLabel": "Wed, Nov 18",
+      "excerpt": "Fenwick this Friday at Lakota East"
+    },
+    {
+      "title": "In the spirit of Thanksgiving, WMS and WHS staff members are taking time this week to recognize students who brighten…",
+      "link": "https://www.facebook.com/waynelocalschools/posts/pfbid022JFA1QrRxmmKYFb1KKntUnE2c5QAMzmG5UgNTi3gET8mm6WxWno5fASPDDPYoYNBl",
+      "date": "Wed, 18 Nov 2026 19:19:32 GMT",
+      "dateLabel": "Wed, Nov 18",
+      "excerpt": "their days and share why they're grateful for them!🧡 Each recognized student receives a personalized message and a sweet treat. To bring the gratitude full circle, students then select a piece of candy for their teacher and personally thank them in return! Small gestures can have a big impact.…"
+    },
     {
       "title": "Spartans: You or someone you know may be a great fit for this opportunity!Wayne Local Schools is seeking a Head Varsity...",
       "link": "https://www.facebook.com/waynelocalschools/posts/pfbid0hv8kmGDDhbTCR8TfJzPbdL6he7tsL8DCd7XyVBj8AehWDUzWP9eDtkT9vu9JtENal",
@@ -43,20 +57,6 @@
       "date": "Sun, 15 Nov 2026 22:38:02 GMT",
       "dateLabel": "Sun, Nov 15",
       "excerpt": "and WHS staff members are asking for help from families and community members to recognize students who go above and beyond with incentives through our Spartan Star Card Rewards program. If you would be willing to make a donation, please sign up:…"
-    },
-    {
-      "title": "🐾Spartans: We're reaching out for your support! As you know, our facility dog Welkin has been working hard in his first…",
-      "link": "https://www.facebook.com/waynelocalschools/posts/pfbid0e3GchVw4WQM2u4bj5Q8QnhAnX3KfnPqLTUB7tpWDL9w7JYZTUYeBt9hGDEGrmwGql",
-      "date": "Sun, 15 Nov 2026 19:15:03 GMT",
-      "dateLabel": "Sun, Nov 15",
-      "excerpt": "few months, supporting students and staff at WMS and WHS! Whether he's greeting students in the hallways, providing a calming presence for a student having a difficult day, supporting students during stressful moments, or simply offering a friendly face and a wagging tail, Welkin has quickly…"
-    },
-    {
-      "title": "🎭Come support our talented theatre students for Radium Girls, a powerful production based on the true story of young…",
-      "link": "https://www.facebook.com/waynelocalschools/posts/pfbid02eYKT4Bnx2FGhzncfvgZ8poob5BsVW2NK81NjL3o9fveBFHDVv6qhJLM6PmbYHqLvl",
-      "date": "Sun, 15 Nov 2026 18:10:29 GMT",
-      "dateLabel": "Sun, Nov 15",
-      "excerpt": "women whose courage helped change the world. Don't miss your last chance to catch this moving performance! 📅 Sunday, November 15 | 2 p.m. 📍 Waynesville Performing Arts Center 🎟️ Students: $10 | Adults: $12 💳 Tickets available at the door. Cash and cards accepted."
     }
   ]
 }

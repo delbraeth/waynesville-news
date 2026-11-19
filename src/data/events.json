@@ -1,16 +1,6 @@
 {
-  "_note": "Real venues and sources, verified against each listed source on 2026-11-18; Warren County tourism calendar re-checked 2026-11-18 (daily automated refresh). Wayne Local school dates per The Spartan (September and October 2026) and the district Community Events & Activities newsletter (October 2026) and Board Meeting Recap (October and November 2026). Waynesville Elementary book fair, PTO meeting and Holiday Shop dates per the school’s upcoming-events graphic (November 2026). Mary L. Cook Public Library programs per the library's monthly newsletter (November 2026). Recurring items (rodeo, commissioners, ghost walk, Lions Club meetings on the 2nd and 4th Tuesdays) show the next occurrence. Warren County Park District events page SUSPENDED as a source per Cap'n (2026-10-03): it sits behind a Cloudflare bot challenge (403 since 2026-09-24). Do not fetch it or report it as failing; its items from the 2026-09-23 check are kept until they expire. Resume only when Cap'n provides a working source. Event notes and dateLabels are shown to readers: write them for readers (what, when, where, and a helpful pointer like \"check the event website for times\" when a detail is missing). Never put editorial or process notes in them (\"not published\", \"confirm before printing\", \"corrected from\", \"checked on\"); record corrections in the commit message instead. Tag Christmas-season community events (tree lightings, Santa visits, holiday markets, single-date light shows) with \"holiday\" so they also appear on the Holiday Lights guide. Waynesville area vs. regional: an event counts as Waynesville-area when its venue names Waynesville, Corwin, Harveysburg, Oregonia, Ridgeville, Lytle, Mount Holly, Crosswick, Caesar Creek or ZIP 45068/45054/45065 (see src/lib/events.js); always put the town in the venue. Optional \"cost\" (e.g. \"Free\", \"$5 adults, kids free\") and \"accessibility\" (e.g. \"Wheelchair accessible; parking behind the building\") show as a line under the event, only when the organizer or its source says so. Set \"local\": true or false to override (e.g. an online survey about Waynesville, or an out-of-town group serving Waynesville families). Optional \"orgs\": [\"<exact name from churches.json>\"] ties an event to a church on the Churches page when its venue doesn't name the church.",
+  "_note": "Real venues and sources, verified against each listed source on 2026-11-19; Warren County tourism calendar re-checked 2026-11-19 (daily automated refresh). Wayne Local school dates per The Spartan (September and October 2026) and the district Community Events & Activities newsletter (October 2026) and Board Meeting Recap (October and November 2026). Waynesville Elementary book fair, PTO meeting and Holiday Shop dates per the school’s upcoming-events graphic (November 2026). Mary L. Cook Public Library programs per the library's monthly newsletter (November 2026). Recurring items (rodeo, commissioners, ghost walk, Lions Club meetings on the 2nd and 4th Tuesdays) show the next occurrence. Warren County Park District events page SUSPENDED as a source per Cap'n (2026-10-03): it sits behind a Cloudflare bot challenge (403 since 2026-09-24). Do not fetch it or report it as failing; its items from the 2026-09-23 check are kept until they expire. Resume only when Cap'n provides a working source. Event notes and dateLabels are shown to readers: write them for readers (what, when, where, and a helpful pointer like \"check the event website for times\" when a detail is missing). Never put editorial or process notes in them (\"not published\", \"confirm before printing\", \"corrected from\", \"checked on\"); record corrections in the commit message instead. Tag Christmas-season community events (tree lightings, Santa visits, holiday markets, single-date light shows) with \"holiday\" so they also appear on the Holiday Lights guide. Waynesville area vs. regional: an event counts as Waynesville-area when its venue names Waynesville, Corwin, Harveysburg, Oregonia, Ridgeville, Lytle, Mount Holly, Crosswick, Caesar Creek or ZIP 45068/45054/45065 (see src/lib/events.js); always put the town in the venue. Optional \"cost\" (e.g. \"Free\", \"$5 adults, kids free\") and \"accessibility\" (e.g. \"Wheelchair accessible; parking behind the building\") show as a line under the event, only when the organizer or its source says so. Set \"local\": true or false to override (e.g. an online survey about Waynesville, or an out-of-town group serving Waynesville families). Optional \"orgs\": [\"<exact name from churches.json>\"] ties an event to a church on the Churches page when its venue doesn't name the church.",
   "items": [
-    {
-      "title": "Waynesville Fantasy Festival",
-      "dateISO": "2026-11-14T11:00:00-05:00",
-      "endISO": "2026-11-14T20:00:00-05:00",
-      "dateLabel": "Sat, Nov 14 · 11 AM–8 PM · Free",
-      "venue": "Downtown Waynesville",
-      "category": "Festival",
-      "source": "/images/events/2026-11-14-fantasy-festival-map.png",
-      "note": "Third annual free, family-friendly fantasy festival downtown. On High Street: LARP Shire archery, training grounds, a hoedown and dance-off; the Nartum Kaal orc tribe; Sage Fire fire performance and photo op; Midwest Falconry falcon encounters; and live music from Shane the Bard. The Dwarven Beer Garden by the Village Restaurant has DORA beverages and live music at the Villager Pub tent, a potion bar and craft vendors, with Sean Nos at 11 AM and 5 PM and Creep It Real at 12:30 and 3:30 PM; a Whiskey Witches bourbon tasting is at 5 PM inside the Villager Pub (preregistration required). Riddles in the Dark is at 3 PM at the Stone House Tavern. Food trucks: 1572 Roadhouse BBQ, 513 Bubble Tea, The Naughty Lobstah, Graze and Go, Nothing Bundt Cakes and All American Griddle. Tap Details for the festival map, with restrooms and vendor locations."
-    },
     {
       "title": "Business to Business Networking — November",
       "dateISO": "2026-11-19T17:00:00-05:00",
@@ -232,29 +222,6 @@
       "note": "Per the organizer: holiday vintage, handmade and boutique market. Admission $12 Friday, $10 Saturday, $5 Sunday; children 12 and under free. Discounted tickets online in advance."
     },
     {
-      "title": "Dessert Auction for the Miami Cemetery Association Roads Fund",
-      "dateISO": "2026-11-14T18:00:00-05:00",
-      "endISO": "2026-11-14T20:00:00-05:00",
-      "dateLabel": "Sat, Nov 14 · 6–8 PM",
-      "venue": "CrossView Christian Church, 4237 Social Row Rd, Waynesville",
-      "category": "Community",
-      "source": "/images/events/2026-11-14-crossview-dessert-auction.jpg",
-      "note": "Bid on cakes, pies, cookies and other baked goods. All proceeds go to the Miami Cemetery Association Roads Fund, a nonprofit. See the flyer for details, or visit the church’s website, crossview.cc."
-    },
-    {
-      "title": "Donations wanted for the Friends of the Library Holiday Silent Auction",
-      "dateISO": "2026-11-09T09:00:00-05:00",
-      "endISO": "2026-11-14T17:00:00-05:00",
-      "dateLabel": "Mon–Sat, Nov 9–14 · during library hours",
-      "venue": "Mary L. Cook Public Library, 381 Old Stage Rd, Waynesville (front desk)",
-      "category": "Community",
-      "source": "https://www.mlcook.lib.oh.us/",
-      "note": "The Friends of the Mary L. Cook Library are collecting items for their Holiday Silent Auction (Nov 20 – Dec 10): gift baskets, gift certificates, wreaths, quilts, wood crafts, toys, candy, jewelry, Spartan wear, home and bath products, baked goods, bikes, grills, camping gear and more. Drop donations at the library’s front desk Nov 9–14, or ask at the desk about a pickup. Proceeds support the library’s free programs and its new Playscape.",
-      "tags": [
-        "volunteer"
-      ]
-    },
-    {
       "title": "Waynesville Lions Club Pancake Breakfast & Craft Bazaar",
       "dateISO": "2026-12-05T08:00:00-05:00",
       "endISO": "2026-12-05T15:00:00-05:00",
@@ -351,16 +318,6 @@
       "category": "Government",
       "source": "https://commissioners.warrencountyohio.gov/News/AgendaMinutes/Index",
       "note": "Weekly commissioners session; agendas and minutes posted online"
-    },
-    {
-      "title": "Try Lacrosse Event — Waynesville Spartans Lacrosse",
-      "dateISO": "2026-11-14T13:00:00-05:00",
-      "endISO": "2026-11-14T15:00:00-05:00",
-      "dateLabel": "Sat, Nov 14 · 1–3 PM",
-      "venue": "Spartan Community Field, Waynesville",
-      "category": "Sports",
-      "source": "https://waynesville-spartan-lacrosse-club.leaguemanagement.usalacrosse.com/newplayers",
-      "note": "Waynesville Spartans Lacrosse invites new players, boys and girls, to try the sport. Bring gear if you have it; sticks, goggles, gloves, helmets and pads will be provided, with extra gear available. See the club's new-player page for more about the program."
     },
     {
       "title": "Waynesville FC Supplemental Tryouts — Girls (Spring 2027, 11v11)",
