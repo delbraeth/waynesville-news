@@ -1,8 +1,44 @@
 {
   "_note": "North Warren County Transportation Plan project site, tracked via ArcGIS Online's public REST API (items published by the project account, with page text). `changes` lists items first seen as new/updated/removed, newest first, dated by the Eastern date of the run that noticed them. Titles and text are as published. Built by scripts/fetch-nwctp.mjs.",
-  "updated": "2026-11-19T11:42:10.582Z",
+  "updated": "2026-11-20T11:42:57.202Z",
   "hub": "https://northwarrencountytransportationplan-burgessniple.hub.arcgis.com",
   "items": [
+    {
+      "id": "ef1881134f464a43bcd072d6ab490aa5",
+      "type": "Hub Site Application",
+      "title": "North Warren County Transportation Plan",
+      "modified": "2026-11-19T14:40:19.000Z",
+      "link": "https://northwarrencountytransportationplan-burgessniple.hub.arcgis.com",
+      "text": [
+        "North Warren County Transportation Plan In partnership with Warren County, Miami Valley Regional Planning Commission, and the Ohio-Kentucky-Indiana Regional Council of Governments",
+        "Project Description",
+        "This project is designed to provide a clear picture of today’s transportation conditions and help plan for the future. By studying current conditions and planning for future needs, this project aims to create transportation solutions that make travel safer, easier, and more reliable for the entire community. We will examine how people currently travel through the area, how safe the roadways are, and how the transportation system supports homes, businesses, and daily activities. The study will also consider traffic patterns, public transit options, land use, population and employment trends, and environmental factors. Using this information, we will identify areas that may need improvement and develop potential solutions. These ideas will be shared with the public during two rounds of community engagement, giving residents and stakeholders opportunities to provide feedback. Community input will play a key role in refining the proposed options, so they align with local needs and priorities. Each option will also be reviewed to understand its benefits and potential environmental impacts before any decisions are made. The North Warren County Transportation plan focuses on the northern half of Warren County, Ohio. This includes the following communities mapped and listed below:",
+        "Cities Carlisle Franklin Lebanon Middletown Monroe Springboro Villages Waynesville Harveysburg Townships Clearcreek Franklin Massie Turtlecreek Washington Wayne",
+        "Project Consultant Team BurgessNiple.com Headquarters 330 Rush Alley Ste 700 Columbus, Ohio 43215"
+      ]
+    },
+    {
+      "id": "af8f92388b0447849578a56162eae490",
+      "type": "Hub Page",
+      "title": "Project Overview",
+      "modified": "2026-11-19T13:29:13.000Z",
+      "link": "https://northwarrencountytransportationplan-burgessniple.hub.arcgis.com/pages/af8f92388b0447849578a56162eae490",
+      "text": [
+        "Project Overview",
+        "Why is this plan being developed?",
+        "1. Getting you where you need to go, safely and efficiently, is our top priority. The Ohio-Kentucky-Indiana Regional Council of Governments, in coordination with the Warren County Engineers Office, Warren County Transportation Improvement District, and Miami Valley Regional Planning Commission, are developing a North Warren County Transportation Plan to improve travel and connectivity through the north Warren County region. The plan will evaluate improved connectivity throughout the study area, with an emphasis on connections between I-75 and I-71, highway and local road access improvements, travel safety improvements, and enhancements to the local multimodal travel network. The North Warren County Transportation Plan will be based on a year-long evaluation of the region's current transportation system. It will involve a series of comprehensive technical studies as well as an extensive effort to gather input from the public. The North Warren County Transportation Plan will have a multimodal focus. In addition to considering travel needs for cars and trucks, we'll also be looking at how we can improve travel by public transit, by bicycle, and on foot.",
+        "2. Warren County is one of the fastest growing counties in Ohio. We're planning ahead so we will be well-positioned to support our county's transportation needs both now and in the future. Over the past several decades, north Warren County has experienced significant economic growth and welcomed many new businesses and neighbors. We expect this growth to continue. The improvements outlined in the Transportation Plan will help us ensure that we have the necessary infrastructure in place and at the right locations to keep people, goods, and services moving through our communities safely and efficiently. Planning efforts during Phase I will consider current and future travel safety, congestion, connectivity, capacity, and operational needs. These efforts are essential to identifying transportation alternatives that can move forward into the study of project feasibility. Having a comprehensive Transportation Plan in place not only helps to guide local planning; it can also help secure state, regional, and federal project funding.",
+        "3. Demand is growing every day for a system that supports travel using alternative modes of transportation. We are working to meet those needs. Expanded sidewalks, new shared-use paths, dedicated bike lanes, improved crosswalks, and more are all options that will be considered as part of the North Warren County Transportation Plan. We will also explore new opportunities for better support of public transit. Public input will be a key factor in helping us identify and prioritize multimodal transportation projects.",
+        "4. Public input will be a vital component of the North Warren County Transportation Plan's development process. Input received from the public will be used to identify needs to be addressed, put shape to possible improvements, and inform decision-making. Multiple public feedback opportunities will be available as the study advances. These include written and online surveys, meeting with community leaders, and public meetings."
+      ]
+    },
+    {
+      "id": "a6ff9b63a12942098ec01ccfe50f1981",
+      "type": "Feature Service",
+      "title": "North Warren County Transportation Plan Comments_form",
+      "modified": "2026-11-19T13:28:56.000Z",
+      "link": "https://www.arcgis.com/home/item.html?id=a6ff9b63a12942098ec01ccfe50f1981"
+    },
     {
       "id": "8dae095ab7eb47b1a235a0a20577e5e8",
       "type": "Form",
@@ -22,30 +58,6 @@
         "Public Open House 1 When: Wednesday, October 28, 4-6 p.m. Where: Warren County Career Center, 3525 OH-48, Lebanon, OH 45036",
         "Below are the materials that were utilized during the in-person open house.",
         "Documents for Download (Click the link next to image) Public Meeting Exhibit Boards — Download High Priority Locations Activity — Download I75 to I71 Connection Options — Download High Priority Locations Map — Download I75 to I71 Connection Options Handout — Download Additional High Priority Locations Handout — Download"
-      ]
-    },
-    {
-      "id": "f27bc61005b842439ceb569b82c0b9cf",
-      "type": "Hub Page",
-      "title": "Online Survey",
-      "modified": "2026-11-03T21:38:24.000Z",
-      "link": "https://northwarrencountytransportationplan-burgessniple.hub.arcgis.com/pages/f27bc61005b842439ceb569b82c0b9cf",
-      "text": [
-        "Open for response October 28th - November 17th Click here to take the survey"
-      ]
-    },
-    {
-      "id": "ef1881134f464a43bcd072d6ab490aa5",
-      "type": "Hub Site Application",
-      "title": "North Warren County Transportation Plan",
-      "modified": "2026-10-30T18:28:31.000Z",
-      "link": "https://northwarrencountytransportationplan-burgessniple.hub.arcgis.com",
-      "text": [
-        "North Warren County Transportation Plan In partnership with Warren County, Miami Valley Regional Planning Commission, and the Ohio-Kentucky-Indiana Regional Council of Governments",
-        "Project Description",
-        "This project is designed to provide a clear picture of today’s transportation conditions and help plan for the future. By studying current conditions and planning for future needs, this project aims to create transportation solutions that make travel safer, easier, and more reliable for the entire community. We will examine how people currently travel through the area, how safe the roadways are, and how the transportation system supports homes, businesses, and daily activities. The study will also consider traffic patterns, public transit options, land use, population and employment trends, and environmental factors. Using this information, we will identify areas that may need improvement and develop potential solutions. These ideas will be shared with the public during two rounds of community engagement, giving residents and stakeholders opportunities to provide feedback. Community input will play a key role in refining the proposed options, so they align with local needs and priorities. Each option will also be reviewed to understand its benefits and potential environmental impacts before any decisions are made. The North Warren County Transportation plan focuses on the northern half of Warren County, Ohio. This includes the following communities mapped and listed below:",
-        "Cities Carlisle Franklin Lebanon Middletown Monroe Springboro Villages Waynesville Harveysburg Townships Clearcreek Franklin Massie Turtlecreek Washington Wayne",
-        "Project Consultant Team BurgessNiple.com Headquarters 330 Rush Alley Ste 700 Columbus, Ohio 43215"
       ]
     },
     {
@@ -109,28 +121,6 @@
       ]
     },
     {
-      "id": "af8f92388b0447849578a56162eae490",
-      "type": "Hub Page",
-      "title": "Project Overview",
-      "modified": "2026-05-19T19:51:53.000Z",
-      "link": "https://northwarrencountytransportationplan-burgessniple.hub.arcgis.com/pages/af8f92388b0447849578a56162eae490",
-      "text": [
-        "Project Overview",
-        "Why is this plan being developed?",
-        "1. Getting you where you need to go, safely and efficiently, is our top priority. The Ohio-Kentucky-Indiana Regional Council of Governments, in coordination with the Warren County Engineers Office, Warren County Transportation Improvement District, and Miami Valley Regional Planning Commission, are developing a North Warren County Transportation Plan to improve travel and connectivity through the north Warren County region. The plan will evaluate improved connectivity throughout the study area, with an emphasis on connections between I-75 and I-71, highway and local road access improvements, travel safety improvements, and enhancements to the local multimodal travel network. The North Warren County Transportation Plan will be based on a year-long evaluation of the region's current transportation system. It will involve a series of comprehensive technical studies as well as an extensive effort to gather input from the public. The North Warren County Transportation Plan will have a multimodal focus. In addition to considering travel needs for cars and trucks, we'll also be looking at how we can improve travel by public transit, by bicycle, and on foot.",
-        "2. Warren County is one of the fastest growing counties in Ohio. We're planning ahead so we will be well-positioned to support our county's transportation needs both now and in the future. Over the past several decades, north Warren County has experienced significant economic growth and welcomed many new businesses and neighbors. We expect this growth to continue. The improvements outlined in the Transportation Plan will help us ensure that we have the necessary infrastructure in place and at the right locations to keep people, goods, and services moving through our communities safely and efficiently. Planning efforts during Phase I will consider current and future travel safety, congestion, connectivity, capacity, and operational needs. These efforts are essential to identifying transportation alternatives that can move forward into the study of project feasibility. Having a comprehensive Transportation Plan in place not only helps to guide local planning; it can also help secure state, regional, and federal project funding.",
-        "3. Demand is growing every day for a system that supports travel using alternative modes of transportation. We are working to meet those needs. Expanded sidewalks, new shared-use paths, dedicated bike lanes, improved crosswalks, and more are all options that will be considered as part of the North Warren County Transportation Plan. We will also explore new opportunities for better support of public transit. Public input will be a key factor in helping us identify and prioritize multimodal transportation projects.",
-        "4. Public input will be a vital component of the North Warren County Transportation Plan's development process. Input received from the public will be used to identify needs to be addressed, put shape to possible improvements, and inform decision-making. Multiple public feedback opportunities will be available as the study advances. These include written and online surveys, meeting with community leaders, and public meetings."
-      ]
-    },
-    {
-      "id": "a6ff9b63a12942098ec01ccfe50f1981",
-      "type": "Feature Service",
-      "title": "North Warren County Transportation Plan Comments_form",
-      "modified": "2026-05-13T18:54:06.000Z",
-      "link": "https://www.arcgis.com/home/item.html?id=a6ff9b63a12942098ec01ccfe50f1981"
-    },
-    {
       "id": "f3c5e8b6fb8f4fccafb9d85e2bda681b",
       "type": "Feature Service",
       "title": "North Warren County Transportation Plan Comments",
@@ -139,6 +129,37 @@
     }
   ],
   "changes": [
+    {
+      "date": "2026-11-20",
+      "kind": "removed",
+      "id": "f27bc61005b842439ceb569b82c0b9cf",
+      "type": "Hub Page",
+      "title": "Online Survey"
+    },
+    {
+      "date": "2026-11-20",
+      "kind": "updated",
+      "id": "a6ff9b63a12942098ec01ccfe50f1981",
+      "type": "Feature Service",
+      "title": "North Warren County Transportation Plan Comments_form",
+      "link": "https://www.arcgis.com/home/item.html?id=a6ff9b63a12942098ec01ccfe50f1981"
+    },
+    {
+      "date": "2026-11-20",
+      "kind": "updated",
+      "id": "af8f92388b0447849578a56162eae490",
+      "type": "Hub Page",
+      "title": "Project Overview",
+      "link": "https://northwarrencountytransportationplan-burgessniple.hub.arcgis.com/pages/af8f92388b0447849578a56162eae490"
+    },
+    {
+      "date": "2026-11-20",
+      "kind": "updated",
+      "id": "ef1881134f464a43bcd072d6ab490aa5",
+      "type": "Hub Site Application",
+      "title": "North Warren County Transportation Plan",
+      "link": "https://northwarrencountytransportationplan-burgessniple.hub.arcgis.com"
+    },
     {
       "date": "2026-11-14",
       "kind": "updated",

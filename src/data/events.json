@@ -1,5 +1,5 @@
 {
-  "_note": "Real venues and sources, verified against each listed source on 2026-11-19; Warren County tourism calendar re-checked 2026-11-19 (daily automated refresh). Wayne Local school dates per The Spartan (September and October 2026) and the district Community Events & Activities newsletter (October 2026) and Board Meeting Recap (October and November 2026). Waynesville Elementary book fair, PTO meeting and Holiday Shop dates per the school’s upcoming-events graphic (November 2026). Mary L. Cook Public Library programs per the library's monthly newsletter (November 2026). Recurring items (rodeo, commissioners, ghost walk, Lions Club meetings on the 2nd and 4th Tuesdays) show the next occurrence. Warren County Park District events page SUSPENDED as a source per Cap'n (2026-10-03): it sits behind a Cloudflare bot challenge (403 since 2026-09-24). Do not fetch it or report it as failing; its items from the 2026-09-23 check are kept until they expire. Resume only when Cap'n provides a working source. Event notes and dateLabels are shown to readers: write them for readers (what, when, where, and a helpful pointer like \"check the event website for times\" when a detail is missing). Never put editorial or process notes in them (\"not published\", \"confirm before printing\", \"corrected from\", \"checked on\"); record corrections in the commit message instead. Tag Christmas-season community events (tree lightings, Santa visits, holiday markets, single-date light shows) with \"holiday\" so they also appear on the Holiday Lights guide. Waynesville area vs. regional: an event counts as Waynesville-area when its venue names Waynesville, Corwin, Harveysburg, Oregonia, Ridgeville, Lytle, Mount Holly, Crosswick, Caesar Creek or ZIP 45068/45054/45065 (see src/lib/events.js); always put the town in the venue. Optional \"cost\" (e.g. \"Free\", \"$5 adults, kids free\") and \"accessibility\" (e.g. \"Wheelchair accessible; parking behind the building\") show as a line under the event, only when the organizer or its source says so. Set \"local\": true or false to override (e.g. an online survey about Waynesville, or an out-of-town group serving Waynesville families). Optional \"orgs\": [\"<exact name from churches.json>\"] ties an event to a church on the Churches page when its venue doesn't name the church.",
+  "_note": "Real venues and sources, verified against each listed source on 2026-11-20; Warren County tourism calendar re-checked 2026-11-20 (daily automated refresh). Wayne Local school dates per The Spartan (September and October 2026) and the district Community Events & Activities newsletter (October 2026) and Board Meeting Recap (October and November 2026). Waynesville Elementary book fair, PTO meeting and Holiday Shop dates per the school’s upcoming-events graphic (November 2026). Mary L. Cook Public Library programs per the library's monthly newsletter (November 2026). Recurring items (rodeo, commissioners, ghost walk, Lions Club meetings on the 2nd and 4th Tuesdays) show the next occurrence. Warren County Park District events page SUSPENDED as a source per Cap'n (2026-10-03): it sits behind a Cloudflare bot challenge (403 since 2026-09-24). Do not fetch it or report it as failing; its items from the 2026-09-23 check are kept until they expire. Resume only when Cap'n provides a working source. Event notes and dateLabels are shown to readers: write them for readers (what, when, where, and a helpful pointer like \"check the event website for times\" when a detail is missing). Never put editorial or process notes in them (\"not published\", \"confirm before printing\", \"corrected from\", \"checked on\"); record corrections in the commit message instead. Tag Christmas-season community events (tree lightings, Santa visits, holiday markets, single-date light shows) with \"holiday\" so they also appear on the Holiday Lights guide. Waynesville area vs. regional: an event counts as Waynesville-area when its venue names Waynesville, Corwin, Harveysburg, Oregonia, Ridgeville, Lytle, Mount Holly, Crosswick, Caesar Creek or ZIP 45068/45054/45065 (see src/lib/events.js); always put the town in the venue. Optional \"cost\" (e.g. \"Free\", \"$5 adults, kids free\") and \"accessibility\" (e.g. \"Wheelchair accessible; parking behind the building\") show as a line under the event, only when the organizer or its source says so. Set \"local\": true or false to override (e.g. an online survey about Waynesville, or an out-of-town group serving Waynesville families). Optional \"orgs\": [\"<exact name from churches.json>\"] ties an event to a church on the Churches page when its venue doesn't name the church.",
   "items": [
     {
       "title": "Business to Business Networking — November",
@@ -209,19 +209,6 @@
       "note": "A public dance marathon with a 1940s theme (plus some 2000s music) during Town Square Days. No dance experience needed; prizes for one couple and one single winner. Entry is two canned goods or a $5 donation for the Waynesville Food Pantry. Arrive by 11:15 AM; no shoes in the studio, and a short waiver is required."
     },
     {
-      "title": "The City Mercantile Christmas Market",
-      "dateISO": "2026-11-13T10:00:00-05:00",
-      "endISO": "2026-11-15T15:00:00-05:00",
-      "dateLabel": "Fri–Sun, Nov 13–15 · Fri 10 AM–3 PM, Sat 10 AM–4 PM, Sun 10 AM–3 PM",
-      "venue": "Warren County Fairgrounds, 665 N. Broadway, Lebanon",
-      "category": "Festival",
-      "tags": [
-        "holiday"
-      ],
-      "source": "http://thecitymercantile.com/lebanon",
-      "note": "Per the organizer: holiday vintage, handmade and boutique market. Admission $12 Friday, $10 Saturday, $5 Sunday; children 12 and under free. Discounted tickets online in advance."
-    },
-    {
       "title": "Waynesville Lions Club Pancake Breakfast & Craft Bazaar",
       "dateISO": "2026-12-05T08:00:00-05:00",
       "endISO": "2026-12-05T15:00:00-05:00",
@@ -359,17 +346,6 @@
       "category": "Sports",
       "source": "/images/events/2026-11-wrestling-parent-meetings.webp",
       "note": "Parent meeting for Waynesville High School wrestling, in the MS/HS cafe. Tap Details for the team's flyer."
-    },
-    {
-      "title": "Radium Girls — Waynesville Theater",
-      "dateISO": "2026-11-13T19:00:00-05:00",
-      "endISO": "2026-11-15T16:00:00-05:00",
-      "dateLabel": "Fri–Sun, Nov 13–15 · Fri & Sat 7 PM, Sun 2 PM",
-      "venue": "Waynesville Performing Arts Center, 659 Dayton Rd, Waynesville",
-      "category": "Community",
-      "cost": "$10 students, $12 adults; pay at the door (cash or card)",
-      "source": "/images/events/2026-11-13-radium-girls.jpg",
-      "note": "Waynesville theater presents Radium Girls, the play by D.W. Gregory. Tickets are sold at the door. Tap Details for the flyer."
     },
     {
       "title": "Playoff football, Region 20 final: Waynesville vs. Bishop Fenwick",
