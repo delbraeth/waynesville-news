@@ -8,7 +8,7 @@ section: "Sports"
 published: true
 ---
 
-Waynesville won the **Division V, Region 20 championship** Friday night, beating Bishop Fenwick **27-0** at Lakota East High School in Liberty Township.
+Waynesville won the **Division V, Region 20 championship** Friday night, beating Bishop Fenwick **27-0** at Lakota East High School in Liberty Township. It's the first time Waynesville has reached the state semifinals.
 
 The Spartans reached the final with a 14-7 win at Graham last week.
 
