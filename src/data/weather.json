@@ -5,27 +5,27 @@
   "condition": "Sunny",
   "periodName": "Today",
   "highF": 68,
-  "lowF": 40,
+  "lowF": 43,
   "outlook": [
     {
-      "dayLabel": "Saturday",
+      "dayLabel": "Sunday",
       "highF": 68,
       "lowF": 43,
       "condition": "Sunny"
     },
     {
-      "dayLabel": "Sunday",
-      "highF": 66,
-      "lowF": 43,
-      "condition": "Mostly Sunny then Slight Chance Light Rain"
+      "dayLabel": "Monday",
+      "highF": 52,
+      "lowF": 30,
+      "condition": "Chance Light Rain then Sunny"
     },
     {
-      "dayLabel": "Monday",
-      "highF": 50,
+      "dayLabel": "Tuesday",
+      "highF": 45,
       "lowF": 31,
-      "condition": "Slight Chance Light Rain then Mostly Sunny"
+      "condition": "Sunny"
     }
   ],
   "alerts": [],
-  "updated": "2026-11-20T11:41:30.383Z"
+  "updated": "2026-11-21T11:41:24.452Z"
 }

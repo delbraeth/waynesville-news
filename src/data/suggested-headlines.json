@@ -1,7 +1,13 @@
 {
   "_note": "Candidate local headlines (Google News RSS). Published as a quoted headline (or, when available, a short publisher-written excerpt) + source + link; never reproduce article body text.",
-  "updated": "2026-11-20T11:42:16.779Z",
+  "updated": "2026-11-21T11:42:01.593Z",
   "items": [
+    {
+      "title": "Roland Anspach Obituary (2026) - Waynesville, OH - Dayton Daily News",
+      "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOa09idDE2MUFPcDQwVTQ4dUdfREFta0JFLWdNOUVZRW1ISFpkZ25QVUxzSldNOWdCZnZsd0NMSVFsMU5XaUpKUzN5NWtlTlZJaUYyRnFJZjQxUVhrWXd4ajhtNUNCb29CWThEUlJfTy1xZG16d1BkVFM3bFpReGgtTjdZVHVFdzltdEk4UA?oc=5",
+      "source": "Legacy | Obituary",
+      "date": "Sat, 21 Nov 2026 06:56:15 GMT"
+    },
     {
       "title": "Warren County's Sand and Gravel Sales Rise 10.6% as Ohio Mineral Industry Reaches $1.9 Billion",
       "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPZXE0OERMSE5kQXlBcGwtM3NfenBVaTMwWW8yRXFLLURZeVZUZVBlSmJHeUplS3dFczZfSE0xVEpTcVlXNzRSRWN1QVNJSWVjWlpmbkhnSFNVN3FNSWUxWkVCRXFfcVNQSGMzWC10dU80NVNZSzU3MFpsc25wQWRlTmtlcHk3bmE4UllVbGhOV0xuRktHYVRzempQSHdvWXpSLW91MjhFTEJNbGNnSU9lUnNrZWhGOUhLQy1maG9jLVhZYWFz?oc=5",
@@ -11,24 +17,18 @@
       "excerpt": "Ohio’s Mineral Resources Valued at $1.9 Billion in 2025"
     },
     {
-      "title": "Park transformation earns Warren County top recognition",
-      "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxObzJJM0dSeTVoTnotdzBfb3AzVS15WExZTGVtSDI0clZCUWhWY2c0QWZndkZrOVl6WXhFbkJPenpaWHYwaC1Lblp2czI5SVdHME90U2lZOThiZEFjUW5zRlpka25naEd6TjZZR2FtUWthZEgtX1JlSFNZZnd4WDEzNmxrc3ZEdFN3RmEwU1R3WQ?oc=5",
-      "source": "WKRC",
-      "date": "Thu, 19 Nov 2026 23:46:19 GMT"
-    },
-    {
       "title": "‘Gilmore Girls’ themed weekend in Waynesville is here: What to know",
       "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQWFF6MnhBdFdqOFdWTFBVa3c1a1QzSW9yeW13Q25tOXF0b09lY3gzQW1mTzkzbGtoYnFGRzNjNW5tb19DNGUtUzk1YUFnbU5IeXdfSF8zZnlnVENrR0g1ckJwcWZIS1d5UVNyeGllbnIzR0wxeTd2X0pZU3BaRlFuWGZMRjg2aGwtRDZLNkI3NHFLOExY?oc=5",
       "source": "Dayton Daily News",
       "date": "Wed, 18 Nov 2026 14:42:03 GMT"
     },
     {
-      "title": "Ohio Career Launch Offers Warren County Youth a Path Toward Employment",
-      "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQQXlPb2dmcEFZRVJSU3djRXA3eFROUUhoa3VFZVZtSFM0UF8wTURRMmExaTZtcG9qeXRkMVRfU2g3N18wQVVhVUJ1R29xTVdiTXk5Nm5JUFlQa25XSTlra3dsa2FkOHBPaFZYbXJ3ZElsTFd6dWdYZFN1RXYwWmd3cVdSeUR3OFlaVjRfaXRUandKN3RCOVg4Ynl5Y3cwTi04VkYzeTVpZ21aWDBYM2QzSm1rdGNLWUhWWVZJ?oc=5",
-      "source": "Warren County Post",
-      "date": "Fri, 20 Nov 2026 02:47:15 GMT",
-      "sourceUrl": "https://warrencountypost.com/g/lebanon-oh/n/398741/ohio-career-launch-offers-warren-county-youth-path-toward-employment",
-      "excerpt": "Program provides career training, education assistance and opportunities for young people ages 14 to 24."
+      "title": "Park transformation earns Warren County top recognition",
+      "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxObzJJM0dSeTVoTnotdzBfb3AzVS15WExZTGVtSDI0clZCUWhWY2c0QWZndkZrOVl6WXhFbkJPenpaWHYwaC1Lblp2czI5SVdHME90U2lZOThiZEFjUW5zRlpka25naEd6TjZZR2FtUWthZEgtX1JlSFNZZnd4WDEzNmxrc3ZEdFN3RmEwU1R3WQ?oc=5",
+      "source": "WKRC",
+      "date": "Thu, 19 Nov 2026 23:46:19 GMT",
+      "sourceUrl": "https://local12.com/news/local/park-transformation-earns-warren-county-top-recognition",
+      "excerpt": "An aging, algae-prone pond at Landen-Deerfield Park has been transformed into a restored stream and wetland &mdash; and the work is now earning top recognition for the Warren County Park District."
     },
     {
       "title": "Warren County woman shares story after nearly falling for jury duty scam",
@@ -40,9 +40,7 @@
       "title": "Warren County Park District Receives First-Place OPRA Award for Landen-Deerfield Park Restoration",
       "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQVk0zU3VwUjRoNW9UNV9jcWtCa29fOVhMOFlCbkxlM1dINkd5SDFoQmVZWEN3bGlGaHh0Z3BLT3Q1ekZZOGJaZWFqSDhVQS1fZlg1cTFEbmxadEstX3lROEIxT1NpN1RzNGo0RnFVSHJuc21nLVNsdlE2RmpIaHZCR0xrVkdMYlNnNEFwNTk5c3g0dUp6OHYxV3NlRmtSSTN4S0s4ZHltZjRlRDlTRTV2SDNNWHFqTUZRNWVISnpxQ3NXMGc?oc=5",
       "source": "Warren County Post",
-      "date": "Fri, 20 Nov 2026 02:47:15 GMT",
-      "sourceUrl": "https://warrencountypost.com/g/mason-oh/n/398740/warren-county-park-district-receives-first-place-opra-award-landen-deerfield",
-      "excerpt": "\"Instead of simply dredging an aging pond, we created a healthier ﻿watershed.\""
+      "date": "Fri, 20 Nov 2026 02:47:15 GMT"
     },
     {
       "title": "Hall Around Town: Who's Playing Out November 19th",
@@ -54,9 +52,7 @@
       "title": "Governor-Elect Amy Acton Announces Transition Co-Chairs",
       "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOUHVuUnRCWU1xaWVGUVNaMXBYREFheXBGVmxiM2FaVXJFcUFYS1pHUXdaSVVHOW5HaG56TUlVWWhMNDhjdXBweDMyREVNTnU4RDBJWTdoQjRhek0yUDhXUFBVQnIwUE05WkFOWF9zSkdWVTUxYnZyUmc4M1p0YUJxQ3Y2Z0ZNNXFJUWEyVlpBb0h3MUZ0OGg2ZWhfU3FTYldycW94ZEhXbHNaUQ?oc=5",
       "source": "Warren County Post",
-      "date": "Mon, 16 Nov 2026 04:27:56 GMT",
-      "sourceUrl": "https://warrencountypost.com/g/lebanon-oh/n/398328/governor-elect-amy-acton-announces-transition-co-chairs",
-      "excerpt": "Acton Pepper Transition Appoints Senior Transition Staff"
+      "date": "Mon, 16 Nov 2026 04:27:56 GMT"
     }
   ]
 }

@@ -1,7 +1,14 @@
 {
   "_note": "Recent Warren County Park District Facebook posts via rss.app bridge. Title + link + short excerpt; the Park District's own words. Fail-safe: kept from last run if the bridge is down.",
-  "updated": "2026-11-20T11:41:31.191Z",
+  "updated": "2026-11-21T11:41:25.344Z",
   "items": [
+    {
+      "title": "We had a wonderful time with Orienteering Cincinnati today at Adventure in Armco Park. In addition to learning how to…",
+      "link": "https://www.facebook.com/WarrenCountyParkDistrict/posts/pfbid033R1KRAeawABRcWoqfrxfqu6CjrdxHo86ENtTk7GdGPi7Qi43dSTPhU3fyd8RkU6Hl",
+      "date": "Fri, 20 Nov 2026 23:00:47 GMT",
+      "dateLabel": "Fri, Nov 20",
+      "excerpt": "navigate using maps, visitors enjoyed painting rocks, learning about native wildlife, making crafts, and trying knots. Orienteering Cincinnati will be back tomorrow to run official courses. Please join them! Details below. https://www.ocin.org/events.php Adventure with a map! Participants get a…"
+    },
     {
       "title": "Lots of kids are off school tomorrow, and there is still time to pre-register for tomorrow’s Adventure at Armco with…",
       "link": "https://www.facebook.com/WarrenCountyParkDistrict/posts/pfbid02iRjMmuQPDGtmgcZk2A1yH7YpKY3jrgojYHxUe8sYXqwD9hPFQ8k62vxwMKBnigyql",
@@ -36,13 +43,6 @@
       "date": "Wed, 11 Nov 2026 21:53:31 GMT",
       "dateLabel": "Wed, Nov 11",
       "excerpt": "of our winners!"
-    },
-    {
-      "title": "A big THANK YOU to our Friday night co-ed teams for participating in our Armco Park appreciation tournament, and…",
-      "link": "https://www.facebook.com/WarrenCountyParkDistrict/posts/pfbid02WnNUj25ywaKmtUtPrseKRfYtkAp4yi8tUqfBaoBqkEHpjA92NdKt4egGDdipht5Al",
-      "date": "Tue, 10 Nov 2026 13:42:58 GMT",
-      "dateLabel": "Tue, Nov 10",
-      "excerpt": "CONGRATULATIONS to the upper bracket winners “FTF” and lower bracket winners “Kings”"
     }
   ]
 }

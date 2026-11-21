@@ -1,13 +1,7 @@
 {
   "_note": "Mary L. Cook Public Library — upcoming programs from the library's WhoFi event calendar (https://marylcook-main-oh.whofi.com/calendar/full). \"items\": next 14 days, for the daily brief (dateISO is Eastern wall-clock marked Z). \"calendar\": next 45 days for the events calendar, real offsets, with sign-up details read from each program's page (scripts/lib/signup.mjs). Canceled events and closures excluded.",
-  "updated": "2026-11-20T11:42:34.821Z",
+  "updated": "2026-11-21T11:42:23.567Z",
   "items": [
-    {
-      "title": "Letters to Santa",
-      "dateISO": "2026-11-20T09:00:00Z",
-      "dateLabel": "Fri · Nov 20, 9:00 AM",
-      "link": "https://marylcook-main-oh.whofi.com/calendar/event/356803/"
-    },
     {
       "title": "Crafting Fun Drop-in Program (Adults)",
       "dateISO": "2026-11-21T10:30:00Z",
@@ -49,16 +43,15 @@
       "dateISO": "2026-12-03T10:30:00Z",
       "dateLabel": "Thu · Dec 3, 10:30 AM",
       "link": "https://marylcook-main-oh.whofi.com/calendar/event/358167/"
+    },
+    {
+      "title": "Teen Anime and Manga Club",
+      "dateISO": "2026-12-03T15:00:00Z",
+      "dateLabel": "Thu · Dec 3, 3:00 PM",
+      "link": "https://marylcook-main-oh.whofi.com/calendar/event/358190/"
     }
   ],
   "calendar": [
-    {
-      "title": "Letters to Santa",
-      "dateISO": "2026-11-20T09:00:00-05:00",
-      "endISO": "2026-11-20T17:00:00-05:00",
-      "dateLabel": "Fri, Nov 20 · 9:00 AM",
-      "link": "https://marylcook-main-oh.whofi.com/calendar/event/356803/"
-    },
     {
       "title": "Crafting Fun Drop-in Program (Adults)",
       "dateISO": "2026-11-21T10:30:00-05:00",
@@ -362,6 +355,13 @@
       "signup": {
         "required": false
       }
+    },
+    {
+      "title": "Winter Reading Bingo Challenge Begins",
+      "dateISO": "2027-01-04T09:00:00-05:00",
+      "endISO": "2027-01-04T19:00:00-05:00",
+      "dateLabel": "Mon, Jan 4 · 9:00 AM",
+      "link": "https://marylcook-main-oh.whofi.com/calendar/event/358145/"
     }
   ]
 }

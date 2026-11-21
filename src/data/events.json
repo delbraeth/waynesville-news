@@ -1,5 +1,5 @@
 {
-  "_note": "Real venues and sources, verified against each listed source on 2026-11-20; Warren County tourism calendar re-checked 2026-11-20 (daily automated refresh). Wayne Local school dates per The Spartan (September and October 2026) and the district Community Events & Activities newsletter (October 2026) and Board Meeting Recap (October and November 2026). Waynesville Elementary book fair, PTO meeting and Holiday Shop dates per the school’s upcoming-events graphic (November 2026). Mary L. Cook Public Library programs per the library's monthly newsletter (November 2026). Recurring items (rodeo, commissioners, ghost walk, Lions Club meetings on the 2nd and 4th Tuesdays) show the next occurrence. Warren County Park District events page SUSPENDED as a source per Cap'n (2026-10-03): it sits behind a Cloudflare bot challenge (403 since 2026-09-24). Do not fetch it or report it as failing; its items from the 2026-09-23 check are kept until they expire. Resume only when Cap'n provides a working source. Event notes and dateLabels are shown to readers: write them for readers (what, when, where, and a helpful pointer like \"check the event website for times\" when a detail is missing). Never put editorial or process notes in them (\"not published\", \"confirm before printing\", \"corrected from\", \"checked on\"); record corrections in the commit message instead. Tag Christmas-season community events (tree lightings, Santa visits, holiday markets, single-date light shows) with \"holiday\" so they also appear on the Holiday Lights guide. Waynesville area vs. regional: an event counts as Waynesville-area when its venue names Waynesville, Corwin, Harveysburg, Oregonia, Ridgeville, Lytle, Mount Holly, Crosswick, Caesar Creek or ZIP 45068/45054/45065 (see src/lib/events.js); always put the town in the venue. Optional \"cost\" (e.g. \"Free\", \"$5 adults, kids free\") and \"accessibility\" (e.g. \"Wheelchair accessible; parking behind the building\") show as a line under the event, only when the organizer or its source says so. Set \"local\": true or false to override (e.g. an online survey about Waynesville, or an out-of-town group serving Waynesville families). Optional \"orgs\": [\"<exact name from churches.json>\"] ties an event to a church on the Churches page when its venue doesn't name the church.",
+  "_note": "Real venues and sources, verified against each listed source on 2026-11-21; Warren County tourism calendar re-checked 2026-11-21 (daily automated refresh). Wayne Local school dates per The Spartan (September, October and November 2026) and the district Community Events & Activities newsletter (October 2026) and Board Meeting Recap (October and November 2026). Waynesville Elementary book fair, PTO meeting and Holiday Shop dates per the school’s upcoming-events graphic (November 2026). Mary L. Cook Public Library programs per the library's monthly newsletter (November 2026). Recurring items (rodeo, commissioners, ghost walk, Lions Club meetings on the 2nd and 4th Tuesdays) show the next occurrence. Warren County Park District events page SUSPENDED as a source per Cap'n (2026-10-03): it sits behind a Cloudflare bot challenge (403 since 2026-09-24). Do not fetch it or report it as failing; its items from the 2026-09-23 check are kept until they expire. Resume only when Cap'n provides a working source. Event notes and dateLabels are shown to readers: write them for readers (what, when, where, and a helpful pointer like \"check the event website for times\" when a detail is missing). Never put editorial or process notes in them (\"not published\", \"confirm before printing\", \"corrected from\", \"checked on\"); record corrections in the commit message instead. Tag Christmas-season community events (tree lightings, Santa visits, holiday markets, single-date light shows) with \"holiday\" so they also appear on the Holiday Lights guide. Waynesville area vs. regional: an event counts as Waynesville-area when its venue names Waynesville, Corwin, Harveysburg, Oregonia, Ridgeville, Lytle, Mount Holly, Crosswick, Caesar Creek or ZIP 45068/45054/45065 (see src/lib/events.js); always put the town in the venue. Optional \"cost\" (e.g. \"Free\", \"$5 adults, kids free\") and \"accessibility\" (e.g. \"Wheelchair accessible; parking behind the building\") show as a line under the event, only when the organizer or its source says so. Set \"local\": true or false to override (e.g. an online survey about Waynesville, or an out-of-town group serving Waynesville families). Optional \"orgs\": [\"<exact name from churches.json>\"] ties an event to a church on the Churches page when its venue doesn't name the church.",
   "items": [
     {
       "title": "Business to Business Networking — November",
@@ -330,15 +330,6 @@
       "note": "A monthly evening for families on the first Thursday of each month. Children must come with an adult. All are welcome."
     },
     {
-      "title": "Wrestling Parent Meeting — 7th & 8th Grade",
-      "dateISO": "2026-11-16T16:20:00-05:00",
-      "dateLabel": "Mon, Nov 16 · 4:20 PM",
-      "venue": "Waynesville Middle/High School cafeteria, Waynesville",
-      "category": "Sports",
-      "source": "/images/events/2026-11-wrestling-parent-meetings.webp",
-      "note": "Parent meeting for Waynesville middle school (7th and 8th grade) wrestling, in the MS/HS cafe. Tap Details for the team's flyer."
-    },
-    {
       "title": "Wrestling Parent Meeting — High School",
       "dateISO": "2026-11-17T18:00:00-05:00",
       "dateLabel": "Tue, Nov 17 · 6:00 PM",
@@ -430,6 +421,53 @@
       "category": "Sports",
       "source": "/images/events/2026-11-20-spartan-send-off.webp",
       "note": "Waynesville Football invites the whole village to line the route and cheer the Spartans on as they leave for the Division V, Region 20 final against Bishop Fenwick at 7 p.m. at Lakota East High School. The buses turn right out of the school, right on Main Street, then right on State Route 73. Tap Details for the flyer."
+    },
+    {
+      "title": "No School — Wayne Local Thanksgiving Break",
+      "dateISO": "2026-11-23T00:00:00-05:00",
+      "endISO": "2026-11-27T23:59:00-05:00",
+      "dateLabel": "Mon, Nov 23 – Fri, Nov 27",
+      "venue": "Wayne Local Schools, Waynesville",
+      "category": "Schools",
+      "source": "https://www.wayne-local.com/",
+      "note": "Per The Spartan (November 2026): no school all week for Thanksgiving break."
+    },
+    {
+      "title": "Wayne Local Community Levy Listening Session",
+      "dateISO": "2026-12-07T18:00:00-05:00",
+      "dateLabel": "Mon, Dec 7 · 6:00 PM",
+      "venue": "WLS Performing Arts Center Lobby, 625 Dayton Rd, Waynesville",
+      "category": "Schools",
+      "source": "https://www.wayne-local.com/",
+      "note": "Per The Spartan (November 2026): the district will share its financial outlook and gather community input on levy timing (May or November 2027) and levy type (property tax or earned income tax). Open to the community."
+    },
+    {
+      "title": "Spartans Got Talent Show at Waynesville Elementary",
+      "dateISO": "2026-12-10T00:00:00-05:00",
+      "dateLabel": "Thu, Dec 10",
+      "venue": "Waynesville Elementary School, 659 Dayton Rd, Waynesville",
+      "category": "Schools",
+      "source": "https://www.wayne-local.com/",
+      "note": "Per The Spartan (November 2026): the school’s first-ever student talent show. Watch the school calendar for the time."
+    },
+    {
+      "title": "No School — Wayne Local Winter Break",
+      "dateISO": "2026-12-21T00:00:00-05:00",
+      "endISO": "2027-01-01T23:59:00-05:00",
+      "dateLabel": "Mon, Dec 21 – Fri, Jan 1",
+      "venue": "Wayne Local Schools, Waynesville",
+      "category": "Schools",
+      "source": "https://www.wayne-local.com/",
+      "note": "Per The Spartan (November 2026): no school during winter break."
+    },
+    {
+      "title": "No School for Students — Teacher Professional Day",
+      "dateISO": "2027-01-04T00:00:00-05:00",
+      "dateLabel": "Mon, Jan 4",
+      "venue": "Wayne Local Schools, Waynesville",
+      "category": "Schools",
+      "source": "https://www.wayne-local.com/",
+      "note": "Per The Spartan (November 2026): no school for students; teachers have a professional day."
     }
   ]
 }
