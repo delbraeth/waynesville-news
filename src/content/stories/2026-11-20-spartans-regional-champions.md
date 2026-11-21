@@ -1,13 +1,14 @@
 ---
-title: "Spartans win the Region 20 title, [SCORE] over Bishop Fenwick"
+title: "Spartans win the Region 20 title, 27-0 over Bishop Fenwick"
 date: 2026-11-20
-breaking: false
-dek: "Waynesville beat Bishop Fenwick [SCORE] Friday night at Lakota East to win the Division V, Region 20 championship and advance to a state semifinal against Ironton on Nov. 27."
+breaking: true
+breakingAt: 2026-11-20T21:10:00-05:00
+dek: "Waynesville beat Bishop Fenwick 27-0 Friday night at Lakota East to win the Division V, Region 20 championship and advance to a state semifinal against Ironton on Nov. 27."
 section: "Sports"
-published: false
+published: true
 ---
 
-Waynesville won the **Division V, Region 20 championship** Friday night, beating Bishop Fenwick **[SCORE]** at Lakota East High School in Liberty Township.
+Waynesville won the **Division V, Region 20 championship** Friday night, beating Bishop Fenwick **27-0** at Lakota East High School in Liberty Township.
 
 The Spartans reached the final with a 14-7 win at Graham last week.
 
