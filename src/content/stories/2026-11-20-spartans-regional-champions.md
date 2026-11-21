@@ -12,4 +12,4 @@ Waynesville won the **Division V, Region 20 championship** Friday night, beating
 
 The Spartans reached the final with a 14-7 win at Graham last week.
 
-The win sends Waynesville to the Division V state semifinals on **Friday, Nov. 27**, against **Ironton**, which beat Fort Frye 49-0 in the Region 19 final. The site and kickoff time haven't been announced yet; we'll post them as soon as they are. The [game page on MaxPreps](https://www.maxpreps.com/oh/football/game/bishop-fenwick-franklin-vs-waynesville/11-20-2026/?c=2f2a6d51-5706-4af5-a1bd-43c71e2f70d3) will carry the final box score.
+The win sends Waynesville to the Division V state semifinals on **Friday, Nov. 27**, against **Ironton**, which beat Fort Frye 49-0 in the Region 19 final. Kickoff is 7 p.m. at Teays Valley High School in Ashville; see our [semifinal preview](/stories/2026-11-21-state-semifinal-preview-ironton/). The [game page on MaxPreps](https://www.maxpreps.com/oh/football/game/bishop-fenwick-franklin-vs-waynesville/11-20-2026/?c=2f2a6d51-5706-4af5-a1bd-43c71e2f70d3) will carry the final box score.
