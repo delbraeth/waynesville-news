@@ -1,6 +1,8 @@
 ---
 title: "Spartans face Ironton in the state semifinals Friday at Teays Valley"
 date: 2026-11-21
+breaking: true
+breakingAt: 2026-11-21T15:18:00-05:00
 dek: "Waynesville (11-2) plays Ironton (12-1) in the Division V state semifinals at 7 p.m. Friday, Nov. 27, at Teays Valley High School in Ashville, in the first final-four appearance in school history."
 section: "Sports"
 published: true
