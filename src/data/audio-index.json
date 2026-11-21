@@ -169,6 +169,15 @@
       "model": "eleven_v4_turbo",
       "voice": "Alyson",
       "recorded": "2026-11-20T11:46:18.303Z"
+    },
+    "2026-11-21": {
+      "url": "https://audio.waynesville.news/audio/2026-11-21.mp3?v=20261121114552",
+      "seconds": 210,
+      "bytes": 1679612,
+      "chars": 3031,
+      "model": "eleven_v4_turbo",
+      "voice": "Brody",
+      "recorded": "2026-11-21T11:45:53.176Z"
     }
   }
 }
