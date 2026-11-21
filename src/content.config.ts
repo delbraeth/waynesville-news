@@ -42,6 +42,13 @@ const stories = defineCollection({
     // pubDate and the time on the graphic. Defaults to `date`.
     breaking: z.boolean().default(false),
     breakingAt: z.coerce.date().optional(),
+    // Feature story: true = also post this story to Facebook, as a new item in
+    // /facebook.xml with a dark "Feature" graphic (/cards/feature/<id>.png) and
+    // a plain caption (no "BREAKING"). For previews, profiles and other stories
+    // that aren't urgent. featureAt (ISO with ET offset) is the item's pubDate;
+    // defaults to `date`. Use breaking or feature, not both.
+    feature: z.boolean().default(false),
+    featureAt: z.coerce.date().optional(),
   }),
 });
 

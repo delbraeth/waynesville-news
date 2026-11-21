@@ -176,6 +176,12 @@ export const breakingTime = (story) => story.data.breakingAt ?? story.data.date;
 const keepTimes = (s = "") => String(s).replace(/(\d) (a\.m\.|p\.m\.)/g, "$1\u00a0$2");
 
 export function breakingCardTree({ title, dek, when }) {
+  return storyCardTree({ title, dek, when, label: "Breaking news", band: "#c0201a", dot: true });
+}
+
+// Shared layout for story graphics (breaking and feature): a colored band with a
+// label and a time or date, then the headline and dek.
+function storyCardTree({ title, dek, when, label, band, dot }) {
   title = keepTimes(title);
   dek = dek && keepTimes(dek);
   const headline = clip(title, 110);
@@ -186,12 +192,12 @@ export function breakingCardTree({ title, dek, when }) {
     { width: CARD_WIDTH, height: CARD_HEIGHT, flexDirection: "column", backgroundColor: COLORS.paper, fontFamily: "Newsreader", color: COLORS.ink },
     h(
       "div",
-      { backgroundColor: "#c0201a", color: "#fff", padding: "20px 60px", justifyContent: "space-between", alignItems: "center" },
+      { backgroundColor: band, color: "#fff", padding: "20px 60px", justifyContent: "space-between", alignItems: "center" },
       h(
         "div",
         { alignItems: "center", fontSize: 44, fontWeight: 600, letterSpacing: 4, textTransform: "uppercase" },
-        h("div", { width: 22, height: 22, borderRadius: 11, backgroundColor: "#fff", marginRight: 18 }),
-        "Breaking news",
+        dot ? h("div", { width: 22, height: 22, borderRadius: 11, backgroundColor: "#fff", marginRight: 18 }) : null,
+        label,
       ),
       h("div", { fontSize: 30 }, when),
     ),
@@ -200,7 +206,7 @@ export function breakingCardTree({ title, dek, when }) {
       { flexDirection: "column", flexGrow: 1, padding: "40px 60px 0" },
       h("div", { fontSize: size, fontWeight: 600, lineHeight: 1.06, letterSpacing: -0.5 }, headline),
       dek
-        ? h("div", { fontSize: 34, color: COLORS.inkSoft, lineHeight: 1.3, marginTop: 26, paddingTop: 20, borderTop: "3px solid #c0201a", width: "100%" }, clip(dek, 170))
+        ? h("div", { fontSize: 34, color: COLORS.inkSoft, lineHeight: 1.3, marginTop: 26, paddingTop: 20, borderTop: `3px solid ${dot ? band : COLORS.accent}`, width: "100%" }, clip(dek, 170))
         : null,
     ),
     h(
@@ -231,3 +237,40 @@ export function renderBreakingCard(story) {
 }
 
 export const breakingCardPath = (id) => `/cards/breaking/${id}.png`;
+
+// Feature-story graphic for a story flagged `feature: true` (a preview, profile
+// or other non-urgent story the editor wants on Facebook): same layout as the
+// breaking card, but with a dark "Feature" band (plus the story's section, if
+// any), no alert dot, and the date instead of a time.
+const featureDateFmt = new Intl.DateTimeFormat("en-US", {
+  weekday: "short", month: "short", day: "numeric", year: "numeric", timeZone: "America/New_York",
+});
+export const featureTime = (story) => story.data.featureAt ?? story.data.date;
+// A bare `date` (YYYY-MM-DD) is midnight UTC, so show it in UTC to keep the day.
+const featureDateLabel = (story) =>
+  story.data.featureAt
+    ? featureDateFmt.format(story.data.featureAt)
+    : new Intl.DateTimeFormat("en-US", { weekday: "short", month: "short", day: "numeric", year: "numeric", timeZone: "UTC" }).format(story.data.date);
+
+export function featureCardTree({ title, dek, when, section }) {
+  return storyCardTree({ title, dek, when, label: section ? `Feature · ${section}` : "Feature", band: COLORS.ink, dot: false });
+}
+
+const featureCache = new Map();
+export function renderFeatureCard(story) {
+  if (!featureCache.has(story.id)) {
+    featureCache.set(
+      story.id,
+      (async () => {
+        const svg = await satori(
+          featureCardTree({ title: story.data.title, dek: story.data.dek, section: story.data.section, when: featureDateLabel(story) }),
+          { width: CARD_WIDTH, height: CARD_HEIGHT, fonts: await loadFonts() },
+        );
+        return new Resvg(svg, { fitTo: { mode: "width", value: CARD_WIDTH } }).render().asPng();
+      })(),
+    );
+  }
+  return featureCache.get(story.id);
+}
+
+export const featureCardPath = (id) => `/cards/feature/${id}.png`;

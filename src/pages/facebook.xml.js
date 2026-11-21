@@ -2,7 +2,9 @@
 // Daily briefs, plus breaking-news stories (stories with `breaking: true`),
 // newest first. A breaking story is a new item (its own guid), so Zapier posts
 // it as soon as the site deploys, with a red "Breaking news" graphic
-// (/cards/breaking/<id>.png). Each daily brief has:
+// (/cards/breaking/<id>.png). Feature stories (`feature: true`) are posted the
+// same way, with a dark "Feature" graphic (/cards/feature/<id>.png) and a plain
+// caption. Each daily brief has:
 //   - <enclosure> and <media:content>: the day's header graphic (/cards/<date>.png),
 //     for a Zapier "Create Page Photo" step (map the enclosure URL to Photo URL);
 //   - <description>: a ready-to-post plain-text caption: the dek, a direct
@@ -10,7 +12,7 @@
 //   - the brief page itself carries the same graphic as og:image, so a plain
 //     link post shows it too.
 import { getPublicBriefs } from "../lib/briefs.js";
-import { renderBriefCard, cardPath, renderBreakingCard, breakingCardPath, breakingTime } from "../lib/brief-card.js";
+import { renderBriefCard, cardPath, renderBreakingCard, breakingCardPath, breakingTime, renderFeatureCard, featureCardPath, featureTime } from "../lib/brief-card.js";
 import { getPublishedStories } from "../lib/stories.js";
 import audioIndex from "../data/audio-index.json";
 
@@ -47,7 +49,10 @@ export async function GET(context) {
   const breaking = (await getPublishedStories())
     .filter((s) => s.data.breaking && now.getTime() - breakingTime(s).getTime() < BREAKING_DAYS * 86400000)
     .map((s) => ({ kind: "breaking", s, at: breakingTime(s) }));
-  const entries = [...recent.map((b) => ({ kind: "brief", b, at: b.data.date })), ...breaking]
+  const features = (await getPublishedStories())
+    .filter((s) => s.data.feature && !s.data.breaking && now.getTime() - featureTime(s).getTime() < BREAKING_DAYS * 86400000)
+    .map((s) => ({ kind: "feature", s, at: featureTime(s) }));
+  const entries = [...recent.map((b) => ({ kind: "brief", b, at: b.data.date })), ...breaking, ...features]
     .sort((x, y) => y.at.getTime() - x.at.getTime())
     .slice(0, FEED_ITEMS);
 
@@ -65,6 +70,22 @@ export async function GET(context) {
         ].filter(Boolean).join("\n\n");
         return `    <item>
       <title>${esc(`Breaking: ${st.data.title}`)}</title>
+      <link>${esc(page)}</link>
+      <guid isPermaLink="true">${esc(page)}</guid>
+      <pubDate>${entry.at.toUTCString()}</pubDate>
+      <description>${esc(caption)}</description>
+      <enclosure url="${esc(img)}" length="${bytes}" type="image/png" />
+      <media:content url="${esc(img)}" medium="image" type="image/png" width="1200" height="630" />
+    </item>`;
+      }
+      if (entry.kind === "feature") {
+        const st = entry.s;
+        const page = `${site}/stories/${st.id}/`;
+        const img = `${site}${featureCardPath(st.id)}`;
+        const bytes = (await renderFeatureCard(st)).length;
+        const caption = [st.data.title, st.data.dek ?? "", `Read the story: ${page}`].filter(Boolean).join("\n\n");
+        return `    <item>
+      <title>${esc(st.data.title)}</title>
       <link>${esc(page)}</link>
       <guid isPermaLink="true">${esc(page)}</guid>
       <pubDate>${entry.at.toUTCString()}</pubDate>
@@ -102,7 +123,7 @@ export async function GET(context) {
     <title>Waynesville News — Daily Brief (for Facebook)</title>
     <link>${site}/</link>
     <atom:link href="${site}/facebook.xml" rel="self" type="application/rss+xml" />
-    <description>The Waynesville Daily Brief, one item per edition, with a header graphic for each day, plus breaking news.</description>
+    <description>The Waynesville Daily Brief, one item per edition, with a header graphic for each day, plus breaking news and feature stories.</description>
     <language>en-us</language>
 ${items.join("\n")}
   </channel>
