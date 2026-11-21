@@ -468,6 +468,16 @@
       "category": "Schools",
       "source": "https://www.wayne-local.com/",
       "note": "Per The Spartan (November 2026): no school for students; teachers have a professional day."
+    },
+    {
+      "title": "State semifinal football: Waynesville vs. Ironton",
+      "dateISO": "2026-11-27T19:00:00-05:00",
+      "dateLabel": "Fri, Nov 27 · 7:00 PM",
+      "venue": "Teays Valley High School, Ashville",
+      "category": "Sports",
+      "local": true,
+      "source": "https://www.ohsaa.org/news-media/articles/ohsaa-announces-football-state-semifinal-bracket-pairings-45",
+      "note": "Division V state semifinal, the first in Waynesville history: the Region 20 champion Spartans (11-2) against Region 19 champion Ironton (12-1). The winner plays for the state title Friday, Dec. 4. Check the Spartans' and OHSAA pages for ticket details."
     }
   ]
 }
