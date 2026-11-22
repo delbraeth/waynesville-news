@@ -149,6 +149,51 @@ whose subjects died long ago.
     with #9 (Fort Ancient).
     A strong standalone feature at any time of year; could pair with #11 (the Little Miami) or a museum visit.
 
+## More hidden-history leads (found 2026-11-22, all unverified)
+
+27. **The *Miami Visitor*, Waynesville's abolitionist newspaper (1850–1861).**
+    A weekly whose publisher, J. Wesley Roberts, is described as an
+    abolitionist and temperance advocate; it is said to have run from Jan. 30,
+    1850, to Jan. 23, 1861, ending on the eve of the Civil War. It pairs with #5.
+    Look for surviving issues (Ohio History Connection, Chronicling America, the
+    Mary L. Cook library). Source so far: local history listings.
+28. **I. H. Harris, banker.** Waynesville's bank reportedly opened a
+    short-lived branch in Lebanon in 1877, after Lebanon's own bank closed.
+    Check whether that was Harris's bank, which would make a natural sidebar to #26 (the pearls).
+29. **Stagecoach days and the Hammel House.** Sources say a log tavern stood
+    on the site before the present building, which was an inn and stagecoach stop
+    on the People's Stage Line (dates conflict: 1799, 1817, 1822). Enoch Hammel
+    owned it from 1841 to 1863, which is where the name comes from. Keep the
+    history (stage routes, travelers, the National Road era) separate from the
+    ghost stories, which belong in #14. Sources: 1882 *History of Warren
+    County*, the Warren County GenWeb transcriptions, the Friends Home museum's
+    house histories.
+30. **The founder's ambitions.** Samuel Heighway, an Englishman from
+    Shropshire, founded the town in 1797 (some sources say laid out in 1796,
+    platted in 1802 "in the style of an English village"), on land bought
+    through John Cleves Symmes. A local tourism history says he hoped it would
+    become the territorial capital; other sources don't mention this, so treat it as
+    tradition. This could fold into #2.
+31. **The 1881 Engine House and Lockup.** The village's old firehouse and
+    jail, listed on the National Register in 1999. A short "building with a
+    story" piece. Source: the National Register nomination (via NPS).
+32. **Eli Harvey (1860–1957), Quaker animal sculptor.** Born in Ogden,
+    Clinton County (not Waynesville), but the Mary L. Cook library keeps a file
+    on him among "Famous Quakers from SW Ohio." He became one of the country's
+    leading animal sculptors, known for the Elks lodge elk among other works;
+    the Smithsonian American Art Museum has an artist page for him. Only a
+    regional tie, so it may suit a "Quaker neighbors" piece more than a Waynesville
+    story. Verify any family link to the Harveys of Harveysburg before claiming one.
+33. **The Mary L. Cook library's local-history files** are a gold mine for
+    all of these: mlcook.lib.oh.us/content/waynesville-history (including
+    "Harveysburg on Caesar's Creek" and the Eli Harvey file). Also the
+    Waynesville genealogy blog (waynesgenhis.blogspot.com) on old houses and
+    families, and the 1882 *History of Warren County* (Wayne Township
+    chapter, transcribed online).
+
+**Not usable yet:** a regional "notables" page lists Phyllis McGuire (the McGuire
+Sisters), but nothing ties her to Waynesville, so leave it out.
+
 ## Festivals and fun
 
 12. **History of the Ohio Sauerkraut Festival.** From a small village event
