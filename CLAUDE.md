@@ -16,6 +16,7 @@ Astro site for https://waynesville.news. Cloudflare deploys `main` on every push
 - **Christmas Eve services:** an optional `christmasEve` on the church in `src/data/churches.json` (format in its `_note`). Shown on /holiday-lights/christmas-eve/ and the church's entry; the tab appears once one church has this year's services.
 - **Audio opener lines:** `src/data/day-bites.json`. `fixed` holds MM-DD lines and `pool` holds everyday lines, optionally `{"text", "months"}`. Preview with `node scripts/day-bite.mjs <date> <days>`.
 - **Breaking news to Facebook:** a story in `src/content/stories/` with `breaking: true` and `breakingAt`. See DEPLOY.md §6.
+- **Feature stories to Facebook** (previews, profiles, anything not urgent): `feature: true` (optional `featureAt`) instead of `breaking`, for a dark "Feature" graphic and no "BREAKING" caption. See DEPLOY.md §6.
 
 ## Always
 - Facts only, each one verified on the organization's own page or a source the editor sends. Never invent details.

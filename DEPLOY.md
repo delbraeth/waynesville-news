@@ -76,6 +76,13 @@ ET offset, e.g. `2026-11-15T11:55:00-05:00`). On the next deploy it appears at t
 that starts "🚨 BREAKING:". Breaking items stay in the feed for 14 days. Don't change a breaking
 story's file name after it posts: a new URL is a new guid, and Zapier would post it again.
 
+**Feature stories.** For a story that should go to Facebook but isn't urgent (a game preview, a
+profile, a feature), use `feature: true` instead of `breaking: true`, with an optional `featureAt:`
+(ISO with the ET offset) for the post time. It appears in `/facebook.xml` the same way, so the Zap
+posts it once, but with a dark "Feature" graphic at `/cards/feature/<story id>.png` (the story's
+`section`, headline, dek and date) and a plain caption: headline, dek, link. Use one flag or the
+other, not both. The same 14-day window and "don't rename the file" rule apply.
+
 Two ways to set up the Zap action:
 
 - **Photo post (biggest image in the feed):** Facebook Pages → *Create Page Photo*. Photo URL = the
