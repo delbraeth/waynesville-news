@@ -105,24 +105,49 @@ whose subjects died long ago.
 
 ## The Waynesville pearl rush
 
-26. **Freshwater pearls, Tiffany and the Smithsonian.** Pearls from the Little
-    Miami and local creeks set off a pearl rush in the 1870s (sources say
-    1868 for the Little Miami and about 1876–78 near Waynesville; one says
-    about $25,000 in pearls was collected nearby in 1878, so verify). Waynesville
-    banker Israel Hopkins Harris collected them. Sources say his collection was
-    sold to Tiffany & Co. in 1888 and won a gold medal at the Paris Exposition
-    (verify which year), and that a large part is now in the **Smithsonian**
-    (verify how it got there; the Tiffany sale and the Smithsonian claims
-    need reconciling). The Museum at the Friends Home holds what it calls the
-    **second-largest U.S. freshwater pearl collection** (Warren County Post).
-    The ending: pollution and overharvesting ended the river's pearls.
-    **Primary sources to pursue:** George F. Kunz and H. L. Stevenson's
-    government report *The Fresh-Water Pearls and Pearl Fisheries of the
-    United States* (U.S. Fish Commission Bulletin, 1898; spo.nmfs.noaa.gov,
-    fb17.41.pdf); the Smithsonian's collections search (look for Harris);
-    the Museum at the Friends Home. Also the Project MUSE article on the Ohio River
-    musseling industry. A strong standalone feature at any time of year; could pair with
-    #11 (the Little Miami) or a museum visit.
+26. **Freshwater pearls and the Harris collection.** Pearls from the Little
+    Miami and local creeks set off a pearl rush. Waynesville banker Israel H.
+    Harris built one of the country's best-known collections of river pearls,
+    which was shown at the 1889 Paris World's Fair. Part of it is reportedly at
+    the Smithsonian, and part is at the Museum at the Friends Home. The ending:
+    pollution and overharvesting finished off the river's pearls.
+    **Checked against the primary source (2026-11-22):** George F. Kunz, "The
+    Fresh-Water Pearls and Pearl Fisheries of the United States," *Bulletin
+    of the United States Fish Commission* (volume for 1897), p. 394
+    (spo.nmfs.noaa.gov/sites/default/files/pdf-content/fish-bull/fb17.41.pdf;
+    the PDF is 13 MB, so download it and extract the text). Kunz was Tiffany's gem expert. He says:
+    - about 1868, "many fine pearls were obtained from Little Miami River, Ohio";
+    - "Some of the finest American pearls that were next found came from near
+      Waynesville, Ohio, **$3,000 worth** being collected in that vicinity during
+      the pearl excitement of **1876**";
+    - Harris then began "one of the finest and best-known collections of Unio
+      pearls in this country," buying "every specimen of value" in the area;
+      it held "more than 2,000 pearls, weighing over 2,000 grains," including a
+      38-grain button-shaped pearl, several "almost transparent pink ones," and
+      a pearl that had grown almost through the shell; "in all probability the
+      last collection that will be made from that district";
+    - it "was exhibited in the jewelry department at the World's Fair held in
+      Paris during 1889."
+    Kunz says **nothing about a Tiffany purchase or the Smithsonian.**
+    **Conflicts to resolve before writing:**
+    - The Warren County Post (2022) says about **$25,000** in pearls was found in
+      **1878**; Kunz says **$3,000** in **1876**. Use Kunz unless a better source turns up.
+    - The Post (quoting the Friends Home museum) says part of the 1889 exhibit
+      won a gold medal. Kunz doesn't mention a medal, so it's unconfirmed.
+    - The Tiffany 1888 purchase appears only in secondary web sources and is
+      unconfirmed.
+    - The Smithsonian holding is the museum's statement, unconfirmed. The
+      Smithsonian collections search (collections.si.edu) blocks automated
+      access, so check it in a browser (search "I. H. Harris" and "Waynesville").
+    **Friends Home collection:** donated by Harris's great-granddaughter, per
+    the Warren County Post (2022), which quotes the museum calling it the
+    second-largest collection of Harris pearls after the Smithsonian's. Ask the
+    museum how many pearls it holds and for photos.
+    **Bonus thread:** Kunz also describes river-mussel shells, drilled and
+    carved, from Taylor's mound at Oregonia in Warren County, and pearls
+    found in mounds of the Little Miami Valley (the Turner group). That could tie in
+    with #9 (Fort Ancient).
+    A strong standalone feature at any time of year; could pair with #11 (the Little Miami) or a museum visit.
 
 ## Festivals and fun
 
