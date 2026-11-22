@@ -1,6 +1,7 @@
 ---
 title: "Reclaiming our cryptid: Is the Loveland Frogman a Crosswick lizard?"
-date: 2026-11-22
+date: 2027-05-29
+featureAt: 2027-05-29T08:00:00-04:00
 dek: "Loveland has the famous monster. Wayne Township may have had it first. A not-entirely-serious look at the evidence, all of it downstream."
 section: "Folklore"
 feature: true
@@ -9,7 +10,7 @@ published: false
 
 *A lighthearted look at local legend. The history is real; the theory is ours.*
 
-Every town needs a monster. Loveland's Frogman is one of the best-known in Ohio. We'd like to point out, politely, that Wayne Township may have had it first.
+It was 145 years ago this week that the Crosswick Monster came out of the creek. Every town needs a monster. Loveland's Frogman is one of the best-known in Ohio. We'd like to point out, politely, that Wayne Township may have had it first.
 
 **Exhibit A: Crosswick, 1882.** On May 29, 1882, the Western Star carried a report from Waynesville that the [Warren County Historical Society](https://www.wchsmuseum.org/blog/crosswickmonster) has reprinted from its archives. John Lynch's boys, Ed and Joe, 13 and 11, were fishing near Crosswick when "a huge monster" came at them: 30 to 40 feet long, with scaly legs four feet long, feet "shaped like a lizard's," black and white with large yellow spots, and a long, black forked tongue. It reared up 12 or 14 feet. Three men quarrying stone nearby ran to help, and Dr. L.C. Lukens of Waynesville saw to the boy. That afternoon about sixty men "armed with clubs, dog, axes, &c." gathered at the sycamore where it hid and began cutting it down. The creature fled, and "the braver portion followed."
 
