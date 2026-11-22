@@ -1,6 +1,6 @@
 # Planning note: local feature story ideas (2026-11-22)
 
-**Status:** Idea list from the editor and Claude, 2026-11-22. Nothing here is
+**Status:** Idea list from the editor and Claude, 2026-11-22 (topics 20–24 added the same day). Nothing here is
 verified yet. Details marked "(verify)" are from memory: check every fact
 against the organization's own page, an original source, or a source the editor
 sends before writing (see CLAUDE.md, "Always").
@@ -72,6 +72,30 @@ whose subjects died long ago.
     and the family behind it (verify).
 17. **Fox Hollow Rodeo.** How long it has run and who runs it.
 
+20. **History of the Warren County Fair.** How far back it goes (verify the
+    first year), how it came to the Lebanon fairgrounds, 4-H and the junior
+    fair, and old traditions and oddities. Source: the Warren County
+    Agricultural Society or fair board, and the historical society. Best timing:
+    the week before the July fair.
+21. **The gliderport.** The Caesar Creek Soaring Club's gliderport near
+    Waynesville (verify the name, location and founding year): how gliders fly
+    without engines, who flies them, and whether visitors can take a ride.
+    Source: the club. Best timing: spring or summer.
+
+## Getting outside (a possible "Out and about" series)
+
+22. **Hiking Caesar Creek.** A trail guide: the long perimeter loop, the
+    shorter family hikes, the Caesar Creek Gorge State Nature Preserve and the
+    best spots for spring wildflowers or fall color (verify trail names and
+    distances). Sources: ODNR, Army Corps, Ohio DNR Natural Areas.
+    Best timing: April or October.
+23. **Horse trails.** Caesar Creek's bridle trails and horseman's camp (verify
+    the mileage and camp details), the riding community, and trail etiquette
+    for hikers and riders sharing paths. Ties in with the horse parades and
+    the rodeo. Sources: ODNR, local riding groups (organizations only).
+24. **Paddling and biking the Little Miami.** Canoe liveries and the scenic
+    rail trail through Corwin, as a companion to #11.
+
 ## Cryptids and oddities
 
 18. **Reclaiming our cryptid.** Scheduled for **Saturday, May 29, 2027**, the
@@ -97,6 +121,7 @@ whose subjects died long ago.
 - **Winter (anytime):** New Burlington; Anthony Wayne.
 - **Christmas in the Village week:** Quaker Waynesville.
 - **February (Black History Month):** Harveysburg's school; the Underground Railroad.
-- **Spring:** the fossil spillway.
+- **Spring:** the fossil spillway; hiking Caesar Creek (wildflowers); the gliderport.
+- **Summer:** the Warren County Fair (week before the July fair); horse trails; paddling the Little Miami.
 - **May 29, 2027:** Reclaiming our cryptid (PR #170), for the 145th anniversary of the Crosswick Monster.
-- **October:** the Sauerkraut Festival history, the haunted village.
+- **October:** the Sauerkraut Festival history, the haunted village, fall hikes.
