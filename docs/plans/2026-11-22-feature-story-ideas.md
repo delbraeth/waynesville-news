@@ -191,6 +191,37 @@ whose subjects died long ago.
     families, and the 1882 *History of Warren County* (Wayne Township
     chapter, transcribed online).
 
+34. **Lt. Suella Bernard of Waynesville, a WWII flight nurse.**
+    **Confirmed (Stars and Stripes, London edition, June 12, 1944; reprinted
+    unedited June 7, 2024, stripes.com/history/2024-06-07/us-army-nurses-land-d-day-14088869.html):**
+    "2/Lt. ... Suella Bernard, of Waynesville, Ohio" was one of five Army
+    nurses who, on Saturday, June 10, 1944 (four days after D-Day), "became the
+    first Allied women to land in France." With a Ninth Air Force
+    evacuation unit (a doctor, six enlisted technicians and the nurses),
+    they flew C-47s from England to dirt airstrips in the Cherbourg peninsula beachhead and
+    evacuated 14 stretcher cases, including wounded prisoners, back to Britain
+    the same day (took off 8:49 a.m., back by 1:10 p.m.). The other nurses were
+    from Columbus, Ohio; Kersey, Pa.; St. Petersburg, Fla.; and Cornwall,
+    Conn. The 1944 article uses a wartime slur for a Japanese prisoner, so
+    don't quote that passage.
+    **Also:** the National Museum of the U.S. Air Force (Dayton) is honoring
+    "1st Lt. Suella Bernard of Waynesville, who cared for wounded soldiers
+    during a glider evacuation mission in Germany," in its November 2026
+    "Ohio Serves" (America 250-Ohio) gallery displays, per Vintage Aviation
+    News (Nov. 8, 2026). Not yet checked on the museum's own site. The glider
+    mission in Germany is a separate, later mission (possibly the spring 1945
+    glider medical evacuations, unconfirmed), and the promotion to 1st Lt.
+    fits a later date.
+    **Timely hook:** the museum display is up now (November 2026), so this could run
+    soon as a short item ("A Waynesville nurse is honored at the Air Force
+    museum") with the full feature on the **June 10, 2027** anniversary.
+    **To find:** her later life, family ties and burial (only details already
+    public: obituaries, cemetery records, the Friends Home museum, the Mary L.
+    Cook library; no living relatives' names without the editor's OK); her
+    squadron (likely a Medical Air Evacuation Transport Squadron); the
+    glider mission details; and any photos the Air Force museum or the National
+    Archives can share.
+
 **Not usable yet:** a regional "notables" page lists Phyllis McGuire (the McGuire
 Sisters), but nothing ties her to Waynesville, so leave it out.
 
@@ -277,6 +308,8 @@ Sisters), but nothing ties her to Waynesville, so leave it out.
 - **February (Black History Month):** Harveysburg's school; the Underground Railroad.
 - **Spring:** the fossil spillway; hiking Caesar Creek (wildflowers); the gliderport; Spring Valley Lake (migration).
 - **Summer:** the Warren County Fair (week before the July fair); horse trails; paddling the Little Miami.
+- **Now (November 2026):** a short item on Lt. Suella Bernard's Air Force museum honor (#34).
+- **June 10, 2027:** Lt. Suella Bernard feature, on the anniversary of the first Allied women landing in France (#34).
 - **May 29, 2027:** Reclaiming our cryptid (PR #170), for the 145th anniversary of the Crosswick Monster.
 - **October:** the Sauerkraut Festival history, the haunted village, fall hikes.
 - **2028:** Caesar Creek Lake's 50th anniversary, with a New Burlington series (#7).
