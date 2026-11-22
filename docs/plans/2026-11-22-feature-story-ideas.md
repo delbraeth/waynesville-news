@@ -1,6 +1,6 @@
 # Planning note: local feature story ideas (2026-11-22)
 
-**Status:** Idea list from the editor and Claude, 2026-11-22 (topics 20–24 added the same day). Nothing here is
+**Status:** Idea list from the editor and Claude, 2026-11-22 (topics 20–25 added the same day). Nothing here is
 verified yet. Details marked "(verify)" are from memory: check every fact
 against the organization's own page, an original source, or a source the editor
 sends before writing (see CLAUDE.md, "Always").
@@ -93,6 +93,13 @@ whose subjects died long ago.
     the mileage and camp details), the riding community, and trail etiquette
     for hikers and riders sharing paths. Ties in with the horse parades and
     the rodeo. Sources: ODNR, local riding groups (organizations only).
+25. **Spring Valley Lake and the wildlife area.** The lake and marsh at the
+    Spring Valley Wildlife Area, just north of Waynesville near the
+    Greene–Warren county line (verify the acreage and which agency manages it,
+    likely ODNR Division of Wildlife). Birding (migrating waterfowl, herons),
+    the boardwalk or marsh trail (verify), fishing, and its link to the Little
+    Miami Scenic Trail. Sources: ODNR, local birding groups (organizations only).
+    Best timing: spring or fall migration.
 24. **Paddling and biking the Little Miami.** Canoe liveries and the scenic
     rail trail through Corwin, as a companion to #11.
 
@@ -121,7 +128,7 @@ whose subjects died long ago.
 - **Winter (anytime):** New Burlington; Anthony Wayne.
 - **Christmas in the Village week:** Quaker Waynesville.
 - **February (Black History Month):** Harveysburg's school; the Underground Railroad.
-- **Spring:** the fossil spillway; hiking Caesar Creek (wildflowers); the gliderport.
+- **Spring:** the fossil spillway; hiking Caesar Creek (wildflowers); the gliderport; Spring Valley Lake (migration).
 - **Summer:** the Warren County Fair (week before the July fair); horse trails; paddling the Little Miami.
 - **May 29, 2027:** Reclaiming our cryptid (PR #170), for the 145th anniversary of the Crosswick Monster.
 - **October:** the Sauerkraut Festival history, the haunted village, fall hikes.
