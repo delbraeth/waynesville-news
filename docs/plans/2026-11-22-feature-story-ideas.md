@@ -103,6 +103,27 @@ whose subjects died long ago.
     Scenic River designations (verify the years), and the rail trail through
     Corwin that was once a railroad.
 
+## The Waynesville pearl rush
+
+26. **Freshwater pearls, Tiffany and the Smithsonian.** Pearls from the Little
+    Miami and local creeks set off a pearl rush in the 1870s (sources say
+    1868 for the Little Miami and about 1876–78 near Waynesville; one says
+    about $25,000 in pearls was collected nearby in 1878, so verify). Waynesville
+    banker Israel Hopkins Harris collected them. Sources say his collection was
+    sold to Tiffany & Co. in 1888 and won a gold medal at the Paris Exposition
+    (verify which year), and that a large part is now in the **Smithsonian**
+    (verify how it got there; the Tiffany sale and the Smithsonian claims
+    need reconciling). The Museum at the Friends Home holds what it calls the
+    **second-largest U.S. freshwater pearl collection** (Warren County Post).
+    The ending: pollution and overharvesting ended the river's pearls.
+    **Primary sources to pursue:** George F. Kunz and H. L. Stevenson's
+    government report *The Fresh-Water Pearls and Pearl Fisheries of the
+    United States* (U.S. Fish Commission Bulletin, 1898; spo.nmfs.noaa.gov,
+    fb17.41.pdf); the Smithsonian's collections search (look for Harris);
+    the Museum at the Friends Home. Also the Project MUSE article on the Ohio River
+    musseling industry. A strong standalone feature at any time of year; could pair with
+    #11 (the Little Miami) or a museum visit.
+
 ## Festivals and fun
 
 12. **History of the Ohio Sauerkraut Festival.** From a small village event
@@ -181,7 +202,7 @@ whose subjects died long ago.
 
 ## Suggested calendar
 
-- **Winter (anytime):** New Burlington; Anthony Wayne.
+- **Winter (anytime):** New Burlington; Anthony Wayne; the pearl rush.
 - **Christmas in the Village week:** Quaker Waynesville.
 - **February (Black History Month):** Harveysburg's school; the Underground Railroad.
 - **Spring:** the fossil spillway; hiking Caesar Creek (wildflowers); the gliderport; Spring Valley Lake (migration).
