@@ -32,7 +32,46 @@ whose subjects died long ago.
    museum) and the settlers who shaped the village. Source: Museum at the
    Friends Home.
 5. **The Underground Railroad locally.** Only documented sites and people,
-   with legend clearly separated from the record.
+   with legend clearly separated from the record. A good honest angle: the
+   written record is thin because people kept quiet to stay safe, even after the
+   war, so the story is what's known, what's claimed, and how historians tell
+   them apart. Pair with #6 for February.
+   **Research so far (2026-11-22):**
+   - **Confirmed, NPS Network to Freedom:** Waynesville's listing is a
+     *program*, not a site. It is "Waynesville's Role in the Underground
+     Railroad" (the NPS dataset spells it "Wayneville's"), ID 27OH04, accepted
+     2014. Designed by the Waynesville Underground Railroad Committee (WURC)
+     and first presented in 2012, it is a yearly program for Waynesville
+     Middle School sixth graders: a PowerPoint lecture, a walking tour, and a
+     living-history reenactment at Camp Joy near Clarksville. Per the NPS
+     abstract, it draws on the 1840 Miami Monthly Meeting minutes and letters
+     in the Wilbur Siebert Collection, and says the village was settled by
+     Quakers from the Bush River (South Carolina) Meeting. No Waynesville
+     *site* is listed. Source: the NPS Network to Freedom listings dataset (CSV,
+     updated 2026-10-09), nps.gov/subjects/undergroundrailroad/ntf-listings.htm.
+     Follow-up: is the program still running? Ask Wayne Local and the WURC
+     (organizations only).
+   - **Miami Monthly Meeting, "Miami Friends and Slavery"**
+     (quaker.org/legacy/miami/index_files/slavery.html): says "many Quaker
+     Underground Railroad sites were located in Waynesville, Springboro, and
+     Harveysburg" (no sites named, no citations); Butterworth Farm near
+     Maineville was "a resting place for escaped slaves," with a 2015 Ohio
+     Historical Marker for "Butterworth Station, Warren County's southernmost
+     station." It notes some Friends struggled with the secrecy, given their
+     testimony of truth. Butterworth is not in the NPS list.
+   - **Primary sources to pursue:** the 1840 Miami Monthly Meeting minutes,
+     and the Wilbur Siebert Collection (Ohio History Connection; Siebert
+     gathered Underground Railroad accounts in the 1890s).
+   - **Claimed, unconfirmed:** Thomas Arnett and Achilles Pugh as Waynesville
+     abolitionists (Pugh said to have aided freedom seekers after moving here
+     in 1854); the "Haines House, 108 Second Street" as a station. **Caution:**
+     the NPS-listed Haines House (08OH01, 2004) is in **Alliance, Stark
+     County**, not Waynesville, and the "Haines House Underground Railroad
+     Museum" web pages are likely about Alliance. Don't mix them up.
+   - **A certificate at the Museum at the Friends Home** from NPS and the
+     Freedom Center is reported; it probably relates to the 2014 program
+     listing. Confirm with the museum.
+   - **Rumor only:** Marble Hall at Otterbein.
 6. **Harveysburg's school for Black children (1831).** Often called Ohio's
    first free school for Black children (verify the wording). Source: the
    Harveysburg Community Historical Society.
