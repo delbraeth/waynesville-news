@@ -1,7 +1,7 @@
 ---
 title: "Waynesville's WWII flight nurse honored at the Air Force museum"
 date: 2026-11-22
-dek: "Lt. Suella Bernard was among the first Allied women to land in France after D-Day, and later rode a glider out of the Remagen bridgehead with wounded soldiers. The museum in Dayton is featuring her this month."
+dek: "Lt. Suella Bernard was among the first Allied women to land in France after D-Day, and later rode a glider out of the Remagen bridgehead with wounded soldiers. The museum in Dayton is featuring her this month, according to Vintage Aviation News."
 section: "History"
 image: /images/stories/2026-11-22-suella-bernard-glider.webp
 imageAlt: "Black-and-white photo: Lt. Suella Bernard, in a flight jacket, tends to blanket-covered patients on stacked litters hung by straps inside a CG-4A glider."
@@ -21,7 +21,7 @@ Nine months later she flew a mission no other nurse is known to have flown. On M
 
 Flight nurses like Bernard were volunteers. The planes that carried the wounded also hauled supplies, so they couldn't display the Red Cross, and nothing marked them as noncombat flights. About 500 Army nurses served in 31 medical air evacuation squadrons during the war. Of the 1,176,048 patients they evacuated by air, only 46 died en route, and 17 flight nurses lost their lives, according to a 2013 Air Force history from the museum.
 
-According to the National Museum of the U.S. Air Force in Dayton, she "became the only nurse known to have participated in a glider combat mission during World War II," and received the Air Medal for it. This month the museum is featuring her among the Ohioans in its "Ohio Serves" gallery highlights for the America 250-Ohio commemoration, recognizing "1st Lt. Suella Bernard of Waynesville, who cared for wounded soldiers during a glider evacuation mission in Germany."
+According to the National Museum of the U.S. Air Force in Dayton, she "became the only nurse known to have participated in a glider combat mission during World War II," and received the Air Medal for it. The museum's November "Ohio Serves" gallery highlights, part of the America 250-Ohio commemoration, include "1st Lt. Suella Bernard of Waynesville, who cared for wounded soldiers during a glider evacuation mission in Germany," according to Vintage Aviation News.
 
 The museum is at Wright-Patterson Air Force Base near Dayton; check its website for hours and visitor information.
 
