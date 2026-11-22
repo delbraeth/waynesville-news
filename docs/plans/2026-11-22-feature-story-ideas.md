@@ -74,8 +74,9 @@ whose subjects died long ago.
 
 ## Cryptids and oddities
 
-18. **Reclaiming our cryptid.** Drafted and on hold in PR #170
-    (`src/content/stories/reclaiming-our-cryptid.md`, unpublished). It argues
+18. **Reclaiming our cryptid.** Scheduled for **Saturday, May 29, 2027**, the
+    145th anniversary of the 1882 account. Drafted and on hold in PR #170
+    (`src/content/stories/2027-05-29-reclaiming-our-cryptid.md`, unpublished). It argues
     the Loveland Frogman is the next generation of the 1882 Crosswick Monster.
     Primary source: the May 29, 1882, Western Star article, reprinted by the
     Warren County Historical Society. Open question: whether to add the
@@ -97,4 +98,5 @@ whose subjects died long ago.
 - **Christmas in the Village week:** Quaker Waynesville.
 - **February (Black History Month):** Harveysburg's school; the Underground Railroad.
 - **Spring:** the fossil spillway.
-- **October:** the Sauerkraut Festival history, the haunted village, the cryptid story.
+- **May 29, 2027:** Reclaiming our cryptid (PR #170), for the 145th anniversary of the Crosswick Monster.
+- **October:** the Sauerkraut Festival history, the haunted village.
