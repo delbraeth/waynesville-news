@@ -242,7 +242,7 @@ async function main() {
   // a week and published under "Upcoming". Require an actually-future date;
   // the 3h grace keeps a game in progress listed.
   // Re-sort after the school's times are applied.
-  const upcoming = applySchoolSchedule(inWindow(allUpcoming, new Date(nowET.getTime() - 3 * 3600e3)), athletics)
+  const upcoming = applyOverrides(applySchoolSchedule(inWindow(allUpcoming, new Date(nowET.getTime() - 3 * 3600e3)), athletics))
     .sort((a, b) => a.dateISO.localeCompare(b.dateISO));
   const orphaned = allUpcoming.length - upcoming.length;
 
@@ -258,7 +258,7 @@ async function main() {
   console.log(`sports.json: ${results.length} result(s), ${upcoming.length} upcoming${failures.length ? `, ${failures.length} page fetch failure(s)` : ""}`);
 }
 
-// Editor score corrections (src/data/sports-overrides.json) win over MaxPreps.
+// Editor score corrections and cancellations (src/data/sports-overrides.json) win over MaxPreps.
 function applyOverrides(results) {
   let overrides = [];
   try { overrides = JSON.parse(readFileSync(new URL("../src/data/sports-overrides.json", import.meta.url), "utf8")).items ?? []; } catch { /* optional */ }
@@ -268,7 +268,14 @@ function applyOverrides(results) {
       g.sport.toLowerCase() === String(x.sport).toLowerCase() &&
       (!x.level || (g.level ?? "").toLowerCase() === x.level.toLowerCase()) &&
       g.opponent.toLowerCase().includes(String(x.opponent).toLowerCase()));
-    if (!o || !Number.isFinite(o.wayneScore) || !Number.isFinite(o.opponentScore)) return g;
+    if (!o) return g;
+    // Editor-confirmed cancellation (e.g. a game dropped from the posted
+    // schedule): keep the game listed, labeled "Canceled", like the school feed does.
+    if (o.canceled === true) {
+      console.log(`sports: editor marks ${g.level ?? ""} ${g.sport} vs ${g.opponent} ${g.dateISO.slice(0, 10)} canceled`);
+      return { ...g, canceled: true };
+    }
+    if (!Number.isFinite(o.wayneScore) || !Number.isFinite(o.opponentScore)) return g;
     const result = o.wayneScore > o.opponentScore ? "W" : o.wayneScore < o.opponentScore ? "L" : "T";
     console.log(`sports: editor override for ${g.sport} vs ${g.opponent} ${g.dateISO.slice(0, 10)}: ${g.wayneScore}-${g.opponentScore} -> ${o.wayneScore}-${o.opponentScore}`);
     return { ...g, wayneScore: o.wayneScore, opponentScore: o.opponentScore, result, scoreSource: "editor" };

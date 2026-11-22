@@ -1,6 +1,6 @@
 {
   "_note": "Waynesville Spartans schedule + results (MaxPreps), past 7 days / next 7 days. Scraped directly from each sport's own schedule page (football, volleyball, soccer -- varsity + JV), not the school hub page, which has been observed to silently omit some contests. Scores and matchups reproduced verbatim from MaxPreps' own markup; each links to their game page. Start times, \"scrimmage\" and \"canceled\" come from the school's athletics site (waynesvillesports.com) when it lists the game; \"maxprepsTime\" is MaxPreps' time when they differ.",
-  "updated": "2026-11-21T11:42:09.712Z",
+  "updated": "2026-11-22T10:29:58.695Z",
   "results": [
     {
       "dateISO": "2026-11-20T19:00:00",
@@ -26,7 +26,8 @@
       "isHome": true,
       "link": "https://www.maxpreps.com/oh/basketball/game/roger-bacon-cincinnati-vs-waynesville/11-23-2026/?c=102a71af-e352-4f9c-a058-58f79fd4400c",
       "scrimmage": true,
-      "maxprepsTime": "17:00"
+      "maxprepsTime": "17:00",
+      "canceled": true
     },
     {
       "dateISO": "2026-11-24T18:00:00",
@@ -37,7 +38,8 @@
       "opponentScore": null,
       "result": null,
       "isHome": true,
-      "link": "https://www.maxpreps.com/oh/basketball/game/kenton-ridge-springfield-vs-waynesville/11-24-2026/?c=f757534f-fa5c-4fb6-adc7-006dfb042968"
+      "link": "https://www.maxpreps.com/oh/basketball/game/kenton-ridge-springfield-vs-waynesville/11-24-2026/?c=f757534f-fa5c-4fb6-adc7-006dfb042968",
+      "canceled": true
     },
     {
       "dateISO": "2026-11-24T18:00:00",
