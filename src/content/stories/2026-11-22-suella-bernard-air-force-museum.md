@@ -7,7 +7,7 @@ image: /images/stories/2026-11-22-suella-bernard-glider.webp
 imageAlt: "Black-and-white photo: Lt. Suella Bernard, in a flight jacket, tends to blanket-covered patients on stacked litters hung by straps inside a CG-4A glider."
 imageCredit: "Lt. Suella Bernard tends to patients in one of the two CG-4A gliders before the C-47s arrived. (U.S. Air Force photo)"
 feature: true
-published: false
+published: true
 ---
 
 Four days after D-Day, a nurse from Waynesville flew into France.
