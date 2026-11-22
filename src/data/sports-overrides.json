@@ -1,5 +1,5 @@
 {
-  "_note": "Editor score corrections applied on top of MaxPreps by scripts/fetch-sports.mjs, for when MaxPreps has a score wrong. Match on date (YYYY-MM-DD, ET), sport and opponent (case-insensitive, substring). Set wayneScore and opponentScore; result (W/L/T) is recomputed. Remove an entry once MaxPreps is fixed or the game is out of the 7-day window.",
+  "_note": "Editor score corrections applied on top of MaxPreps by scripts/fetch-sports.mjs, for when MaxPreps has a score wrong. Match on date (YYYY-MM-DD, ET), sport and opponent (case-insensitive, substring). Set wayneScore and opponentScore (result W/L/T is recomputed), or set \"canceled\": true to label an upcoming game canceled. Remove an entry once MaxPreps is fixed or the game is out of the 7-day window.",
   "items": [
     {
       "date": "2026-11-06",
@@ -9,6 +9,22 @@
       "wayneScore": 35,
       "opponentScore": 13,
       "reason": "Final was 35-13 per the editor (2026-11-07); MaxPreps shows 35-14."
+    },
+    {
+      "date": "2026-11-23",
+      "sport": "Boys Basketball",
+      "level": "Varsity",
+      "opponent": "Roger Bacon",
+      "canceled": true,
+      "reason": "Not on the updated boys basketball schedule the editor sent (2026-11-22); season changes due to the football playoffs."
+    },
+    {
+      "date": "2026-11-24",
+      "sport": "Boys Basketball",
+      "level": "Varsity",
+      "opponent": "Kenton Ridge",
+      "canceled": true,
+      "reason": "Not on the updated boys basketball schedule the editor sent (2026-11-22); season changes due to the football playoffs."
     }
   ]
 }
