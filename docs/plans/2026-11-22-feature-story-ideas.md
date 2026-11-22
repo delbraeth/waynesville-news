@@ -42,6 +42,14 @@ whose subjects died long ago.
 7. **New Burlington, the village under Caesar Creek Lake.** Cleared for the
    Army Corps of Engineers' dam in the 1970s, and the subject of John Baskin's
    1976 book (verify). Could be a two-part series.
+   **Lake timeline (leads, confirm with the Corps' Louisville District or
+   ODNR):** authorized in the Flood Control Act of 1938; the Corps began the dam
+   in 1971 and finished it in 1978; ODNR dedicated the state park (about 4,700
+   acres) and wildlife area (about 2,500 acres) in 1978. The lake is about 2,830
+   acres, on land the state leases from the Corps. Sources so far: Wikipedia,
+   International Parks, Recreation.gov. **2028 is the lake's 50th
+   anniversary,** a natural time for a New Burlington and Caesar Creek Lake
+   series (the 40 years from authorization to dam, what was lost, and what the lake became).
 8. **Caesar Creek Pioneer Village.** The log buildings that were saved and moved
    there, and who keeps it going.
 
@@ -93,6 +101,8 @@ whose subjects died long ago.
     the mileage and camp details), the riding community, and trail etiquette
     for hikers and riders sharing paths. Ties in with the horse parades and
     the rodeo. Sources: ODNR, local riding groups (organizations only).
+24. **Paddling and biking the Little Miami.** Canoe liveries and the scenic
+    rail trail through Corwin, as a companion to #11.
 25. **Spring Valley Lake and the wildlife area.** The lake and marsh at the
     Spring Valley Wildlife Area, just north of Waynesville near the
     Greene–Warren county line (verify the acreage and which agency manages it,
@@ -100,8 +110,15 @@ whose subjects died long ago.
     the boardwalk or marsh trail (verify), fishing, and its link to the Little
     Miami Scenic Trail. Sources: ODNR, local birding groups (organizations only).
     Best timing: spring or fall migration.
-24. **Paddling and biking the Little Miami.** Canoe liveries and the scenic
-    rail trail through Corwin, as a companion to #11.
+    **Leads (confirm with the ODNR Division of Wildlife):** land purchases
+    for the public hunting and fishing area began in 1953; the lake came from
+    improving the old Sinclair Fur Farm lake and marsh in 1954 (Birding
+    Hotspots, birdinghotspots.org/group/G234687407). Sources give the size as
+    an 80-acre lake or a 150-acre lake-and-marsh complex. A 2.5-mile trail
+    circles the lake; the fish are largemouth bass, bluegill, bullhead and carp
+    (Dayton Daily News). An Outdoor News item mentions an ODNR marsh and dam
+    renovation (date unclear). A historical marker is at the site
+    (hmdb.org/m.asp?m=254402).
 
 ## Cryptids and oddities
 
@@ -132,3 +149,4 @@ whose subjects died long ago.
 - **Summer:** the Warren County Fair (week before the July fair); horse trails; paddling the Little Miami.
 - **May 29, 2027:** Reclaiming our cryptid (PR #170), for the 145th anniversary of the Crosswick Monster.
 - **October:** the Sauerkraut Festival history, the haunted village, fall hikes.
+- **2028:** Caesar Creek Lake's 50th anniversary, with a New Burlington series (#7).
