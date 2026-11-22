@@ -478,6 +478,18 @@
       "local": true,
       "source": "https://www.ohsaa.org/news-media/articles/ohsaa-announces-football-state-semifinal-bracket-pairings-45",
       "note": "Division V state semifinal, the first in Waynesville history: the Region 20 champion Spartans (11-2) against Region 19 champion Ironton (12-1). The winner plays for the state title Friday, Dec. 4. Check the Spartans' and OHSAA pages for ticket details."
+    },
+    {
+      "title": "Christmas in the Village Horse Parade (South Lebanon)",
+      "dateISO": "2026-12-12T16:00:00-05:00",
+      "dateLabel": "Sat, Dec 12 · 4:00 PM",
+      "venue": "Rogers Park, South Lebanon",
+      "category": "Festival",
+      "source": "/images/events/2026-12-12-south-lebanon-horse-parade-route.webp",
+      "note": "The 8th annual holiday horse parade through South Lebanon: wagons, single riders, carts, lead-line horses and walkers. Lineup and staging at Rogers Park at 3:30 PM; the parade starts at 4:00 PM and loops Hobart Avenue, Main, Pike and High streets, Forest Avenue, Mary Ellen Street and East Broadway Street back to the park. Free hot chocolate and cookie stands at Mt. Zion Baptist Church and at Heritage Park (hosted by LCNB's South Lebanon team). Weather permitting; if weather is bad it moves to Saturday, Dec. 19. All participants, walkers included, must register in advance with the organizers. Not affiliated with the Lebanon Carriage Parade. Tap Details for the route map.",
+      "tags": [
+        "holiday"
+      ]
     }
   ]
 }
