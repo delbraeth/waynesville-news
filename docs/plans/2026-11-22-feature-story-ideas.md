@@ -147,6 +147,6 @@ whose subjects died long ago.
 - **February (Black History Month):** Harveysburg's school; the Underground Railroad.
 - **Spring:** the fossil spillway; hiking Caesar Creek (wildflowers); the gliderport; Spring Valley Lake (migration).
 - **Summer:** the Warren County Fair (week before the July fair); horse trails; paddling the Little Miami.
-- **2028:** Caesar Creek Lake's 50th anniversary, with a New Burlington series (#7).
 - **May 29, 2027:** Reclaiming our cryptid (PR #170), for the 145th anniversary of the Crosswick Monster.
 - **October:** the Sauerkraut Festival history, the haunted village, fall hikes.
+- **2028:** Caesar Creek Lake's 50th anniversary, with a New Burlington series (#7).
