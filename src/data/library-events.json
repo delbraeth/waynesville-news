@@ -1,13 +1,7 @@
 {
   "_note": "Mary L. Cook Public Library — upcoming programs from the library's WhoFi event calendar (https://marylcook-main-oh.whofi.com/calendar/full). \"items\": next 14 days, for the daily brief (dateISO is Eastern wall-clock marked Z). \"calendar\": next 45 days for the events calendar, real offsets, with sign-up details read from each program's page (scripts/lib/signup.mjs). Canceled events and closures excluded.",
-  "updated": "2026-11-21T11:42:23.567Z",
+  "updated": "2026-11-22T11:41:41.395Z",
   "items": [
-    {
-      "title": "Crafting Fun Drop-in Program (Adults)",
-      "dateISO": "2026-11-21T10:30:00Z",
-      "dateLabel": "Sat · Nov 21, 10:30 AM",
-      "link": "https://marylcook-main-oh.whofi.com/calendar/event/356838/"
-    },
     {
       "title": "The Loop Group (Fiber Crafts Club)",
       "dateISO": "2026-11-24T17:30:00Z",
@@ -49,19 +43,15 @@
       "dateISO": "2026-12-03T15:00:00Z",
       "dateLabel": "Thu · Dec 3, 3:00 PM",
       "link": "https://marylcook-main-oh.whofi.com/calendar/event/358190/"
+    },
+    {
+      "title": "Santa Open House",
+      "dateISO": "2026-12-05T10:30:00Z",
+      "dateLabel": "Sat · Dec 5, 10:30 AM",
+      "link": "https://marylcook-main-oh.whofi.com/calendar/event/357815/"
     }
   ],
   "calendar": [
-    {
-      "title": "Crafting Fun Drop-in Program (Adults)",
-      "dateISO": "2026-11-21T10:30:00-05:00",
-      "endISO": "2026-11-21T13:30:00-05:00",
-      "dateLabel": "Sat, Nov 21 · 10:30 AM",
-      "link": "https://marylcook-main-oh.whofi.com/calendar/event/356838/",
-      "signup": {
-        "required": false
-      }
-    },
     {
       "title": "The Loop Group (Fiber Crafts Club)",
       "dateISO": "2026-11-24T17:30:00-05:00",
@@ -362,6 +352,16 @@
       "endISO": "2027-01-04T19:00:00-05:00",
       "dateLabel": "Mon, Jan 4 · 9:00 AM",
       "link": "https://marylcook-main-oh.whofi.com/calendar/event/358145/"
+    },
+    {
+      "title": "Toddler Time",
+      "dateISO": "2027-01-05T10:30:00-05:00",
+      "endISO": "2027-01-05T11:00:00-05:00",
+      "dateLabel": "Tue, Jan 5 · 10:30 AM",
+      "link": "https://marylcook-main-oh.whofi.com/calendar/event/358170/",
+      "signup": {
+        "required": false
+      }
     }
   ]
 }

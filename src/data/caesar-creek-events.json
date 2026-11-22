@@ -1,20 +1,8 @@
 {
   "_note": "Caesar Creek State Park programs from the ODNR events calendar, next 60 days. Titles, times and meeting points reproduced from ODNR's own listing.",
-  "updated": "2026-11-21T11:42:31.194Z",
+  "updated": "2026-11-22T11:41:32.083Z",
   "source": "https://ohiodnr.gov/go-and-do/plan-a-visit/events-calendar/events-calendar?keyword=Caesar%20Creek",
   "items": [
-    {
-      "title": "Cast Iron Cooking",
-      "dateISO": "2026-11-21T16:00:00.000Z",
-      "endISO": "2026-11-21T19:00:00.000Z",
-      "dateLabel": "Sat, Nov 21 · 11:00 AM–2:00 PM",
-      "meetAt": "Nature Center",
-      "summary": "Join us for a free cast iron cooking demonstration. Pre-register with the NCACC for the meal.",
-      "link": "https://ohiodnr.gov/home/news-and-events/all-events/parks-wc-events/SW-Ohio/CastIronCookingCaesarCreek-11-21-26.",
-      "signup": {
-        "required": true
-      }
-    },
     {
       "title": "Winter Solstice Forest Bathing",
       "dateISO": "2026-12-20T15:00:00.000Z",

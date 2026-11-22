@@ -1,5 +1,5 @@
 {
-  "_note": "Real venues and sources, verified against each listed source on 2026-11-21; Warren County tourism calendar re-checked 2026-11-21 (daily automated refresh). Wayne Local school dates per The Spartan (September, October and November 2026) and the district Community Events & Activities newsletter (October 2026) and Board Meeting Recap (October and November 2026). Waynesville Elementary book fair, PTO meeting and Holiday Shop dates per the school’s upcoming-events graphic (November 2026). Mary L. Cook Public Library programs per the library's monthly newsletter (November 2026). Recurring items (rodeo, commissioners, ghost walk, Lions Club meetings on the 2nd and 4th Tuesdays) show the next occurrence. Warren County Park District events page SUSPENDED as a source per Cap'n (2026-10-03): it sits behind a Cloudflare bot challenge (403 since 2026-09-24). Do not fetch it or report it as failing; its items from the 2026-09-23 check are kept until they expire. Resume only when Cap'n provides a working source. Event notes and dateLabels are shown to readers: write them for readers (what, when, where, and a helpful pointer like \"check the event website for times\" when a detail is missing). Never put editorial or process notes in them (\"not published\", \"confirm before printing\", \"corrected from\", \"checked on\"); record corrections in the commit message instead. Tag Christmas-season community events (tree lightings, Santa visits, holiday markets, single-date light shows) with \"holiday\" so they also appear on the Holiday Lights guide. Waynesville area vs. regional: an event counts as Waynesville-area when its venue names Waynesville, Corwin, Harveysburg, Oregonia, Ridgeville, Lytle, Mount Holly, Crosswick, Caesar Creek or ZIP 45068/45054/45065 (see src/lib/events.js); always put the town in the venue. Optional \"cost\" (e.g. \"Free\", \"$5 adults, kids free\") and \"accessibility\" (e.g. \"Wheelchair accessible; parking behind the building\") show as a line under the event, only when the organizer or its source says so. Set \"local\": true or false to override (e.g. an online survey about Waynesville, or an out-of-town group serving Waynesville families). Optional \"orgs\": [\"<exact name from churches.json>\"] ties an event to a church on the Churches page when its venue doesn't name the church.",
+  "_note": "Real venues and sources, verified against each listed source on 2026-11-22; Warren County tourism calendar re-checked 2026-11-22 (daily automated refresh). Wayne Local school dates per The Spartan (September, October and November 2026) and the district Community Events & Activities newsletter (October 2026) and Board Meeting Recap (October and November 2026). Waynesville Elementary book fair, PTO meeting and Holiday Shop dates per the school’s upcoming-events graphic (November 2026). Mary L. Cook Public Library programs per the library's monthly newsletter (November 2026). Recurring items (rodeo, commissioners, ghost walk, Lions Club meetings on the 2nd and 4th Tuesdays) show the next occurrence. Warren County Park District events page SUSPENDED as a source per Cap'n (2026-10-03): it sits behind a Cloudflare bot challenge (403 since 2026-09-24). Do not fetch it or report it as failing; its items from the 2026-09-23 check are kept until they expire. Resume only when Cap'n provides a working source. Event notes and dateLabels are shown to readers: write them for readers (what, when, where, and a helpful pointer like \"check the event website for times\" when a detail is missing). Never put editorial or process notes in them (\"not published\", \"confirm before printing\", \"corrected from\", \"checked on\"); record corrections in the commit message instead. Tag Christmas-season community events (tree lightings, Santa visits, holiday markets, single-date light shows) with \"holiday\" so they also appear on the Holiday Lights guide. Waynesville area vs. regional: an event counts as Waynesville-area when its venue names Waynesville, Corwin, Harveysburg, Oregonia, Ridgeville, Lytle, Mount Holly, Crosswick, Caesar Creek or ZIP 45068/45054/45065 (see src/lib/events.js); always put the town in the venue. Optional \"cost\" (e.g. \"Free\", \"$5 adults, kids free\") and \"accessibility\" (e.g. \"Wheelchair accessible; parking behind the building\") show as a line under the event, only when the organizer or its source says so. Set \"local\": true or false to override (e.g. an online survey about Waynesville, or an out-of-town group serving Waynesville families). Optional \"orgs\": [\"<exact name from churches.json>\"] ties an event to a church on the Churches page when its venue doesn't name the church.",
   "items": [
     {
       "title": "Business to Business Networking — November",
@@ -40,15 +40,6 @@
       "source": "https://www.sixflags.com/kingsisland/events/winterfest",
       "note": "Per Kings Island: holiday event on select nights. Opening weekend hours Nov 27 & 29 5–10 PM, Nov 28 4–10 PM. December open dates on the park calendar: Dec 4–6, 11–23 and 26–31; check the calendar for each night's hours.",
       "cost": "Free for ages 65+ (born on or before Dec. 31, 1961) with Kings Island’s free 2026 Senior Admission: register on the park’s ticket site, limit two per order, ID required at the gate, parking not included. Others need a ticket or season pass."
-    },
-    {
-      "title": "Warren County Commissioners — Weekly Session",
-      "dateISO": "2026-11-17T09:00:00-05:00",
-      "dateLabel": "Tue, Nov 17 · 9:00 AM",
-      "venue": "406 Justice Dr, Lebanon",
-      "category": "Government",
-      "source": "https://commissioners.warrencountyohio.gov/News/AgendaMinutes/Index",
-      "note": "Weekly commissioners session; agendas and minutes posted online"
     },
     {
       "title": "Christmas in the Village",
@@ -135,16 +126,6 @@
       "category": "Government",
       "source": "https://commissioners.warrencountyohio.gov/News/AgendaMinutes/Index",
       "note": "Weekly commissioners session; agendas and minutes posted online"
-    },
-    {
-      "title": "North Warren County Transportation Plan — online survey closes",
-      "dateISO": "2026-11-17T23:59:00-05:00",
-      "dateLabel": "Tue, Nov 17 · last day",
-      "venue": "Online",
-      "category": "Government",
-      "source": "https://northwarrencountytransportationplan-burgessniple.hub.arcgis.com/pages/f27bc61005b842439ceb569b82c0b9cf",
-      "note": "Last day to comment online on the plan, including options for a new I-75 to I-71 connection (one would follow US 42 and S.R. 73 through Waynesville and Corwin) and priority intersections such as S.R. 73 and US 42 in Waynesville. The survey opened Oct. 28.",
-      "local": true
     },
     {
       "title": "Town Square Days: Step into Stars Hollow",
@@ -330,15 +311,6 @@
       "note": "A monthly evening for families on the first Thursday of each month. Children must come with an adult. All are welcome."
     },
     {
-      "title": "Wrestling Parent Meeting — High School",
-      "dateISO": "2026-11-17T18:00:00-05:00",
-      "dateLabel": "Tue, Nov 17 · 6:00 PM",
-      "venue": "Waynesville Middle/High School cafeteria, Waynesville",
-      "category": "Sports",
-      "source": "/images/events/2026-11-wrestling-parent-meetings.webp",
-      "note": "Parent meeting for Waynesville High School wrestling, in the MS/HS cafe. Tap Details for the team's flyer."
-    },
-    {
       "title": "Playoff football, Region 20 final: Waynesville vs. Bishop Fenwick",
       "dateISO": "2026-11-20T19:00:00-05:00",
       "dateLabel": "Fri, Nov 20 · 7:00 PM",
@@ -401,17 +373,6 @@
       "signup": {
         "required": true
       }
-    },
-    {
-      "title": "Nationwide Emergency Alert System test (TV and radio)",
-      "dateISO": "2026-11-17T14:20:00-05:00",
-      "endISO": "2026-11-17T14:50:00-05:00",
-      "dateLabel": "Tue, Nov 17 · 2:20–2:50 PM",
-      "venue": "TV and radio, nationwide (including Waynesville)",
-      "category": "Government",
-      "source": "https://www.fema.gov/press-release/20260916/fema-and-fcc-schedule-2026-nationwide-test-emergency-alert-system-november",
-      "note": "FEMA and the FCC will test the Emergency Alert System on broadcast and cable TV and radio. It will not go to cellphones. The message will say it is only a test, and no action is needed. If severe weather or a real emergency gets in the way, the backup date is Thursday, Dec. 3.",
-      "local": true
     },
     {
       "title": "All-Village Spartan Send-Off — Regional Final",

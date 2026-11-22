@@ -1,7 +1,14 @@
 {
   "_note": "Recent Wayne Local Schools Facebook posts via rss.app bridge. Title + link + short excerpt; the district's own words. Fail-safe: kept from last run if the bridge is down.",
-  "updated": "2026-11-21T11:41:25.009Z",
+  "updated": "2026-11-22T11:41:31.496Z",
   "items": [
+    {
+      "title": "#SPARTANPRIDEFriday night was my first time watching Waynesville play football. I feel a little stupid admitting that. W...",
+      "link": "https://www.facebook.com/waynelocalschools/posts/pfbid0EzyiBryHtzBNAmwiUEtb3VSfgP4tZLQnFVX5ca9f98hFFcFDbx6kSn82TjJmBZdyl",
+      "date": "Sat, 21 Nov 2026 22:00:12 GMT",
+      "dateLabel": "Sat, Nov 21",
+      "excerpt": "#SPARTANPRIDE Friday night was my first time watching Waynesville play football. I feel a little stupid admitting that. Where in the hell have I been? All I had to do was follow the traffic to Lakota East. Waynesville filled the home side of the bleachers. They were LOUD. If anybody stayed back…"
+    },
     {
       "title": "Congratulations on your Regional Championship, Spartans! On to the State Semifinals! #SPARTANPRIDEREGIONAL CHAMPS!",
       "link": "https://www.facebook.com/waynelocalschools/posts/pfbid0jthSWMz4xXfRzgZafD3v459vyDVPun1YePvBXyrQ2u4aFugqbfrrCVqtk3y79snrl",
@@ -50,13 +57,6 @@
       "date": "Fri, 20 Nov 2026 12:00:04 GMT",
       "dateLabel": "Fri, Nov 20",
       "excerpt": "gives them strength and what they are grateful for, writing their thoughts on leaves to add to the Thankful Tree display in their hallway. Organized by Sources of Strength Peer Leaders, this activity reminds us that strength comes from many places and that taking time to recognize the good in…"
-    },
-    {
-      "title": "#Tradition #Community #SPARTANPRIDETHE LEGACY. YOUR OPPORTUNITY. NOW WRITE YOUR CHAPTER. #spartanpride",
-      "link": "https://www.facebook.com/waynelocalschools/posts/pfbid02PccWB3r5seHnS43rs5FyZqkwYYrGTnkwe17HTpUCJDBgdQoknu3dTNP1zpMCiTZQl",
-      "date": "Fri, 20 Nov 2026 02:07:32 GMT",
-      "dateLabel": "Thu, Nov 19",
-      "excerpt": "#Tradition #Community #SPARTANPRIDE THE LEGACY. YOUR OPPORTUNITY. NOW WRITE YOUR CHAPTER. #spartanpride"
     }
   ]
 }
