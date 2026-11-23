@@ -1,6 +1,6 @@
 # Planning note: local feature story ideas (2026-11-22)
 
-**Status:** Idea list from the editor and Claude, 2026-11-22 (topics 20–25 added the same day). Nothing here is
+**Status:** Idea list from the editor and Claude, 2026-11-22 (topics 20–25 added the same day; #35, the Buckeye Trail, added 2026-11-23). Nothing here is
 verified yet. Details marked "(verify)" are from memory: check every fact
 against the organization's own page, an original source, or a source the editor
 sends before writing (see CLAUDE.md, "Always").
@@ -281,6 +281,71 @@ Sisters), but nothing ties her to Waynesville, so leave it out.
     renovation (date unclear). A historical marker is at the site
     (hmdb.org/m.asp?m=254402).
 
+35. **The Buckeye Trail, Ohio's 1,400-mile blue-blazed loop.** Draft text
+    from the editor (2026-11-23), below. **Local hook (add before
+    publishing):** the trail's Caesar Creek Section runs through our area. Per
+    the Buckeye Trail Association's section page, it is 55.1 miles long,
+    comes in on the Little Miami Scenic Trail, then follows country roads into
+    Caesar Creek State Park. The page's map is dated November 2013, so confirm
+    the current route and mileage with the association. A short "where to pick
+    up the blue blazes near Waynesville" paragraph would make it ours.
+    **Verify before writing:**
+    - Length: the association and other sources give **1,444 miles**. "1,400"
+      is fine as a round number, but say "about."
+    - "Longest loop trail in the country": use the association's own wording.
+    - The 1958 Columbus Dispatch article by Merrill Gilfillan (ODNR
+      naturalist); the association forming in 1959; the first 20 miles
+      dedicated Sept. 19, 1959, in Hocking County.
+    - Named Ohio's official state trail in 1967; finished around 1980.
+    - Blazes 2 by 6 inches; one blaze means straight ahead, two mean a turn.
+    - Grandma Gatewood buying the first can of blue paint. Keep "reportedly"
+      unless the association confirms it.
+    - The Little Loop: about 250 miles in the northeast corner (FKT quotes
+      the association's estimate of 250–258 miles; the association awards a
+      patch for finishing it).
+    - The Lake Erie start (Headlands Beach State Park?) and the Cincinnati end
+      point (Eden Park?): confirm which places the draft means.
+    Sources: Buckeye Trail Association (buckeyetrail.org, including the
+    Caesar Creek Section page), ODNR's Buckeye Trail overview map.
+    Best timing: spring (fits the "Out and about" series), or Sept. 19, 2027,
+    the trail's 68th anniversary. Tone: light and inviting.
+
+    > The Buckeye Trail is a 1,400-mile loop that circles the entire state of
+    > Ohio. It is the longest loop trail in the country, and it follows a simple
+    > line of blue paint. Hikers can start almost anywhere, from a beach on Lake
+    > Erie to a hilltop above the Ohio River in Cincinnati. The route touches
+    > every corner of the state.
+    >
+    > The idea began in 1958. Merrill Gilfillan, an Ohio Department of Natural
+    > Resources naturalist, wrote a Columbus Dispatch article proposing a trail
+    > from Cincinnati to Lake Erie. He hoped it would encourage people to slow
+    > down, get outside, and learn about Ohio. A group of supporters met the
+    > following year and formed the Buckeye Trail Association. On September 19,
+    > 1959, the first 20 miles were dedicated in Hocking County.
+    >
+    > The trail grew quickly. Within a few years, it connected Lake Erie to the
+    > Ohio River. Over time, it turned into the giant loop hikers know today.
+    > Ohio named it the state's official trail in 1967. The last stretch was
+    > finished around 1980. Volunteers built it and still keep it in shape.
+    >
+    > Following the trail is easy. Blue blazes, painted 2 inches wide and 6
+    > inches tall, mark the trees and posts. One blaze means keep going
+    > straight. Two blazes mean a turn is coming. Reportedly, Emma "Grandma"
+    > Gatewood, the famous Ohio hiker, bought the very first can of blue paint
+    > for the project.
+    >
+    > The route shows off Ohio at its best. Hikers pass through Hocking Hills,
+    > Wayne National Forest, and Cuyahoga Valley National Park. They walk along
+    > old canal towpaths, through small towns, and across quiet farm country.
+    > The 250-mile Little Loop in the northeast corner is a favorite for shorter
+    > trips. A hiker can see forests, rivers, hills, and lakeshore without
+    > leaving the state.
+    >
+    > Not everyone hikes the whole thing. Most people walk a mile or two on a
+    > Saturday and call it a win. A few brave souls finish the full loop over
+    > many weeks. Either way, the trail makes Ohio feel bigger and closer at
+    > once. Pack some water, find a blue blaze, and start walking.
+
 ## Cryptids and oddities
 
 18. **Reclaiming our cryptid.** Scheduled for **Saturday, May 29, 2027**, the
@@ -306,7 +371,7 @@ Sisters), but nothing ties her to Waynesville, so leave it out.
 - **Winter (anytime):** New Burlington; Anthony Wayne; the pearl rush.
 - **Christmas in the Village week:** Quaker Waynesville.
 - **February (Black History Month):** Harveysburg's school; the Underground Railroad.
-- **Spring:** the fossil spillway; hiking Caesar Creek (wildflowers); the gliderport; Spring Valley Lake (migration).
+- **Spring:** the fossil spillway; hiking Caesar Creek (wildflowers); the gliderport; Spring Valley Lake (migration); the Buckeye Trail (#35).
 - **Summer:** the Warren County Fair (week before the July fair); horse trails; paddling the Little Miami.
 - **Now (November 2026):** a short item on Lt. Suella Bernard's Air Force museum honor (#34).
 - **June 10, 2027:** Lt. Suella Bernard feature, on the anniversary of the first Allied women landing in France (#34).
