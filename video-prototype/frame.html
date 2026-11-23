@@ -1,0 +1,202 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+@font-face{font-family:Newsreader;src:url(../public/fonts/newsreader-400.woff2);font-weight:400}
+@font-face{font-family:Newsreader;src:url(../public/fonts/newsreader-600.woff2);font-weight:600}
+@font-face{font-family:Newsreader;src:url(../public/fonts/newsreader-400-italic.woff2);font-style:italic}
+:root{--paper:#fbf9f5;--ink:#1a1712;--soft:#4a433a;--muted:#8a8073;--accent:#9e2b25;--deep:#7c201b;--rule:#e5ddce;--chip:#efe9dd}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1920px;height:1080px;overflow:hidden;background:var(--paper);color:var(--ink);font-family:Inter,sans-serif}
+.bar{position:absolute;left:0;right:0;height:16px;background:var(--accent)}
+.top{top:0}
+.mast{position:absolute;top:44px;left:120px;right:120px;display:flex;justify-content:space-between;align-items:baseline;border-bottom:2px solid var(--rule);padding-bottom:18px}
+.mast .name{font-family:Newsreader;font-weight:600;font-size:40px}
+.mast .meta{font-size:20px;letter-spacing:.22em;color:var(--muted);font-weight:500;text-transform:uppercase}
+.mast .meta b{color:var(--accent);font-weight:600}
+#stage{position:absolute;left:120px;right:120px;top:150px;height:610px}
+.seg{position:absolute;inset:0;transform-origin:30% 40%}
+.kicker{font-size:24px;letter-spacing:.24em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:18px}
+.h{font-family:Newsreader;font-weight:600;font-size:82px;line-height:1.04;letter-spacing:-.01em}
+.h.md{font-size:66px}
+.sub{font-family:Newsreader;font-style:italic;font-size:40px;color:var(--soft);margin-top:14px}
+.it{will-change:opacity,transform}
+.rows{margin-top:30px;display:flex;flex-direction:column;gap:18px}
+.row{display:grid;grid-template-columns:270px 1fr;gap:28px;align-items:baseline;border-top:1px solid var(--rule);padding-top:16px}
+.row .k{font-size:24px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}
+.row .v{font-family:Newsreader;font-size:40px;line-height:1.18}
+.row .v small{font-family:Inter;font-size:24px;color:var(--muted);display:block;margin-top:4px}
+.badge{display:inline-block;background:var(--accent);color:#fff;font-weight:600;font-size:30px;padding:12px 26px;border-radius:999px;margin-top:34px;letter-spacing:.02em}
+.badge.ghost{background:var(--chip);color:var(--ink)}
+.wx{display:grid;grid-template-columns:1.35fr 1fr 1fr 1fr;gap:26px;margin-top:34px}
+.tile{background:#fff;border:1px solid var(--rule);border-radius:22px;padding:28px 30px;height:330px;display:flex;flex-direction:column;justify-content:space-between}
+.tile .d{font-size:24px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.tile.today{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.tile.today .d{color:#e0675c}
+.tile .hi{font-family:Newsreader;font-weight:600;font-size:96px;line-height:1}
+.tile.today .hi{font-size:128px}
+.tile .lo{font-size:26px;color:var(--muted)}
+.tile.today .lo{color:#cfc6b6}
+.tile .c{font-size:26px;font-weight:500}
+.vs{display:flex;align-items:center;gap:44px;margin-top:34px}
+.team{font-family:Newsreader;font-weight:600;font-size:96px;line-height:1}
+.team small{display:block;font-family:Inter;font-size:28px;color:var(--muted);font-weight:500;margin-top:10px;letter-spacing:.04em}
+.vs .x{font-family:Newsreader;font-style:italic;font-size:52px;color:var(--accent)}
+.center{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;height:100%}
+.open .h{font-size:120px}
+.sponsor .h{font-size:104px}
+#cap{position:absolute;left:160px;right:160px;top:790px;height:130px;display:flex;align-items:center;justify-content:center;text-align:center;font-size:40px;line-height:1.3;font-weight:500;color:var(--muted)}
+#cap .on{color:var(--ink)}
+#cap .now{color:var(--accent)}
+#wave{position:absolute;left:120px;right:120px;top:944px;height:96px}
+#prog{position:absolute;left:0;bottom:0;height:16px;background:var(--accent)}
+#progbg{position:absolute;left:0;right:0;bottom:0;height:16px;background:var(--rule)}
+
+.split{display:grid;grid-template-columns:1fr 720px;gap:56px;height:100%}
+.split .rows{gap:14px}.split .row{grid-template-columns:210px 1fr;gap:20px;padding-top:12px}
+.split .row .v{font-size:34px}.split .row .k{font-size:21px}
+.split .h.md{font-size:58px}.split .h{font-size:72px}
+.split .vs{gap:26px}.split .team{font-size:68px}.split .team small{font-size:22px}.split .vs .x{font-size:40px}
+.map{position:relative;width:720px;height:600px;border-radius:24px;overflow:hidden;border:1px solid var(--rule);background:#efece6;box-shadow:0 10px 30px rgba(26,23,18,.08)}
+.map .tiles img{position:absolute;width:256px;height:256px;filter:grayscale(.9) sepia(.12) contrast(.92) brightness(1.05)}
+.map svg{position:absolute;left:0;top:0}
+.map .casing{fill:none;stroke:#fff;stroke-width:14;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1 1;stroke-dashoffset:1}
+.map .line{fill:none;stroke:var(--accent);stroke-width:8;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1 1}
+.pin{position:absolute;width:0;height:0}
+.pin i{position:absolute;left:-11px;top:-11px;width:22px;height:22px;border-radius:50%;background:var(--accent);border:4px solid #fff;box-shadow:0 2px 6px rgba(0,0,0,.25)}
+.pin.home i{background:var(--ink)}
+.pin span{position:absolute;top:-19px;white-space:nowrap;background:#fff;color:var(--ink);font-size:21px;font-weight:600;padding:6px 12px;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,.15)}
+.pin span.r{left:20px}.pin span.l{right:20px}.pin span.b{top:18px;left:0;transform:translateX(-50%)}
+.map .attr{position:absolute;right:0;bottom:0;background:rgba(255,255,255,.85);font-size:15px;color:#555;padding:4px 10px;border-top-left-radius:8px}
+</style></head>
+<body>
+<div class="bar top"></div>
+<div class="mast"><div class="name">Waynesville News</div><div class="meta"><b>The Daily Brief</b> &nbsp;·&nbsp; Monday, November 23, 2026</div></div>
+<div id="stage"></div>
+<div id="cap"></div>
+<canvas id="wave" width="1680" height="96"></canvas>
+<div id="progbg"></div><div id="prog"></div>
+<script src="maps.js"></script>
+<script>
+// Segments: from = sentence index where it starts; items reveal at sentence index (r) with an offset fraction (o) into that sentence.
+const SEGS = [
+ {from:-1, cls:"open", html:`<div class="center">
+   <div class="kicker it" data-r="-1">Monday, November 23, 2026</div>
+   <div class="h it" data-r="-1">Good morning,<br>Waynesville.</div>
+   <div class="badge it" data-r="2">Thanksgiving is 3 days away</div></div>`},
+ {from:3, html:`<div class="kicker it" data-r="3">Weather</div>
+   <div class="h md it" data-r="3">Cold and sunny, then a wet Thanksgiving</div>
+   <div class="wx">
+    <div class="tile today it" data-r="4"><div class="d">Today</div>${sun()}<div><div class="hi">49°</div><div class="lo">Low 27° · Sunny</div></div></div>
+    <div class="tile it" data-r="5"><div class="d">Tue</div>${sun(.8)}<div><div class="hi">45°</div><div class="lo">Low 29° · Sunny</div></div></div>
+    <div class="tile it" data-r="6"><div class="d">Wed</div>${partly()}<div><div class="hi">51°</div><div class="lo">Low 38° · Partly sunny</div></div></div>
+    <div class="tile it" data-r="6" data-o=".55"><div class="d">Thanksgiving</div>${rain()}<div><div class="hi">48°</div><div class="lo">Low 34° · Light rain</div></div></div>
+   </div>
+   <div class="badge ghost it" data-r="7">No weather alerts in effect · National Weather Service</div>`},
+ {from:8, html:`<div class="split"><div class="txt"><div class="kicker it" data-r="8">The big story · Football</div>
+   <div class="h md it" data-r="9">First state semifinal in school history</div>
+   <div class="vs it" data-r="10"><div class="team">Waynesville<small>11–2 · Region 20 champion</small></div><div class="x">vs.</div><div class="team">Ironton<small>12–1 · Region 19 champion</small></div></div>
+   <div class="rows">
+    <div class="row it" data-r="10" data-o=".6"><div class="k">Friday</div><div class="v">7 p.m. · Teays Valley High School, Ashville</div></div>
+    <div class="row it" data-r="11"><div class="k">Tickets</div><div class="v">On sale Tuesdays at ohsaa.org/tickets</div></div>
+    <div class="row it" data-r="12"><div class="k">Next</div><div class="v">Winner plays for the state title Dec. 4</div></div>
+   </div></div>${MAPS.semi}</div>`},
+ {from:13, html:`<div class="split"><div class="txt"><div class="kicker it" data-r="13">Holiday lights</div>
+   <div class="h md it" data-r="13">Light shows open this week</div>
+   <div class="rows">
+    <div class="row it" data-r="14"><div class="k">Tue, Nov 24</div><div class="v">A Carillon Christmas, Dayton</div></div>
+    <div class="row it" data-r="14" data-o=".55"><div class="k">Thanksgiving</div><div class="v">Light Up Middletown</div></div>
+    <div class="row it" data-r="15"><div class="k">Fri, Nov 27</div><div class="v">Yuletide Village · WinterFest at Kings Island · Clifton Mill</div></div>
+    <div class="row it" data-r="16"><div class="k">Open now</div><div class="v">The Christmas Ranch, Waynesville Road<small>Closed Thanksgiving Day</small></div></div>
+    <div class="row it" data-r="17"><div class="k">On sale</div><div class="v">Hillsboro’s Winter Wonderland · $25 per vehicle</div></div>
+   </div></div>${MAPS.lights}</div>`},
+ {from:18, html:`<div class="center">
+   <div class="kicker it" data-r="18">Times and tickets for every display</div>
+   <div class="h it" data-r="18">Holiday Lights guide</div>
+   <div class="badge it" data-r="18" data-o=".35">waynesville.news/holiday-lights</div></div>`},
+ {from:19, html:`<div class="kicker it" data-r="19">Schools</div>
+   <div class="h md it" data-r="19">Thanksgiving break: no school all week</div>
+   <div class="rows">
+    <div class="row it" data-r="20"><div class="k">Basketball</div><div class="v">Schedule changed for the football run<small>Varsity boys: Nov 23 scrimmage vs. Roger Bacon and Nov 24 game vs. Kenton Ridge listed as canceled</small></div></div>
+    <div class="row it" data-r="22"><div class="k">Nov 30 – Dec 11</div><div class="v">Spartan Holiday Food Drive</div></div>
+   </div>`},
+ {from:23, html:`<div class="split"><div class="txt"><div class="kicker it" data-r="23">Local government</div>
+   <div class="h md it" data-r="23">On the calendar</div>
+   <div class="rows">
+    <div class="row it" data-r="23" data-o=".3"><div class="k">Tue · 9 a.m.</div><div class="v">Warren County Commissioners, Lebanon<small class="it" data-r="24">Agenda not yet posted this morning</small></div></div>
+    <div class="row it" data-r="25"><div class="k">Dec 1 · 7 p.m.</div><div class="v">Wayne Township Trustees</div></div>
+   </div></div>${MAPS.gov}</div>`},
+ {from:26, html:`<div class="split"><div class="txt"><div class="kicker it" data-r="26">On the roads</div>
+   <div class="h md it" data-r="26">State Route 73 resurfacing</div>
+   <div class="rows">
+    <div class="row it" data-r="26" data-o=".25"><div class="k">Where</div><div class="v">Red Lion-Five Points Road to Harveysburg Road</div></div>
+    <div class="row it" data-r="26" data-o=".6"><div class="k">Through Nov 30</div><div class="v">Lane restrictions<small>Allow extra time for Thanksgiving travel</small></div></div>
+   </div></div>${MAPS.roads}</div>`},
+ {from:27, html:`<div class="split"><div class="txt"><div class="kicker it" data-r="27">Downtown · Coming up</div>
+   <div class="h it" data-r="27">Christmas in the Village</div>
+   <div class="sub it" data-r="27" data-o=".3">December 4–6 · Historic downtown Waynesville</div>
+   <div class="rows">
+    <div class="row it" data-r="27" data-o=".6"><div class="k">Santa</div><div class="v">At the Gazebo on Main Street</div></div>
+    <div class="row it" data-r="27" data-o=".8"><div class="k">Sunday</div><div class="v">Parade of Santas</div></div>
+   </div></div>${MAPS.downtown}</div>`},
+ {from:28, cls:"sponsor", html:`<div class="center">
+   <div class="kicker it" data-r="28">Free, independent and made right here in town</div>
+   <div class="h it" data-r="28" data-o=".25">Support Waynesville News</div>
+   <div class="sub it" data-r="29">Want your business to support it, and be mentioned right here?</div>
+   <div class="badge it" data-r="30">waynesville.news/supporters</div></div>`},
+ {from:31, cls:"open", html:`<div class="center">
+   <div class="kicker it" data-r="31">That’s your brief</div>
+   <div class="h it" data-r="31">Waynesville News</div>
+   <div class="sub it" data-r="32">The full edition, with links to every source</div>
+   <div class="badge it" data-r="32" data-o=".5">waynesville.news</div></div>`},
+];
+function sun(k=1){return `<svg width="${110*k}" height="${110*k}" viewBox="0 0 100 100"><g stroke="#e0a23a" stroke-width="7" stroke-linecap="round">${[0,45,90,135,180,225,270,315].map(a=>`<line x1="50" y1="8" x2="50" y2="20" transform="rotate(${a} 50 50)"/>`).join("")}</g><circle cx="50" cy="50" r="22" fill="#f0b443"/></svg>`}
+function cloud(x=0,y=0,c="#b9b0a2"){return `<path transform="translate(${x} ${y})" d="M25 70h50a16 16 0 0 0 0-32a22 22 0 0 0-42-4a18 18 0 0 0-8 36z" fill="${c}"/>`}
+function partly(){return `<svg width="110" height="110" viewBox="0 0 100 100"><circle cx="38" cy="38" r="20" fill="#f0b443"/>${cloud(8,10)}</svg>`}
+function rain(){return `<svg width="110" height="110" viewBox="0 0 100 100">${cloud(0,-6,"#8d97a3")}<g stroke="#4f7fa8" stroke-width="5" stroke-linecap="round"><line x1="35" y1="74" x2="30" y2="88"/><line x1="52" y1="74" x2="47" y2="88"/><line x1="69" y1="74" x2="64" y2="88"/></g></svg>`}
+
+let S, AMP, FPS, DUR;
+const stage=document.getElementById("stage");
+const segEls = SEGS.map(s=>{const d=document.createElement("div");d.className="seg "+(s.cls||"");d.innerHTML=s.html;stage.appendChild(d);return d;});
+const ease=x=>1-Math.pow(1-Math.min(Math.max(x,0),1),3);
+function sentT(r,o=0){ if(r<0) return 0; const s=S[r]; return s.start+(s.end-s.start)*o; }
+function segStart(i){ return i===0?0:sentT(SEGS[i].from)-0.35; }
+// caption chunks
+let CH=[];
+function buildChunks(){
+  for(const s of S){ let cur=[]; let len=0;
+    for(const w of s.words){ if(len+w.w.length>84 && cur.length){CH.push(cur);cur=[];len=0;} cur.push(w); len+=w.w.length+1; }
+    if(cur.length) CH.push(cur); }
+}
+window.setup=(sent,amp,fps,dur)=>{S=sent;AMP=amp;FPS=fps;DUR=dur;buildChunks();
+  segEls.forEach(el=>{el.querySelectorAll('.draw').forEach(d=>{d._t=sentT(+d.dataset.r,+(d.dataset.o||0));d._d=+d.dataset.dur; d.previousSibling&&(d._c=d.previousSibling);});let k=0; el.querySelectorAll(".it").forEach(it=>{it._t=(+it.dataset.r<0)?0.4+0.7*(k++):sentT(+it.dataset.r,+(it.dataset.o||0))-0.15;});});};
+const cap=document.getElementById("cap"), cv=document.getElementById("wave"), g=cv.getContext("2d"), prog=document.getElementById("prog");
+let lastChunk=-1;
+window.render=(t)=>{
+  // segments
+  for(let i=0;i<SEGS.length;i++){
+    const a=segStart(i), b=i+1<SEGS.length?segStart(i+1):1e9, el=segEls[i];
+    if(t<a-0.01||t>b+0.6){el.style.display="none";continue;}
+    el.style.display="block";
+    const out=ease((t-b)/0.5);            // fade out & lift
+    const zoom=1+0.025*Math.min(Math.max((t-a)/Math.max(b-a,1),0),1);
+    el.style.opacity=1-out; el.style.transform=`translateY(${-30*out}px) scale(${zoom})`;
+    el.querySelectorAll(".it").forEach(it=>{const p=ease((t-it._t)/0.6); it.style.opacity=p; it.style.transform=it.classList.contains('pin')?`translateY(${(1-p)*-18}px)`:`translateY(${(1-p)*28}px)`;});
+    el.querySelectorAll('.draw').forEach(d=>{const p=Math.min(Math.max((t-d._t)/d._d,0),1);const q=1-Math.pow(1-p,2);d.style.strokeDashoffset=1-q; if(d._c) d._c.style.strokeDashoffset=1-q;});
+  }
+  // captions
+  let ci=CH.findIndex(c=>t>=c[0].s-0.05 && t<=c[c.length-1].e+0.6);
+  if(ci<0){ cap.innerHTML=""; }
+  else { cap.innerHTML="<div>"+CH[ci].map(w=>`<span class="${t>=w.s?(t<w.e?"now":"on"):""}">${w.w}</span>`).join(" ")+"</div>"; }
+  // waveform: 84 bars from recent loudness, mirrored
+  g.clearRect(0,0,cv.width,cv.height);
+  const n=84, bw=cv.width/n, f=Math.floor(t*FPS);
+  for(let k=0;k<n;k++){
+    const idx=f-Math.floor(Math.abs(k-(n-1)/2)*0.9);
+    const v=idx>=0&&idx<AMP.length?AMP[idx]:0;
+    const h=Math.max(4,Math.min(1,v)*cv.height);
+    g.fillStyle= Math.abs(k-(n-1)/2)<6 ? "#9e2b25" : "rgba(158,43,37,.55)";
+    const x=k*bw+bw*0.2; g.beginPath(); g.roundRect(x,(cv.height-h)/2,bw*0.6,h,4); g.fill();
+  }
+  prog.style.width=(100*t/DUR)+"%";
+};
+</script></body></html>

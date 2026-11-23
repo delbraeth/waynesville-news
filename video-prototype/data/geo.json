@@ -1,0 +1,70 @@
+{
+ "whs": {
+  "lat": 39.5353275,
+  "lon": -84.0929804,
+  "name": "Waynesville High School, 735, Dayton Road, Waynesville, Wayne Township, Warren C"
+ },
+ "teays": {
+  "lat": 39.7223585,
+  "lon": -82.9450984,
+  "name": "Teays Valley High School, 3887, SR 752, Little Chicago, Ashville, Harrison Towns"
+ },
+ "carillon": {
+  "lat": 39.7305376,
+  "lon": -84.1984382,
+  "name": "Carillon Historical Park, Patterson, Dayton, Montgomery County, Ohio, United Sta"
+ },
+ "smithpark": {
+  "lat": 39.5239465,
+  "lon": -84.3974431,
+  "name": "Smith Park, Harlan Park, Middletown, Butler County, Ohio, 45042, United States"
+ },
+ "renpark": {
+  "lat": 39.5010952,
+  "lon": -83.9877071,
+  "name": "Ohio Renaissance Festival, 10542, Brimstone Road, Waynesville, Chester Township, Clinton C",
+  "q": "Ohio Renaissance Festival"
+ },
+ "kings": {
+  "lat": 39.3438277,
+  "lon": -84.2658113,
+  "name": "Kings Island, 6300, Kings Island Drive, Mason, Deerfield Township, Warren County"
+ },
+ "clifton": {
+  "lat": 39.794196,
+  "lon": -83.8259456,
+  "name": "Historic Clifton Mill, 75, Water Street, Clifton, Miami Township, Greene County,"
+ },
+ "ranch": null,
+ "hillsboro": {
+  "lat": 39.2022866,
+  "lon": -83.611587,
+  "name": "Hillsboro, Liberty Township, Highland County, Ohio, United States"
+ },
+ "lebanon": {
+  "lat": 39.4253224,
+  "lon": -84.2047129,
+  "name": "406, Justice Drive, Lebanon, Warren County, Ohio, 45036, United States"
+ },
+ "township": {
+  "lat": 39.4767715,
+  "lon": -84.0323916,
+  "name": "North Clarksville Road, Wellman, Massie Township, Warren County, Ohio, 45054, United State"
+ },
+ "downtown": {
+  "lat": 39.5296769,
+  "lon": -84.0867671,
+  "name": "South Main Street, Waynesville, Wayne Township, Warren County, Ohio, 45068, Unit"
+ },
+ "waynesville": {
+  "lat": 39.5297824,
+  "lon": -84.086601,
+  "name": "Waynesville, Wayne Township, Warren County, Ohio, United States"
+ },
+ "redlion": {
+  "lat": 39.5340008,
+  "lon": -84.2241901,
+  "name": "Red Lion-Five Points Road, Heatherwoode, Springboro, Clearcreek Township, Warren County, O",
+  "q": "Red Lion-Five Points Road, Warren County, Ohio"
+ }
+}
