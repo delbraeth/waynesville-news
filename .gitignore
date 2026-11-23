@@ -20,3 +20,5 @@ yarn-error.log*
 
 # tesseract.js OCR language data (downloaded at runtime, not source)
 *.traineddata
+video-out/
+__pycache__/

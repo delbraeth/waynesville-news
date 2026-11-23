@@ -1,0 +1,190 @@
+{
+  "_note": "Photo library for the Daily Brief video. source: \"ours\" (taken by the editor) or \"stock\" (licensed, shows a 'Stock image' label). use: \"generic\" may illustrate any story on the topic; \"specific\" only a story about that exact place or event. needsOriginal: the file is a 300x300 thumbnail; replace it with the full-size original (at least 2400 px wide) before it is used on screen. All files are converted to WebP with metadata (including GPS) stripped.",
+  "items": [
+    {
+      "file": "soccer-1.webp",
+      "topics": [
+        "soccer"
+      ],
+      "source": "ours",
+      "credit": "Waynesville News",
+      "use": "generic",
+      "width": 2000,
+      "height": 1334,
+      "focus": "center",
+      "notes": "Goalkeeper from behind through the net; other players soft-focus."
+    },
+    {
+      "file": "football-1.webp",
+      "topics": [
+        "football"
+      ],
+      "source": "ours",
+      "credit": "Waynesville News",
+      "use": "generic",
+      "width": 300,
+      "height": 300,
+      "needsOriginal": true,
+      "notes": "Players from behind, helmets on, jersey numbers visible."
+    },
+    {
+      "file": "gliders-1.webp",
+      "topics": [
+        "gliders",
+        "soaring"
+      ],
+      "source": "ours",
+      "credit": "Waynesville News",
+      "use": "generic",
+      "width": 300,
+      "height": 300,
+      "needsOriginal": true,
+      "notes": "Gliders on a grass field. An adult's face is visible in the cockpit at bottom right: crop it out or use a different frame."
+    },
+    {
+      "file": "renfest-1.webp",
+      "topics": [
+        "renaissance-festival",
+        "renfest"
+      ],
+      "source": "ours",
+      "credit": "Waynesville News",
+      "use": "generic",
+      "width": 300,
+      "height": 300,
+      "needsOriginal": true,
+      "notes": "Jousting knight on horseback."
+    },
+    {
+      "file": "flood-clint-fultz-1.webp",
+      "topics": [
+        "flooding",
+        "parks"
+      ],
+      "source": "ours",
+      "credit": "Waynesville News",
+      "use": "specific",
+      "place": "Clint Fultz park, Warren County Parks",
+      "width": 300,
+      "height": 300,
+      "needsOriginal": true,
+      "notes": "A real flood at a named park: only for a story about flooding at this park, never as a generic rain image."
+    },
+    {
+      "file": "ours-caesarcreek-1.webp",
+      "topics": [
+        "caesar-creek",
+        "lake",
+        "parks"
+      ],
+      "source": "ours",
+      "credit": "Waynesville News",
+      "use": "generic",
+      "place": "Caesar Creek Lake",
+      "width": 2000,
+      "height": 1307,
+      "focus": "center",
+      "notes": "Caesar Creek sign wall with the lake and the S.R. 73 bridge behind. Overcast late winter."
+    },
+    {
+      "file": "ours-stadium-1.webp",
+      "topics": [
+        "football",
+        "soccer",
+        "stadium",
+        "spartans"
+      ],
+      "source": "ours",
+      "credit": "Waynesville News",
+      "use": "generic",
+      "place": "Waynesville Spartans stadium",
+      "width": 301,
+      "height": 301,
+      "needsOriginal": true,
+      "notes": "Turf with the Spartan helmet at midfield and the home stands. Empty of people."
+    },
+    {
+      "file": "festival-sauerkraut-1.webp",
+      "topics": [
+        "sauerkraut-festival",
+        "festival",
+        "downtown"
+      ],
+      "source": "ours",
+      "credit": "Waynesville News",
+      "use": "specific",
+      "place": "Ohio Sauerkraut Festival, downtown Waynesville",
+      "width": 2000,
+      "height": 930,
+      "focus": "top",
+      "notes": "Cropped from a 2000x2000 original to the street, tents and distant crowd so no face is prominent; the uncropped version is not stored. Use for Sauerkraut Festival stories."
+    },
+    {
+      "file": "spartans-helmet.svg",
+      "alt": "spartans-helmet.png",
+      "topics": [
+        "spartans",
+        "sports"
+      ],
+      "source": "ours",
+      "credit": "Designed by the editor for Wayne Local Schools",
+      "use": "logo-sports-only",
+      "notes": "Spartan helmet mark, vector from the editor's original Illustrator file (no drop shadow). Rule from the editor: show it only on sports slides, small, as the Spartans' team mark beside a score or matchup. Never in the masthead, intro, sign-off or on non-sports slides, so videos don't read as district content.",
+      "variants": {
+        "shadow": {
+          "file": "spartans-helmet-shadow.svg",
+          "alt": "spartans-helmet-shadow.png",
+          "notes": "Drop-shadow version from the editor's second Illustrator file; shadow is embedded raster. Use only large on a plain background; the flat version is the default for video."
+        }
+      }
+    },
+    {
+      "file": "ours-museum-1.webp",
+      "topics": [
+        "museum",
+        "history",
+        "downtown"
+      ],
+      "source": "ours",
+      "credit": "Waynesville News",
+      "use": "specific",
+      "place": "Museum at the Friends Home, 115 S. Fourth St., Waynesville",
+      "width": 300,
+      "height": 300,
+      "needsOriginal": true,
+      "notes": "Brick building with the columned two-story porch, from the front walk."
+    },
+    {
+      "file": "airshow-1.webp",
+      "topics": [
+        "air-show",
+        "airport",
+        "aviation"
+      ],
+      "source": "ours",
+      "credit": "Waynesville News",
+      "use": "generic",
+      "width": 298,
+      "height": 298,
+      "needsOriginal": true,
+      "notes": "Vintage warbird on a low pass over a grass field, a red-white-and-blue aerobatic plane parked in front, one spectator seen from behind."
+    },
+    {
+      "file": "ours-football-night-1.webp",
+      "topics": [
+        "football",
+        "spartans",
+        "stadium",
+        "friday-night"
+      ],
+      "source": "ours",
+      "credit": "Waynesville News",
+      "use": "generic",
+      "place": "Waynesville Spartans stadium",
+      "width": 1280,
+      "height": 960,
+      "focus": "center",
+      "notes": "Friday night game under the lights, fans along the fence seen from behind in silhouette, Waynesville Spartans press box across the field. No identifiable faces."
+    }
+  ]
+}

@@ -85,6 +85,11 @@ up close.
 | 43 | ours-township-1 | Wayne Township building, 6050 N. Clarksville Rd. | Exterior |
 | 44 | ours-trail-1 | Little Miami Scenic Trail, Corwin trailhead | Trail and bridge |
 | 45 | ours-sr73-1 | S.R. 73 near the village | Road only, for road-work days |
+| 46 | gliders-1 | Gliders and the soaring field | **Have it** (thumbnail; send the original) |
+| 47 | flood-clint-fultz-1 | Flooding at county parks | **Have it** (thumbnail; only for stories about that flood) |
+
+## Received so far
+See `photos/index.json`. Full size: soccer-1, ours-football-night-1 (Friday night under the lights), ours-caesarcreek-1 (covers #38), festival-sauerkraut-1 (cropped so no faces are prominent). Logo: spartans-helmet (SVG + PNG; sports slides only). Thumbnails waiting on full-size originals: football-1, gliders-1, renfest-1, flood-clint-fultz-1, ours-stadium-1 (covers #41), ours-museum-1 (Museum at the Friends Home), airshow-1 (air show). Still to come as files: the bull rider (rodeo-1), Corwin M. Nixon Covered Bridge, the trilobite (Caesar Creek fossils).
 
 ## Skip these on purpose
 - **Obituaries:** never illustrate them.
