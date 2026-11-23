@@ -168,6 +168,23 @@
       "height": 298,
       "needsOriginal": true,
       "notes": "Vintage warbird on a low pass over a grass field, a red-white-and-blue aerobatic plane parked in front, one spectator seen from behind."
+    },
+    {
+      "file": "ours-football-night-1.webp",
+      "topics": [
+        "football",
+        "spartans",
+        "stadium",
+        "friday-night"
+      ],
+      "source": "ours",
+      "credit": "Waynesville News",
+      "use": "generic",
+      "place": "Waynesville Spartans stadium",
+      "width": 1280,
+      "height": 960,
+      "focus": "center",
+      "notes": "Friday night game under the lights, fans along the fence seen from behind in silhouette, Waynesville Spartans press box across the field. No identifiable faces."
     }
   ]
 }
