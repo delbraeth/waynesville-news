@@ -1,0 +1,10 @@
+{
+  "_note": "Photo library for the Daily Brief video. source: \"ours\" (taken by the editor) or \"stock\" (licensed, shows a 'Stock image' label). use: \"generic\" may illustrate any story on the topic; \"specific\" only a story about that exact place or event. needsOriginal: the file is a 300x300 thumbnail; replace it with the full-size original (at least 2400 px wide) before it is used on screen. All files are converted to WebP with metadata (including GPS) stripped.",
+  "items": [
+    { "file": "soccer-1.webp", "topics": ["soccer"], "source": "ours", "credit": "Waynesville News", "use": "generic", "width": 2000, "height": 1334, "focus": "center", "notes": "Goalkeeper from behind through the net; other players soft-focus." },
+    { "file": "football-1.webp", "topics": ["football"], "source": "ours", "credit": "Waynesville News", "use": "generic", "width": 300, "height": 300, "needsOriginal": true, "notes": "Players from behind, helmets on, jersey numbers visible." },
+    { "file": "gliders-1.webp", "topics": ["gliders", "soaring"], "source": "ours", "credit": "Waynesville News", "use": "generic", "width": 300, "height": 300, "needsOriginal": true, "notes": "Gliders on a grass field. An adult's face is visible in the cockpit at bottom right: crop it out or use a different frame." },
+    { "file": "renfest-1.webp", "topics": ["renaissance-festival", "renfest"], "source": "ours", "credit": "Waynesville News", "use": "generic", "width": 300, "height": 300, "needsOriginal": true, "notes": "Jousting knight on horseback." },
+    { "file": "flood-clint-fultz-1.webp", "topics": ["flooding", "parks"], "source": "ours", "credit": "Waynesville News", "use": "specific", "place": "Clint Fultz park, Warren County Parks", "width": 300, "height": 300, "needsOriginal": true, "notes": "A real flood at a named park: only for a story about flooding at this park, never as a generic rain image." }
+  ]
+}

@@ -85,6 +85,11 @@ up close.
 | 43 | ours-township-1 | Wayne Township building, 6050 N. Clarksville Rd. | Exterior |
 | 44 | ours-trail-1 | Little Miami Scenic Trail, Corwin trailhead | Trail and bridge |
 | 45 | ours-sr73-1 | S.R. 73 near the village | Road only, for road-work days |
+| 46 | gliders-1 | Gliders and the soaring field | **Have it** (thumbnail; send the original) |
+| 47 | flood-clint-fultz-1 | Flooding at county parks | **Have it** (thumbnail; only for stories about that flood) |
+
+## Received so far
+See `photos/index.json`: soccer-1 (full size), plus football-1, gliders-1, renfest-1 and flood-clint-fultz-1 as 300×300 thumbnails waiting on their full-size originals.
 
 ## Skip these on purpose
 - **Obituaries:** never illustrate them.
