@@ -129,7 +129,14 @@
       "source": "ours",
       "credit": "Designed by the editor for Wayne Local Schools",
       "use": "logo-sports-only",
-      "notes": "Spartan helmet mark, vector from the editor's original Illustrator file (no drop shadow). Rule from the editor: show it only on sports slides, small, as the Spartans' team mark beside a score or matchup. Never in the masthead, intro, sign-off or on non-sports slides, so videos don't read as district content."
+      "notes": "Spartan helmet mark, vector from the editor's original Illustrator file (no drop shadow). Rule from the editor: show it only on sports slides, small, as the Spartans' team mark beside a score or matchup. Never in the masthead, intro, sign-off or on non-sports slides, so videos don't read as district content.",
+      "variants": {
+        "shadow": {
+          "file": "spartans-helmet-shadow.svg",
+          "alt": "spartans-helmet-shadow.png",
+          "notes": "Drop-shadow version from the editor's second Illustrator file; shadow is embedded raster. Use only large on a plain background; the flat version is the default for video."
+        }
+      }
     }
   ]
 }
