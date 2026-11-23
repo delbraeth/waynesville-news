@@ -188,6 +188,16 @@
       "voice": "Alyson",
       "sponsor": "Cassidy Travel",
       "recorded": "2026-11-22T11:46:25.809Z"
+    },
+    "2026-11-23": {
+      "url": "https://audio.waynesville.news/audio/2026-11-23.mp3?v=20261123114618",
+      "seconds": 188,
+      "bytes": 1507412,
+      "chars": 2759,
+      "model": "eleven_v4_turbo",
+      "voice": "Brody",
+      "sponsor": "Cassidy Travel",
+      "recorded": "2026-11-23T11:46:19.234Z"
     }
   }
 }
