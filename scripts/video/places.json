@@ -1,0 +1,183 @@
+{
+ "_note": "Places the daily video can pin on a map. A slide gets a map when its spoken paragraph (or the brief text behind it) names one of these, matched case-sensitively on any \"match\" string. Coordinates from OpenStreetMap Nominatim; check a new one on a map before adding it. home: shown as the dark reference pin.",
+ "places": [
+  {
+   "id": "waynesville",
+   "label": "Waynesville",
+   "match": [
+    "Waynesville"
+   ],
+   "lat": 39.52978,
+   "lon": -84.0866,
+   "home": true
+  },
+  {
+   "id": "whs",
+   "label": "Waynesville High School",
+   "match": [
+    "Waynesville High School"
+   ],
+   "lat": 39.53533,
+   "lon": -84.09298
+  },
+  {
+   "id": "corwin",
+   "label": "Corwin",
+   "match": [
+    "Corwin"
+   ],
+   "lat": 39.52506,
+   "lon": -84.07827
+  },
+  {
+   "id": "harveysburg",
+   "label": "Harveysburg",
+   "match": [
+    "Harveysburg"
+   ],
+   "lat": 39.50367,
+   "lon": -84.01049
+  },
+  {
+   "id": "oregonia",
+   "label": "Oregonia",
+   "match": [
+    "Oregonia"
+   ],
+   "lat": 39.45089,
+   "lon": -84.09605
+  },
+  {
+   "id": "caesarcreek",
+   "label": "Caesar Creek State Park",
+   "match": [
+    "Caesar Creek"
+   ],
+   "lat": 39.51024,
+   "lon": -84.0253
+  },
+  {
+   "id": "renpark",
+   "label": "Renaissance Park",
+   "match": [
+    "Renaissance Park",
+    "Yuletide Village",
+    "Renaissance Festival"
+   ],
+   "lat": 39.5011,
+   "lon": -83.98771
+  },
+  {
+   "id": "commissioners",
+   "label": "Commissioners, Lebanon",
+   "match": [
+    "Commissioners",
+    "406 Justice"
+   ],
+   "lat": 39.42532,
+   "lon": -84.20471
+  },
+  {
+   "id": "fairgrounds",
+   "label": "Warren County Fairgrounds",
+   "match": [
+    "Warren County Fairgrounds",
+    "Nights of Lights"
+   ],
+   "lat": 39.44599,
+   "lon": -84.20887
+  },
+  {
+   "id": "lebanon",
+   "label": "Lebanon",
+   "match": [
+    "Lebanon"
+   ],
+   "lat": 39.43534,
+   "lon": -84.20299
+  },
+  {
+   "id": "springboro",
+   "label": "Springboro",
+   "match": [
+    "Springboro"
+   ],
+   "lat": 39.55228,
+   "lon": -84.23327
+  },
+  {
+   "id": "mason",
+   "label": "Mason",
+   "match": [
+    "Mason"
+   ],
+   "lat": 39.36006,
+   "lon": -84.30994
+  },
+  {
+   "id": "kings",
+   "label": "Kings Island",
+   "match": [
+    "Kings Island",
+    "WinterFest"
+   ],
+   "lat": 39.34383,
+   "lon": -84.26581
+  },
+  {
+   "id": "carillon",
+   "label": "A Carillon Christmas",
+   "match": [
+    "Carillon"
+   ],
+   "lat": 39.73054,
+   "lon": -84.19844
+  },
+  {
+   "id": "smithpark",
+   "label": "Light Up Middletown",
+   "match": [
+    "Light Up Middletown"
+   ],
+   "lat": 39.52395,
+   "lon": -84.39744
+  },
+  {
+   "id": "clifton",
+   "label": "Clifton Mill",
+   "match": [
+    "Clifton Mill"
+   ],
+   "lat": 39.7942,
+   "lon": -83.82595
+  },
+  {
+   "id": "hillsboro",
+   "label": "Hillsboro",
+   "match": [
+    "Hillsboro"
+   ],
+   "lat": 39.20229,
+   "lon": -83.61159
+  },
+  {
+   "id": "zoo",
+   "label": "Cincinnati Zoo",
+   "match": [
+    "Cincinnati Zoo",
+    "Festival of Lights"
+   ],
+   "lat": 39.14475,
+   "lon": -84.50829
+  },
+  {
+   "id": "teays",
+   "label": "Teays Valley HS, Ashville",
+   "match": [
+    "Teays Valley"
+   ],
+   "lat": 39.72236,
+   "lon": -82.9451
+  }
+ ]
+}

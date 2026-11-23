@@ -1,0 +1,76 @@
+name: Daily video brief
+
+# Renders today's Daily Brief episode as an animated 1080p video after the
+# daily audio is recorded, and attaches it to this run as a download
+# ("video-<date>" under Artifacts) for the editor to upload to YouTube by hand.
+#
+# It uploads nothing, posts nothing and commits nothing. Fail-safe: the brief,
+# the email and the audio never wait on it; a day with no recording is a quiet
+# skip. See scripts/video/README.md.
+on:
+  workflow_run:
+    workflows: ["Daily audio brief"]
+    types: [completed]
+  workflow_dispatch:
+    inputs:
+      date:
+        description: "Brief date to render (YYYY-MM-DD). Blank = today (Eastern)."
+        required: false
+        default: ""
+
+permissions:
+  contents: read
+
+concurrency:
+  group: daily-video
+  cancel-in-progress: false
+
+jobs:
+  render:
+    if: github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+      - uses: actions/setup-node@v5
+        with:
+          node-version: "24"
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Date
+        id: d
+        env:
+          INPUT_DATE: ${{ inputs.date }}
+        run: echo "date=${INPUT_DATE:-$(TZ=America/New_York date +%F)}" >> "$GITHUB_OUTPUT"
+      - name: ffmpeg
+        run: command -v ffmpeg || (sudo apt-get update -q && sudo apt-get install -y -q ffmpeg)
+      - name: Cache the speech model and map tiles
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/huggingface
+            scripts/video/tiles
+          key: video-${{ github.run_id }}
+          restore-keys: video-
+      - name: Install faster-whisper and Playwright
+        run: |
+          pip install --quiet faster-whisper==1.1.0
+          npm install --silent --no-audit --no-fund --prefix "$RUNNER_TEMP/pw" playwright@1.49.1
+          "$RUNNER_TEMP/pw/node_modules/.bin/playwright" install --with-deps chromium
+      - name: Render
+        env:
+          NODE_PATH: ${{ runner.temp }}/pw/node_modules
+          PYTHON: python
+        run: node scripts/video/make-video.mjs --date "${{ steps.d.outputs.date }}" --out video-out
+      - name: Attach the video to this run
+        uses: actions/upload-artifact@v4
+        with:
+          name: video-${{ steps.d.outputs.date }}
+          path: |
+            video-out/*.mp4
+            video-out/thumbnail-*.jpg
+          if-no-files-found: ignore
+          retention-days: 14
