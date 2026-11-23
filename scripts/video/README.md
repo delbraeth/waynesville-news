@@ -2,10 +2,12 @@
 
 Turns each day's recorded Daily Brief MP3 into an animated 1080p video for
 YouTube. The **Daily video brief** Action (`.github/workflows/daily-video.yml`)
-runs after **Daily audio brief** succeeds and attaches the result to its run
-as a download, `video-<date>` (an MP4 and a thumbnail), kept for 14 days. The
-editor downloads it and uploads it to YouTube by hand. Nothing here uploads,
-posts or commits anything.
+runs after **Daily audio brief** succeeds. It stores the MP4 and a thumbnail on
+Cloudflare R2 at `https://audio.waynesville.news/video/<date>.mp4` (and
+`.jpg`), using the same bucket and secrets as the daily audio, and also
+attaches them to the run as a 14-day download, `video-<date>`. The editor
+uploads the video to YouTube by hand. Nothing here posts anywhere public or
+commits anything.
 
 To render a day by hand: Actions → Daily video brief → Run workflow, with a date.
 
