@@ -1,10 +1,12 @@
 name: Daily video brief
 
 # Renders today's Daily Brief episode as an animated 1080p video after the
-# daily audio is recorded, and attaches it to this run as a download
-# ("video-<date>" under Artifacts) for the editor to upload to YouTube by hand.
+# daily audio is recorded. The MP4 and thumbnail are stored on Cloudflare R2
+# at <R2_PUBLIC_URL>/video/<date>.mp4 and .jpg (the same bucket and secrets as
+# the daily audio), and are also attached to this run as a 14-day download
+# ("video-<date>" under Artifacts). The editor uploads to YouTube by hand.
 #
-# It uploads nothing, posts nothing and commits nothing. Fail-safe: the brief,
+# It posts nothing anywhere public and commits nothing. Fail-safe: the brief,
 # the email and the audio never wait on it; a day with no recording is a quiet
 # skip. See scripts/video/README.md.
 on:
@@ -74,3 +76,24 @@ jobs:
             video-out/thumbnail-*.jpg
           if-no-files-found: ignore
           retention-days: 14
+      - name: Store the video on R2 (audio.waynesville.news/video/)
+        env:
+          DATE: ${{ steps.d.outputs.date }}
+          R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+          R2_BUCKET: ${{ secrets.R2_BUCKET }}
+          R2_PUBLIC_URL: ${{ secrets.R2_PUBLIC_URL }}
+        run: |
+          set -euo pipefail
+          MP4="video-out/waynesville-brief-$DATE.mp4"
+          if [ ! -f "$MP4" ]; then echo "no video for $DATE; nothing to store"; exit 0; fi
+          if [ -z "$R2_ACCOUNT_ID" ] || [ -z "$AWS_ACCESS_KEY_ID" ] || [ -z "$R2_BUCKET" ]; then
+            echo "::warning::R2 secrets not set; the video is only in this run's artifacts"; exit 0
+          fi
+          EP="https://$R2_ACCOUNT_ID.r2.cloudflarestorage.com"
+          aws s3 cp "$MP4" "s3://$R2_BUCKET/video/$DATE.mp4" --endpoint-url "$EP" --content-type video/mp4 --region auto
+          if [ -f "video-out/thumbnail-$DATE.jpg" ]; then
+            aws s3 cp "video-out/thumbnail-$DATE.jpg" "s3://$R2_BUCKET/video/$DATE.jpg" --endpoint-url "$EP" --content-type image/jpeg --region auto
+          fi
+          echo "stored: ${R2_PUBLIC_URL%/}/video/$DATE.mp4" | tee -a "$GITHUB_STEP_SUMMARY"
