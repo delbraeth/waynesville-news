@@ -1,3 +1,4 @@
+import sys
 import json, numpy as np
 from faster_whisper import WhisperModel
 audio = np.fromfile(sys.argv[1], dtype=np.float32)
