@@ -153,6 +153,21 @@
       "height": 300,
       "needsOriginal": true,
       "notes": "Brick building with the columned two-story porch, from the front walk."
+    },
+    {
+      "file": "airshow-1.webp",
+      "topics": [
+        "air-show",
+        "airport",
+        "aviation"
+      ],
+      "source": "ours",
+      "credit": "Waynesville News",
+      "use": "generic",
+      "width": 298,
+      "height": 298,
+      "needsOriginal": true,
+      "notes": "Vintage warbird on a low pass over a grass field, a red-white-and-blue aerobatic plane parked in front, one spectator seen from behind."
     }
   ]
 }
