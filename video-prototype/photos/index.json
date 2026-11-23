@@ -137,6 +137,22 @@
           "notes": "Drop-shadow version from the editor's second Illustrator file; shadow is embedded raster. Use only large on a plain background; the flat version is the default for video."
         }
       }
+    },
+    {
+      "file": "ours-museum-1.webp",
+      "topics": [
+        "museum",
+        "history",
+        "downtown"
+      ],
+      "source": "ours",
+      "credit": "Waynesville News",
+      "use": "specific",
+      "place": "Museum at the Friends Home, 115 S. Fourth St., Waynesville",
+      "width": 300,
+      "height": 300,
+      "needsOriginal": true,
+      "notes": "Brick building with the columned two-story porch, from the front walk."
     }
   ]
 }
