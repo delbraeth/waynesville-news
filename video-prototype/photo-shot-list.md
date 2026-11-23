@@ -89,7 +89,7 @@ up close.
 | 47 | flood-clint-fultz-1 | Flooding at county parks | **Have it** (thumbnail; only for stories about that flood) |
 
 ## Received so far
-See `photos/index.json`. Full size: soccer-1, ours-caesarcreek-1 (covers #38), festival-sauerkraut-1 (cropped so no faces are prominent). Thumbnails waiting on full-size originals: football-1, gliders-1, renfest-1, flood-clint-fultz-1, ours-stadium-1 (covers #41). Still to come as files: the bull rider (rodeo-1), Corwin M. Nixon Covered Bridge, the trilobite (Caesar Creek fossils), the football field from the stands, the Spartan helmet logo (sports slides only), and the brick building with columns (to be identified).
+See `photos/index.json`. Full size: soccer-1, ours-caesarcreek-1 (covers #38), festival-sauerkraut-1 (cropped so no faces are prominent). Logo: spartans-helmet (SVG + PNG; sports slides only). Thumbnails waiting on full-size originals: football-1, gliders-1, renfest-1, flood-clint-fultz-1, ours-stadium-1 (covers #41). Still to come as files: the bull rider (rodeo-1), Corwin M. Nixon Covered Bridge, the trilobite (Caesar Creek fossils), the football field from the stands, and the brick building with columns (to be identified).
 
 ## Skip these on purpose
 - **Obituaries:** never illustrate them.

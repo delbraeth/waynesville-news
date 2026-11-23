@@ -118,6 +118,18 @@
       "height": 930,
       "focus": "top",
       "notes": "Cropped from a 2000x2000 original to the street, tents and distant crowd so no face is prominent; the uncropped version is not stored. Use for Sauerkraut Festival stories."
+    },
+    {
+      "file": "spartans-helmet.svg",
+      "alt": "spartans-helmet.png",
+      "topics": [
+        "spartans",
+        "sports"
+      ],
+      "source": "ours",
+      "credit": "Designed by the editor for Wayne Local Schools",
+      "use": "logo-sports-only",
+      "notes": "Spartan helmet mark, vector from the editor's original Illustrator file (no drop shadow). Rule from the editor: show it only on sports slides, small, as the Spartans' team mark beside a score or matchup. Never in the masthead, intro, sign-off or on non-sports slides, so videos don't read as district content."
     }
   ]
 }
