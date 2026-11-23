@@ -1,18 +1,26 @@
 {
   "_note": "Candidate local headlines (Google News RSS). Published as a quoted headline (or, when available, a short publisher-written excerpt) + source + link; never reproduce article body text.",
-  "updated": "2026-11-22T11:42:16.033Z",
+  "updated": "2026-11-23T11:41:45.635Z",
   "items": [
     {
-      "title": "Warren County Airport in Ohio Reports $16–27M+ Annual Economic Impact and Over $3M in Private Hangar Investment in 2026",
-      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE10RlhkR1BSRjVKdU9IZTJyZ0w3ZzVvbVpOWVRSZF9EU0psQm5XbGEweE0yUWozZHNjNFFzVmxBSHRoRU1Ua2pPYmJEdjMwbHJjS0FsY0EtTHJVcENmX2E4VE82dlNGdEVFZWdITzczajk2bDA?oc=5",
-      "source": "Avi-Go",
-      "date": "Sun, 22 Nov 2026 10:47:15 GMT"
+      "title": "Ohio County coroner seeks next of kin for woman with possible Warren County ties",
+      "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNWkI0U2Y5dXJkQkM4cUllREJIbjh6QTA4U3NGSVRxT1RPZlZpb3B6V2hmR3JfR1hUb2VWM05OWk05UXRmUFBBeTFKQzFzQnpBUzcwOXRJc1RaMTg1TVBOczF1bzdBdFZXc3M4SmxwZWMwZzVwdUs2el9EMW1zb2QwX0wwcFJSeFZmaGhkbXA1ZDdOaHplOGc2OTBXbHFUTWgxQ0V4cg?oc=5",
+      "source": "WNKY",
+      "date": "Sun, 22 Nov 2026 23:32:52 GMT"
     },
     {
       "title": "Warren County's Sand and Gravel Sales Rise 10.6% as Ohio Mineral Industry Reaches $1.9 Billion",
       "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPZXE0OERMSE5kQXlBcGwtM3NfenBVaTMwWW8yRXFLLURZeVZUZVBlSmJHeUplS3dFczZfSE0xVEpTcVlXNzRSRWN1QVNJSWVjWlpmbkhnSFNVN3FNSWUxWkVCRXFfcVNQSGMzWC10dU80NVNZSzU3MFpsc25wQWRlTmtlcHk3bmE4UllVbGhOV0xuRktHYVRzempQSHdvWXpSLW91MjhFTEJNbGNnSU9lUnNrZWhGOUhLQy1maG9jLVhZYWFz?oc=5",
       "source": "Warren County Post",
-      "date": "Fri, 20 Nov 2026 04:27:34 GMT"
+      "date": "Fri, 20 Nov 2026 04:27:34 GMT",
+      "sourceUrl": "https://warrencountypost.com/g/lebanon-oh/n/398731/warren-countys-sand-and-gravel-sales-rise-106-ohio-mineral-industry-reaches",
+      "excerpt": "Ohio’s Mineral Resources Valued at $1.9 Billion in 2025"
+    },
+    {
+      "title": "Warren County Airport in Ohio Reports $16–27M+ Annual Economic Impact and Over $3M in Private Hangar Investment in 2026",
+      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE10RlhkR1BSRjVKdU9IZTJyZ0w3ZzVvbVpOWVRSZF9EU0psQm5XbGEweE0yUWozZHNjNFFzVmxBSHRoRU1Ua2pPYmJEdjMwbHJjS0FsY0EtTHJVcENmX2E4VE82dlNGdEVFZWdITzczajk2bDA?oc=5",
+      "source": "Avi-Go",
+      "date": "Sun, 22 Nov 2026 10:50:27 GMT"
     },
     {
       "title": "‘Gilmore Girls’ themed weekend in Waynesville is here: What to know",
@@ -21,36 +29,30 @@
       "date": "Wed, 18 Nov 2026 14:42:03 GMT"
     },
     {
-      "title": "Roland Anspach Obituary (2026) - Waynesville, OH - Dayton Daily News",
-      "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOa09idDE2MUFPcDQwVTQ4dUdfREFta0JFLWdNOUVZRW1ISFpkZ25QVUxzSldNOWdCZnZsd0NMSVFsMU5XaUpKUzN5NWtlTlZJaUYyRnFJZjQxUVhrWXd4ajhtNUNCb29CWThEUlJfTy1xZG16d1BkVFM3bFpReGgtTjdZVHVFdzltdEk4UA?oc=5",
-      "source": "Legacy | Obituary",
-      "date": "Sat, 21 Nov 2026 11:25:18 GMT"
-    },
-    {
       "title": "Park transformation earns Warren County top recognition",
       "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxObzJJM0dSeTVoTnotdzBfb3AzVS15WExZTGVtSDI0clZCUWhWY2c0QWZndkZrOVl6WXhFbkJPenpaWHYwaC1Lblp2czI5SVdHME90U2lZOThiZEFjUW5zRlpka25naEd6TjZZR2FtUWthZEgtX1JlSFNZZnd4WDEzNmxrc3ZEdFN3RmEwU1R3WQ?oc=5",
       "source": "WKRC",
       "date": "Thu, 19 Nov 2026 23:46:19 GMT"
     },
     {
-      "title": "Warren Co. Commissioners approve new subdivision regulations amid housing boom",
-      "link": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxOSFdkRGdrZUFYbmdnNnZNYmRjQzBpYm9iV043cHBrUXJQazNFMUQtOFVCUWpYNlptams2dkRsdElLUUhwaUNXYlZFZm82WUI5SHhCQjYwTUFHTzR5MnBydFpmTllxWnJJTnFpalpVSUt2R1JueGFoVVVydy1VUUxWQ09pbWdxR0xxSVBRTW1vUlN5dndBYktyQ3NKQ3B0Q2x5RmhaM0huMFBLTE82TVk2TF80Z1BTMUthNE53NE5UZWVlWVI5RXdzSWhSTXZYTjdyRnFIMHFxYTVlRUVtTXZUYmFmai0?oc=5",
-      "source": "WCPO 9 Cincinnati",
-      "date": "Wed, 18 Nov 2026 01:32:58 GMT"
-    },
-    {
-      "title": "Ohio Career Launch Offers Warren County Youth a Path Toward Employment",
-      "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQQXlPb2dmcEFZRVJSU3djRXA3eFROUUhoa3VFZVZtSFM0UF8wTURRMmExaTZtcG9qeXRkMVRfU2g3N18wQVVhVUJ1R29xTVdiTXk5Nm5JUFlQa25XSTlra3dsa2FkOHBPaFZYbXJ3ZElsTFd6dWdYZFN1RXYwWmd3cVdSeUR3OFlaVjRfaXRUandKN3RCOVg4Ynl5Y3cwTi04VkYzeTVpZ21aWDBYM2QzSm1rdGNLWUhWWVZJ?oc=5",
-      "source": "Warren County Post",
-      "date": "Fri, 20 Nov 2026 02:47:15 GMT",
-      "sourceUrl": "https://warrencountypost.com/g/lebanon-oh/n/398741/ohio-career-launch-offers-warren-county-youth-path-toward-employment",
-      "excerpt": "Program provides career training, education assistance and opportunities for young people ages 14 to 24."
-    },
-    {
       "title": "Warren County woman shares story after nearly falling for jury duty scam",
       "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQYVV2czA3MnpmQWl4R3hZRGwxaUNjcVotQi1VbmRsRlhsbzN2b1NQMHdnNkhiU1l3dEFNN1h1ano3STFXODlvenNhWXY3dUJJLWdDdkRJaG1JbHV1UXUydmdpdWJnNTdxcDVoN2Fmb0lEcjVhMWNscDlCdkJ4dXVxdW5YVWY4Zw?oc=5",
       "source": "WLWT",
       "date": "Mon, 16 Nov 2026 22:22:00 GMT"
+    },
+    {
+      "title": "Ohio’s latest EV charging expansion includes Monroe and two stops along I-71",
+      "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNeEc0WnhOV0RtdFk2M2gtalRURXVDamhXXzJZc2ZyZVBZM3d5R0puRk1zRnVOeEozS3JoTFVSVHpPMnlKRlg1WkNrbmVuT1JyeGM3ck42c25PbmtOdU01ZlRaM0Y3clZxU3JiUGJXNnc5UW1PX2R3bFhJdmdQdmFFdE9vZVdxeGt1TWxMTnBMMGhtOHNzOV9CQWgyN2VsX1NGSkZxWTZQQWhBVXVYa2hfSXZ6ajViSVVkYlJoaUNFbTZNR2xx?oc=5",
+      "source": "Warren County Post",
+      "date": "Sun, 22 Nov 2026 05:22:53 GMT",
+      "sourceUrl": "https://warrencountypost.com/g/middletown-oh/n/398929/ohios-latest-ev-charging-expansion-includes-monroe-and-two-stops-along-i",
+      "excerpt": "Latest NEVI awards bring ODOT's program to 120 stations and build on the state's first-in-the-nation deployment progress"
+    },
+    {
+      "title": "Gilmore Girls Weekend in Waynesville Ohio: What to Know",
+      "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxONFp0LWlpdzhXeVhmX1VobXAzblJUTjNOTVZ4d2llQmJSdUsyb2dHMjJBaFU0XzY3dE1vV2VuYmNSbHBPLXR4N3RyQURoZ1R0N1lUQmRSR0l0Qk81OEZiQ1ZpVHhtaklGMkNlVlBXRXB0bjFMZzJmNWQxcDZOYXFlSTZ1RXByd2xjeTMtRUNOUjZSWndvUGdWTEY0WEpmSzlVN3NSRzJFQTJsLXZiU2c?oc=5",
+      "source": "Hoodline",
+      "date": "Wed, 18 Nov 2026 17:30:34 GMT"
     }
   ]
 }

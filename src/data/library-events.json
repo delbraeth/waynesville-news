@@ -1,6 +1,6 @@
 {
   "_note": "Mary L. Cook Public Library — upcoming programs from the library's WhoFi event calendar (https://marylcook-main-oh.whofi.com/calendar/full). \"items\": next 14 days, for the daily brief (dateISO is Eastern wall-clock marked Z). \"calendar\": next 45 days for the events calendar, real offsets, with sign-up details read from each program's page (scripts/lib/signup.mjs). Canceled events and closures excluded.",
-  "updated": "2026-11-22T11:41:41.395Z",
+  "updated": "2026-11-23T11:42:04.480Z",
   "items": [
     {
       "title": "The Loop Group (Fiber Crafts Club)",
@@ -359,6 +359,16 @@
       "endISO": "2027-01-05T11:00:00-05:00",
       "dateLabel": "Tue, Jan 5 · 10:30 AM",
       "link": "https://marylcook-main-oh.whofi.com/calendar/event/358170/",
+      "signup": {
+        "required": false
+      }
+    },
+    {
+      "title": "Baby Bookworms",
+      "dateISO": "2027-01-06T10:30:00-05:00",
+      "endISO": "2027-01-06T11:00:00-05:00",
+      "dateLabel": "Wed, Jan 6 · 10:30 AM",
+      "link": "https://marylcook-main-oh.whofi.com/calendar/event/358171/",
       "signup": {
         "required": false
       }

@@ -1,6 +1,6 @@
 {
   "_note": "Waynesville Spartans schedule + results (MaxPreps), past 7 days / next 7 days. Scraped directly from each sport's own schedule page (football, volleyball, soccer -- varsity + JV), not the school hub page, which has been observed to silently omit some contests. Scores and matchups reproduced verbatim from MaxPreps' own markup; each links to their game page. Start times, \"scrimmage\" and \"canceled\" come from the school's athletics site (waynesvillesports.com) when it lists the game; \"maxprepsTime\" is MaxPreps' time when they differ.",
-  "updated": "2026-11-22T11:41:35.182Z",
+  "updated": "2026-11-23T11:41:53.445Z",
   "results": [
     {
       "dateISO": "2026-11-20T19:00:00",
@@ -52,6 +52,17 @@
       "isHome": true,
       "link": "https://www.maxpreps.com/oh/basketball/game/waynesville-vs-xenia/jv/11-24-2026/?c=c7ce1c81-6bcb-4383-8a05-7ddb155591dd",
       "scrimmage": true
+    },
+    {
+      "dateISO": "2026-11-27T19:00:00",
+      "sport": "Football",
+      "level": "Varsity",
+      "opponent": "Ironton",
+      "wayneScore": null,
+      "opponentScore": null,
+      "result": null,
+      "isHome": true,
+      "link": "https://www.maxpreps.com/oh/football/game/ironton-vs-waynesville/11-27-2026/?c=ed4a7889-09b4-4b7e-8729-17891320fd62"
     }
   ]
 }

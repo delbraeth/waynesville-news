@@ -1,7 +1,14 @@
 {
   "_note": "Recent Wayne Local Schools Facebook posts via rss.app bridge. Title + link + short excerpt; the district's own words. Fail-safe: kept from last run if the bridge is down.",
-  "updated": "2026-11-22T11:41:31.496Z",
+  "updated": "2026-11-23T11:41:11.355Z",
   "items": [
+    {
+      "title": "🎶A BIG Spartan shoutout to our Waynesville Marching Band! From Friday night performances to cheering on our football…",
+      "link": "https://www.facebook.com/waynelocalschools/posts/pfbid02HSd7ejbvQA42Qwd5VeJMnLNojVGfJi2YU7x4YZfAh3KNuRgWJGPg1qZZL5rZsho5l",
+      "date": "Sun, 22 Nov 2026 22:22:11 GMT",
+      "dateLabel": "Sun, Nov 22",
+      "excerpt": "team throughout this incredible season, our marching band has been there every step of the way! For the hours of practice and hard work, thank you to our talented student musicians for bringing the energy and #SPARTANPRIDE week after week! 📸Photo creds: Kyle Hendrix Waynesville Spartans Band…"
+    },
     {
       "title": "#SPARTANPRIDEFriday night was my first time watching Waynesville play football. I feel a little stupid admitting that. W...",
       "link": "https://www.facebook.com/waynelocalschools/posts/pfbid0EzyiBryHtzBNAmwiUEtb3VSfgP4tZLQnFVX5ca9f98hFFcFDbx6kSn82TjJmBZdyl",
@@ -50,13 +57,6 @@
       "date": "Fri, 20 Nov 2026 15:21:04 GMT",
       "dateLabel": "Fri, Nov 20",
       "excerpt": "FENWICK! #SPARTANPRIDE"
-    },
-    {
-      "title": "Our Spartans are practicing gratitude! This week during lunch at WMS and WHS, students took a moment to reflect on what…",
-      "link": "https://www.facebook.com/waynelocalschools/posts/pfbid02J3nebxrHcYs6sAfJdbY5rkHvRvzdVbGKxAC4VEvjRnD2sjwyXdgWuiK46shfNzjhl",
-      "date": "Fri, 20 Nov 2026 12:00:04 GMT",
-      "dateLabel": "Fri, Nov 20",
-      "excerpt": "gives them strength and what they are grateful for, writing their thoughts on leaves to add to the Thankful Tree display in their hallway. Organized by Sources of Strength Peer Leaders, this activity reminds us that strength comes from many places and that taking time to recognize the good in…"
     }
   ]
 }
