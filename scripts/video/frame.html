@@ -95,7 +95,7 @@ const stage=document.getElementById("stage");
 const segEls = SEGS.map(s=>{const d=document.createElement("div");d.className="seg "+(s.cls||"");d.innerHTML=s.html;stage.appendChild(d);return d;});
 const ease=x=>1-Math.pow(1-Math.min(Math.max(x,0),1),3);
 function sentT(r,o=0){ if(r<0) return 0; const s=S[r]; return s.start+(s.end-s.start)*o; }
-function segStart(i){ return i===0?0:sentT(SEGS[i].from)-0.35; }
+function segStart(i){ return i===0?0:sentT(SEGS[i].from)-0.9; } // transition starts in the pause before the paragraph
 // caption chunks
 let CH=[];
 function buildChunks(){
@@ -111,15 +111,17 @@ window.render=(t)=>{
   // segments
   for(let i=0;i<SEGS.length;i++){
     const a=segStart(i), b=i+1<SEGS.length?segStart(i+1):1e9, el=segEls[i];
-    if(t<a-0.01||t>b+0.6){el.style.display="none";continue;}
+    if(t<a-0.01||t>b+1.0){el.style.display="none";continue;}
     el.style.display="block";
     // slide in from the right during the pause before the paragraph, out to the left at the next one
-    const inn=ease((t-a)/0.45), out=ease((t-b)/0.45);
+    const TR=0.9; // seconds for a slide to move in or out
+    const sm2=x=>{x=Math.min(Math.max(x,0),1);return x<.5?2*x*x:1-Math.pow(-2*x+2,2)/2;};
+    const inn=sm2((t-a)/TR), out=sm2((t-b)/TR);
     const prog=Math.min(Math.max((t-a)/Math.max(b-a,1),0),1);
     const zoom=1+0.015*prog;
-    el.style.opacity=(i===0?1:inn)*(1-out); el.style.transform=`translateX(${(i===0?0:(1-inn)*70)-out*70}px) scale(${zoom})`;
+    el.style.opacity=(i===0?1:inn)*(1-out); el.style.transform=`translateX(${(i===0?0:(1-inn)*140)-out*140}px) scale(${zoom})`;
     const sm=prog<.5?2*prog*prog:1-Math.pow(-2*prog+2,2)/2; // ease in-out
-    el.querySelectorAll('.mapin').forEach(mi=>{mi.style.transform=`scale(${1+0.16*sm})`;});
+    el.querySelectorAll('.mapin').forEach(mi=>{mi.style.transform=`scale(${1+0.4*sm})`;}); // clear push-in toward the pins
     el.querySelectorAll(".it").forEach(it=>{const p=ease((t-it._t)/0.6); it.style.opacity=p; it.style.transform=it.classList.contains('pin')?`translateY(${(1-p)*-18}px)`:`translateY(${(1-p)*28}px)`;});
     el.querySelectorAll('.draw').forEach(d=>{const p=Math.min(Math.max((t-d._t)/d._d,0),1);const q=1-Math.pow(1-p,2);d.style.strokeDashoffset=1-q; if(d._c) d._c.style.strokeDashoffset=1-q;});
   }
