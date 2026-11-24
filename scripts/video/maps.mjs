@@ -54,7 +54,7 @@ export async function buildMap(spec, tilesDir) {
   let svg = "";
   for (const l of spec.lines ?? []) {
     const dd = l.coords.map((p, i) => (i ? "L" : "M") + P(p).map((v) => v.toFixed(1)).join(" ")).join("");
-    svg += `<path d="${dd}" class="casing" pathLength="1"/><path d="${dd}" class="line draw" pathLength="1" data-r="${l.r}" data-o="${l.o ?? 0}" data-dur="${l.dur ?? 2.5}"/>`;
+    svg += `<path d="${dd}" class="casing" pathLength="1"/><path d="${dd}" class="line draw" pathLength="1" data-r="${l.r}" data-o="${l.o ?? 0}"${l.t != null ? ` data-t="${l.t.toFixed(2)}"` : ""} data-dur="${l.dur ?? 2.5}"/>`;
   }
   let pins = "";
   const boxes = []; // placed label boxes, to keep labels from overlapping
@@ -72,9 +72,14 @@ export async function buildMap(spec, tilesDir) {
       side = order.find((s) => !hits(boxFor(x, y, s, p.label))) ?? side;
       boxes.push(boxFor(x, y, side, p.label));
     }
-    pins += `<div class="pin ${p.home ? "home" : ""} it" data-r="${p.r}" data-o="${p.o ?? 0}" style="left:${x.toFixed(1)}px;top:${y.toFixed(1)}px"><i></i>${p.label ? `<span class="${side}">${esc(p.label)}</span>` : ""}</div>`;
+    pins += `<div class="pin ${p.home ? "home" : ""} it" data-r="${p.r}" data-o="${p.o ?? 0}"${p.t != null ? ` data-t="${p.t.toFixed(2)}"` : ""} style="left:${x.toFixed(1)}px;top:${y.toFixed(1)}px"><i></i>${p.label ? `<span class="${side}">${esc(p.label)}</span>` : ""}</div>`;
   }
-  return `<div class="map"><div class="tiles">${imgs}</div><svg width="${MAP_W}" height="${MAP_H}">${svg}</svg>${pins}<div class="attr">© OpenStreetMap contributors</div></div>`;
+  // slow push-in toward what the story is about: the non-home pins and lines
+  const focus = [...(spec.pins ?? []).filter((p) => !p.home).map((p) => P([p.lon, p.lat])), ...(spec.lines ?? []).flatMap((l) => [P(l.coords[0]), P(l.coords[l.coords.length - 1])])];
+  const fx = focus.length ? focus.reduce((a, q) => a + q[0], 0) / focus.length : MAP_W / 2;
+  const fy = focus.length ? focus.reduce((a, q) => a + q[1], 0) / focus.length : MAP_H / 2;
+  const origin = `${Math.min(85, Math.max(15, (fx / MAP_W) * 100)).toFixed(1)}% ${Math.min(85, Math.max(15, (fy / MAP_H) * 100)).toFixed(1)}%`;
+  return `<div class="map"><div class="mapin" style="transform-origin:${origin}"><div class="tiles">${imgs}</div><svg width="${MAP_W}" height="${MAP_H}">${svg}</svg>${pins}</div><div class="attr">© OpenStreetMap contributors</div></div>`;
 }
 
 // Live S.R./U.S. work-zone outlines from ODOT's keyless OHGO feed, for the
