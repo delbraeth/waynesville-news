@@ -405,17 +405,18 @@
       "venue": "Waynesville High School and along the route, Waynesville",
       "category": "Sports",
       "source": "/images/events/2026-11-27-spartan-send-off.webp",
-      "note": "Line the route and cheer the Spartans on as the buses leave Waynesville High School at 3:45 p.m. for the Division V state semifinal against Ironton at 7 p.m. at Teays Valley High School. The buses turn right out of school, right on U.S. 42, then left on State Route 73. Wear orange and black. Tap Details for the flyer."
+      "note": "Line Dayton Road and North Street to cheer the Spartans on as the buses leave Waynesville High School at 3:45 p.m. for the Division V state semifinal against Ironton at 7 p.m. at Teays Valley High School. Wear orange and black. Tap Details for the flyer."
     },
     {
       "title": "State semifinal football: Waynesville vs. Ironton",
       "dateISO": "2026-11-27T19:00:00-05:00",
       "dateLabel": "Fri, Nov 27 · 7:00 PM",
-      "venue": "Teays Valley High School, Ashville",
+      "venue": "Teays Valley High School, 3887 State Route 752, Ashville",
       "category": "Sports",
       "local": true,
-      "source": "https://www.ohsaa.org/news-media/articles/ohsaa-announces-football-state-semifinal-bracket-pairings-45",
-      "note": "Division V state semifinal, the first in Waynesville history: the Region 20 champion Spartans (11-2) against Region 19 champion Ironton (12-1). The winner plays for the state title Friday, Dec. 4. Check the Spartans' and OHSAA pages for ticket details."
+      "source": "/images/events/2026-11-27-semifinal-game-day.webp",
+      "note": "Division V state semifinal, the first in Waynesville history: the Region 20 champion Spartans (11-2) against Region 19 champion Ironton (12-1). Buy tickets online at ohsaa.org/tickets (same price as the gate); the gate takes cash only, no cards. Waynesville is the visiting team, so follow the signs for Waynesville; there is no re-entry. Only bags 5\" x 8\" x 1\" or smaller are allowed, and no backpacks. The easiest route to parking is U.S. 23 to State Route 752, entering the main lot north of the school. Can’t make the trip? Spectrum is streaming the game. The winner plays for the state title Friday, Dec. 4. Tap Details for the game-day flyer.",
+      "cost": "$16 adults, $10 students; parking $5 per vehicle"
     },
     {
       "title": "Christmas in the Village Horse Parade (South Lebanon)",
