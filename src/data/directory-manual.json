@@ -200,11 +200,6 @@
       "reason": "keep the shop number only; the Chamber listing put people's first names next to the numbers"
     },
     {
-      "name": "Bentino's Pizza",
-      "about": "Pizza, calzones and sandwiches in a casual dining setting, serving Waynesville since 1998.",
-      "reason": "Chamber listing had no description; wording from the restaurant's own site and the county visitors bureau"
-    },
-    {
       "name": "McDonald's - Godlove Family Restaurants",
       "about": "Fast-food restaurant on South Main Street.",
       "reason": "Chamber listing had no description; per the editor, it's just a McDonald's"
@@ -358,6 +353,20 @@
       "website": "https://bartleighjanessalon.com",
       "about": "Hair salon in downtown Waynesville offering cuts for women, men and children, color and balayage, treatments, extensions and bridal styling.",
       "source": "https://bartleighjanessalon.com"
+    },
+    {
+      "name": "Bentino's Pizza",
+      "sections": [
+        "food"
+      ],
+      "kinds": [
+        "Pizza"
+      ],
+      "location": "140 South Main St, Waynesville, OH 45068",
+      "phone": "513-897-1600",
+      "website": "http://www.bentinos-pizza.com/",
+      "about": "Pizza, calzones and sandwiches in a casual dining setting, serving Waynesville since 1998.",
+      "source": "http://www.bentinos-pizza.com/"
     },
     {
       "name": "Bentley's Pawsome Resort",
