@@ -1241,6 +1241,23 @@
       "source": "https://www.skydivecincinnati.com/"
     },
     {
+      "name": "Stewart's Aircraft Service",
+      "sections": [
+        "other",
+        "fun"
+      ],
+      "kinds": [
+        "Fuel Stations",
+        "Fun/Entertainment/Attractions",
+        "Education"
+      ],
+      "location": "4925 N. State Route 42, Waynesville, OH 45068",
+      "phone": "513-897-7717",
+      "website": "https://stewartsaircraft.net/",
+      "about": "Red Stewart Airfield, a grass airfield preserving grassroots aviation since 1946: fixed base operation and flight school with tailwheel flight training and aircraft rental, plus aerobatics, gliders and biplanes, and an annual Labor Day Weekend airshow.",
+      "source": "https://stewartsaircraft.net/"
+    },
+    {
       "name": "Stubbs-Conner Funeral Home",
       "sections": [
         "other"
