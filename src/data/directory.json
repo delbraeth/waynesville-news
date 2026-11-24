@@ -1,6 +1,6 @@
 {
   "_note": "Local business directory. Built by scripts/fetch-directory.mjs from the Waynesville Area Chamber of Commerce's public member directory (name, location, phone, website, and the Chamber's description, as published) plus hand-added listings in directory-manual.json. Contact names, emails and hours are deliberately not copied from the Chamber; an hours line appears only when the owner supplied it (hours + hoursChecked in directory-manual.json). Do not edit by hand — edit directory-manual.json and re-run `npm run refresh:directory` (or `npm run refresh:directory -- --manual-only` to merge manual edits without re-reading the Chamber site).",
-  "updated": "2026-11-24T06:54:15.321Z",
+  "updated": "2026-11-24T07:05:11.664Z",
   "sections": [
     {
       "id": "food",
@@ -3385,9 +3385,9 @@
       "from": "chamber"
     },
     {
-      "id": "chamber-646",
+      "id": "manual-stewartsaircraftservice",
       "name": "Stewart's Aircraft Service",
-      "location": "4925 N. St. Rt 42, Waynesville, Ohio 45068",
+      "location": "4925 N. State Route 42, Waynesville, OH 45068",
       "phone": "513-897-7717",
       "sections": [
         "other",
@@ -3398,11 +3398,11 @@
         "Fun/Entertainment/Attractions",
         "Education"
       ],
-      "source": "https://www.waynesvilleohio.com/directory/listing/646",
-      "website": "http://stewartsaircraft.net/",
-      "about": "Fixed base operation. Flight school. Flight training. Aircraft rental. Red Stewart Airfield - preserving Grassroot aviation since 1946 About Red Stewart Airfield:",
+      "source": "https://stewartsaircraft.net/",
+      "website": "https://stewartsaircraft.net/",
+      "about": "Red Stewart Airfield, a grass airfield preserving grassroots aviation since 1946: fixed base operation and flight school with tailwheel flight training and aircraft rental, plus aerobatics, gliders and biplanes, and an annual Labor Day Weekend airshow.",
       "local": true,
-      "from": "chamber"
+      "from": "manual"
     },
     {
       "id": "chamber-318",
