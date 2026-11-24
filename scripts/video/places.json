@@ -1,5 +1,5 @@
 {
- "_note": "Places the daily video can pin on a map. A slide gets a map when its spoken paragraph (or the brief text behind it) names one of these, matched case-sensitively on any \"match\" string. Coordinates from OpenStreetMap Nominatim; check a new one on a map before adding it. home: shown as the dark reference pin.",
+ "_note": "Places the daily video can pin on a map. A slide gets a map when its spoken paragraph (or the brief text behind it) names one of these, matched case-sensitively on any \"match\" string. Coordinates from OpenStreetMap Nominatim; check a new one on a map before adding it. home: shown as the dark reference pin. route: true draws the driving route from Waynesville (OSRM) when the place is pinned, e.g. an away game. town: a town-level pin, left off when a more specific place within a few miles is already pinned (Kings Island over Mason).",
  "places": [
   {
    "id": "waynesville",
@@ -21,13 +21,35 @@
    "lon": -84.09298
   },
   {
+   "id": "library",
+   "label": "Mary L. Cook Public Library",
+   "match": [
+    "Mary L. Cook",
+    "Mary L Cook"
+   ],
+   "lat": 39.53765,
+   "lon": -84.08455
+  },
+  {
+   "id": "downtown",
+   "label": "Downtown Waynesville",
+   "match": [
+    "Christmas in the Village",
+    "downtown Waynesville",
+    "Downtown Waynesville"
+   ],
+   "lat": 39.5297,
+   "lon": -84.0868
+  },
+  {
    "id": "corwin",
    "label": "Corwin",
    "match": [
     "Corwin"
    ],
    "lat": 39.52506,
-   "lon": -84.07827
+   "lon": -84.07827,
+   "town": true
   },
   {
    "id": "harveysburg",
@@ -36,7 +58,8 @@
     "Harveysburg"
    ],
    "lat": 39.50367,
-   "lon": -84.01049
+   "lon": -84.01049,
+   "town": true
   },
   {
    "id": "oregonia",
@@ -45,7 +68,8 @@
     "Oregonia"
    ],
    "lat": 39.45089,
-   "lon": -84.09605
+   "lon": -84.09605,
+   "town": true
   },
   {
    "id": "caesarcreek",
@@ -72,6 +96,7 @@
    "label": "Commissioners, Lebanon",
    "match": [
     "Commissioners",
+    "commissioners",
     "406 Justice"
    ],
    "lat": 39.42532,
@@ -94,7 +119,8 @@
     "Lebanon"
    ],
    "lat": 39.43534,
-   "lon": -84.20299
+   "lon": -84.20299,
+   "town": true
   },
   {
    "id": "springboro",
@@ -103,16 +129,8 @@
     "Springboro"
    ],
    "lat": 39.55228,
-   "lon": -84.23327
-  },
-  {
-   "id": "mason",
-   "label": "Mason",
-   "match": [
-    "Mason"
-   ],
-   "lat": 39.36006,
-   "lon": -84.30994
+   "lon": -84.23327,
+   "town": true
   },
   {
    "id": "kings",
@@ -123,6 +141,16 @@
    ],
    "lat": 39.34383,
    "lon": -84.26581
+  },
+  {
+   "id": "mason",
+   "label": "Mason",
+   "match": [
+    "Mason"
+   ],
+   "lat": 39.36006,
+   "lon": -84.30994,
+   "town": true
   },
   {
    "id": "carillon",
@@ -177,7 +205,8 @@
     "Teays Valley"
    ],
    "lat": 39.72236,
-   "lon": -82.9451
+   "lon": -82.9451,
+   "route": true
   }
  ]
 }

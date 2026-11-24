@@ -22,6 +22,7 @@ on:
 
 permissions:
   contents: read
+  actions: write # lets actions/cache save the speech model and map tiles between runs
 
 concurrency:
   group: daily-video

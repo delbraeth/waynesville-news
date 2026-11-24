@@ -95,3 +95,18 @@ export async function workZoneLines(routeNames) {
     return [];
   }
 }
+
+// Driving route between two [lon, lat] points from the public OSRM demo server,
+// as a list of [lon, lat]. Returns null on any failure (the map then shows
+// pins only).
+export async function drivingRoute(from, to) {
+  try {
+    const r = await fetch(`https://router.project-osrm.org/route/v1/driving/${from[0]},${from[1]};${to[0]},${to[1]}?overview=full&geometries=geojson`, { headers: UA });
+    if (!r.ok) return null;
+    const j = await r.json();
+    const c = j.routes?.[0]?.geometry?.coordinates;
+    return Array.isArray(c) && c.length > 1 ? c : null;
+  } catch {
+    return null;
+  }
+}
