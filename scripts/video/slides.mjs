@@ -159,6 +159,7 @@ export async function buildSlides({ root, date, paras, sents, tilesDir }) {
     const hit = [];
     for (const p of places) {
       if (p.home) continue;
+      if (p.until && date > p.until) continue; // temporary place (a closure) that has ended
       // "Harveysburg Road" names a road, not the village
       if (!p.match.some((m) => new RegExp(m.replace(/[.*+?^${}()|[\]\\]/g, "\\$&") + "(?! (Road|Rd|Pike|Drive|Avenue|Street|Lane|Way)\\b)").test(text))) continue;
       if (hit.some((h) => Math.hypot(h.lat - p.lat, h.lon - p.lon) < 0.012)) continue; // same spot
@@ -238,7 +239,9 @@ export async function buildSlides({ root, date, paras, sents, tilesDir }) {
       const text = `${lead.title}. ${lead.body}`;
       const sports = SPORTS.test(lead.title) || SPORTS.test(ps[0] + " " + (ps[1] ?? ""));
       const txt = `${kicker(leadNo === 1 ? "The top story" : "This morning in Waynesville", s0)}<div class="h md it" data-r="${s0}">${sports ? helmet : ""}${esc(lead.title)}</div>${rowsHtml(pick(sentences(lead.body)), s0, m)}`;
-      html = split(txt, await mapFor(placesIn(text + " " + p), s0, m, await zoneLinesFor(text + " " + p)));
+      // a work zone only when that road is what the story is about (headline or opening line),
+      // not when it's a side mention like a detour
+      html = split(txt, await mapFor(placesIn(text + " " + p), s0, m, await zoneLinesFor(lead.title + ". " + ps.slice(0, 2).join(" "))));
     } else if (["schools", "government", "roads", "around"].includes(kind)) {
       const body = narrative(md, HEADING[kind]);
       const src = (body ? sentences(body) : ps).filter((x) => !/\bNWS\b|weather alerts?/i.test(x));

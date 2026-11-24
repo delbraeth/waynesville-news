@@ -1,5 +1,5 @@
 {
- "_note": "Places the daily video can pin on a map. A slide gets a map when its spoken paragraph (or the brief text behind it) names one of these, matched case-sensitively on any \"match\" string. Coordinates from OpenStreetMap Nominatim; check a new one on a map before adding it. home: shown as the dark reference pin. route: true draws the driving route from Waynesville (OSRM) when the place is pinned, e.g. an away game. town: a town-level pin, left off when a more specific place within a few miles is already pinned (Kings Island over Mason).",
+ "_note": "Places the daily video can pin on a map. A slide gets a map when its spoken paragraph (or the brief text behind it) names one of these, matched case-sensitively on any \"match\" string. Coordinates from OpenStreetMap Nominatim; check a new one on a map before adding it. home: shown as the dark reference pin. route: true draws the driving route from Waynesville (OSRM) when the place is pinned, e.g. an away game. town: a town-level pin, left off when a more specific place within a few miles is already pinned (Kings Island over Mason). until: YYYY-MM-DD after which the place is ignored (temporary closures).",
  "places": [
   {
    "id": "waynesville",
@@ -40,6 +40,18 @@
    ],
    "lat": 39.5297,
    "lon": -84.0868
+  },
+  {
+   "id": "redlion-bridge",
+   "label": "Bridge closure, south of Crossley Rd.",
+   "match": [
+    "south of Crossley Road",
+    "Crossley Road"
+   ],
+   "lat": 39.55885,
+   "lon": -84.20316,
+   "until": "2026-12-13",
+   "note": "Warren County Engineer release: Red Lion-Five Points Road at Bridge #126-3.36, just south of the Crossley Road intersection, closed Nov 30 for two weeks. Pin at the intersection (OSRM turn point)."
   },
   {
    "id": "corwin",
