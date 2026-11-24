@@ -33,6 +33,21 @@
       "cost": "Free for ages 65+ (born on or before Dec. 31, 1961) with Kings Island’s free 2026 Senior Admission: register on the park’s ticket site, limit two per order, ID required at the gate, parking not included. Others need a ticket or season pass."
     },
     {
+      "title": "North Pole Express (LM&M Railroad)",
+      "dateISO": "2026-11-20T12:00:00-05:00",
+      "endISO": "2026-12-23T20:00:00-05:00",
+      "dateLabel": "Select days, Nov 20 – Dec 23",
+      "venue": "LM&M Railroad, downtown Lebanon",
+      "category": "Family",
+      "source": "https://www.lebanonrr.com/holiday-special-events/north-pole-express/",
+      "note": "A 1 hour 15 minute ride on a train decorated with holiday lights, with Santa and his elves aboard. Every child gets a souvenir bell and a holiday cookie, and hot chocolate is sold at the station to take on board. Departures run on select days through Dec. 23, from late morning into the evening; see the railroad’s booking calendar for each day’s times. Tickets are sold online. The railroad’s ticket office and gift shop are on South Street off Mechanic Street; questions: (513) 933-8022.",
+      "cost": "Coach Class from $40, Deluxe Class from $50 (all ages)",
+      "tags": [
+        "holiday"
+      ],
+      "local": false
+    },
+    {
       "title": "Christmas in the Village",
       "dateISO": "2026-12-04T13:00:00-05:00",
       "endISO": "2026-12-06T16:00:00-05:00",
