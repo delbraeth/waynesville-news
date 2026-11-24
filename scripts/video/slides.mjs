@@ -98,7 +98,8 @@ function weatherIcon(cond, big) {
   return sun;
 }
 
-const kicker = (text, r, helmet) => `<div class="kicker it" data-r="${r}">${helmet ? '<img class="mark-k" src="spartans-helmet.svg" alt="">' : ""}${esc(text)}</div>`;
+const kicker = (text, r) => `<div class="kicker it" data-r="${r}">${esc(text)}</div>`;
+const helmet = '<img class="mark-h" src="spartans-helmet.svg" alt="">';
 // rows revealed across the paragraph's sentences [s0, s0+m)
 function rowsHtml(rows, s0, m) {
   return `<div class="rows">${rows
@@ -176,6 +177,20 @@ export async function buildSlides({ root, date, paras, sents, tilesDir }) {
     if (zones === null) zones = (await workZoneLines((roads.items ?? []).map((r) => r.route).filter(Boolean))).slice(0, 2);
     return zones;
   };
+  // Time (seconds) at which a place is first spoken in the paragraph's sentences, or null.
+  const normW = (w) => w.toLowerCase().replace(/[^a-z0-9]/g, "");
+  const spokenAt = (place, s0, m) => {
+    for (let i = s0; i < s0 + m && i < sents.length; i++) {
+      const ws = sents[i].words ?? [];
+      for (const mt of place.match) {
+        const toks = mt.split(/\s+/).map(normW).filter(Boolean);
+        for (let j = 0; j + toks.length <= ws.length; j++) {
+          if (toks.every((tk, q) => normW(ws[j + q].w) === tk)) return ws[j].s;
+        }
+      }
+    }
+    return null;
+  };
   const mapFor = async (hits, s0, m, extraLines = []) => {
     if (!hits.length && !extraLines.length) return "";
     const near = hits.some((p) => Math.hypot(p.lat - home.lat, p.lon - home.lon) < 0.12);
@@ -183,10 +198,11 @@ export async function buildSlides({ root, date, paras, sents, tilesDir }) {
     const lines = extraLines.map((c) => ({ coords: c, r: s0, o: 0.2, dur: 4 }));
     for (const [k, p] of hits.entries()) {
       const at = s0 + Math.min(m - 1, Math.floor(((k + 1) * m) / (hits.length + 1)));
-      pins.push({ lon: p.lon, lat: p.lat, label: p.label, r: at });
+      const t = spokenAt(p, s0, m); // when the narrator says the place, if they do
+      pins.push({ lon: p.lon, lat: p.lat, label: p.label, r: at, t });
       if (p.route) {
         const c = await drivingRoute([home.lon, home.lat], [p.lon, p.lat]);
-        if (c) lines.push({ coords: c, r: at, o: 0, dur: 3 });
+        if (c) lines.push({ coords: c, r: at, t, o: 0, dur: 3 });
       }
     }
     const fit = [[home.lon, home.lat], ...hits.map((p) => [p.lon, p.lat]), ...extraLines.flat()];
@@ -221,14 +237,14 @@ export async function buildSlides({ root, date, paras, sents, tilesDir }) {
       const leadNo = ++leadCount;
       const text = `${lead.title}. ${lead.body}`;
       const sports = SPORTS.test(lead.title) || SPORTS.test(ps[0] + " " + (ps[1] ?? ""));
-      const txt = `${kicker(leadNo === 1 ? "The top story" : "This morning in Waynesville", s0, sports)}<div class="h md it" data-r="${s0}">${esc(lead.title)}</div>${rowsHtml(pick(sentences(lead.body)), s0, m)}`;
+      const txt = `${kicker(leadNo === 1 ? "The top story" : "This morning in Waynesville", s0)}<div class="h md it" data-r="${s0}">${sports ? helmet : ""}${esc(lead.title)}</div>${rowsHtml(pick(sentences(lead.body)), s0, m)}`;
       html = split(txt, await mapFor(placesIn(text + " " + p), s0, m, await zoneLinesFor(text + " " + p)));
     } else if (["schools", "government", "roads", "around"].includes(kind)) {
       const body = narrative(md, HEADING[kind]);
       const src = (body ? sentences(body) : ps).filter((x) => !/\bNWS\b|weather alerts?/i.test(x));
       const lines = await zoneLinesFor(body + " " + p);
       const sports = false; // helmet only on sports lead stories
-      const txt = `${kicker(LABEL[kind], s0, sports)}<div class="h md it" data-r="${s0}">${esc(kind === "roads" && roads.items?.[0] ? roads.items[0].route.replace(/\s+Addtiion/, " Addition") : LABEL[kind])}</div>${rowsHtml(pick(src), s0, m)}`;
+      const txt = `${kicker(LABEL[kind], s0)}<div class="h md it" data-r="${s0}">${esc(kind === "roads" && roads.items?.[0] ? roads.items[0].route.replace(/\s+Addtiion/, " Addition") : LABEL[kind])}</div>${rowsHtml(pick(src), s0, m)}`;
       html = split(txt, await mapFor(placesIn(body + " " + p), s0, m, lines));
     } else if (kind === "sponsor") {
       cls = "sponsor";
