@@ -1,6 +1,6 @@
 {
   "_note": "Caesar Creek State Park programs from the ODNR events calendar, next 60 days. Titles, times and meeting points reproduced from ODNR's own listing.",
-  "updated": "2026-11-23T11:42:10.836Z",
+  "updated": "2026-11-24T11:42:56.130Z",
   "source": "https://ohiodnr.gov/go-and-do/plan-a-visit/events-calendar/events-calendar?keyword=Caesar%20Creek",
   "items": [
     {
@@ -56,6 +56,15 @@
       "meetAt": "Nature Center",
       "summary": "Meet at the Nature Center",
       "link": "https://ohiodnr.gov/home/news-and-events/all-events/parks-wc-events/SW-Ohio/MapleSugaringforBeginnersWinterTreeIdentificationGuidedWalkCaesarCreek-1-9-27."
+    },
+    {
+      "title": "Winter Wonderland Perimeter Hike",
+      "dateISO": "2027-01-22T15:00:00.000Z",
+      "endISO": "2027-01-22T21:30:00.000Z",
+      "dateLabel": "Fri, Jan 22 · 10:00 AM–4:30 PM",
+      "meetAt": "Meet at the Nature Center",
+      "summary": "Meet at the Nature Center",
+      "link": "https://ohiodnr.gov/home/news-and-events/all-events/parks-wc-events/SW-Ohio/WinterWonderlandPerimeterHikeCaesarCreek-1-22-27."
     }
   ]
 }

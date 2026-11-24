@@ -1,6 +1,6 @@
 {
   "_note": "State-route work within 8 miles of Waynesville (ODOT OHGO; Restricted/Closed only, ODOT's own descriptions) plus Warren County Engineer closure releases starting within 21 days back / 14 ahead (countywide; title, start date, and the end date the release states; ended closures dropped).",
-  "updated": "2026-11-23T11:42:19.003Z",
+  "updated": "2026-11-24T11:43:03.869Z",
   "items": [
     {
       "source": "ohgo",
@@ -11,6 +11,20 @@
       "endISO": "2026-11-30",
       "description": "Resurfacing S.R. 73, between Red Lion- Five Points Road and Harveysburg Road, as well as the installation of a left-turn lane on S.R. 73 at Old S.R. 73 near Waynesville. Traffic will be maintained in one lane in either direction with the use of flaggers and/or other traffic…",
       "miles": 0.6
+    },
+    {
+      "source": "engineer",
+      "title": "McIntyre Rd Closed",
+      "startISO": "2026-11-30",
+      "link": "https://engineer.warrencountyohio.gov/doc/Information/NewsReleases/2026/20261130_McIntyre_Rd_Closed.pdf",
+      "endISO": "2026-12-04"
+    },
+    {
+      "source": "engineer",
+      "title": "2 Week Closure of Red Lion 5 Points Rd",
+      "startISO": "2026-11-30",
+      "link": "https://engineer.warrencountyohio.gov/doc/Information/NewsReleases/2026/20261130_2_Week_Closure_of_Red_Lion_5_Points_Rd.pdf",
+      "endISO": "2026-12-13"
     }
   ],
   "sources": {

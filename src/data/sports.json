@@ -1,6 +1,6 @@
 {
   "_note": "Waynesville Spartans schedule + results (MaxPreps), past 7 days / next 7 days. Scraped directly from each sport's own schedule page (football, volleyball, soccer -- varsity + JV), not the school hub page, which has been observed to silently omit some contests. Scores and matchups reproduced verbatim from MaxPreps' own markup; each links to their game page. Start times, \"scrimmage\" and \"canceled\" come from the school's athletics site (waynesvillesports.com) when it lists the game; \"maxprepsTime\" is MaxPreps' time when they differ.",
-  "updated": "2026-11-23T11:41:53.445Z",
+  "updated": "2026-11-24T11:42:28.207Z",
   "results": [
     {
       "dateISO": "2026-11-20T19:00:00",
@@ -15,20 +15,6 @@
     }
   ],
   "upcoming": [
-    {
-      "dateISO": "2026-11-23T18:00:00",
-      "sport": "Boys Basketball",
-      "level": "Varsity",
-      "opponent": "Roger Bacon",
-      "wayneScore": null,
-      "opponentScore": null,
-      "result": null,
-      "isHome": true,
-      "link": "https://www.maxpreps.com/oh/basketball/game/roger-bacon-cincinnati-vs-waynesville/11-23-2026/?c=102a71af-e352-4f9c-a058-58f79fd4400c",
-      "scrimmage": true,
-      "maxprepsTime": "17:00",
-      "canceled": true
-    },
     {
       "dateISO": "2026-11-24T18:00:00",
       "sport": "Boys Basketball",
@@ -61,8 +47,19 @@
       "wayneScore": null,
       "opponentScore": null,
       "result": null,
-      "isHome": true,
+      "isHome": false,
       "link": "https://www.maxpreps.com/oh/football/game/ironton-vs-waynesville/11-27-2026/?c=ed4a7889-09b4-4b7e-8729-17891320fd62"
+    },
+    {
+      "dateISO": "2026-11-30T18:00:00",
+      "sport": "Girls Basketball",
+      "level": "Varsity",
+      "opponent": "Clinton-Massie",
+      "wayneScore": null,
+      "opponentScore": null,
+      "result": null,
+      "isHome": false,
+      "link": "https://www.maxpreps.com/oh/basketball/girls/game/clinton-massie-clarksville-vs-waynesville/11-30-2026/?c=23d7f11f-eb6d-443e-a84e-d4ee6951cbb5"
     }
   ]
 }

@@ -1,7 +1,15 @@
 {
   "_note": "Village of Waynesville and Wayne Township notices posted in the past 14 days. Titles and synopses verbatim from each government's own site.",
-  "updated": "2026-11-23T11:42:20.721Z",
+  "updated": "2026-11-24T11:43:05.552Z",
   "items": [
+    {
+      "source": "township",
+      "issuer": "Wayne Township",
+      "title": "Thanksgiving Observance",
+      "dateISO": "2026-11-23",
+      "summary": "🍂 Thanksgiving Holiday Office Closure Notice 🦃 Wayne Township, Warren County, Ohio, wishes everyone a safe and happy Thanksgiving! In observance of Thanksgiving, all Wayne Township offices will be closed on Thursday, November 26th, and Friday, November 27th, 2026. Regular business operations will resume on Monday, November 30th. As we gather with family and friends,…",
+      "link": "https://waynetwpwarrencooh.gov/thanksgiving-observance/"
+    },
     {
       "source": "village",
       "issuer": "Village of Waynesville",
