@@ -203,6 +203,11 @@
       "name": "McDonald's - Godlove Family Restaurants",
       "about": "Fast-food restaurant on South Main Street.",
       "reason": "Chamber listing had no description; per the editor, it's just a McDonald's"
+    },
+    {
+      "name": "Sun Sprouts Cafe",
+      "group": "Restaurants & cafes",
+      "reason": "editor: list it with restaurants and cafes, not coffee and treats"
     }
   ],
   "items": [
