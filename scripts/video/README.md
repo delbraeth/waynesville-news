@@ -46,6 +46,16 @@ reasons are listed in the run's summary. It fails when:
 - a line on screen is cut off at an initial ("The Mary L.")
 - under 80% of the script's words were found in the recording (the slides
   would drift from the audio)
+- a slide is still building less than 2 s before it leaves (1 s for a
+  one-sentence paragraph); pins and routes that appear as the narrator names
+  the place are synced to the audio and don't count
+- the weather tiles don't come in one day at a time
+- a slide draws ODOT's work-zone outline when its narration isn't about that
+  work (a road named only as a detour doesn't count)
+
+Pacing: each slide's lines build over the first ~60% of its paragraph, then
+hold while the narrator finishes. Weather tiles come in day by day, each as
+the narrator names that day.
 
 Leads are paired with script paragraphs by best word overlap across the whole
 script, so a weather recap or schools roundup can't take a lead from the
