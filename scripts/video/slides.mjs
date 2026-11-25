@@ -109,12 +109,31 @@ function weatherIcon(cond, big) {
 
 const kicker = (text, r) => `<div class="kicker it" data-r="${r}">${esc(text)}</div>`;
 const helmet = '<img class="mark-h" src="spartans-helmet.svg" alt="">';
+// Does this text talk about work on one of these route numbers? Route and work word within
+// one sentence, either order. "Closed"/"closure" count only right after the route.
+export function aboutZone(text, nums) {
+  const work = "resurfac|turn lane|lane restriction|work zone|construction|paving";
+  return nums.some((n) => {
+    const rt = `(?:State Route|S\\.R\\.|U\\.S\\.|Route|I-)\\s*${n}\\b`;
+    return new RegExp(`${rt}[^.]{0,60}(${work}|closed|closure)|(${work})[^.]{0,60}${rt}`, "i").test(text);
+  });
+}
+// When item j of n appears, as a sentence index plus a fraction into that
+// sentence: the first a third of the way into the opening sentence, the rest
+// spread so the slide is fully built ~60% of the way through the paragraph
+// and then holds while the narrator finishes.
+export function buildAt(j, n, s0, m) {
+  const last = Math.max(0.3, 0.6 * m);
+  const x = Math.min(m - 0.2, n > 1 ? 0.3 + (j * (last - 0.3)) / (n - 1) : 0.3);
+  const r = Math.floor(x);
+  return { r: s0 + r, o: +(x - r).toFixed(2) };
+}
 // rows revealed across the paragraph's sentences [s0, s0+m)
 function rowsHtml(rows, s0, m) {
   return `<div class="rows">${rows
     .map((v, j) => {
-      const at = s0 + Math.min(m - 1, Math.floor(((j + 1) * m) / (rows.length + 1)));
-      return `<div class="row1 it" data-r="${at}">${esc(v)}</div>`;
+      const at = buildAt(j, rows.length, s0, m);
+      return `<div class="row1 it" data-r="${at.r}" data-o="${at.o}">${esc(v)}</div>`;
     })
     .join("")}</div>`;
 }
@@ -198,9 +217,11 @@ export async function buildSlides({ root, date, paras, sents, tilesDir }) {
   // that road's work (e.g. "State Route 73 resurfacing", "lane restrictions").
   let zones = null;
   const roadNums = (roads.items ?? []).map((r) => /\b(?:S\.R\.|U\.S\.|I-)\s*(\d+)/.exec(r.route ?? "")?.[1]).filter(Boolean);
+  // Only when the narration talks about that road's work: the route and a work word in the
+  // same sentence ("State Route 73 resurfacing", "lane restrictions on State Route 73").
+  // A road named as a detour ("detour on Bunnell Hill Road and State Route 73") doesn't count.
   const zoneLinesFor = async (text) => {
-    if (!roadNums.some((n) => new RegExp(`(State Route|S\\.R\\.|U\\.S\\.|Route)\\s*${n}\\b`).test(text))) return [];
-    if (!/resurfac|lane restriction|closed|closure|work zone|detour|construction/i.test(text)) return [];
+    if (!aboutZone(text, roadNums)) return [];
     if (zones === null) zones = (await workZoneLines((roads.items ?? []).map((r) => r.route).filter(Boolean))).slice(0, 2);
     return zones;
   };
@@ -224,7 +245,7 @@ export async function buildSlides({ root, date, paras, sents, tilesDir }) {
     const pins = [{ ...home, label: near ? "" : home.label, home: true, r: s0 }];
     const lines = extraLines.map((c) => ({ coords: c, r: s0, o: 0.2, dur: 4 }));
     for (const [k, p] of hits.entries()) {
-      const at = s0 + Math.min(m - 1, Math.floor(((k + 1) * m) / (hits.length + 1)));
+      const at = buildAt(k + 1, hits.length + 1, s0, m).r;
       const t = spokenAt(p, s0, m); // when the narrator says the place, if they do
       pins.push({ lon: p.lon, lat: p.lat, label: p.label, r: at, t });
       if (p.route) {
@@ -244,7 +265,7 @@ export async function buildSlides({ root, date, paras, sents, tilesDir }) {
 
   for (let pi = 0; pi < paras.length; pi++) {
     const p = paras[pi], s0 = firstSent[pi], m = Math.max(1, count[pi]);
-    let kind = kinds[pi], leadK = -1;
+    let kind = kinds[pi], leadK = -1, zone = false;
     const ps = sentences(p);
     let html = "", cls = "";
     if (kind === "open") {
@@ -254,11 +275,30 @@ export async function buildSlides({ root, date, paras, sents, tilesDir }) {
         <div class="h it" data-r="-1">Good morning,<br>Waynesville.</div>${bite ? `<div class="badge it" data-r="${s0 + Math.min(m - 1, 2)}">${esc(bite)}</div>` : ""}</div>`;
     } else if (kind === "weather") {
       const days = [{ d: weather.periodName || "Today", hi: weather.highF ?? weather.tempF, lo: weather.lowF, c: weather.condition, today: true }, ...(weather.outlook ?? []).slice(0, 3).map((o) => ({ d: o.dayLabel, hi: o.highF, lo: o.lowF, c: o.condition }))];
-      const tiles = days.map((x, k) => `<div class="tile ${x.today ? "today" : ""} it" data-r="${s0 + Math.min(m - 1, k === 0 ? 1 : Math.min(k + 1, m - 1))}"><div class="d">${esc(x.d)}</div>${weatherIcon(x.c, x.today)}<div><div class="hi">${x.hi ?? "–"}°</div><div class="lo">${x.lo != null ? `Low ${x.lo}° · ` : ""}${esc(x.c)}</div></div></div>`).join("");
+      // Build day by day: today with the opening line, each later day when the
+      // narrator names it ("Thanksgiving Day brings…"), else ~0.7 s after the
+      // one before; every tile is in by 60% of the paragraph.
+      const sT = (r, o = 0) => { const x = sents[Math.min(r, sents.length - 1)]; return x ? x.start + (x.end - x.start) * o : 0; };
+      const endP = sents[s0 + m - 1]?.end ?? sT(s0) + 8;
+      const cap = sT(s0) + 0.6 * (endP - sT(s0));
+      let prevT = sT(s0, 0.15);
+      const dayT = days.map((x, k) => {
+        if (k === 0) return prevT;
+        const tok = normW(String(x.d).split(/\s+/)[0]);
+        let t = null;
+        for (let i = s0; i < s0 + m && i < sents.length && t == null; i++) for (const w of sents[i].words ?? []) if (normW(w.w) === tok && w.s > prevT) { t = w.s; break; }
+        t = Math.min(t ?? prevT + 0.7, Math.max(cap, prevT + 0.4));
+        return (prevT = Math.max(t, prevT + 0.4));
+      });
+      const alertSent = ps.findIndex((x) => /\balerts?\b|\bwarning|\badvisory|\bwatch\b/i.test(x));
+      // the alerts badge closes the build, right after the last tile (or when alerts are named, if sooner)
+      const badgeT = Math.min(alertSent >= 0 && s0 + alertSent < sents.length ? sT(s0 + alertSent, 0.1) : Infinity, prevT + 0.8);
+      const tiles = days.map((x, k) => `<div class="tile ${x.today ? "today" : ""} it" data-t="${dayT[k].toFixed(2)}"><div class="d">${esc(x.d)}</div>${weatherIcon(x.c, x.today)}<div><div class="hi">${x.hi ?? "–"}°</div><div class="lo">${x.lo != null ? `Low ${x.lo}° · ` : ""}${esc(x.c)}</div></div></div>`).join("");
       const alerts = weather.alerts?.length ? weather.alerts.map((a) => a.event || a.headline).filter(Boolean).join(" · ") : "No weather alerts in effect";
       html = `${kicker("Weather", s0)}<div class="h md it" data-r="${s0}">${esc(weather.condition)} today, high ${weather.highF ?? weather.tempF}°</div>
-        <div class="wx">${tiles}</div><div class="badge ${weather.alerts?.length ? "" : "ghost"} it" data-r="${s0 + m - 1}">${esc(alerts)} · National Weather Service</div>`;
+        <div class="wx">${tiles}</div><div class="badge ${weather.alerts?.length ? "" : "ghost"} it" data-t="${badgeT.toFixed(2)}">${esc(alerts)} · National Weather Service</div>`;
     } else if (kind === "lead" && (leadK = leadOf[pi]) >= 0) {
+      zone = aboutZone(p, roadNums);
       const lead = L[leadK];
       const leadNo = ++leadCount;
       const text = `${lead.title}. ${lead.body}`;
@@ -266,11 +306,12 @@ export async function buildSlides({ root, date, paras, sents, tilesDir }) {
       const txt = `${kicker(leadNo === 1 ? "The top story" : "This morning in Waynesville", s0)}<div class="h md it" data-r="${s0}">${sports ? helmet : ""}${esc(lead.title)}</div>${rowsHtml(pick(sentences(lead.body)), s0, m)}`;
       // a work zone only when that road is what the story is about (headline or opening line),
       // not when it's a side mention like a detour
-      html = split(txt, await mapFor(placesIn(text + " " + p), s0, m, await zoneLinesFor(lead.title + ". " + ps.slice(0, 2).join(" "))));
+      html = split(txt, await mapFor(placesIn(text + " " + p), s0, m, await zoneLinesFor(p)));
     } else if (["schools", "government", "roads", "around"].includes(kind)) {
       const body = narrative(md, HEADING[kind]);
       const src = (body ? sentences(body) : ps).filter((x) => !/\bNWS\b|weather alerts?/i.test(x));
-      const lines = await zoneLinesFor(body + " " + p);
+      const lines = await zoneLinesFor(p);
+      zone = lines.length > 0;
       const sports = false; // helmet only on sports lead stories
       // Title a roads slide with ODOT's project name only when the narration is about that project.
       const r0 = roads.items?.[0], n0 = /\b(?:S\.R\.|U\.S\.|I-)\s*(\d+)/.exec(r0?.route ?? "")?.[1];
@@ -297,18 +338,42 @@ export async function buildSlides({ root, date, paras, sents, tilesDir }) {
         <div class="h md it" data-r="${s0}">${esc(head)}</div>${sub && !/waynesville dot news/i.test(sub) ? `<div class="sub it" data-r="${s0 + Math.min(1, m - 1)}">${esc(sub)}</div>` : ""}
         ${link ? `<div class="badge it" data-r="${s0 + m - 1}">${esc(link)}</div>` : ""}</div>`;
     }
-    segs.push({ from: pi === 0 ? -1 : s0, cls, kind, html, pi, lead: leadK });
+    segs.push({ from: pi === 0 ? -1 : s0, cls, kind, html, pi, lead: leadK, zone, roadNums });
   }
   const mast = new Date(date + "T12:00:00Z").toLocaleDateString("en-US", { weekday: "long", month: "long", day: "numeric", year: "numeric", timeZone: "UTC" });
-  return { segs, mast, problems: checkSlides({ segs, paras, leads: L, weather, words, overlap }) };
+  return { segs, mast, problems: checkSlides({ segs, paras, leads: L, weather, words, overlap, sents }) };
 }
 
 // Quality gate: reasons the video would not match its narration. make-video
 // refuses to render (and nothing is stored) while this list is non-empty.
-export function checkSlides({ segs, paras, leads, weather, words, overlap }) {
+export function checkSlides({ segs, paras, leads, weather, words, overlap, sents = [] }) {
   const out = [];
-  const text = (html) => html.replace(/<[^>]+>/g, " ").replace(/&amp;/g, "&").replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/\s+/g, " ").trim();
   const said = (pi) => `paragraph ${pi + 1} ("${paras[pi].slice(0, 60)}…")`;
+  // 6. pacing: every slide is fully built at least 2 s before it leaves (1 s for a one-sentence
+  //    paragraph), and the weather tiles come in one day at a time. Pins and route lines that
+  //    appear as the narrator names the place are synced to the audio and don't count.
+  const sT = (r, o = 0) => { const x = sents[r]; return x ? x.start + (x.end - x.start) * o : 0; };
+  segs.forEach((s, i) => {
+    if (s.zone && !aboutZone(paras[s.pi], s.roadNums)) out.push(`${s.kind} slide draws the ODOT work-zone outline, but ${said(s.pi)} isn't about that work`);
+    if (i === 0 || i === segs.length - 1 || !sents.length) return; // the outro music holds the last slide
+    const next = segs[i + 1];
+    const leaves = next ? sT(next.from) - 0.9 : (sents.at(-1)?.end ?? 0);
+    let last = 0;
+    for (const m of s.html.matchAll(/<(?:div|path)[^>]*class="([^"]*\b(?:it|draw)\b[^"]*)"([^>]*)>/g)) {
+      if (/\b(pin|draw)\b/.test(m[1]) && /data-t=/.test(m[2])) continue;
+      const t = /data-t="([\d.]+)"/.exec(m[2]), r = /data-r="(-?\d+)"/.exec(m[2]), o = /data-o="([\d.]+)"/.exec(m[2]);
+      const at = t ? +t[1] : r && +r[1] >= 0 ? sT(+r[1], o ? +o[1] : 0) : 0;
+      last = Math.max(last, at);
+    }
+    const nSent = sents.filter((x) => x.para === s.pi).length;
+    const need = nSent > 1 ? 2 : 1;
+    if (leaves - last < need) out.push(`${s.kind} slide (${said(s.pi)}) finishes building only ${(leaves - last).toFixed(1)} s before it leaves`);
+    if (s.kind === "weather") {
+      const ts = [...s.html.matchAll(/class="tile[^"]*"([^>]*)>/g)].map((m) => { const t = /data-t="([\d.]+)"/.exec(m[1]), r = /data-r="(\d+)"/.exec(m[1]), o = /data-o="([\d.]+)"/.exec(m[1]); return t ? +t[1] : r ? sT(+r[1], o ? +o[1] : 0) : 0; });
+      if (ts.some((t, k) => k && t - ts[k - 1] < 0.3)) out.push(`weather tiles don't build day by day (${ts.map((t) => t.toFixed(1)).join(", ")} s)`);
+    }
+  });
+  const text = (html) => html.replace(/<[^>]+>/g, " ").replace(/&amp;/g, "&").replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/\s+/g, " ").trim();
   // 1. weather: a forecast paragraph needs the forecast slide, and the high it shows must be the one spoken
   const wxPara = paras.findIndex((p, pi) => pi > 0 && pi < 3 && WEATHER.test(p));
   const wxSeg = segs.find((s) => s.kind === "weather");
