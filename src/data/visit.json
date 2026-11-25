@@ -1,6 +1,6 @@
 {
   "_note": "Visiting Waynesville (/visit/). Hand-kept. Facts only from official sources (village, township, county, ODNR, Chamber, Merchants, event organizers), each with a verified date. Organizations and businesses only; no private individuals. Checked monthly by scripts/check-resources.mjs.",
-  "updated": "2026-11-07",
+  "updated": "2026-11-25",
   "sections": [
     {
       "id": "getting-here",
@@ -194,6 +194,126 @@
           "verified": "2026-11-06",
           "address": "3999 Pioneer Village Rd., Waynesville",
           "website": "https://www.ccpv.us/"
+        }
+      ]
+    },
+    {
+      "id": "dog-parks",
+      "title": "Dog parks",
+      "intro": "Public dog parks in and around Waynesville, nearest first. Each park posts its own rules at the gate; check them before you let your dog off the leash.",
+      "items": [
+        {
+          "name": "Hisey Park dog park",
+          "what": "A dog park at Hisey Park, a Warren County Park District park near Corwin with hiking trails, a first-come shelter and a playground. The Little Miami Scenic Trail is nearby.",
+          "hours": "Daily, dawn to dusk",
+          "address": "5443 Middletown Road, Corwin, OH 45068",
+          "website": "https://www.warrencountyparks.com/hisey-park-caesar-creek-gorge-and-preserve/",
+          "source": [
+            "https://www.warrencountyparks.com/hisey-park-caesar-creek-gorge-and-preserve/"
+          ],
+          "verified": "2026-11-25"
+        },
+        {
+          "name": "Jason Lagore Memorial Dog Park",
+          "what": "The newest dog park nearby, at Caesar Creek State Park, dedicated October 9, 2026, in honor of Natural Resources Officer Jason Lagore. Call the park office for where it is in the park and its rules.",
+          "phone": "513-897-3055",
+          "links": [
+            {
+              "label": "The park's announcement (Facebook)",
+              "url": "https://www.facebook.com/CaesarCreekStatePark/posts/pfbid02QgcmCMEjHxq69JsMFipf6ZgaH8vTo7HPvey664JQDA8s2Km1Vvp7eDcyc2JHxBktl"
+            }
+          ],
+          "source": [
+            "https://www.facebook.com/CaesarCreekStatePark/posts/pfbid02QgcmCMEjHxq69JsMFipf6ZgaH8vTo7HPvey664JQDA8s2Km1Vvp7eDcyc2JHxBktl",
+            "https://www.facebook.com/CaesarCreekStatePark/posts/pfbid0jDASVSGnr8gAuvuQDwkUvNp6R167nUL5DBMBYdWvR5vN5tnaYyc7mrgroPgbSVY9l"
+          ],
+          "sourceNote": "Caesar Creek State Park's own Facebook posts (dedication Oct. 9, grand-opening video Nov. 20). ODNR's park page returned 404 on 2026-11-25; location in the park and rules not yet confirmed.",
+          "verified": "2026-11-25"
+        },
+        {
+          "name": "Ida Juris Bennett Dog Park",
+          "what": "A two-acre, fenced dog park run by the City of Lebanon.",
+          "address": "225 Cook Road, Lebanon, OH 45036",
+          "website": "https://lebanonohio.gov/business_detail_T12_R56.php",
+          "source": [
+            "https://lebanonohio.gov/departments/parks___recreation/city_parks/park_listing.php",
+            "https://lebanonohio.gov/business_detail_T12_R56.php"
+          ],
+          "verified": "2026-11-25"
+        },
+        {
+          "name": "Logan's Bark Park at Hazel Woods Park",
+          "what": "A 2-acre dog park in Hazel Woods Park, a 108-acre City of Springboro park southwest of Clearcreek Park that also has a paved walking path.",
+          "address": "3789 Lower Springboro Road, Springboro, OH 45066",
+          "website": "https://www.cityofspringboro.com/Facilities/Facility/Details/Hazel-Woods-Park-6",
+          "source": [
+            "https://www.cityofspringboro.com/Facilities/Facility/Details/Hazel-Woods-Park-6"
+          ],
+          "verified": "2026-11-25"
+        },
+        {
+          "name": "Pawmyra Dog Park",
+          "what": "The City of Mason's accessible dog park, on the lower level of Mason Sports Park, with three areas so dogs of similar sizes can play together.",
+          "address": "3400 Mason Morrow Millgrove Road, Mason, OH",
+          "phone": "513-229-8500",
+          "website": "https://www.imaginemason.org/things-to-do/parks/",
+          "source": [
+            "https://www.imaginemason.org/things-to-do/parks/"
+          ],
+          "verified": "2026-11-25"
+        },
+        {
+          "name": "Hamilton Township Dog Park",
+          "what": "A park just for dogs: 6.6 fenced acres, run by Hamilton Township.",
+          "address": "7780 S. State Route 48, Maineville, OH 45039",
+          "website": "https://www.hamilton-township.org/parks/township-parks/dog-park/",
+          "source": [
+            "https://www.hamilton-township.org/parks/township-parks/dog-park/"
+          ],
+          "verified": "2026-11-25"
+        },
+        {
+          "name": "Dog Park at Oak Grove Park",
+          "what": "A fenced, off-leash dog park run by the Centerville-Washington Park District: one acre for dogs 35 pounds and under, one for larger dogs, and a third acre with shade, benches and picnic tables. Drinking water year-round. Dogs need current vaccinations and licenses; no children 7 and under or puppies under 4 months.",
+          "hours": "Daylight hours; closed the first Monday of each month for maintenance",
+          "address": "1790 E. Social Row Road, Oak Grove Park (Centerville-Washington Park District)",
+          "website": "https://cwpd.org/parks/oak-grove/dog-park/",
+          "source": [
+            "https://cwpd.org/parks/oak-grove/dog-park/"
+          ],
+          "verified": "2026-11-25"
+        },
+        {
+          "name": "Scout Dog Park at Pierce Park",
+          "what": "A dog park at Pierce Park, a 33-acre Greene County Parks & Trails park with a picnic shelter.",
+          "address": "618 Dayton-Xenia Road, Xenia, OH 45385",
+          "website": "https://www.gcparkstrails.com/parks/pierce-park/",
+          "source": [
+            "https://www.gcparkstrails.com/parks/pierce-park/"
+          ],
+          "verified": "2026-11-25"
+        },
+        {
+          "name": "Hobson Freedom Park dog park",
+          "what": "Greene County Parks & Trails' newest dog park, with separate spaces for large and small dogs.",
+          "address": "2910 Trebein Road, Fairborn, OH 45324",
+          "website": "https://www.gcparkstrails.com/parks/hobson-freedom-park/",
+          "source": [
+            "https://www.gcparkstrails.com/parks/hobson-freedom-park/"
+          ],
+          "verified": "2026-11-25"
+        },
+        {
+          "name": "Wiggly Field Dog Park",
+          "what": "A fenced dog park in Voice of America MetroPark (MetroParks of Butler County), with one area for large dogs and one for small dogs, benches, shade structures and picnic tables. Dogs must be licensed, vaccinated and wear an ID collar; owners stay with their dogs and carry a leash.",
+          "hours": "Daily, 8 a.m. to dusk",
+          "address": "7850 VOA Park Drive, West Chester, OH 45069",
+          "phone": "513-867-5835",
+          "website": "https://www.yourmetroparks.net/parks/voice-of-america-metropark/wiggly-field-dog-park",
+          "source": [
+            "https://www.yourmetroparks.net/parks/voice-of-america-metropark/wiggly-field-dog-park"
+          ],
+          "verified": "2026-11-25"
         }
       ]
     },
