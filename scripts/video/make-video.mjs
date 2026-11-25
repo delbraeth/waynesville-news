@@ -62,8 +62,22 @@ const paras = script.split(/\n\s*\n/).map((p) => p.trim()).filter(Boolean);
 
 // 4. slides
 const tilesDir = path.join(HERE, "tiles");
-const { segs, mast } = await buildSlides({ root: ROOT, date, paras, sents, tilesDir });
+const { segs, mast, problems } = await buildSlides({ root: ROOT, date, paras, sents, tilesDir });
 console.log("slides: " + segs.map((s) => s.kind).join(", "));
+
+// Quality gate: don't render a video whose slides or timing don't match the
+// narration. The Action fails here, so nothing is attached or stored.
+const meta = JSON.parse(fs.readFileSync(timingsPath + ".meta.json", "utf8"));
+const matched = meta.total ? meta.matched / meta.total : 0;
+if (matched < 0.8) problems.push(`only ${Math.round(matched * 100)}% of the script's words were found in the recording; slides would drift from the audio`);
+if (problems.length) {
+  const msg = `Video for ${date} NOT rendered — it would not match the narration:\n` + problems.map((x) => `- ${x}`).join("\n");
+  console.error(msg);
+  for (const x of problems) console.log(`::error::${x}`);
+  if (process.env.GITHUB_STEP_SUMMARY) fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY, `## ${msg.split("\n")[0]}\n\n${problems.map((x) => `- ${x}`).join("\n")}\n`);
+  process.exit(1);
+}
+console.log(`quality gate passed (${Math.round(matched * 100)}% of words aligned)`);
 fs.writeFileSync(path.join(outDir, `slides-${date}.json`), JSON.stringify(segs.map(({ kind, from }) => ({ kind, from })), null, 1));
 
 // 5. page: the template plus links to fonts, tiles and the helmet mark

@@ -37,7 +37,8 @@ export function sentences(text) {
   const parts = text.trim().split(/(?<=[.!?])\s+(?=[A-Z“"])/);
   const out = [];
   for (const x of parts) {
-    if (out.length && /\b[ap]\.m\.$/.test(out.at(-1))) out[out.length - 1] += " " + x;
+    // "7 p.m. Friday", "Mary L. Cook", "Mt. Holly" stay one sentence
+    if (out.length && /(\b[ap]\.m\.|(?:^|\s)[A-Z]\.|\b(?:Mt|St|Dr|Rd|Ave|No|Jr|Sr|Mr|Mrs|Ms)\.)$/.test(out.at(-1))) out[out.length - 1] += " " + x;
     else out.push(x);
   }
   return out.filter(Boolean);
@@ -68,13 +69,21 @@ function leads(md) {
 
 const STOP = new Set(["about","after","again","their","there","these","those","which","while","where","would","could","should","waynesville","today","tonight","morning","friday","monday","tuesday","wednesday","thursday","saturday","sunday","through","until","before","other","first","second","third","around","every","since","under"]);
 const SPORTS = /\b(football|soccer|volleyball|basketball|wrestling|swim|cheer|Spartans|playoff|semifinal|state title|varsity)\b/i;
+// A paragraph that opens with one of these is that section, never a lead.
+const OPENERS = [[/^(And |Also,? )?(in schools|at school)/i, "schools"], [/^(And |Also,? )?(in local government|at the (county|village|township))/i, "government"], [/^(And |Also,? )?on the roads/i, "roads"], [/^(And |Also,? )?(around town|around the area|looking ahead|nearby)/i, "around"]];
+// Forecast language in a paragraph's first sentence ("a high near 50", "the weather").
+const WEATHER = /\bweather\b|\bforecast\b|\b(high|low)s? (near|of|around|in the)\b|\bdegrees\b/i;
+// A lead the weather paragraph may cover (a storm, a cold snap) — by its title.
+const WEATHER_LEAD = /weather|forecast|rain|snow|storm|cold|heat|wind|ice|icy|fog|freez|flood|sunny|temperature/i;
 const kindOf = (p, i, n) => {
   const first = sentences(p)[0] ?? "";
   if (i === 0) return "open";
   if (i === n - 1 && /That's your brief/i.test(p)) return "signoff";
   if (/is supported by/i.test(p)) return "sponsor";
   if (/^Also from Waynesville News/i.test(p)) return "stories";
-  if (/\bweather\b/i.test(first)) return "weather";
+  for (const [re, k] of OPENERS) if (re.test(first)) return k;
+  if (WEATHER.test(first)) return "weather";
+  if (/\btop story\b/i.test(first)) return "lead";
   if (/^In schools|^At school|Wayne Local/i.test(first)) return "schools";
   if (/local government|commissioners|trustees|village council/i.test(first)) return "government";
   if (/^On the roads/i.test(first)) return "roads";
@@ -142,16 +151,33 @@ export async function buildSlides({ root, date, paras, sents, tilesDir }) {
   const isHouse = (p) => spotHeads.some((h) => h.length > 20 && norm(p).includes(h));
   const words = (t) => new Set((t.toLowerCase().match(/[a-z][a-z']{4,}/g) ?? []).filter((w) => !STOP.has(w)));
   const overlap = (a, b) => { const B = words(b); let n = 0; for (const w of words(a)) if (B.has(w)) n++; return n; };
-  const usedLeads = new Set();
   let leadCount = 0;
-  const bestLead = (p, min) => {
-    let best = -1, score = min - 1;
-    L.forEach((l, k) => { if (usedLeads.has(k)) return; const sc = overlap(p, l.title + " " + l.body); if (sc > score) { score = sc; best = k; } });
-    if (best >= 0) usedLeads.add(best);
-    return best;
-  };
-  // the weather paragraph may cover a weather lead; claim it first so it isn't reused
-  paras.forEach((p, pi) => { if (kindOf(p, pi, paras.length) === "weather") bestLead(p, 4); });
+  // Pair script paragraphs with brief leads by best word overlap across the
+  // whole script (strongest pairs first), so a paragraph that only shares a
+  // few words with a lead (the weather recap, the schools roundup) can't take
+  // it from the paragraph that is actually about it.
+  const kinds = paras.map((p, pi) => { const k = kindOf(p, pi, paras.length); return k !== "open" && k !== "signoff" && isHouse(p) ? "house" : k; });
+  const leadOf = paras.map(() => -1);
+  const pairs = [];
+  paras.forEach((p, pi) => {
+    const k = kinds[pi];
+    if (["open", "signoff", "sponsor", "stories", "house"].includes(k)) return;
+    if (OPENERS.some(([re]) => re.test(sentences(p)[0] ?? ""))) return;
+    // a paragraph whose opening words say "schools" etc. needs a strong match to become a lead
+    const min = k === "lead" ? 3 : k === "weather" ? 4 : 5;
+    L.forEach((l, li) => {
+      if (k === "weather" && !WEATHER_LEAD.test(l.title)) return;
+      const sc = overlap(p, l.title + " " + l.body);
+      if (sc >= min) pairs.push({ pi, li, sc });
+    });
+  });
+  pairs.sort((a, b) => b.sc - a.sc);
+  const takenP = new Set(), takenL = new Set();
+  for (const { pi, li } of pairs) {
+    if (takenP.has(pi) || takenL.has(li)) continue;
+    takenP.add(pi); takenL.add(li); leadOf[pi] = li;
+    if (kinds[pi] !== "weather") kinds[pi] = "lead"; // the weather recap keeps its forecast slide
+  }
   const segs = [];
 
   // Places named in a text, nearest-duplicate removed (specific entries come first in places.json).
@@ -218,8 +244,7 @@ export async function buildSlides({ root, date, paras, sents, tilesDir }) {
 
   for (let pi = 0; pi < paras.length; pi++) {
     const p = paras[pi], s0 = firstSent[pi], m = Math.max(1, count[pi]);
-    let kind = kindOf(p, pi, paras.length), leadK = -1;
-    if (kind !== "open" && kind !== "signoff" && isHouse(p)) kind = "house";
+    let kind = kinds[pi], leadK = -1;
     const ps = sentences(p);
     let html = "", cls = "";
     if (kind === "open") {
@@ -233,7 +258,7 @@ export async function buildSlides({ root, date, paras, sents, tilesDir }) {
       const alerts = weather.alerts?.length ? weather.alerts.map((a) => a.event || a.headline).filter(Boolean).join(" · ") : "No weather alerts in effect";
       html = `${kicker("Weather", s0)}<div class="h md it" data-r="${s0}">${esc(weather.condition)} today, high ${weather.highF ?? weather.tempF}°</div>
         <div class="wx">${tiles}</div><div class="badge ${weather.alerts?.length ? "" : "ghost"} it" data-r="${s0 + m - 1}">${esc(alerts)} · National Weather Service</div>`;
-    } else if (kind === "lead" && (leadK = bestLead(p, 3)) >= 0) {
+    } else if (kind === "lead" && (leadK = leadOf[pi]) >= 0) {
       const lead = L[leadK];
       const leadNo = ++leadCount;
       const text = `${lead.title}. ${lead.body}`;
@@ -247,7 +272,10 @@ export async function buildSlides({ root, date, paras, sents, tilesDir }) {
       const src = (body ? sentences(body) : ps).filter((x) => !/\bNWS\b|weather alerts?/i.test(x));
       const lines = await zoneLinesFor(body + " " + p);
       const sports = false; // helmet only on sports lead stories
-      const txt = `${kicker(LABEL[kind], s0)}<div class="h md it" data-r="${s0}">${esc(kind === "roads" && roads.items?.[0] ? roads.items[0].route.replace(/\s+Addtiion/, " Addition") : LABEL[kind])}</div>${rowsHtml(pick(src), s0, m)}`;
+      // Title a roads slide with ODOT's project name only when the narration is about that project.
+      const r0 = roads.items?.[0], n0 = /\b(?:S\.R\.|U\.S\.|I-)\s*(\d+)/.exec(r0?.route ?? "")?.[1];
+      const aboutR0 = kind === "roads" && n0 && new RegExp(`(State Route|S\\.R\\.|U\\.S\\.|Route)\\s*${n0}\\b[^.]{0,60}(resurfac|turn lane|lane restriction|work zone)|(resurfac|turn lane|lane restriction|work zone)[^.]{0,60}(State Route|S\\.R\\.|U\\.S\\.|Route)\\s*${n0}\\b`, "i").test(p);
+      const txt = `${kicker(LABEL[kind], s0)}<div class="h md it" data-r="${s0}">${esc(aboutR0 ? r0.route.replace(/\s+Addtiion/, " Addition") : LABEL[kind])}</div>${rowsHtml(pick(src), s0, m)}`;
       html = split(txt, await mapFor(placesIn(body + " " + p), s0, m, lines));
     } else if (kind === "sponsor") {
       cls = "sponsor";
@@ -269,8 +297,46 @@ export async function buildSlides({ root, date, paras, sents, tilesDir }) {
         <div class="h md it" data-r="${s0}">${esc(head)}</div>${sub && !/waynesville dot news/i.test(sub) ? `<div class="sub it" data-r="${s0 + Math.min(1, m - 1)}">${esc(sub)}</div>` : ""}
         ${link ? `<div class="badge it" data-r="${s0 + m - 1}">${esc(link)}</div>` : ""}</div>`;
     }
-    segs.push({ from: pi === 0 ? -1 : s0, cls, kind, html });
+    segs.push({ from: pi === 0 ? -1 : s0, cls, kind, html, pi, lead: leadK });
   }
   const mast = new Date(date + "T12:00:00Z").toLocaleDateString("en-US", { weekday: "long", month: "long", day: "numeric", year: "numeric", timeZone: "UTC" });
-  return { segs, mast };
+  return { segs, mast, problems: checkSlides({ segs, paras, leads: L, weather, words, overlap }) };
+}
+
+// Quality gate: reasons the video would not match its narration. make-video
+// refuses to render (and nothing is stored) while this list is non-empty.
+export function checkSlides({ segs, paras, leads, weather, words, overlap }) {
+  const out = [];
+  const text = (html) => html.replace(/<[^>]+>/g, " ").replace(/&amp;/g, "&").replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/\s+/g, " ").trim();
+  const said = (pi) => `paragraph ${pi + 1} ("${paras[pi].slice(0, 60)}…")`;
+  // 1. weather: a forecast paragraph needs the forecast slide, and the high it shows must be the one spoken
+  const wxPara = paras.findIndex((p, pi) => pi > 0 && pi < 3 && WEATHER.test(p));
+  const wxSeg = segs.find((s) => s.kind === "weather");
+  if (wxPara >= 0 && !wxSeg) out.push(`no weather slide, though ${said(wxPara)} gives the forecast`);
+  if (wxSeg) {
+    const hi = weather.highF ?? weather.tempF;
+    if (hi != null && !new RegExp(`\\b${hi}\\b`).test(paras[wxSeg.pi])) out.push(`weather slide shows a high of ${hi}°, but the narration doesn't say ${hi}: ${said(wxSeg.pi)}`);
+  }
+  // 2. every brief lead is shown once, on the paragraph about it
+  const shown = segs.filter((s) => s.kind === "lead" && s.lead >= 0).map((s) => s.lead);
+  leads.forEach((l, li) => { if (!shown.includes(li) && !segs.some((s) => s.kind === "weather" && s.pi != null && overlap(paras[s.pi], l.title + " " + l.body) >= 4 && WEATHER_LEAD.test(l.title))) out.push(`lead "${l.title}" never gets its slide`); });
+  // 3. each story slide shares enough words with what is being said over it
+  for (const s of segs) {
+    if (!["lead", "schools", "government", "roads", "around"].includes(s.kind)) continue;
+    const onScreen = text(s.html);
+    const n = overlap(paras[s.pi], onScreen);
+    if (n < 3) out.push(`${s.kind} slide doesn't match its narration (${n} shared words): ${said(s.pi)} over "${onScreen.slice(0, 80)}…"`);
+  }
+  // 4. a lead slide sits over the paragraph that is most about it, and that paragraph is most about this lead
+  const ov = (pi, li) => overlap(paras[pi], leads[li].title + " " + leads[li].body);
+  for (const s of segs) {
+    if (s.kind !== "lead" || s.lead < 0) continue;
+    const bestP = segs.filter((x) => x.kind !== "open" && x.kind !== "signoff").reduce((b, x) => (ov(x.pi, s.lead) > ov(b, s.lead) ? x.pi : b), s.pi);
+    const bestL = leads.reduce((b, _, li) => (ov(s.pi, li) > ov(s.pi, b) ? li : b), s.lead);
+    if (bestP !== s.pi) out.push(`lead "${leads[s.lead].title}" is shown over ${said(s.pi)}, but ${said(bestP)} is the one about it`);
+    else if (bestL !== s.lead) out.push(`${said(s.pi)} is shown with lead "${leads[s.lead].title}", but it's about "${leads[bestL].title}"`);
+  }
+  // 5. no line on screen cut off at an initial ("The Mary L.")
+  for (const s of segs) for (const m of s.html.matchAll(/class="row[^"]*"[^>]*>([^<]*)</g)) if (/(?:^|\s)[A-Z]\.$/.test(m[1].trim())) out.push(`a line on the ${s.kind} slide is cut off: "${m[1].trim()}"`);
+  return out;
 }
