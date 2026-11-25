@@ -18,6 +18,15 @@ Astro site for https://waynesville.news. Cloudflare deploys `main` on every push
 - **Breaking news to Facebook:** a story in `src/content/stories/` with `breaking: true` and `breakingAt`. See DEPLOY.md §6.
 - **Feature stories to Facebook** (previews, profiles, anything not urgent): `feature: true` (optional `featureAt`) instead of `breaking`, for a dark "Feature" graphic and no "BREAKING" caption. See DEPLOY.md §6.
 
+## Daily audio script (`src/content/audio/<date>.txt`)
+The video makes one slide per paragraph and shows the brief's own text while the script is read, so the two have to match.
+- **One paragraph per topic, in this order:** opening, weather, the three lead items in the brief's order, schools, local government, roads (when there's road news), events or around town, then the sign-off.
+- **Cue each paragraph:** the weather paragraph opens with the forecast ("It's a mostly sunny start, with a high near 50"). The first lead opens "Our top story:". Section paragraphs open "In schools,", "In local government,", "On the roads," and "Looking ahead," or "Around town,".
+- **Leads match the brief:** each lead paragraph covers the same facts as its lead item, and nothing more. Put a fact in both or in neither; for example, don't tuck the forecast into an unrelated lead. A story that takes more than about four spoken sentences needs a lead item of three or more sentences, so its slide doesn't sit half empty.
+- **Length is a guide, not a limit:** about 2½–3 minutes (roughly 2,400–3,000 characters). Quality comes first: say what the day needs, clearly. `make-audio` hard-caps the whole episode at `maxChars` in `src/data/audio.json`.
+- **Write for the ear:** no links, parentheses, abbreviations or bracketed tags. Pauses between paragraphs are added automatically (`paragraphPause` in `src/data/audio.json`).
+- **Check before calling it done:** after the audio and video are made, listen and look. If the video gate stops a render, fix the script or brief and say what happened.
+
 ## Always
 - Quality first. A run that finished isn't done: read, watch or listen to what goes out (brief, email, audio, video) and fix it, or hold it and say why, before calling it done. Say plainly what you couldn't test.
 - Facts only, each one verified on the organization's own page or a source the editor sends. Never invent details.
