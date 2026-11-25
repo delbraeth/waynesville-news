@@ -19,5 +19,6 @@ Astro site for https://waynesville.news. Cloudflare deploys `main` on every push
 - **Feature stories to Facebook** (previews, profiles, anything not urgent): `feature: true` (optional `featureAt`) instead of `breaking`, for a dark "Feature" graphic and no "BREAKING" caption. See DEPLOY.md §6.
 
 ## Always
+- Quality first. A run that finished isn't done: read, watch or listen to what goes out (brief, email, audio, video) and fix it, or hold it and say why, before calling it done. Say plainly what you couldn't test.
 - Facts only, each one verified on the organization's own page or a source the editor sends. Never invent details.
 - Never name private individuals or children. Use only public organizational contacts.
