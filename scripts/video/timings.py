@@ -69,4 +69,5 @@ for si, (pi, s) in enumerate(sents):
     ws = [{"w": sw[i][1], "s": round(t[i][0], 3), "e": round(t[i][1], 3)} for i in range(len(sw)) if sw[i][0] == si]
     out.append({"i": si, "para": pi, "text": s, "start": ws[0]["s"], "end": ws[-1]["e"], "words": ws})
 json.dump(out, open(out_path, "w"), indent=1)
+json.dump({"matched": len(known), "total": len(sw)}, open(out_path + ".meta.json", "w"))
 print(f"timings: {len(known)}/{len(sw)} words matched, {len(out)} sentences, {len(paras)} paragraphs")
