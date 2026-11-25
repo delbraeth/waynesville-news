@@ -271,6 +271,15 @@ if (args.includes("--script-only")) {
   process.exit(0);
 }
 
+// Paragraph pauses: audio.json paragraphPause (an Eleven v4/v3 audio tag such as
+// "[long pause]" or "[short pause]") is added after each paragraph but the last, so
+// the narrator takes a breath between stories. It goes only into the text sent to
+// ElevenLabs, never into --script-only output, so captions and the video's timing
+// use the plain script. "" turns it off.
+const pauseTag = String(cfg.paragraphPause ?? "").trim();
+const ttsText = pauseTag ? script.split(/\n\s*\n/).map((x) => x.trim()).filter(Boolean).join(` ${pauseTag}\n\n`) : script;
+if (pauseTag) console.log(`paragraph pause: ${pauseTag}`);
+
 const key = process.env.ELEVENLABS_API_KEY;
 if (!key) { console.error("ELEVENLABS_API_KEY is not set"); process.exit(1); }
 const out = arg("--out") || `audio-${date}.mp3`;
@@ -294,7 +303,7 @@ try {
 const tts = (v) => fetch(`${API}/text-to-speech/${v.id}?output_format=${cfg.outputFormat || "mp3_44100_128"}`, {
   method: "POST",
   headers: { "xi-api-key": key, "Content-Type": "application/json", Accept: "audio/mpeg" },
-  body: JSON.stringify({ text: script, model_id: process.env.ELEVENLABS_MODEL || cfg.modelId, ...(v.settings ? { voice_settings: v.settings } : {}) }),
+  body: JSON.stringify({ text: ttsText, model_id: process.env.ELEVENLABS_MODEL || cfg.modelId, ...(v.settings ? { voice_settings: v.settings } : {}) }),
 });
 let voice = pickVoice(cfg, date);
 console.log(`voice: ${voice.name || voice.id}`);

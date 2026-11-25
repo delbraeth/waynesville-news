@@ -69,6 +69,10 @@ console.log("slides: " + segs.map((s) => s.kind).join(", "));
 // narration. The Action fails here, so nothing is attached or stored.
 const meta = JSON.parse(fs.readFileSync(timingsPath + ".meta.json", "utf8"));
 const matched = meta.total ? meta.matched / meta.total : 0;
+// An audio tag ("[long pause]") read aloud instead of performed: the recording says "pause" more often than the script does.
+const tagWord = /\b(pause|pauses|bracket)\b/gi;
+const heard = (meta.asr ?? "").match(tagWord)?.length ?? 0, written = script.match(tagWord)?.length ?? 0;
+if (heard > written) problems.push(`the recording says "pause" ${heard} time(s) but the script ${written}: an audio tag was read aloud — re-record with paragraphPause changed or set to ""`);
 if (matched < 0.8) problems.push(`only ${Math.round(matched * 100)}% of the script's words were found in the recording; slides would drift from the audio`);
 if (problems.length) {
   const msg = `Video for ${date} NOT rendered — it would not match the narration:\n` + problems.map((x) => `- ${x}`).join("\n");
