@@ -1,7 +1,21 @@
 {
   "_note": "Recent Wayne Local Schools Facebook posts via rss.app bridge. Title + link + short excerpt; the district's own words. Fail-safe: kept from last run if the bridge is down.",
-  "updated": "2026-11-24T11:41:23.909Z",
+  "updated": "2026-11-25T11:41:39.293Z",
   "items": [
+    {
+      "title": "Here's what you need to know about Friday Night's State Semi-Final game!IMPORTANT Information for Friday Night's State S...",
+      "link": "https://www.facebook.com/waynelocalschools/posts/pfbid02jXwz3aF8Vj8G1WQFBfg3azuHiApsm1xiKqfSkRfiSzfQBzUgeidngcDrKMkq6cSzl",
+      "date": "Tue, 24 Nov 2026 17:36:32 GMT",
+      "dateLabel": "Tue, Nov 24",
+      "excerpt": "Here's what you need to know about Friday Night's State Semi-Final game! IMPORTANT Information for Friday Night's State Semi-Final Football game at Teays Valley HS. PLEASE READ and be prepared if attending. #SPARTANPRIDE"
+    },
+    {
+      "title": "Waynesville Student Council is once again partnering with American Legion Post 615 for our annual Spartan Holiday Food…",
+      "link": "https://www.facebook.com/waynelocalschools/posts/pfbid02vnb5giYJS2xtDiK1PE7BYdEeAaDuhK1oXZbL7xfhNAmxQ36Z3FhEwRKUmxZoBb1il",
+      "date": "Tue, 24 Nov 2026 15:21:07 GMT",
+      "dateLabel": "Tue, Nov 24",
+      "excerpt": "Drive, running Monday, November 30, through Friday, December 11! Students will learn more when they return from break on November 30. Students will be encouraged to bring in non-perishable food items and participate in a classroom competition. All donations will go directly to American Legion…"
+    },
     {
       "title": "🎶A BIG Spartan shoutout to our Waynesville Marching Band! From Friday night performances to cheering on our football…",
       "link": "https://www.facebook.com/waynelocalschools/posts/pfbid02HSd7ejbvQA42Qwd5VeJMnLNojVGfJi2YU7x4YZfAh3KNuRgWJGPg1qZZL5rZsho5l",
@@ -43,20 +57,6 @@
       "date": "Fri, 20 Nov 2026 20:51:22 GMT",
       "dateLabel": "Fri, Nov 20",
       "excerpt": "stability and protect student services. These reserves help cover unexpected costs and provide time to plan thoughtfully as the district’s financial needs change. The Government Finance Officers Association recommends maintaining at least two months of operating expenses in reserve. Consistent…"
-    },
-    {
-      "title": "🏈 Best of luck to Waynesville, as the Spartans take on Fenwick in a Division V, Region 20 championship tonight at…",
-      "link": "https://www.facebook.com/waynelocalschools/posts/pfbid0Fkt2e6jbGD5urC8s7TpchqufCombcFhKyKnpYjbm2bDkw2VwD8yM2ufCFapsCBgkl",
-      "date": "Fri, 20 Nov 2026 17:46:53 GMT",
-      "dateLabel": "Fri, Nov 20",
-      "excerpt": "Lakota East High School"
-    },
-    {
-      "title": "With a little help from our WHS Supportive Peers, WES kindergartens have an important message for us! GO SPARTANS! BEAT…",
-      "link": "https://www.facebook.com/waynelocalschools/posts/pfbid0a9CzuPUBpW63RojiovywfeqEZx5SFNmH934BntAQ2gesshy6VtytcfsSFEmBjoKFl",
-      "date": "Fri, 20 Nov 2026 15:21:04 GMT",
-      "dateLabel": "Fri, Nov 20",
-      "excerpt": "FENWICK! #SPARTANPRIDE"
     }
   ]
 }

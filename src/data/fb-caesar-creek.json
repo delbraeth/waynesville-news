@@ -1,7 +1,14 @@
 {
   "_note": "Recent Caesar Creek State Park Facebook posts via rss.app bridge. Title + link + short excerpt; the park's own words. Fail-safe: kept from last run if the bridge is down.",
-  "updated": "2026-11-24T11:41:24.137Z",
+  "updated": "2026-11-25T11:41:39.513Z",
   "items": [
+    {
+      "title": "This is what makes our work so meaningful! ❤️ Our state parks are more than places to hike, camp, paddle, and explore.…",
+      "link": "https://www.facebook.com/CaesarCreekStatePark/posts/pfbid05PF7wn6g4zEivje53RcAxPFtTbMkbXwkKWdt1MZEwpmK3kxMjnBLxNG5M3bk8Rtal",
+      "date": "Tue, 24 Nov 2026 23:28:16 GMT",
+      "dateLabel": "Tue, Nov 24",
+      "excerpt": "They’re places where we heal, reconnect, overcome challenges, and create memories that last a lifetime. Congratulations to Stephanie and Buddy on their incredible journey through all 76 Ohio State Parks! This Thanksgiving, we’re especially grateful for the opportunity to provide spaces where…"
+    },
     {
       "title": "Food always tastes better over a campfire! Thanks to all involved in our Cast Iron Cooking Workshop today! Nature Center…",
       "link": "https://www.facebook.com/reel/1870263221085205/",
@@ -36,20 +43,6 @@
       "date": "Mon, 16 Nov 2026 21:26:24 GMT",
       "dateLabel": "Mon, Nov 16",
       "excerpt": "the beauty while working in the park today. From peaceful lake views and quiet wooded trails to a few wildlife encounters, days like today remind us just how special these natural spaces are. Even when we’re busy working behind the scenes, it’s hard not to stop and appreciate the beauty around…"
-    },
-    {
-      "title": "Owl Fest was a Hoot! A special thanks to The Ohio School of Falconry for joining us again this year. What a great event…",
-      "link": "https://www.facebook.com/CaesarCreekStatePark/posts/pfbid02qiNVBakV8LGSBZSyek8u3nugt5hhW7jJMzNd2ShzxZc5BKKTSLaQCZop7MxEhvsal",
-      "date": "Sun, 15 Nov 2026 03:15:27 GMT",
-      "dateLabel": "Sat, Nov 14",
-      "excerpt": "!!!"
-    },
-    {
-      "title": "Owl Fest is this evening! Join us for part, or all of this special event. Arrive early to get a seat for Ohio School of…",
-      "link": "https://www.facebook.com/CaesarCreekStatePark/posts/pfbid0tP865z7J4NxZZVPNJkt6hprsi3M2Ac26x6Q2Nh6Z4qwhWYTX3wnoEYtJ55abQtU2l",
-      "date": "Sat, 14 Nov 2026 20:40:05 GMT",
-      "dateLabel": "Sat, Nov 14",
-      "excerpt": "Falconry experience starting at 6pm. Meet us at the Army Corps of Engineers Visitor Center. Save the Date! Mark your calendars for a great fun filled event 🦉 Owl Fest returns November 13th & 14th at Caesar Creek! Join us for owl hikes, banding demos, live raptors, hands‑on workshops, and family…"
     }
   ]
 }

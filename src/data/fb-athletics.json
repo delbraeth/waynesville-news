@@ -1,7 +1,14 @@
 {
   "_note": "Recent Waynesville Spartans Athletics Facebook posts via rss.app bridge. Title + link + short excerpt; the athletic department's own words. Fail-safe: kept from last run if the bridge is down.",
-  "updated": "2026-11-24T11:41:24.554Z",
+  "updated": "2026-11-25T11:41:39.964Z",
   "items": [
+    {
+      "title": "IMPORTANT Information for Friday Night's State Semi-Final Football game at Teays Valley HS. PLEASE READ and be prepared…",
+      "link": "https://www.facebook.com/waynesvilleAth/posts/pfbid0CzTD3Kb4qvEQMRpVKLWLgyDw7rqjXSAtHA4HphMKJ5yQE9vr2S8bCjDRWGDG3NT9l",
+      "date": "Tue, 24 Nov 2026 17:18:24 GMT",
+      "dateLabel": "Tue, Nov 24",
+      "excerpt": "if attending. #SPARTANPRIDE"
+    },
     {
       "title": "BLACK FRIDAY, NOVEMBER 27 ALL-VILLAGE SPARTAN SEND-OFF Waynesville, let’s line the route and send our Spartans off to…",
       "link": "https://www.facebook.com/waynesvilleAth/posts/pfbid0L6PkynSxezpyWQ9n246V3J8KhZX21igtQ5iSmDYwWRDYdq3ThpMUmfMYjdDPM1LXl",
@@ -50,13 +57,6 @@
       "date": "Sat, 21 Nov 2026 18:57:39 GMT",
       "dateLabel": "Sat, Nov 21",
       "excerpt": ""
-    },
-    {
-      "title": "OHSAA Brackets have been officially released. The SPARTANS will be traveling to Teays Valley High School Friday night! #…",
-      "link": "https://www.facebook.com/waynesvilleAth/posts/pfbid0tWzM8nRdpcoS3sTupnwL62QbyniS3CMJYf7SKiSwN2za2s3hvBDNtyXrvVYew85Dl",
-      "date": "Sat, 21 Nov 2026 17:37:07 GMT",
-      "dateLabel": "Sat, Nov 21",
-      "excerpt": "SPARTANPRIDE 🚨 Send it! We’re heading to Teays Valley next Friday for a Division V state semifinal"
     }
   ]
 }
