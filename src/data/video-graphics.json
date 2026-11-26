@@ -1,0 +1,13 @@
+{
+  "_note": "Editor-made graphics for the daily video (scripts/video). Each item runs on one date, on that day's first sports lead slide (in place of the map), with an optional caption under it. Fields: date (YYYY-MM-DD), image (path under /public), alt (plain description), caption (short; shown under the graphic), credit, and optional match (a regular expression the lead's headline or paragraph must also match). If the image file is missing, the video gate stops the render; if no sports lead uses the graphic that day, the render logs a warning and goes on without it.",
+  "items": [
+    {
+      "date": "2026-11-26",
+      "image": "/images/stories/2026-11-26-once-a-spartan.webp",
+      "alt": "Four orange-and-black Spartan helmet logos side by side",
+      "caption": "#OnceASpartanAlwaysASpartan",
+      "credit": "Waynesville News",
+      "match": "football|Spartans|semifinal|Ironton"
+    }
+  ]
+}

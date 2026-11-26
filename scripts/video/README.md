@@ -62,6 +62,12 @@ script, so a weather recap or schools roundup can't take a lead from the
 paragraph about it. Paragraphs that open "In schools", "In local government",
 "On the roads", "Around town" or "Looking ahead" are always that section.
 
+## Editor graphics
+`src/data/video-graphics.json` lists editor-made graphics by date. On that date the
+graphic replaces the map on the first sports lead slide it fits (optional `match`
+regex), with its caption underneath. A missing image file stops the render; if no
+sports lead uses it, the render logs a warning and goes on without it.
+
 ## Rules built in
 - The Spartan helmet (`spartans-helmet.svg`, designed by the editor) appears
   only on sports lead stories, small, beside the kicker. Never in the
