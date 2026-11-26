@@ -82,7 +82,7 @@ const kindOf = (p, i, n) => {
   if (/is supported by/i.test(p)) return "sponsor";
   if (/^Also from Waynesville News/i.test(p)) return "stories";
   for (const [re, k] of OPENERS) if (re.test(first)) return k;
-  if (WEATHER.test(first)) return "weather";
+  if (WEATHER.test(first.replace(/\bweather[- ]permitting\b/gi, ""))) return "weather"; // "weather permitting" is a schedule caveat, not a forecast
   if (/\btop story\b/i.test(first)) return "lead";
   if (/^In schools|^At school|Wayne Local/i.test(first)) return "schools";
   if (/local government|commissioners|trustees|village council/i.test(first)) return "government";
@@ -183,7 +183,13 @@ export async function buildSlides({ root, date, paras, sents, tilesDir }) {
   // whole script (strongest pairs first), so a paragraph that only shares a
   // few words with a lead (the weather recap, the schools roundup) can't take
   // it from the paragraph that is actually about it.
-  const kinds = paras.map((p, pi) => { const k = kindOf(p, pi, paras.length); return k !== "open" && k !== "signoff" && isHouse(p) ? "house" : k; });
+  let sawWeather = false;
+  const kinds = paras.map((p, pi) => {
+    let k = kindOf(p, pi, paras.length);
+    if (k !== "open" && k !== "signoff" && isHouse(p)) k = "house";
+    if (k === "weather") { if (sawWeather) k = "lead"; sawWeather = true; } // only the first forecast paragraph gets the weather slide
+    return k;
+  });
   const leadOf = paras.map(() => -1);
   const pairs = [];
   paras.forEach((p, pi) => {
