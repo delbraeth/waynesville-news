@@ -62,7 +62,7 @@ const paras = script.split(/\n\s*\n/).map((p) => p.trim()).filter(Boolean);
 
 // 4. slides
 const tilesDir = path.join(HERE, "tiles");
-const { segs, mast, problems } = await buildSlides({ root: ROOT, date, paras, sents, tilesDir });
+const { segs, mast, problems, warnings = [], graphic } = await buildSlides({ root: ROOT, date, paras, sents, tilesDir });
 console.log("slides: " + segs.map((s) => s.kind).join(", "));
 
 // Quality gate: don't render a video whose slides or timing don't match the
@@ -89,6 +89,9 @@ const page = path.join(work, "page");
 fs.mkdirSync(page);
 fs.copyFileSync(path.join(HERE, "frame.html"), path.join(page, "frame.html"));
 fs.copyFileSync(path.join(HERE, "spartans-helmet.svg"), path.join(page, "spartans-helmet.svg"));
+if (graphic) fs.copyFileSync(path.join(ROOT, "public", graphic.image), path.join(page, "graphic.webp"));
+for (const w of warnings) console.log(`::warning::${w}`);
+if (graphic) console.log(`graphic: ${graphic.image}`);
 fs.symlinkSync(path.join(ROOT, "public/fonts"), path.join(page, "fonts"));
 fs.symlinkSync(tilesDir, path.join(page, "tiles"));
 fs.writeFileSync(path.join(page, "slides.js"), `window.SEGS=${JSON.stringify(segs)};window.MAST=${JSON.stringify(mast)};`);

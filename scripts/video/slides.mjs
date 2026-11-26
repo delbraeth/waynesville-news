@@ -109,6 +109,12 @@ function weatherIcon(cond, big) {
 
 const kicker = (text, r) => `<div class="kicker it" data-r="${r}">${esc(text)}</div>`;
 const helmet = '<img class="mark-h" src="spartans-helmet.svg" alt="">';
+// Editor-made graphic for a date (src/data/video-graphics.json), or null.
+export function graphicFor(root, date) {
+  const f = path.join(root, "src/data/video-graphics.json");
+  if (!fs.existsSync(f)) return null;
+  return (read(f).items ?? []).find((g) => g.date === date && g.image) ?? null;
+}
 // Does this text talk about work on one of these route numbers? Route and work word within
 // one sentence, either order. "Closed"/"closure" count only right after the route.
 export function aboutZone(text, nums) {
@@ -171,6 +177,8 @@ export async function buildSlides({ root, date, paras, sents, tilesDir }) {
   const words = (t) => new Set((t.toLowerCase().match(/[a-z][a-z']{4,}/g) ?? []).filter((w) => !STOP.has(w)));
   const overlap = (a, b) => { const B = words(b); let n = 0; for (const w of words(a)) if (B.has(w)) n++; return n; };
   let leadCount = 0;
+  const graphic = graphicFor(root, date);
+  let graphicUsed = false;
   // Pair script paragraphs with brief leads by best word overlap across the
   // whole script (strongest pairs first), so a paragraph that only shares a
   // few words with a lead (the weather recap, the schools roundup) can't take
@@ -306,7 +314,14 @@ export async function buildSlides({ root, date, paras, sents, tilesDir }) {
       const txt = `${kicker(leadNo === 1 ? "The top story" : "This morning in Waynesville", s0)}<div class="h md it" data-r="${s0}">${sports ? helmet : ""}${esc(lead.title)}</div>${rowsHtml(pick(sentences(lead.body)), s0, m)}`;
       // a work zone only when that road is what the story is about (headline or opening line),
       // not when it's a side mention like a detour
-      html = split(txt, await mapFor(placesIn(text + " " + p), s0, m, await zoneLinesFor(p)));
+      // the day's editor graphic replaces the map on the first sports lead it fits
+      if (sports && graphic && !graphicUsed && (!graphic.match || new RegExp(graphic.match, "i").test(text + " " + p))) {
+        graphicUsed = true;
+        const g = `<div class="graphic it" data-r="${s0}" data-o="0.3"><img src="graphic.webp" alt="${esc(graphic.alt ?? "")}">${graphic.caption ? `<div class="gcap">${esc(graphic.caption)}</div>` : ""}</div>`;
+        html = split(txt, g);
+      } else {
+        html = split(txt, await mapFor(placesIn(text + " " + p), s0, m, await zoneLinesFor(p)));
+      }
     } else if (["schools", "government", "roads", "around"].includes(kind)) {
       const body = narrative(md, HEADING[kind]);
       const src = (body ? sentences(body) : ps).filter((x) => !/\bNWS\b|weather alerts?/i.test(x));
@@ -341,7 +356,10 @@ export async function buildSlides({ root, date, paras, sents, tilesDir }) {
     segs.push({ from: pi === 0 ? -1 : s0, cls, kind, html, pi, lead: leadK, zone, roadNums });
   }
   const mast = new Date(date + "T12:00:00Z").toLocaleDateString("en-US", { weekday: "long", month: "long", day: "numeric", year: "numeric", timeZone: "UTC" });
-  return { segs, mast, problems: checkSlides({ segs, paras, leads: L, weather, words, overlap, sents }) };
+  const problems = checkSlides({ segs, paras, leads: L, weather, words, overlap, sents });
+  if (graphic && !fs.existsSync(path.join(root, "public", graphic.image))) problems.push(`the graphic set for ${date} (${graphic.image}) isn't in public/`);
+  const warnings = graphic && !graphicUsed ? [`graphic for ${date} not shown: no sports lead slide matched`] : [];
+  return { segs, mast, problems, warnings, graphic: graphicUsed ? graphic : null };
 }
 
 // Quality gate: reasons the video would not match its narration. make-video
