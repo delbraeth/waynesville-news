@@ -351,7 +351,7 @@ export async function buildSlides({ root, date, paras, sents, tilesDir }) {
       const sub = ps[0].length <= 70 ? ps.slice(1, 2).join(" ") : ps[0];
       html = `<div class="center"><div class="kicker it" data-r="${s0}">${kind === "stories" ? "Also from Waynesville News" : "Waynesville News"}</div>
         <div class="h md it" data-r="${s0}">${esc(head)}</div>${sub && !/waynesville dot news/i.test(sub) ? `<div class="sub it" data-r="${s0 + Math.min(1, m - 1)}">${esc(sub)}</div>` : ""}
-        ${link ? `<div class="badge it" data-r="${s0 + m - 1}">${esc(link)}</div>` : ""}</div>`;
+        ${link ? `<div class="badge it" data-r="${s0 + Math.min(1, m - 1)}">${esc(link)}</div>` : ""}</div>`;
     }
     segs.push({ from: pi === 0 ? -1 : s0, cls, kind, html, pi, lead: leadK, zone, roadNums });
   }
