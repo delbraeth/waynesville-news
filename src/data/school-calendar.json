@@ -1,6 +1,6 @@
 {
   "_note": "Wayne Local Schools district calendar (public Google Calendar embedded at https://www.wayne-local.com/calendars/wayne-local-schools/). District's own titles. Built by scripts/fetch-school-calendar.mjs; dates the district hasn't entered yet come from src/data/school-calendar-manual.json.",
-  "updated": "2026-11-25T11:42:57.113Z",
+  "updated": "2026-11-26T11:41:19.617Z",
   "source": "https://www.wayne-local.com/calendars/wayne-local-schools/",
   "items": [
     {

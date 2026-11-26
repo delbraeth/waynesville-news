@@ -1,60 +1,54 @@
 {
   "_note": "Candidate local headlines (Google News RSS). Published as a quoted headline (or, when available, a short publisher-written excerpt) + source + link; never reproduce article body text.",
-  "updated": "2026-11-25T11:42:35.287Z",
+  "updated": "2026-11-26T11:42:47.232Z",
   "items": [
+    {
+      "title": "Yuletide Village Opens Friday: The Holiday Lights Festival You Walk Into, Not Drive Past",
+      "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPdmg1XzF0eEZCRlNNQmJZYVYxNlNleUc5TGE0NDRIRDZBNzY0QzVaTkZ6LVM3MUpzM0JYLVhHandPWDZfZjVSck5KZXRERlpGRDQtY1Y1RXJPSVpXa0VlZkl4blZYNFFKOGpDUDl0TzJ3dFdBSWgteXVyTnNNNE1ndzJaVWFMdTM5RGloYnRiZ2E5MHozTWl6TmdHSEYyWTlJa2tjT3ItTDc3aU5oUFI1eVBaUXNEeHprandaMnFIOENXaDY2b3c?oc=5",
+      "source": "Warren County Post",
+      "date": "Thu, 26 Nov 2026 06:35:43 GMT"
+    },
     {
       "title": "Savor. Wander. Ponder. in Warren County",
       "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOeFRtY2hpMjRoUnB6OEs3T01hamhsV0JubThoMHFhZ2x2TkF4WW9TbmtyMjlPRXlRZ1lkQ0RFNjhjRGE2T1VUQVpkYWI0azMzYjgxdWpETDMyTkVxT2RHZjFpZWlINFBiTDZJWTdMRmtKVFBqNzNOeGFZOEt1dTE3Umw2djhwcXFDeXJ6TGZaUno3VGhEQ0JWZnBMd0ZUVU1kcEhN?oc=5",
       "source": "Ohio.org",
-      "date": "Wed, 25 Nov 2026 08:38:00 GMT",
-      "sourceUrl": "https://ohio.org/travel-inspiration/articles/savor-wander-ponder-warren-county",
-      "excerpt": "Hunt for fossils at Caesar Creek, browse the shops of historic Waynesville, dine in a former farmhouse and spend the night at Ohio's oldest inn during a visit to Southwest Ohio's Warren County."
+      "date": "Wed, 25 Nov 2026 08:38:00 GMT"
+    },
+    {
+      "title": "Residents organize meeting over Northern Warren County Transportation Plan",
+      "link": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxPNTlZVlhYcTZUWTcyejV4eUxCTVEwNXFoWkdYcXpuR1ZyWnp3R2lDSkhCMWdpcVVhX09iX2tCXzByN29uVElaZWw3bTU4VnpjVjZtb1lUVVhRNUhXaVJsYlJsQ01ZMmc2RTFvS1J0YkE0VzdrMm1tZ1dGNHV6STZoQ2pzem1kM2oyci1mT0U5RmVRdTFqVG01Umhmc1diMnRMMGFJaFRLSVIzdGdKREx6X3FHNzBxMUE2RjFONFMwX0Q4Tm4yTUM4bUplQ0VLQlpOblRZeEc2cmtDalk?oc=5",
+      "source": "WCPO 9 Cincinnati",
+      "date": "Tue, 24 Nov 2026 23:02:40 GMT"
+    },
+    {
+      "title": "Greater Cincinnati residents push to cancel proposed I-75 to I-71 connector plans",
+      "link": "https://news.google.com/rss/articles/CBMigAJBVV95cUxNRkJyWUNGSERkMDNNa2lrZ082NEpRSmNlb01VS1o4bHJlTllqaDF6STZ6VTVwXzdjTkVERE94VFU5elh1OGFNcVF2T3hJNklxbGI5OGNnc3NIRFNSdlJyS0s2UXBJQVRhWmd6X3RKbmwwS0JLZFRZNVRyVGNaSnhGUmp1bHlfNVI0MFZneE5seF9ZNTdYZzU4eWphdUxfeVppYk9fNnRpQmpHb1FGbGxxNVJZTERKbjVQRXA3dURTRk9ncGlabUpYaWxsam5vT2I5ME1ORlJnUlo0SzRuZGloZjZfY3pDLTFKWnlCdDIyUW1JYXpRLUk3ZDNJY01Md0dW?oc=5",
+      "source": "WKRC",
+      "date": "Wed, 25 Nov 2026 04:33:53 GMT"
+    },
+    {
+      "title": "UPDATE: Ohio County coroner locates next of kin for woman with possible Warren County ties",
+      "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPVGhhS0FwUHBwSGZmc0V4dFZYWWxPUGZMYzRldmppV0pwM3RIeDlxc3RJcWNuZHZ1SFlFd0kyUXk3ZGpvSGtDdHZRQkROWFlSN2J6MTNXVTJFVDNaRWRYYUFrU3NVV0Q3RDJzdGpXTGR5TnhLMUk3UDdoSHoxZ1pQZ2Zyby1ZUWdMUk5WdzVxYnNuZDEyQ1Bqb3JmSkoyN1FGY1dsbnlLb0d3UDRBRU5NQw?oc=5",
+      "source": "WNKY",
+      "date": "Sun, 22 Nov 2026 08:00:00 GMT"
+    },
+    {
+      "title": "Roland Anspach Obituary (2026) - Waynesville, OH - Dayton Daily News",
+      "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOa09idDE2MUFPcDQwVTQ4dUdfREFta0JFLWdNOUVZRW1ISFpkZ25QVUxzSldNOWdCZnZsd0NMSVFsMU5XaUpKUzN5NWtlTlZJaUYyRnFJZjQxUVhrWXd4ajhtNUNCb29CWThEUlJfTy1xZG16d1BkVFM3bFpReGgtTjdZVHVFdzltdEk4UA?oc=5",
+      "source": "Legacy obituary",
+      "date": "Sat, 21 Nov 2026 11:25:18 GMT"
     },
     {
       "title": "Troopers to Focus on Impaired, Distracted Driving Over Thanksgiving Holiday",
       "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOV3hDNG94dTYzZ04zZ0E3N0o5N0lDNGtMNFc2NEhXaUdPSk5pSkxEdXh6NXJnN3BTX0lqdlFSQ2ZfZGVKSko2MDBTUGtERUlPMnFPdUlnandPcmFMR2pCX1NhWF9VVmZMX0k0SGFnS0s2WVRQRjlkYms4cFpsaW15OHlVSloxd0hfbjR1b1kxOVJIQWhuTFlkMGE3QngyME1lUVZGc2VHMm5id2tFWUc4NGtyVmpuYXFOY0Y0?oc=5",
       "source": "Warren County Post",
-      "date": "Wed, 25 Nov 2026 09:39:17 GMT",
-      "sourceUrl": "https://warrencountypost.com/g/lebanon-oh/n/399207/troopers-focus-impaired-distracted-driving-over-thanksgiving-holiday",
-      "excerpt": "From midnight on Wednesday, November 25 through 11:59 p.m. on Sunday, November 29, troopers will be focusing on removing impaired drivers from Ohio’s roadways,"
-    },
-    {
-      "title": "Residents organize meeting over Northern Warren County Transportation Plan",
-      "link": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxPNTlZVlhYcTZUWTcyejV4eUxCTVEwNXFoWkdYcXpuR1ZyWnp3R2lDSkhCMWdpcVVhX09iX2tCXzByN29uVElaZWw3bTU4VnpjVjZtb1lUVVhRNUhXaVJsYlJsQ01ZMmc2RTFvS1J0YkE0VzdrMm1tZ1dGNHV6STZoQ2pzem1kM2oyci1mT0U5RmVRdTFqVG01Umhmc1diMnRMMGFJaFRLSVIzdGdKREx6X3FHNzBxMUE2RjFONFMwX0Q4Tm4yTUM4bUplQ0VLQlpOblRZeEc2cmtDalk?oc=5",
-      "source": "WCPO 9 News",
-      "date": "Tue, 24 Nov 2026 23:02:40 GMT"
-    },
-    {
-      "title": "Roland Anspach Obituary (2026) - Waynesville, OH - Greene County Dailies",
-      "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQVlpsUm1TZ2V6M3VJNHVGdTdiUWVEbW1zRFQzRVRwTGZYbU9nYmxHSGd2TEszVVg1ZXVPOVdNSEhEaEpPYVhpWmhqSXl0bUlYMzlZbmdXM0ptT21iVFJRVHRadms3djI0Vk5JOTlfV3VfYnV1TFBwVmlRWkxQemNZMzVPRmExREthNkEwQV80d3I3RjhZN2tubQ?oc=5",
-      "source": "Legacy obituary",
-      "date": "Tue, 24 Nov 2026 17:47:08 GMT"
-    },
-    {
-      "title": "Park transformation earns Warren County top recognition",
-      "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxObzJJM0dSeTVoTnotdzBfb3AzVS15WExZTGVtSDI0clZCUWhWY2c0QWZndkZrOVl6WXhFbkJPenpaWHYwaC1Lblp2czI5SVdHME90U2lZOThiZEFjUW5zRlpka25naEd6TjZZR2FtUWthZEgtX1JlSFNZZnd4WDEzNmxrc3ZEdFN3RmEwU1R3WQ?oc=5",
-      "source": "WKRC",
-      "date": "Thu, 19 Nov 2026 23:46:19 GMT"
-    },
-    {
-      "title": "Karen Dawson Obituary (2026) - Waynesville, OH - Greene County Dailies",
-      "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNcjByNTFMWGN6MDNualVMaFp3d3U3b3FBSDYtdnlfZGZJN05LMzlEdTdOT3JZZUgzNWJNTlFyMnFDcVlmeGIxSFNHQWtpM3J1RGRfNlM5YWMta1FhSXdWcm1KZjYzTFhXOGJoOHR4T2Y0cW4tem9LYS1lcUhyaUgtekVkamh3WUFPVWh6S2ZXR0NxRW02Z2c?oc=5",
-      "source": "Legacy obituary",
-      "date": "Tue, 24 Nov 2026 17:23:25 GMT"
-    },
-    {
-      "title": "Warren County's Sand and Gravel Sales Rise 10.6% as Ohio Mineral Industry Reaches $1.9 Billion",
-      "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPZXE0OERMSE5kQXlBcGwtM3NfenBVaTMwWW8yRXFLLURZeVZUZVBlSmJHeUplS3dFczZfSE0xVEpTcVlXNzRSRWN1QVNJSWVjWlpmbkhnSFNVN3FNSWUxWkVCRXFfcVNQSGMzWC10dU80NVNZSzU3MFpsc25wQWRlTmtlcHk3bmE4UllVbGhOV0xuRktHYVRzempQSHdvWXpSLW91MjhFTEJNbGNnSU9lUnNrZWhGOUhLQy1maG9jLVhZYWFz?oc=5",
-      "source": "Warren County Post",
-      "date": "Fri, 20 Nov 2026 04:27:34 GMT"
+      "date": "Wed, 25 Nov 2026 09:39:17 GMT"
     },
     {
       "title": "Ohio Energy Coalition Pushes for Faster Permitting in Columbus and Washington",
       "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOX1plS2FCV3ZHNWN4eTF1c3dabEdGMHZWRWdLa1JLYU00SlNRY1lOYUFGUkp1R0xtUXN3cklqY01vQ3VWZzAtQW15akFuc2JWMjlBdWFHS2dod1MwbUpka3g2NlFuZjFUb3JUOXN2NG83dHM0N1hfQWk0UHZpNWpsS0VGXzhpd05KTERSLXdWU0xFSWZ6Vjgwb0Y1cjBKZWpKZDNfRkhuTkotdU9VdG5zU1hFTXJlelBLbTFyN0Rn?oc=5",
       "source": "Warren County Post",
-      "date": "Mon, 23 Nov 2026 14:20:51 GMT",
-      "sourceUrl": "https://warrencountypost.com/g/lebanon-oh/n/399032/ohio-energy-coalition-pushes-faster-permitting-columbus-and-washington",
-      "excerpt": "Ohio Coalition Says BAAJA Brings Ohio's \"Build Faster\" Playbook to Washington"
+      "date": "Mon, 23 Nov 2026 14:20:51 GMT"
     }
   ]
 }

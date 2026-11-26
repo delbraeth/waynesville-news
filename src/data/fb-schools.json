@@ -1,7 +1,14 @@
 {
   "_note": "Recent Wayne Local Schools Facebook posts via rss.app bridge. Title + link + short excerpt; the district's own words. Fail-safe: kept from last run if the bridge is down.",
-  "updated": "2026-11-25T11:41:39.293Z",
+  "updated": "2026-11-26T11:41:20.059Z",
   "items": [
+    {
+      "title": "🎄Our campus is holiday-ready! Thank you Waynesville Leo Club members!Busy week for the Waynesville Leos! 🦁 On Thursday...",
+      "link": "https://www.facebook.com/waynelocalschools/posts/pfbid034nJ5wiRZy9QnRfFKYhraayz1rgoi22tVkYy6of9KLSYVj9XssSg3P7J7bxh5omkgl",
+      "date": "Wed, 25 Nov 2026 19:31:14 GMT",
+      "dateLabel": "Wed, Nov 25",
+      "excerpt": "🎄Our campus is holiday-ready! Thank you Waynesville Leo Club members! Busy week for the Waynesville Leos! 🦁 On Thursday, we spent time with our senior friends painting rocks to add to the rock snake we started together two years ago. I love that we’re still adding to it! On November 21 and 22,…"
+    },
     {
       "title": "Here's what you need to know about Friday Night's State Semi-Final game!IMPORTANT Information for Friday Night's State S...",
       "link": "https://www.facebook.com/waynelocalschools/posts/pfbid02jXwz3aF8Vj8G1WQFBfg3azuHiApsm1xiKqfSkRfiSzfQBzUgeidngcDrKMkq6cSzl",
@@ -50,13 +57,6 @@
       "date": "Fri, 20 Nov 2026 22:54:16 GMT",
       "dateLabel": "Fri, Nov 20",
       "excerpt": ""
-    },
-    {
-      "title": "💰WLS Fiscal Focus: Planning Ahead Last week, we shared how General Fund cash reserves have helped maintain financial…",
-      "link": "https://www.facebook.com/waynelocalschools/posts/pfbid02EzsHuCgFhKS4P7L7eDRy8RVWRNWsnh1ZzirAtso3LSMeEi7ccWikziPHtCYPePWgl",
-      "date": "Fri, 20 Nov 2026 20:51:22 GMT",
-      "dateLabel": "Fri, Nov 20",
-      "excerpt": "stability and protect student services. These reserves help cover unexpected costs and provide time to plan thoughtfully as the district’s financial needs change. The Government Finance Officers Association recommends maintaining at least two months of operating expenses in reserve. Consistent…"
     }
   ]
 }

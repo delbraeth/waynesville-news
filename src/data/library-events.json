@@ -1,13 +1,7 @@
 {
   "_note": "Mary L. Cook Public Library — upcoming programs from the library's WhoFi event calendar (https://marylcook-main-oh.whofi.com/calendar/full). \"items\": next 14 days, for the daily brief (dateISO is Eastern wall-clock marked Z). \"calendar\": next 45 days for the events calendar, real offsets, with sign-up details read from each program's page (scripts/lib/signup.mjs). Canceled events and closures excluded.",
-  "updated": "2026-11-25T11:42:56.592Z",
+  "updated": "2026-11-26T11:41:29.294Z",
   "items": [
-    {
-      "title": "Thanksgiving",
-      "dateISO": "2026-11-26T00:00:00Z",
-      "dateLabel": "Thu · Nov 26, 12:00 AM",
-      "link": "https://marylcook-main-oh.whofi.com/calendar/event/8100/"
-    },
     {
       "title": "Toddler Time",
       "dateISO": "2026-12-01T10:30:00Z",
@@ -49,6 +43,12 @@
       "dateISO": "2026-12-07T16:15:00Z",
       "dateLabel": "Mon · Dec 7, 4:15 PM",
       "link": "https://marylcook-main-oh.whofi.com/calendar/event/354839/"
+    },
+    {
+      "title": "Trivia Night",
+      "dateISO": "2026-12-07T18:00:00Z",
+      "dateLabel": "Mon · Dec 7, 6:00 PM",
+      "link": "https://marylcook-main-oh.whofi.com/calendar/event/358128/"
     }
   ],
   "calendar": [

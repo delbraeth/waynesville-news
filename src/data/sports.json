@@ -1,6 +1,6 @@
 {
   "_note": "Waynesville Spartans schedule + results (MaxPreps), past 7 days / next 7 days. Scraped directly from each sport's own schedule page (football, volleyball, soccer -- varsity + JV), not the school hub page, which has been observed to silently omit some contests. Scores and matchups reproduced verbatim from MaxPreps' own markup; each links to their game page. Start times, \"scrimmage\" and \"canceled\" come from the school's athletics site (waynesvillesports.com) when it lists the game; \"maxprepsTime\" is MaxPreps' time when they differ.",
-  "updated": "2026-11-25T11:42:44.685Z",
+  "updated": "2026-11-26T11:41:25.603Z",
   "results": [
     {
       "dateISO": "2026-11-20T19:00:00",
@@ -36,6 +36,29 @@
       "result": null,
       "isHome": false,
       "link": "https://www.maxpreps.com/oh/basketball/girls/game/clinton-massie-clarksville-vs-waynesville/11-30-2026/?c=23d7f11f-eb6d-443e-a84e-d4ee6951cbb5"
+    },
+    {
+      "dateISO": "2026-12-02T18:00:00",
+      "sport": "Girls Basketball",
+      "level": "JV",
+      "opponent": "Brookville",
+      "wayneScore": null,
+      "opponentScore": null,
+      "result": null,
+      "isHome": false,
+      "link": "https://www.maxpreps.com/oh/basketball/girls/game/brookville-vs-waynesville/jv/12-2-2026/?c=9498971a-71f5-4085-af4c-dbc018390f04"
+    },
+    {
+      "dateISO": "2026-12-02T19:15:00",
+      "sport": "Girls Basketball",
+      "level": "Varsity",
+      "opponent": "Brookville",
+      "wayneScore": null,
+      "opponentScore": null,
+      "result": null,
+      "isHome": false,
+      "link": "https://www.maxpreps.com/oh/basketball/girls/game/brookville-vs-waynesville/12-2-2026/?c=1d19917c-3f23-4b51-8c76-38c92df8f4c5",
+      "maxprepsTime": "18:45"
     }
   ]
 }
