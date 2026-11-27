@@ -1,7 +1,14 @@
 {
   "_note": "Recent Wayne Local Schools Facebook posts via rss.app bridge. Title + link + short excerpt; the district's own words. Fail-safe: kept from last run if the bridge is down.",
-  "updated": "2026-11-26T11:41:20.059Z",
+  "updated": "2026-11-27T11:41:19.639Z",
   "items": [
+    {
+      "title": "Happy Thanksgiving, Spartans! We're thankful for our students, staff, families, and community. Wishing everyone a safe,…",
+      "link": "https://www.facebook.com/waynelocalschools/posts/pfbid0VVgRdQkyXN2KwyPaw1fu33QSUUYySKDD5K6zPHJVLofQVVwNEbTu2L96ekyhdaG3l",
+      "date": "Thu, 26 Nov 2026 15:30:06 GMT",
+      "dateLabel": "Thu, Nov 26",
+      "excerpt": "restful, and wonderful Thanksgiving filled with peace, laughter, and gratitude.🧡"
+    },
     {
       "title": "🎄Our campus is holiday-ready! Thank you Waynesville Leo Club members!Busy week for the Waynesville Leos! 🦁 On Thursday...",
       "link": "https://www.facebook.com/waynelocalschools/posts/pfbid034nJ5wiRZy9QnRfFKYhraayz1rgoi22tVkYy6of9KLSYVj9XssSg3P7J7bxh5omkgl",
@@ -48,13 +55,6 @@
       "title": "Finish strong, Spartans!…",
       "link": "https://www.facebook.com/waynelocalschools/posts/pfbid02Kou8y22RgUsTijsYasWqAYKh7b33JBfPpBd2ivvhFc2wJXEeRvFDNAvaiB9qpKAgl",
       "date": "Sat, 21 Nov 2026 01:11:54 GMT",
-      "dateLabel": "Fri, Nov 20",
-      "excerpt": ""
-    },
-    {
-      "title": "It’s a great day for a Waynesville Spartans Football victory!…",
-      "link": "https://www.facebook.com/waynelocalschools/posts/pfbid02tF9qAB69mvezzvicuiWVnkZWkDmDj68k1iyLF58abchDeNtc4Ravr1476WB3PZUvl",
-      "date": "Fri, 20 Nov 2026 22:54:16 GMT",
       "dateLabel": "Fri, Nov 20",
       "excerpt": ""
     }

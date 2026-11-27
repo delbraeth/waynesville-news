@@ -1,6 +1,6 @@
 {
   "_note": "Recent Warren County Park District Facebook posts via rss.app bridge. Title + link + short excerpt; the Park District's own words. Fail-safe: kept from last run if the bridge is down.",
-  "updated": "2026-11-26T11:41:21.091Z",
+  "updated": "2026-11-27T11:41:19.974Z",
   "items": [
     {
       "title": "We had a wonderful time with Orienteering Cincinnati today at Adventure in Armco Park. In addition to learning how to…",
@@ -15,20 +15,6 @@
       "date": "Thu, 19 Nov 2026 19:16:00 GMT",
       "dateLabel": "Thu, Nov 19",
       "excerpt": "Orienteering Cincinnati (Journey Day Quest)! We will be at the Armco Park Jones Pavilion from 10am-1pm with lots of fun, FREE, family-friendly activities. Come join us! Sign up now: www.WarrenCountyParks.com/events or pop over tomorrow and register on site. This is an open house style program,…"
-    },
-    {
-      "title": "We want your feedback! If you are interested in adult Wellness Walks this winter, in coordination with our friends at…",
-      "link": "https://www.facebook.com/WarrenCountyParkDistrict/posts/pfbid02RzYUv5X33Z745FECFTH67ywkmFWGGxDabBTUfcAZTNhhb5H3T9RzFHcc7m5KCwxRl",
-      "date": "Mon, 16 Nov 2026 20:25:05 GMT",
-      "dateLabel": "Mon, Nov 16",
-      "excerpt": "Warren County Extension and other community partners, please complete this quick survey. https://osu.az1.qualtrics.com/jfe/form/SV_390tD1vguB58nqe"
-    },
-    {
-      "title": "Beautiful day for a walk in the woods!WOW, just wow! What a perfect morning for a hike. Thanks to all of you that made i...",
-      "link": "https://www.facebook.com/WarrenCountyParkDistrict/posts/pfbid02dDysuksavrLYmSAt6QQqEBLUU9ig384kwwWNoEtv6FWZ1B2D45DKezKCB6fgwswBl",
-      "date": "Mon, 16 Nov 2026 16:43:21 GMT",
-      "dateLabel": "Mon, Nov 16",
-      "excerpt": "Beautiful day for a walk in the woods! WOW, just wow! What a perfect morning for a hike. Thanks to all of you that made it. A special shout out to Shannon from the Warren County Park District and John from the Friends of Warren County Park District who gave us their time and knowledge!! We…"
     }
   ]
 }
