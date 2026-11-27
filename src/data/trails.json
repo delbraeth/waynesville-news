@@ -1,0 +1,312 @@
+{
+  "_note": "Walking, hiking and running trails in and near Waynesville, shown on /trails/. Every fact comes from the trail owner's own page or map (listed in `source`) and carries the date it was checked (`verified`). Fields: name, what (for readers), optional length, difficulty, surface, blaze, uses (any of walk, hike, run, bike, horse), address, website, links [{label,url}], source [urls], verified (YYYY-MM-DD). Trails in a section's optional `trails` table use name/length/difficulty/blaze only. Never guess a length, hour or rule; leave it out and point readers to the source. Not yet included because their official pages could not be checked: Fort Ancient Earthworks (Ohio History Connection site refuses automated fetches) and Spring Valley Wildlife Area (ODNR page moved; boardwalk status unconfirmed).",
+  "updated": "2026-11-27",
+  "sections": [
+    {
+      "id": "paved",
+      "title": "Paved trail: the Little Miami Scenic Trail",
+      "intro": "The easiest flat, paved miles near Waynesville, good for walking, running, biking and strollers.",
+      "items": [
+        {
+          "name": "Little Miami Scenic Trail",
+          "what": "A paved, multi-use rail-trail that runs about 78 miles from Beechmont Avenue in Anderson Township to Springfield, through Corwin, next to Waynesville. Towns along the way include Morrow, Oregonia, Corwin, Spring Valley, Xenia and Yellow Springs. It is part of the Buckeye Trail and the North Country National Scenic Trail. Horses are allowed in Greene County only.",
+          "length": "About 78 miles",
+          "surface": "Paved",
+          "uses": [
+            "walk",
+            "run",
+            "bike"
+          ],
+          "website": "https://www.miamivalleytrails.org/trails/little-miami-scenic-trail",
+          "links": [
+            {
+              "label": "Trail map (PDF)",
+              "url": "https://littlemiamistatepark.org/images/documents/maps/Little_Miami_Scenic_Trail_map.pdf"
+            }
+          ],
+          "source": [
+            "https://www.miamivalleytrails.org/trails/little-miami-scenic-trail"
+          ],
+          "verified": "2026-11-27"
+        },
+        {
+          "name": "Corwin trailhead",
+          "what": "The closest trailhead to Waynesville, in the Village of Corwin. The trail map shows parking, restrooms, picnic tables and wheelchair access there. From Corwin it's 7 miles north to Spring Valley or 14.2 miles south to Morrow, so an out-and-back of any length is easy to plan.",
+          "surface": "Paved",
+          "uses": [
+            "walk",
+            "run",
+            "bike"
+          ],
+          "website": "https://littlemiamistatepark.org/images/documents/maps/Little_Miami_Scenic_Trail_map.pdf",
+          "links": [
+            {
+              "label": "Trail map (PDF)",
+              "url": "https://littlemiamistatepark.org/images/documents/maps/Little_Miami_Scenic_Trail_map.pdf"
+            }
+          ],
+          "source": [
+            "https://littlemiamistatepark.org/images/documents/maps/Little_Miami_Scenic_Trail_map.pdf"
+          ],
+          "verified": "2026-11-07"
+        }
+      ]
+    },
+    {
+      "id": "caesar-creek",
+      "title": "Caesar Creek State Park",
+      "intro": "Woods, lakeshore and gorge hiking on State Route 73, east of the village. Lengths, difficulty and blaze colors are from the park's official hiking map. Dogs must be leashed at all times in the park, and you should pack out what you pack in.",
+      "trails": [
+        {
+          "name": "Perimeter Trail",
+          "length": "12.1 mi",
+          "difficulty": "Moderate",
+          "blaze": "Yellow"
+        },
+        {
+          "name": "Fifty Springs Loop Trail",
+          "length": "3.2 mi",
+          "difficulty": "Moderate",
+          "blaze": "Orange"
+        },
+        {
+          "name": "Gorge Loop Trail",
+          "length": "1.5 mi",
+          "difficulty": "Moderate",
+          "blaze": "None"
+        },
+        {
+          "name": "Horseshoe Falls Trail",
+          "length": "0.8 mi",
+          "difficulty": "Moderate",
+          "blaze": "Blue"
+        },
+        {
+          "name": "Peninsula Trail",
+          "length": "0.8 mi",
+          "difficulty": "Moderate",
+          "blaze": "Green"
+        },
+        {
+          "name": "The Cove Trail",
+          "length": "0.7 mi",
+          "difficulty": "Moderate",
+          "blaze": "Red"
+        },
+        {
+          "name": "Lakeview Perimeter Passage",
+          "length": "0.2 mi",
+          "difficulty": "Moderate",
+          "blaze": "Green"
+        },
+        {
+          "name": "Peninsula Trail Lake View Route",
+          "length": "0.2 mi",
+          "difficulty": "Easy",
+          "blaze": "Green"
+        },
+        {
+          "name": "Bluebird Trail",
+          "length": "0.1 mi",
+          "difficulty": "Easy",
+          "blaze": "None"
+        }
+      ],
+      "items": [
+        {
+          "name": "Caesar Creek hiking trails",
+          "what": "Nine named hiking trails, from the 0.1-mile Bluebird Trail to the 12.1-mile Perimeter Trail around the lake. The park's hiking map shows where each one starts and where to park. Separate maps cover the mountain bike and bridle trails.",
+          "address": "8570 E. State Route 73, Waynesville, OH 45068",
+          "uses": [
+            "walk",
+            "hike"
+          ],
+          "website": "https://dam.assets.ohio.gov/image/upload/ohiodnr.gov/documents/parks/parkmaps/caesarcreektrailmap.pdf",
+          "links": [
+            {
+              "label": "Hiking map (PDF)",
+              "url": "https://dam.assets.ohio.gov/image/upload/ohiodnr.gov/documents/parks/parkmaps/caesarcreektrailmap.pdf"
+            },
+            {
+              "label": "Mountain bike map (PDF)",
+              "url": "https://dam.assets.ohio.gov/image/upload/ohiodnr.gov/documents/parks/parkmaps/caesarcreekmtnbikemap.pdf"
+            },
+            {
+              "label": "Bridle trail map (PDF)",
+              "url": "https://dam.assets.ohio.gov/image/upload/ohiodnr.gov/documents/parks/parkmaps/caesarcreekequestrianmap.pdf"
+            }
+          ],
+          "source": [
+            "https://dam.assets.ohio.gov/image/upload/ohiodnr.gov/documents/parks/parkmaps/caesarcreektrailmap.pdf"
+          ],
+          "verified": "2026-11-27"
+        },
+        {
+          "name": "Caesar Creek mountain bike trail",
+          "what": "Mountain bike trails with their own map. The park's map warns that parts of the trail may flood and be impassable during high water, and asks riders to stay on marked trails and call out when passing hikers.",
+          "uses": [
+            "bike"
+          ],
+          "website": "https://dam.assets.ohio.gov/image/upload/ohiodnr.gov/documents/parks/parkmaps/caesarcreekmtnbikemap.pdf",
+          "source": [
+            "https://dam.assets.ohio.gov/image/upload/ohiodnr.gov/documents/parks/parkmaps/caesarcreekmtnbikemap.pdf"
+          ],
+          "verified": "2026-11-27"
+        }
+      ]
+    },
+    {
+      "id": "hisey",
+      "title": "Hisey Park, Corwin",
+      "items": [
+        {
+          "name": "Hisey Park",
+          "what": "A Warren County Park District park in Corwin where nature trails wind through 158 acres of forested hillsides and floodplain wetlands, with an overlook of the Little Miami River valley. It shares a boundary with Caesar Creek State Nature Preserve for longer hikes, and the Little Miami Scenic Trail is 750 feet west of the park entrance on Middletown Road. Also a dog park, playground and first-come shelter.",
+          "address": "5443 Middletown Road, Corwin, OH 45068",
+          "hours": "Daily, dawn to dusk",
+          "uses": [
+            "walk",
+            "hike"
+          ],
+          "website": "https://www.warrencountyparks.com/hisey-park-caesar-creek-gorge-and-preserve/",
+          "source": [
+            "https://www.warrencountyparks.com/hisey-park-caesar-creek-gorge-and-preserve/"
+          ],
+          "verified": "2026-11-27",
+          "links": [
+            {
+              "label": "Trail map (PDF)",
+              "url": "http://www.warrencountyparks.com/media/user/trail-maps/Hisey-Trail Map.pdf"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "close",
+      "title": "A short drive: Centerville, Sugarcreek & Springboro",
+      "intro": "Park district trails west of Waynesville, from paved loops for an easy run to wooded creekside hiking.",
+      "items": [
+        {
+          "name": "Bill Yeck Park",
+          "what": "A 194-acre Centerville-Washington Park District nature park along 1.75 miles of Sugar Creek, known for hiking, bird watching and Ordovician fossils in the creek. Its Tri-centennial Time Trail adds an unmown section each year to show a field turning into forest. Three entrances, each with parking: 8798 Rooks Mill Lane, the Smith House entrance at 2230 E. Centerville Station Road (restroom) and the McGuffey Meadow entrance at 7893 Wilmington-Dayton Road. Leashed pets are welcome (leash 8 feet or shorter).",
+          "uses": [
+            "walk",
+            "hike"
+          ],
+          "hours": "Daylight hours",
+          "address": "8798 Rooks Mill Lane, Centerville, OH",
+          "website": "https://cwpd.org/parks/bill-yeck/",
+          "links": [
+            {
+              "label": "Trail map (PDF)",
+              "url": "https://www.cwpd.org/wp-content/uploads/2024/01/bill-yeck-park-map-1.17.24-web.pdf"
+            }
+          ],
+          "source": [
+            "https://cwpd.org/parks/bill-yeck/"
+          ],
+          "verified": "2026-11-27"
+        },
+        {
+          "name": "Sweet Arrow Reserve",
+          "what": "The Bellbrook Sugarcreek Park District's largest park: nearly 263 acres of woodland, prairies and meadows, with 7 trail loops from half a mile to 1.5 miles, marked by posts with colored plastic arrows. Mix loops to make a longer walk. 30-car parking lot.",
+          "length": "7 loops, 0.5–1.5 mi each",
+          "uses": [
+            "walk",
+            "hike"
+          ],
+          "address": "789 Little Sugarcreek Road, Sugarcreek Township, OH",
+          "website": "https://www.bellbrooksugarcreekparks.org/parks-and-facilities/parks/sweet-arrow-reserve/",
+          "links": [
+            {
+              "label": "Trail map",
+              "url": "https://www.bellbrooksugarcreekparks.org/uploads/forms-documents/SweetArrow_ParkMap_JPG.jpg"
+            }
+          ],
+          "source": [
+            "https://www.bellbrooksugarcreekparks.org/parks-and-facilities/parks/sweet-arrow-reserve/"
+          ],
+          "verified": "2026-11-27"
+        },
+        {
+          "name": "Oak Grove Park",
+          "what": "A 102-acre Centerville-Washington Park District park built around a stand of old oaks, with paved multi-use paths for walking or jogging, a fitness trail with outdoor exercise equipment, a fishing pond, playgrounds and an off-leash dog park. The park's path map marks three loops: orange 0.6 mile, red 1 mile and blue 1.5 miles. Leashed pets are welcome (leash 8 feet or shorter).",
+          "length": "Loops of 0.6, 1 and 1.5 mi",
+          "surface": "Paved",
+          "uses": [
+            "walk",
+            "run"
+          ],
+          "hours": "Daylight hours",
+          "address": "1790 E. Social Row Road, Centerville, OH",
+          "website": "https://cwpd.org/parks/oak-grove/",
+          "links": [
+            {
+              "label": "Path mileage map (PDF)",
+              "url": "http://www.cwpd.org/wp-content/uploads/2019/09/oak-grove-mileage-map-9-9-19.pdf"
+            }
+          ],
+          "source": [
+            "https://cwpd.org/parks/oak-grove/",
+            "http://www.cwpd.org/wp-content/uploads/2019/09/oak-grove-mileage-map-9-9-19.pdf"
+          ],
+          "verified": "2026-11-27"
+        },
+        {
+          "name": "Patricia Allyn Park",
+          "what": "A 96.77-acre Clearcreek Township park with a 1-mile paved walking loop, a pond with catch-and-release fishing, playgrounds, picnic shelters and a disc golf course.",
+          "length": "1-mile loop",
+          "surface": "Paved",
+          "uses": [
+            "walk",
+            "run"
+          ],
+          "address": "7266 State Route 48, Springboro, OH 45066",
+          "website": "https://www.clearcreektownship.com/parks-department/parks/patricia-allyn",
+          "source": [
+            "https://www.clearcreektownship.com/parks-department/parks/patricia-allyn"
+          ],
+          "verified": "2026-11-27"
+        },
+        {
+          "name": "Hazel Woods Park, Springboro",
+          "what": "A 108-acre City of Springboro park with a paved walking path and a dog park.",
+          "address": "3789 Lower Springboro Road, Springboro, OH 45066",
+          "surface": "Paved path",
+          "uses": [
+            "walk",
+            "run"
+          ],
+          "website": "https://www.cityofspringboro.com/Facilities/Facility/Details/Hazel-Woods-Park-6",
+          "source": [
+            "https://www.cityofspringboro.com/Facilities/Facility/Details/Hazel-Woods-Park-6"
+          ],
+          "verified": "2026-11-25"
+        }
+      ]
+    },
+    {
+      "id": "nearby",
+      "title": "Worth the drive",
+      "intro": "A little farther from Waynesville.",
+      "items": [
+        {
+          "name": "Glen Helen Nature Preserve",
+          "what": "A nature preserve in Yellow Springs. The Steps lot has more than 110 stone steps down to the beaver dam. Parking is $10 for non-members and free for members. Leashed dogs are welcome (leashes 6 feet or shorter).",
+          "address": "1075 State Route 343, Yellow Springs, OH 45387 (Cascades lot)",
+          "hours": "Trails open daily, sunrise to sunset",
+          "uses": [
+            "walk",
+            "hike"
+          ],
+          "website": "https://www.glenhelen.org/",
+          "source": [
+            "https://www.glenhelen.org/"
+          ],
+          "verified": "2026-11-27"
+        }
+      ]
+    }
+  ]
+}
