@@ -111,6 +111,10 @@
             {
               "label": "Trail map (PDF)",
               "url": "https://littlemiamistatepark.org/images/documents/maps/Little_Miami_Scenic_Trail_map.pdf"
+            },
+            {
+              "label": "Our trail guide",
+              "url": "/trails/#paved"
             }
           ]
         },
@@ -149,6 +153,10 @@
             {
               "label": "Naturalist programs (our calendar)",
               "url": "/events/"
+            },
+            {
+              "label": "Hiking trails: our trail guide",
+              "url": "/trails/#caesar-creek"
             }
           ]
         },
@@ -211,7 +219,13 @@
           "source": [
             "https://www.warrencountyparks.com/hisey-park-caesar-creek-gorge-and-preserve/"
           ],
-          "verified": "2026-11-25"
+          "verified": "2026-11-25",
+          "links": [
+            {
+              "label": "Hisey Park trails: our trail guide",
+              "url": "/trails/#hisey"
+            }
+          ]
         },
         {
           "name": "Jason Lagore Memorial Dog Park",
