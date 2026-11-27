@@ -1,0 +1,120 @@
+---
+// Walking, hiking and running trails near Waynesville. Hand-kept facts in
+// src/data/trails.json (sections of items, each with a source and a verified
+// date, like visit.json); a section may also carry a `trails` table copied
+// from the owner's official trail map.
+import Base from "../layouts/Base.astro";
+import data from "../data/trails.json";
+import { slug } from "../lib/slug.js";
+
+type Link = { label: string; url: string };
+type Item = {
+  name: string; what?: string; length?: string; difficulty?: string; surface?: string;
+  uses?: string[]; address?: string; hours?: string; website?: string; links?: Link[];
+  source?: string[]; verified?: string;
+};
+type Row = { name: string; length: string; difficulty?: string; blaze?: string };
+type Section = { id: string; title: string; intro?: string; trails?: Row[]; items: Item[] };
+const sections = (data.sections as Section[]).filter((s) => s.items.length > 0 || (s.trails ?? []).length > 0);
+
+const USE: Record<string, string> = { walk: "Walking", hike: "Hiking", run: "Running", bike: "Biking", horse: "Horses" };
+const fmt = (iso?: string) =>
+  iso ? new Date(iso + "T12:00:00").toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" }) : "";
+const mapHref = (a: string) => "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(a);
+const facts = (it: Item) => [it.length, it.surface, it.difficulty].filter(Boolean).join(" · ");
+---
+<Base
+  title="Walking, Hiking & Running Trails near Waynesville, Ohio · Waynesville News"
+  description="Trails for walking, hiking and running in and near Waynesville, Ohio: the paved Little Miami Scenic Trail from Corwin, Caesar Creek State Park's hiking trails with lengths and blaze colors, Hisey Park and more."
+  showInfoBar={false}
+>
+  <div class="reading">
+    <p class="kicker">Get outside</p>
+    <h1>Trails near Waynesville</h1>
+    <p class="dek">
+      Where to walk, hike and run: a flat paved rail-trail next door in Corwin, lake and gorge trails at Caesar Creek,
+      and a few more worth the drive.
+    </p>
+    <p class="small">
+      Facts come from each park's own website or trail map and show when we last checked them (updated {fmt(data.updated)}).
+      Trails can close for weather, flooding or repairs, so check before you go.
+    </p>
+
+    {sections.length > 1 && (
+      <nav class="res-toc" aria-label="On this page">
+        {sections.map((s) => <a href={`#${s.id}`}>{s.title}</a>)}
+      </nav>
+    )}
+
+    {sections.map((s) => (
+      <section id={s.id} class="res-section">
+        <h2>{s.title}</h2>
+        {s.intro && <p class="small">{s.intro}</p>}
+        {s.trails && s.trails.length > 0 && (
+          <div class="tr-wrap">
+            <table class="tr-table">
+              <thead><tr><th scope="col">Trail</th><th scope="col">Length</th><th scope="col">Difficulty</th><th scope="col">Blaze</th></tr></thead>
+              <tbody>
+                {s.trails.map((t) => (
+                  <tr><th scope="row">{t.name}</th><td>{t.length}</td><td>{t.difficulty ?? ""}</td><td>{t.blaze ?? ""}</td></tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        )}
+        <ul class="res-list">
+          {s.items.map((it) => (
+            <li id={slug(it.name)}>
+              <div class="res-name">
+                {it.website ? <a href={it.website} target="_blank" rel="noopener">{it.name}</a> : it.name}
+              </div>
+              {(facts(it) || (it.uses ?? []).length > 0) && (
+                <div class="tr-facts">
+                  {facts(it) && <span>{facts(it)}</span>}
+                  {(it.uses ?? []).map((u) => <span class="tr-use">{USE[u] ?? u}</span>)}
+                </div>
+              )}
+              {it.what && <p class="res-what">{it.what}</p>}
+              {it.hours && <p class="res-what"><strong>Hours:</strong> {it.hours}</p>}
+              <div class="res-meta">
+                {it.address && <a href={mapHref(it.address)} target="_blank" rel="noopener">{it.address} (map)</a>}
+                {it.links && it.links.map((l) => l.url.startsWith("/") ? <a href={l.url}>{l.label}</a> : <a href={l.url} target="_blank" rel="noopener">{l.label}</a>)}
+              </div>
+              {it.verified && (
+                <div class="res-src">
+                  Checked {fmt(it.verified)}
+                  {(it.source ?? []).map((u, i) => <> · <a href={u} target="_blank" rel="noopener">{i === 0 ? "source" : `source ${i + 1}`}</a></>)}
+                </div>
+              )}
+            </li>
+          ))}
+        </ul>
+      </section>
+    ))}
+
+    <p class="small">
+      Know a trail we're missing, or see something out of date? <a href="/tips/">Send us a tip</a>. Planning a day in town?
+      See <a href="/visit/">Visiting Waynesville</a>.
+    </p>
+  </div>
+</Base>
+
+<style>
+  .res-toc { display: flex; flex-wrap: wrap; gap: 0.4rem 1rem; margin: 1.5rem 0 0.5rem; font-size: 0.95rem; }
+  .res-section { margin-top: 1.75rem; scroll-margin-top: 1rem; }
+  .res-list { list-style: none; margin: 0; padding: 0; }
+  .res-list > li { padding: 0.85rem 0; border-bottom: 1px solid var(--rule); scroll-margin-top: 1rem; }
+  .res-name { font-weight: 600; }
+  .res-what { margin: 0.3rem 0 0; }
+  .res-meta { display: flex; flex-wrap: wrap; gap: 0.25rem 1rem; margin-top: 0.35rem; font-size: 0.95rem; }
+  .res-meta a { overflow-wrap: anywhere; }
+  .res-src { margin-top: 0.3rem; font-size: 0.8rem; color: var(--muted); }
+  .tr-facts { display: flex; flex-wrap: wrap; align-items: center; gap: 0.3rem 0.5rem; margin-top: 0.3rem; font-size: 0.88rem; color: var(--ink-soft); }
+  .tr-use { padding: 0.05rem 0.5rem; border: 1px solid var(--rule); border-radius: 999px; background: var(--paper-2); font-size: 0.8rem; }
+  .tr-wrap { overflow-x: auto; margin: 0.75rem 0 0.25rem; }
+  .tr-table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+  .tr-table th, .tr-table td { text-align: left; padding: 0.4rem 0.6rem 0.4rem 0; border-bottom: 1px solid var(--rule); }
+  .tr-table thead th { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--muted); }
+  .tr-table tbody th { font-weight: 600; }
+  .tr-table td { white-space: nowrap; font-variant-numeric: tabular-nums; }
+</style>
