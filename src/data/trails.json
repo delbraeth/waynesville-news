@@ -172,7 +172,117 @@
           "source": [
             "https://www.warrencountyparks.com/hisey-park-caesar-creek-gorge-and-preserve/"
           ],
+          "verified": "2026-11-27",
+          "links": [
+            {
+              "label": "Trail map (PDF)",
+              "url": "http://www.warrencountyparks.com/media/user/trail-maps/Hisey-Trail Map.pdf"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "close",
+      "title": "A short drive: Centerville, Sugarcreek & Springboro",
+      "intro": "Park district trails west of Waynesville, from paved loops for an easy run to wooded creekside hiking.",
+      "items": [
+        {
+          "name": "Bill Yeck Park",
+          "what": "A 194-acre Centerville-Washington Park District nature park along 1.75 miles of Sugar Creek, known for hiking, bird watching and Ordovician fossils in the creek. Its Tri-centennial Time Trail adds an unmown section each year to show a field turning into forest. Three entrances, each with parking: 8798 Rooks Mill Lane, the Smith House entrance at 2230 E. Centerville Station Road (restroom) and the McGuffey Meadow entrance at 7893 Wilmington-Dayton Road. Leashed pets are welcome (leash 8 feet or shorter).",
+          "uses": [
+            "walk",
+            "hike"
+          ],
+          "hours": "Daylight hours",
+          "address": "8798 Rooks Mill Lane, Centerville, OH",
+          "website": "https://cwpd.org/parks/bill-yeck/",
+          "links": [
+            {
+              "label": "Trail map (PDF)",
+              "url": "https://www.cwpd.org/wp-content/uploads/2024/01/bill-yeck-park-map-1.17.24-web.pdf"
+            }
+          ],
+          "source": [
+            "https://cwpd.org/parks/bill-yeck/"
+          ],
           "verified": "2026-11-27"
+        },
+        {
+          "name": "Sweet Arrow Reserve",
+          "what": "The Bellbrook Sugarcreek Park District's largest park: nearly 263 acres of woodland, prairies and meadows, with 7 trail loops from half a mile to 1.5 miles, marked by posts with colored plastic arrows. Mix loops to make a longer walk. 30-car parking lot.",
+          "length": "7 loops, 0.5–1.5 mi each",
+          "uses": [
+            "walk",
+            "hike"
+          ],
+          "address": "789 Little Sugarcreek Road, Sugarcreek Township, OH",
+          "website": "https://www.bellbrooksugarcreekparks.org/parks-and-facilities/parks/sweet-arrow-reserve/",
+          "links": [
+            {
+              "label": "Trail map",
+              "url": "https://www.bellbrooksugarcreekparks.org/uploads/forms-documents/SweetArrow_ParkMap_JPG.jpg"
+            }
+          ],
+          "source": [
+            "https://www.bellbrooksugarcreekparks.org/parks-and-facilities/parks/sweet-arrow-reserve/"
+          ],
+          "verified": "2026-11-27"
+        },
+        {
+          "name": "Oak Grove Park",
+          "what": "A 102-acre Centerville-Washington Park District park built around a stand of old oaks, with paved multi-use paths for walking or jogging, a fitness trail with outdoor exercise equipment, a fishing pond, playgrounds and an off-leash dog park. The park's path map marks three loops: orange 0.6 mile, red 1 mile and blue 1.5 miles. Leashed pets are welcome (leash 8 feet or shorter).",
+          "length": "Loops of 0.6, 1 and 1.5 mi",
+          "surface": "Paved",
+          "uses": [
+            "walk",
+            "run"
+          ],
+          "hours": "Daylight hours",
+          "address": "1790 E. Social Row Road, Centerville, OH",
+          "website": "https://cwpd.org/parks/oak-grove/",
+          "links": [
+            {
+              "label": "Path mileage map (PDF)",
+              "url": "http://www.cwpd.org/wp-content/uploads/2019/09/oak-grove-mileage-map-9-9-19.pdf"
+            }
+          ],
+          "source": [
+            "https://cwpd.org/parks/oak-grove/",
+            "http://www.cwpd.org/wp-content/uploads/2019/09/oak-grove-mileage-map-9-9-19.pdf"
+          ],
+          "verified": "2026-11-27"
+        },
+        {
+          "name": "Patricia Allyn Park",
+          "what": "A 96.77-acre Clearcreek Township park with a 1-mile paved walking loop, a pond with catch-and-release fishing, playgrounds, picnic shelters and a disc golf course.",
+          "length": "1-mile loop",
+          "surface": "Paved",
+          "uses": [
+            "walk",
+            "run"
+          ],
+          "address": "7266 State Route 48, Springboro, OH 45066",
+          "website": "https://www.clearcreektownship.com/parks-department/parks/patricia-allyn",
+          "source": [
+            "https://www.clearcreektownship.com/parks-department/parks/patricia-allyn"
+          ],
+          "verified": "2026-11-27"
+        },
+        {
+          "name": "Hazel Woods Park, Springboro",
+          "what": "A 108-acre City of Springboro park with a paved walking path and a dog park.",
+          "address": "3789 Lower Springboro Road, Springboro, OH 45066",
+          "surface": "Paved path",
+          "uses": [
+            "walk",
+            "run"
+          ],
+          "website": "https://www.cityofspringboro.com/Facilities/Facility/Details/Hazel-Woods-Park-6",
+          "source": [
+            "https://www.cityofspringboro.com/Facilities/Facility/Details/Hazel-Woods-Park-6"
+          ],
+          "verified": "2026-11-25"
         }
       ]
     },
@@ -195,21 +305,6 @@
             "https://www.glenhelen.org/"
           ],
           "verified": "2026-11-27"
-        },
-        {
-          "name": "Hazel Woods Park, Springboro",
-          "what": "A 108-acre City of Springboro park with a paved walking path and a dog park.",
-          "address": "3789 Lower Springboro Road, Springboro, OH 45066",
-          "surface": "Paved path",
-          "uses": [
-            "walk",
-            "run"
-          ],
-          "website": "https://www.cityofspringboro.com/Facilities/Facility/Details/Hazel-Woods-Park-6",
-          "source": [
-            "https://www.cityofspringboro.com/Facilities/Facility/Details/Hazel-Woods-Park-6"
-          ],
-          "verified": "2026-11-25"
         }
       ]
     }
