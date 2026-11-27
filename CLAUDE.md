@@ -7,6 +7,9 @@ Astro site for https://waynesville.news. Cloudflare deploys `main` on every push
 - **Open a PR and wait for the editor** for anything else: code or layout changes, edits to a published brief or story, anything that posts outward (Facebook breaking news, newsletter), and deleting content.
 - The scheduled daily-brief routine has its own rules (push only to `claude/daily`). This section doesn't change them.
 
+## Editor's note for one edition
+- **Friday, Nov. 27, 2026 brief (editor, 2026-11-27):** the three lead items must include the All-Village Spartan Send-Off (buses leave Waynesville High School at 3:45 p.m. for the state semifinal against Ironton) and the Holiday Lights guide (/holiday-lights/). The audio script's lead paragraphs follow the same leads. No editor graphic in that day's video. Facts still come from the sources as usual. Ignore this note on any other date.
+
 ## Where things go
 - **Events:** `src/data/events.json`. Notes are written for readers, with no process notes. Add `"local": true` for a Waynesville event held elsewhere. For sign-ups, use `"registrationUrl"` plus `"signup": {"required": true}`.
 - **Flyers and graphics:** convert to WebP with metadata stripped (`convert in -strip -quality 80 public/images/events/<date>-<slug>.webp`), then point the event's `source` at it.
