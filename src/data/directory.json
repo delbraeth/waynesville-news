@@ -1,6 +1,6 @@
 {
   "_note": "Local business directory. Built by scripts/fetch-directory.mjs from the Waynesville Area Chamber of Commerce's public member directory (name, location, phone, website, and the Chamber's description, as published) plus hand-added listings in directory-manual.json. Contact names, emails and hours are deliberately not copied from the Chamber; an hours line appears only when the owner supplied it (hours + hoursChecked in directory-manual.json). Do not edit by hand — edit directory-manual.json and re-run `npm run refresh:directory` (or `npm run refresh:directory -- --manual-only` to merge manual edits without re-reading the Chamber site).",
-  "updated": "2026-11-28T19:39:03.863Z",
+  "updated": "2026-11-28T19:45:52.212Z",
   "sections": [
     {
       "id": "food",
@@ -3182,6 +3182,8 @@
       "source": "https://waynesvilleshops.com/lodging-food-and-entertainment/name/roscoes-coletranes-pizza-1 (open per the editor, 2026-10-31)",
       "website": "",
       "about": "Pizza restaurant in the Village of Corwin, just north of S.R. 73, known for its specialty pizzas.",
+      "menu": "https://onboarding.arrowpos.com/RoscoesPizzaCorwin",
+      "menuLabel": "Order online",
       "local": true,
       "from": "manual"
     },
