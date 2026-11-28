@@ -2,32 +2,10 @@
   "_note": "Editor-supplied facts for upcoming briefs. scripts/draft-brief.mjs puts each item whose from–until window includes the brief's date into the draft as an editor note under 'This morning in Waynesville'. Facts here came from the editor and are cleared to use as written (attribute them to the named source). Remove items once their window has passed.",
   "items": [
     {
-      "from": "2026-11-16",
-      "until": "2026-11-16",
-      "section": "This morning in Waynesville — LEAD ITEM #1 (editor's instruction)",
-      "text": "Make Friday's regional final the first lead item, with as much practical detail as can be verified: Waynesville (beat top seed Graham Local 14-7) plays Bishop Fenwick (6 seed, beat No. 2 Williamsburg 27-13) in the Division V, Region 20 final, Friday, Nov. 20, 7:00 PM. Regional finals are at neutral sites: give the stadium and address only if OHSAA (ohsaa.org) or Wayne Local/Waynesville Athletics has announced it; otherwise say the site has not been announced yet. Tickets are sold online at ohsaa.org/tickets; OHSAA's playoff notice says they go on sale Tuesdays at 10 AM, so confirm the day on ohsaa.org before stating it and include prices only if OHSAA lists them. Mention any fan bus or spirit info only if the school has posted it. Confirm kickoff and opponent against sports.json; link the MaxPreps game page from sports.json. Do not predict a result.",
-      "source": "https://www.ohsaa.org/tickets"
-    },
-    {
-      "from": "2026-11-16",
-      "until": "2026-11-16",
-      "section": "This morning in Waynesville — LEAD ITEM #2 (editor's instruction)",
-      "text": "Second lead item: the North Warren County Transportation Plan online survey closes Tuesday, Nov. 17. Use the details in its events.json entry: it is the last chance to comment on the plan, including options for a new I-75 to I-71 connection (one would follow US 42 and S.R. 73 through Waynesville and Corwin) and priority intersections such as S.R. 73 and US 42 in Waynesville. Link the survey page from that entry and tell readers how long it stays open (through Tuesday).",
-      "source": "https://northwarrencountytransportationplan-burgessniple.hub.arcgis.com/pages/f27bc61005b842439ceb569b82c0b9cf"
-    },
-    {
-      "from": "2026-11-17",
-      "until": "2026-11-17",
-      "section": "This morning in Waynesville (editor's instruction)",
-      "text": "Include a heads-up that FEMA and the FCC run a nationwide Emergency Alert System test today, Tuesday, Nov. 17, at about 2:20 PM ET (window 2:20–2:50 PM). It airs on broadcast and cable TV and radio only and will NOT go to cellphones (no Wireless Emergency Alert). The message says it is only a test; no action is needed. Backup date if postponed: Thursday, Dec. 3. Attribute to FEMA and link its press release.",
-      "source": "https://www.fema.gov/press-release/20260916/fema-and-fcc-schedule-2026-nationwide-test-emergency-alert-system-november"
-    },
-    {
-      "from": "2026-11-20",
-      "until": "2026-11-20",
+      "from": "2026-11-28",
+      "until": "2026-11-28",
       "section": "Around town (editor's instruction)",
-      "text": "Fiona, the Cincinnati Zoo's famous Nile hippo, has died, the zoo announced Nov. 19. Per the zoo: she would have turned 10 in January (so she was 9), and she ingested a hat that ended up in her habitat by accident last week; despite multiple attempts to move it out of her system and supportive care on Nov. 19, she did not recover. Write one or two plain, respectful sentences in Around town, attributed to the zoo, linking the zoo's announcement. No speculation beyond the zoo's statement, no blame, and do not name the visitor. Not a lead item unless nothing local is bigger.",
-      "source": "https://cincinnatizoo.org/beloved-hippo-fiona-has-passed-away/"
+      "text": "Today, Saturday, Nov. 28, is Small Business Saturday, the national shop-local day held the Saturday after Thanksgiving (per the editor). Write one or two sentences in Around town encouraging readers to shop and eat at Waynesville's locally owned businesses downtown and along Route 73, and link our business directory (/directory/#shop and /directory/#food). Say hours vary by shop, so check before you go. Do not name specific shops, sales or hours unless a shop's own post says so; no Waynesville merchant event has been announced for today, so do not describe one. Optionally note Christmas in the Village is next weekend, Dec. 4-6. Not a lead item unless the day is otherwise quiet."
     }
   ]
 }
