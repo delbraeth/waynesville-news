@@ -1,6 +1,6 @@
 {
   "_note": "Local business directory. Built by scripts/fetch-directory.mjs from the Waynesville Area Chamber of Commerce's public member directory (name, location, phone, website, and the Chamber's description, as published) plus hand-added listings in directory-manual.json. Contact names, emails and hours are deliberately not copied from the Chamber; an hours line appears only when the owner supplied it (hours + hoursChecked in directory-manual.json). Do not edit by hand — edit directory-manual.json and re-run `npm run refresh:directory` (or `npm run refresh:directory -- --manual-only` to merge manual edits without re-reading the Chamber site).",
-  "updated": "2026-11-28T19:54:39.990Z",
+  "updated": "2026-11-28T20:00:18.767Z",
   "sections": [
     {
       "id": "food",
@@ -592,6 +592,7 @@
       "source": "http://www.bentinos-pizza.com/",
       "website": "http://www.bentinos-pizza.com/",
       "about": "Pizza, calzones and sandwiches in a casual dining setting, serving Waynesville since 1998.",
+      "menu": "/stories/2026-11-28-bentinos-pizza-menu/",
       "local": true,
       "from": "manual"
     },
