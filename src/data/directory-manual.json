@@ -208,6 +208,12 @@
       "name": "Sun Sprouts Cafe",
       "group": "Restaurants & cafes",
       "reason": "editor: list it with restaurants and cafes, not coffee and treats"
+    },
+    {
+      "name": "Stone House Tavern",
+      "menu": "https://order.toasttab.com/online/stone-house-tavern-258-s-main-st",
+      "menuLabel": "Order online",
+      "reason": "editor: online ordering link (2026-11-28); the tavern's own site links to the same Toast restaurant"
     }
   ],
   "items": [

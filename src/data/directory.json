@@ -1,6 +1,6 @@
 {
   "_note": "Local business directory. Built by scripts/fetch-directory.mjs from the Waynesville Area Chamber of Commerce's public member directory (name, location, phone, website, and the Chamber's description, as published) plus hand-added listings in directory-manual.json. Contact names, emails and hours are deliberately not copied from the Chamber; an hours line appears only when the owner supplied it (hours + hoursChecked in directory-manual.json). Do not edit by hand — edit directory-manual.json and re-run `npm run refresh:directory` (or `npm run refresh:directory -- --manual-only` to merge manual edits without re-reading the Chamber site).",
-  "updated": "2026-11-28T19:45:52.212Z",
+  "updated": "2026-11-28T19:49:40.313Z",
   "sections": [
     {
       "id": "food",
@@ -3421,7 +3421,9 @@
       "website": "http://shtavern.com/",
       "about": "Full Service Restaurant serving hometown favorites, delicious spirits, and awesome food!",
       "local": true,
-      "from": "chamber"
+      "from": "chamber",
+      "menu": "https://order.toasttab.com/online/stone-house-tavern-258-s-main-st",
+      "menuLabel": "Order online"
     },
     {
       "id": "manual-stubbsconnerfuneralhome",
