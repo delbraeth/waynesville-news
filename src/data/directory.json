@@ -1,6 +1,6 @@
 {
   "_note": "Local business directory. Built by scripts/fetch-directory.mjs from the Waynesville Area Chamber of Commerce's public member directory (name, location, phone, website, and the Chamber's description, as published) plus hand-added listings in directory-manual.json. Contact names, emails and hours are deliberately not copied from the Chamber; an hours line appears only when the owner supplied it (hours + hoursChecked in directory-manual.json). Do not edit by hand — edit directory-manual.json and re-run `npm run refresh:directory` (or `npm run refresh:directory -- --manual-only` to merge manual edits without re-reading the Chamber site).",
-  "updated": "2026-11-28T19:49:40.313Z",
+  "updated": "2026-11-28T19:54:39.990Z",
   "sections": [
     {
       "id": "food",
@@ -449,6 +449,7 @@
       "source": "https://www.waynesvilleohio.com/directory/listing/361 (new website per the editor, 2026-11-01; the Chamber still lists the old one)",
       "website": "https://www.bandbcarryout.com/",
       "about": "Carryout on S.R. 73 with breakfast and sandwiches, groceries, bait and firewood.",
+      "menu": "/stories/2026-11-28-b-and-b-carryout-menu/",
       "local": true,
       "from": "manual"
     },
