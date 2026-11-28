@@ -1,6 +1,6 @@
 {
   "_note": "Local business directory. Built by scripts/fetch-directory.mjs from the Waynesville Area Chamber of Commerce's public member directory (name, location, phone, website, and the Chamber's description, as published) plus hand-added listings in directory-manual.json. Contact names, emails and hours are deliberately not copied from the Chamber; an hours line appears only when the owner supplied it (hours + hoursChecked in directory-manual.json). Do not edit by hand — edit directory-manual.json and re-run `npm run refresh:directory` (or `npm run refresh:directory -- --manual-only` to merge manual edits without re-reading the Chamber site).",
-  "updated": "2026-11-28T19:23:57.134Z",
+  "updated": "2026-11-28T19:39:03.863Z",
   "sections": [
     {
       "id": "food",
@@ -3477,6 +3477,8 @@
       "about": "Cafe on the Little Miami Bike Path in Corwin focused on food made from scratch. The winter menu has organic drip coffee, chai, hot tea and smoothies, avocado toast for breakfast, sandwiches and paninis, salads, grain bowls and soups, plus take-and-bake veggie and chicken pot pies (dairy-free, gluten-free and custom orders with 48 hours' notice).",
       "hours": "Wed–Sun 10–4; closed Mon and Tue",
       "hoursChecked": "2026-11-28",
+      "menu": "/stories/2026-11-28-sun-sprouts-winter-menu/",
+      "menuLabel": "Winter menu",
       "local": true,
       "from": "manual",
       "group": "Restaurants & cafes"

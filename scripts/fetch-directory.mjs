@@ -271,6 +271,7 @@ async function loadManual() {
       social: normalizeSocial(m.social),
       about: clean(m.about ?? ""),
       ...ownerHours(m),
+      ...menuLink(m),
       local: m.local ?? isLocal(m.location),
       from: "manual",
     });
@@ -288,6 +289,19 @@ function ownerHours(m) {
   const checked = /^\d{4}-\d{2}-\d{2}$/.test(m?.hoursChecked ?? "") ? m.hoursChecked : "";
   if (hours && !checked) console.log(`directory: "${m.name}" has hours but no hoursChecked date — hours left off`);
   return hours && checked ? { hours, hoursChecked: checked } : {};
+}
+
+// Optional "menu": a link to the business's menu, usually our own story with
+// the menu typed out (/stories/<id>/), or an https page. "menuLabel" sets the
+// link text (default "Menu"). Works on manual listings and recategorize entries.
+function menuLink(m) {
+  const menu = (m?.menu ?? "").trim();
+  if (!menu) return {};
+  if (!/^(\/[^\s]*|https:\/\/[^\s]+)$/.test(menu)) {
+    console.log(`directory: "${m.name}" menu link "${menu}" is not a /path or https URL — left off`);
+    return {};
+  }
+  return { menu, ...(clean(m.menuLabel ?? "") ? { menuLabel: clean(m.menuLabel) } : {}) };
 }
 
 // A listing whose website no longer exists keeps the listing but loses the
@@ -326,7 +340,7 @@ async function loadRecategorize() {
     // Each entry may fix sections, kinds (the tags shown under the name) and/or
     // about, for a Chamber listing whose categories or description are wrong.
     return new Map((m.recategorize ?? [])
-      .filter((r) => r?.name && (Array.isArray(r.sections) || Array.isArray(r.kinds) || typeof r.about === "string" || typeof r.phone === "string" || r.group || r.hours))
+      .filter((r) => r?.name && (Array.isArray(r.sections) || Array.isArray(r.kinds) || typeof r.about === "string" || typeof r.phone === "string" || r.group || r.hours || r.menu))
       .map((r) => [nameKey(r.name), r]));
   } catch { return new Map(); }
 }
@@ -348,6 +362,7 @@ async function writeMerged(chamber) {
     if (fix?.group) it.group = fix.group;
     if (typeof fix?.phone === "string") it.phone = fix.phone;
     if (fix?.hours) Object.assign(it, ownerHours(fix));
+    if (fix?.menu) Object.assign(it, menuLink(fix));
   }
   await dropDeadWebsites(items);
   await writeFile(
