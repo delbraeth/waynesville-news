@@ -1,6 +1,6 @@
 {
   "_note": "Mary L. Cook Public Library — upcoming programs from the library's WhoFi event calendar (https://marylcook-main-oh.whofi.com/calendar/full). \"items\": next 14 days, for the daily brief (dateISO is Eastern wall-clock marked Z). \"calendar\": next 45 days for the events calendar, real offsets, with sign-up details read from each program's page (scripts/lib/signup.mjs). Canceled events and closures excluded.",
-  "updated": "2026-11-27T11:42:17.119Z",
+  "updated": "2026-11-28T11:42:45.333Z",
   "items": [
     {
       "title": "Toddler Time",
@@ -371,6 +371,17 @@
       "link": "https://marylcook-main-oh.whofi.com/calendar/event/358172/",
       "signup": {
         "required": false
+      }
+    },
+    {
+      "title": "Art Class for Kids (Musical Masterpieces)",
+      "dateISO": "2027-01-11T16:15:00-05:00",
+      "endISO": "2027-01-11T17:00:00-05:00",
+      "dateLabel": "Mon, Jan 11 · 4:15 PM",
+      "link": "https://marylcook-main-oh.whofi.com/calendar/event/358185/",
+      "signup": {
+        "required": true,
+        "opens": "2026-12-28"
       }
     }
   ]
