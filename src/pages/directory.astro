@@ -6,7 +6,7 @@ import supporters from "../data/supporters.json";
 type Item = {
   id: string; name: string; location?: string; phone?: string; website?: string; email?: string;
   social?: { facebook?: string; instagram?: string; tiktok?: string; airbnb?: string };
-  about?: string; hours?: string; hoursChecked?: string; sections: string[]; kinds?: string[]; local?: boolean; source?: string; from?: string;
+  about?: string; hours?: string; menu?: string; menuLabel?: string; hoursChecked?: string; sections: string[]; kinds?: string[]; local?: boolean; source?: string; from?: string;
 };
 
 const items = (directory.items ?? []) as Item[];
@@ -145,6 +145,7 @@ const hasChurches = churchData.items.length > 0;
               <div class="dir-contact">
                 {i.location && <span>{i.location}</span>}
                 {i.phone && <a href={telHref(i.phone)}>{i.phone}</a>}
+                {i.menu && <a href={i.menu} {...(i.menu.startsWith("http") ? { target: "_blank", rel: "noopener" } : {})}>{i.menuLabel || "Menu"}</a>}
                 {i.email && <a href={"mailto:" + i.email}>{i.email}</a>}
                 {i.website && <a href={i.website} target="_blank" rel="noopener">{prettyUrl(i.website)}</a>}
                 {socials(i).map((s) => <a href={s.href} target="_blank" rel="noopener">{s.label}</a>)}
